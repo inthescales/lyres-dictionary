@@ -46,5 +46,14 @@
         "to": "noun",
         "definition": "the quality of being %@",
         "origin": "latin"
+    },
+    {
+        "base": "nce",
+		"link": "nt",
+		"from": "verb",
+		"to": "noun",
+		"stem-change": true,
+		"category" : "derive",
+        "description": "the process, state, or quality of %@"
     }
 ]

@@ -48,13 +48,20 @@ def load_words():
         words = json.load(word_data)
         return words
 
+# Helpers
+
+def is_vowel(letter):
+    return letter in ["a", "i", "e", "o", "u"]
+
+def is_consonant(letter):
+    return not is_vowel(letter)
+    
 # Assembling morphs
 
 def next_morph(current, final):
     global morphs, type_morphs, morphs_from
     
-    head_morph = morphs[current[-1]]
-    head_type = head_morph["type"]
+    head_type = word_type(current)
     
     options = morphs_from[head_type]
     
@@ -62,9 +69,43 @@ def next_morph(current, final):
     
     return choice
     
+def generate_morphs(seed, length):
+    
+    chosen = [seed]
+    
+    for i in range(0, length-1):
+        newest = next_morph(chosen, 0)
+        chosen.append(newest)
+        
+    return chosen
+
+def word_type(word_morphs):
+    global morphs
+    
+    last_morph = morphs[word_morphs[-1]]
+    
+    if last_morph["type"] == "derive":
+        return last_morph["to"]
+    else:
+        return last_morph["type"]
     
 # Finishing the word
+
+def anglicize(word):
     
+    english_word = word
+    
+    # Replaces Q + U + cons. with C + U + cons. (e.g. interlocutor)
+    for i in range(0, len(english_word)-1):
+        if english_word[i] == "q" and english_word[i+1] == "u" and is_consonant(english_word[i+2]):
+            english_word[i] = "c"
+    
+    # Replace final ui with uy (e.g. soliloquy)
+    if english_word[-2:-1] == "ui":
+        english_word[-2:] = "uy"
+        
+    return english_word
+
 def compose_word(in_morphs):
     global morphs
     
@@ -80,20 +121,31 @@ def compose_word(in_morphs):
         else:
             addition = morphs[in_morphs[-1]]["base"]
 
-        # Combine repeated letters
         if len(addition) > 0:
-            
+
+            # Combine repeated letters            
             if len(word) > 0 and addition[0] == word[-1]:
                 addition = addition[1:]
             
+            # Stem change
+            if "stem-change" in morphs[morph] and morphs[morph]["stem-change"] == True:
+                if word[-1] == "i" or word[-1] == "e":
+                    addition = "e" + addition
+            
             word += addition
+            
+    
+    word = anglicize(word)
     
     return word
         
 setup()
 
-root = "pecunia"
-second = next_morph([root], 0)
-word = compose_word([root, second])
+parts = generate_morphs("caput", 3)
+word = compose_word(parts)
 print(word)
+
+print(anglicize("soliloqui"))
+print(anglicize("eloqution"))
+
 #word = compose_word(["caput", "al"])
