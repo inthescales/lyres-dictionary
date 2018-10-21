@@ -1,9 +1,16 @@
 [
     {
-        "base": "pecunia",
-        "link": "pecuni",
+        "base": "bellum",
+        "link": "bell",
         "type": "noun",
-        "definition": "money",
+        "definition": "war",
+        "origin": "latin"
+    },
+    {
+        "base": "canis",
+        "link": "can",
+        "type": "noun",
+        "definition": "dog",
         "origin": "latin"
     },
     {
@@ -14,19 +21,80 @@
         "origin": "latin"
     },
     {
-        "base": "dens",
-        "link": "dent",
-        "type": "noun",
-        "definition": "tooth",
+        "base": "clara",
+        "link": "clar",
+        "type": "adj",
+        "definition": "clear",
         "origin": "latin"
     },
     {
-        "base": "ify",
-        "link": "ifi",
-        "type": "derive",
-        "from": "noun,adj",
-        "to": "verb",
-        "definition": "to make or make into %@",
+        "base": "equus",
+        "link": "equ",
+        "type": "noun",
+        "definition": "horse",
+        "origin": "latin"
+    },
+    {
+        "base": "felis",
+        "link": "fel",
+        "type": "noun",
+        "definition": "cat",
+        "origin": "latin"
+    },
+    {
+        "base": "forta",
+        "link": "fort",
+        "type": "adj",
+        "definition": "strong",
+        "origin": "latin"
+    },
+    {
+        "base": "magna",
+        "link": "magn",
+        "type": "adj",
+        "definition": "great",
+        "origin": "latin"
+    },
+    {
+        "base": "pecunia",
+        "link": "pecuni",
+        "type": "noun",
+        "definition": "money",
+        "origin": "latin"
+    },
+    {
+        "base": "puer",
+        "link": "puer",
+        "type": "noun",
+        "definition": "boy",
+        "origin": "latin"
+    },
+    {
+        "base": "pulchra",
+        "link": "pulchr",
+        "type": "adj",
+        "definition": "beautiful",
+        "origin": "latin"
+    },
+    {
+        "base": "pax",
+        "link": "pac",
+        "type": "noun",
+        "definition": "peace",
+        "origin": "latin"
+    },
+    {
+        "base": "real",
+        "link": "real",
+        "type": "adj",
+        "definition": "real",
+        "origin": "latin"
+    },
+    {
+        "base": "stulta",
+        "link": "stult",
+        "type": "adj",
+        "definition": "stupid",
         "origin": "latin"
     },
     {
@@ -39,6 +107,76 @@
         "origin": "latin"
     },
     {
+        "base": "ary",
+        "link": "ari",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "connected with, pertaining to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "dens",
+        "link": "dent",
+        "type": "noun",
+        "definition": "tooth",
+        "origin": "latin"
+    },
+{
+        "base": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "in the manner of, pertaining to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ify",
+        "link": "ific",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "verb",
+        "definition": "to make or make into %@",
+        "origin": "latin"
+    },
+    {
+        "base": "tion",
+        "link": "tion",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "definition": "the act of %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ism",
+        "link": "ism",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "noun",
+        "definition": "the practice, system, or doctrine of %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ist",
+        "link": "ist",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "noun",
+        "definition": "one who does or makes %@",
+        "origin": "latin"
+    },
+    {
+        "base": "itude",
+        "link": "itudin",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "definition": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
         "base": "ity",
         "link": "iti",
         "type": "derive",
@@ -48,12 +186,30 @@
         "origin": "latin"
     },
     {
+        "base": "ize",
+        "link": "iza",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "verb",
+        "definition": "to do %@ to",
+        "origin": "latin"
+    },
+    {
+        "base": "ous",
+        "link": "os",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "having, full of, inclined to %@",
+        "origin": "latin"
+    },
+    {
         "base": "nce",
 		"link": "nt",
 		"from": "verb",
 		"to": "noun",
 		"stem-change": true,
 		"category" : "derive",
-        "description": "the process, state, or quality of %@"
+        "definition": "the process, state, or quality of %@"
     }
 ]

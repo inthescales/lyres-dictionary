@@ -2,6 +2,7 @@ import json
 import random
 
 morphs = {}
+roots = []
 type_morphs = {}
 morphs_from = {}
 words = []
@@ -9,9 +10,9 @@ words = []
 # Data import and setup
 
 def setup():
-    global morphs, type_morphs, morphs_from, words
+    global morphs, roots, type_morphs, morphs_from, words
     
-    (morphs, type_morphs, morphs_from) = load_morphs()
+    (morphs, roots, type_morphs, morphs_from) = load_morphs()
     words = load_words()
     
 def load_morphs():
@@ -19,6 +20,7 @@ def load_morphs():
     with open('morphs.json') as morph_data:
         raw_morphs = json.load(morph_data)
         morphs = {}
+        roots = []
         type_morphs = {}
         morphs_from = {}
         
@@ -32,6 +34,9 @@ def load_morphs():
                     
                 type_morphs[morph_type].append(morph["base"])
                 
+                if morph_type in ["noun", "adj", "verb"]:
+                    roots.append(morph)
+                
             if "from" in morph:
                 
                 for from_type in morph["from"].split(","):
@@ -40,7 +45,7 @@ def load_morphs():
 
                     morphs_from[from_type].append(morph["base"])
             
-        return (morphs, type_morphs, morphs_from)
+        return (morphs, roots, type_morphs, morphs_from)
 
 def load_words():
     
@@ -58,6 +63,10 @@ def is_consonant(letter):
     
 # Assembling morphs
 
+def get_root_morph():
+    
+    return roots[random.randint(0, len(roots)-1)]
+
 def next_morph(current, final):
     global morphs, type_morphs, morphs_from
     
@@ -65,13 +74,19 @@ def next_morph(current, final):
     
     options = morphs_from[head_type]
     
-    choice = options[ random.randint(0, len(options)-1) ]
+    choice = None
+    
+    while choice == None or choice == current[-1]:
+        choice = options[ random.randint(0, len(options)-1) ]
     
     return choice
     
-def generate_morphs(seed, length):
+def generate_morphs(length, seed=[]):
     
-    chosen = [seed]
+    if seed != []:
+        chosen = seed
+    else:
+        chosen = [get_root_morph()["base"]]
     
     for i in range(0, length-1):
         newest = next_morph(chosen, 0)
@@ -93,7 +108,7 @@ def word_type(word_morphs):
 
 def anglicize(word):
     
-    english_word = word
+    english_word = list(word)
     
     # Replaces Q + U + cons. with C + U + cons. (e.g. interlocutor)
     for i in range(0, len(english_word)-1):
@@ -101,15 +116,16 @@ def anglicize(word):
             english_word[i] = "c"
     
     # Replace final ui with uy (e.g. soliloquy)
-    if english_word[-2:-1] == "ui":
-        english_word[-2:] = "uy"
+    if english_word[-2:] == list("ui"):
+        english_word[-2:] = list("uy")
         
-    return english_word
+    return "".join(english_word)
 
 def compose_word(in_morphs):
     global morphs
     
     word = ""
+    definition = ""
     
     for index, morph in enumerate(in_morphs):
         
@@ -134,18 +150,23 @@ def compose_word(in_morphs):
             
             word += addition
             
+        if index == 0:
+            definition = morphs[morph]["definition"]
+        else:
+            definition = morphs[morph]["definition"].replace("%@", definition)
     
     word = anglicize(word)
     
-    return word
+    return (word, definition)
         
 setup()
 
-parts = generate_morphs("caput", 3)
-word = compose_word(parts)
-print(word)
+print("")
 
-print(anglicize("soliloqui"))
-print(anglicize("eloqution"))
+for i in range(0, 8):
+    parts = generate_morphs(random.randint(2,3))
+    (word, definition) = compose_word(parts)
+    print(word)
+    print(definition)
+    print("")
 
-#word = compose_word(["caput", "al"])
