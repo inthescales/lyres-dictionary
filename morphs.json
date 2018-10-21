@@ -1,5 +1,13 @@
 [
     {
+        "base": "audire",
+        "link-present": "audie",
+        "link-perfect": "audit",
+        "type": "verb",
+        "definition": "to hear",
+        "origin": "latin"
+    },
+    {
         "base": "bellum",
         "link": "bell",
         "type": "noun",
@@ -11,6 +19,14 @@
         "link": "can",
         "type": "noun",
         "definition": "dog",
+        "origin": "latin"
+    },
+    {
+        "base": "capere",
+        "link-present": "cape",
+        "link-perfect": "capt",
+        "type": "verb",
+        "definition": "seize",
         "origin": "latin"
     },
     {
@@ -28,10 +44,33 @@
         "origin": "latin"
     },
     {
+        "base": "crux",
+        "link": "cruci",
+        "type": "noun",
+        "definition": "cross",
+        "origin": "latin"
+    },
+    {
+        "base": "dicere",
+        "link-present": "dice",
+        "link-perfect": "dict",
+        "type": "verb",
+        "definition": "say",
+        "origin": "latin"
+    },
+    {
         "base": "equus",
         "link": "equ",
         "type": "noun",
         "definition": "horse",
+        "origin": "latin"
+    },
+    {
+        "base": "facere",
+        "link-present": "fice",
+        "link-perfect": "fact",
+        "type": "verb",
+        "definition": "make",
         "origin": "latin"
     },
     {
@@ -49,6 +88,13 @@
         "origin": "latin"
     },
     {
+        "base": "lachryma",
+        "link": "lachrym",
+        "type": "noun",
+        "definition": "tear",
+        "origin": "latin"
+    },
+    {
         "base": "limen",
         "link": "limin",
         "type": "noun",
@@ -61,6 +107,13 @@
         "link-perfect": "locut",
         "type": "verb",
         "definition": "speak",
+        "origin": "latin"
+    },
+    {
+        "base": "lux",
+        "link": "luc",
+        "type": "noun",
+        "definition": "light",
         "origin": "latin"
     },
     {
@@ -121,10 +174,25 @@
         "origin": "latin"
     },
     {
+        "base": "serpentus",
+        "link": "serpent",
+        "type": "noun",
+        "definition": "snake",
+        "origin": "latin"
+    },
+    {
         "base": "stulta",
         "link": "stult",
         "type": "adj",
         "definition": "stupid",
+        "origin": "latin"
+    },
+    {
+        "base": "videre",
+        "link-present": "vide",
+        "link-perfect": "vis",
+        "type": "verb",
+        "definition": "see",
         "origin": "latin"
     },
     {
@@ -152,7 +220,7 @@
         "definition": "tooth",
         "origin": "latin"
     },
-{
+    {
         "base": "ic",
         "link": "ic",
         "type": "derive",
@@ -169,6 +237,15 @@
         "from": "noun,adj",
         "to": "verb",
         "definition": "to make or make into %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ine",
+        "link": "in",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "pertaining to %@",
         "origin": "latin"
     },
     {
@@ -245,5 +322,15 @@
         "participle-type": "present",
 		"category" : "derive",
         "definition": "the process, state, or quality of %@"
+    },
+    {
+        "base": "nt",
+		"link": "nti",
+        "type": "derive",
+		"from": "verb",
+		"to": "adj",
+        "participle-type": "present",
+		"category" : "derive",
+        "definition": "doing %@"
     }
 ]

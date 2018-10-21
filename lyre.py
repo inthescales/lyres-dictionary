@@ -171,6 +171,8 @@ setup()
 
 print("")
 
+#print(compose_word(["capere", "ion"]))
+
 for i in range(0, 8):
     parts = generate_morphs(random.randint(2,3))
     (word, definition) = compose_word(parts)
