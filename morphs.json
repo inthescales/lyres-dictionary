@@ -49,6 +49,21 @@
         "origin": "latin"
     },
     {
+        "base": "limen",
+        "link": "limin",
+        "type": "noun",
+        "definition": "boundary",
+        "origin": "latin"
+    },
+    {
+        "base": "loqui",
+        "link-present": "loque",
+        "link-perfect": "locut",
+        "type": "verb",
+        "definition": "speak",
+        "origin": "latin"
+    },
+    {
         "base": "magna",
         "link": "magn",
         "type": "adj",
@@ -88,6 +103,21 @@
         "link": "real",
         "type": "adj",
         "definition": "real",
+        "origin": "latin"
+    },
+    {
+        "base": "rex",
+        "link": "reg",
+        "type": "noun",
+        "definition": "king",
+        "origin": "latin"
+    },
+    {
+        "base": "sequi",
+        "link-present": "seque",
+        "link-perfect": "secut",
+        "type": "verb",
+        "definition": "follow",
         "origin": "latin"
     },
     {
@@ -133,7 +163,8 @@
     },
     {
         "base": "ify",
-        "link": "ific",
+        "link-present": "ifice",
+        "link-perfect": "ificat",
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
@@ -141,11 +172,12 @@
         "origin": "latin"
     },
     {
-        "base": "tion",
-        "link": "tion",
+        "base": "ion",
+        "link": "ion",
         "type": "derive",
         "from": "verb",
         "to": "noun",
+        "participle-type": "perfect",
         "definition": "the act of %@",
         "origin": "latin"
     },
@@ -187,7 +219,8 @@
     },
     {
         "base": "ize",
-        "link": "iza",
+        "link-present": "ize",
+        "link-perfect": "izat",
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
@@ -205,10 +238,11 @@
     },
     {
         "base": "nce",
-		"link": "nt",
+		"link": "nti",
+        "type": "derive",
 		"from": "verb",
 		"to": "noun",
-		"stem-change": true,
+        "participle-type": "present",
 		"category" : "derive",
         "definition": "the process, state, or quality of %@"
     }

@@ -110,11 +110,6 @@ def anglicize(word):
     
     english_word = list(word)
     
-    # Replaces Q + U + cons. with C + U + cons. (e.g. interlocutor)
-    for i in range(0, len(english_word)-1):
-        if english_word[i] == "q" and english_word[i+1] == "u" and is_consonant(english_word[i+2]):
-            english_word[i] = "c"
-    
     # Replace final ui with uy (e.g. soliloquy)
     if english_word[-2:] == list("ui"):
         english_word[-2:] = list("uy")
@@ -127,13 +122,26 @@ def compose_word(in_morphs):
     word = ""
     definition = ""
     
-    for index, morph in enumerate(in_morphs):
+    for index, token in enumerate(in_morphs):
         
         addition = ""
+        morph = morphs[token]
+        if index < len(in_morphs) - 1:
+            next_morph = morphs[in_morphs[index+1]]
+        else:
+            next_morph = None
         
         # Get form of morph
         if index != len(in_morphs) - 1:
-            addition = morphs[morph]["link"]
+            
+            if "link" in morph:
+                addition = morph["link"]
+            elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
+                if next_morph and next_morph["participle-type"]:
+                    if next_morph["participle-type"] == "present":
+                        addition = morph["link-present"]
+                    elif next_morph["participle-type"] == "perfect":
+                        addition = morph["link-perfect"]
         else:
             addition = morphs[in_morphs[-1]]["base"]
 
@@ -144,16 +152,16 @@ def compose_word(in_morphs):
                 addition = addition[1:]
             
             # Stem change
-            if "stem-change" in morphs[morph] and morphs[morph]["stem-change"] == True:
-                if word[-1] == "i" or word[-1] == "e":
-                    addition = "e" + addition
+            #if "stem-change" in morph and morph["stem-change"] == True:
+            #    if word[-1] == "i" or word[-1] == "e":
+            #        addition = "e" + addition
             
             word += addition
             
         if index == 0:
-            definition = morphs[morph]["definition"]
+            definition = morph["definition"]
         else:
-            definition = morphs[morph]["definition"].replace("%@", definition)
+            definition = morph["definition"].replace("%@", definition)
     
     word = anglicize(word)
     
