@@ -17,7 +17,7 @@ def setup():
     
 def load_morphs():
     
-    with open('test_morphs.json') as morph_data:
+    with open('morphs.json') as morph_data:
         raw_morphs = json.load(morph_data)
         morphs = {}
         roots = []
@@ -76,8 +76,9 @@ def next_morph(current):
     
     while choice == None or choice == current[-1]:
 
-        # Possibly preposition addition
-        if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 3) == 0:
+        # Special chance to add prefixes before verbs.
+        # Necessary to inflate their frequency given their small number.
+        if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 0) == 0:
                 options = type_morphs["prep"]
                 choice = options[ random.randint(0, len(options)-1) ]
                 return [choice] + current
@@ -162,7 +163,13 @@ def compose_word(in_morphs):
             else:
                 addition = morph["base"]
         else:
-            addition = morphs[in_morphs[-1]]["base"]
+                if not morph["type"] == "verb":
+                    addition = morph["base"]
+                else:
+                    if "link-verb" in morph:
+                        addition = morph["link-verb"]
+                    else:
+                        addition = morph["link-perfect"]
 
         if len(addition) > 0:
 
@@ -195,12 +202,12 @@ setup()
 
 print("")
 
-print(compose_word(["trans", "jace", "ion", "al"]))
+#print(compose_word(["trans", "jace", "ion", "al"]))
 
-#for i in range(0, 8):
-#    parts = generate_morphs(random.randint(2,3))
-#    (word, definition) = compose_word(parts)
-#    print(word)
-#    print(definition)
-#    print("")
+for i in range(0, 8):
+    parts = generate_morphs(random.randint(2,3))
+    (word, definition) = compose_word(parts)
+    print(word)
+    print(definition)
+    print("")
 
