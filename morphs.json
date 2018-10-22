@@ -247,6 +247,18 @@
         "origin": "latin"
     },
 	{
+		"base" : "com",
+		"link" : "co",
+		"type" : "prep",
+        "definition" : "with",
+		"assimilation" : {
+			"link" : ["a", "e", "i", "u", "o", "h"],
+			"double" : ["f", "l", "r"],
+			"nasal" : ["*"]
+        },
+        "origin": "latin"
+    },
+	{
 		"base" : "in",
 		"link" : "i",
 		"type" : "prep",
@@ -255,17 +267,30 @@
 			"nasal" : ["*"]
 		},
         "origin": "latin"
-},
+    },
+	{
+		"base" : "ex",
+		"link" : "e",
+		"type" : "prep",
+        "definition" : "out from",
+		"assimilation" : {
+			"base" : ["a", "e", "i", "o", "h", "c", "p", "q", "t"],
+			"link" : ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
+			"cut" : ["s", "x"],
+			"double" : ["f"]
+        },
+        "origin": "latin"
+    },
     {
         "base": "inter",
         "type": "prep",
-        "definition": "%@ between",
+        "definition": "between",
         "origin": "latin"
     },
     {
         "base": "trans",
         "type": "prep",
-        "definition": "%@ across",
+        "definition": "across",
         "origin": "latin"
     },
     {
@@ -347,6 +372,16 @@
         "from": "adj",
         "to": "noun",
         "definition": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ive",
+        "link": "ivi",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "perfect",
+        "definition": "capable of %@",
         "origin": "latin"
     },
     {

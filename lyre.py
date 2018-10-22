@@ -164,13 +164,13 @@ def compose_word(in_morphs):
                         
                         if case == "base":
                             addition = morph["base"]
-                        if case == "link":
+                        elif case == "link":
                             addition = morph["link"]
-                        if case == "cut":
+                        elif case == "cut":
                             addition = morph["base"] + "-"
-                        if case == "double":
+                        elif case == "double":
                             addition = morph["link"] + next_letter
-                        if case == "nasal":
+                        elif case == "nasal":
                             if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
                                 addition = morph["link"] + 'm'
                             else:
@@ -242,16 +242,33 @@ def compose_word(in_morphs):
     
     return (word, definition)
         
+def part_tag(word_morphs):
+
+    pos = word_type(word_morphs)
+    
+    if pos == "noun":
+        abbrev = "n"
+    elif pos == "adj":
+        abbrev = "adj"
+    elif pos == "verb":
+        abbrev = "v"
+    elif pos == "prep":
+        abbrev = "prep"
+    else:
+        abbrev = "???"
+
+    return "(" + abbrev + ")"
+
 setup()
 
 print("")
 
-print(compose_word(["in", "bibere", "ion"]))
+# print(compose_word(["ex", "felis", "ize"]))
 
-#for i in range(0, 8):
-#    parts = generate_morphs(random.randint(2,3))
-#    (word, definition) = compose_word(parts)
-#    print(word)
-#    print(definition)
-#    print("")
+for i in range(0, 8):
+    parts = generate_morphs(random.randint(2,3))
+    (word, definition) = compose_word(parts)
+    print(word + " " + part_tag(parts))
+    print(definition)
+    print("")
 
