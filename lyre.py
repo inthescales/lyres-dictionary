@@ -17,7 +17,7 @@ def setup():
     
 def load_morphs():
     
-    with open('morphs.json') as morph_data:
+    with open('test_morphs.json') as morph_data:
         raw_morphs = json.load(morph_data)
         morphs = {}
         roots = []
@@ -67,19 +67,25 @@ def get_root_morph():
     
     return roots[random.randint(0, len(roots)-1)]
 
-def next_morph(current, final):
+def next_morph(current):
     global morphs, type_morphs, morphs_from
     
     head_type = word_type(current)
     
-    options = morphs_from[head_type]
-    
     choice = None
     
     while choice == None or choice == current[-1]:
-        choice = options[ random.randint(0, len(options)-1) ]
-    
-    return choice
+
+        # Possibly preposition addition
+        if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 3) == 0:
+                options = type_morphs["prep"]
+                choice = options[ random.randint(0, len(options)-1) ]
+                return [choice] + current
+        else:
+            # Basic morph addition
+            options = morphs_from[head_type]
+            choice = options[ random.randint(0, len(options)-1) ]
+            return current + [choice]
     
 def generate_morphs(length, seed=[]):
     
@@ -89,8 +95,7 @@ def generate_morphs(length, seed=[]):
         chosen = [get_root_morph()["base"]]
     
     for i in range(0, length-1):
-        newest = next_morph(chosen, 0)
-        chosen.append(newest)
+        chosen = next_morph(chosen)
         
     return chosen
 
@@ -122,6 +127,15 @@ def compose_word(in_morphs):
     word = ""
     definition = ""
     
+    prefix_stack = []
+    
+    def pop_prefix():
+        nonlocal morph
+        nonlocal definition
+        
+        top = prefix_stack.pop()
+        definition += " " + top["definition"]
+    
     for index, token in enumerate(in_morphs):
         
         addition = ""
@@ -132,6 +146,9 @@ def compose_word(in_morphs):
             next_morph = None
         
         # Get form of morph
+        if morph["type"] == "prep" or morph["type"] == "prefix":
+            prefix_stack.append(morph)
+            
         if index != len(in_morphs) - 1:
             
             if "link" in morph:
@@ -142,13 +159,15 @@ def compose_word(in_morphs):
                         addition = morph["link-present"]
                     elif next_morph["participle-type"] == "perfect":
                         addition = morph["link-perfect"]
+            else:
+                addition = morph["base"]
         else:
             addition = morphs[in_morphs[-1]]["base"]
 
         if len(addition) > 0:
 
             # Combine repeated letters            
-            if len(word) > 0 and addition[0] == word[-1]:
+            if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]):
                 addition = addition[1:]
             
             # Stem change
@@ -162,8 +181,13 @@ def compose_word(in_morphs):
             definition = morph["definition"]
         else:
             definition = morph["definition"].replace("%@", definition)
+            if len(prefix_stack) > 0 and (morph["type"] == "verb" or morph["type"] == "adj" or morph["type"] == "noun"):
+                pop_prefix()
     
     word = anglicize(word)
+    
+    while len(prefix_stack) > 0:
+        pop_prefix()
     
     return (word, definition)
         
@@ -171,12 +195,12 @@ setup()
 
 print("")
 
-#print(compose_word(["capere", "ion"]))
+print(compose_word(["trans", "jace", "ion", "al"]))
 
-for i in range(0, 8):
-    parts = generate_morphs(random.randint(2,3))
-    (word, definition) = compose_word(parts)
-    print(word)
-    print(definition)
-    print("")
+#for i in range(0, 8):
+#    parts = generate_morphs(random.randint(2,3))
+#    (word, definition) = compose_word(parts)
+#    print(word)
+#    print(definition)
+#    print("")
 

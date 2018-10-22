@@ -59,6 +59,14 @@
         "origin": "latin"
     },
     {
+        "base": "ducere",
+        "link-present": "duce",
+        "link-perfect": "duct",
+        "type": "verb",
+        "definition": "lead",
+        "origin": "latin"
+    },
+    {
         "base": "equus",
         "link": "equ",
         "type": "noun",
@@ -85,6 +93,13 @@
         "link": "fort",
         "type": "adj",
         "definition": "strong",
+        "origin": "latin"
+    },
+    {
+        "base": "jace",
+        "link": "ject",
+        "type": "verb",
+        "definition": "throw",
         "origin": "latin"
     },
     {
@@ -196,6 +211,18 @@
         "origin": "latin"
     },
     {
+        "base": "inter",
+        "type": "prep",
+        "definition": "%@ between",
+        "origin": "latin"
+    },
+    {
+        "base": "trans",
+        "type": "prep",
+        "definition": "%@ across",
+        "origin": "latin"
+    },
+    {
         "base": "al",
         "link": "al",
         "type": "derive",
@@ -256,24 +283,6 @@
         "to": "noun",
         "participle-type": "perfect",
         "definition": "the act of %@",
-        "origin": "latin"
-    },
-    {
-        "base": "ism",
-        "link": "ism",
-        "type": "derive",
-        "from": "noun,adj",
-        "to": "noun",
-        "definition": "the practice, system, or doctrine of %@",
-        "origin": "latin"
-    },
-    {
-        "base": "ist",
-        "link": "ist",
-        "type": "derive",
-        "from": "noun,adj",
-        "to": "noun",
-        "definition": "one who does or makes %@",
         "origin": "latin"
     },
     {
