@@ -160,7 +160,7 @@ def compose_word(in_morphs):
                 
                 for case, sounds in morph["assimilation"].items():
                     
-                    if next_letter in sounds:
+                    if next_letter in sounds or "*" in sounds:
                         
                         if case == "base":
                             addition = morph["base"]
@@ -170,6 +170,11 @@ def compose_word(in_morphs):
                             addition = morph["base"] + "-"
                         if case == "double":
                             addition = morph["link"] + next_letter
+                        if case == "nasal":
+                            if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
+                                addition = morph["link"] + 'm'
+                            else:
+                                addition = morph["link"] + 'n'
                         else:
                             addition = case
                         
@@ -241,7 +246,7 @@ setup()
 
 print("")
 
-print(compose_word(["ad", "quaerere", "ion"]))
+print(compose_word(["in", "bibere", "ion"]))
 
 #for i in range(0, 8):
 #    parts = generate_morphs(random.randint(2,3))

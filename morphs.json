@@ -15,6 +15,15 @@
         "origin": "latin"
     },
     {
+        "base": "bibere",
+        "link-present": "bibe",
+        "link-perfect": "bibit",
+        "link-verb": "bibe",
+        "type": "verb",
+        "definition": "drink",
+        "origin": "latin"
+    },
+    {
         "base": "canis",
         "link": "can",
         "type": "noun",
@@ -237,6 +246,16 @@
         },
         "origin": "latin"
     },
+	{
+		"base" : "in",
+		"link" : "i",
+		"type" : "prep",
+        "definition" : "in",
+		"assimilation": {
+			"nasal" : ["*"]
+		},
+        "origin": "latin"
+},
     {
         "base": "inter",
         "type": "prep",
