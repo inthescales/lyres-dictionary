@@ -170,6 +170,15 @@
         "origin": "latin"
     },
     {
+        "base": "quaerere",
+        "link-present": "quire",
+        "link-perfect": "quisit",
+        "link-verb": "quire",
+        "type": "verb",
+        "definition": "seek",
+        "origin": "latin"
+    },
+    {
         "base": "real",
         "link": "real",
         "type": "adj",
@@ -213,6 +222,19 @@
         "link-verb": "vise",
         "type": "verb",
         "definition": "see",
+        "origin": "latin"
+    },
+    {
+        "base": "ad",
+        "link": "a",
+        "type": "prep",
+        "definition": "to",
+        "assimilation" : {
+			"base" : ["a", "d", "e", "j", "m", "o"],
+			"link" : ["b"],
+			"double" : ["c", "d", "f", "g", "l", "n", "p", "r", "s", "t"],
+            "ac" : ["q"]
+        },
         "origin": "latin"
     },
     {

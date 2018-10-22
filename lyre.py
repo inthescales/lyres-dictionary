@@ -146,25 +146,61 @@ def compose_word(in_morphs):
         else:
             next_morph = None
         
-        # Get form of morph
+        # Stack prepositions and prefixes for proper definition ordering
         if morph["type"] == "prep" or morph["type"] == "prefix":
             prefix_stack.append(morph)
             
+        # Get the proper form of the morph
         if index != len(in_morphs) - 1:
             
-            if "link" in morph:
-                addition = morph["link"]
-            elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
-                if next_morph and next_morph["participle-type"]:
-                    if next_morph["participle-type"] == "present":
-                        addition = morph["link-present"]
-                    elif next_morph["participle-type"] == "perfect":
-                        addition = morph["link-perfect"]
+            # Follow special assimilation rules if there are any
+            if "assimilation" in morph:
+                
+                next_letter = list(next_morph["base"])[0]
+                
+                for case, sounds in morph["assimilation"].items():
+                    
+                    if next_letter in sounds:
+                        
+                        if case == "base":
+                            addition = morph["base"]
+                        if case == "link":
+                            addition = morph["link"]
+                        if case == "cut":
+                            addition = morph["base"] + "-"
+                        if case == "double":
+                            addition = morph["link"] + next_letter
+                        else:
+                            addition = case
+                        
+                        break
+                
+            # Default rules
             else:
-                addition = morph["base"]
+            
+                # Usually we'll use link form
+                if "link" in morph:
+                    addition = morph["link"]
+
+                # Verbs or verbal derivations need to take participle form into account
+                elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
+                    if next_morph and next_morph["participle-type"]:
+                        if next_morph["participle-type"] == "present":
+                            addition = morph["link-present"]
+                        elif next_morph["participle-type"] == "perfect":
+                            addition = morph["link-perfect"]
+
+                # Use base form if nothing overrides
+                else:
+                    addition = morph["base"]
+        
+        # The final morph
         else:
+                # Non-verbs always use base form
                 if not morph["type"] == "verb":
                     addition = morph["base"]
+                    
+                # Verbs use either their perfect or exception form
                 else:
                     if "link-verb" in morph:
                         addition = morph["link-verb"]
@@ -181,6 +217,9 @@ def compose_word(in_morphs):
             #if "stem-change" in morph and morph["stem-change"] == True:
             #    if word[-1] == "i" or word[-1] == "e":
             #        addition = "e" + addition
+            
+            if len(word) > 0 and word[-1] == "-":
+                addition = addition[1:]
             
             word += addition
             
@@ -202,12 +241,12 @@ setup()
 
 print("")
 
-#print(compose_word(["trans", "jace", "ion", "al"]))
+print(compose_word(["ad", "quaerere", "ion"]))
 
-for i in range(0, 8):
-    parts = generate_morphs(random.randint(2,3))
-    (word, definition) = compose_word(parts)
-    print(word)
-    print(definition)
-    print("")
+#for i in range(0, 8):
+#    parts = generate_morphs(random.randint(2,3))
+#    (word, definition) = compose_word(parts)
+#    print(word)
+#    print(definition)
+#    print("")
 
