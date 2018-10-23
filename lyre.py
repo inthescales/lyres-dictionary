@@ -78,10 +78,16 @@ def next_morph(current):
 
         # Special chance to add prefixes before verbs.
         # Necessary to inflate their frequency given their small number.
-        if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 0) == 0:
-                options = type_morphs["prep"]
-                choice = options[ random.randint(0, len(options)-1) ]
-                return [choice] + current
+        if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 4) == 0:
+            options = type_morphs["prep"]
+            choice = options[ random.randint(0, len(options)-1) ]
+            return [choice] + current
+        # Special chance to use the preposition + noun + ate pattern    
+        if len(current) == 1 and head_type == "noun" and random.randint(0, 0) == 0:
+            options = type_morphs["prep"]
+            options = ["in", "ex", "trans"]
+            choice = options[ random.randint(0, len(options)-1) ]
+            return [choice] + current + ["ate"]
         else:
             # Basic morph addition
             options = morphs_from[head_type]
@@ -94,6 +100,11 @@ def generate_morphs(length, seed=[]):
         chosen = seed
     else:
         chosen = [get_root_morph()["base"]]
+        #chosen = []
+        #for pos in ["adj", "verb"]:
+        #    options = type_morphs[pos]
+        #    choice = options[ random.randint(0, len(options)-1) ]
+        #    chosen.append(choice)
     
     for i in range(0, length-1):
         chosen = next_morph(chosen)
@@ -158,27 +169,39 @@ def compose_word(in_morphs):
                 
                 next_letter = list(next_morph["base"])[0]
                 
+                matched_case = None
+                star_case = None
+                    
                 for case, sounds in morph["assimilation"].items():
                     
-                    if next_letter in sounds or "*" in sounds:
+                    if "*" in sounds:
+                        star_case = case
                         
-                        if case == "base":
-                            addition = morph["base"]
-                        elif case == "link":
-                            addition = morph["link"]
-                        elif case == "cut":
-                            addition = morph["base"] + "-"
-                        elif case == "double":
-                            addition = morph["link"] + next_letter
-                        elif case == "nasal":
-                            if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-                                addition = morph["link"] + 'm'
-                            else:
-                                addition = morph["link"] + 'n'
-                        else:
-                            addition = case
-                        
+                    if next_letter in sounds:
+                        matched_case = case
                         break
+                        
+                if matched_case:
+                    case = matched_case
+                elif star_case:
+                    case = star_case
+                        
+                if case == "base":
+                    addition = morph["base"]
+                elif case == "link":
+                    addition = morph["link"]
+                elif case == "cut":
+                    addition = morph["base"] + "-"
+                elif case == "double":
+                    addition = morph["link"] + next_letter
+                elif case == "nasal":
+                    if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
+                        addition = morph["link"] + 'm'
+                    else:
+                        addition = morph["link"] + 'n'
+                else:
+                    addition = case
+
                 
             # Default rules
             else:
@@ -189,11 +212,15 @@ def compose_word(in_morphs):
 
                 # Verbs or verbal derivations need to take participle form into account
                 elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
-                    if next_morph and next_morph["participle-type"]:
+                    if next_morph and "participle-type" in next_morph:
                         if next_morph["participle-type"] == "present":
                             addition = morph["link-present"]
                         elif next_morph["participle-type"] == "perfect":
                             addition = morph["link-perfect"]
+                    elif "link-verb" in morph:
+                        addition = morph["link-verb"]
+                    else:
+                        addition = morph["link-perfect"]
 
                 # Use base form if nothing overrides
                 else:
@@ -219,11 +246,12 @@ def compose_word(in_morphs):
                 addition = addition[1:]
             
             # Stem change
-            #if "stem-change" in morph and morph["stem-change"] == True:
-            #    if word[-1] == "i" or word[-1] == "e":
-            #        addition = "e" + addition
+            if "stem-change" in morph and morph["stem-change"] == True:
+                if word[-1] == "i" or word[-1] == "e":
+                    addition = "e" + addition
             
             if len(word) > 0 and word[-1] == "-":
+                word = word[:-1]
                 addition = addition[1:]
             
             word += addition
@@ -263,7 +291,7 @@ setup()
 
 print("")
 
-# print(compose_word(["ex", "felis", "ize"]))
+#print(compose_word(["ob", "bibere", "ion"]))
 
 for i in range(0, 8):
     parts = generate_morphs(random.randint(2,3))
