@@ -1,10 +1,89 @@
 [
     {
+        "base": "acerba",
+        "link": "acerb",
+        "type": "adj",
+        "definition": "bitter",
+        "origin": "latin"
+    },
+    {
+        "base": "acris",
+        "link": "acrid",
+        "type": "adj",
+        "definition": "sharp",
+        "origin": "latin"
+    },
+    {
+        "base": "acuta",
+        "link": "acut",
+        "type": "ad",
+        "definition": "pointed",
+        "origin": "latin"
+    },
+    {
+        "base": "aequus",
+        "link": "equ",
+        "type": "adj",
+        "definition": "equal",
+        "origin": "latin"
+    },
+    {
+        "base": "aer",
+        "link": "aeri",
+        "type": "noun",
+        "definition": "air",
+        "origin": "latin"
+    },
+    {
+        "base": "alba",
+        "link": "alb",
+        "type": "adj",
+        "definition": "white",
+        "origin": "latin"
+    },
+    {
+        "base": "alta",
+        "link": "alt",
+        "type": "adj",
+        "definition": "high",
+        "origin": "latin"
+    },
+    {
+        "base": "altera",
+        "link": "alter",
+        "type": "adj",
+        "definition": "other",
+        "origin": "latin"
+    },
+    {
+        "base": "amare",
+        "link-present": "ama",
+        "link-perect": "amat",
+        "type": "verb",
+        "definition": "love",
+        "origin": "latin"
+    },
+    {
         "base": "ambulare",
         "link-present": "ambula",
         "link-perfect": "ambulat",
+        "link-verb": "ambulate",
         "type": "verb",
         "definition": "walk",
+        "origin": "latin"
+    },
+    {
+        "base": "anima",
+        "link": "anim",
+        "type": "noun",
+        "definition": "soul",
+        "origin": "latin"
+    },
+    {
+        "base": "ancilla",
+        "link": "ancill",
+        "type": "noun",
+        "definition": "subordinate",
         "origin": "latin"
     },
     {
@@ -49,6 +128,7 @@
         "base": "cadere",
         "link-present": "cade",
         "link-perfect": "cas",
+        "link-verb": "cide",
         "type": "verb",
         "definition": "fall",
         "origin": "latin"
@@ -62,8 +142,9 @@
     },
     {
         "base": "cantare",
-        "link-present": "cant",
+        "link-present": "canta",
         "link-perfect": "cantat",
+        "link-verb": "cant",
         "type": "verb",
         "definition": "sing",
         "origin": "latin"
@@ -84,6 +165,21 @@
         "origin": "latin"
     },
     {
+        "base": "caro",
+        "link": "carn",
+        "type": "noun",
+        "definition": "flesh",
+        "origin": "latin"
+    },
+    {
+        "base": "cedere",
+        "link-present": "cede",
+        "link-perfect": "cess",
+        "type": "verb",
+        "definition": "come",
+        "origin": "latin"
+    },
+    {
         "base": "clara",
         "link": "clar",
         "type": "adj",
@@ -91,10 +187,26 @@
         "origin": "latin"
     },
     {
+        "base": "cordis",
+        "link": "cordi",
+        "type": "noun",
+        "definition": "heart",
+        "origin": "latin"
+    },    
+    {
         "base": "crux",
         "link": "cruci",
         "type": "noun",
         "definition": "cross",
+        "origin": "latin"
+    },
+    {
+        "base": "currere",
+        "link-present": "curre",
+        "link-perfect": "curs",
+        "link-verb": "curse",
+        "type": "verb",
+        "definition": "run",
         "origin": "latin"
     },
     {
@@ -121,6 +233,15 @@
         "origin": "latin"
     },
     {
+        "base": "edificare",
+        "link-present": "edifica",
+        "link-perfect": "edificat",
+        "link-verb": "edify",
+        "type": "verb",
+        "definition": "build",
+        "origin": "latin"
+    },
+    {
         "base": "equus",
         "link": "equ",
         "type": "noun",
@@ -144,12 +265,43 @@
         "origin": "latin"
     },
     {
+        "base": "femina",
+        "link": "femin",
+        "type": "noun",
+        "definition": "woman",
+        "origin": "latin"
+    },
+    {
         "base": "fidere",
         "link-present": "fide",
         "link-perfect": "fis",
         "link-verb": "fide",
         "type": "verb",
         "definition": "trust",
+        "origin": "latin"
+    },
+    {
+        "base": "firma",
+        "link": "firm",
+        "type": "adj",
+        "definition": "firm",
+        "origin": "latin"
+    },
+    {
+        "base": "flectere",
+        "link-present": "flecte",
+        "link-perfect": "flect",
+        "link-verb": "flect",
+        "type": "verb",
+        "definition": "bend",
+        "origin": "latin"
+    },
+    {
+        "base": "fluere",
+        "link-present": "flue",
+        "link-perfect": "fluct",
+        "type": "verb",
+        "definition": "flow",
         "origin": "latin"
     },
     {
@@ -165,6 +317,15 @@
         "link-perfect": "ject",
         "type": "verb",
         "definition": "throw",
+        "origin": "latin"
+    },
+    {
+        "base": "jugare",
+        "link-present": "juga",
+        "link-perfect": "jugat",
+        "link-verb": "jugate",
+        "type": "verb",
+        "definition": "join",
         "origin": "latin"
     },
     {
@@ -219,10 +380,53 @@
         "origin": "latin"
     },
     {
+        "base": "mirari",
+        "link-present": "mira",
+        "link-perfect": "mirat",
+        "link-verb": "mire",
+        "type": "verb",
+        "definition": "marvel",
+        "origin": "latin"
+    },
+    {
+        "base": "mittere",
+        "link-present": "mitta",
+        "link-perfect": "miss",
+        "link-verb": "mit",
+        "type": "verb",
+        "definition": "let",
+        "origin": "latin"
+    },
+    {
+        "base": "nectare",
+        "link-present": "necta",
+        "link-perfect": "nect",
+        "link-verb": "nect",
+        "type": "verb",
+        "definition": "tie",
+        "origin": "latin"
+    },
+    {
+        "base": "nox",
+        "link": "noct",
+        "type": "night",
+        "definition": "night",
+        "origin": "latin"
+    },
+    {
         "base": "optima",
         "link": "optim",
         "type": "adj",
         "definition": "best",
+        "origin": "latin"
+    },
+    {
+        "base": "orare",
+        "link-present": "ora",
+        "link-perfect": "orat",
+        "link-verb": "ore",
+        "type": "verb",
+        "definition": "plead",
         "origin": "latin"
     },
     {
@@ -260,6 +464,13 @@
         "link": "porc",
         "type": "noun",
         "definition": "pig",
+        "origin": "latin"
+    },
+    {
+        "base": "puella",
+        "link": "puell",
+        "type": "noun",
+        "definition": "girl",
         "origin": "latin"
     },
     {
@@ -339,12 +550,46 @@
         "origin": "latin"
     },
     {
+        "base": "vehere",
+        "link-present": "vehe",
+        "link-perfect": "vect",
+        "link-verb": "veigh",
+        "type": "verb",
+        "definition": "carry",
+        "origin": "latin"
+    },
+    {
+        "base": "venire",
+        "link-present": "veni",
+        "link-perfect": "vent",
+        "link-verb": "vene",
+        "type": "verb",
+        "definition": "come",
+        "origin": "latin"
+    },
+    {
+        "base": "vertere",
+        "link-present": "verte",
+        "link-perfect": "vers",
+        "link-verb": "vert",
+        "type": "verb",
+        "definition": "turn",
+        "origin": "latin"
+    },
+    {
         "base": "videre",
         "link-present": "vide",
         "link-perfect": "vis",
         "link-verb": "vise",
         "type": "verb",
         "definition": "see",
+        "origin": "latin"
+    },
+    {
+        "base": "vir",
+        "link": "vir",
+        "type": "noun",
+        "definition": "man",
         "origin": "latin"
     },
     {
@@ -397,7 +642,7 @@
 		"base" : "com",
 		"link" : "co",
 		"type" : "prep",
-        "definition" : "with",
+        "definition" : "together",
 		"assimilation" : {
 			"link" : ["a", "e", "i", "u", "o", "h", "*"],
 			"double" : ["f", "l", "r"],
@@ -441,7 +686,13 @@
         "definition": "between",
         "origin": "latin"
     },
-{
+    {
+        "base": "intra",
+        "type": "prep",
+        "definition": "within",
+        "origin": "latin"
+    },
+    {
         "base": "ob",
         "link": "o",
         "type": "prep",
@@ -473,7 +724,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "connected with, pertaining to %@",
+        "definition": "pertaining to %@",
         "origin": "latin"
     },
     {
@@ -493,6 +744,7 @@
         "definition": "in the manner of, pertaining to %@",
         "origin": "latin"
     },
+
     {
         "base": "ify",
         "link-present": "ifice",
@@ -557,7 +809,17 @@
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
-        "definition": "to do %@",
+        "definition": "to make %@",
+        "origin": "latin"
+    },
+    {
+        "base": "or",
+        "link": "or",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "perfect",
+        "definition": "one who does %@",
         "origin": "latin"
     },
     {
@@ -566,7 +828,17 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "having, full of, inclined to %@",
+        "definition": "full of %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ment",
+        "link": "ment",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "present",
+        "definition": "the result of %@",
         "origin": "latin"
     },
     {

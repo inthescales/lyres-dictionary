@@ -88,7 +88,7 @@ def next_morph(current):
             return [choice] + current
         
         # Special chance to use the preposition + noun + ate pattern    
-        if len(current) == 1 and head_type == "noun" and random.randint(0, 0) == 0:
+        if len(current) == 1 and head_type == "noun" and random.randint(0, 8) == 0:
             #options = type_morphs["prep"]
             options = ["in", "ex", "trans"]
             choice = random.choice(options)
@@ -151,10 +151,10 @@ def compose_word(in_morphs):
         
         top = prefix_stack.pop()
          
-        if next_morph and next_morph["base"] == "ate":
-            definition = top["definition"] + " " + definition
-        else:
+        if morph["type"] == "verb":
             definition += " " + top["definition"]
+        else:
+            definition = top["definition"] + " " + definition
     
     for index, token in enumerate(in_morphs):
         
@@ -299,7 +299,7 @@ setup()
 
 print("")
 
-# print(compose_word(["ex", "cantare", "ate"]))
+# print(compose_word(["in", "cadere"]))
 
 for i in range(0, 8):
     parts = generate_morphs(random.randint(2,3))
