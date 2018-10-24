@@ -1,6 +1,8 @@
 import json
 import random
 
+#from pattern.en import conjugate
+
 morphs = {}
 roots = []
 type_morphs = {}
@@ -60,12 +62,15 @@ def is_vowel(letter):
 
 def is_consonant(letter):
     return not is_vowel(letter)
-    
+     
 # Assembling morphs
 
 def get_root_morph():
     
-    return roots[random.randint(0, len(roots)-1)]
+    part = random.choice(["noun", "adj", "verb"])
+    return morphs[random.choice(type_morphs[part])]
+    
+    #return random.choice(roots)
 
 def next_morph(current):
     global morphs, type_morphs, morphs_from
@@ -79,31 +84,30 @@ def next_morph(current):
         # Special chance to add prefixes before verbs.
         # Necessary to inflate their frequency given their small number.
         if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 4) == 0:
-            options = type_morphs["prep"]
-            choice = options[ random.randint(0, len(options)-1) ]
+            choice = random.choice(type_morphs["prep"])
             return [choice] + current
+        
         # Special chance to use the preposition + noun + ate pattern    
         if len(current) == 1 and head_type == "noun" and random.randint(0, 0) == 0:
-            options = type_morphs["prep"]
+            #options = type_morphs["prep"]
             options = ["in", "ex", "trans"]
-            choice = options[ random.randint(0, len(options)-1) ]
+            choice = random.choice(options)
             return [choice] + current + ["ate"]
+        
+        # Basic morph addition
         else:
-            # Basic morph addition
-            options = morphs_from[head_type]
-            choice = options[ random.randint(0, len(options)-1) ]
+            choice = random.choice(morphs_from[head_type])
             return current + [choice]
     
 def generate_morphs(length, seed=[]):
     
     if seed != []:
         chosen = seed
-    else:
+    else:        
         chosen = [get_root_morph()["base"]]
         #chosen = []
         #for pos in ["adj", "verb"]:
-        #    options = type_morphs[pos]
-        #    choice = options[ random.randint(0, len(options)-1) ]
+        #    choice = random.choice(type_morphs[pos])
         #    chosen.append(choice)
     
     for i in range(0, length-1):
@@ -138,15 +142,19 @@ def compose_word(in_morphs):
     
     word = ""
     definition = ""
+    next_morph = None
     
     prefix_stack = []
     
     def pop_prefix():
-        nonlocal morph
-        nonlocal definition
+        nonlocal morph, definition, next_morph
         
         top = prefix_stack.pop()
-        definition += " " + top["definition"]
+         
+        if next_morph and next_morph["base"] == "ate":
+            definition = top["definition"] + " " + definition
+        else:
+            definition += " " + top["definition"]
     
     for index, token in enumerate(in_morphs):
         
@@ -247,7 +255,7 @@ def compose_word(in_morphs):
             
             # Stem change
             if "stem-change" in morph and morph["stem-change"] == True:
-                if word[-1] == "i" or word[-1] == "e":
+                if word[-1] == "i":
                     addition = "e" + addition
             
             if len(word) > 0 and word[-1] == "-":
@@ -291,7 +299,7 @@ setup()
 
 print("")
 
-#print(compose_word(["ob", "bibere", "ion"]))
+# print(compose_word(["ex", "cantare", "ate"]))
 
 for i in range(0, 8):
     parts = generate_morphs(random.randint(2,3))

@@ -45,6 +45,14 @@
         "definition": "cow",
         "origin": "latin"
     },
+{
+        "base": "cadere",
+        "link-present": "cade",
+        "link-perfect": "cas",
+        "type": "verb",
+        "definition": "fall",
+        "origin": "latin"
+    },
     {
         "base": "canis",
         "link": "can",
@@ -53,11 +61,11 @@
         "origin": "latin"
     },
     {
-        "base": "cadere",
-        "link-present": "cade",
-        "link-perfect": "cas",
+        "base": "cantare",
+        "link-present": "cant",
+        "link-perfect": "cantat",
         "type": "verb",
-        "definition": "fall",
+        "definition": "sing",
         "origin": "latin"
     },
     {
@@ -340,6 +348,15 @@
         "origin": "latin"
     },
     {
+        "base": "vocare",
+        "link-present": "voca",
+        "link-perfect": "vocat",
+        "link-verb": "voke",
+        "type": "verb",
+        "definition": "call",
+        "origin": "latin"
+    },
+    {
         "base": "vox",
         "link": "voc",
         "type": "noun",
@@ -492,7 +509,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "pertaining to %@",
+        "definition": "having the qualities of %@",
         "origin": "latin"
     },
     {
