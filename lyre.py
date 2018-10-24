@@ -168,84 +168,115 @@ def compose_word(in_morphs):
         # Stack prepositions and prefixes for proper definition ordering
         if morph["type"] == "prep" or morph["type"] == "prefix":
             prefix_stack.append(morph)
-            
-        # Get the proper form of the morph
-        if index != len(in_morphs) - 1:
-            
-            # Follow special assimilation rules if there are any
-            if "assimilation" in morph:
-                
-                next_letter = list(next_morph["base"])[0]
-                
-                matched_case = None
-                star_case = None
+                        
+        # Check for exceptional forms
+        excepted = False
+        if "exception" in morph:
+            for exception in morph["exception"]:
+
+                # Assume there's a match, and negate that if it doesn't meet a requirement
+                # Match the first case that we fill
+                match = True
+                case = exception["case"]
+
+                if "precedes" in case:
                     
-                for case, sounds in morph["assimilation"].items():
-                    
-                    if "*" in sounds:
-                        star_case = case
-                        
-                    if next_letter in sounds:
-                        matched_case = case
-                        break
-                        
-                if matched_case:
-                    case = matched_case
-                elif star_case:
-                    case = star_case
-                        
-                if case == "base":
-                    addition = morph["base"]
-                elif case == "link":
-                    addition = morph["link"]
-                elif case == "cut":
-                    addition = morph["base"] + "-"
-                elif case == "double":
-                    addition = morph["link"] + next_letter
-                elif case == "nasal":
-                    if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-                        addition = morph["link"] + 'm'
+                    if not next_morph:
+                        match = False
                     else:
-                        addition = morph["link"] + 'n'
-                else:
-                    addition = case
+                        precede_match = False
+                        for element in case["precedes"]:
+                            if next_morph["base"] == element:
+                                precede_match = True
+                                break
 
-                
-            # Default rules
-            else:
+                        if not precede_match:
+                            match = False
+
+                if match:
+                    addition = exception["link"]
+                    excepted = True
+                    break
             
-                # Usually we'll use link form
-                if "link" in morph:
-                    addition = morph["link"]
+                
+        if not excepted:
+            # Get the proper form of the morph
+            if index != len(in_morphs) - 1:
 
-                # Verbs or verbal derivations need to take participle form into account
-                elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
-                    if next_morph and "participle-type" in next_morph:
-                        if next_morph["participle-type"] == "present":
-                            addition = morph["link-present"]
-                        elif next_morph["participle-type"] == "perfect":
+                # Follow special assimilation rules if there are any
+                if "assimilation" in morph:
+
+                    next_letter = list(next_morph["base"])[0]
+
+                    matched_case = None
+                    star_case = None
+
+                    for case, sounds in morph["assimilation"].items():
+
+                        if "*" in sounds:
+                            star_case = case
+
+                        if next_letter in sounds:
+                            matched_case = case
+                            break
+
+                    if matched_case:
+                        case = matched_case
+                    elif star_case:
+                        case = star_case
+
+                    if case == "base":
+                        addition = morph["base"]
+                    elif case == "link":
+                        addition = morph["link"]
+                    elif case == "cut":
+                        addition = morph["base"] + "-"
+                    elif case == "double":
+                        addition = morph["link"] + next_letter
+                    elif case == "nasal":
+                        if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
+                            addition = morph["link"] + 'm'
+                        else:
+                            addition = morph["link"] + 'n'
+                    else:
+                        addition = case
+
+
+                # Default rules
+                else:
+
+                    # Usually we'll use link form
+                    if "link" in morph:
+                        addition = morph["link"]
+
+                    # Verbs or verbal derivations need to take participle form into account
+                    elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
+                        if next_morph and "participle-type" in next_morph:
+                            if next_morph["participle-type"] == "present":
+                                addition = morph["link-present"]
+                            elif next_morph["participle-type"] == "perfect":
+                                addition = morph["link-perfect"]
+                        elif "link-verb" in morph:
+                            addition = morph["link-verb"]
+                        else:
                             addition = morph["link-perfect"]
-                    elif "link-verb" in morph:
-                        addition = morph["link-verb"]
-                    else:
-                        addition = morph["link-perfect"]
 
-                # Use base form if nothing overrides
-                else:
-                    addition = morph["base"]
-        
-        # The final morph
-        else:
-                # Non-verbs always use base form
-                if not morph["type"] == "verb":
-                    addition = morph["base"]
-                    
-                # Verbs use either their perfect or exception form
-                else:
-                    if "link-verb" in morph:
-                        addition = morph["link-verb"]
+                    # Use base form if nothing overrides
                     else:
-                        addition = morph["link-perfect"]
+                        addition = morph["base"]
+        
+            # The final morph
+            else:
+                    # Non-verbs always use base form
+                    if not morph["type"] == "verb":
+                        addition = morph["base"]
+
+                    # Verbs use either their perfect or exception form
+                    else:
+                        if "link-verb" in morph:
+                            addition = morph["link-verb"]
+                        else:
+                            addition = morph["link-perfect"]
 
         if len(addition) > 0:
 
@@ -299,7 +330,8 @@ setup()
 
 print("")
 
-# print(compose_word(["in", "cadere"]))
+# print(compose_word(["forta", "ify", "or"]))
+# print(compose_word(["acerba", "ity", "ify"]))
 
 for i in range(0, 8):
     parts = generate_morphs(random.randint(2,3))

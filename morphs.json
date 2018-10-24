@@ -753,6 +753,15 @@
         "from": "noun,adj",
         "to": "verb",
         "definition": "to make or make into %@",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["or"]
+                },
+                "base": "ifact",
+                "link": "ifact"
+            }
+        ],
         "origin": "latin"
     },
     {
