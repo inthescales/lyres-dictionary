@@ -1,7 +1,7 @@
 import json
 import random
 
-#from pattern.en import conjugate
+from pattern.en import conjugate, singularize, pluralize, tag
 
 morphs = {}
 roots = []
@@ -62,6 +62,35 @@ def is_vowel(letter):
 
 def is_consonant(letter):
     return not is_vowel(letter)
+
+def rephrase(string, mode):
+    
+    words = string.split(" ")
+    tags = tag(string)
+
+    for i, curtag in enumerate(tags):
+            
+        if (mode in ["part", "3sg"]) and ("VB" in curtag or "VBZ" in curtag or "VBG" in curtag):
+            
+            index = words.index(curtag[0])
+            words[index] = conjugate(words[index], mode)
+
+            if "VB" in curtag:
+                del words[index-1]
+
+            break
+            
+        elif (mode in ["sg", "pl"]) and "NN" in curtag:
+            
+            index = words.index(curtag[0])
+        
+            if mode == "sg":
+                words[index] = singularize(words[index])
+                words.insert(index, "a")
+            elif mode == "pl":
+                words[index] = pluralize(words[index])
+    
+    return " ".join(words)
      
 # Assembling morphs
 
@@ -141,33 +170,21 @@ def compose_word(in_morphs):
     global morphs
     
     word = ""
-    definition = ""
+    morph = None
+    last_morph = None
     next_morph = None
-    
-    prefix_stack = []
-    
-    def pop_prefix():
-        nonlocal morph, definition, next_morph
-        
-        top = prefix_stack.pop()
-         
-        if morph["type"] == "verb":
-            definition += " " + top["definition"]
-        else:
-            definition = top["definition"] + " " + definition
     
     for index, token in enumerate(in_morphs):
         
         addition = ""
+        
+        last_morph = morph
         morph = morphs[token]
+        
         if index < len(in_morphs) - 1:
             next_morph = morphs[in_morphs[index+1]]
         else:
             next_morph = None
-        
-        # Stack prepositions and prefixes for proper definition ordering
-        if morph["type"] == "prep" or morph["type"] == "prefix":
-            prefix_stack.append(morph)
                         
         # Check for exceptional forms
         excepted = False
@@ -294,21 +311,113 @@ def compose_word(in_morphs):
                 addition = addition[1:]
             
             word += addition
-            
-        if index == 0:
-            definition = morph["definition"]
-        else:
-            definition = morph["definition"].replace("%@", definition)
-            if len(prefix_stack) > 0 and (morph["type"] == "verb" or morph["type"] == "adj" or morph["type"] == "noun"):
-                pop_prefix()
     
+    # Post processing on the word
     word = anglicize(word)
     
-    while len(prefix_stack) > 0:
-        pop_prefix()
-    
-    return (word, definition)
+    return word
         
+def compose_definition(in_morphs):
+    global morphs
+    
+    word = ""
+    morph = None
+    last_morph = None
+    
+    prefix_stack = []
+    
+    def get_definition(morph, last_morph):
+        
+        if "definition" in morph:
+            return morph["definition"]
+        elif last_morph and ("definition-" + word_type([last_morph["base"]])) in morph:
+            return morph["definition-" + word_type([last_morph["base"]])]
+    
+    def pop_prefix(morph, definition):
+        
+        top = prefix_stack.pop()
+         
+        #if morph and morph["type"] == "verb":
+        #    pref_def = "%@ " + top["definition"]
+        #else:
+        #    pref_def top["definition"] + " %sg"
+            
+        return build_def(top, morph, definition)
+    
+    def build_def(morph, last_morph, definition):
+        
+        part = get_definition(morph, last_morph)
+        
+        if last_morph == None:
+            definition = part
+        else:
+            words = part.split(" ")
+            for (index, word) in enumerate(words):
+                
+                if word == "%@":
+                    words[index] = definition
+                elif word == "%part":
+                    words[index] = rephrase(definition, "part")
+                elif word == "%3sg":
+                    words[index] = rephrase(definition, "3sg")
+                elif word == "%sg":
+                    if "tags" in last_morph and "count" in last_morph["tags"]:
+                        words[index] = rephrase(definition, "sg")
+                    else:
+                        words[index] = definition
+                elif word == "%pl":
+                    if "tags" in last_morph and "count" in last_morph["tags"]:
+                        words[index] = rephrase(definition, "pl")
+                    else:
+                        words[index] = definition
+            
+            definition = " ".join(words)
+            print(definition)
+            #temp = temp.replace("%@", definition)
+            #temp = temp.replace("%part", rephrase(definition, "part"))
+            #temp = temp.replace("%3sg", rephrase(definition, "3sg"))
+         #
+            #if "tags" in last_morph and "count" in last_morph["tags"]:
+            #    temp = temp.replace("%sg", rephrase(definition, "sg"))
+            #    temp = temp.replace("%pl", rephrase(definition, "pl"))
+            #else:
+            #    temp = temp.replace("%sg", definition)
+            #    temp = temp.replace("%pl", definition)
+
+            #definition = temp
+        
+        return definition
+    
+    definition = ""
+    
+    for index, token in enumerate(in_morphs):
+        
+        addition = ""
+        
+        last_morph = morph
+        morph = morphs[token]
+        if index < len(in_morphs) - 1:
+            next_morph = morphs[in_morphs[index+1]]
+        else:
+            next_morph = None
+        
+        # Stack prepositions and prefixes for proper definition ordering
+        if morph["type"] == "prep" or morph["type"] == "prefix":
+            prefix_stack.append(morph)
+        else:
+            definition = build_def(morph, last_morph, definition)
+
+            if index != 0:
+                if len(prefix_stack) > 0 and (morph["type"] == "verb" or morph["type"] == "adj" or morph["type"] == "noun"):
+                    definition = pop_prefix(morph, definition)
+                
+    while len(prefix_stack) > 0:
+        definition = pop_prefix(None, definition)
+    
+    return definition
+        
+        
+    
 def part_tag(word_morphs):
 
     pos = word_type(word_morphs)
@@ -330,12 +439,16 @@ setup()
 
 print("")
 
-# print(compose_word(["forta", "ify", "or"]))
-# print(compose_word(["acerba", "ity", "ify"]))
+count = 0
 
-for i in range(0, 8):
+# print(rephrase("analyzing", "3sg"))
+# print(compose_word(["fidere", "ion", "ify"]))
+#print(compose_definition(["ad", "canis", "ify", "ion"]))
+# print(compose_definition(["lachryma", "ous", "ize"]))
+for i in range(0, count):
     parts = generate_morphs(random.randint(2,3))
-    (word, definition) = compose_word(parts)
+    word = compose_word(parts)
+    definition = compose_definition(parts)
     print(word + " " + part_tag(parts))
     print(definition)
     print("")

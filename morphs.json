@@ -32,6 +32,7 @@
         "link": "aeri",
         "type": "noun",
         "definition": "air",
+        "tags": ["mass"],
         "origin": "latin"
     },
     {
@@ -58,9 +59,9 @@
     {
         "base": "amare",
         "link-present": "ama",
-        "link-perect": "amat",
+        "link-perfect": "amat",
         "type": "verb",
-        "definition": "love",
+        "definition": "to love",
         "origin": "latin"
     },
     {
@@ -69,7 +70,7 @@
         "link-perfect": "ambulat",
         "link-verb": "ambulate",
         "type": "verb",
-        "definition": "walk",
+        "definition": "to walk",
         "origin": "latin"
     },
     {
@@ -77,6 +78,7 @@
         "link": "anim",
         "type": "noun",
         "definition": "soul",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -84,6 +86,7 @@
         "link": "ancill",
         "type": "noun",
         "definition": "subordinate",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -91,7 +94,7 @@
         "link-present": "audie",
         "link-perfect": "audit",
         "type": "verb",
-        "definition": "hear",
+        "definition": "to hear",
         "origin": "latin"
     },
     {
@@ -99,6 +102,7 @@
         "link": "bell",
         "type": "noun",
         "definition": "war",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -110,11 +114,11 @@
     },
     {
         "base": "bibere",
-        "link-present": "bibe",
+        "link-present": "bibi",
         "link-perfect": "bibit",
         "link-verb": "bibe",
         "type": "verb",
-        "definition": "drink",
+        "definition": "to drink",
         "origin": "latin"
     },
     {
@@ -122,6 +126,7 @@
         "link": "bov",
         "type": "noun",
         "definition": "cow",
+        "tags": ["count"],
         "origin": "latin"
     },
 {
@@ -130,14 +135,16 @@
         "link-perfect": "cas",
         "link-verb": "cide",
         "type": "verb",
-        "definition": "fall",
-        "origin": "latin"
+        "definition": "to fall",
+        "origin": "latin",
+        "notes": "decadent / incident? Chose randomly"
     },
     {
         "base": "canis",
         "link": "can",
         "type": "noun",
         "definition": "dog",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -146,15 +153,15 @@
         "link-perfect": "cantat",
         "link-verb": "cant",
         "type": "verb",
-        "definition": "sing",
+        "definition": "to sing",
         "origin": "latin"
     },
     {
         "base": "capere",
-        "link-present": "cape",
+        "link-present": "cipi",
         "link-perfect": "capt",
         "type": "verb",
-        "definition": "seize",
+        "definition": "to seize",
         "origin": "latin"
     },
     {
@@ -162,6 +169,7 @@
         "link": "capit",
         "type": "noun",
         "definition": "head",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -169,6 +177,7 @@
         "link": "carn",
         "type": "noun",
         "definition": "flesh",
+        "tags": ["mass"],
         "origin": "latin"
     },
     {
@@ -176,7 +185,7 @@
         "link-present": "cede",
         "link-perfect": "cess",
         "type": "verb",
-        "definition": "come",
+        "definition": "to come",
         "origin": "latin"
     },
     {
@@ -191,6 +200,7 @@
         "link": "cordi",
         "type": "noun",
         "definition": "heart",
+        "tags": ["count"],
         "origin": "latin"
     },    
     {
@@ -198,6 +208,7 @@
         "link": "cruci",
         "type": "noun",
         "definition": "cross",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -206,7 +217,7 @@
         "link-perfect": "curs",
         "link-verb": "curse",
         "type": "verb",
-        "definition": "run",
+        "definition": "to run",
         "origin": "latin"
     },
     {
@@ -214,6 +225,7 @@
         "link": "dent",
         "type": "noun",
         "definition": "tooth",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -221,7 +233,7 @@
         "link-present": "dice",
         "link-perfect": "dict",
         "type": "verb",
-        "definition": "say",
+        "definition": "to say",
         "origin": "latin"
     },
     {
@@ -229,7 +241,7 @@
         "link-present": "duce",
         "link-perfect": "duct",
         "type": "verb",
-        "definition": "lead",
+        "definition": "to lead",
         "origin": "latin"
     },
     {
@@ -238,7 +250,7 @@
         "link-perfect": "edificat",
         "link-verb": "edify",
         "type": "verb",
-        "definition": "build",
+        "definition": "to build",
         "origin": "latin"
     },
     {
@@ -246,15 +258,16 @@
         "link": "equ",
         "type": "noun",
         "definition": "horse",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
         "base": "facere",
-        "link-present": "fice",
+        "link-present": "fici",
         "link-perfect": "fact",
         "link-verb": "fect",
         "type": "verb",
-        "definition": "make",
+        "definition": "to make",
         "origin": "latin"
     },
     {
@@ -262,6 +275,7 @@
         "link": "fel",
         "type": "noun",
         "definition": "cat",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -269,6 +283,7 @@
         "link": "femin",
         "type": "noun",
         "definition": "woman",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -277,7 +292,7 @@
         "link-perfect": "fis",
         "link-verb": "fide",
         "type": "verb",
-        "definition": "trust",
+        "definition": "to trust",
         "origin": "latin"
     },
     {
@@ -293,7 +308,7 @@
         "link-perfect": "flect",
         "link-verb": "flect",
         "type": "verb",
-        "definition": "bend",
+        "definition": "to bend",
         "origin": "latin"
     },
     {
@@ -301,7 +316,7 @@
         "link-present": "flue",
         "link-perfect": "fluct",
         "type": "verb",
-        "definition": "flow",
+        "definition": "to flow",
         "origin": "latin"
     },
     {
@@ -312,11 +327,19 @@
         "origin": "latin"
     },
     {
+        "base": "frater",
+        "link": "fratern",
+        "type": "noun",
+        "definition": "brother",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
         "base": "jacere",
         "link-present": "jace",
         "link-perfect": "ject",
         "type": "verb",
-        "definition": "throw",
+        "definition": "to throw",
         "origin": "latin"
     },
     {
@@ -325,7 +348,7 @@
         "link-perfect": "jugat",
         "link-verb": "jugate",
         "type": "verb",
-        "definition": "join",
+        "definition": "to join",
         "origin": "latin"
     },
     {
@@ -333,6 +356,7 @@
         "link": "lachrym",
         "type": "noun",
         "definition": "tear",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -340,6 +364,7 @@
         "link": "limin",
         "type": "noun",
         "definition": "boundary",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -348,7 +373,7 @@
         "link-perfect": "locut",
         "link-verb": "locute",
         "type": "verb",
-        "definition": "speak",
+        "definition": "to speak",
         "origin": "latin"
     },
     {
@@ -356,6 +381,7 @@
         "link": "lup",
         "type": "noun",
         "definition": "wolf",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -363,6 +389,7 @@
         "link": "luc",
         "type": "noun",
         "definition": "light",
+        "tags": ["mass"],
         "origin": "latin"
     },
     {
@@ -385,7 +412,7 @@
         "link-perfect": "mirat",
         "link-verb": "mire",
         "type": "verb",
-        "definition": "marvel",
+        "definition": "to marvel",
         "origin": "latin"
     },
     {
@@ -394,7 +421,7 @@
         "link-perfect": "miss",
         "link-verb": "mit",
         "type": "verb",
-        "definition": "let",
+        "definition": "to let",
         "origin": "latin"
     },
     {
@@ -403,7 +430,7 @@
         "link-perfect": "nect",
         "link-verb": "nect",
         "type": "verb",
-        "definition": "tie",
+        "definition": "to tie",
         "origin": "latin"
     },
     {
@@ -411,6 +438,7 @@
         "link": "noct",
         "type": "night",
         "definition": "night",
+        "tags": ["mass"],
         "origin": "latin"
     },
     {
@@ -426,7 +454,7 @@
         "link-perfect": "orat",
         "link-verb": "ore",
         "type": "verb",
-        "definition": "plead",
+        "definition": "to plead",
         "origin": "latin"
     },
     {
@@ -434,6 +462,7 @@
         "link": "ov",
         "type": "noun",
         "definition": "sheep",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -441,6 +470,7 @@
         "link": "pecuni",
         "type": "noun",
         "definition": "money",
+        "tags": ["mass"],
         "origin": "latin"
     },
     {
@@ -456,7 +486,7 @@
         "link-perfect": "posit",
         "link-verb": "pose",
         "type": "verb",
-        "definition": "put",
+        "definition": "to put",
         "origin": "latin"
     },
     {
@@ -464,6 +494,7 @@
         "link": "porc",
         "type": "noun",
         "definition": "pig",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -471,6 +502,7 @@
         "link": "puell",
         "type": "noun",
         "definition": "girl",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -478,6 +510,7 @@
         "link": "puer",
         "type": "noun",
         "definition": "boy",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -492,15 +525,16 @@
         "link": "pac",
         "type": "noun",
         "definition": "peace",
+        "tags": ["mass"],
         "origin": "latin"
     },
     {
         "base": "quaerere",
-        "link-present": "quire",
+        "link-present": "quere",
         "link-perfect": "quisit",
         "link-verb": "quire",
         "type": "verb",
-        "definition": "seek",
+        "definition": "to seek",
         "origin": "latin"
     },
     {
@@ -515,6 +549,25 @@
         "link": "reg",
         "type": "noun",
         "definition": "king",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "ridere",
+        "link-present": "ride",
+        "link-perfect": "ris",
+        "link-verb": "ride",
+        "type": "verb",
+        "definition": "to laugh",
+        "origin": "latin"
+    },
+    {
+        "base": "secare",
+        "link-present": "seca",
+        "link-perfect": "sect",
+        "link-verb": "sect",
+        "type": "verb",
+        "definition": "to cut",
         "origin": "latin"
     },
     {
@@ -523,7 +576,7 @@
         "link-perfect": "secut",
         "link-verb": "secute",
         "type": "verb",
-        "definition": "follow",
+        "definition": "to follow",
         "origin": "latin"
     },
     {
@@ -531,6 +584,22 @@
         "link": "serpent",
         "type": "noun",
         "definition": "snake",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "simila",
+        "link": "simil",
+        "type": "adj",
+        "definition": "similar",
+        "origin": "latin"
+    },
+    {
+        "base": "soror",
+        "link": "soror",
+        "type": "noun",
+        "definition": "sister",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -539,7 +608,7 @@
         "link-perfect": "stat",
         "link-verb": "state",
         "type": "verb",
-        "definition": "stand",
+        "definition": "to stand",
         "origin": "latin"
     },
     {
@@ -555,7 +624,7 @@
         "link-perfect": "vect",
         "link-verb": "veigh",
         "type": "verb",
-        "definition": "carry",
+        "definition": "to carry",
         "origin": "latin"
     },
     {
@@ -564,7 +633,7 @@
         "link-perfect": "vent",
         "link-verb": "vene",
         "type": "verb",
-        "definition": "come",
+        "definition": "to come",
         "origin": "latin"
     },
     {
@@ -573,7 +642,7 @@
         "link-perfect": "vers",
         "link-verb": "vert",
         "type": "verb",
-        "definition": "turn",
+        "definition": "to turn",
         "origin": "latin"
     },
     {
@@ -582,7 +651,16 @@
         "link-perfect": "vis",
         "link-verb": "vise",
         "type": "verb",
-        "definition": "see",
+        "definition": "to see",
+        "origin": "latin"
+    },
+    {
+        "base": "vincere",
+        "link-present": "vince",
+        "link-perfect": "vict",
+        "link-verb": "vince",
+        "type": "verb",
+        "definition": "to defeat",
         "origin": "latin"
     },
     {
@@ -590,6 +668,7 @@
         "link": "vir",
         "type": "noun",
         "definition": "man",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -598,7 +677,7 @@
         "link-perfect": "vocat",
         "link-verb": "voke",
         "type": "verb",
-        "definition": "call",
+        "definition": "to call",
         "origin": "latin"
     },
     {
@@ -606,13 +685,15 @@
         "link": "voc",
         "type": "noun",
         "definition": "voice",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
         "base": "ab",
         "link": "ab",
         "type": "prep",
-        "definition": "away from",
+        "definition-verb": "%@ away from",
+        "definition-noun": "away from %sg",
         "assimilation" : {
 			"base" : ["*"]
         },
@@ -622,8 +703,9 @@
         "base": "ad",
         "link": "a",
         "type": "prep",
-        "definition": "to",
-        "assimilation" : {
+        "definition-verb": "%@ to",
+        "definition-noun": "to %sg",
+        "assimilation": {
 			"base" : ["a", "d", "e", "j", "m", "o", "*"],
 			"link" : ["b"],
 			"double" : ["c", "d", "f", "g", "l", "n", "p", "r", "s", "t"],
@@ -632,20 +714,22 @@
         "origin": "latin"
     },
 	{
-		"base" : "circum",
-		"link" : "circum",
-		"type" : "prep",
-        "definition" : "around",
+		"base": "circum",
+		"link": "circum",
+		"type": "prep",
+        "definition-verb": "%@ around",
+        "definition-noun": "around %sg",
         "origin": "latin"
     },
 	{
-		"base" : "com",
-		"link" : "co",
-		"type" : "prep",
-        "definition" : "together",
+		"base": "com",
+		"link": "co",
+		"type": "prep",
+        "definition-verb": "%@ together",
+        "definition-noun": "together with %sg",
 		"assimilation" : {
-			"link" : ["a", "e", "i", "u", "o", "h", "*"],
-			"double" : ["f", "l", "r"],
+			"link" : ["a", "e", "i", "u", "o", "h"],
+			"double" : ["l", "r"],
 			"nasal" : ["*"]
         },
         "origin": "latin"
@@ -654,49 +738,55 @@
         "base": "de",
         "link": "de",
         "type": "prep",
-        "definition": "down from",
+        "definition-verb": "%@ down from",
+        "definition-noun": "down from %sg",
         "origin": "latin"
     },
 	{
 		"base" : "in",
 		"link" : "i",
 		"type" : "prep",
-        "definition" : "in",
+        "definition-verb" : "%@ in",
+        "definition-noun" : "in %sg",
 		"assimilation": {
 			"nasal" : ["*"]
 		},
         "origin": "latin"
     },
 	{
-		"base" : "ex",
-		"link" : "e",
-		"type" : "prep",
-        "definition" : "out from",
-		"assimilation" : {
-			"base" : ["a", "e", "i", "o", "h", "c", "p", "q", "t", "*"],
-			"link" : ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
-			"cut" : ["s", "x"],
-			"double" : ["f"]
+		"base": "ex",
+		"link": "e",
+		"type": "prep",
+        "definition-verb": "%@ out from",
+        "definition-noun": "out of %sg",
+		"assimilation": {
+			"base": ["a", "e", "i", "o", "h", "c", "p", "q", "t", "*"],
+			"link": ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
+			"cut": ["s", "x"],
+			"double": ["f"]
         },
         "origin": "latin"
     },
     {
         "base": "inter",
         "type": "prep",
-        "definition": "between",
+        "definition-verb": "%@ between",
+        "definition-noun": "between %pl",
         "origin": "latin"
     },
     {
         "base": "intra",
         "type": "prep",
-        "definition": "within",
+        "definition-verb": "%@ within",
+        "definition-noun": "within %sg",
         "origin": "latin"
     },
     {
         "base": "ob",
         "link": "o",
         "type": "prep",
-        "definition": "away from",
+        "definition-verb": "away",
+        "definition-noun": "away from %sg",
         "assimilation" : {
 			"base" : ["*"],
 			"double" : ["c"]
@@ -704,9 +794,24 @@
         "origin": "latin"
     },
     {
+        "base": "sub",
+        "type": "prep",
+        "definition-verb": "%@ under",
+        "definition-noun": "under %sg",
+        "origin": "latin"
+    },
+    {
+        "base": "super",
+        "type": "prep",
+        "definition-verb": "%@ above",
+        "definition-noun": "above %sg",
+        "origin": "latin"
+    },
+    {
         "base": "trans",
         "type": "prep",
-        "definition": "across",
+        "definition-verb": "%@ across",
+        "definition-noun": "across %sg",
         "origin": "latin"
     },
     {
@@ -715,7 +820,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "of or relating to %@",
+        "definition": "of or relating to %pl",
         "origin": "latin"
     },
     {
@@ -724,12 +829,12 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "pertaining to %@",
+        "definition": "pertaining to %pl",
         "origin": "latin"
     },
     {
         "base": "ate",
-        "link": "ati",
+        "link": "at",
         "type": "derive",
         "to": "verb",
         "definition": "to cause to be %@",
@@ -741,10 +846,9 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "in the manner of, pertaining to %@",
+        "definition": "in the manner of, pertaining to %pl",
         "origin": "latin"
     },
-
     {
         "base": "ify",
         "link-present": "ifice",
@@ -752,7 +856,8 @@
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
-        "definition": "to make or make into %@",
+        "definition-noun": "to make into %sg",
+        "definition-adj": "to make %@",
         "exception": [
             { 
                 "case": {
@@ -770,7 +875,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "having the qualities of %@",
+        "definition": "having the qualities of %sg",
         "origin": "latin"
     },
     {
@@ -780,7 +885,7 @@
         "from": "verb",
         "to": "noun",
         "participle-type": "perfect",
-        "definition": "the act of %@",
+        "definition": "the act of %part",
         "origin": "latin"
     },
     {
@@ -808,7 +913,7 @@
         "from": "verb",
         "to": "adj",
         "participle-type": "perfect",
-        "definition": "capable of %@",
+        "definition": "capable of %part",
         "origin": "latin"
     },
     {
@@ -818,7 +923,8 @@
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
-        "definition": "to make %@",
+        "definition-noun": "to make into %sg",
+        "definition-adj": "to make %@",
         "origin": "latin"
     },
     {
@@ -828,7 +934,8 @@
         "from": "verb",
         "to": "noun",
         "participle-type": "perfect",
-        "definition": "one who does %@",
+        "definition": "one who %3sg",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -837,17 +944,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "full of %@",
-        "origin": "latin"
-    },
-    {
-        "base": "ment",
-        "link": "ment",
-        "type": "derive",
-        "from": "verb",
-        "to": "noun",
-        "participle-type": "present",
-        "definition": "the result of %@",
+        "definition": "full of %pl",
         "origin": "latin"
     },
     {
@@ -859,7 +956,7 @@
         "participle-type": "present",
         "stem-change": true,
 		"category" : "derive",
-        "definition": "the process, state, or quality of %@"
+        "definition": "the process, state, or quality of %part"
     },
     {
         "base": "nt",
@@ -870,6 +967,6 @@
         "participle-type": "present",
         "stem-change": true,
 		"category" : "derive",
-        "definition": "doing %@"
+        "definition": "%part"
     }
 ]
