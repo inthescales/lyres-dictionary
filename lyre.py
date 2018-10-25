@@ -68,12 +68,9 @@ def rephrase(string, mode):
     words = string.split(" ")    
     tags = tag(string)
 
-    print(mode)
-    print(tags)
     for i, curtag in enumerate(tags):
           
-        if (mode in ["part", "3sg"]) and (len(tags) == 1 or "VB" in curtag or "VBZ" in curtag or "VBG" in curtag):
-            print("HERE")
+        if (mode in ["ppart", "part", "3sg"]) and (len(tags) == 1 or "VB" in curtag or "VBZ" in curtag or "VBG" in curtag):
             index = words.index(curtag[0])
             words[index] = conjugate(words[index], mode)
 
@@ -95,6 +92,28 @@ def rephrase(string, mode):
             words[index] = pluralize(words[index])
     
     return " ".join(words)
+
+def check_req(morph, last_morph):
+    
+    if "requires" in morph:
+        
+        if "follows" in morph["requires"]:
+            
+            if not last_morph:
+                return False
+            
+            if "tags" in morph["requires"]["follows"]:
+                
+                if not "tags" in last_morph:
+                    return False
+                
+                for tag in morph["requires"]["follows"]["tags"]:
+                    
+                    if not tag in last_morph["tags"]:
+                        
+                        return False
+    
+    return True
      
 # Assembling morphs
 
@@ -116,20 +135,24 @@ def next_morph(current):
 
         # Special chance to add prefixes before verbs.
         # Necessary to inflate their frequency given their small number.
-        if word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 4) == 0:
+        if len(current) == 1 and word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 4) == 0:
             choice = random.choice(type_morphs["prep"])
             return [choice] + current
         
         # Special chance to use the preposition + noun + ate pattern    
         if len(current) == 1 and head_type == "noun" and random.randint(0, 8) == 0:
             #options = type_morphs["prep"]
-            options = ["in", "ex", "trans"]
-            choice = random.choice(options)
-            return [choice] + current + random.choice(["ate"], ["al"])
+            prep_choice = random.choice(["in", "ex", "trans", "inter", "sub", "super"])
+            end_choice = random.choice(["ate", "al"])
+            return [prep_choice] + current + [end_choice]
         
         # Basic morph addition
         else:
             choice = random.choice(morphs_from[head_type])
+            
+            if not check_req(choice, current[-1]):
+                choice = None
+                
             return current + [choice]
     
 def generate_morphs(length, seed=[]):
@@ -302,7 +325,7 @@ def compose_word(in_morphs):
         if len(addition) > 0:
 
             # Combine repeated letters            
-            if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]):
+            if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph["type"] == "prep":
                 addition = addition[1:]
             
             # Stem change
@@ -369,6 +392,8 @@ def compose_definition(in_morphs):
                     words[index] = definition
                 elif word == "%part":
                     words[index] = rephrase(definition, "part")
+                elif word == "%ppart":
+                    words[index] = rephrase(definition, "ppart")
                 elif word == "%3sg":
                     words[index] = rephrase(definition, "3sg")
                 elif word == "%sg":
@@ -449,6 +474,7 @@ count = 10
 
 for i in range(0, count):
     parts = generate_morphs(random.randint(2,3))
+    print(parts)
     word = compose_word(parts)
     definition = compose_definition(parts)
     print(word + " " + part_tag(parts))

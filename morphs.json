@@ -60,6 +60,7 @@
         "base": "amare",
         "link-present": "ama",
         "link-perfect": "amat",
+        "link-verb": "amor",
         "type": "verb",
         "definition": "to love",
         "tags": ["transitive"],
@@ -962,7 +963,12 @@
         "to": "adj",
         "participle-type": "present",
         "tags": ["stem-raise"],
-        "definition": "able to be %@ -ed",
+        "definition": "able to be %ppart",
+        "requires": {
+            "follows": {
+                "tags": ["transitive"]
+            }
+        },
         "origin": "latin"
     },
     {
