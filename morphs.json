@@ -229,6 +229,14 @@
         "origin": "latin"
     },
     {
+        "base": "dermis",
+        "link": "derm",
+        "type": "noun",
+        "definition": "skin",
+        "tags": ["mass"],
+        "origin": "latin"
+    },
+    {
         "base": "dicere",
         "link-present": "dice",
         "link-perfect": "dict",
@@ -918,7 +926,7 @@
     },
     {
         "base": "ize",
-        "link-present": "ize",
+        "link-present": "iza",
         "link-perfect": "izat",
         "type": "derive",
         "from": "noun,adj",

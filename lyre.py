@@ -65,13 +65,15 @@ def is_consonant(letter):
 
 def rephrase(string, mode):
     
-    words = string.split(" ")
+    words = string.split(" ")    
     tags = tag(string)
 
+    print(mode)
+    print(tags)
     for i, curtag in enumerate(tags):
-            
-        if (mode in ["part", "3sg"]) and ("VB" in curtag or "VBZ" in curtag or "VBG" in curtag):
-            
+          
+        if (mode in ["part", "3sg"]) and (len(tags) == 1 or "VB" in curtag or "VBZ" in curtag or "VBG" in curtag):
+            print("HERE")
             index = words.index(curtag[0])
             words[index] = conjugate(words[index], mode)
 
@@ -80,15 +82,17 @@ def rephrase(string, mode):
 
             break
             
-        elif (mode in ["sg", "pl"]) and "NN" in curtag:
-            
+        elif mode == "sg" and ("NNS" in curtag or len(tags) == 1):
             index = words.index(curtag[0])
-        
-            if mode == "sg":
+            
+            if not "NN" in curtag:
                 words[index] = singularize(words[index])
-                words.insert(index, "a")
-            elif mode == "pl":
-                words[index] = pluralize(words[index])
+                
+            words.insert(index, "a")
+            
+        elif mode == "pl" and ("NN" in curtag or (not "NNS" in curtag and len(tags) == 1)):
+            index = words.index(curtag[0])
+            words[index] = pluralize(words[index])
     
     return " ".join(words)
      
@@ -121,7 +125,7 @@ def next_morph(current):
             #options = type_morphs["prep"]
             options = ["in", "ex", "trans"]
             choice = random.choice(options)
-            return [choice] + current + ["ate"]
+            return [choice] + current + random.choice(["ate"], ["al"])
         
         # Basic morph addition
         else:
@@ -351,6 +355,12 @@ def compose_definition(in_morphs):
         if last_morph == None:
             definition = part
         else:
+            
+            if part == None:
+                print("ERROR NO DEF")
+                print(morph)
+                print(last_morph)
+            
             words = part.split(" ")
             for (index, word) in enumerate(words):
                 
@@ -372,19 +382,6 @@ def compose_definition(in_morphs):
                         words[index] = definition
             
             definition = " ".join(words)
-            print(definition)
-            #temp = temp.replace("%@", definition)
-            #temp = temp.replace("%part", rephrase(definition, "part"))
-            #temp = temp.replace("%3sg", rephrase(definition, "3sg"))
-         #
-            #if "tags" in last_morph and "count" in last_morph["tags"]:
-            #    temp = temp.replace("%sg", rephrase(definition, "sg"))
-            #    temp = temp.replace("%pl", rephrase(definition, "pl"))
-            #else:
-            #    temp = temp.replace("%sg", definition)
-            #    temp = temp.replace("%pl", definition)
-
-            #definition = temp
         
         return definition
     
@@ -443,8 +440,12 @@ count = 0
 
 # print(rephrase("analyzing", "3sg"))
 # print(compose_word(["fidere", "ion", "ify"]))
-#print(compose_definition(["ad", "canis", "ify", "ion"]))
+# print(compose_definition(["ad", "canis", "ify", "ion"]))
+# print(compose_definition(["lachryma", "ize"]))
 # print(compose_definition(["lachryma", "ous", "ize"]))
+print(compose_definition(["sub", "dermis", "al"]))
+# inrision
+
 for i in range(0, count):
     parts = generate_morphs(random.randint(2,3))
     word = compose_word(parts)
