@@ -306,9 +306,15 @@ def compose_word(in_morphs):
                 addition = addition[1:]
             
             # Stem change
-            if "stem-change" in morph and morph["stem-change"] == True:
+            if "tags" in morph and "stem-change" in morph["tags"]:
                 if word[-1] == "i":
                     addition = "e" + addition
+                    
+            # Stem raise
+            if "tags" in morph and "stem-raise" in morph["tags"]:
+                if word[-1] == "e":
+                    word = word[:-1]
+                    addition = "i" + addition
             
             if len(word) > 0 and word[-1] == "-":
                 word = word[:-1]
@@ -340,12 +346,7 @@ def compose_definition(in_morphs):
     def pop_prefix(morph, definition):
         
         top = prefix_stack.pop()
-         
-        #if morph and morph["type"] == "verb":
-        #    pref_def = "%@ " + top["definition"]
-        #else:
-        #    pref_def top["definition"] + " %sg"
-            
+        
         return build_def(top, morph, definition)
     
     def build_def(morph, last_morph, definition):
@@ -436,15 +437,15 @@ setup()
 
 print("")
 
-count = 0
+count = 10
 
 # print(rephrase("analyzing", "3sg"))
 # print(compose_word(["fidere", "ion", "ify"]))
 # print(compose_definition(["ad", "canis", "ify", "ion"]))
 # print(compose_definition(["lachryma", "ize"]))
 # print(compose_definition(["lachryma", "ous", "ize"]))
-print(compose_definition(["sub", "dermis", "al"]))
 # inrision
+# obvene
 
 for i in range(0, count):
     parts = generate_morphs(random.randint(2,3))

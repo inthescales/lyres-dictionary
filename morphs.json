@@ -62,6 +62,7 @@
         "link-perfect": "amat",
         "type": "verb",
         "definition": "to love",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -71,6 +72,7 @@
         "link-verb": "ambulate",
         "type": "verb",
         "definition": "to walk",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -91,10 +93,11 @@
     },
     {
         "base": "audire",
-        "link-present": "audie",
+        "link-present": "audi",
         "link-perfect": "audit",
         "type": "verb",
         "definition": "to hear",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -119,6 +122,7 @@
         "link-verb": "bibe",
         "type": "verb",
         "definition": "to drink",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -136,6 +140,7 @@
         "link-verb": "cide",
         "type": "verb",
         "definition": "to fall",
+        "tags": ["intransitive"],
         "origin": "latin",
         "notes": "decadent / incident? Chose randomly"
     },
@@ -154,6 +159,7 @@
         "link-verb": "cant",
         "type": "verb",
         "definition": "to sing",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -162,6 +168,16 @@
         "link-perfect": "capt",
         "type": "verb",
         "definition": "to seize",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "capa",
+                "link": "capa"
+            }
+        ],
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -186,6 +202,7 @@
         "link-perfect": "cess",
         "type": "verb",
         "definition": "to come",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -218,6 +235,7 @@
         "link-verb": "curse",
         "type": "verb",
         "definition": "to run",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -242,6 +260,16 @@
         "link-perfect": "dict",
         "type": "verb",
         "definition": "to say",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "dicta",
+                "link": "dicta"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -250,6 +278,7 @@
         "link-perfect": "duct",
         "type": "verb",
         "definition": "to lead",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -259,6 +288,7 @@
         "link-verb": "edify",
         "type": "verb",
         "definition": "to build",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -276,6 +306,7 @@
         "link-verb": "fect",
         "type": "verb",
         "definition": "to make",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -301,6 +332,7 @@
         "link-verb": "fide",
         "type": "verb",
         "definition": "to trust",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -317,6 +349,16 @@
         "link-verb": "flect",
         "type": "verb",
         "definition": "to bend",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "flexi",
+                "link": "flexi"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -348,6 +390,7 @@
         "link-perfect": "ject",
         "type": "verb",
         "definition": "to throw",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -357,6 +400,7 @@
         "link-verb": "jugate",
         "type": "verb",
         "definition": "to join",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -382,6 +426,7 @@
         "link-verb": "locute",
         "type": "verb",
         "definition": "to speak",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -421,6 +466,7 @@
         "link-verb": "mire",
         "type": "verb",
         "definition": "to marvel",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -430,6 +476,24 @@
         "link-verb": "mit",
         "type": "verb",
         "definition": "to let",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "missi",
+                "link": "missi"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "base": "murus",
+        "link": "mur",
+        "type": "noun",
+        "definition": "wall",
+        "tags": ["count"],
         "origin": "latin"
     },
     {
@@ -439,12 +503,13 @@
         "link-verb": "nect",
         "type": "verb",
         "definition": "to tie",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
         "base": "nox",
         "link": "noct",
-        "type": "night",
+        "type": "noun",
         "definition": "night",
         "tags": ["mass"],
         "origin": "latin"
@@ -463,6 +528,7 @@
         "link-verb": "ore",
         "type": "verb",
         "definition": "to plead",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -495,6 +561,16 @@
         "link-verb": "pose",
         "type": "verb",
         "definition": "to put",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "posa",
+                "link": "posa"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -543,6 +619,16 @@
         "link-verb": "quire",
         "type": "verb",
         "definition": "to seek",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "quira",
+                "link": "quira"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -567,6 +653,7 @@
         "link-verb": "ride",
         "type": "verb",
         "definition": "to laugh",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -576,6 +663,7 @@
         "link-verb": "sect",
         "type": "verb",
         "definition": "to cut",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -585,6 +673,7 @@
         "link-verb": "secute",
         "type": "verb",
         "definition": "to follow",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -617,6 +706,7 @@
         "link-verb": "state",
         "type": "verb",
         "definition": "to stand",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -633,6 +723,7 @@
         "link-verb": "veigh",
         "type": "verb",
         "definition": "to carry",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -642,6 +733,7 @@
         "link-verb": "vene",
         "type": "verb",
         "definition": "to come",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -651,6 +743,7 @@
         "link-verb": "vert",
         "type": "verb",
         "definition": "to turn",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -660,6 +753,16 @@
         "link-verb": "vise",
         "type": "verb",
         "definition": "to see",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "visi",
+                "link": "visi"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -669,6 +772,7 @@
         "link-verb": "vince",
         "type": "verb",
         "definition": "to defeat",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -686,6 +790,7 @@
         "link-verb": "voke",
         "type": "verb",
         "definition": "to call",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -846,6 +951,18 @@
         "type": "derive",
         "to": "verb",
         "definition": "to cause to be %@",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "ble",
+        "link": "bil",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "present",
+        "tags": ["stem-raise"],
+        "definition": "able to be %@ -ed",
         "origin": "latin"
     },
     {
@@ -875,6 +992,7 @@
                 "link": "ifact"
             }
         ],
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -933,6 +1051,7 @@
         "to": "verb",
         "definition-noun": "to make into %sg",
         "definition-adj": "to make %@",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -962,7 +1081,7 @@
 		"from": "verb",
 		"to": "noun",
         "participle-type": "present",
-        "stem-change": true,
+        "tags": ["stem-change"],
 		"category" : "derive",
         "definition": "the process, state, or quality of %part"
     },
@@ -973,7 +1092,7 @@
 		"from": "verb",
 		"to": "adj",
         "participle-type": "present",
-        "stem-change": true,
+        "tags": ["stem-change"],
 		"category" : "derive",
         "definition": "%part"
     }
