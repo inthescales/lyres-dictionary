@@ -149,7 +149,7 @@ def next_morph(current):
 
         # Special chance to add prefixes before verbs.
         # Necessary to inflate their frequency given their small number.
-        if len(current) >= 1 and head_type == "verb" and not has_tag(last_morph, "no-prep") and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 4) == 0:
+        if len(current) == 1 and head_type == "verb" and not has_tag(last_morph, "no-prep") and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 4) == 0:
             choice = random.choice(type_morphs["prep"])
             return [choice] + current
         
@@ -159,6 +159,8 @@ def next_morph(current):
             prep_choice = random.choice(["in", "ex", "trans", "inter", "sub", "super"])
             end_choice = random.choice(["ate", "al", "al", "ary", "ify", "ize"])
             return [prep_choice] + current + [end_choice]
+        
+        # abbreviate?
         
         # Add a prefix to the whole thing
         if len(current) >= 1 and head_type == "verb" and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 8) == 0:
@@ -349,10 +351,12 @@ def compose_word(in_morphs):
                     addition = "e" + addition
                     
             # Stem raise
-            if has_tag(morph, "stem-raise"):
-                if word[-1] == "e":
-                    word = word[:-1]
-                    addition = "i" + addition
+            #if has_tag(morph, "stem-raise"):
+            #    word = word[:-1]
+            #    addition = "i" + addition
+            
+            if len(word) > 0 and word[-1] == "e" and addition[0] == "i":
+                word = word[:-1]
             
             if len(word) > 0 and word[-1] == "-":
                 word = word[:-1]

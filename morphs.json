@@ -85,11 +85,112 @@
         "origin": "latin"
     },
     {
+        "base": "annus",
+        "link": "annu",
+        "type": "noun",
+        "definition": "year",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "base": "antiqua",
+        "link": "antiqu",
+        "type": "adj",
+        "definition": "old",
+        "origin": "latin"
+    },
+    {
+        "base": "anulus",
+        "link": "annul",
+        "type": "noun",
+        "definition": "ring",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "apis",
+        "link": "api",
+        "type": "noun",
+        "definition": "bee",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "apparere",
+        "link-present": "appeara",
+        "link-perfect": "apparit",
+        "link-verb": "appear",
+        "type": "verb",
+        "definition": "to appear",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "appellare",
+        "link-present": "appela",
+        "link-perfect": "appelat",
+        "link-verb": "appeal",
+        "type": "verb",
+        "definition": "to appeal",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "base": "ancilla",
         "link": "ancill",
         "type": "noun",
         "definition": "subordinate",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "aquila",
+        "link": "aquil",
+        "type": "noun",
+        "definition": "eagle",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "arbor",
+        "link": "arbore",
+        "type": "noun",
+        "definition": "tree",
+        "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "base": "arcus",
+        "link": "arc",
+        "type": "noun",
+        "definition": "arch",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "aquila",
+        "link": "aquil",
+        "type": "noun",
+        "definition": "eagle",
+        "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "base": "asinus",
+        "link": "asin",
+        "type": "noun",
+        "definition": "donkey",
+        "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "base": "attendere",
+        "link-present": "attenda",
+        "link-perfect": "attent",
+        "link-verb": "attend",
+        "type": "verb",
+        "definition": "pay attention to",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -102,11 +203,50 @@
         "origin": "latin"
     },
     {
+        "base": "autumnus",
+        "link": "autumn",
+        "type": "noun",
+        "definition": "autumn",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "base": "auxilium",
+        "link": "auxili",
+        "type": "noun",
+        "definition": "help",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "base": "avis",
+        "link": "avi",
+        "type": "noun",
+        "definition": "bird",
+        "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "base": "beata",
+        "link": "beat",
+        "type": "verb",
+        "definition": "bliss",
+        "origin": "latin"
+    },
+    {
         "base": "bellum",
         "link": "bell",
         "type": "noun",
         "definition": "war",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "bestia",
+        "link": "besti",
+        "type": "noun",
+        "definition": "beast",
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -134,7 +274,22 @@
         "tags": ["count"],
         "origin": "latin"
     },
-{
+    {
+        "base": "bracchium",
+        "link": "bracchi",
+        "type": "noun",
+        "definition": "arm",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "brevis",
+        "link": "brevi",
+        "type": "adj",
+        "definition": "short",
+        "origin": "latin"
+    },
+    {
         "base": "cadere",
         "link-present": "cade",
         "link-perfect": "cas",
@@ -188,6 +343,14 @@
         "type": "noun",
         "definition": "head",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "carcer",
+        "link": "carcer",
+        "type": "noun",
+        "definition": "prison",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -338,6 +501,25 @@
         "origin": "latin"
     },
     {
+        "base": "ferre",
+        "link-present": "fere",
+        "link-perfect": "lat",
+        "link-verb": "fer",
+        "type": "verb",
+        "definition": "to bring",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "fera",
+                "link": "fera"
+            }
+        ],
+        "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "base": "fidere",
         "link-present": "fide",
         "link-perfect": "fis",
@@ -395,6 +577,16 @@
         "type": "noun",
         "definition": "brother",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "fugere",
+        "link-present": "fuga",
+        "link-perfect": "fugit",
+        "link-verb": "fuge",
+        "type": "verb",
+        "definition": "to flee",
+        "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
     {
@@ -948,6 +1140,16 @@
         "origin": "latin"
     },
     {
+        "base": "portare",
+        "link-present": "porta",
+        "link-perfect": "portat",
+        "link-verb": "port",
+        "type": "verb",
+        "definition": "to carry",
+        "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "base": "puella",
         "link": "puell",
         "type": "noun",
@@ -1043,6 +1245,16 @@
         "origin": "latin"
     },
     {
+        "base": "scandere",
+        "link-present": "scenda",
+        "link-perfect": "scens",
+        "link-verb": "scend",
+        "type": "verb",
+        "definition": "to climb",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "base": "secare",
         "link-present": "seca",
         "link-perfect": "sect",
@@ -1083,6 +1295,16 @@
         "type": "noun",
         "definition": "sister",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "specere",
+        "link-present": "specte",
+        "link-perfect": "spect",
+        "link-verb": "spect",
+        "type": "verb",
+        "definition": "to look",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -1501,11 +1723,6 @@
         "participle-type": "present",
         "tags": ["stem-change"],
         "definition": "%part"
-    },
-    {
-        "base": "re",
-        "type": "prefix",
-        "definition": "%@ again"
     },
     {
         "base": "re",
