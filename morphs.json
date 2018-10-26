@@ -32,7 +32,7 @@
         "link": "aeri",
         "type": "noun",
         "definition": "air",
-        "tags": ["mass"],
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -81,7 +81,7 @@
         "link": "anim",
         "type": "noun",
         "definition": "soul",
-        "tags": ["count"],
+        "tags": ["count", "abstract", "living"],
         "origin": "latin"
     },
     {
@@ -112,7 +112,7 @@
         "link": "api",
         "type": "noun",
         "definition": "bee",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -140,7 +140,7 @@
         "link": "ancill",
         "type": "noun",
         "definition": "subordinate",
-        "tags": ["count"],
+        "tags": ["count", "living"],
         "origin": "latin"
     },
     {
@@ -148,7 +148,7 @@
         "link": "aquil",
         "type": "noun",
         "definition": "eagle",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -165,14 +165,6 @@
         "type": "noun",
         "definition": "arch",
         "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
-    {
-        "base": "aquila",
-        "link": "aquil",
-        "type": "noun",
-        "definition": "eagle",
-        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -238,7 +230,7 @@
         "link": "bell",
         "type": "noun",
         "definition": "war",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -271,7 +263,7 @@
         "link": "bov",
         "type": "noun",
         "definition": "cow",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -305,7 +297,7 @@
         "link": "can",
         "type": "noun",
         "definition": "dog",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -342,7 +334,7 @@
         "link": "capit",
         "type": "noun",
         "definition": "head",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -358,7 +350,7 @@
         "link": "carn",
         "type": "noun",
         "definition": "flesh",
-        "tags": ["mass"],
+        "tags": ["mass", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -382,7 +374,7 @@
         "link": "cordi",
         "type": "noun",
         "definition": "heart",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },    
     {
@@ -390,7 +382,7 @@
         "link": "cruci",
         "type": "noun",
         "definition": "cross",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -418,7 +410,7 @@
         "link": "dent",
         "type": "noun",
         "definition": "tooth",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -426,7 +418,7 @@
         "link": "derm",
         "type": "noun",
         "definition": "skin",
-        "tags": ["mass"],
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -471,7 +463,7 @@
         "link": "equ",
         "type": "noun",
         "definition": "horse",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -489,7 +481,7 @@
         "link": "fel",
         "type": "noun",
         "definition": "cat",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -497,7 +489,7 @@
         "link": "femin",
         "type": "noun",
         "definition": "woman",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -576,7 +568,7 @@
         "link": "fratern",
         "type": "noun",
         "definition": "brother",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -613,7 +605,15 @@
         "link": "lachrym",
         "type": "noun",
         "definition": "tear",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "latus",
+        "link": "later",
+        "type": "noun",
+        "definition": "side",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -621,7 +621,7 @@
         "link": "limin",
         "type": "noun",
         "definition": "boundary",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -639,7 +639,7 @@
         "link": "lup",
         "type": "noun",
         "definition": "wolf",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -647,7 +647,7 @@
         "link": "luc",
         "type": "noun",
         "definition": "light",
-        "tags": ["mass"],
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -669,7 +669,7 @@
         "link": "matern",
         "type": "noun",
         "definition": "mother",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -677,7 +677,7 @@
         "link": "maxim",
         "type": "noun",
         "definition": "maximum",
-        "tags": ["count"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -685,7 +685,7 @@
         "link": "ment",
         "type": "noun",
         "definition": "mind",
-        "tags": ["count"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -693,7 +693,7 @@
         "link": "mens",
         "type": "noun",
         "definition": "table",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -721,7 +721,7 @@
         "link": "merci",
         "type": "noun",
         "definition": "wares",
-        "tags": ["mass"],
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -729,7 +729,7 @@
         "link": "milit",
         "type": "noun",
         "definition": "soldier",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -747,7 +747,7 @@
         "link": "minim",
         "type": "noun",
         "definition": "minimum",
-        "tags": ["count"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -784,7 +784,7 @@
         "link": "minim",
         "type": "noun",
         "definition": "minimum",
-        "tags": ["count"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -809,7 +809,7 @@
         "link": "mod",
         "type": "noun",
         "definition": "manner",
-        "tags": ["count"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -834,7 +834,7 @@
         "link": "monstr",
         "type": "noun",
         "definition": "monster",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -863,7 +863,7 @@
         "link": "mort",
         "type": "noun",
         "definition": "death",
-        "tags": ["mass"],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -919,7 +919,7 @@
         "link-verb": "nesce",
         "type": "verb",
         "definition": "to tell",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -935,7 +935,7 @@
         "link": "natur",
         "type": "noun",
         "definition": "nature",
-        "tags": ["mass"],
+        "tags": ["mass", "abstract", "living"],
         "origin": "latin"
     },
     {
@@ -943,7 +943,7 @@
         "link": "naut",
         "type": "noun",
         "definition": "sailor",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1029,6 +1029,7 @@
         "link": "nomin",
         "type": "noun",
         "definition": "name",
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -1036,6 +1037,7 @@
         "link": "nihil",
         "type": "noun",
         "definition": "nothing",
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1043,7 +1045,7 @@
         "link": "noct",
         "type": "noun",
         "definition": "night",
-        "tags": ["mass"],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1068,7 +1070,7 @@
         "link": "ov",
         "type": "noun",
         "definition": "sheep",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1076,7 +1078,7 @@
         "link": "patr",
         "type": "noun",
         "definition": "father",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1084,7 +1086,7 @@
         "link": "pecuni",
         "type": "noun",
         "definition": "money",
-        "tags": ["mass"],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1118,7 +1120,7 @@
         "link": "planet",
         "type": "noun",
         "definition": "planet",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1136,7 +1138,7 @@
         "link": "porc",
         "type": "noun",
         "definition": "pig",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1154,7 +1156,7 @@
         "link": "puell",
         "type": "noun",
         "definition": "girl",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1162,7 +1164,7 @@
         "link": "puer",
         "type": "noun",
         "definition": "boy",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1187,7 +1189,7 @@
         "link": "pac",
         "type": "noun",
         "definition": "peace",
-        "tags": ["mass"],
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -1221,7 +1223,7 @@
         "link": "reg",
         "type": "noun",
         "definition": "king",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1279,7 +1281,7 @@
         "link": "serpent",
         "type": "noun",
         "definition": "snake",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1294,7 +1296,7 @@
         "link": "soror",
         "type": "noun",
         "definition": "sister",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1405,7 +1407,7 @@
         "link": "vir",
         "type": "noun",
         "definition": "man",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1423,7 +1425,7 @@
         "link": "voc",
         "type": "noun",
         "definition": "voice",
-        "tags": ["count"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -1605,6 +1607,34 @@
         "origin": "latin"
     },
     {
+        "base": "icide",
+        "link": "icid",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "definition": "the act of killing %sg",
+        "requires": {
+            "follows": {
+                "tags": ["living"]
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "base": "iform",
+        "link": "iform",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "having the shape of %sg",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "base": "ify",
         "link-present": "ifice",
         "link-perfect": "ificat",
@@ -1632,6 +1662,11 @@
         "from": "noun",
         "to": "adj",
         "definition": "having the qualities of %sg",
+        "requires": {
+            "follows": {
+                "tags": ["living"]
+            }
+        },
         "origin": "latin"
     },
     {

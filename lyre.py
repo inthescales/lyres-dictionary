@@ -481,7 +481,7 @@ setup()
 
 print("")
 
-count = 10
+count = 300
 
 # print(rephrase("analyzing", "3sg"))
 # print(compose_word(["fidere", "ion", "ify"]))
