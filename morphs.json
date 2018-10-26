@@ -73,7 +73,7 @@
         "link-verb": "ambulate",
         "type": "verb",
         "definition": "to walk",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
     {
@@ -141,7 +141,7 @@
         "link-verb": "cide",
         "type": "verb",
         "definition": "to fall",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "motion"],
         "origin": "latin",
         "notes": "decadent / incident? Chose randomly"
     },
@@ -167,6 +167,7 @@
         "base": "capere",
         "link-present": "cipi",
         "link-perfect": "capt",
+        "link-verb": "ceive",
         "type": "verb",
         "definition": "to seize",
         "exception": [
@@ -202,7 +203,7 @@
         "link-present": "cede",
         "link-perfect": "cess",
         "type": "verb",
-        "definition": "to come",
+        "definition": "to yield",
         "tags": ["intransitive"],
         "origin": "latin"
     },
@@ -236,7 +237,17 @@
         "link-verb": "curse",
         "type": "verb",
         "definition": "to run",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "base": "deminuere",
+        "link-present": "diminue",
+        "link-perfect": "diminut",
+        "link-verb": "diminish",
+        "type": "verb",
+        "definition": "to diminish",
+        "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -279,7 +290,7 @@
         "link-perfect": "duct",
         "type": "verb",
         "definition": "to lead",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -350,7 +361,7 @@
         "link-verb": "flect",
         "type": "verb",
         "definition": "to bend",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "exception": [
             { 
                 "case": {
@@ -368,6 +379,7 @@
         "link-perfect": "fluct",
         "type": "verb",
         "definition": "to flow",
+        "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
     {
@@ -391,7 +403,7 @@
         "link-perfect": "ject",
         "type": "verb",
         "definition": "to throw",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -401,7 +413,7 @@
         "link-verb": "jugate",
         "type": "verb",
         "definition": "to join",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -461,6 +473,92 @@
         "origin": "latin"
     },
     {
+        "base": "mater",
+        "link": "matern",
+        "type": "noun",
+        "definition": "mother",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "maximum",
+        "link": "maxim",
+        "type": "noun",
+        "definition": "maximum",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "mens",
+        "link": "ment",
+        "type": "noun",
+        "definition": "mind",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "mensa",
+        "link": "mens",
+        "type": "noun",
+        "definition": "table",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "mergere",
+        "link-present": "merse",
+        "link-perfect": "mers",
+        "link-verb": "merse",
+        "type": "verb",
+        "definition": "to immerse",
+        "tags": ["transitive"],
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "posa",
+                "link": "posa"
+            }
+        ],
+        "origin": "latin",
+        "notes": "immerse vs submerge? Chose merse because merge might be a separate word"
+    },
+    {
+        "base": "merx",
+        "link": "merci",
+        "type": "noun",
+        "definition": "wares",
+        "tags": ["mass"],
+        "origin": "latin"
+    },
+    {
+        "base": "miles",
+        "link": "milit",
+        "type": "noun",
+        "definition": "soldier",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "militare",
+        "link-present": "milita",
+        "link-perfect": "militat",
+        "link-verb": "militate",
+        "type": "verb",
+        "definition": "to make war",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "minimum",
+        "link": "minim",
+        "type": "noun",
+        "definition": "minimum",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
         "base": "mirari",
         "link-present": "mira",
         "link-perfect": "mirat",
@@ -477,7 +575,7 @@
         "link-verb": "mit",
         "type": "verb",
         "definition": "to let",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "exception": [
             { 
                 "case": {
@@ -490,11 +588,187 @@
         "origin": "latin"
     },
     {
-        "base": "murus",
-        "link": "mur",
+        "base": "minimum",
+        "link": "minim",
         "type": "noun",
-        "definition": "wall",
+        "definition": "minimum",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "miscere",
+        "link-present": "misce",
+        "link-perfect": "mict",
+        "link-verb": "mix",
+        "type": "verb",
+        "definition": "to mix",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "miser",
+        "link": "miser",
+        "type": "adj",
+        "definition": "miserable",
+        "origin": "latin"
+    },
+    {
+        "base": "modus",
+        "link": "mod",
+        "type": "noun",
+        "definition": "manner",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "molestare",
+        "link-present": "molesta",
+        "link-perfect": "molestat",
+        "link-verb": "molest",
+        "type": "verb",
+        "definition": "to bother",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "mollis",
+        "link": "moll",
+        "type": "adj",
+        "definition": "soft",
+        "origin": "latin"
+    },
+    {
+        "base": "monstrum",
+        "link": "monstr",
+        "type": "noun",
+        "definition": "monster",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "monstrare",
+        "link-present": "monstra",
+        "link-perfect": "monstrat",
+        "link-verb": "monstrate",
+        "type": "verb",
+        "definition": "to demonstrate",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "consider changing root to 'demonstrare'"
+    },
+    {
+        "base": "mordere",
+        "link-present": "morda",
+        "link-perfect": "mors",
+        "link-verb": "morse",
+        "type": "verb",
+        "definition": "to bite",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "mors",
+        "link": "mort",
+        "type": "noun",
+        "definition": "death",
+        "tags": ["mass"],
+        "origin": "latin"
+    },
+    {
+        "base": "movere",
+        "link-present": "move",
+        "link-perfect": "mot",
+        "link-verb": "move",
+        "type": "verb",
+        "definition": "to move",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "mova",
+                "link": "mova"
+            }
+        ],
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "multa",
+        "link": "mult",
+        "type": "adj",
+        "definition": "many",
+        "origin": "latin"
+    },
+    {
+        "base": "mutare",
+        "link-present": "muta",
+        "link-perfect": "mutat",
+        "link-verb": "mutate",
+        "type": "verb",
+        "definition": "to change",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "narrare",
+        "link-present": "narra",
+        "link-perfect": "narrat",
+        "link-verb": "narrate",
+        "type": "verb",
+        "definition": "to tell",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "nasci",
+        "link-present": "nasce",
+        "link-perfect": "nat",
+        "link-verb": "nesce",
+        "type": "verb",
+        "definition": "to tell",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "nasus",
+        "link": "nas",
+        "type": "noun",
+        "definition": "nose",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "natura",
+        "link": "natur",
+        "type": "noun",
+        "definition": "nature",
+        "tags": ["mass"],
+        "origin": "latin"
+    },
+    {
+        "base": "nauta",
+        "link": "naut",
+        "type": "noun",
+        "definition": "sailor",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "navigare",
+        "link-present": "naviga",
+        "link-perfect": "navigat",
+        "link-verb": "navigate",
+        "type": "verb",
+        "definition": "to navigate",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "base": "necesse",
+        "link": "necess",
+        "type": "adj",
+        "definition": "needed",
         "origin": "latin"
     },
     {
@@ -505,6 +779,71 @@
         "type": "verb",
         "definition": "to tie",
         "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "connect vs annex. Chose connect as that's the more common word."
+    },
+    {
+        "base": "negare",
+        "link-present": "nega",
+        "link-perfect": "negat",
+        "link-verb": "negate",
+        "type": "verb",
+        "definition": "to deny",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "neglegere",
+        "link-present": "neglecte",
+        "link-perfect": "neglect",
+        "type": "verb",
+        "definition": "to neglect",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "neuter",
+        "link": "neutral",
+        "type": "adj",
+        "definition": "neutral",
+        "origin": "latin"
+    },
+    {
+        "base": "nigra",
+        "link": "nigr",
+        "type": "adj",
+        "definition": "black",
+        "origin": "latin"
+    },
+    {
+        "base": "nobilis",
+        "link": "nobil",
+        "type": "adj",
+        "definition": "noble",
+        "origin": "latin"
+    },
+    {
+        "base": "nocere",
+        "link-present": "noce",
+        "link-perfect": "nocit",
+        "link-verb": "noce",
+        "type": "verb",
+        "definition": "to harm",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "nomen",
+        "link": "nomin",
+        "type": "noun",
+        "definition": "name",
+        "origin": "latin"
+    },
+    {
+        "base": "nihil",
+        "link": "nihil",
+        "type": "noun",
+        "definition": "nothing",
         "origin": "latin"
     },
     {
@@ -541,6 +880,14 @@
         "origin": "latin"
     },
     {
+        "base": "pater",
+        "link": "patr",
+        "type": "noun",
+        "definition": "father",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
         "base": "pecunia",
         "link": "pecuni",
         "type": "noun",
@@ -562,7 +909,7 @@
         "link-verb": "pose",
         "type": "verb",
         "definition": "to put",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "exception": [
             { 
                 "case": {
@@ -572,6 +919,24 @@
                 "link": "posa"
             }
         ],
+        "origin": "latin"
+    },
+    {
+        "base": "planeta",
+        "link": "planet",
+        "type": "noun",
+        "definition": "planet",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "base": "plodere",
+        "link-present": "plode",
+        "link-perfect": "plos",
+        "link-verb": "plode",
+        "type": "verb",
+        "definition": "to burst",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -603,6 +968,16 @@
         "link": "pulchr",
         "type": "adj",
         "definition": "beautiful",
+        "origin": "latin"
+    },
+    {
+        "base": "pellere",
+        "link-present": "pelle",
+        "link-perfect": "puls",
+        "link-verb": "pel",
+        "type": "verb",
+        "definition": "to push",
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -658,13 +1033,23 @@
         "origin": "latin"
     },
     {
+        "base": "salire",
+        "link-present": "sili",
+        "link-perfect": "salt",
+        "link-verb": "sult",
+        "type": "verb",
+        "definition": "to jump",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "base": "secare",
         "link-present": "seca",
         "link-perfect": "sect",
         "link-verb": "sect",
         "type": "verb",
         "definition": "to cut",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -674,7 +1059,7 @@
         "link-verb": "secute",
         "type": "verb",
         "definition": "to follow",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -718,13 +1103,30 @@
         "origin": "latin"
     },
     {
+        "base": "sumere",
+        "link-present": "sume",
+        "link-perfect": "sumpt",
+        "link-verb": "sume",
+        "type": "verb",
+        "definition": "to obtain",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "valida",
+        "link": "valid",
+        "type": "adj",
+        "definition": "valid",
+        "origin": "latin"
+    },
+    {
         "base": "vehere",
         "link-present": "vehe",
         "link-perfect": "vect",
         "link-verb": "veigh",
         "type": "verb",
         "definition": "to carry",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -734,7 +1136,7 @@
         "link-verb": "vene",
         "type": "verb",
         "definition": "to come",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
     {
@@ -744,7 +1146,7 @@
         "link-verb": "vert",
         "type": "verb",
         "definition": "to turn",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -899,7 +1301,7 @@
         "base": "ob",
         "link": "o",
         "type": "prep",
-        "definition-verb": "away",
+        "definition-verb": "%@ away",
         "definition-noun": "away from %sg",
         "assimilation" : {
 			"base" : ["*"],
@@ -1088,7 +1490,6 @@
 		"to": "noun",
         "participle-type": "present",
         "tags": ["stem-change"],
-		"category" : "derive",
         "definition": "the process, state, or quality of %part"
     },
     {
@@ -1099,7 +1500,16 @@
 		"to": "adj",
         "participle-type": "present",
         "tags": ["stem-change"],
-		"category" : "derive",
         "definition": "%part"
+    },
+    {
+        "base": "re",
+        "type": "prefix",
+        "definition": "%@ again"
+    },
+    {
+        "base": "re",
+        "type": "prefix",
+        "definition": "%@ again"
     }
 ]

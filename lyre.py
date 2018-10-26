@@ -93,6 +93,14 @@ def rephrase(string, mode):
     
     return " ".join(words)
 
+def has_tag(morph, target):
+    
+    if "tags" in morph:
+        if target in morph["tags"]:
+            return True
+        
+    return False
+
 def check_req(morph, last_morph):
     
     if "requires" in morph:
@@ -109,8 +117,7 @@ def check_req(morph, last_morph):
                 
                 for tag in morph["requires"]["follows"]["tags"]:
                     
-                    if not tag in last_morph["tags"]:
-                        
+                    if not has_tag(last_morph, tag):
                         return False
     
     return True
@@ -128,32 +135,44 @@ def next_morph(current):
     global morphs, type_morphs, morphs_from
     
     head_type = word_type(current)
-    
+
+    if len(current) > 0:
+        last_morph = morphs[current[-1]]
+        first_morph = morphs[current[0]]
+    else:
+        last_morph = None
+        first_morph = None
+        
     choice = None
     
     while choice == None or choice == current[-1]:
 
         # Special chance to add prefixes before verbs.
         # Necessary to inflate their frequency given their small number.
-        if len(current) == 1 and word_type(current) == "verb" and not morphs[current[0]]["type"] == "prep" and random.randint(0, 4) == 0:
+        if len(current) >= 1 and head_type == "verb" and not has_tag(last_morph, "no-prep") and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 4) == 0:
             choice = random.choice(type_morphs["prep"])
             return [choice] + current
         
         # Special chance to use the preposition + noun + ate pattern    
-        if len(current) == 1 and head_type == "noun" and random.randint(0, 8) == 0:
+        if len(current) == 1 and head_type == "noun" and not has_tag(last_morph, "no-prep") and random.randint(0, 4) == 0:
             #options = type_morphs["prep"]
             prep_choice = random.choice(["in", "ex", "trans", "inter", "sub", "super"])
-            end_choice = random.choice(["ate", "al"])
+            end_choice = random.choice(["ate", "al", "al", "ary", "ify", "ize"])
             return [prep_choice] + current + [end_choice]
+        
+        # Add a prefix to the whole thing
+        if len(current) >= 1 and head_type == "verb" and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 8) == 0:
+            choice = random.choice(type_morphs["prefix"])
+            return [choice] + current
         
         # Basic morph addition
         else:
             choice = random.choice(morphs_from[head_type])
             
-            if not check_req(choice, current[-1]):
+            if not check_req(morphs[choice], last_morph):
                 choice = None
-                
-            return current + [choice]
+            else:    
+                return current + [choice]
     
 def generate_morphs(length, seed=[]):
     
@@ -161,10 +180,6 @@ def generate_morphs(length, seed=[]):
         chosen = seed
     else:        
         chosen = [get_root_morph()["base"]]
-        #chosen = []
-        #for pos in ["adj", "verb"]:
-        #    choice = random.choice(type_morphs[pos])
-        #    chosen.append(choice)
     
     for i in range(0, length-1):
         chosen = next_morph(chosen)
@@ -329,12 +344,12 @@ def compose_word(in_morphs):
                 addition = addition[1:]
             
             # Stem change
-            if "tags" in morph and "stem-change" in morph["tags"]:
+            if has_tag(morph, "stem-change"):
                 if word[-1] == "i":
                     addition = "e" + addition
                     
             # Stem raise
-            if "tags" in morph and "stem-raise" in morph["tags"]:
+            if has_tag(morph, "stem-raise"):
                 if word[-1] == "e":
                     word = word[:-1]
                     addition = "i" + addition
@@ -397,12 +412,12 @@ def compose_definition(in_morphs):
                 elif word == "%3sg":
                     words[index] = rephrase(definition, "3sg")
                 elif word == "%sg":
-                    if "tags" in last_morph and "count" in last_morph["tags"]:
+                    if has_tag(last_morph, "count"):
                         words[index] = rephrase(definition, "sg")
                     else:
                         words[index] = definition
                 elif word == "%pl":
-                    if "tags" in last_morph and "count" in last_morph["tags"]:
+                    if has_tag(last_morph, "count"):
                         words[index] = rephrase(definition, "pl")
                     else:
                         words[index] = definition
@@ -470,7 +485,6 @@ count = 10
 # print(compose_definition(["lachryma", "ize"]))
 # print(compose_definition(["lachryma", "ous", "ize"]))
 # inrision
-# obvene
 
 for i in range(0, count):
     parts = generate_morphs(random.randint(2,3))
