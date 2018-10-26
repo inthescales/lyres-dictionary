@@ -477,26 +477,11 @@ def part_tag(word_morphs):
 
     return "(" + abbrev + ")"
 
-setup()
-
-print("")
-
-count = 10
-
-# print(rephrase("analyzing", "3sg"))
-# print(compose_word(["fidere", "ion", "ify"]))
-# print(compose_definition(["ad", "canis", "ify", "ion"]))
-# print(compose_definition(["lachryma", "ize"]))
-# print(compose_definition(["lachryma", "ous", "ize"]))
-# inrision
-# definitions: occultatorize
-
-for i in range(0, count):
+def write_entry():
     parts = generate_morphs(random.randint(2,3))
-    print(parts)
     word = compose_word(parts)
-    definition = compose_definition(parts)
-    print(word + " " + part_tag(parts))
-    print(definition)
-    print("")
+    definition = compose_definition(parts)    
+    entry = word + "\n" + definition
+    return entry
 
+setup()
