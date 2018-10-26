@@ -351,11 +351,11 @@ def compose_word(in_morphs):
                     addition = "e" + addition
                     
             # Stem raise
-            #if has_tag(morph, "stem-raise"):
-            #    word = word[:-1]
-            #    addition = "i" + addition
-            
-            if len(word) > 0 and word[-1] == "e" and addition[0] == "i":
+            if has_tag(morph, "stem-raise") and word[-1] == "e":
+                word = word[:-1]
+                addition = "i" + addition
+                
+            elif len(word) > 0 and word[-1] == "e" and addition[0] == "i":
                 word = word[:-1]
             
             if len(word) > 0 and word[-1] == "-":
@@ -481,7 +481,7 @@ setup()
 
 print("")
 
-count = 300
+count = 10
 
 # print(rephrase("analyzing", "3sg"))
 # print(compose_word(["fidere", "ion", "ify"]))
@@ -489,6 +489,7 @@ count = 300
 # print(compose_definition(["lachryma", "ize"]))
 # print(compose_definition(["lachryma", "ous", "ize"]))
 # inrision
+# definitions: occultatorize
 
 for i in range(0, count):
     parts = generate_morphs(random.randint(2,3))
