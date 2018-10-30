@@ -112,7 +112,7 @@
         "link": "api",
         "type": "noun",
         "definition": "bee",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -148,7 +148,7 @@
         "link": "aquil",
         "type": "noun",
         "definition": "eagle",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -172,7 +172,7 @@
         "link": "asin",
         "type": "noun",
         "definition": "donkey",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -215,14 +215,14 @@
         "link": "avi",
         "type": "noun",
         "definition": "bird",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
         "base": "beata",
         "link": "beat",
         "type": "adj",
-        "definition": "bliss",
+        "definition": "blissful",
         "origin": "latin"
     },
     {
@@ -238,7 +238,7 @@
         "link": "besti",
         "type": "noun",
         "definition": "beast",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -263,7 +263,7 @@
         "link": "bov",
         "type": "noun",
         "definition": "cow",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -297,7 +297,7 @@
         "link": "can",
         "type": "noun",
         "definition": "dog",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -350,7 +350,7 @@
         "link": "carn",
         "type": "noun",
         "definition": "flesh",
-        "tags": ["mass", "concrete", "living"],
+        "tags": ["mass", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -403,7 +403,7 @@
         "link": "cerebr",
         "type": "noun",
         "definition": "brain",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -436,7 +436,7 @@
         "link": "civil",
         "type": "noun",
         "definition": "citizen",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -519,7 +519,7 @@
         "link": "cordi",
         "type": "noun",
         "definition": "heart",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "bodypart"],
         "origin": "latin"
     },
     {
@@ -527,7 +527,7 @@
         "link": "corpor",
         "type": "noun",
         "definition": "body",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -535,7 +535,7 @@
         "link": "corv",
         "type": "noun",
         "definition": "crow",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -573,7 +573,7 @@
         "link": "crur",
         "type": "noun",
         "definition": "leg",
-        "tags": ["count", "conrete"],
+        "tags": ["count", "conrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -627,7 +627,7 @@
         "link": "de",
         "type": "noun",
         "definition": "god",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "human"],
         "origin": "latin"
     },
     {
@@ -635,7 +635,7 @@
         "link": "dent",
         "type": "noun",
         "definition": "tooth",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -643,7 +643,7 @@
         "link": "derm",
         "type": "noun",
         "definition": "skin",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -716,7 +716,7 @@
         "link": "digit",
         "type": "noun",
         "definition": "finger",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -814,7 +814,7 @@
         "link": "du",
         "type": "noun",
         "definition": "two",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "number"],
         "origin": "latin"
     },
     {
@@ -832,7 +832,7 @@
         "link": "equ",
         "type": "noun",
         "definition": "horse",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -867,7 +867,7 @@
         "link": "fel",
         "type": "noun",
         "definition": "cat",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -875,7 +875,7 @@
         "link": "femin",
         "type": "noun",
         "definition": "woman",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -904,6 +904,16 @@
         "link-verb": "fide",
         "type": "verb",
         "definition": "to trust",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "fingere",
+        "link-present": "fing",
+        "link-perfect": "fict",
+        "link-verb": "feign",
+        "type": "verb",
+        "definition": "to feign",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -954,7 +964,7 @@
         "link": "fratern",
         "type": "noun",
         "definition": "brother",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -992,6 +1002,24 @@
         "type": "verb",
         "definition": "to throw",
         "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "base": "judex",
+        "link": "judici",
+        "type": "noun",
+        "definition": "judge",
+        "tags": ["count", "concrete", "living", "human"],
+        "origin": "latin"
+    },
+    {
+        "base": "judicare",
+        "link-present": "judica",
+        "link-perfect": "judicat",
+        "link-verb": "judicate",
+        "type": "verb",
+        "definition": "to judge",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -1043,7 +1071,7 @@
         "link": "lup",
         "type": "noun",
         "definition": "wolf",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -1082,6 +1110,14 @@
         "type": "noun",
         "definition": "maximum",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "base": "mel",
+        "link": "mell",
+        "type": "noun",
+        "definition": "honey",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -1131,19 +1167,11 @@
         "notes": "immerse vs submerge? Chose merse because merge might be a separate word"
     },
     {
-        "base": "merx",
-        "link": "merci",
-        "type": "noun",
-        "definition": "wares",
-        "tags": ["mass", "concrete"],
-        "origin": "latin"
-    },
-    {
         "base": "miles",
         "link": "milit",
         "type": "noun",
         "definition": "soldier",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -1248,7 +1276,7 @@
         "link": "monstr",
         "type": "noun",
         "definition": "monster",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -1341,7 +1369,7 @@
         "link": "nas",
         "type": "noun",
         "definition": "nose",
-        "tags": ["count"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -1357,7 +1385,7 @@
         "link": "naut",
         "type": "noun",
         "definition": "sailor",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -1412,13 +1440,6 @@
         "link": "neutral",
         "type": "adj",
         "definition": "neutral",
-        "origin": "latin"
-    },
-    {
-        "base": "nigra",
-        "link": "nigr",
-        "type": "adj",
-        "definition": "black",
         "origin": "latin"
     },
     {
@@ -1568,7 +1589,7 @@
         "link": "ocul",
         "type": "noun",
         "definition": "eye",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -1655,7 +1676,7 @@
         "link": "oss",
         "type": "noun",
         "definition": "bone",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -1663,12 +1684,12 @@
         "link": "ov",
         "type": "noun",
         "definition": "sheep",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
         "base": "ovum",
-        "link": "ev",
+        "link": "ov",
         "type": "noun",
         "definition": "egg",
         "tags": ["count", "concrete"],
@@ -1700,9 +1721,20 @@
         "origin": "latin"
     },
     {
+        "base": "pangere",
+        "link-present": "pange",
+        "link-perfect": "pact",
+        "link-verb": "pact",
+        "type": "verb",
+        "definition": "to fix in place",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "compact vs impinge. Went with pact as it's also in impact"
+    },
+    {
         "base": "palpitare",
         "link-present": "palpita",
-        "link-perfect": "palitat",
+        "link-perfect": "palpitat",
         "link-verb": "palpitate",
         "type": "verb",
         "definition": "to throb",
@@ -1760,7 +1792,7 @@
         "link": "passer",
         "type": "noun",
         "definition": "sparrow",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -1768,7 +1800,7 @@
         "link": "pastor",
         "type": "noun",
         "definition": "shepherd",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -1776,7 +1808,7 @@
         "link": "patr",
         "type": "noun",
         "definition": "father",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -1835,7 +1867,7 @@
         "link": "person",
         "type": "noun",
         "definition": "person",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -1850,7 +1882,17 @@
         "link": "phantasm",
         "type": "noun",
         "definition": "ghost",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "person"],
+        "origin": "latin"
+    },
+    {
+        "base": "pingere",
+        "link-present": "pinge",
+        "link-perfect": "pict",
+        "link-verb": "pict",
+        "type": "verb",
+        "definition": "to make a picture",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -1858,7 +1900,7 @@
         "link": "pirat",
         "type": "noun",
         "definition": "pirate",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -1866,7 +1908,7 @@
         "link": "pisc",
         "type": "noun",
         "definition": "fish",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -1922,13 +1964,6 @@
         "origin": "latin"
     },
     {
-        "base": "poena",
-        "link": "pen",
-        "type": "adj",
-        "definition": "full",
-        "origin": "latin"
-    },
-    {
         "base": "ponere",
         "link-present": "pone",
         "link-perfect": "posit",
@@ -1952,7 +1987,7 @@
         "link": "popul",
         "type": "noun",
         "definition": "people",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "living", "human"],
         "origin": "latin"
     },
     {
@@ -1960,7 +1995,7 @@
         "link": "porc",
         "type": "noun",
         "definition": "pig",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -2012,7 +2047,7 @@
         "link": "princip",
         "type": "noun",
         "definition": "chief",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -2027,7 +2062,7 @@
         "link": "puell",
         "type": "noun",
         "definition": "girl",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -2035,7 +2070,7 @@
         "link": "puer",
         "type": "noun",
         "definition": "boy",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -2098,7 +2133,7 @@
         "link-perfect": "rect",
         "link-verb": "rect",
         "type": "verb",
-        "definition": "to rule",
+        "definition": "to straighten",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -2107,7 +2142,7 @@
         "link": "reg",
         "type": "noun",
         "definition": "king",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -2186,7 +2221,7 @@
         "link": "serpent",
         "type": "noun",
         "definition": "snake",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -2211,7 +2246,7 @@
         "link": "soror",
         "type": "noun",
         "definition": "sister",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -2272,13 +2307,37 @@
         "origin": "latin"
     },
     {
+        "base": "tempus",
+        "link": "tempor",
+        "type": "noun",
+        "definition": "time",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "base": "tenere",
-        "link-present": "tinen",
+        "link-present": "tine",
         "link-perfect": "tent",
         "link-verb": "tain",
         "type": "verb",
         "definition": "to hold",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "tres",
+        "link": "tri",
+        "type": "noun",
+        "definition": "three",
+        "tags": ["count", "abstract", "number"],
+        "origin": "latin"
+    },
+    {
+        "base": "unus",
+        "link": "un",
+        "type": "noun",
+        "definition": "one",
+        "tags": ["count", "abstract", "number"],
         "origin": "latin"
     },
     {
@@ -2361,7 +2420,7 @@
         "link": "vir",
         "type": "noun",
         "definition": "man",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -2560,6 +2619,15 @@
         "from": "noun",
         "to": "adj",
         "definition": "of or relating to %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": ["or"]
+                },
+                "base": "ial",
+                "link": "ial"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -2569,6 +2637,15 @@
         "from": "noun",
         "to": "adj",
         "definition": "pertaining to %pl",
+        "exception": [
+           {
+               "case": {
+                   "follows": ["or"]
+               },
+               "base": "y",
+               "link": "i"
+           }
+        ],
         "origin": "latin"
     },
     {
@@ -2628,7 +2705,7 @@
         "definition": "having the shape of %sg",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
+                "tags": ["count", "concrete"]
             }
         },
         "origin": "latin"
@@ -2649,6 +2726,13 @@
                 },
                 "base": "ifact",
                 "link": "ifact"
+            },
+            {
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "base": "ify",
+                "link": "ifica"
             }
         ],
         "tags": ["transitive"],
@@ -2703,7 +2787,21 @@
         "from": "verb",
         "to": "adj",
         "participle-type": "perfect",
-        "definition": "capable of %part",
+        "definition": "given to %part",
+        "origin": "latin"
+    },
+    {
+        "base": "ivore",
+        "link": "ivor",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "definition": "one who eats %pl",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
         "origin": "latin"
     },
     {
@@ -2757,6 +2855,17 @@
         "participle-type": "present",
         "tags": ["stem-change"],
         "definition": "%part"
+    },
+    {
+        "base": "ure",
+        "link": "ur",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "perfect",
+        "definition": "the result of %part",
+        "tags": ["mass"],
+        "origin": "latin"
     },
     {
         "base": "re",

@@ -15,7 +15,6 @@ def setup():
     global morphs, roots, type_morphs, morphs_from, words
     
     (morphs, roots, type_morphs, morphs_from) = load_morphs()
-    words = load_words()
     
 def load_morphs():
     
@@ -48,12 +47,6 @@ def load_morphs():
                     morphs_from[from_type].append(morph["base"])
             
         return (morphs, roots, type_morphs, morphs_from)
-
-def load_words():
-    
-    with open('words.json') as word_data:
-        words = json.load(word_data)
-        return words
 
 # Helpers
 
@@ -240,6 +233,7 @@ def compose_word(in_morphs):
                 match = True
                 case = exception["case"]
 
+                # TODO - this doesn't make sense, since each case has its own base/link
                 if "precedes" in case:
                     
                     if not next_morph:
@@ -253,9 +247,26 @@ def compose_word(in_morphs):
 
                         if not precede_match:
                             match = False
+                            
+                if "follows" in case:
+                    
+                    if not last_morph:
+                        match = False
+                    else:
+                        follow_match = False
+                        for element in case["follows"]:
+                            if last_morph["base"] == element:
+                                follow_match = True
+                                break
+
+                        if not follow_match:
+                            match = False
 
                 if match:
-                    addition = exception["link"]
+                    if next_morph == None:
+                        addition = exception["base"]
+                    else:
+                        addition = exception["link"]
                     excepted = True
                     break
             
@@ -478,10 +489,20 @@ def part_tag(word_morphs):
     return "(" + abbrev + ")"
 
 def write_entry():
+    
+    if len(morphs.keys()) == 0:
+        setup()
+        
     parts = generate_morphs(random.randint(2,3))
     word = compose_word(parts)
     definition = compose_definition(parts)    
-    entry = word + "\n" + definition
+    entry = word + " " + part_tag(parts) + "\n" + definition
     return entry
 
+count = 8
+
 setup()
+
+for i in range(0, count):
+    print(write_entry())
+    print("")
