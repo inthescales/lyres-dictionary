@@ -503,6 +503,12 @@ count = 8
 
 setup()
 
+#parts = ["trans", "soror", "ate", "or"]
+#word = compose_word(parts)
+#definition = compose_definition(parts)    
+#entry = word + " " + part_tag(parts) + "\n" + definition
+#print(entry + "\n")
+
 for i in range(0, count):
     print(write_entry())
     print("")

@@ -182,7 +182,7 @@
         "link-verb": "attend",
         "type": "verb",
         "definition": "pay attention to",
-        "tags": ["transitive"],
+        "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -909,7 +909,7 @@
     },
     {
         "base": "fingere",
-        "link-present": "fing",
+        "link-present": "finge",
         "link-perfect": "fict",
         "link-verb": "feign",
         "type": "verb",
@@ -978,6 +978,14 @@
         "origin": "latin"
     },
     {
+        "base": "historia",
+        "link": "histori",
+        "type": "noun",
+        "definition": "history",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "base": "incendere",
         "link-present": "incende",
         "link-perfect": "incens",
@@ -1037,6 +1045,14 @@
         "link": "lachrym",
         "type": "noun",
         "definition": "tear",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "base": "lapis",
+        "link": "lapid",
+        "type": "noun",
+        "definition": "stone",
         "tags": ["count", "concrete"],
         "origin": "latin"
     },
@@ -1878,6 +1894,14 @@
         "origin": "latin"
     },
     {
+        "base": "petra",
+        "link": "petr",
+        "type": "noun",
+        "definition": "stone",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "base": "phantasma",
         "link": "phantasm",
         "type": "noun",
@@ -2121,6 +2145,14 @@
         "notes": "present form is a hack"
     },
     {
+        "base": "radix",
+        "link": "radic",
+        "type": "noun",
+        "definition": "root",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "base": "real",
         "link": "real",
         "type": "adj",
@@ -2312,6 +2344,26 @@
         "type": "noun",
         "definition": "time",
         "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "base": "temptare",
+        "link-present": "tempta",
+        "link-perfect": "temptat",
+        "link-verb": "tempt",
+        "type": "verb",
+        "definition": "to try",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "tendere",
+        "link-present": "tende",
+        "link-perfect": "tens",
+        "link-verb": "tend",
+        "type": "verb",
+        "definition": "to stretch",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -2585,6 +2637,13 @@
         "origin": "latin"
     },
     {
+        "base": "pre",
+        "type": "prep",
+        "definition-verb": "%@ before",
+        "definition-noun": "before %sg",
+        "origin": "latin"
+    },
+    {
         "base": "pro",
         "type": "prep",
         "definition-verb": "%@ for",
@@ -2650,7 +2709,9 @@
     },
     {
         "base": "ate",
-        "link": "ati",
+        "link-present": "ata",
+        "link-perfect": "at",
+        "link-verb": "ate",
         "type": "derive",
         "to": "verb",
         "definition": "to cause to be %@",
@@ -2714,6 +2775,7 @@
         "base": "ify",
         "link-present": "ifice",
         "link-perfect": "ificat",
+        "link-verb": "ify",
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
@@ -2808,6 +2870,7 @@
         "base": "ize",
         "link-present": "iza",
         "link-perfect": "izat",
+        "link-verb": "ize",
         "type": "derive",
         "from": "noun,adj",
         "to": "verb",
@@ -2871,5 +2934,10 @@
         "base": "re",
         "type": "prefix",
         "definition": "%@ again"
+    },
+    {
+        "base": "mis",
+        "type": "prefix",
+        "definition": "%@ incorrectly"
     }
 ]
