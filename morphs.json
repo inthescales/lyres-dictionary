@@ -676,7 +676,7 @@
     {
         "base": "delectare",
         "link-present": "delecta",
-        "link-perfect": "deletat",
+        "link-perfect": "delectat",
         "link-verb": "delect",
         "type": "verb",
         "definition": "to delight",
@@ -908,6 +908,16 @@
         "origin": "latin"
     },
     {
+        "base": "findere",
+        "link-present": "finde",
+        "link-perfect": "fiss",
+        "link-verb": "finde",
+        "type": "verb",
+        "definition": "to split",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "base": "fingere",
         "link-present": "finge",
         "link-perfect": "fict",
@@ -1049,6 +1059,14 @@
         "origin": "latin"
     },
     {
+        "base": "lact",
+        "link": "lact",
+        "type": "noun",
+        "definition": "milk",
+        "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
         "base": "lapis",
         "link": "lapid",
         "type": "noun",
@@ -1083,6 +1101,14 @@
         "origin": "latin"
     },
     {
+        "base": "luna",
+        "link": "lun",
+        "type": "noun",
+        "definition": "moon",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "base": "lupus",
         "link": "lup",
         "type": "noun",
@@ -1110,6 +1136,14 @@
         "link": "mal",
         "type": "noun",
         "definition": "bad",
+        "origin": "latin"
+    },
+    {
+        "base": "mars",
+        "link": "marti",
+        "type": "noun",
+        "definition": "mars",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -1224,7 +1258,7 @@
         "link-perfect": "miss",
         "link-verb": "mit",
         "type": "verb",
-        "definition": "to let",
+        "definition": "to send",
         "tags": ["transitive", "motion"],
         "exception": [
             { 
@@ -1248,7 +1282,7 @@
     {
         "base": "miscere",
         "link-present": "misce",
-        "link-perfect": "mict",
+        "link-perfect": "mixt",
         "link-verb": "mix",
         "type": "verb",
         "definition": "to mix",
@@ -1557,7 +1591,7 @@
     },
     {
         "base": "nutrire",
-        "link-present": "nutrie",
+        "link-present": "nutri",
         "link-perfect": "nutrit",
         "link-verb": "nutrit",
         "type": "verb",
@@ -2195,6 +2229,15 @@
         "type": "verb",
         "definition": "to jump",
         "tags": ["intransitive", "motion"],
+        "origin": "latin",
+        "names": "conflict: salient vs resilient"
+    },
+    {
+        "base": "sanguis",
+        "link": "sanguin",
+        "type": "noun",
+        "definition": "blood",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -2274,6 +2317,14 @@
         "origin": "latin"
     },
     {
+        "base": "sol",
+        "link": "sol",
+        "type": "noun",
+        "definition": "sun",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "base": "soror",
         "link": "soror",
         "type": "noun",
@@ -2337,6 +2388,17 @@
         "definition": "to obtain",
         "tags": ["transitive"],
         "origin": "latin"
+    },
+    {
+        "base": "tangere",
+        "link-present": "tange",
+        "link-perfect": "tact",
+        "link-verb": "tain",
+        "type": "verb",
+        "definition": "to try",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "verb after 'attain'. not included: 'contingent'"
     },
     {
         "base": "tempus",
@@ -2420,6 +2482,14 @@
         "origin": "latin"
     },
     {
+        "base": "venus",
+        "link": "venere",
+        "type": "noun",
+        "definition": "venus",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "base": "vertere",
         "link-present": "verte",
         "link-perfect": "vers",
@@ -2436,6 +2506,16 @@
                 "link": "versi"
             }
         ],
+        "origin": "latin"
+    },
+    {
+        "base": "vestire",
+        "link-present": "vesti",
+        "link-perfect": "vestit",
+        "link-verb": "vest",
+        "type": "verb",
+        "definition": "to dress",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -2652,9 +2732,14 @@
     },
     {
         "base": "sub",
+        "link": "su",
         "type": "prep",
         "definition-verb": "%@ under",
         "definition-noun": "under %sg",
+        "assimilation": {
+			"base" : ["a", "d", "e", "j", "m", "o", "*"],
+			"link" : ["s"]
+        },
         "origin": "latin"
     },
     {
