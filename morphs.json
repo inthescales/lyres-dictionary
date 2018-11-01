@@ -689,7 +689,7 @@
         "link-perfect": "delet",
         "link-verb": "delete",
         "type": "verb",
-        "definition": "to erase",
+        "definition": "to destroy",
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
@@ -784,6 +784,14 @@
         "notes": "verb is a guess"
     },
     {
+        "base": "drama",
+        "link": "dramati",
+        "type": "noun",
+        "definition": "drama",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "base": "dubitare",
         "link-present": "dubita",
         "link-perfect": "dubit",
@@ -836,6 +844,24 @@
         "origin": "latin"
     },
     {
+        "base": "fabula",
+        "link": "fabul",
+        "type": "noun",
+        "definition": "story",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "base": "fabulari",
+        "link-present": "fabula",
+        "link-perfect": "fabulat",
+        "link-verb": "fabulate",
+        "type": "verb",
+        "definition": "to make a story",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "base": "facere",
         "link-present": "fici",
         "link-perfect": "fact",
@@ -850,6 +876,14 @@
         "link": "facil",
         "type": "adj",
         "definition": "easy",
+        "origin": "latin"
+    },
+    {
+        "base": "fama",
+        "link": "fam",
+        "type": "noun",
+        "definition": "fame",
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -923,7 +957,7 @@
         "link-perfect": "fict",
         "link-verb": "feign",
         "type": "verb",
-        "definition": "to feign",
+        "definition": "to make up",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -1083,12 +1117,53 @@
         "origin": "latin"
     },
     {
+        "base": "legere",
+        "link-present": "lege",
+        "link-perfect": "lect",
+        "link-verb": "lege",
+        "type": "verb",
+        "definition": "to read",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "ligare",
+        "link-present": "liga",
+        "link-perfect": "ligat",
+        "link-verb": "ligate",
+        "type": "verb",
+        "definition": "to bind",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "base": "ligere",
+        "link-present": "lige",
+        "link-perfect": "lect",
+        "link-verb": "lect",
+        "type": "verb",
+        "definition": "to choose",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "base": "limen",
         "link": "limin",
         "type": "noun",
         "definition": "boundary",
         "tags": ["count", "concrete"],
         "origin": "latin"
+    },
+    {
+        "base": "linquere",
+        "link-present": "linque",
+        "link-perfect": "lict",
+        "link-verb": "linquish",
+        "type": "verb",
+        "definition": "to give up",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "this produces lictor with wrong def. Same form as ligere-from-ligare. Divide later."
     },
     {
         "base": "loqui",
@@ -1138,14 +1213,7 @@
         "definition": "bad",
         "origin": "latin"
     },
-    {
-        "base": "mars",
-        "link": "marti",
-        "type": "noun",
-        "definition": "mars",
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
+
     {
         "base": "mater",
         "link": "matern",
@@ -1863,7 +1931,7 @@
     },
     {
         "base": "pati",
-        "link-present": "patie",
+        "link-present": "pati",
         "link-perfect": "pass",
         "link-verb": "pass",
         "type": "verb",
@@ -2085,7 +2153,7 @@
     },
     {
         "base": "prehendere",
-        "link-present": "predende",
+        "link-present": "prehense",
         "link-perfect": "prehens",
         "link-verb": "prehend",
         "type": "verb",
@@ -2251,6 +2319,16 @@
         "origin": "latin"
     },
     {
+        "base": "scribere",
+        "link-present": "scriba",
+        "link-perfect": "script",
+        "link-verb": "scribe",
+        "type": "verb",
+        "definition": "to write",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "base": "secare",
         "link-present": "seca",
         "link-perfect": "sect",
@@ -2339,7 +2417,7 @@
         "link-verb": "spect",
         "type": "verb",
         "definition": "to look",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -2439,6 +2517,14 @@
         "origin": "latin"
     },
     {
+        "base": "tragoedia",
+        "link": "tragedi",
+        "type": "noun",
+        "definition": "tragedy",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "base": "tres",
         "link": "tri",
         "type": "noun",
@@ -2479,14 +2565,6 @@
         "type": "verb",
         "definition": "to come",
         "tags": ["intransitive", "motion"],
-        "origin": "latin"
-    },
-    {
-        "base": "venus",
-        "link": "venere",
-        "type": "noun",
-        "definition": "venus",
-        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -2731,14 +2809,20 @@
         "origin": "latin"
     },
     {
+        "base": "se",
+        "type": "prep",
+        "definition-verb": "%@ apart",
+        "definition-noun": "apart from %sg",
+        "origin": "latin"
+    },
+    {
         "base": "sub",
         "link": "su",
         "type": "prep",
         "definition-verb": "%@ under",
         "definition-noun": "under %sg",
         "assimilation": {
-			"base" : ["a", "d", "e", "j", "m", "o", "*"],
-			"link" : ["s"]
+			"base" : ["*"]
         },
         "origin": "latin"
     },
