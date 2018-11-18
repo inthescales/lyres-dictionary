@@ -6,5 +6,5 @@ credentials = {
 }
     
 buddy = BotBuddy()
-buddy.setup(lyre.write_entry, interval="1h", retry=True, credentials=credentials)
+buddy.setup(lyre.generate_entry, interval="1h", retry=True, credentials=credentials)
 buddy.launch()

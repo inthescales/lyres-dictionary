@@ -26,6 +26,12 @@ def load_morphs():
         morphs_from = {}
         
         for morph in raw_morphs:
+            
+            if not validate_morph(morph):
+                print("ERROR - invalid morph")
+                print(morph)
+                exit(0)
+            
             morphs[morph["base"]] = morph
             
             if "type" in morph:
@@ -48,6 +54,14 @@ def load_morphs():
             
         return (morphs, roots, type_morphs, morphs_from)
 
+def validate_morph(morph):
+    
+    if morph["type"] == "verb":
+        if not ("link-present" in morph and "link-perfect" in morph):
+            return False
+    
+    return True
+    
 # Helpers
 
 def is_vowel(letter):
@@ -119,7 +133,7 @@ def check_req(morph, last_morph):
 
 def get_root_morph():
     
-    part = random.choice(["noun", "adj", "verb"])
+    part = random.choice(["noun", "adj", "verb", "verb", "verb"])
     return morphs[random.choice(type_morphs[part])]
     
     #return random.choice(roots)
@@ -142,7 +156,7 @@ def next_morph(current):
 
         # Special chance to add prefixes before verbs.
         # Necessary to inflate their frequency given their small number.
-        if len(current) == 1 and head_type == "verb" and not has_tag(last_morph, "no-prep") and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 4) == 0:
+        if len(current) == 1 and head_type == "verb" and not has_tag(last_morph, "no-prep") and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 3) == 0:
             choice = random.choice(type_morphs["prep"])
             return [choice] + current
         
@@ -152,8 +166,6 @@ def next_morph(current):
             prep_choice = random.choice(["in", "ex", "trans", "inter", "sub", "super"])
             end_choice = random.choice(["ate", "al", "al", "ary", "ify", "ize"])
             return [prep_choice] + current + [end_choice]
-        
-        # abbreviate?
         
         # Add a prefix to the whole thing
         if len(current) >= 1 and head_type == "verb" and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 8) == 0:
@@ -352,7 +364,7 @@ def compose_word(in_morphs):
 
         if len(addition) > 0:
 
-            # Combine repeated letters            
+            # e.g.: glaci + ify -> glacify
             if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph["type"] == "prep":
                 addition = addition[1:]
             
@@ -365,6 +377,10 @@ def compose_word(in_morphs):
             if has_tag(morph, "stem-raise") and word[-1] == "e":
                 word = word[:-1]
                 addition = "i" + addition
+                
+            # Drop first (sub + emere -> sumere)
+            if has_tag(morph, "drop-first") and last_morph:
+                addition = addition[1:]
                 
             elif len(word) > 0 and word[-1] == "e" and addition[0] == "i":
                 word = word[:-1]
@@ -488,27 +504,35 @@ def part_tag(word_morphs):
 
     return "(" + abbrev + ")"
 
-def write_entry():
+def generate_entry():
     
     if len(morphs.keys()) == 0:
         setup()
-        
-    parts = generate_morphs(random.randint(2,3))
-    word = compose_word(parts)
-    definition = compose_definition(parts)    
-    entry = word + " " + part_tag(parts) + "\n" + definition
+    
+    word_morphs = generate_morphs(random.randint(2,3))
+    return write_entry(word_morphs)
+
+def write_entry(morphs):
+    
+    word = compose_word(morphs)
+    definition = compose_definition(morphs)
+    entry = word + " " + part_tag(morphs) + "\n" + definition
     return entry
 
-count = 8
+def run(count):
+    
+    print("")
+    for i in range(0, count):
+        print(generate_entry())
+        print("")
+    
+def test(morphs):
+
+    print("")
+    print(write_entry(morphs))
 
 setup()
 
-#parts = ["trans", "soror", "ate", "or"]
-#word = compose_word(parts)
-#definition = compose_definition(parts)    
-#entry = word + " " + part_tag(parts) + "\n" + definition
-#print(entry + "\n")
+#run(500)
+#test(["com", "ordinare"])
 
-for i in range(0, count):
-    print(write_entry())
-    print("")
