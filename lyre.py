@@ -34,8 +34,9 @@ def load_morphs():
             
             morphs[morph["key"]] = morph
             
-            if "type" in morph:
-                morph_type = morph["type"]
+            morph_type = morph["type"]
+            if morph_type != "derive":
+                
                 if not morph_type in type_morphs:
                     type_morphs[morph_type] = []
                     
@@ -44,20 +45,36 @@ def load_morphs():
                 if morph_type in ["noun", "adj", "verb"]:
                     roots.append(morph)
                 
-            if "from" in morph:
+            else:
                 
                 for from_type in morph["from"].split(","):
                     if not from_type in morphs_from:
                         morphs_from[from_type] = []
 
-                    morphs_from[from_type].append(morph["key"])
+                    if "tags" not in morph or not "no-gen" in morph["tags"]:
+                        morphs_from[from_type].append(morph["key"])
             
         return (morphs, roots, type_morphs, morphs_from)
 
 def validate_morph(morph):
     
-    if morph["type"] == "verb":
+    if not "type" in morph:
+        return False
+    
+    morph_type = morph["type"]
+    
+    if morph_type == "noun":
+        if not "link" in morph:
+            return False
+        elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"])):
+            return False
+    
+    elif morph_type == "verb":
         if not ("link-present" in morph and "link-perfect" in morph and "final" in morph):
+            return False
+    
+    elif morph_type == "derive":
+        if not ("from" in morph and "to" in morph):
             return False
     
     return True
@@ -162,7 +179,7 @@ def next_morph(current):
         if len(current) == 1 and head_type == "noun" and not has_tag(last_morph, "no-prep") and random.randint(0, 4) == 0:
             #options = type_morphs["prep"]
             prep_choice = random.choice(["in", "ex", "trans", "inter", "sub", "super"])
-            end_choice = random.choice(["ate", "al", "al", "ary", "ify", "ize"])
+            end_choice = random.choice(["ate", "al-rel", "al-rel", "ary", "ify", "ize"])
             return [prep_choice] + current + [end_choice]
         
         # Add a prefix to the whole thing
@@ -274,7 +291,6 @@ def compose_word(in_morphs):
 
                 if match:
                     if next_morph == None:
-                        print(morph["key"]) # TEST
                         addition = exception["final"]
                     else:
                         addition = exception["link"]
@@ -350,7 +366,6 @@ def compose_word(in_morphs):
         
             # The final morph
             else:
-                print(morph["key"]) # TEST
                 addition = morph["final"]
 
         if len(addition) > 0:
@@ -524,6 +539,6 @@ def test(morphs):
 
 setup()
 
-run(5000)
+run(10)
 #test(["com", "ordinare"])
 

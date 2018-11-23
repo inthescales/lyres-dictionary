@@ -318,7 +318,7 @@
     {
         "key": "bona",
         "link": "ben",
-        "type": "noun",
+        "type": "adj",
         "definition": "good",
         "origin": "latin"
     },
@@ -2515,6 +2515,16 @@
         "origin": "latin"
     },
     {
+        "key": "migrare",
+        "link-present": "migra",
+        "link-perfect": "migrat",
+        "final": "migrate",
+        "type": "verb",
+        "definition": "to go",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "key": "miles",
         "link": "milit",
         "type": "noun",
@@ -4623,6 +4633,12 @@
         "origin": "latin"
     },
     {
+        "key": "re-prep",
+        "link": "re",
+        "type": "prep",
+        "definition-verb": "%@ back"
+    },
+    {
         "key": "se",
         "link": "se",
         "type": "prep",
@@ -4680,6 +4696,17 @@
         "origin": "latin"
     },
     {
+        "key": "al-rel",
+        "final": "al",
+        "link": "al",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "%sg",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
         "key": "ary",
         "final": "ary",
         "link": "ari",
@@ -4704,9 +4731,10 @@
         "link-perfect": "at",
         "final": "ate",
         "type": "derive",
+        "from": "noun,adj",
         "to": "verb",
         "definition": "to cause to be %@",
-        "tags": ["transitive"],
+        "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
     {
