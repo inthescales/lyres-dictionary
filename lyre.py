@@ -32,14 +32,14 @@ def load_morphs():
                 print(morph)
                 exit(0)
             
-            morphs[morph["base"]] = morph
+            morphs[morph["key"]] = morph
             
             if "type" in morph:
                 morph_type = morph["type"]
                 if not morph_type in type_morphs:
                     type_morphs[morph_type] = []
                     
-                type_morphs[morph_type].append(morph["base"])
+                type_morphs[morph_type].append(morph["key"])
                 
                 if morph_type in ["noun", "adj", "verb"]:
                     roots.append(morph)
@@ -50,14 +50,14 @@ def load_morphs():
                     if not from_type in morphs_from:
                         morphs_from[from_type] = []
 
-                    morphs_from[from_type].append(morph["base"])
+                    morphs_from[from_type].append(morph["key"])
             
         return (morphs, roots, type_morphs, morphs_from)
 
 def validate_morph(morph):
     
     if morph["type"] == "verb":
-        if not ("link-present" in morph and "link-perfect" in morph):
+        if not ("link-present" in morph and "link-perfect" in morph and "final" in morph):
             return False
     
     return True
@@ -135,8 +135,6 @@ def get_root_morph():
     
     part = random.choice(["noun", "adj", "verb", "verb", "verb"])
     return morphs[random.choice(type_morphs[part])]
-    
-    #return random.choice(roots)
 
 def next_morph(current):
     global morphs, type_morphs, morphs_from
@@ -186,7 +184,7 @@ def generate_morphs(length, seed=[]):
     if seed != []:
         chosen = seed
     else:        
-        chosen = [get_root_morph()["base"]]
+        chosen = [get_root_morph()["key"]]
     
     for i in range(0, length-1):
         chosen = next_morph(chosen)
@@ -253,7 +251,7 @@ def compose_word(in_morphs):
                     else:
                         precede_match = False
                         for element in case["precedes"]:
-                            if next_morph["base"] == element:
+                            if next_morph["key"] == element:
                                 precede_match = True
                                 break
 
@@ -267,7 +265,7 @@ def compose_word(in_morphs):
                     else:
                         follow_match = False
                         for element in case["follows"]:
-                            if last_morph["base"] == element:
+                            if last_morph["key"] == element:
                                 follow_match = True
                                 break
 
@@ -276,7 +274,8 @@ def compose_word(in_morphs):
 
                 if match:
                     if next_morph == None:
-                        addition = exception["base"]
+                        print(morph["key"]) # TEST
+                        addition = exception["final"]
                     else:
                         addition = exception["link"]
                     excepted = True
@@ -290,7 +289,7 @@ def compose_word(in_morphs):
                 # Follow special assimilation rules if there are any
                 if "assimilation" in morph:
 
-                    next_letter = list(next_morph["base"])[0]
+                    next_letter = list(next_morph["key"])[0]
 
                     matched_case = None
                     star_case = None
@@ -309,19 +308,19 @@ def compose_word(in_morphs):
                     elif star_case:
                         case = star_case
 
-                    if case == "base":
-                        addition = morph["base"]
-                    elif case == "link":
+                    if case == "link":
                         addition = morph["link"]
+                    elif case == "link-assim":
+                        addition = morph["link-assim"]
                     elif case == "cut":
-                        addition = morph["base"] + "-"
+                        addition = morph["link"] + "-"
                     elif case == "double":
-                        addition = morph["link"] + next_letter
+                        addition = morph["link-assim"] + next_letter
                     elif case == "nasal":
                         if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-                            addition = morph["link"] + 'm'
+                            addition = morph["link-assim"] + 'm'
                         else:
-                            addition = morph["link"] + 'n'
+                            addition = morph["link-assim"] + 'n'
                     else:
                         addition = case
 
@@ -347,20 +346,12 @@ def compose_word(in_morphs):
 
                     # Use base form if nothing overrides
                     else:
-                        addition = morph["base"]
+                        addition = morph["final"]
         
             # The final morph
             else:
-                    # Non-verbs always use base form
-                    if not morph["type"] == "verb":
-                        addition = morph["base"]
-
-                    # Verbs use either their perfect or exception form
-                    else:
-                        if "link-verb" in morph:
-                            addition = morph["link-verb"]
-                        else:
-                            addition = morph["link-perfect"]
+                print(morph["key"]) # TEST
+                addition = morph["final"]
 
         if len(addition) > 0:
 
@@ -409,8 +400,8 @@ def compose_definition(in_morphs):
         
         if "definition" in morph:
             return morph["definition"]
-        elif last_morph and ("definition-" + word_type([last_morph["base"]])) in morph:
-            return morph["definition-" + word_type([last_morph["base"]])]
+        elif last_morph and ("definition-" + word_type([last_morph["key"]])) in morph:
+            return morph["definition-" + word_type([last_morph["key"]])]
     
     def pop_prefix(morph, definition):
         
@@ -533,6 +524,6 @@ def test(morphs):
 
 setup()
 
-#run(500)
+run(5000)
 #test(["com", "ordinare"])
 
