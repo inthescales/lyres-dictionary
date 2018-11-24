@@ -3,19 +3,110 @@ import random
 
 from pattern.en import conjugate, singularize, pluralize, tag
 
-morph_for_key = {}
-roots = []
-type_morphs = {}
-morphs_from = {}
-words = []
+morphary = None
 
-# Classes
+def setup():
+    global morphary
+    
+    morphary = Morphary(["morphs.json"])
+
+def needs_setup():
+    return morphary == None
+    
+class Morphary:
+    
+    def __init__(self, files):
+
+        self.morph_for_key = {}
+        self.roots = []
+        self.type_morphs = {}
+        self.morphs_from = {}
+        self.words = []
+        
+        for file in files:
+            
+            errors = 0
+            
+            with open(file) as morph_data:
+
+                raw_morphs = json.load(morph_data)
+                for morph in raw_morphs:
+
+                    if not validate_morph(morph):
+                        if "key" in morph:
+                            print("ERROR - invalid morph for key " + morph["key"])
+                        else:
+                            print("ERROR - invalid morph:")
+                            print(morph)
+                        errors += 1
+                        continue
+
+                    self.morph_for_key[morph["key"]] = morph
+
+                    morph_type = morph["type"]
+                    if morph_type != "derive":
+
+                        if not morph_type in self.type_morphs:
+                            self.type_morphs[morph_type] = []
+
+                        self.type_morphs[morph_type].append(morph["key"])
+
+                        if morph_type in ["noun", "adj", "verb"]:
+                            self.roots.append(morph)
+
+                    else:
+
+                        for from_type in morph["from"].split(","):
+                            if not from_type in self.morphs_from:
+                                self.morphs_from[from_type] = []
+
+                            if "tags" not in morph or not "no-gen" in morph["tags"]:
+                                self.morphs_from[from_type].append(morph["key"])
+                                
+                if errors > 0:
+                    print("Exiting with " + errors + " validation errors")
+                    exit(0)
+
+def validate_morph(morph):
+    
+    if not "key" in morph:
+        print(" - key is missing")
+        return False
+    
+    if not "type" in morph:
+        print(" - type is missing")
+        return False
+    
+    morph_type = morph["type"]
+    
+    if morph_type == "noun":
+        if not "link" in morph:
+            print(" - noun lacks link form")
+            return False
+        elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"])):
+            print(" - noun must have tag 'count' or 'mass'")
+            return False
+    
+    elif morph_type == "verb":
+        if not ("link-present" in morph and "link-perfect" in morph and "final" in morph):
+            print(" - verbs require 'link-present', 'link-perfect', and 'final'")
+            return False
+    
+    elif morph_type == "derive":
+        if not ("from" in morph and "to" in morph):
+            print(" - derive morphs must have 'from' and 'to'")
+            return False
+    
+    return True
+            
+# Classes         
 
 class Morph:
     
     def __init__(self, key):
-        global morph_for_key
-        self.morph = morph_for_key[key]
+        global morphary
+        
+        self.morph = morphary.morph_for_key[key]
         self.prev = None
         self.next = None
         
@@ -200,7 +291,6 @@ class Morph:
         return False
 
 class Word:
-    global morph_for_key, type_morphs, morphs_from
     
     def __init__(self):
         self.morphs = []
@@ -242,12 +332,14 @@ class Word:
             self.next_morph()   
         
     def get_seed(self):
+        global morphary
+        
         type = random.choice(["noun", "adj", "verb", "verb", "verb"])
-        key = random.choice(type_morphs[type])
+        key = random.choice(morphary.type_morphs[type])
         return Morph(key)     
         
     def next_morph(self):
-        global morphs_from
+        global morphary
         
         current_type = self.get_type()
         last_morph = self.last_morph()
@@ -260,7 +352,7 @@ class Word:
             # Special chance to add prefixes before verbs.
             # Necessary to inflate their frequency given their small number.
             if self.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not first_morph.get_type() in ["prep", "prefix"] and random.randint(0, 3) == 0:
-                new_morph = Morph( random.choice(type_morphs["prep"]) )
+                new_morph = Morph( random.choice(morphary.type_morphs["prep"]) )
                 new_morph.join(first_morph)
                 self.morphs = [new_morph] + self.morphs
                 break
@@ -276,16 +368,16 @@ class Word:
 
             # Add a prefix to the whole thing
             if self.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"] and random.randint(0, 8) == 0:
-                new_morph = Morph( random.choice(type_morphs["prefix"]) )
+                new_morph = Morph( random.choice(morphary.type_morphs["prefix"]) )
                 new_morph.join(first_morph)
                 self.morphs = [new_morph] + self.morphs
                 break
 
             # Basic morph addition
             else:
-                choice = random.choice(morphs_from[current_type])
+                choice = random.choice(morphary.morphs_from[current_type])
 
-                if choice == last_morph.morph["key"] or not check_req(morph_for_key[choice], last_morph):
+                if choice == last_morph.morph["key"] or not check_req(morphary.morph_for_key[choice], last_morph):
                     choice = None
                 else:    
                     new_morph = Morph(choice)
@@ -319,76 +411,6 @@ class Word:
         
     def get_definition():
         return "NOT IMPLEMENTED"
-
-# Data import and setup
-
-def setup():
-    global morph_for_key, roots, type_morphs, morphs_from, words
-    
-    (morph_for_key, roots, type_morphs, morphs_from) = load_morphs()
-    
-def load_morphs():
-    
-    with open('morphs.json') as morph_data:
-        raw_morphs = json.load(morph_data)
-        morphs = {}
-        roots = []
-        type_morphs = {}
-        morphs_from = {}
-        
-        for morph in raw_morphs:
-            
-            if not validate_morph(morph):
-                print("ERROR - invalid morph")
-                print(morph)
-                exit(0)
-            
-            morphs[morph["key"]] = morph
-            
-            morph_type = morph["type"]
-            if morph_type != "derive":
-                
-                if not morph_type in type_morphs:
-                    type_morphs[morph_type] = []
-                    
-                type_morphs[morph_type].append(morph["key"])
-                
-                if morph_type in ["noun", "adj", "verb"]:
-                    roots.append(morph)
-                
-            else:
-                
-                for from_type in morph["from"].split(","):
-                    if not from_type in morphs_from:
-                        morphs_from[from_type] = []
-
-                    if "tags" not in morph or not "no-gen" in morph["tags"]:
-                        morphs_from[from_type].append(morph["key"])
-            
-        return (morphs, roots, type_morphs, morphs_from)
-
-def validate_morph(morph):
-    
-    if not "type" in morph:
-        return False
-    
-    morph_type = morph["type"]
-    
-    if morph_type == "noun":
-        if not "link" in morph:
-            return False
-        elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"])):
-            return False
-    
-    elif morph_type == "verb":
-        if not ("link-present" in morph and "link-perfect" in morph and "final" in morph):
-            return False
-    
-    elif morph_type == "derive":
-        if not ("from" in morph and "to" in morph):
-            return False
-    
-    return True
     
 # Helpers
 
@@ -459,7 +481,7 @@ def anglicize(word):
     return "".join(english_word)
 
 def compose_word(in_word):
-    global morph_for_key
+    global morphary
     
     in_morphs = in_word.morphs
     word = ""
@@ -515,7 +537,7 @@ def compose_word(in_word):
     return word
         
 def compose_definition(in_morphs):
-    global morph_for_key
+    global morphary
     
     word = ""
     morph = None
@@ -588,9 +610,8 @@ def compose_definition(in_morphs):
     return definition
 
 def generate_entry():
-    global morph_for_key
-    
-    if len(morph_for_key.keys()) == 0:
+   
+    if needs_setup():
         setup()
     
     word = Word()

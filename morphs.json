@@ -695,6 +695,13 @@
         "origin": "latin"
     },
     {
+        "key": "cruda",
+        "link": "crud",
+        "type": "adj",
+        "definition": "raw",
+        "origin": "latin"
+    },
+    {
         "key": "crus",
         "link": "crur",
         "type": "noun",
