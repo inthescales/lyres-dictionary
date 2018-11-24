@@ -3,18 +3,329 @@ import random
 
 from pattern.en import conjugate, singularize, pluralize, tag
 
-morphs = {}
+morph_for_key = {}
 roots = []
 type_morphs = {}
 morphs_from = {}
 words = []
 
+# Classes
+
+class Morph:
+    
+    def __init__(self, key):
+        global morph_for_key
+        self.morph = morph_for_key[key]
+        self.prev = None
+        self.next = None
+        
+    def __eq__(self, other):
+        if other == None:
+            return False
+        
+        return self.morph["key"] == other.morph["key"]
+        
+    def join(self, next_morph):
+        self.next = next_morph
+        next_morph.prev = self
+    
+    def get_form(self):
+        
+        form = ""
+        
+        if self.next:
+            next_morph = self.next.morph
+        else:
+            next_morph = None
+            
+        if self.prev:
+            last_morph = self.prev.morph
+        else:
+            last_morph = None
+        
+        # Check for exceptional forms
+        excepted = False
+        if "exception" in self.morph:
+            for exception in self.morph["exception"]:
+
+                # Assume there's a match, and negate that if it doesn't meet a requirement
+                # Match the first case that we fill
+                match = True
+                case = exception["case"]
+
+                # TODO - this doesn't make sense, since each case has its own base/link
+                if "precedes" in case:
+                    
+                    if not next_morph:
+                        match = False
+                    else:
+                        precede_match = False
+                        for element in case["precedes"]:
+                            if next_morph["key"] == element:
+                                precede_match = True
+                                break
+
+                        if not precede_match:
+                            match = False
+                            
+                if "follows" in case:
+                    
+                    if not last_morph:
+                        match = False
+                    else:
+                        follow_match = False
+                        for element in case["follows"]:
+                            if last_morph["key"] == element:
+                                follow_match = True
+                                break
+
+                        if not follow_match:
+                            match = False
+
+                if match:
+                    if next_morph == None:
+                        form = exception["final"]
+                    else:
+                        form = exception["link"]
+                    excepted = True
+                    break
+            
+                
+        if not excepted:
+
+            # Get the proper form of the morph
+            if self.next != None:
+
+                # Follow special assimilation rules if there are any
+                if "assimilation" in self.morph:
+
+                    next_letter = list(next_morph["key"])[0]
+
+                    matched_case = None
+                    star_case = None
+
+                    for case, sounds in self.morph["assimilation"].items():
+
+                        if "*" in sounds:
+                            star_case = case
+
+                        if next_letter in sounds:
+                            matched_case = case
+                            break
+
+                    if matched_case:
+                        case = matched_case
+                    elif star_case:
+                        case = star_case
+
+                    if case == "link":
+                        form = self.morph["link"]
+                    elif case == "link-assim":
+                        form = self.morph["link-assim"]
+                    elif case == "cut":
+                        form = self.morph["link"] + "-"
+                    elif case == "double":
+                        form = self.morph["link-assim"] + next_letter
+                    elif case == "nasal":
+                        if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
+                            form = self.morph["link-assim"] + 'm'
+                        else:
+                            form = self.morph["link-assim"] + 'n'
+                    else:
+                        form = case
+
+
+                # Default rules
+                else:
+
+                    # Usually we'll use link form
+                    if "link" in self.morph:
+                        form = self.morph["link"]
+
+                    # Verbs or verbal derivations need to take participle form into account
+                    elif self.morph["type"] == "verb" or (self.morph["type"] == "derive" and self.morph["to"] == "verb"):
+                        if next_morph and "participle-type" in next_morph:
+                            if next_morph["participle-type"] == "present":
+                                form = self.morph["link-present"]
+                            elif next_morph["participle-type"] == "perfect":
+                                form = self.morph["link-perfect"]
+                        elif "link-verb" in morph:
+                            form = self.morph["link-verb"]
+                        else:
+                            form = self.morph["link-perfect"]
+
+                    # Use final form if nothing overrides
+                    else:
+                        form = self.morph["final"]
+        
+            # The final morph form
+            else:
+                if not "final" in self.morph:
+                    print(self.morph)
+                form = self.morph["final"]
+        
+        return form
+    
+    def get_definition(self):
+
+        # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
+        if self.prev and self.prev.get_type() == "noun" and self.prev.prev and self.prev.prev.get_type() == "prep" and "definition-relative" in self.morph:
+            return self.morph["definition-relative"]
+        
+        if "definition" in self.morph:
+            return self.morph["definition"]
+        else:
+
+            if self.get_type() == "prep" or self.get_type() == "prefix":
+                relative = self.next
+            else:
+                relative = self.prev
+
+            if relative and "definition-" + relative.get_type() in self.morph:
+                return self.morph["definition-" + relative.get_type()]
+        
+    def get_type(self):
+        
+        if self.morph["type"] == "derive":
+            return self.morph["to"]
+        else:
+            return self.morph["type"]
+        
+    def has_tag(self, target):
+
+        if "tags" in self.morph:
+            if target in self.morph["tags"]:
+                return True
+
+        return False
+
+class Word:
+    global morph_for_key, type_morphs, morphs_from
+    
+    def __init__(self):
+        self.morphs = []
+        
+    def set_keys(self, keys):
+        
+        self.morphs = []
+        
+        for key in keys:
+            self.morphs.append( Morph(key) )
+            
+        for i in range(0, len(self.morphs)-1):
+            self.morphs[i].join(self.morphs[i+1])
+        
+    def first_morph(self):
+        if len(self.morphs) > 0:
+            return self.morphs[0]
+        else:
+            return None
+    
+    def last_morph(self):
+        if len(self.morphs) > 0:
+            return self.morphs[len(self.morphs)-1]
+        else:
+            return None
+        
+    def size(self):
+        return len(self.morphs)
+        
+    def grow_to_size(self,target_size):
+        
+        while self.size() < target_size:
+            self.grow()
+        
+    def grow(self):
+        if len(self.morphs) == 0:
+            self.morphs = [self.get_seed()]
+        else:
+            self.next_morph()   
+        
+    def get_seed(self):
+        type = random.choice(["noun", "adj", "verb", "verb", "verb"])
+        key = random.choice(type_morphs[type])
+        return Morph(key)     
+        
+    def next_morph(self):
+        global morphs_from
+        
+        current_type = self.get_type()
+        last_morph = self.last_morph()
+        first_morph = self.first_morph()
+
+        choice = None
+
+        while True:
+
+            # Special chance to add prefixes before verbs.
+            # Necessary to inflate their frequency given their small number.
+            if self.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not first_morph.get_type() in ["prep", "prefix"] and random.randint(0, 3) == 0:
+                new_morph = Morph( random.choice(type_morphs["prep"]) )
+                new_morph.join(first_morph)
+                self.morphs = [new_morph] + self.morphs
+                break
+
+            # Special chance to use the preposition + noun + ate pattern    
+            if self.size() == 1 and current_type == "noun" and not last_morph.has_tag("no-prep") and random.randint(0, 8) == 0:
+                prep_morph = Morph( random.choice(["in", "ex", "trans", "inter", "sub", "super"]) )
+                end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify", "ize"]) )
+                prep_morph.join(first_morph)
+                last_morph.join(end_morph)
+                self.morphs =  [prep_morph] + self.morphs + [end_morph]
+                break
+
+            # Add a prefix to the whole thing
+            if self.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"] and random.randint(0, 8) == 0:
+                new_morph = Morph( random.choice(type_morphs["prefix"]) )
+                new_morph.join(first_morph)
+                self.morphs = [new_morph] + self.morphs
+                break
+
+            # Basic morph addition
+            else:
+                choice = random.choice(morphs_from[current_type])
+
+                if choice == last_morph.morph["key"] or not check_req(morph_for_key[choice], last_morph):
+                    choice = None
+                else:    
+                    new_morph = Morph(choice)
+                    last_morph.join(new_morph)
+                    self.morphs.append(new_morph)
+                    break
+    
+    def get_type(self):
+
+        return self.last_morph().get_type()
+        
+    def get_lex(self):
+        return "NOT IMPLEMENTED"
+        
+    def part_tag(self):
+
+        pos = self.get_type()
+
+        if pos == "noun":
+            abbrev = "n"
+        elif pos == "adj":
+            abbrev = "adj"
+        elif pos == "verb":
+            abbrev = "v"
+        elif pos == "prep":
+            abbrev = "prep"
+        else:
+            abbrev = "???"
+
+        return "(" + abbrev + ")"
+        
+    def get_definition():
+        return "NOT IMPLEMENTED"
+
 # Data import and setup
 
 def setup():
-    global morphs, roots, type_morphs, morphs_from, words
+    global morph_for_key, roots, type_morphs, morphs_from, words
     
-    (morphs, roots, type_morphs, morphs_from) = load_morphs()
+    (morph_for_key, roots, type_morphs, morphs_from) = load_morphs()
     
 def load_morphs():
     
@@ -117,14 +428,6 @@ def rephrase(string, mode):
     
     return " ".join(words)
 
-def has_tag(morph, target):
-    
-    if "tags" in morph:
-        if target in morph["tags"]:
-            return True
-        
-    return False
-
 def check_req(morph, last_morph):
     
     if "requires" in morph:
@@ -136,87 +439,12 @@ def check_req(morph, last_morph):
             
             if "tags" in morph["requires"]["follows"]:
                 
-                if not "tags" in last_morph:
-                    return False
-                
                 for tag in morph["requires"]["follows"]["tags"]:
                     
-                    if not has_tag(last_morph, tag):
+                    if not last_morph.has_tag(tag):
                         return False
     
     return True
-     
-# Assembling morphs
-
-def get_root_morph():
-    
-    part = random.choice(["noun", "adj", "verb", "verb", "verb"])
-    return morphs[random.choice(type_morphs[part])]
-
-def next_morph(current):
-    global morphs, type_morphs, morphs_from
-    
-    head_type = word_type(current)
-
-    if len(current) > 0:
-        last_morph = morphs[current[-1]]
-        first_morph = morphs[current[0]]
-    else:
-        last_morph = None
-        first_morph = None
-        
-    choice = None
-    
-    while choice == None or choice == current[-1]:
-
-        # Special chance to add prefixes before verbs.
-        # Necessary to inflate their frequency given their small number.
-        if len(current) == 1 and head_type == "verb" and not has_tag(last_morph, "no-prep") and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 3) == 0:
-            choice = random.choice(type_morphs["prep"])
-            return [choice] + current
-        
-        # Special chance to use the preposition + noun + ate pattern    
-        if len(current) == 1 and head_type == "noun" and not has_tag(last_morph, "no-prep") and random.randint(0, 4) == 0:
-            #options = type_morphs["prep"]
-            prep_choice = random.choice(["in", "ex", "trans", "inter", "sub", "super"])
-            end_choice = random.choice(["ate", "al-rel", "al-rel", "ary", "ify", "ize"])
-            return [prep_choice] + current + [end_choice]
-        
-        # Add a prefix to the whole thing
-        if len(current) >= 1 and head_type == "verb" and not first_morph["type"] in ["prep", "prefix"] and random.randint(0, 8) == 0:
-            choice = random.choice(type_morphs["prefix"])
-            return [choice] + current
-        
-        # Basic morph addition
-        else:
-            choice = random.choice(morphs_from[head_type])
-            
-            if not check_req(morphs[choice], last_morph):
-                choice = None
-            else:    
-                return current + [choice]
-    
-def generate_morphs(length, seed=[]):
-    
-    if seed != []:
-        chosen = seed
-    else:        
-        chosen = [get_root_morph()["key"]]
-    
-    for i in range(0, length-1):
-        chosen = next_morph(chosen)
-        
-    return chosen
-
-def word_type(word_morphs):
-    global morphs
-    
-    last_morph = morphs[word_morphs[-1]]
-    
-    if last_morph["type"] == "derive":
-        return last_morph["to"]
-    else:
-        return last_morph["type"]
     
 # Finishing the word
 
@@ -230,162 +458,46 @@ def anglicize(word):
         
     return "".join(english_word)
 
-def compose_word(in_morphs):
-    global morphs
+def compose_word(in_word):
+    global morph_for_key
     
+    in_morphs = in_word.morphs
     word = ""
     morph = None
-    last_morph = None
-    next_morph = None
     
-    for index, token in enumerate(in_morphs):
-        
-        addition = ""
-        
-        last_morph = morph
-        morph = morphs[token]
-        
-        if index < len(in_morphs) - 1:
-            next_morph = morphs[in_morphs[index+1]]
-        else:
-            next_morph = None
+    for index, morph in enumerate(in_morphs):
                         
-        # Check for exceptional forms
-        excepted = False
-        if "exception" in morph:
-            for exception in morph["exception"]:
+        addition = morph.get_form()
 
-                # Assume there's a match, and negate that if it doesn't meet a requirement
-                # Match the first case that we fill
-                match = True
-                case = exception["case"]
-
-                # TODO - this doesn't make sense, since each case has its own base/link
-                if "precedes" in case:
-                    
-                    if not next_morph:
-                        match = False
-                    else:
-                        precede_match = False
-                        for element in case["precedes"]:
-                            if next_morph["key"] == element:
-                                precede_match = True
-                                break
-
-                        if not precede_match:
-                            match = False
-                            
-                if "follows" in case:
-                    
-                    if not last_morph:
-                        match = False
-                    else:
-                        follow_match = False
-                        for element in case["follows"]:
-                            if last_morph["key"] == element:
-                                follow_match = True
-                                break
-
-                        if not follow_match:
-                            match = False
-
-                if match:
-                    if next_morph == None:
-                        addition = exception["final"]
-                    else:
-                        addition = exception["link"]
-                    excepted = True
-                    break
-            
-                
-        if not excepted:
-            # Get the proper form of the morph
-            if index != len(in_morphs) - 1:
-
-                # Follow special assimilation rules if there are any
-                if "assimilation" in morph:
-
-                    next_letter = list(next_morph["key"])[0]
-
-                    matched_case = None
-                    star_case = None
-
-                    for case, sounds in morph["assimilation"].items():
-
-                        if "*" in sounds:
-                            star_case = case
-
-                        if next_letter in sounds:
-                            matched_case = case
-                            break
-
-                    if matched_case:
-                        case = matched_case
-                    elif star_case:
-                        case = star_case
-
-                    if case == "link":
-                        addition = morph["link"]
-                    elif case == "link-assim":
-                        addition = morph["link-assim"]
-                    elif case == "cut":
-                        addition = morph["link"] + "-"
-                    elif case == "double":
-                        addition = morph["link-assim"] + next_letter
-                    elif case == "nasal":
-                        if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-                            addition = morph["link-assim"] + 'm'
-                        else:
-                            addition = morph["link-assim"] + 'n'
-                    else:
-                        addition = case
-
-
-                # Default rules
-                else:
-
-                    # Usually we'll use link form
-                    if "link" in morph:
-                        addition = morph["link"]
-
-                    # Verbs or verbal derivations need to take participle form into account
-                    elif morph["type"] == "verb" or (morph["type"] == "derive" and morph["to"] == "verb"):
-                        if next_morph and "participle-type" in next_morph:
-                            if next_morph["participle-type"] == "present":
-                                addition = morph["link-present"]
-                            elif next_morph["participle-type"] == "perfect":
-                                addition = morph["link-perfect"]
-                        elif "link-verb" in morph:
-                            addition = morph["link-verb"]
-                        else:
-                            addition = morph["link-perfect"]
-
-                    # Use base form if nothing overrides
-                    else:
-                        addition = morph["final"]
-        
-            # The final morph
-            else:
-                addition = morph["final"]
-
+        # Handle joining rules
         if len(addition) > 0:
+            
+            if index > 0:
+                last_morph = in_morphs[index-1]
+            else:
+                last_morph = None
+
+            if index < len(in_morphs) - 1:
+                next_morph = in_morphs[index+1]
+            else:
+                next_morph = None
 
             # e.g.: glaci + ify -> glacify
-            if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph["type"] == "prep":
+            if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix":
                 addition = addition[1:]
             
             # Stem change
-            if has_tag(morph, "stem-change"):
+            if morph.has_tag("stem-change"):
                 if word[-1] == "i":
                     addition = "e" + addition
                     
             # Stem raise
-            if has_tag(morph, "stem-raise") and word[-1] == "e":
+            if morph.has_tag("stem-raise") and word[-1] == "e":
                 word = word[:-1]
                 addition = "i" + addition
                 
             # Drop first (sub + emere -> sumere)
-            if has_tag(morph, "drop-first") and last_morph:
+            if morph.has_tag("drop-first") and last_morph:
                 addition = addition[1:]
                 
             elif len(word) > 0 and word[-1] == "e" and addition[0] == "i":
@@ -403,20 +515,13 @@ def compose_word(in_morphs):
     return word
         
 def compose_definition(in_morphs):
-    global morphs
+    global morph_for_key
     
     word = ""
     morph = None
     last_morph = None
     
     prefix_stack = []
-    
-    def get_definition(morph, last_morph):
-        
-        if "definition" in morph:
-            return morph["definition"]
-        elif last_morph and ("definition-" + word_type([last_morph["key"]])) in morph:
-            return morph["definition-" + word_type([last_morph["key"]])]
     
     def pop_prefix(morph, definition):
         
@@ -426,17 +531,12 @@ def compose_definition(in_morphs):
     
     def build_def(morph, last_morph, definition):
         
-        part = get_definition(morph, last_morph)
+        part = morph.get_definition()
         
         if last_morph == None:
             definition = part
         else:
-            
-            if part == None:
-                print("ERROR NO DEF")
-                print(morph)
-                print(last_morph)
-            
+
             words = part.split(" ")
             for (index, word) in enumerate(words):
                 
@@ -449,12 +549,12 @@ def compose_definition(in_morphs):
                 elif word == "%3sg":
                     words[index] = rephrase(definition, "3sg")
                 elif word == "%sg":
-                    if has_tag(last_morph, "count"):
+                    if last_morph.has_tag("count"):
                         words[index] = rephrase(definition, "sg")
                     else:
                         words[index] = definition
                 elif word == "%pl":
-                    if has_tag(last_morph, "count"):
+                    if last_morph.has_tag("count"):
                         words[index] = rephrase(definition, "pl")
                     else:
                         words[index] = definition
@@ -465,64 +565,43 @@ def compose_definition(in_morphs):
     
     definition = ""
     
-    for index, token in enumerate(in_morphs):
+    for index, morph in enumerate(in_morphs):
         
         addition = ""
         
-        last_morph = morph
-        morph = morphs[token]
-        if index < len(in_morphs) - 1:
-            next_morph = morphs[in_morphs[index+1]]
-        else:
-            next_morph = None
+        last_morph = morph.prev
+        next_morph = morph.next
         
         # Stack prepositions and prefixes for proper definition ordering
-        if morph["type"] == "prep" or morph["type"] == "prefix":
+        if morph.get_type() == "prep" or morph.get_type() == "prefix":
             prefix_stack.append(morph)
         else:
             definition = build_def(morph, last_morph, definition)
 
             if index != 0:
-                if len(prefix_stack) > 0 and (morph["type"] == "verb" or morph["type"] == "adj" or morph["type"] == "noun"):
+                if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
                     definition = pop_prefix(morph, definition)
                 
     while len(prefix_stack) > 0:
-        definition = pop_prefix(None, definition)
+        definition = pop_prefix(in_morphs[len(in_morphs)-1], definition)
     
     return definition
-        
-        
-    
-def part_tag(word_morphs):
-
-    pos = word_type(word_morphs)
-    
-    if pos == "noun":
-        abbrev = "n"
-    elif pos == "adj":
-        abbrev = "adj"
-    elif pos == "verb":
-        abbrev = "v"
-    elif pos == "prep":
-        abbrev = "prep"
-    else:
-        abbrev = "???"
-
-    return "(" + abbrev + ")"
 
 def generate_entry():
+    global morph_for_key
     
-    if len(morphs.keys()) == 0:
+    if len(morph_for_key.keys()) == 0:
         setup()
     
-    word_morphs = generate_morphs(random.randint(2,3))
-    return write_entry(word_morphs)
+    word = Word()
+    word.grow_to_size(random.randint(2,3))
+    return write_entry(word)
 
-def write_entry(morphs):
+def write_entry(word):
     
-    word = compose_word(morphs)
-    definition = compose_definition(morphs)
-    entry = word + " " + part_tag(morphs) + "\n" + definition
+    lex = compose_word(word)
+    definition = compose_definition(word.morphs)
+    entry = lex + " " + word.part_tag() + "\n" + definition
     return entry
 
 def run(count):
@@ -532,13 +611,15 @@ def run(count):
         print(generate_entry())
         print("")
     
-def test(morphs):
+def test(keys):
 
+    word = Word()
+    word.set_keys(keys)
+    
     print("")
-    print(write_entry(morphs))
+    print(write_entry(word))
 
 setup()
 
 run(10)
-#test(["com", "ordinare"])
-
+#test(["mis", "ad", "dormire"])

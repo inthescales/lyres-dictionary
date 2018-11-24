@@ -614,13 +614,6 @@
         "origin": "latin"
     },
     {
-        "key": "constantia",
-        "link": "constanti",
-        "type": "adj",
-        "definition": "constant",
-        "origin": "latin"
-    },
-    {
         "key": "copia",
         "link": "copi",
         "type": "noun",
@@ -644,6 +637,15 @@
         "type": "noun",
         "definition": "heart",
         "tags": ["count", "concrete", "living", "bodypart"],
+        "origin": "latin"
+    },
+    {
+        "key": "cornus",
+        "final": "corn",
+        "link": "cornu",
+        "type": "noun",
+        "definition": "horn",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -773,11 +775,19 @@
     {
         "key": "debere",
         "link-present": "debe",
-        "link-perfect": "debt",
+        "link-perfect": "debit",
         "final": "debit",
         "type": "verb",
         "definition": "to owe",
         "tags": ["transitive"],
+        "exception": [
+            {
+                "case": {
+                    "precedes": "or"
+                },
+                "link": "debt"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -1675,6 +1685,14 @@
         "origin": "latin"
     },
     {
+        "key": "hostis",
+        "link": "host",
+        "type": "noun",
+        "definition": "enemy",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
         "key": "humanus",
         "link": "human",
         "type": "noun",
@@ -2520,7 +2538,7 @@
         "link-perfect": "migrat",
         "final": "migrate",
         "type": "verb",
-        "definition": "to go",
+        "definition": "to migrate",
         "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
@@ -3323,6 +3341,15 @@
         "origin": "latin"
     },
     {
+        "key": "pes",
+        "final": "ped",
+        "link": "ped",
+        "type": "noun",
+        "definition": "foot",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
+    },
+    {
         "key": "pessima",
         "link": "pessim",
         "type": "adj",
@@ -3416,7 +3443,7 @@
         "link-perfect": "plect",
         "final": "plect",
         "type": "verb",
-        "definition": "to plait",
+        "definition": "to braid",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -3978,6 +4005,14 @@
         "notes": "do we want this without being able to make 'desert'? idk"
     },
     {
+        "key": "serpentus",
+        "link": "serpent",
+        "type": "noun",
+        "definition": "snake",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
+    {
         "key": "servare",
         "link-present": "serva",
         "link-perfect": "servat",
@@ -3988,11 +4023,21 @@
         "origin": "latin"
     },
     {
-        "key": "serpentus",
-        "link": "serpent",
+        "key": "servire",
+        "link-present": "servi",
+        "link-perfect": "servit",
+        "final": "serve",
+        "type": "verb",
+        "definition": "to serve",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "servus",
+        "link": "serv",
         "type": "noun",
-        "definition": "snake",
-        "tags": ["count", "concrete", "living", "animal"],
+        "definition": "servant",
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
@@ -4656,7 +4701,7 @@
         "assimilation": {
 			"link": ["*"],
             "double": ["p"],
-            "s": ["c"]
+            "sus": ["c"]
         },
         "origin": "latin"
     },
@@ -4684,26 +4729,16 @@
         "from": "noun",
         "to": "adj",
         "definition": "of or relating to %pl",
+        "definition-relative": "%@",
         "exception": [
             {
                 "case": {
-                    "follows": ["or"]
+                    "follows": ["or", "nt", "nce"]
                 },
                 "final": "ial",
                 "link": "ial"
             }
         ],
-        "origin": "latin"
-    },
-    {
-        "key": "al-rel",
-        "final": "al",
-        "link": "al",
-        "type": "derive",
-        "from": "noun",
-        "to": "adj",
-        "definition": "%sg",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -4714,6 +4749,7 @@
         "from": "noun",
         "to": "adj",
         "definition": "pertaining to %pl",
+        "definition-relative": "%@",
         "exception": [
            {
                "case": {
@@ -4721,6 +4757,13 @@
                },
                "final": "y",
                "link": "i"
+           },
+           {
+               "case": {
+                   "follows": ["nt", "nce"]
+               },
+               "final": "iary",
+               "link": "iari"
            }
         ],
         "origin": "latin"
@@ -4734,6 +4777,7 @@
         "from": "noun,adj",
         "to": "verb",
         "definition": "to cause to be %@",
+        "definition-relative": "%@",
         "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
@@ -4830,6 +4874,7 @@
         "to": "verb",
         "definition-noun": "to make into %sg",
         "definition-adj": "to make %@",
+        "definition-relative": "to make %@",
         "exception": [
             { 
                 "case": {
@@ -4930,6 +4975,7 @@
         "to": "verb",
         "definition-noun": "to make into %sg",
         "definition-adj": "to make %@",
+        "definition-relative": "to make %@",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -4958,7 +5004,7 @@
     {
         "key": "nce",
         "final": "nce",        
-		"link": "nti",
+		"link": "nt",
         "type": "derive",
 		"from": "verb",
 		"to": "noun",
@@ -4969,7 +5015,7 @@
     {
         "key": "nt",
         "final": "nt",
-		"link": "nti",
+		"link": "nt",
         "type": "derive",
 		"from": "verb",
 		"to": "adj",
