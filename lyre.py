@@ -5,6 +5,8 @@ from pattern.en import conjugate, singularize, pluralize, tag
 
 morphary = None
 
+# Setup and data intake
+
 def setup():
     global morphary
     
@@ -99,7 +101,7 @@ def validate_morph(morph):
     
     return True
             
-# Classes         
+# Word generation classes         
 
 class Morph:
     
@@ -389,8 +391,60 @@ class Word:
 
         return self.last_morph().get_type()
         
-    def get_lex(self):
-        return "NOT IMPLEMENTED"
+    def compose(self):
+        global morphary
+
+        word = ""
+        morph = None
+
+        for index, morph in enumerate(self.morphs):
+
+            addition = morph.get_form()
+
+            # Handle joining rules
+            if len(addition) > 0:
+
+                if index > 0:
+                    last_morph = self.morphs[index-1]
+                else:
+                    last_morph = None
+
+                if index < self.size() - 1:
+                    next_morph = self.morphs[index+1]
+                else:
+                    next_morph = None
+
+                # e.g.: glaci + ify -> glacify
+                if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix":
+                    addition = addition[1:]
+
+                # Stem change
+                if morph.has_tag("stem-change"):
+                    if word[-1] == "i":
+                        addition = "e" + addition
+
+                # Stem raise
+                if morph.has_tag("stem-raise") and word[-1] == "e":
+                    word = word[:-1]
+                    addition = "i" + addition
+
+                # Drop first (sub + emere -> sumere)
+                if morph.has_tag("drop-first") and last_morph:
+                    addition = addition[1:]
+
+                elif len(word) > 0 and word[-1] == "e" and addition[0] == "i":
+                    word = word[:-1]
+
+                if len(word) > 0 and word[-1] == "-":
+                    word = word[:-1]
+                    addition = addition[1:]
+
+                word += addition
+
+        # Post processing on the word
+        word = anglicize(word)
+
+        return word
         
     def part_tag(self):
 
@@ -409,8 +463,85 @@ class Word:
 
         return "(" + abbrev + ")"
         
-    def get_definition():
-        return "NOT IMPLEMENTED"
+    def get_definition(self):
+        global morphary
+
+        word = ""
+        morph = None
+
+        prefix_stack = []
+
+        def pop_prefix(morph, definition):
+
+            top = prefix_stack.pop()
+
+            return build_def(top, morph, definition)
+
+        def build_def(morph, last_morph, definition):
+
+            part = morph.get_definition()
+
+            if last_morph == None:
+                definition = part
+            else:
+
+                words = part.split(" ")
+                for (index, word) in enumerate(words):
+
+                    if word == "%@":
+                        words[index] = definition
+                    elif word == "%part":
+                        words[index] = rephrase(definition, "part")
+                    elif word == "%ppart":
+                        words[index] = rephrase(definition, "ppart")
+                    elif word == "%3sg":
+                        words[index] = rephrase(definition, "3sg")
+                    elif word == "%sg":
+                        if last_morph.has_tag("count"):
+                            words[index] = rephrase(definition, "sg")
+                        else:
+                            words[index] = definition
+                    elif word == "%pl":
+                        if last_morph.has_tag("count"):
+                            words[index] = rephrase(definition, "pl")
+                        else:
+                            words[index] = definition
+
+                definition = " ".join(words)
+
+            return definition
+
+        definition = ""
+
+        for index, morph in enumerate(self.morphs):
+
+            addition = ""
+
+            last_morph = morph.prev
+            next_morph = morph.next
+
+            # Stack prepositions and prefixes for proper definition ordering
+            if morph.get_type() == "prep" or morph.get_type() == "prefix":
+                prefix_stack.append(morph)
+            else:
+                definition = build_def(morph, last_morph, definition)
+
+                if index != 0:
+                    if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
+                        definition = pop_prefix(morph, definition)
+
+        while len(prefix_stack) > 0:
+            definition = pop_prefix(self.morphs[self.size()-1], definition)
+
+        return definition
+    
+    def entry(self):
+        
+        composed = self.compose()
+        tag = self.part_tag()
+        definition = self.get_definition()
+        entry = composed + " " + tag + "\n" + definition
+        return entry
     
 # Helpers
 
@@ -467,8 +598,6 @@ def check_req(morph, last_morph):
                         return False
     
     return True
-    
-# Finishing the word
 
 def anglicize(word):
     
@@ -480,150 +609,7 @@ def anglicize(word):
         
     return "".join(english_word)
 
-def compose_word(in_word):
-    global morphary
-    
-    in_morphs = in_word.morphs
-    word = ""
-    morph = None
-    
-    for index, morph in enumerate(in_morphs):
-                        
-        addition = morph.get_form()
-
-        # Handle joining rules
-        if len(addition) > 0:
-            
-            if index > 0:
-                last_morph = in_morphs[index-1]
-            else:
-                last_morph = None
-
-            if index < len(in_morphs) - 1:
-                next_morph = in_morphs[index+1]
-            else:
-                next_morph = None
-
-            # e.g.: glaci + ify -> glacify
-            if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix":
-                addition = addition[1:]
-            
-            # Stem change
-            if morph.has_tag("stem-change"):
-                if word[-1] == "i":
-                    addition = "e" + addition
-                    
-            # Stem raise
-            if morph.has_tag("stem-raise") and word[-1] == "e":
-                word = word[:-1]
-                addition = "i" + addition
-                
-            # Drop first (sub + emere -> sumere)
-            if morph.has_tag("drop-first") and last_morph:
-                addition = addition[1:]
-                
-            elif len(word) > 0 and word[-1] == "e" and addition[0] == "i":
-                word = word[:-1]
-            
-            if len(word) > 0 and word[-1] == "-":
-                word = word[:-1]
-                addition = addition[1:]
-            
-            word += addition
-    
-    # Post processing on the word
-    word = anglicize(word)
-    
-    return word
-        
-def compose_definition(in_morphs):
-    global morphary
-    
-    word = ""
-    morph = None
-    last_morph = None
-    
-    prefix_stack = []
-    
-    def pop_prefix(morph, definition):
-        
-        top = prefix_stack.pop()
-        
-        return build_def(top, morph, definition)
-    
-    def build_def(morph, last_morph, definition):
-        
-        part = morph.get_definition()
-        
-        if last_morph == None:
-            definition = part
-        else:
-
-            words = part.split(" ")
-            for (index, word) in enumerate(words):
-                
-                if word == "%@":
-                    words[index] = definition
-                elif word == "%part":
-                    words[index] = rephrase(definition, "part")
-                elif word == "%ppart":
-                    words[index] = rephrase(definition, "ppart")
-                elif word == "%3sg":
-                    words[index] = rephrase(definition, "3sg")
-                elif word == "%sg":
-                    if last_morph.has_tag("count"):
-                        words[index] = rephrase(definition, "sg")
-                    else:
-                        words[index] = definition
-                elif word == "%pl":
-                    if last_morph.has_tag("count"):
-                        words[index] = rephrase(definition, "pl")
-                    else:
-                        words[index] = definition
-            
-            definition = " ".join(words)
-        
-        return definition
-    
-    definition = ""
-    
-    for index, morph in enumerate(in_morphs):
-        
-        addition = ""
-        
-        last_morph = morph.prev
-        next_morph = morph.next
-        
-        # Stack prepositions and prefixes for proper definition ordering
-        if morph.get_type() == "prep" or morph.get_type() == "prefix":
-            prefix_stack.append(morph)
-        else:
-            definition = build_def(morph, last_morph, definition)
-
-            if index != 0:
-                if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
-                    definition = pop_prefix(morph, definition)
-                
-    while len(prefix_stack) > 0:
-        definition = pop_prefix(in_morphs[len(in_morphs)-1], definition)
-    
-    return definition
-
-def generate_entry():
-   
-    if needs_setup():
-        setup()
-    
-    word = Word()
-    word.grow_to_size(random.randint(2,3))
-    return write_entry(word)
-
-def write_entry(word):
-    
-    lex = compose_word(word)
-    definition = compose_definition(word.morphs)
-    entry = lex + " " + word.part_tag() + "\n" + definition
-    return entry
+# Generating operations
 
 def run(count):
     
@@ -638,9 +624,16 @@ def test(keys):
     word.set_keys(keys)
     
     print("")
-    print(write_entry(word))
+    print(word.entry())
 
-setup()
+def generate_entry():
+   
+    if needs_setup():
+        setup()
+    
+    word = Word()
+    word.grow_to_size(random.randint(2,3))
+    return word.entry()
 
 run(10)
 #test(["mis", "ad", "dormire"])
