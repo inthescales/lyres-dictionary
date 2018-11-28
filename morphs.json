@@ -36,6 +36,17 @@
         "origin": "latin"
     },
     {
+        "key": "agere",
+        "link-present": "age",
+        "link-perfect": "act",
+        "final": "act",
+        "type": "verb",
+        "definition": "to drive",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "should have 'ige' form too - intransigent, exigence, etc. But 'age' is for agent"
+    },
+    {
         "key": "alba",
         "link": "alb",
         "type": "adj",
@@ -357,6 +368,14 @@
         "notes": "decadent / incident? Chose randomly (occident also goes here)"
     },
     {
+        "key": "camera",
+        "link": "camer",
+        "type": "noun",
+        "definition": "chamber",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "canis",
         "link": "can",
         "type": "noun",
@@ -586,6 +605,14 @@
         "type": "noun",
         "definition": "color",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "columba",
+        "link": "columb",
+        "type": "noun",
+        "definition": "dove",
+        "tags": ["count", "abstract", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -878,7 +905,7 @@
         "origin": "latin"
     },
     {
-        "key": "divinus",
+        "key": "divina",
         "link": "divin",
         "type": "adj",
         "definition": "divine",
@@ -923,6 +950,14 @@
         "tags": ["intransitive"],
         "origin": "latin",
         "notes": "verb is a guess"
+    },
+    {
+        "key": "draco",
+        "link": "dracon",
+        "type": "noun",
+        "definition": "dragon",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
     },
     {
         "key": "drama",
@@ -1821,12 +1856,30 @@
     },
     {
         "key": "intueri",
-        "link-present": "jace",
+        "link-present": "intue",
         "link-perfect": "intuit",
-        "final": "ject",
+        "final": "intuit",
         "type": "verb",
-        "definition": "to throw",
+        "definition": "to regard",
         "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "ire",
+        "link-present": "ie",
+        "link-perfect": "it",
+        "final": "it",
+        "type": "verb",
+        "definition": "to go",
+        "tags": ["intransitive", "motion", "always-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "imago",
+        "link": "imag",
+        "type": "noun",
+        "definition": "image",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -2033,6 +2086,27 @@
         "link-present": "lava",
         "link-perfect": "lavat",
         "final": "lavate",
+        "type": "verb",
+        "definition": "to wash",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "combine all the forms of 'to wash' later"
+    },
+    {
+        "key": "lavere",
+        "link-present": "lave",
+        "link-perfect": "lot",
+        "final": "lave",
+        "type": "verb",
+        "definition": "to wash",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "luere",
+        "link-present": "lue",
+        "link-perfect": "lut",
+        "final": "lute",
         "type": "verb",
         "definition": "to wash",
         "tags": ["transitive"],
@@ -2906,6 +2980,7 @@
     },
     {
         "key": "nox",
+        "final": "nox",
         "link": "noct",
         "type": "noun",
         "definition": "night",
@@ -2962,6 +3037,17 @@
         "definition": "number",
         "tags": ["count", "abstract"],
         "origin": "latin"
+    },
+    {
+        "key": "nuntia",
+        "link-present": "nuntia",
+        "link-perfect": "nuntiat",
+        "final": "nounce",
+        "type": "verb",
+        "definition": "to report",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "Ignored annunciate"
     },
     {
         "key": "nutrire",
@@ -3043,11 +3129,29 @@
         "origin": "latin"
     },
     {
+        "key": "omen",
+        "link": "omin",
+        "type": "noun",
+        "definition": "omen",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "omnis",
         "link": "omni",
         "type": "noun",
         "definition": "everything",
         "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "optare",
+        "link-present": "opta",
+        "link-perfect": "opt",
+        "final": "opt",
+        "type": "verb",
+        "definition": "to choose",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -3104,11 +3208,27 @@
         "origin": "latin"
     },
     {
-        "key": "os",
+        "key": "os-mouth",
+        "link": "or",
+        "type": "noun",
+        "definition": "mouth",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
+    },
+    {
+        "key": "os-bone",
         "link": "oss",
         "type": "noun",
         "definition": "bone",
         "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
+    },
+    {
+        "key": "os-bones",
+        "link": "ossu",
+        "type": "noun",
+        "definition": "bones",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -3422,7 +3542,7 @@
         "link-perfect": "placat",
         "final": "place",
         "type": "verb",
-        "definition": "to disturb",
+        "definition": "to please",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -3610,12 +3730,20 @@
     },
     {
         "key": "prehendere",
-        "link-present": "prehense",
+        "link-present": "prehende",
         "link-perfect": "prehens",
         "final": "prehend",
         "type": "verb",
         "definition": "to grasp",
         "tags": ["transitive"],
+        "exception": [
+            {
+                "case": {
+                    "precedes": "ble"
+                },
+                "link": "prehensi"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -3991,6 +4119,17 @@
         "origin": "latin"
     },
     {
+        "key": "sentire",
+        "link-present": "senti",
+        "link-perfect": "sens",
+        "final": "sent",
+        "type": "verb",
+        "definition": "to feel",
+        "tags": ["transitive", "motion"],
+        "origin": "latin",
+        "comment": "sense without a prefix, but prefixes all seem to use sent"
+    },
+    {
         "key": "sequi",
         "link-present": "seque",
         "link-perfect": "secut",
@@ -4295,6 +4434,16 @@
         "origin": "latin"
     },
     {
+        "key": "tolerare",
+        "link-present": "tolera",
+        "link-perfect": "tolerat",
+        "final": "tort",
+        "type": "verb",
+        "definition": "to tolerate",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "torquere",
         "link-present": "torse",
         "link-perfect": "tors",
@@ -4395,6 +4544,16 @@
         "origin": "latin"
     },
     {
+        "key": "velle",
+        "link-present": "vole",
+        "link-perfect": "volit",
+        "final": "vell",
+        "type": "verb",
+        "definition": "to wish",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "venire",
         "link-present": "veni",
         "link-perfect": "vent",
@@ -4459,6 +4618,24 @@
         "type": "verb",
         "definition": "to defeat",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "violare",
+        "link-present": "viola",
+        "link-perfect": "violat",
+        "final": "violate",
+        "type": "verb",
+        "definition": "to treat badly",
+        "tags": ["transitive"],
+        "exception": [
+            {
+                "case": {
+                    "precedes": ["nt", "nce"]
+                },
+                "link": "viole"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -4592,9 +4769,14 @@
     {
         "key": "dis",
         "link": "dis",
+        "link-assim": "di",
         "type": "prep",
         "definition-verb": "%@ apart",
         "definition-noun": "apart from %sg",
+        "assimilation": {
+            "link": ["*"],
+            "link-assim": ["l"]
+        },
         "origin": "latin"
     },
 	{
@@ -4899,6 +5081,21 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "magnificent vs significant"
+    },
+    {
+        "key": "ile",
+        "final": "ile",
+        "link": "il",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "having the qualities of %sg",
+        "requires": {
+            "follows": {
+                "tags": ["living"]
+            }
+        },
+        "origin": "latin"
     },
     {
         "key": "ine",
