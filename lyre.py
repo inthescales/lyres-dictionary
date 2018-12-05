@@ -198,7 +198,7 @@ class Morph:
                 elif case == "link-assim":
                     form = self.morph["link-assim"]
                 elif case == "cut":
-                    form = self.morph["link"] + "-"
+                    form = self.morph["link"] + "/"
                 elif case == "double":
                     form = self.morph["link-assim"] + next_letter
                 elif case == "nasal":
@@ -244,12 +244,20 @@ class Morph:
     def get_definition(self):
 
         # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
-        if self.prev and self.prev.get_type() == "noun" and self.prev.prev and self.prev.prev.get_type() == "prep" and "definition-relative" in self.morph:
+        if self.prev and ((self.prev.get_type() == "noun" and self.prev.prev and self.prev.prev.get_type() == "prep" ) or (self.get_type() == "verb" and self.prev.get_type() == "prep")) and "definition-relative" in self.morph:
             return self.morph["definition-relative"]
         
         if "definition" in self.morph:
             return self.morph["definition"]
         else:
+            
+            if self.next:
+                if "definition-link" in self.morph:
+                    return self.morph["definition-link"]
+            else:
+                if "definition-final" in self.morph:
+                    return self.morph["definition-final"]
+            
 
             if self.get_type() == "prep" or self.get_type() == "prefix":
                 relative = self.next
@@ -350,6 +358,16 @@ class Word:
                 self.morphs =  [prep_morph] + self.morphs + [end_morph]
                 break
 
+            # Chance to use number + noun + "al" composition
+            
+            if self.size() == 1 and current_type == "noun" and random.randint(0,15) == 0:
+                num_morph = Morph( random.choice(morphary.type_morphs["number"]) )
+                end_morph = Morph( "al-number")
+                num_morph.join(first_morph)
+                first_morph.join(end_morph)
+                self.morphs = [num_morph] + self.morphs + [end_morph]
+                break
+                
             # Add a prefix to the whole thing
             if self.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"] and random.randint(0, 8) == 0:
                 new_morph = Morph( random.choice(morphary.type_morphs["prefix"]) )
@@ -396,30 +414,38 @@ class Word:
                 else:
                     next_morph = None
 
-                # e.g.: glaci + ify -> glacify
-                if len(word) > 0 and addition[0] == word[-1] and is_vowel(addition[0]) and not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix":
-                    addition = addition[1:]
+                # Spelling changes during joins
+                if len(word) > 0:
 
-                # Stem change
-                if morph.has_tag("stem-change"):
-                    if word[-1] == "i":
+                    # e.g.: glaci + ify -> glacify
+                    if addition[0] == word[-1] and is_vowel(addition[0]):
+
+                        letter = addition[0]
+
+                        if (not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix" and not last_morph.get_type() == "number"):
+                            addition = addition[1:]
+                        elif letter in ["a", "i", "u"]:
+                            addition = "-" + addition
+
+                    elif word[-1] == "e" and addition[0] == "i":
+                        word = word[:-1]
+
+                    # Stem change
+                    elif morph.has_tag("stem-change") and word[-1] == "i":
                         addition = "e" + addition
 
-                # Stem raise
-                if morph.has_tag("stem-raise") and word[-1] == "e":
-                    word = word[:-1]
-                    addition = "i" + addition
+                    # Stem raise
+                    elif morph.has_tag("stem-raise") and word[-1] == "e":
+                        word = word[:-1]
+                        addition = "i" + addition
 
-                # Drop first (sub + emere -> sumere)
-                if morph.has_tag("drop-first") and last_morph:
-                    addition = addition[1:]
+                    # Drop first (sub + emere -> sumere)
+                    elif morph.has_tag("drop-first"):
+                        addition = addition[1:]
 
-                elif len(word) > 0 and word[-1] == "e" and addition[0] == "i":
-                    word = word[:-1]
-
-                if len(word) > 0 and word[-1] == "-":
-                    word = word[:-1]
-                    addition = addition[1:]
+                    elif word[-1] == "/":
+                        word = word[:-1]
+                        addition = addition[1:]
 
                 word += addition
 
@@ -488,6 +514,8 @@ class Word:
                             words[index] = rephrase(definition, "pl")
                         else:
                             words[index] = definition
+                    elif word == "%!pl":
+                        words[index] = rephrase(definition, "pl")
 
                 definition = " ".join(words)
 
@@ -503,7 +531,7 @@ class Word:
             next_morph = morph.next
 
             # Stack prepositions and prefixes for proper definition ordering
-            if morph.get_type() == "prep" or morph.get_type() == "prefix":
+            if morph.get_type() == "prep" or morph.get_type() == "prefix" or morph.get_type() == "number":
                 prefix_stack.append(morph)
             else:
                 definition = build_def(morph, last_morph, definition)
@@ -623,7 +651,7 @@ def generate_entry():
     return word.entry()
 
 run(10)
-#test(["manus", "ify", "or"])
+#test(["fingere", "nce"])
 
 # errors:
 # - asspect

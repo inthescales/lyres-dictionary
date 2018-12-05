@@ -41,10 +41,20 @@
         "link-perfect": "act",
         "final": "act",
         "type": "verb",
+        "definition": "to do",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "agere-drive",
+        "link-present": "ige",
+        "link-perfect": "ag",
+        "final": "act",
+        "type": "verb",
         "definition": "to drive",
         "tags": ["transitive"],
         "origin": "latin",
-        "notes": "should have 'ige' form too - intransigent, exigence, etc. But 'age' is for agent"
+        "notes": "exigent vs cogent"
     },
     {
         "key": "alba",
@@ -229,6 +239,7 @@
         "final": "attend",
         "type": "verb",
         "definition": "pay attention to",
+        "definition-relative": "pay attention",
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
@@ -289,6 +300,7 @@
         "final": "bate",
         "type": "verb",
         "definition": "to beat down",
+        "definition": "to beat",
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "verb: combat vs debate vs abate"
@@ -459,7 +471,7 @@
         "final": "cave",
         "type": "verb",
         "definition": "to beware",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "no-prep"],
         "origin": "latin",
         "notes": "not sure on verb."
     },
@@ -545,7 +557,7 @@
     },
     {
         "key": "civilis",
-        "link": "civil",
+        "link": "civili",
         "type": "noun",
         "definition": "citizen",
         "tags": ["count", "concrete", "living", "person"],
@@ -760,7 +772,8 @@
         "type": "verb",
         "definition": "to care for",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also in procure"
     },
     {
         "key": "currere",
@@ -999,22 +1012,12 @@
         "link": "du",
         "type": "noun",
         "definition": "two",
-        "tags": ["count", "abstract", "number"],
-        "origin": "latin"
-    },
-    {
-        "key": "edificare",
-        "link-present": "edifica",
-        "link-perfect": "edificat",
-        "final": "edify",
-        "type": "verb",
-        "definition": "to build",
-        "tags": ["transitive"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
         "key": "educare",
-        "link-present": "educata",
+        "link-present": "educa",
         "link-perfect": "educat",
         "final": "educate",
         "type": "verb",
@@ -1034,10 +1037,10 @@
     },
     {
         "key": "epigramma",
-        "link": "epigramma",
+        "link": "epigramm",
         "type": "noun",
         "definition": "epigram",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -1064,7 +1067,8 @@
         "type": "verb",
         "definition": "to value",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also related to esteem"
     },
     {
         "key": "exemplum",
@@ -1287,6 +1291,7 @@
         "final": "feign",
         "type": "verb",
         "definition": "to make up",
+        "definition-relative": "to shape",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -1465,23 +1470,14 @@
     },
     {
         "key": "fundere",
-        "link-present": "fudi",
+        "link-present": "fuse",
         "link-perfect": "fus",
         "final": "fuse",
         "type": "verb",
         "definition": "to pour",
         "tags": ["transitive", "motion"],
-        "origin": "latin"
-    },
-    {
-        "key": "fundere",
-        "link-present": "funde",
-        "link-perfect": "fus",
-        "final": "fuse",
-        "type": "verb",
-        "definition": "to pour",
-        "tags": ["transitive", "motion"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "transfuse vs refund"
     },
     {
         "key": "fungus",
@@ -1543,6 +1539,14 @@
         "tags": ["intransitive", "motion"],
         "origin": "latin",
         "notes": "digestion vs gestation"
+    },
+    {  
+        "key": "gigant",
+        "link": "gigant",
+        "type": "noun",
+        "definition": "giant",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
     },
     {  
         "key": "glacies",
@@ -1928,7 +1932,8 @@
         "type": "verb",
         "definition": "to join",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also jointure"
     },
     {
         "key": "jurare",
@@ -2187,6 +2192,7 @@
         "final": "liberate",
         "type": "verb",
         "definition": "to set free",
+        "definition": "to free",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -2276,6 +2282,7 @@
         "final": "linquish",
         "type": "verb",
         "definition": "to give up",
+        "definition-relative": "to give",
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "this produces lictor with wrong def. Same form as ligere-from-ligare. Divide later."
@@ -2910,7 +2917,7 @@
         "final": "neglect",
         "type": "verb",
         "definition": "to neglect",
-        "tags": ["transitive"],
+        "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -3517,6 +3524,7 @@
         "final": "pict",
         "type": "verb",
         "definition": "to make a picture",
+        "definition-relative": "to paint",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -3894,7 +3902,7 @@
         "link-perfect": "putat",
         "final": "pute",
         "type": "verb",
-        "definition": "to clear up",
+        "definition": "to account",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -4209,7 +4217,7 @@
         "link-perfect": "stat",
         "final": "sist",
         "type": "verb",
-        "definition": "to make stand",
+        "definition": "to stand",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -4235,9 +4243,11 @@
         "link-perfect": "sortit",
         "final": "sort",
         "type": "verb",
-        "definition": "to draw lots",
+        "definition": "to assign by lot",
+        "definition-relative": "to assign shares",
         "tags": ["intransitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "assort and consort actually are prep + sors (a share). Deal with it later."
     },
     {
         "key": "specere",
@@ -4326,6 +4336,16 @@
         "origin": "latin"
     },
     {
+        "key": "suere",
+        "link-present": "sue",
+        "link-perfect": "sut",
+        "final": "sute",
+        "type": "verb",
+        "definition": "to sew",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "sumere",
         "link-present": "sume",
         "link-perfect": "sumpt",
@@ -4370,7 +4390,8 @@
         "link-perfect": "temptat",
         "final": "tempt",
         "type": "verb",
-        "definition": "to try",
+        "definition": "to tempt",
+        "definition-relative": "to try",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -4486,6 +4507,7 @@
         "final": "tuit",
         "type": "verb",
         "definition": "to look after",
+        "definition-relative": "to look",
         "tags": ["transitive"],
         "exception": [
             {
@@ -4523,7 +4545,7 @@
         "link": "un",
         "type": "noun",
         "definition": "one",
-        "tags": ["count", "abstract", "number"],
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -4626,8 +4648,8 @@
         "link-perfect": "violat",
         "final": "violate",
         "type": "verb",
-        "definition": "to treat badly",
-        "tags": ["transitive"],
+        "definition": "to mistreat",
+        "tags": ["transitive", "no-prep"],
         "exception": [
             {
                 "case": {
@@ -4709,7 +4731,7 @@
         "key": "ab",
         "link": "ab",
         "type": "prep",
-        "definition-verb": "%@ away from",
+        "definition-verb": "%@ away",
         "definition-noun": "away from %sg",
         "origin": "latin"
     },
@@ -4762,7 +4784,7 @@
         "key": "de",
         "link": "de",
         "type": "prep",
-        "definition-verb": "%@ down from",
+        "definition-verb": "%@ down",
         "definition-noun": "down from %sg",
         "origin": "latin"
     },
@@ -4870,7 +4892,8 @@
         "key": "re-prep",
         "link": "re",
         "type": "prep",
-        "definition-verb": "%@ back"
+        "definition-verb": "%@ back",
+        "origin": "latin"
     },
     {
         "key": "se",
@@ -4999,6 +5022,22 @@
         "origin": "latin"
     },
     {
+        "key": "ifer",
+        "final": "ifer",
+        "link": "ifer",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "definition": "one who carries %pl",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "iferous",
         "final": "iferous",
         "link": "iferos",
@@ -5020,7 +5059,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "in the manner of, pertaining to %pl",
+        "definition-final": "pertaining to %pl",
         "origin": "latin"
     },
     {
@@ -5089,7 +5128,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "having the qualities of %sg",
+        "definition": "having the nature of %sg",
         "requires": {
             "follows": {
                 "tags": ["living"]
@@ -5104,7 +5143,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition": "having the qualities of %sg",
+        "definition": "having the nature of %sg",
         "requires": {
             "follows": {
                 "tags": ["living"]
@@ -5214,7 +5253,9 @@
 		"to": "noun",
         "participle-type": "present",
         "tags": ["stem-change"],
-        "definition": "the process, state, or quality of %part"
+        "definition-link": "the state of %part",
+        "definition-final": "the process, state, or quality of %part",
+        "origin": "latin"
     },
     {
         "key": "nt",
@@ -5225,7 +5266,8 @@
 		"to": "adj",
         "participle-type": "present",
         "tags": ["stem-change"],
-        "definition": "%part"
+        "definition": "%part",
+        "origin": "latin"
     },
     {
         "key": "ure",
@@ -5243,18 +5285,160 @@
         "key": "contra",
         "link": "contra",
         "type": "prefix",
-        "definition": "%@ against"
+        "definition": "%@ against",
+        "origin": "latin"
     },
     {
         "key": "re",
         "link": "re",
         "type": "prefix",
-        "definition": "%@ again"
+        "definition": "%@ again",
+        "origin": "latin"
     },
     {
         "key": "mis",
         "link": "mis",
         "type": "prefix",
-        "definition": "%@ incorrectly"
+        "definition": "%@ incorrectly",
+        "origin": "latin"
+    },
+    {
+        "key": "one-join",
+        "link": "uni",
+        "type": "number",
+        "definition": "one %sg",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "two-join",
+        "link": "bi",
+        "type": "number",
+        "definition": "two %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "three-join",
+        "link": "tri",
+        "type": "number",
+        "definition": "three %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "four-join",
+        "link": "quadri",
+        "type": "number",
+        "definition": "four %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "five-join",
+        "link": "quinti",
+        "type": "number",
+        "definition": "five %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "six-join",
+        "link": "sexi",
+        "type": "number",
+        "definition": "six %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "seven-join",
+        "link": "septi",
+        "type": "number",
+        "definition": "seven %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "eight-join",
+        "link": "octi",
+        "type": "number",
+        "definition": "eight %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "nine-join",
+        "link": "noni",
+        "type": "number",
+        "definition": "nine %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "ten-join",
+        "link": "deci",
+        "type": "number",
+        "definition": "ten %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "eleven-join",
+        "link": "undeci",
+        "type": "number",
+        "definition": "eleven %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "twelve-join",
+        "link": "duodeci",
+        "type": "number",
+        "definition": "twelve %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "hundred-join",
+        "link": "centi",
+        "type": "number",
+        "definition": "one-hundred %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "thousand-join",
+        "link": "milli",
+        "type": "number",
+        "definition": "one-thousand %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "multi-join",
+        "link": "multi",
+        "type": "number",
+        "definition": "many %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "all-join",
+        "link": "omni",
+        "type": "number",
+        "definition": "all %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "al-number",
+        "final": "al",
+        "link": "al",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "having %@",
+        "tags": ["no-gen"],
+        "origin": "latin"
     }
 ]
