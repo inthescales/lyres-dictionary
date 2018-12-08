@@ -129,6 +129,17 @@
         "origin": "latin"
     },
     {
+        "key": "aperire",
+        "link-present": "aperi",
+        "link-perfect": "apert",
+        "final": "apert",
+        "type": "verb",
+        "definition": "to open",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin",
+        "notes": "no idea on final"
+    },
+    {
         "key": "apis",
         "link": "api",
         "type": "noun",
@@ -138,18 +149,19 @@
     },
     {
         "key": "apparere",
-        "link-present": "appeara",
+        "link-present": "appare",
         "link-perfect": "apparit",
         "final": "appear",
         "type": "verb",
         "definition": "to appear",
         "tags": ["intransitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "appearance vs apparent"
     },
     {
         "key": "appellare",
-        "link-present": "appela",
-        "link-perfect": "appelat",
+        "link-present": "appella",
+        "link-perfect": "appellat",
         "final": "appeal",
         "type": "verb",
         "definition": "to appeal",
@@ -388,6 +400,17 @@
         "origin": "latin"
     },
     {
+        "key": "canere",
+        "link-present": "cane",
+        "link-perfect": "cant",
+        "final": "cent",
+        "type": "verb",
+        "definition": "to climb",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin",
+        "notes": "present is a guess"
+    },
+    {
         "key": "canis",
         "link": "can",
         "type": "noun",
@@ -600,6 +623,17 @@
         "definition": "to think",
         "tags": ["intransitive"],
         "origin": "latin"
+    },
+    {
+        "key": "cognoscere",
+        "link-present": "cogniza",
+        "link-perfect": "cognit",
+        "final": "cognize",
+        "type": "verb",
+        "definition": "to know",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin",
+        "notes": "from gnoscere, but that comes with little else"
     },
     {
         "key": "colare",
@@ -1071,6 +1105,17 @@
         "notes": "also related to esteem"
     },
     {
+        "key": "evitare",
+        "link-present": "evita",
+        "link-perfect": "evitat",
+        "final": "evitate",
+        "type": "verb",
+        "definition": "to avoid",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "guess on all but present"
+    },
+    {
         "key": "exemplum",
         "link": "exempl",
         "type": "noun",
@@ -1390,6 +1435,16 @@
         "type": "noun",
         "definition": "leaf",
         "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "key": "forare",
+        "link-present": "fora",
+        "link-perfect": "forat",
+        "final": "forate",
+        "type": "verb",
+        "definition": "to pierce",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -3404,6 +3459,17 @@
         "origin": "latin"
     },
     {
+        "key": "peccare",
+        "link-present": "pecca",
+        "link-perfect": "peccat",
+        "final": "peccate",
+        "type": "verb",
+        "definition": "to sin",
+        "tags": ["transitive", "motion"],
+        "origin": "latin",
+        "notes": "final is a guess. only bassed on peccant / impeccable"
+    },
+    {
         "key": "pectus",
         "link": "pector",
         "type": "noun",
@@ -3597,6 +3663,14 @@
         "type": "verb",
         "definition": "to fill",
         "tags": ["transitive"],
+        "exception": [
+            {
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "link": "pleta"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -4230,6 +4304,16 @@
         "origin": "latin"
     },
     {
+        "key": "solari",
+        "link-present": "sola",
+        "link-perfect": "solat",
+        "final": "sole",
+        "type": "verb",
+        "definition": "to comfort",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "soror",
         "link": "soror",
         "type": "noun",
@@ -4499,6 +4583,17 @@
         "definition": "three",
         "tags": ["count", "abstract", "number"],
         "origin": "latin"
+    },
+    {
+        "key": "trudere",
+        "link-present": "trude",
+        "link-perfect": "trus",
+        "final": "trude",
+        "type": "verb",
+        "definition": "to thrust",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin",
+        "notes": "guessed on perfect"
     },
     {
         "key": "tueri",
@@ -5059,7 +5154,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "definition-final": "pertaining to %pl",
+        "definition": "pertaining to %pl",
         "origin": "latin"
     },
     {
@@ -5159,7 +5254,16 @@
         "from": "verb",
         "to": "noun",
         "participle-type": "perfect",
-        "definition": "the act of %part",
+        "definition-link": "%part",
+        "definition-final": "the act of %part",
+        "exception": [
+            {
+                "case": {
+                    "precedes": ["ous"]
+                },
+                "link": "i"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -5247,7 +5351,7 @@
     {
         "key": "nce",
         "final": "nce",        
-		"link": "nt",
+		"link": "nti",
         "type": "derive",
 		"from": "verb",
 		"to": "noun",
@@ -5260,7 +5364,7 @@
     {
         "key": "nt",
         "final": "nt",
-		"link": "nt",
+		"link": "nti",
         "type": "derive",
 		"from": "verb",
 		"to": "adj",

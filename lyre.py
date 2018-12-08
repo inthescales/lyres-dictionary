@@ -267,6 +267,8 @@ class Morph:
             if relative and "definition-" + relative.get_type() in self.morph:
                 return self.morph["definition-" + relative.get_type()]
         
+        print("ERROR - failed to find definition for " + self.morph["key"])
+        
     def get_type(self):
         
         if self.morph["type"] == "derive":
@@ -650,8 +652,10 @@ def generate_entry():
     word.grow_to_size(random.randint(2,3))
     return word.entry()
 
-run(10)
-#test(["fingere", "nce"])
+#run(10)
+#test(["vorare", "nt", "ous"])
+
+# fix not adding "a" before multi-word nouns, ex "married woman"
 
 # errors:
 # - asspect
