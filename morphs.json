@@ -1,5 +1,15 @@
 [
     {
+        "key": "abundare",
+        "link-present": "abunda",
+        "link-perfect": "abundat",
+        "final": "abound",
+        "type": "verb",
+        "definition": "to be plentiful",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "acerba",
         "link": "acerb",
         "type": "adj",
@@ -18,6 +28,16 @@
         "link": "acut",
         "type": "adj",
         "definition": "pointed",
+        "origin": "latin"
+    },
+    {
+        "key": "adjutare",
+        "link-present": "juta",
+        "link-perfect": "jutat",
+        "final": "aid",
+        "type": "verb",
+        "definition": "to assist",
+        "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -75,6 +95,16 @@
         "link": "alter",
         "type": "adj",
         "definition": "other",
+        "origin": "latin"
+    },
+    {
+        "key": "alternare",
+        "link-present": "alterna",
+        "link-perfect": "alternat",
+        "final": "alternate",
+        "type": "verb",
+        "definition": "to alternate",
+        "tags": ["intransitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -177,6 +207,13 @@
         "origin": "latin"
     },
     {
+        "key": "apta",
+        "link": "apt",
+        "type": "adj",
+        "definition": "suited",
+        "origin": "latin"
+    },
+    {
         "key": "aquila",
         "link": "aquil",
         "type": "noun",
@@ -250,8 +287,8 @@
         "link-perfect": "attent",
         "final": "attend",
         "type": "verb",
-        "definition": "pay attention to",
-        "definition-relative": "pay attention",
+        "definition": "to pay attention to",
+        "definition-relative": "to pay attention",
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
@@ -279,6 +316,21 @@
         "type": "verb",
         "definition": "to hear",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "aurora",
+        "link": "auror",
+        "type": "noun",
+        "definition": "dawn",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "austera",
+        "link": "auster",
+        "type": "adj",
+        "definition": "harsh",
         "origin": "latin"
     },
     {
@@ -312,7 +364,7 @@
         "final": "bate",
         "type": "verb",
         "definition": "to beat down",
-        "definition": "to beat",
+        "definition-relative": "to beat",
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "verb: combat vs debate vs abate"
@@ -403,9 +455,9 @@
         "key": "canere",
         "link-present": "cane",
         "link-perfect": "cant",
-        "final": "cent",
+        "final": "cant",
         "type": "verb",
-        "definition": "to climb",
+        "definition": "to sing",
         "tags": ["intransitive", "motion"],
         "origin": "latin",
         "notes": "present is a guess"
@@ -517,6 +569,26 @@
         "origin": "latin"
     },
     {
+        "key": "excellere",
+        "link-present": "excelle",
+        "link-perfect": "excels",
+        "final": "excel",
+        "type": "verb",
+        "definition": "to rise high",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "experiri",
+        "link-present": "experie",
+        "link-perfect": "expert",
+        "final": "exper",
+        "type": "verb",
+        "definition": "to try",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "cerebrum",
         "link": "cerebr",
         "type": "noun",
@@ -525,10 +597,31 @@
         "origin": "latin"
     },
     {
+        "key": "cernere",
+        "link-present": "creme",
+        "link-perfect": "cret",
+        "final": "cern",
+        "type": "verb",
+        "definition": "to separate",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "verb: secret vs excrete vs discern"
+    },    
+    {
         "key": "certa",
         "link": "cert",
         "type": "adj",
         "definition": "certain",
+        "origin": "latin"
+    },
+    {
+        "key": "certare",
+        "link-present": "certa",
+        "link-perfect": "certat",
+        "final": "cert",
+        "type": "verb",
+        "definition": "to strive",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -540,6 +633,17 @@
         "definition": "to cease",
         "tags": ["intransitive"],
         "origin": "latin"
+    },
+    {
+        "key": "ciliare",
+        "link-present": "cilia",
+        "link-perfect": "ciliat",
+        "final": "cile",
+        "type": "verb",
+        "definition": "to make friendly",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "reconcile vs conciliate"
     },
     {
         "key": "cipere",
@@ -613,6 +717,16 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "perfect - inclusive vs closure"
+    },
+    {
+        "key": "clinare",
+        "link-present": "clina",
+        "link-perfect": "clinat",
+        "final": "cline",
+        "type": "verb",
+        "definition": "to bend",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
     },
     {
         "key": "cogitare",
@@ -799,6 +913,26 @@
         "origin": "latin"
     },
     {
+        "key": "culminare",
+        "link-present": "culmina",
+        "link-perfect": "culminat",
+        "final": "culminate",
+        "type": "verb",
+        "definition": "to reach the highest point",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "cupere",
+        "link-present": "cupe",
+        "link-perfect": "cupit",
+        "final": "covet",
+        "type": "verb",
+        "definition": "to long for",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "curare",
         "link-present": "cura",
         "link-perfect": "curat",
@@ -818,6 +952,17 @@
         "definition": "to run",
         "tags": ["intransitive", "motion"],
         "origin": "latin"
+    },
+    {
+        "key": "damnare",
+        "link-present": "damna",
+        "link-perfect": "damnat",
+        "final": "damn",
+        "type": "verb",
+        "definition": "to sentence",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "damn / damnation vs condemn / condemnation"
     },
     {
         "key": "deminuere",
@@ -970,6 +1115,16 @@
         "notes": "guessed on verb form"
     },
     {
+        "key": "dolere",
+        "link-present": "dole",
+        "link-perfect": "dolit",
+        "final": "dole",
+        "type": "verb",
+        "definition": "to grieve",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },    
+    {
         "key": "dolor",
         "link": "dolor",
         "type": "noun",
@@ -1050,6 +1205,16 @@
         "origin": "latin"
     },
     {
+        "key": "durare",
+        "link-present": "dura",
+        "link-perfect": "durat",
+        "final": "dure",
+        "type": "verb",
+        "definition": "to be firm",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "educare",
         "link-present": "educa",
         "link-perfect": "educat",
@@ -1067,6 +1232,13 @@
         "type": "verb",
         "definition": "to buy",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "ephemera",
+        "link": "ephemer",
+        "type": "adj",
+        "definition": "lasting a day",
         "origin": "latin"
     },
     {
@@ -1091,6 +1263,14 @@
         "type": "noun",
         "definition": "horse",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
+    {
+        "key": "essencia",
+        "link": "essenti",
+        "type": "noun",
+        "definition": "essence",
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -1149,7 +1329,8 @@
         "type": "verb",
         "definition": "to make",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also 'fit', in benefit or profit."
     },
     {
         "key": "facies",
@@ -1292,6 +1473,13 @@
         "origin": "latin"
     },
     {
+        "key": "festiva",
+        "link": "festiv",
+        "type": "adj",
+        "definition": "festive",
+        "origin": "latin"
+    },
+    {
         "key": "fidere",
         "link-present": "fide",
         "link-perfect": "fis",
@@ -1383,6 +1571,17 @@
                 "link": "flexi"
             }
         ],
+        "origin": "latin",
+        "notes": "reflex, flex vs deflect, inflect"
+    },
+    {
+        "key": "fligere",
+        "link-present": "flige",
+        "link-perfect": "flict",
+        "final": "flict",
+        "type": "verb",
+        "definition": "to strike",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -1405,7 +1604,7 @@
     },
     {
         "key": "fluctuare",
-        "link-present": "fluctu",
+        "link-present": "fluctua",
         "link-perfect": "fluctuat",
         "final": "fluctuate",
         "type": "verb",
@@ -1471,6 +1670,16 @@
         "origin": "latin"
     },
     {
+        "key": "fragrare",
+        "link-present": "fragra",
+        "link-perfect": "fragrat",
+        "final": "fragrate",
+        "type": "verb",
+        "definition": "to smell strongly",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "frangere",
         "link-present": "fracta",
         "link-perfect": "fract",
@@ -1478,7 +1687,8 @@
         "type": "verb",
         "definition": "to shatter",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also fragile"
     },
     {
         "key": "frater",
@@ -1514,6 +1724,24 @@
         "origin": "latin"
     },
     {
+        "key": "fructus",
+        "link": "fructu",
+        "type": "noun",
+        "definition": "fruit",
+        "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "key": "frustrari",
+        "link-present": "frustra",
+        "link-perfect": "frustrat",
+        "final": "frustrate",
+        "type": "verb",
+        "definition": "to disappoint",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "fugere",
         "link-present": "fuga",
         "link-perfect": "fugit",
@@ -1534,6 +1762,17 @@
         "origin": "latin",
         "notes": "transfuse vs refund"
     },
+    {
+        "key": "fungi",
+        "link-present": "funge",
+        "link-perfect": "funct",
+        "final": "funct",
+        "type": "verb",
+        "definition": "to perform",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "final is a guess"
+    },  
     {
         "key": "fungus",
         "link": "fung",
@@ -1564,6 +1803,13 @@
         "type": "noun",
         "definition": "twin",
         "tags": ["count", "abstract", "living", "person"],
+        "origin": "latin"
+    },
+    {  
+        "key": "generosa",
+        "link": "generos",
+        "type": "adj",
+        "definition": "generous",
         "origin": "latin"
     },
     {  
@@ -1708,6 +1954,26 @@
         "origin": "latin"
     },
     {
+        "key": "habituare",
+        "link-present": "habitua",
+        "link-perfect": "habituat",
+        "final": "habituate",
+        "type": "verb",
+        "definition": "to accustom",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "haerere",
+        "link-present": "here",
+        "link-perfect": "hes",
+        "final": "here",
+        "type": "verb",
+        "definition": "to stick",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "haurire",
         "link-present": "hauri",
         "link-perfect": "haust",
@@ -1723,6 +1989,14 @@
         "type": "noun",
         "definition": "herb",
         "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "key": "hilaris",
+        "link": "hilari",
+        "type": "noun",
+        "definition": "good cheer",
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1809,6 +2083,13 @@
         "origin": "latin"
     },
     {
+        "key": "identa",
+        "link": "ident",
+        "type": "adj",
+        "definition": "same",
+        "origin": "latin"
+    },
+    {
         "key": "ignis",
         "link": "ign",
         "type": "noun",
@@ -1881,6 +2162,20 @@
         "origin": "latin"
     },
     {
+        "key": "inferior",
+        "link": "inferior",
+        "type": "adj",
+        "definition": "lower",
+        "origin": "latin"
+    },
+    {
+        "key": "infern",
+        "link": "infern",
+        "type": "adj",
+        "definition": "lowest",
+        "origin": "latin"
+    },
+    {
         "key": "inimicus",
         "link": "inimic",
         "type": "noun",
@@ -1939,6 +2234,16 @@
         "type": "noun",
         "definition": "image",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "jubilare",
+        "link-present": "jubila",
+        "link-perfect": "jubilat",
+        "final": "jubilate",
+        "type": "verb",
+        "definition": "to shout for joy",
+        "tags": ["transitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -2106,6 +2411,16 @@
         "origin": "latin"
     },
     {
+        "key": "laedere",
+        "link-present": "lide",
+        "link-perfect": "lis",
+        "final": "lide",
+        "type": "verb",
+        "definition": "to strike",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "lapis",
         "link": "lapid",
         "type": "noun",
@@ -2161,6 +2476,24 @@
         "definition": "to wash",
         "tags": ["transitive"],
         "origin": "latin"
+    },
+    {
+        "key": "laxa",
+        "link": "lax",
+        "type": "adj",
+        "definition": "loose",
+        "origin": "latin"
+    },
+    {
+        "key": "laxare",
+        "link-present": "laxa",
+        "link-perfect": "laxat",
+        "final": "lax",
+        "type": "verb",
+        "definition": "to loosen",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin",
+        "notes": "no prep just 'cause only re- seems at all ok. Figure out later"
     },
     {
         "key": "luere",
@@ -2673,7 +3006,8 @@
         "type": "verb",
         "definition": "to deserve",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "compare metertix"
     },
     {
         "key": "migrare",
@@ -2853,6 +3187,14 @@
             }
         ],
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "mucus",
+        "link": "muc",
+        "type": "noun",
+        "definition": "slime",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -3506,6 +3848,17 @@
         "origin": "latin"
     },
     {
+        "key": "penetrare",
+        "link-present": "penetra",
+        "link-perfect": "penetrat",
+        "final": "penetrate",
+        "type": "verb",
+        "definition": "to pass through",
+        "definition-relative": "to pass",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "pensare",
         "link-present": "pensa",
         "link-perfect": "pensat",
@@ -3513,7 +3866,8 @@
         "type": "verb",
         "definition": "to weigh",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "verb: compensate vs dispense"
     },
     {
         "key": "perdere",
@@ -3524,6 +3878,16 @@
         "definition": "to lose",
         "tags": ["transitive"],
         "origin": "latin"
+    },
+    {
+        "key": "performer",
+        "link-present": "performa",
+        "link-perfect": "performat",
+        "final": "perform",
+        "type": "verb",
+        "definition": "to carry out",
+        "tags": ["transitive"],
+        "origin": "french"
     },
     {
         "key": "perpetua",
@@ -3766,6 +4130,16 @@
         "origin": "latin"
     },
     {
+        "key": "possidere",
+        "link-present": "posside",
+        "link-perfect": "possess",
+        "final": "possess",
+        "type": "verb",
+        "definition": "to possess",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "postera",
         "link": "poster",
         "type": "adj",
@@ -3811,6 +4185,14 @@
         "origin": "latin"
     },
     {
+        "key": "pretium",
+        "link": "preci",
+        "type": "noun",
+        "definition": "value",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "prehendere",
         "link-present": "prehende",
         "link-perfect": "prehens",
@@ -3848,6 +4230,14 @@
         "tags": ["transitive"],
         "origin": "latin"
     },
+    {
+        "key": "pretium",
+        "link": "preci",
+        "type": "noun",
+        "definition": "price",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
     {  
         "key": "prima",
         "link": "prim",
@@ -3861,6 +4251,16 @@
         "type": "noun",
         "definition": "chief",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
+        "key": "privare",
+        "link-present": "priva",
+        "link-perfect": "privat",
+        "final": "private",
+        "type": "verb",
+        "definition": "to take away",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -3878,7 +4278,8 @@
         "type": "verb",
         "definition": "to test",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "meaning for approve is a bit weird"
     },
     {  
         "key": "profunda",
@@ -3908,6 +4309,17 @@
         "type": "adj",
         "definition": "nearby",
         "origin": "latin"
+    },
+    {
+        "key": "pudere",
+        "link-present": "pudent",
+        "link-perfect": "pudit",
+        "final": "pude",
+        "type": "verb",
+        "definition": "to be ashamed",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin",
+        "notes": "verb is a guess"
     },
     {   
         "key": "puella",
@@ -3968,6 +4380,13 @@
         "type": "verb",
         "definition": "to pierce",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "pura",
+        "link": "pur",
+        "type": "adj",
+        "definition": "pure",
         "origin": "latin"
     },
     {
@@ -4083,6 +4502,16 @@
         "origin": "latin"
     },
     {
+        "key": "revereri",
+        "link-present": "revere",
+        "link-perfect": "reverit",
+        "final": "revere",
+        "type": "verb",
+        "definition": "to revere",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "rex",
         "link": "reg",
         "type": "noun",
@@ -4101,6 +4530,16 @@
         "origin": "latin"
     },
     {
+        "key": "roborare",
+        "link-present": "robora",
+        "link-perfect": "roborat",
+        "final": "roborate",
+        "type": "verb",
+        "definition": "to strengthen",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "rogare",
         "link-present": "roga",
         "link-perfect": "rogat",
@@ -4108,6 +4547,16 @@
         "type": "verb",
         "definition": "to ask",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "ructare",
+        "link-present": "ructa",
+        "link-perfect": "ructat",
+        "final": "ruct",
+        "type": "verb",
+        "definition": "to belch",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -4140,6 +4589,24 @@
         "tags": ["intransitive", "motion"],
         "origin": "latin",
         "names": "conflict: salient vs resilient"
+    },
+    {
+        "key": "salus",
+        "link": "salut",
+        "type": "noun",
+        "definition": "health",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "salutare",
+        "link-present": "saluta",
+        "link-perfect": "salutat",
+        "final": "salute",
+        "type": "verb",
+        "definition": "to greet",
+        "tags": ["transitive"],
+        "origin": "latin"
     },
     {
         "key": "sanguis",
@@ -4201,6 +4668,17 @@
         "origin": "latin"
     },
     {
+        "key": "sensata",
+        "link-present": "sensa",
+        "link-perfect": "sensat",
+        "final": "sensate",
+        "type": "verb",
+        "definition": "to be able to feel",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin",
+        "comment": "Weird formation from an adj but whatever, for now"
+    },
+    {
         "key": "sentire",
         "link-present": "senti",
         "link-perfect": "sens",
@@ -4209,7 +4687,17 @@
         "definition": "to feel",
         "tags": ["transitive", "motion"],
         "origin": "latin",
-        "comment": "sense without a prefix, but prefixes all seem to use sent"
+        "comment": "sense without a prefix, but prefixes all seem to use sent. Sensitive doesn't fit yet"
+    },
+    {
+        "key": "sequestrare",
+        "link-present": "sequestra",
+        "link-perfect": "sequestrat",
+        "final": "sequester",
+        "type": "verb",
+        "definition": "to isolate",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
     },
     {
         "key": "sequi",
@@ -4219,6 +4707,13 @@
         "type": "verb",
         "definition": "to follow",
         "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "serena",
+        "link": "seren",
+        "type": "adj",
+        "definition": "calm",
         "origin": "latin"
     },
     {
@@ -4287,13 +4782,14 @@
     },
     {
         "key": "sistere",
-        "link-present": "sista",
+        "link-present": "siste",
         "link-perfect": "stat",
         "final": "sist",
         "type": "verb",
         "definition": "to stand",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "perfect: resistance vs existence"
     },
     {
         "key": "sol",
@@ -4311,6 +4807,27 @@
         "type": "verb",
         "definition": "to comfort",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "solvere",
+        "link-present": "solve",
+        "link-perfect": "solut",
+        "final": "solve",
+        "type": "verb",
+        "definition": "to loosen",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "sorbere",
+        "link-present": "sorbe",
+        "link-perfect": "sorbit",
+        "final": "sorb",
+        "type": "verb",
+        "definition": "to suck in",
+        "definition-relative": "to suck",
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -4344,6 +4861,17 @@
         "origin": "latin"
     },
     {
+        "key": "sperere",
+        "link-present": "spera",
+        "link-perfect": "sperat",
+        "final": "sper",
+        "type": "verb",
+        "definition": "to hope",
+        "tags": ["intransitive"],
+        "origin": "latin",
+        "notes": "verb form: prosper vs despair"
+    },
+    {
         "key": "sphinx",
         "link": "sphing",
         "type": "noun",
@@ -4362,6 +4890,23 @@
         "origin": "latin"
     },
     {
+        "key": "spondere",
+        "link-present": "sponde",
+        "link-perfect": "spons",
+        "final": "spond",
+        "type": "verb",
+        "definition": "to promise",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "stabilis",
+        "link": "stabil",
+        "type": "adj",
+        "definition": "steadfast",
+        "origin": "latin"
+    },
+    {
         "key": "stare",
         "link-present": "sta",
         "link-perfect": "stat",
@@ -4369,7 +4914,8 @@
         "type": "verb",
         "definition": "to stand",
         "tags": ["intransitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "interstitial?"
     },
     {
         "key": "statuere",
@@ -4379,6 +4925,27 @@
         "type": "verb",
         "definition": "to establish",
         "tags": ["intransitive"],
+        "origin": "latin",
+        "notes": "meaning on destitute"
+    },
+    {
+        "key": "sternere",
+        "link-present": "sterne",
+        "link-perfect": "strat",
+        "final": "strate",
+        "type": "verb",
+        "definition": "to spread out",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "stipulare",
+        "link-present": "stipula",
+        "link-perfect": "stipulat",
+        "final": "stipulate",
+        "type": "verb",
+        "definition": "to bargain",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -4440,6 +5007,30 @@
         "origin": "latin"
     },
     {
+        "key": "supare",
+        "link-present": "sipa",
+        "link-perfect": "sipat",
+        "final": "sipate",
+        "type": "verb",
+        "definition": "to throw",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "superior",
+        "link": "superior",
+        "type": "adj",
+        "definition": "higher",
+        "origin": "latin"
+    },
+    {
+        "key": "suprema",
+        "link": "suprem",
+        "type": "adj",
+        "definition": "highest",
+        "origin": "latin"
+    },
+    {
         "key": "tangere",
         "link-present": "tange",
         "link-perfect": "tact",
@@ -4449,6 +5040,16 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "verb after 'attain'. not included: 'contingent'"
+    },
+    {
+        "key": "tegere",
+        "link-present": "tege",
+        "link-perfect": "tection",
+        "final": "tect",
+        "type": "verb",
+        "definition": "to cover",
+        "tags": ["transitive"],
+        "origin": "latin"
     },
     {
         "key": "temperare",
@@ -4497,7 +5098,16 @@
         "type": "verb",
         "definition": "to hold",
         "tags": ["transitive"],
-        "origin": "latin"
+        "exception": [
+            { 
+                "case": {
+                    "precedes": ["ble"]
+                },
+                "link": "taina"
+            }
+        ],
+        "origin": "latin",
+        "notes": "spelling for sustenance"
     },
     {
         "key": "testari",
@@ -4559,6 +5169,16 @@
         "origin": "latin"
     },
     {
+        "key": "torrere",
+        "link-present": "torre",
+        "link-perfect": "tost",
+        "final": "toast",
+        "type": "verb",
+        "definition": "to dry",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "tragoedia",
         "link": "tragedi",
         "type": "noun",
@@ -4574,6 +5194,13 @@
         "type": "verb",
         "definition": "to pull",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "tranquilla",
+        "link": "tranquil",
+        "type": "adj",
+        "definition": "calm",
         "origin": "latin"
     },
     {
@@ -4644,6 +5271,17 @@
         "origin": "latin"
     },
     {
+        "key": "valere",
+        "link-present": "vale",
+        "link-perfect": "valit",
+        "final": "vail",
+        "type": "verb",
+        "definition": "to be strong",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin",
+        "notes": "prevalent vs valiant"
+    },
+    {
         "key": "valida",
         "link": "valid",
         "type": "adj",
@@ -4681,6 +5319,24 @@
         "origin": "latin"
     },
     {
+        "key": "verbum",
+        "link": "verb",
+        "type": "noun",
+        "definition": "word",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "verberare",
+        "link-present": "verbera",
+        "link-perfect": "verberat",
+        "final": "verberate",
+        "type": "verb",
+        "definition": "to beat",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "vertere",
         "link-present": "verte",
         "link-perfect": "vers",
@@ -4710,6 +5366,16 @@
         "origin": "latin"
     },
     {
+        "key": "vexare",
+        "link-present": "vexa",
+        "link-perfect": "vexat",
+        "final": "vex",
+        "type": "verb",
+        "definition": "to trouble",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "videre",
         "link-present": "vide",
         "link-perfect": "vis",
@@ -4728,12 +5394,32 @@
         "origin": "latin"
     },
     {
+        "key": "vigilare",
+        "link-present": "vigila",
+        "link-perfect": "vigilat",
+        "final": "vigilate",
+        "type": "verb",
+        "definition": "to keep watch",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },  
+    {
         "key": "vincere",
         "link-present": "vince",
         "link-perfect": "vict",
         "final": "vince",
         "type": "verb",
         "definition": "to defeat",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "vindicare",
+        "link-present": "vindica",
+        "link-perfect": "vindicat",
+        "final": "vindicate",
+        "type": "verb",
+        "definition": "to avenge",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -4748,7 +5434,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["nt", "nce"]
+                    "precedes": ["nt", "nt-n", "nce"]
                 },
                 "link": "viole"
             }
@@ -4761,6 +5447,14 @@
         "type": "noun",
         "definition": "man",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
+        "key": "virtus",
+        "link": "virtu",
+        "type": "noun",
+        "definition": "virtue",
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -4794,6 +5488,14 @@
         "origin": "latin"
     },
     {
+        "key": "volume",
+        "link": "volumin",
+        "type": "noun",
+        "definition": "volume",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "volvere",
         "link-present": "volve",
         "link-perfect": "volut",
@@ -4815,6 +5517,17 @@
         "origin": "latin"
     },
     {
+        "key": "vovere",
+        "link-present": "vove",
+        "link-perfect": "vot",
+        "final": "vote",
+        "type": "verb",
+        "definition": "to vow",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin",
+        "notes": "vow vs devote"
+    },
+    {
         "key": "vox",
         "link": "voc",
         "type": "noun",
@@ -4830,6 +5543,134 @@
         "definition-noun": "away from %sg",
         "origin": "latin"
     },
+ {
+        "key": "one-join",
+        "link": "uni",
+        "type": "number",
+        "definition": "one %sg",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "two-join",
+        "link": "bi",
+        "type": "number",
+        "definition": "two %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "three-join",
+        "link": "tri",
+        "type": "number",
+        "definition": "three %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "four-join",
+        "link": "quadri",
+        "type": "number",
+        "definition": "four %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "five-join",
+        "link": "quinti",
+        "type": "number",
+        "definition": "five %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "six-join",
+        "link": "sexi",
+        "type": "number",
+        "definition": "six %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "seven-join",
+        "link": "septi",
+        "type": "number",
+        "definition": "seven %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "eight-join",
+        "link": "octi",
+        "type": "number",
+        "definition": "eight %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "nine-join",
+        "link": "noni",
+        "type": "number",
+        "definition": "nine %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "ten-join",
+        "link": "deci",
+        "type": "number",
+        "definition": "ten %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "eleven-join",
+        "link": "undeci",
+        "type": "number",
+        "definition": "eleven %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "twelve-join",
+        "link": "duodeci",
+        "type": "number",
+        "definition": "twelve %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "hundred-join",
+        "link": "centi",
+        "type": "number",
+        "definition": "one-hundred %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "thousand-join",
+        "link": "milli",
+        "type": "number",
+        "definition": "one-thousand %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "multi-join",
+        "link": "multi",
+        "type": "number",
+        "definition": "many %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "all-join",
+        "link": "omni",
+        "type": "number",
+        "definition": "all %!pl",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
     {
         "key": "ad",
         "link": "ad",
@@ -4843,7 +5684,8 @@
 			"double": ["c", "d", "f", "g", "l", "n", "p", "r", "s", "t"],
             "ac": ["q"]
         },
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "need 'aspire' - cut before 'sp'"
     },
 	{
         "key": "circum",
@@ -4923,6 +5765,14 @@
         "origin": "latin"
     },
     {
+        "key": "infra",
+        "link": "infra",
+        "type": "prep",
+        "definition-verb": "%@ below",
+        "definition-noun": "below %sg",
+        "origin": "latin"
+    },
+    {
         "key": "inter",
         "link": "inter",
         "type": "prep",
@@ -4949,7 +5799,8 @@
 			"link": ["*"],
 			"double": ["c", "p"]
         },
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "need spelling change for ostentatious"
     },
     {
         "key": "per",
@@ -5010,7 +5861,8 @@
             "double": ["p"],
             "sus": ["c"]
         },
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "need 'sus' for cases like sustain"
     },
     {
         "key": "super",
@@ -5040,7 +5892,7 @@
         "exception": [
             {
                 "case": {
-                    "follows": ["or", "nt", "nce"]
+                    "follows": ["or", "nt", "nt-n", "nce"]
                 },
                 "final": "ial",
                 "link": "ial"
@@ -5067,7 +5919,7 @@
            },
            {
                "case": {
-                   "follows": ["nt", "nce"]
+                   "follows": ["nt", "nt-n", "nce"]
                },
                "final": "iary",
                "link": "iari"
@@ -5145,16 +5997,6 @@
                 "tags": ["concrete"]
             }
         },
-        "origin": "latin"
-    },
-    {
-        "key": "ic",
-        "final": "ic",
-        "link": "ic",
-        "type": "derive",
-        "from": "noun",
-        "to": "adj",
-        "definition": "pertaining to %pl",
         "origin": "latin"
     },
     {
@@ -5374,6 +6216,18 @@
         "origin": "latin"
     },
     {
+        "key": "nt-n",
+        "final": "nt",
+		"link": "nti",
+        "type": "derive",
+		"from": "verb",
+        "participle-type": "present",
+		"to": "noun",
+        "tags": ["stem-change"],
+        "definition": "one who %3sg",
+        "origin": "latin"
+    },
+    {
         "key": "ure",
         "final": "ure",
         "link": "ur",
@@ -5404,134 +6258,6 @@
         "link": "mis",
         "type": "prefix",
         "definition": "%@ incorrectly",
-        "origin": "latin"
-    },
-    {
-        "key": "one-join",
-        "link": "uni",
-        "type": "number",
-        "definition": "one %sg",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "two-join",
-        "link": "bi",
-        "type": "number",
-        "definition": "two %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "three-join",
-        "link": "tri",
-        "type": "number",
-        "definition": "three %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "four-join",
-        "link": "quadri",
-        "type": "number",
-        "definition": "four %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "five-join",
-        "link": "quinti",
-        "type": "number",
-        "definition": "five %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "six-join",
-        "link": "sexi",
-        "type": "number",
-        "definition": "six %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "seven-join",
-        "link": "septi",
-        "type": "number",
-        "definition": "seven %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "eight-join",
-        "link": "octi",
-        "type": "number",
-        "definition": "eight %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "nine-join",
-        "link": "noni",
-        "type": "number",
-        "definition": "nine %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "ten-join",
-        "link": "deci",
-        "type": "number",
-        "definition": "ten %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "eleven-join",
-        "link": "undeci",
-        "type": "number",
-        "definition": "eleven %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "twelve-join",
-        "link": "duodeci",
-        "type": "number",
-        "definition": "twelve %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "hundred-join",
-        "link": "centi",
-        "type": "number",
-        "definition": "one-hundred %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "thousand-join",
-        "link": "milli",
-        "type": "number",
-        "definition": "one-thousand %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "multi-join",
-        "link": "multi",
-        "type": "number",
-        "definition": "many %!pl",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "all-join",
-        "link": "omni",
-        "type": "number",
-        "definition": "all %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {

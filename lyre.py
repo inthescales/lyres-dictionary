@@ -652,7 +652,7 @@ def generate_entry():
     word.grow_to_size(random.randint(2,3))
     return word.entry()
 
-#run(10)
+run(10)
 #test(["vorare", "nt", "ous"])
 
 # fix not adding "a" before multi-word nouns, ex "married woman"
