@@ -347,13 +347,14 @@ class Word:
             # Necessary to inflate their frequency given their small number.
             if self.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not first_morph.get_type() in ["prep", "prefix"] and (random.randint(0, 3) == 0 or last_morph.has_tag("always-prep")):
                 new_morph = Morph( random.choice(morphary.type_morphs["prep"]) )
-                new_morph.join(first_morph)
-                self.morphs = [new_morph] + self.morphs
-                break
+                if not new_morph.has_tag("no-verb"):
+                    new_morph.join(first_morph)
+                    self.morphs = [new_morph] + self.morphs
+                    break
 
             # Special chance to use the preposition + noun + ate pattern    
             if self.size() == 1 and current_type == "noun" and not last_morph.has_tag("no-prep") and random.randint(0, 8) == 0:
-                prep_morph = Morph( random.choice(["in", "ex", "trans", "inter", "sub", "super"]) )
+                prep_morph = Morph( random.choice(["in", "ex", "trans", "inter", "sub", "super", "infra", "supra"]) )
                 end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify", "ize"]) )
                 prep_morph.join(first_morph)
                 last_morph.join(end_morph)
@@ -373,9 +374,10 @@ class Word:
             # Add a prefix to the whole thing
             if self.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"] and random.randint(0, 8) == 0:
                 new_morph = Morph( random.choice(morphary.type_morphs["prefix"]) )
-                new_morph.join(first_morph)
-                self.morphs = [new_morph] + self.morphs
-                break
+                if not new_morph.has_tag("no-verb"):
+                    new_morph.join(first_morph)
+                    self.morphs = [new_morph] + self.morphs
+                    break
 
             # Basic morph addition
             else:
@@ -652,7 +654,7 @@ def generate_entry():
     word.grow_to_size(random.randint(2,3))
     return word.entry()
 
-run(10)
+run(1000)
 #test(["vorare", "nt", "ous"])
 
 # fix not adding "a" before multi-word nouns, ex "married woman"

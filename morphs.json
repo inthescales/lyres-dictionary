@@ -226,7 +226,7 @@
         "link": "arbor",
         "type": "noun",
         "definition": "tree",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "plant"],
         "exception": [
             {
                 "case": {
@@ -460,7 +460,7 @@
         "definition": "to sing",
         "tags": ["intransitive", "motion"],
         "origin": "latin",
-        "notes": "present is a guess"
+        "notes": "recant vs concent"
     },
     {
         "key": "canis",
@@ -719,6 +719,14 @@
         "notes": "perfect - inclusive vs closure"
     },
     {
+        "key": "clavus",
+        "link": "clav",
+        "type": "noun",
+        "definition": "key",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "clinare",
         "link-present": "clina",
         "link-perfect": "clinat",
@@ -772,7 +780,7 @@
         "link": "columb",
         "type": "noun",
         "definition": "dove",
-        "tags": ["count", "abstract", "living", "animal"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -1625,7 +1633,7 @@
         "link": "fluvi",
         "type": "noun",
         "definition": "river",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
     },
     {
@@ -1739,6 +1747,14 @@
         "type": "verb",
         "definition": "to disappoint",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "frutex",
+        "link": "frutic",
+        "type": "noun",
+        "definition": "shrub",
+        "tags": ["count", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {
@@ -1988,7 +2004,7 @@
         "link": "herb",
         "type": "noun",
         "definition": "herb",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {
@@ -2229,14 +2245,6 @@
         "origin": "latin"
     },
     {
-        "key": "imago",
-        "link": "imag",
-        "type": "noun",
-        "definition": "image",
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
-    {
         "key": "jubilare",
         "link-present": "jubila",
         "link-perfect": "jubilat",
@@ -2363,7 +2371,7 @@
         "link": "labyrinth",
         "type": "noun",
         "definition": "labyrinth",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
     },
     {
@@ -2407,7 +2415,7 @@
         "link": "lacustr",
         "type": "noun",
         "definition": "lake",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
     },
     {
@@ -2636,7 +2644,7 @@
         "link": "lili",
         "type": "noun",
         "definition": "lily",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {
@@ -2688,7 +2696,7 @@
         "link": "littor",
         "type": "noun",
         "definition": "shore",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
     },
     {
@@ -2846,7 +2854,7 @@
         "link": "mar",
         "type": "noun",
         "definition": "sea",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
     },
     {
@@ -3503,7 +3511,7 @@
         "link": "ocean",
         "type": "noun",
         "definition": "ocean",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
     },
     {
@@ -3674,6 +3682,14 @@
         "link": "pallid",
         "type": "adj",
         "definition": "pale",
+        "origin": "latin"
+    },
+    {
+        "key": "palma",
+        "link": "pin",
+        "type": "noun",
+        "definition": "palm",
+        "tags": ["count", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {
@@ -3959,6 +3975,14 @@
         "origin": "latin"
     },
     {
+        "key": "pinus",
+        "link": "pin",
+        "type": "noun",
+        "definition": "pine",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "latin"
+    },
+    {
         "key": "pirata",
         "link": "pirat",
         "type": "noun",
@@ -3989,7 +4013,7 @@
         "link": "planet",
         "type": "noun",
         "definition": "planet",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "terrain"],
         "origin": "latin"
     },
     {
@@ -4427,6 +4451,14 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "present form is a hack"
+    },
+    {
+        "key": "quercus",
+        "link": "querc",
+        "type": "noun",
+        "definition": "oak",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "latin"
     },
     {
         "key": "radix",
@@ -5458,6 +5490,22 @@
         "origin": "latin"
     },
     {
+        "key": "vitis",
+        "link": "vit",
+        "type": "noun",
+        "definition": "vine",
+        "tags": ["count", "concrete", "living", "plant"],
+        "exception": [
+            {
+                "case": {
+                    "precedes": ["etum"]
+                },
+                "link": "vitic"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
         "key": "vivere",
         "link-present": "vivi",
         "link-perfect": "vivat",
@@ -5770,6 +5818,7 @@
         "type": "prep",
         "definition-verb": "%@ below",
         "definition-noun": "below %sg",
+        "tags": ["no-verb"],
         "origin": "latin"
     },
     {
@@ -5873,6 +5922,15 @@
         "origin": "latin"
     },
     {
+        "key": "supra",
+        "link": "supra",
+        "type": "prep",
+        "definition-verb": "%@ above",
+        "definition-noun": "above %sg",
+        "tags": ["no-verb"],
+        "origin": "latin"
+    },
+    {
         "key": "trans",
         "link": "trans",
         "type": "prep",
@@ -5969,32 +6027,16 @@
         "origin": "latin"
     },
     {
-        "key": "ifer",
-        "final": "ifer",
-        "link": "ifer",
+        "key": "etum",
+        "final": "etum",
+        "link": "etum",
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "definition": "one who carries %pl",
+        "definition": "a place where %pl are grown",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
-            }
-        },
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
-    {
-        "key": "iferous",
-        "final": "iferous",
-        "link": "iferos",
-        "type": "derive",
-        "from": "noun",
-        "to": "adj",
-        "definition": "carrying %pl",
-        "requires": {
-            "follows": {
-                "tags": ["concrete"]
+                "tags": ["plant"]
             }
         },
         "origin": "latin"
@@ -6030,6 +6072,37 @@
         "origin": "latin"
     },
     {
+        "key": "ifer",
+        "final": "ifer",
+        "link": "ifer",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "definition": "one who carries %pl",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "iferous",
+        "final": "iferous",
+        "link": "iferos",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "carrying %pl",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "ify",
         "link-present": "ifice",
         "link-perfect": "ificat",
@@ -6057,6 +6130,37 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "magnificent vs significant"
+    },
+    {
+        "key": "iger",
+        "final": "iger",
+        "link": "iger",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "definition": "one who carries %pl",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "igerous",
+        "final": "igerous",
+        "link": "igeros",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "carrying %pl",
+        "requires": {
+            "follows": {
+                "tags": ["concrete"]
+            }
+        },
+        "origin": "latin"
     },
     {
         "key": "ile",
