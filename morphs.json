@@ -719,7 +719,7 @@
         "notes": "perfect - inclusive vs closure"
     },
     {
-        "key": "clavus",
+        "key": "clavis",
         "link": "clav",
         "type": "noun",
         "definition": "key",
@@ -4073,16 +4073,6 @@
         "notes": "plicate vs ply"
     },
     {
-        "key": "placere",
-        "link-present": "place",
-        "link-perfect": "placat",
-        "final": "place",
-        "type": "verb",
-        "definition": "to disturb",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    {
         "key": "plodere",
         "link-present": "plode",
         "link-perfect": "plos",
@@ -4336,7 +4326,7 @@
     },
     {
         "key": "pudere",
-        "link-present": "pudent",
+        "link-present": "pude",
         "link-perfect": "pudit",
         "final": "pude",
         "type": "verb",
@@ -5044,7 +5034,7 @@
         "link-perfect": "sipat",
         "final": "sipate",
         "type": "verb",
-        "definition": "to throw",
+        "definition": "to scatter",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -5879,8 +5869,8 @@
         "key": "pro",
         "link": "pro",
         "type": "prep",
-        "definition-verb": "%@ for",
-        "definition-noun": "for %sg",
+        "definition-verb": "%@ forward",
+        "definition-noun": "before %sg",
         "origin": "latin"
     },
     {
