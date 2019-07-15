@@ -655,7 +655,7 @@ def generate_entry():
     return word.entry()
 
 #run(10)
-#test(["vorare", "nt", "ous"])
+#test(["ephemera", "ify"])
 
 # fix not adding "a" before multi-word nouns, ex "married woman"
 
