@@ -431,9 +431,6 @@ class Word:
                         elif letter in ["a", "i", "u"]:
                             addition = "-" + addition
 
-                    elif word[-1] == "e" and addition[0] == "i":
-                        word = word[:-1]
-
                     # Stem change
                     elif morph.has_tag("stem-change") and word[-1] == "i":
                         addition = "e" + addition
@@ -655,7 +652,7 @@ def generate_entry():
     return word.entry()
 
 #run(10)
-#test(["ephemera", "ify"])
+#test(["re", "inferior", "ify"])
 
 # fix not adding "a" before multi-word nouns, ex "married woman"
 
