@@ -6085,7 +6085,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "definition": "one who carries %pl",
+        "definition": "one who brings %pl",
         "requires": {
             "follows": {
                 "tags": ["concrete"]
