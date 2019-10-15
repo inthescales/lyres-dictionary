@@ -1345,7 +1345,7 @@
         "link": "faci",
         "type": "noun",
         "definition": "face",
-        "tags": ["count", "abstract", "bodypart"],
+        "tags": ["count", "contract", "bodypart"],
         "origin": "latin"
     },
     {
@@ -1452,7 +1452,7 @@
         "link": "fenestr",
         "type": "noun",
         "definition": "window",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -1818,7 +1818,7 @@
         "link": "gemin",
         "type": "noun",
         "definition": "twin",
-        "tags": ["count", "abstract", "living", "person"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {  
@@ -3093,14 +3093,6 @@
         "origin": "latin"
     },
     {
-        "key": "minimum",
-        "link": "minim",
-        "type": "noun",
-        "definition": "minimum",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    },
-    {
         "key": "miscere",
         "link-present": "misce",
         "link-perfect": "mixt",
@@ -3686,7 +3678,7 @@
     },
     {
         "key": "palma",
-        "link": "pin",
+        "link": "palm",
         "type": "noun",
         "definition": "palm",
         "tags": ["count", "concrete", "living", "plant"],
@@ -4195,14 +4187,6 @@
         "link": "practic",
         "type": "noun",
         "definition": "practice",
-        "tags": ["mass", "abstract"],
-        "origin": "latin"
-    },
-    {
-        "key": "pretium",
-        "link": "preci",
-        "type": "noun",
-        "definition": "value",
         "tags": ["mass", "abstract"],
         "origin": "latin"
     },
@@ -5293,6 +5277,16 @@
         "origin": "latin"
     },
     {
+        "key": "vadere",
+        "link-present": "vade",
+        "link-perfect": "vas",
+        "final": "vade",
+        "type": "verb",
+        "definition": "to go",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "key": "valere",
         "link-present": "vale",
         "link-perfect": "valit",
@@ -5328,6 +5322,16 @@
         "type": "verb",
         "definition": "to wish",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "vellere",
+        "link-present": "velle",
+        "link-perfect": "vuls",
+        "final": "vulse",
+        "type": "verb",
+        "definition": "to pull",
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     },
     {
@@ -5542,7 +5546,7 @@
         "definition": "to roll",
         "tags": ["transitive", "motion"],
         "origin": "latin",
-        "notes": "volve (circumvolve, evolve, involve), vs volute (volute, convolute)"
+        "notes": "volve (circumvolve, evolve, involve), vs volute (volute, convolute), vs volt (revolt)"
     },
     {
         "key": "vorare",
@@ -5739,6 +5743,7 @@
         "type": "prep",
         "definition-verb": "%@ on the same side",
         "definition-noun": "on this side of %sg",
+	"tags": "no-verb",
         "origin": "latin"
     },
 	{
@@ -5871,6 +5876,14 @@
         "type": "prep",
         "definition-verb": "%@ forward",
         "definition-noun": "before %sg",
+        "origin": "latin"
+    },
+    {
+        "key": "retro",
+        "link": "retro",
+        "type": "prep",
+        "definition-verb": "%@ backward",
+        "definition-noun": "backward %sg",
         "origin": "latin"
     },
     {
