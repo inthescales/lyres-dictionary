@@ -1,0 +1,275 @@
+    # bad results
+    {
+        "base": "ism",
+        "link": "ism",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "noun",
+        "definition": "the practice, system, or doctrine of %@",
+        "origin": "latin"
+    },
+    {
+        "key": "ic",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "pertaining to %pl",
+        "origin": "latin"
+    },
+    {
+        "base": "licit",
+        "link-present": "licit",
+        "type": "adj",
+        "definition": "permitted",
+        "origin": "latin"
+    },
+
+    {
+        "base": "ment",
+        "link": "ment",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "present",
+        "definition": "the act of %@",
+        "origin": "latin"
+    },
+    
+    # not sure how to use
+    {
+        "base": "cubare",
+        "link-present": "cuba",
+        "link-perfect": "cubat",
+        "link-verb": "cubate",
+        "type": "verb",
+        "definition": "to lie",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    
+    {
+        "base": "merx",
+        "link": "merci",
+        "type": "noun",
+        "definition": "wares",
+        "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    
+    {
+        "base": "discipulus",
+        "link": "discipl",
+        "type": "noun",
+        "definition": "student",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "regere-rule",
+        "link-present": "rege",
+        "link-perfect": "rect",
+        "final": "reign",
+        "type": "verb",
+        "definition": "to rule",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    
+    {
+        "key": "solere",
+        "link-present": "sole",
+        "link-perfect": "solit",
+        "final": "sole",
+        "type": "verb",
+        "definition": "to accustomed to",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    
+    # Depends on technical changes
+    
+        # no valid perfect that I can see
+    {
+        "key": "ferire",
+        "link-present": "feri",
+        "link-perfect": "",
+        "final": "fere",
+        "type": "verb",
+        "definition": "to strike",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "fervere",
+        "link-present": "ferve",
+        "link-perfect": "-",
+        "final": "ferve",
+        "type": "verb",
+        "definition": "to boil",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "fari",
+        "link-present": "fa",
+        "link-perfect": "f",
+        "final": "face",
+        "type": "verb",
+        "definition": "to speak",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    
+    # probably unnecessary
+    {
+        "key": "edificare",
+        "link-present": "edifica",
+        "link-perfect": "edificat",
+        "final": "edify",
+        "type": "verb",
+        "definition": "to build",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+
+    {
+        "base": "ebria",
+        "link": "ebri",
+        "type": "adjective",
+        "definition": "drunk",
+        "origin": "latin"
+    },
+    
+    # Uninteresting
+    
+    {
+        "key": "constantia",
+        "link": "constanti",
+        "type": "adj",
+        "definition": "constant",
+        "origin": "latin"
+    },
+    
+    # Removed for decency
+
+    {
+        "base": "nigra",
+        "link": "nigr",
+        "type": "adj",
+        "definition": "black",
+        "origin": "latin"
+    },
+    
+    # MAYBE JUST FOR VERBS?
+    {
+        "base": "ist",
+        "link": "ist",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "noun",
+        "definition": "one who does or makes %@",
+        "origin": "latin"
+    },
+    
+    # Maybe do something about different meaning per prep
+    {
+        "key": "stinguere",
+        "link-present": "stingue",
+        "link-perfect": "stinct",
+        "final": "stinguish",
+        "type": "verb",
+        "definition": "to prick",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    
+    # ante -> anticipate
+    
+    # currently no way to have both capacious and capacity. See also rapax / rapacious
+    {
+        "base": "capax",
+        "link": "capac",
+        "type": "noun",
+        "definition": "holding",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
+    
+    
+    {
+        "base": "infra",
+        "type": "prep",
+        "definition-verb": "%@ below",
+        "definition-noun": "below %sg",
+        "origin": "latin"
+    },
+    
+    # Doesn't work with pattern
+    
+        {
+        "base": "mars",
+        "link": "marti",
+        "type": "noun",
+        "definition": "mars",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+        {
+        "base": "venus",
+        "link": "venere",
+        "type": "noun",
+        "definition": "venus",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    
+    # Old french is similar but may use different prefixes
+    
+    {
+        "base": "avouer",
+        "link-present": "avowa",
+        "link-perfect": "contat",
+        "link-verb": "avow",
+        "type": "verb",
+        "definition": "to tell",
+        "tags": ["transitive"],
+        "origin": "old french"
+    },
+    {
+        "base": "conter",
+        "link-present": "counta",
+        "link-perfect": "contat",
+        "link-verb": "count",
+        "type": "verb",
+        "definition": "to tell",
+        "tags": ["transitive"],
+        "origin": "old french"
+    }
+    {
+        "key": "issir",
+        "link-verb": "issue",
+        "origin": "old french"
+    }
+    lavish,
+    sembler (dissemble, resemble),
+    plentif - plenteous,
+    pleasant,
+    valuer,
+    pursue,
+    finer (finance),
+    regard,
+    lease / release / lessor,
+    vengier,
+    relief / relieve,
+    surpass,
+    briller,
+    rely,
+    reprieve / prendre,
+    endurer,
+    surveillance,
+    remembrer,
+    rampant,
+    
+    

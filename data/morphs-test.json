@@ -1,0 +1,254 @@
+[
+    {
+        "base": "audire",
+        "link-present": "audie",
+        "link-perfect": "audit",
+        "type": "verb",
+        "definition": "to hear",
+        "origin": "latin"
+    },
+    {
+        "base": "dicere",
+        "link-present": "dice",
+        "link-perfect": "dict",
+        "type": "verb",
+        "definition": "say",
+        "origin": "latin"
+    },
+    {
+        "base": "ducere",
+        "link-present": "duce",
+        "link-perfect": "duct",
+        "type": "verb",
+        "definition": "lead",
+        "origin": "latin"
+    },
+    {
+        "base": "equus",
+        "link": "equ",
+        "type": "noun",
+        "definition": "horse",
+        "origin": "latin"
+    },
+    {
+        "base": "facere",
+        "link-present": "fice",
+        "link-perfect": "fact",
+        "link-verb": "fect",
+        "type": "verb",
+        "definition": "make",
+        "origin": "latin"
+    },
+    {
+        "base": "felis",
+        "link": "fel",
+        "type": "noun",
+        "definition": "cat",
+        "origin": "latin"
+    },
+    {
+        "base": "jacere",
+        "link-present": "jace",
+        "link-perfect": "ject",
+        "type": "verb",
+        "definition": "throw",
+        "origin": "latin"
+    },
+    {
+        "base": "loqui",
+        "link-present": "loque",
+        "link-perfect": "locut",
+        "link-verb": "locute",
+        "type": "verb",
+        "definition": "speak",
+        "origin": "latin"
+    },
+    {
+        "base": "lux",
+        "link": "luc",
+        "type": "noun",
+        "definition": "light",
+        "origin": "latin"
+    },
+    {
+        "base": "magna",
+        "link": "magn",
+        "type": "adj",
+        "definition": "great",
+        "origin": "latin"
+    },
+    {
+        "base": "pecunia",
+        "link": "pecuni",
+        "type": "noun",
+        "definition": "money",
+        "origin": "latin"
+    },
+    {
+        "base": "puer",
+        "link": "puer",
+        "type": "noun",
+        "definition": "boy",
+        "origin": "latin"
+    },
+    {
+        "base": "pulchra",
+        "link": "pulchr",
+        "type": "adj",
+        "definition": "beautiful",
+        "origin": "latin"
+    },
+    {
+        "base": "pax",
+        "link": "pac",
+        "type": "noun",
+        "definition": "peace",
+        "origin": "latin"
+    },
+    {
+        "base": "real",
+        "link": "real",
+        "type": "adj",
+        "definition": "real",
+        "origin": "latin"
+    },
+    {
+        "base": "rex",
+        "link": "reg",
+        "type": "noun",
+        "definition": "king",
+        "origin": "latin"
+    },
+    {
+        "base": "inter",
+        "type": "prep",
+        "definition": "between",
+        "origin": "latin"
+    },
+    {
+        "base": "trans",
+        "type": "prep",
+        "definition": "across",
+        "origin": "latin"
+    },
+    {
+        "base": "al",
+        "link": "al",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "of or relating to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ary",
+        "link": "ari",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "connected with, pertaining to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "dens",
+        "link": "dent",
+        "type": "noun",
+        "definition": "tooth",
+        "origin": "latin"
+    },
+    {
+        "base": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "in the manner of, pertaining to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ify",
+        "link-present": "ifice",
+        "link-perfect": "ificat",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "verb",
+        "definition": "to make or make into %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ine",
+        "link": "in",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "pertaining to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ion",
+        "link": "ion",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "perfect",
+        "definition": "the act of %@",
+        "origin": "latin"
+    },
+    {
+        "base": "itude",
+        "link": "itudin",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "definition": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ity",
+        "link": "iti",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "definition": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
+        "base": "ize",
+        "link-present": "ize",
+        "link-perfect": "izat",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "verb",
+        "definition": "to do %@ to",
+        "origin": "latin"
+    },
+    {
+        "base": "ous",
+        "link": "os",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "definition": "having, full of, inclined to %@",
+        "origin": "latin"
+    },
+    {
+        "base": "nce",
+		"link": "nti",
+        "type": "derive",
+		"from": "verb",
+		"to": "noun",
+        "participle-type": "present",
+		"category" : "derive",
+        "definition": "the process, state, or quality of %@"
+    },
+    {
+        "base": "nt",
+		"link": "nti",
+        "type": "derive",
+		"from": "verb",
+		"to": "adj",
+        "participle-type": "present",
+		"category" : "derive",
+        "definition": "doing %@"
+    }
+]
