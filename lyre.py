@@ -4,6 +4,7 @@ import sys
 
 from src.morphary import Morphary
 from src.generator import Word, Morph
+import src.validator as validator
 
 def setup():
     global morphary
@@ -23,9 +24,14 @@ def generate_entry():
     if needs_setup():
         setup()
     
-    word = Word(morphary)
-    word.grow_to_size(random.randint(2,3))
-    return word.entry()
+    # Generate until we have a valid entry
+    while True:
+        word = Word(morphary)
+        word.grow_to_size(random.randint(2,3))
+        entry = word.entry()
+        
+        if validator.validate(entry):
+            return entry
 
 def entry_for_keys(keys):
     global morphary
@@ -48,6 +54,7 @@ def test_with_count(count):
 def test_with_keys(keys):
     print("")
     print(entry_for_keys(keys))
+    print("")
 
 # Process command line input
 
