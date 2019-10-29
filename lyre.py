@@ -58,7 +58,7 @@ def test_with_keys(keys):
 
 # Process command line input
 
-if len(sys.argv) > 0:
+if __name__ == '__main__' and len(sys.argv) > 0:
     
     mode = None
     count = None
