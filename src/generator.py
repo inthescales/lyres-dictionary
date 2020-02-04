@@ -1,6 +1,7 @@
 import random
 from src.morphary import Morphary
-from pattern.en import conjugate, singularize, pluralize, tag
+import src.inflection as inflection
+import src.helpers as helpers
 
 class Morph:
     
@@ -146,7 +147,10 @@ class Morph:
             return self.morph["definition-relative"]
         
         if "definition" in self.morph:
-            return self.morph["definition"]
+            if self.morph["type"] in ["noun", "verb"] and len(self.morph["definition"].split(" ")) == 1:
+                return "[" + self.morph["definition"] + "]"
+            else:
+                return self.morph["definition"]
         else:
             
             if self.next:
@@ -315,7 +319,7 @@ class Word:
                 if len(word) > 0:
 
                     # e.g.: glaci + ify -> glacify
-                    if addition[0] == word[-1] and is_vowel(addition[0]):
+                    if addition[0] == word[-1] and helpers.is_vowel(addition[0]):
 
                         letter = addition[0]
 
@@ -384,27 +388,28 @@ class Word:
 
                 words = part.split(" ")
                 for (index, word) in enumerate(words):
-
                     if word == "%@":
                         words[index] = definition
+                    if word == "[%@]":
+                        words[index] = "[" + definition + "]"
                     elif word == "%part":
-                        words[index] = rephrase(definition, "part")
+                        words[index] = inflection.inflect(definition, "part")
                     elif word == "%ppart":
-                        words[index] = rephrase(definition, "ppart")
+                        words[index] = inflection.inflect(definition, "ppart")
                     elif word == "%3sg":
-                        words[index] = rephrase(definition, "3sg")
+                        words[index] = inflection.inflect(definition, "3sg")
                     elif word == "%sg":
                         if last_morph.has_tag("count"):
-                            words[index] = rephrase(definition, "sg")
+                            words[index] = inflection.inflect(definition, "sg")
                         else:
-                            words[index] = definition
+                            words[index] = inflection.inflect(definition, "mass")
                     elif word == "%pl":
                         if last_morph.has_tag("count"):
-                            words[index] = rephrase(definition, "pl")
+                            words[index] = inflection.inflect(definition, "pl")
                         else:
-                            words[index] = definition
+                            words[index] = inflection.inflect(definition, "mass")
                     elif word == "%!pl":
-                        words[index] = rephrase(definition, "pl")
+                        words[index] = inflection.inflect(definition, "pl")
 
                 definition = " ".join(words)
 
@@ -432,7 +437,11 @@ class Word:
         while len(prefix_stack) > 0:
             definition = pop_prefix(self.morphs[self.size()-1], definition)
 
-        return definition
+        # Verbs not otherwise resolved become infinitives
+        if morph.get_type() == "verb":
+            return inflection.inflect(definition, "inf")
+        else:
+            return definition
     
     def entry(self):
         
@@ -442,45 +451,7 @@ class Word:
         entry = composed + " " + tag + "\n" + definition
         return entry
     
-# Helpers
-
-def is_vowel(letter):
-    return letter in ["a", "i", "e", "o", "u"]
-
-def is_consonant(letter):
-    return not is_vowel(letter)
-
 # Word post-processing
-
-def rephrase(string, mode):
-    
-    words = string.split(" ")    
-    tags = tag(string)
-
-    for i, curtag in enumerate(tags):
-          
-        if (mode in ["ppart", "part", "3sg"]) and (len(tags) == 1 or "VB" in curtag or "VBZ" in curtag or "VBG" in curtag):
-            index = words.index(curtag[0])
-            words[index] = conjugate(words[index], mode)
-
-            if "VB" in curtag:
-                del words[index-1]
-
-            break
-            
-        elif mode == "sg" and ("NNS" in curtag or len(tags) == 1):
-            index = words.index(curtag[0])
-            
-            if not "NN" in curtag:
-                words[index] = singularize(words[index])
-                
-            words.insert(index, "a")
-            
-        elif mode == "pl" and ("NN" in curtag or (not "NNS" in curtag and len(tags) == 1)):
-            index = words.index(curtag[0])
-            words[index] = pluralize(words[index])
-    
-    return " ".join(words)
 
 def check_req(morph, last_morph):
     
