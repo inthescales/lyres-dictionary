@@ -140,25 +140,25 @@ class Morph:
         
         return form
     
-    def get_definition(self):
+    def get_gloss(self):
 
         # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
-        if self.prev and ((self.prev.get_type() == "noun" and self.prev.prev and self.prev.prev.get_type() == "prep" ) or (self.get_type() == "verb" and self.prev.get_type() == "prep")) and "definition-relative" in self.morph:
-            return self.morph["definition-relative"]
+        if self.prev and ((self.prev.get_type() == "noun" and self.prev.prev and self.prev.prev.get_type() == "prep" ) or (self.get_type() == "verb" and self.prev.get_type() == "prep")) and "gloss-relative" in self.morph:
+            return self.morph["gloss-relative"]
         
-        if "definition" in self.morph:
-            if self.morph["type"] in ["noun", "verb"] and len(self.morph["definition"].split(" ")) == 1:
-                return "[" + self.morph["definition"] + "]"
+        if "gloss" in self.morph:
+            if self.morph["type"] in ["noun", "verb"] and len(self.morph["gloss"].split(" ")) == 1:
+                return "[" + self.morph["gloss"] + "]"
             else:
-                return self.morph["definition"]
+                return self.morph["gloss"]
         else:
             
             if self.next:
-                if "definition-link" in self.morph:
-                    return self.morph["definition-link"]
+                if "gloss-link" in self.morph:
+                    return self.morph["gloss-link"]
             else:
-                if "definition-final" in self.morph:
-                    return self.morph["definition-final"]
+                if "gloss-final" in self.morph:
+                    return self.morph["gloss-final"]
             
 
             if self.get_type() == "prep" or self.get_type() == "prefix":
@@ -166,10 +166,10 @@ class Morph:
             else:
                 relative = self.prev
 
-            if relative and "definition-" + relative.get_type() in self.morph:
-                return self.morph["definition-" + relative.get_type()]
+            if relative and "gloss-" + relative.get_type() in self.morph:
+                return self.morph["gloss-" + relative.get_type()]
         
-        print("ERROR - failed to find definition for " + self.morph["key"])
+        print("ERROR - failed to find gloss for " + self.morph["key"])
         
     def get_type(self):
         
@@ -380,8 +380,8 @@ class Word:
 
         def build_def(morph, last_morph, definition):
 
-            part = morph.get_definition()
-
+            part = morph.get_gloss()
+            
             if last_morph == None:
                 definition = part
             else:
