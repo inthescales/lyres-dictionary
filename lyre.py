@@ -3,7 +3,7 @@ import getopt
 import sys
 
 from src.morphary import Morphary
-from src.generator import Word, Morph
+from src.generator import generate_word
 import src.validator as validator
 
 def setup():
@@ -26,8 +26,7 @@ def generate_entry():
     
     # Generate until we have a valid entry
     while True:
-        word = Word(morphary)
-        word.grow_to_size(random.randint(2,3))
+        word = generate_word(morphary)
         entry = word.entry()
         
         if validator.validate(entry):

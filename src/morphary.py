@@ -63,6 +63,10 @@ def validate_morph(morph):
     if not "type" in morph:
         print(" - type is missing")
         return False
+
+    if not "origin" in morph:
+        print(" - origin is missing")
+        return False
     
     morph_type = morph["type"]
     

@@ -3894,7 +3894,8 @@
         "type": "verb",
         "gloss": "[carry] out",
         "tags": ["transitive", "no-prep"],
-        "origin": "french"
+        "origin": "latin",
+	"notes": "Was tagged with French, changed to function here"
     },
     {
         "key": "perpetua",
