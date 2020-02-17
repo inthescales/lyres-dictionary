@@ -257,7 +257,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": "al"
+                    "precedes": ["al"]
                 },
                 "link": "arbore"
             }
@@ -1120,7 +1120,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": "or"
+                    "precedes": ["or"]
                 },
                 "link": "debt"
             }
@@ -2561,7 +2561,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": "or"
+                    "precedes": ["or"]
                 },
                 "link": "jur"
             }
@@ -2904,7 +2904,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": "ous"
+                    "precedes": ["ous"]
                 },
                 "link": "ligne"
             }
@@ -4646,7 +4646,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": "ble"
+                    "precedes": ["ble"]
                 },
                 "link": "prehensi"
             }
@@ -5795,7 +5795,7 @@
         "exception": [
             {
                 "case": {
-                    "precedes": "or"
+                    "precedes": ["or"]
                 },
                 "link": "tut"
             }

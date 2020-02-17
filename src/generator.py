@@ -10,3 +10,8 @@ def generate_word(morphary):
     while word.size() < 2:
         transforms.transform_word(word, morphary)
     return word
+
+def word_for_keys(keys, morphary):
+    word = Word(morphary)
+    word.set_keys(keys)
+    return word

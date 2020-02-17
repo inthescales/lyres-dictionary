@@ -3,7 +3,7 @@ import getopt
 import sys
 
 from src.morphary import Morphary
-from src.generator import generate_word
+from src.generator import generate_word, word_for_keys
 import src.validator as validator
 
 def setup():
@@ -38,8 +38,7 @@ def entry_for_keys(keys):
     if needs_setup():
         setup()
         
-    word = Word(morphary)
-    word.set_keys(keys)
+    word = word_for_keys(keys, morphary)
     
     return word.entry()
 
