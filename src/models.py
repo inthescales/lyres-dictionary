@@ -51,6 +51,11 @@ class Morph:
                         if self.prev.morph["key"] == element:
                             apply(exception)
                             return
+                        
+                if "final_or_semifinal_l" in case and self.prev:
+                    if helpers.l_in_last_two(self.prev.morph["link"]):
+                        apply(exception)
+                        return
     
     def get_form(self):
         

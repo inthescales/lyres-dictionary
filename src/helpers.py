@@ -36,6 +36,20 @@ def is_vowel(letter):
 def is_consonant(letter):
     return not is_vowel(letter)
 
+def l_in_last_two(word):
+    state = 0
+    prev = None
+    for char in word[::-1]:
+        if char == "l":
+            return True
+        if prev != None and is_vowel(char) != is_vowel(prev):
+            state += 1
+        if state == 3:
+            return False
+        prev = char
+    return False
+        
+
 def indefinite_article_for(word):
     if is_vowel(word[0]):
         return "an"

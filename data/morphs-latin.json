@@ -6548,6 +6548,13 @@
                 },
                 "final": "ial",
                 "link": "ial"
+            },
+            {
+                "case": {
+                    "final_or_semifinal_l": true
+                },
+                "final": "ar",
+                "link": "ar"
             }
         ],
         "origin": "latin"
