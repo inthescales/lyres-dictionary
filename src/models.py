@@ -1,3 +1,5 @@
+import random
+
 from src.morphary import Morphary
 import src.inflection as inflection
 import src.helpers as helpers
@@ -139,6 +141,9 @@ class Morph:
         # The final morph form
         else:
            form = self.morph["final"]
+        
+        if type(form) == list:
+            form = random.choice(form)
         
         return form
     

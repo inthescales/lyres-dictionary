@@ -6898,10 +6898,10 @@
     {
         "key": "nce",
         "final": "nce",        
-	"link": "nti",
+        "link": "nti",
         "type": "derive",
-	"from": "verb",
-	"to": "noun",
+        "from": "verb",
+        "to": "noun",
         "participle-type": "present",
         "tags": ["stem-change"],
         "gloss-link": "the state of %part",
@@ -6909,12 +6909,29 @@
         "origin": "latin"
     },
     {
+        "key": "nd",
+        "final": ["nd", "ndum"],
+        "link": "ndi",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "present",
+        "tags": ["stem-change"],
+        "gloss": "something that must be %ppart",
+        "requires": {
+            "follows": {
+                "tags": ["transitive"]
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "nt",
         "final": "nt",
-	"link": "nti",
+        "link": "nti",
         "type": "derive",
-	"from": "verb",
-	"to": "adj",
+        "from": "verb",
+        "to": "adj",
         "participle-type": "present",
         "tags": ["stem-change"],
         "gloss": "%part",
