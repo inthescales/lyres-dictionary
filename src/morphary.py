@@ -51,7 +51,7 @@ class Morphary:
                                 self.morphs_from[from_type].append(morph["key"])
                                 
                 if errors > 0:
-                    print("Exiting with " + errors + " validation errors")
+                    print("Exiting with " + str(errors) + " validation errors")
                     exit(0)
 
 def validate_morph(morph):
@@ -71,16 +71,31 @@ def validate_morph(morph):
     morph_type = morph["type"]
     
     if morph_type == "noun":
-        if not "link" in morph:
-            print(" - noun lacks link form")
+        if not "link" in morph or not "declension" in morph:
+            print(" - noun must have 'link' and 'declension'")
             return False
         elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"])):
             print(" - noun must have tag 'count' or 'mass'")
             return False
+        elif morph["declension"] not in [0, 1, 2, 3, 4, 5]:
+            print(" - invalid declension '" + str(morph["declension"]) + "'")
+            return False
     
+    elif morph_type == "adj":
+        if not "link" in morph or not "declension" in morph:
+            print(" - adjective must have 'link' and 'declension'")
+            return False
+        elif morph["declension"] not in [0, 12, 3]:
+            print(" - invalid declension '" + str(morph["declension"]) + "'")
+            return False
+        
     elif morph_type == "verb":
-        if not ("link-present" in morph and "link-perfect" in morph and "final" in morph):
-            print(" - verbs require 'link-present', 'link-perfect', and 'final'")
+        if not ("link-present" in morph and "link-perfect" in morph and "final" in morph and "conjugation" in morph):
+            print(" - verbs require 'link-present', 'link-perfect', 'final', and 'conjugation'")
+            return False
+        
+        if morph["conjugation"] not in [0, 1, 2, 3, 4]:
+            print(" - invalid conjugation '" + str(morph["conjugation"]) + "'")
             return False
     
     elif morph_type == "derive":
