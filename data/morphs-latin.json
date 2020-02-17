@@ -1928,7 +1928,7 @@
         "final": "frustrate",
         "type": "verb",
         "conjugation": 1,
-        "gloss": "disappoint",
+        "gloss": "hamper",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -2351,7 +2351,7 @@
     },
     {
         "key": "imago",
-        "link": "imag",
+        "link": "imagin",
         "type": "noun",
         "declension": 3,
         "gloss": "image",
@@ -2578,15 +2578,6 @@
         "origin": "latin"
     },
     {
-        "key": "kalendarium",
-        "link": "calendr",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "calendar",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    },
-    {
         "key": "labi",
         "link-present": "labi",
         "link-perfect": "laps",
@@ -2674,7 +2665,8 @@
         "declension": 4,
         "gloss": "lake",
         "tags": ["count", "concrete", "terrain"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Form ending in -tr is irregular"
     },
     {
         "key": "laedere",
@@ -2903,7 +2895,7 @@
         "origin": "latin"
     },
     {
-        "key": "lignus",
+        "key": "lignum",
         "link": "lign",
         "type": "noun",
         "declension": 2,
@@ -5295,7 +5287,7 @@
         "origin": "latin"
     },
     {
-        "key": "simila",
+        "key": "similis",
         "link": "simil",
         "type": "adj",
         "declension": 3,
@@ -5391,7 +5383,7 @@
         "origin": "latin"
     },
     {
-        "key": "sperere",
+        "key": "sperare",
         "link-present": "spera",
         "link-perfect": "sperat",
         "final": "sper",
@@ -5594,7 +5586,7 @@
     {
         "key": "tegere",
         "link-present": "tege",
-        "link-perfect": "tection",
+        "link-perfect": "tect",
         "final": "tect",
         "type": "verb",
         "conjugation": 3,
@@ -6924,11 +6916,11 @@
     {
         "key": "nt-n",
         "final": "nt",
-	"link": "nti",
+        "link": "nti",
         "type": "derive",
-	"from": "verb",
+        "from": "verb",
         "participle-type": "present",
-	"to": "noun",
+        "to": "noun",
         "tags": ["stem-change"],
         "gloss": "one who %3sg",
         "origin": "latin"

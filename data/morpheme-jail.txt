@@ -48,7 +48,6 @@
         "tags": ["intransitive"],
         "origin": "latin"
     },
-    
     {
         "base": "merx",
         "link": "merci",
@@ -57,7 +56,15 @@
         "tags": ["mass", "concrete"],
         "origin": "latin"
     },
-    
+    {
+        "key": "kalendarium",
+        "link": "calendr",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "calendar",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
     {
         "base": "discipulus",
         "link": "discipl",
