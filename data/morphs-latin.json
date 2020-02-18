@@ -6617,6 +6617,30 @@
         "origin": "latin"
     },
     {
+        "key": "culture",
+        "final": "iculture",
+        "link": "icultur",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "gloss": "the cultivation of %pl",
+        "requires": {
+            "follows": {
+                "tags": ["living"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "tags": ["animal", "person"]
+                }
+            },
+            "gloss": "the rearing of %pl"
+        }],
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "esce",
         "link-present": "esce",
         "link-perfect": "escat",
@@ -6788,7 +6812,7 @@
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
-                "tags": ["living"]
+                "tags": ["living", "terrain"]
             }
         },
         "origin": "latin"

@@ -49,10 +49,17 @@ class Morph:
                             return
 
                 if "follows" in case and self.prev:
-                    for element in case["follows"]:
-                        if self.prev.morph["key"] == element:
-                            apply(exception)
-                            return
+                    if type(case["follows"]) == list:
+                        for element in case["follows"]:
+                            if self.prev.morph["key"] == element:
+                                apply(exception)
+                                return
+                    elif type(case["follows"]) == dict:
+                        if "tags" in case["follows"]:
+                            for tag in case["follows"]["tags"]:
+                                if self.prev.has_tag(tag):
+                                    apply(exception)
+                                    return
                         
                 if "final_or_semifinal_l" in case and self.prev:
                     if helpers.l_in_last_two(self.prev.morph["link"]):
