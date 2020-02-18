@@ -42,6 +42,8 @@ def l_in_last_two(word):
     for char in word[::-1]:
         if char == "l":
             return True
+        elif char == "r":
+            return False
         if prev != None and is_vowel(char) != is_vowel(prev):
             state += 1
         if state == 3:
