@@ -7001,6 +7001,25 @@
         "origin": "latin"
     },
     {
+        "key": "ity",
+        "final": "ity",
+        "link": "iti",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "i"
+                }
+            },
+            "link": "eti",
+            "final": "ety"
+        }],
+        "gloss": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
         "key": "ive",
         "final": "ive",
         "link": "iv",
