@@ -6995,9 +6995,10 @@
         "final": "itude",
         "link": "itudin",
         "type": "derive",
-        "from": "adj",
+        "from": "adj,noun",
         "to": "noun",
-        "gloss": "the quality of being %@",
+        "gloss-adj": "the quality of being %@",
+        "gloss-noun": "the state or quality of being %sg",
         "origin": "latin"
     },
     {
