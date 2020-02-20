@@ -73,8 +73,9 @@ def transform_word_latin(word, morphary):
         if last_morph.morph["key"] in choices:
             valid_choices.remove(last_morph.morph["key"])
         for choice in choices:
-            if not check_req(morphary.morph_for_key[choice], last_morph):
+            if not check_req(morphary.morph_for_key[choice], { "preceding": last_morph.morph } ):
                 valid_choices.remove(choice)
+                #print("Refused to join " + last_morph.morph["key"] + " - " + choice)
 
         choice = random.choice(valid_choices)
         new_morph = Morph(choice, morphary)

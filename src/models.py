@@ -1,5 +1,6 @@
 import random
 
+from src.expressions import evaluate_expression
 from src.morphary import Morphary
 import src.inflection as inflection
 import src.helpers as helpers
@@ -43,26 +44,12 @@ class Morph:
                 case = exception["case"]
 
                 if "precedes" in case and self.next:
-                    for element in case["precedes"]:
-                        if self.next.morph["key"] == element:
-                            apply(exception)
-                            return
+                    if evaluate_expression(case["precedes"], self.next.morph):
+                        apply(exception)
+                        return
 
                 if "follows" in case and self.prev:
-                    if type(case["follows"]) == list:
-                        for element in case["follows"]:
-                            if self.prev.morph["key"] == element:
-                                apply(exception)
-                                return
-                    elif type(case["follows"]) == dict:
-                        if "tags" in case["follows"]:
-                            for tag in case["follows"]["tags"]:
-                                if self.prev.has_tag(tag):
-                                    apply(exception)
-                                    return
-                        
-                if "final_or_semifinal_l" in case and self.prev:
-                    if helpers.l_in_last_two(self.prev.morph["link"]):
+                    if evaluate_expression(case["follows"], self.prev.morph):
                         apply(exception)
                         return
     
@@ -412,20 +399,28 @@ class Word:
 
 # Morph Helpers ===============================
 
-def check_req(morph, last_morph):
+def check_req(morph, referents):
     
-    if "requires" in morph:
+    # No requirements to check, it's ok
+    if not "requires" in morph:
+        return True
+    
+    requirements = morph["requires"]
+    keys = requirements.keys()
+    if len(keys) != 1:
+        print("Error: currently, requirement can only have one referent child")
+        sys.exit(1)
         
-        if "follows" in morph["requires"]:
-            
-            if not last_morph:
-                return False
-            
-            if "tags" in morph["requires"]["follows"]:
-                
-                for tag in morph["requires"]["follows"]["tags"]:
-                    
-                    if not last_morph.has_tag(tag):
-                        return False
+    if "precedes" in keys:
+        if not "following" in referents:
+            print("Error: precedes block but no following morph given")
+            sys.exit(1)
+        
+        return evaluate_expression(requirements["precedes"], referents["preceding"])
     
-    return True
+    if "follows" in keys:
+        if not "preceding" in referents:
+            print("Error: follows block but no following morph given")
+            sys.exit(1)
+
+        return evaluate_expression(requirements["follows"], referents["preceding"])

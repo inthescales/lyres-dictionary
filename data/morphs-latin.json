@@ -257,7 +257,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["al"]
+                    "precedes": {
+                        "has-key": "al"
+                    }
                 },
                 "link": "arbore"
             }
@@ -537,7 +539,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "capa"
             }
@@ -719,7 +723,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "cepti"
             }
@@ -1120,7 +1126,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["or"]
+                    "precedes": {
+                        "has-key": "or"
+                    }
                 },
                 "link": "debt"
             }
@@ -1180,7 +1188,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "dicta"
             }
@@ -1618,7 +1628,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "fera"
             }
@@ -1738,7 +1750,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "flexi"
             }
@@ -2561,7 +2575,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["or"]
+                    "precedes": {
+                        "has-key": "or"
+                    }
                 },
                 "link": "jur"
             }
@@ -2904,7 +2920,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["ous"]
+                    "precedes": {
+                        "has-key": "ous"
+                    }
                 },
                 "link": "ligne"
             }
@@ -3312,7 +3330,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "mersi"
             }
@@ -3407,7 +3427,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "missi"
             }
@@ -3513,7 +3535,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "mova"
             }
@@ -4476,7 +4500,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "pleta"
             }
@@ -4537,7 +4563,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "posa"
             }
@@ -4646,7 +4674,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "prehensi"
             }
@@ -4876,7 +4906,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "quira"
             }
@@ -5649,7 +5681,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "taina"
             }
@@ -5795,7 +5829,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["or"]
+                    "precedes": {
+                        "has-key": "or"
+                    }
                 },
                 "link": "tut"
             }
@@ -5941,7 +5977,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "versi"
             }
@@ -5983,7 +6021,9 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "visi"
             }
@@ -6035,7 +6075,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["nt", "nt-n", "nce"]
+                    "precedes": {
+                        "has-key": ["nt", "nt-n", "nce"]
+                    }
                 },
                 "link": "viole"
             }
@@ -6070,7 +6112,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["etum"]
+                    "precedes": {
+                        "has-key": "etum"
+                    }
                 },
                 "link": "vitic"
             }
@@ -6544,14 +6588,18 @@
         "exception": [
             {
                 "case": {
-                    "follows": ["or", "nt", "nt-n", "nce"]
+                    "follows": {
+                        "has-key": ["or", "nt", "nt-n", "nce"]
+                    }
                 },
                 "final": "ial",
                 "link": "ial"
             },
             {
                 "case": {
-                    "final_or_semifinal_l": true
+                    "follows": {
+                        "final_or_semifinal_l": true
+                    }
                 },
                 "final": "ar",
                 "link": "ar"
@@ -6571,14 +6619,18 @@
         "exception": [
            {
                "case": {
-                   "follows": ["or"]
+                   "follows": {
+                       "has-key": "or"
+                   }
                },
                "final": "y",
                "link": "i"
            },
            {
                "case": {
-                   "follows": ["nt", "nt-n", "nce"]
+                   "follows": {
+                       "has-key": ["nt", "nt-n", "nce"]
+                   }
                },
                "final": "iary",
                "link": "iari"
@@ -6611,7 +6663,7 @@
         "gloss": "able to be %ppart",
         "requires": {
             "follows": {
-                "tags": ["transitive"]
+                "has-tag": "transitive"
             }
         },
         "origin": "latin"
@@ -6632,7 +6684,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "tags": ["animal", "person"]
+                    "has-any-tags": ["animal", "person"]
                 }
             },
             "gloss": "the rearing of %pl"
@@ -6661,7 +6713,7 @@
         "gloss": "[place] where %pl are grown",
         "requires": {
             "follows": {
-                "tags": ["plant"]
+                "has-tag": "plant"
             }
         },
         "origin": "latin"
@@ -6676,7 +6728,7 @@
         "gloss": "the act of killing %sg",
         "requires": {
             "follows": {
-                "tags": ["living"]
+                "has-tag": "living"
             }
         },
         "origin": "latin"
@@ -6691,7 +6743,7 @@
         "gloss": "having the shape of %sg",
         "requires": {
             "follows": {
-                "tags": ["count", "concrete"]
+                "has-all-tags": ["count", "concrete"]
             }
         },
         "origin": "latin"
@@ -6706,7 +6758,7 @@
         "gloss": "one who brings %pl",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
+                "has-tag": "concrete"
             }
         },
         "tags": ["count", "concrete"],
@@ -6722,7 +6774,7 @@
         "gloss": "carrying %pl",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
+                "has-tag": "concrete"
             }
         },
         "origin": "latin"
@@ -6741,13 +6793,17 @@
         "exception": [
             { 
                 "case": {
-                    "precedes": ["or"]
+                    "precedes": {
+                        "has-key": "or"
+                    }
                 },
                 "link": "ifact"
             },
             {
                 "case": {
-                    "precedes": ["ble"]
+                    "precedes": {
+                        "has-key": "ble"
+                    }
                 },
                 "link": "ifica"
             }
@@ -6766,7 +6822,7 @@
         "gloss": "one who carries %pl",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
+                "has-tag": "concrete"
             }
         },
         "tags": ["count", "concrete"],
@@ -6782,7 +6838,7 @@
         "gloss": "carrying %pl",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
+                "has-tag": "concrete"
             }
         },
         "origin": "latin"
@@ -6797,7 +6853,7 @@
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
-                "tags": ["living"]
+                "has-tag": "living"
             }
         },
         "origin": "latin"
@@ -6812,7 +6868,7 @@
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
-                "tags": ["living", "terrain"]
+                "has-any-tag": ["living", "terrain"]
             }
         },
         "origin": "latin"
@@ -6830,7 +6886,9 @@
         "exception": [
             {
                 "case": {
-                    "precedes": ["ous"]
+                    "precedes": {
+                        "has-key": "ous"
+                    }
                 },
                 "link": "i"
             }
@@ -6878,7 +6936,7 @@
         "gloss": "one who eats %pl",
         "requires": {
             "follows": {
-                "tags": ["concrete"]
+                "has-tag": "concrete"
             }
         },
         "origin": "latin"
@@ -6944,7 +7002,7 @@
         "gloss": "something that must be %ppart",
         "requires": {
             "follows": {
-                "tags": ["transitive"]
+                "has-tag": "transitive"
             }
         },
         "origin": "latin"
