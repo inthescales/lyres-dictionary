@@ -50,7 +50,19 @@ def l_in_last_two(word):
             return False
         prev = char
     return False
-        
+
+def syllable_count(word):
+    count = 0
+    state = 0
+    prev = None
+    for char in word[::-1]:
+        if is_vowel(char) and (prev == None or not is_vowel(prev)):
+            state = 1
+            count += 1
+        elif is_consonant(char) and (prev == None or not is_vowel(prev)):
+            state = 0
+        prev = char
+    return count
 
 def indefinite_article_for(word):
     if is_vowel(word[0]):

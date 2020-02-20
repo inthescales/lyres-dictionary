@@ -7015,6 +7015,15 @@
             },
             "link": "eti",
             "final": "ety"
+        },
+        {
+            "case": {
+                "follows": {
+                    "has-suffix": "t"
+                }
+            },
+            "link": "i",
+            "final": "y"
         }],
         "gloss": "the quality of being %@",
         "origin": "latin"
