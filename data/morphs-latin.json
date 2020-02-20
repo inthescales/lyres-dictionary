@@ -59,7 +59,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "air",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -236,6 +236,24 @@
         "type": "adj",
         "declension": 12,
         "gloss": "suited",
+        "origin": "latin"
+    },
+    {
+        "key": "aer",
+        "link": "aeri",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "air",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
+        "key": "aqua",
+        "link": "aque",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "water",
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -574,7 +592,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "flesh",
-        "tags": ["mass", "concrete", "bodypart"],
+        "tags": ["mass", "concrete", "bodypart", "material"],
         "origin": "latin"
     },
     {
@@ -698,6 +716,15 @@
         "conjugation": 1,
         "gloss": "cease",
         "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "ciner",
+        "link": "ciner",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "ashes",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -1388,15 +1415,6 @@
         "origin": "latin"
     },
     {
-        "key": "epigramma",
-        "link": "epigramm",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "epigram",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    },
-    {
         "key": "epistula",
         "link": "epistul",
         "type": "noun",
@@ -2081,7 +2099,7 @@
         "type": "noun",
         "declension": 5,
         "gloss": "ice",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {  
@@ -2144,7 +2162,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "herd",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "grouping"],
         "origin": "latin"
     },
     {
@@ -2277,7 +2295,7 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "tremble",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -2671,7 +2689,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "milk",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -2916,7 +2934,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "wood",
-        "tags": ["mass", "concrete", "living"],
+        "tags": ["mass", "concrete", "living", "material"],
         "exception": [
             {
                 "case": {
@@ -3178,7 +3196,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "pearl",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -3249,7 +3267,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "honey",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -3551,7 +3569,16 @@
         "type": "noun",
         "declension": 2,
         "gloss": "slime",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
+        "key": "muscus",
+        "link": "musc",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "moss",
+        "tags": ["mass", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {
@@ -4030,11 +4057,11 @@
         "type": "noun",
         "declension": 3,
         "gloss": "bone",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "material"],
         "origin": "latin"
     },
     {
-        "key": "os-bones",
+        "key": "os-remains",
         "link": "ossu",
         "type": "noun",
         "declension": 4,
@@ -4387,7 +4414,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "stone",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -4397,6 +4424,14 @@
         "declension": 1,
         "gloss": "ghost",
         "tags": ["count", "concrete", "person"],
+        "origin": "latin"
+    },
+    {
+        "key": "pia",
+        "link": "pi",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "pious",
         "origin": "latin"
     },
     {
@@ -5094,6 +5129,14 @@
         "origin": "latin"
     },
     {
+        "key": "sacra",
+        "link": "sacr",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sacred",
+        "origin": "latin"
+    },
+    {
         "key": "sacrare",
         "link-present": "secra",
         "link-perfect": "secrat",
@@ -5142,7 +5185,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "blood",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -6608,6 +6651,43 @@
         "origin": "latin"
     },
     {
+        "key": "an-animal",
+        "final": "an",
+        "link": "an",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "gloss": "having the nature of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "arium",
+        "final": ["arium", "ary"],
+        "link": "ari",
+        "type": "derive",
+        "from": "noun,adj",
+        "to": "noun",
+        "gloss-noun": "a place for %pl",
+        "gloss-adj": "a place where %@ things are kept",
+        "exception": [
+           {
+               "case": {
+                   "follows": {
+                       "has-key": ["nt", "nt-n", "nce"]
+                   }
+               },
+               "final": ["iarium", "iary"],
+               "link": "iari"
+           }
+        ],
+        "origin": "latin"
+    },
+    {
         "key": "ary",
         "final": "ary",
         "link": "ari",
@@ -6729,6 +6809,21 @@
         "requires": {
             "follows": {
                 "has-tag": "living"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "id-animal",
+        "final": "id",
+        "link": "id",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "gloss": "a member of the %sg family",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
             }
         },
         "origin": "latin"
@@ -6906,16 +7001,6 @@
         "origin": "latin"
     },
     {
-        "key": "ity",
-        "final": "ity",
-        "link": "iti",
-        "type": "derive",
-        "from": "adj",
-        "to": "noun",
-        "gloss": "the quality of being %@",
-        "origin": "latin"
-    },
-    {
         "key": "ive",
         "final": "ive",
         "link": "iv",
@@ -6978,8 +7063,23 @@
         "origin": "latin"
     },
     {
+        "key": "ous-material",
+        "final": "ous",
+        "link": "os",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "gloss": "made of or resembling %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "material"
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "nce",
-        "final": "nce",        
+        "final": ["nce", "ncy"],        
         "link": "nti",
         "type": "derive",
         "from": "verb",

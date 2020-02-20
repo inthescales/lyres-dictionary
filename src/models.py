@@ -123,7 +123,7 @@ class Morph:
                             form = self.morph["link-present"]
                         elif next_morph["participle-type"] == "perfect":
                             form = self.morph["link-perfect"]
-                    elif "link-verb" in morph:
+                    elif "link-verb" in self.morph:
                         form = self.morph["link-verb"]
                     else:
                         form = self.morph["link-perfect"]

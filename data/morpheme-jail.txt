@@ -149,6 +149,16 @@
         "origin": "latin"
     },
     
+    {
+        "key": "epigramma",
+        "link": "epigramm",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "epigram",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    
     # Uninteresting
     
     {
