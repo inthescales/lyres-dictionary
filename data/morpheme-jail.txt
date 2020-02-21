@@ -1,3 +1,19 @@
+    # Try again with Greek
+    {
+        "key": "ize",
+        "link-present": "iza",
+        "link-perfect": "izat",
+        "final": "ize",
+        "type": "derive",
+        "from": ["noun", "adj"],
+        "to": "verb",
+        "gloss-noun": "[make] into %sg",
+        "gloss-adj": "[make] %@",
+        "gloss-relative": "[make] %@",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    
     # bad results
     {
         "base": "ism",

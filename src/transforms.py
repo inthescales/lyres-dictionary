@@ -105,7 +105,7 @@ def transform_word_latin(word, morphary):
         if last_morph.has_tag("concrete"):
             prep_choices += ["sub", "super", "infra", "supra"]
         prep_morph = Morph(random.choice(prep_choices), morphary)
-        end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify", "ize"]), morphary )
+        end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify"]), morphary )
         word.add_affixes(prep_morph, end_morph)
     
     # Numerical

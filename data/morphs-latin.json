@@ -311,7 +311,7 @@
         "final": "argue",
         "type": "verb",
         "conjugation": 3,
-        "gloss": "[make] known",
+        "gloss": "argue",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -5781,7 +5781,7 @@
         "key": "tolerare",
         "link-present": "tolera",
         "link-perfect": "tolerat",
-        "final": "tort",
+        "final": "tolerate",
         "type": "verb",
         "conjugation": 1,
         "gloss": "tolerate",
@@ -6732,6 +6732,22 @@
         "origin": "latin"
     },
     {
+        "key": "ate-bodypart",
+        "link-present": "ata",
+        "link-perfect": "at",
+        "final": "ate",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart"
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "ble",
         "final": "ble",
         "link": "bil",
@@ -6809,6 +6825,21 @@
         "requires": {
             "follows": {
                 "has-tag": "living"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "icule",
+        "final": ["icule", "icle"],
+        "link": "icul",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "gloss": "a small %sg",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["count", "concrete"]
             }
         },
         "origin": "latin"
@@ -6954,6 +6985,25 @@
         "origin": "latin"
     },
     {
+        "key": "ile-verb",
+        "final": "ile",
+        "link": "il",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "perfect",
+        "gloss": "able %inf",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "transitive"
+                }
+            },
+            "gloss": "able to be %ppart"
+        }],
+        "origin": "latin"
+    },
+    {
         "key": "ine",
         "final": "ine",
         "link": "in",
@@ -7056,20 +7106,6 @@
         "origin": "latin"
     },
     {
-        "key": "ize",
-        "link-present": "iza",
-        "link-perfect": "izat",
-        "final": "ize",
-        "type": "derive",
-        "from": ["noun", "adj"],
-        "to": "verb",
-        "gloss-noun": "[make] into %sg",
-        "gloss-adj": "[make] %@",
-        "gloss-relative": "[make] %@",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    {
         "key": "or",
         "final": "or",
         "link": "or",
@@ -7079,6 +7115,16 @@
         "participle-type": "perfect",
         "gloss": "one who %3sg",
         "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "key": "orium",
+        "final": ["orium", "ory"],
+        "link": "ori",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "gloss-verb": "a place where one %3sg",
         "origin": "latin"
     },
     {

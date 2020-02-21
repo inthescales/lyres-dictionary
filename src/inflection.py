@@ -2,7 +2,7 @@ import src.helpers as helpers
 import lemminflect
 
 def inflect(string, mode):
-
+    
     words = string.split(" ")    
     for i, word in enumerate(words):
         if word[0] == "[" and word[-1] == "]":
@@ -11,7 +11,7 @@ def inflect(string, mode):
             continue
 
         # Local checking for forms 3rd party library does wrong
-        override = override_inflection(string, mode)
+        override = override_inflection(words[i], mode)
         if override != None:
             return override  
         
@@ -37,10 +37,11 @@ def inflect(string, mode):
     return " ".join(words)
 
 def override_inflection(string, mode):
-
     if string == "do":
         if mode == "3sg":
             return "does"
+        elif mode == "ppart":
+            return "done"
     elif string == "two":
         if mode == "pl":
             return "twos"

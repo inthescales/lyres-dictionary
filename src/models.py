@@ -344,6 +344,8 @@ class Word:
                         words[index] = inflection.inflect(definition, "ppart")
                     elif word == "%3sg":
                         words[index] = inflection.inflect(definition, "3sg")
+                    elif word == "%inf":
+                        words[index] = inflection.inflect(definition, "inf")
                     elif word == "%sg":
                         if last_morph.has_tag("count"):
                             words[index] = inflection.inflect(definition, "sg")
