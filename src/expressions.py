@@ -55,10 +55,12 @@ def evaluate_expression(expression, referent):
         return helpers.l_in_last_two(referent["link"])
         
 def evaluate_key(key, comparand):
-    if type(key) == str:
+    if isinstance(key, str):
         return comparand == key
-    elif type(key) == list:
+    
+    elif isinstance(key, list):
         return comparand in key
+    
     else:
         print("Error: bad value in key comparison")
         sys.exit(1)
@@ -81,13 +83,16 @@ def evaluate_any_tags(tags, referent_tags):
     return False
 
 def evaluate_suffix(suffix, form):
-    if type(suffix) == str:
-        length = len(suffix)
-        return form[-length] == suffix
-    elif type(suffix) == list:
+    if isinstance(suffix, str):
+        return form.endswith(suffix)
+    
+    elif isinstance(suffix, list):
         for cur in suffix:
-            length = len(suffix)
-            return form[-length] == suffix
+            if form.endswith(suffix):
+                return True
+            
+        return False
+    
     else:
         print("Error: bad value for has-suffix:")
         print(suffix)

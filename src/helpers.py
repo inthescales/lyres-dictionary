@@ -56,10 +56,10 @@ def syllable_count(word):
     state = 0
     prev = None
     for char in word[::-1]:
-        if is_vowel(char) and (prev == None or not is_vowel(prev)):
+        if is_vowel(char) and (prev is None or not is_vowel(prev)):
             state = 1
             count += 1
-        elif is_consonant(char) and (prev == None or not is_vowel(prev)):
+        elif is_consonant(char) and (prev is None or not is_vowel(prev)):
             state = 0
         prev = char
     return count

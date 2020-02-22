@@ -15,7 +15,7 @@ class Morph:
         self.refreshMorph()
         
     def __eq__(self, other):
-        if other == None:
+        if other is None:
             return False
         
         return self.morph["key"] == other.morph["key"]
@@ -136,7 +136,7 @@ class Morph:
         else:
            form = self.morph["final"]
         
-        if type(form) == list:
+        if isinstance(form, list):
             form = random.choice(form)
         
         return form
@@ -328,7 +328,7 @@ class Word:
 
             part = morph.get_gloss()
             
-            if last_morph == None:
+            if last_morph is None:
                 definition = part
             else:
 

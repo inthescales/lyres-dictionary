@@ -42,7 +42,7 @@ class Morphary:
                             self.roots.append(morph)
 
                     else:
-                        if type(morph["from"]) == str:
+                        if isinstance(morph["from"], str):
                             from_types = [morph["from"]]
                         else:
                             from_types = morph["from"]
