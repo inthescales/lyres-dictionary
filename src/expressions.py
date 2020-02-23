@@ -37,6 +37,8 @@ def evaluate_expression(expression, referent):
     # Morph operations
     elif key == "has-key":
         return evaluate_key(value, referent["key"])
+    elif key == "has-type":
+        return evaluate_type(value, referent["type"])
     elif key == "has-tag":
         return evaluate_tag(value, referent["tags"])
     elif key == "has-all-tags":
@@ -63,6 +65,17 @@ def evaluate_key(key, comparand):
     
     else:
         print("Error: bad value in key comparison")
+        sys.exit(1)
+        
+def evaluate_type(type_, comparand):
+    if isinstance(type_, str):
+        return comparand == type_
+    
+    elif isinstance(type_, list):
+        return comparand in type_
+    
+    else:
+        print("Error: bad value in type comparison")
         sys.exit(1)
         
 def evaluate_tag(tag, referent_tags):

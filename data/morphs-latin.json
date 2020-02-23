@@ -497,13 +497,49 @@
         "key": "cadere",
         "link-present": "cade",
         "link-perfect": "cas",
-        "final": "cide",
+        "final": "cade",
         "type": "verb",
         "conjugation": 3,
         "gloss": "fall",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "cide",
+                "link-perfect": "cas",
+                "final": "cide"
+            }
+        ],
         "tags": ["intransitive", "motion"],
         "origin": "latin",
-        "notes": "decadent / incident? Chose randomly (occident also goes here)"
+        "notes": "Exception decision doesn't handle 'decadent'"
+    },
+    {
+        "key": "caedere",
+        "link-present": "cede",
+        "link-perfect": "ces",
+        "final": "cese",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "cut",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "cide",
+                "link-perfect": "cis",
+                "final": "cise"
+            }
+        ],
+        "tags": ["intransitive", "motion"],
+        "origin": "latin",
+        "notes": "'e' in prepositionless forms is my guess based on 'ae'->'e' sound change."
     },
     {
         "key": "camera",
@@ -548,25 +584,26 @@
     },
     {
         "key": "capere",
-        "link-present": "cipi",
+        "link-present": "capi",
         "link-perfect": "capt",
-        "final": "ceive",
+        "final": ["cept", "ceive"],
         "type": "verb",
         "conjugation": 3,
         "gloss": "seize",
         "exception": [
-            { 
+            {
                 "case": {
-                    "precedes": {
-                        "has-key": "ble"
+                    "follows": {
+                        "has-type": "prep"
                     }
                 },
-                "link": "capa"
+                "link-present": "cipi",
+                "link-perfect": "cept",
+                "final": ["cept", "ceive"]
             }
         ],
         "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "capere vs cipere. intercept / interception, receive / reception, perceive / perception, inception / incipient, capture / captive / captor, deceive / deception / deceptive, accept / acceptance, susceptible, except, capable, conceive/ conception"
+        "origin": "latin"
     },
     {
         "key": "caput",
@@ -1496,12 +1533,24 @@
     },
     {
         "key": "facere",
-        "link-present": "fici",
+        "link-present": "faci",
         "link-perfect": "fact",
-        "final": "fect",
+        "final": "fact",
         "type": "verb",
         "conjugation": 3,
         "gloss": "make",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "fici",
+                "link-perfect": "fect",
+                "final": ["fect"]
+            }
+        ],
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "also 'fit', in benefit or profit."
@@ -2200,12 +2249,23 @@
     },
     {
         "key": "habere",
-        "link-present": "hibita",
-        "link-perfect": "hibit",
+        "link-present": "habe",
+        "link-perfect": "habit",
         "final": "hibit",
         "type": "verb",
         "conjugation": 2,
         "gloss": "hold",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "hibe",
+                "link-perfect": "hibit"
+            }
+        ],
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -2530,11 +2590,23 @@
     {
         "key": "jacere",
         "link-present": "jace",
-        "link-perfect": "ject",
-        "final": "ject",
+        "link-perfect": "jact",
+        "final": "jact",
         "type": "verb",
         "conjugation": 3,
         "gloss": "throw",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "jace",
+                "link-perfect": "ject",
+                "final": "ject"
+            }
+        ],
         "tags": ["transitive", "motion"],
         "origin": "latin"
     },
@@ -3892,17 +3964,6 @@
         "type": "adj",
         "declension": 12,
         "gloss": "dark",
-        "origin": "latin"
-    },
-    {
-        "key": "occidere",
-        "link-present": "occide",
-        "link-perfect": "occis",
-        "final": "occide",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "sink",
-        "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
     {
