@@ -1,5 +1,6 @@
-import src.helpers as helpers
 import sys
+
+import src.helpers as helpers
 
 def evaluate_expression(expression, referent):
     if len(expression.keys()) != 1:

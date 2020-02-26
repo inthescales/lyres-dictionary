@@ -1,5 +1,4 @@
 import random
-
 from src.expressions import evaluate_expression
 from src.morphary import Morphary
 import src.inflection as inflection

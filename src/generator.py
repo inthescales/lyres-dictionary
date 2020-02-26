@@ -1,7 +1,7 @@
 import random
-from src.morphary import Morphary
-from src.models import Morph, Word
 import src.helpers as helpers
+from src.models import Morph, Word
+from src.morphary import Morphary
 import src.transforms as transforms
 
 def generate_word(morphary):

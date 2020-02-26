@@ -1,7 +1,7 @@
 import random
-from src.morphary import Morphary
-from src.models import Morph, Word, check_req
 import src.helpers as helpers
+from src.models import Morph, Word, check_req
+from src.morphary import Morphary
 
 def seed_word(word, morphary):
     word.morphs = [get_latin_root(morphary)]

@@ -1,5 +1,5 @@
-import src.helpers as helpers
 import lemminflect
+import src.helpers as helpers
 
 def inflect(string, mode):
     
