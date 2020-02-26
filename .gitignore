@@ -1,0 +1,19 @@
+# Compiled Files etc
+*.pyc
+*__pycache__*
+
+# System and editor files
+*.DS_Store
+*~
+
+# Scratch and suspended morphs
+morpheme_jail
+test_morphs.json
+morphs-greek.json
+
+# Ad-hoc tools
+helpers
+
+# Deployment files
+botbuddy.py*
+creds.json
