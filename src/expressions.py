@@ -47,6 +47,8 @@ def evaluate_expression(expression, referent):
         return evaluate_any_tags(value, referent["tags"])
     elif key == "has-suffix":
         return evaluate_suffix(value, referent["link"])
+    elif key == "has-conjugation":
+        return evaluate_conjugation(value, referent["conjugation"])
     elif key == "even-syllables":
         return evaluate_even_syllables(referent["link"])
     elif key == "odd-syllables":
@@ -109,6 +111,21 @@ def evaluate_suffix(suffix, form):
     else:
         print("Error: bad value for has-suffix:")
         print(suffix)
+        sys.exit(1)
+        
+def evaluate_conjugation(acceptable, conjugation):
+    if conjugation is None:
+        print("Error: referent lacks conjugation")
+        sys.exit(1)
+        
+    if isinstance(acceptable, str):
+        return conjugation == acceptable
+    
+    elif isinstance(acceptable, list):
+        return conjugation in acceptable
+    
+    else:
+        print("Error: Bad value for has-conjugation")
         sys.exit(1)
     
 def evaluate_even_syllables(form):

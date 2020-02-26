@@ -2602,7 +2602,6 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "jace",
                 "link-perfect": "ject",
                 "final": "ject"
             }
@@ -6835,7 +6834,7 @@
         "gloss": "the cultivation of %pl",
         "requires": {
             "follows": {
-                "tags": ["living"]
+                "has-tag": "living"
             }
         },
         "exception": [{
@@ -7074,7 +7073,7 @@
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
-                "has-any-tag": ["living", "terrain"]
+                "has-any-tags": ["living", "terrain"]
             }
         },
         "origin": "latin"
@@ -7175,6 +7174,23 @@
         "to": "noun",
         "participle-type": "perfect",
         "gloss": "one who %3sg",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "key": "or-nominal",
+        "final": "or",
+        "link": "or",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "present",
+        "gloss": "a state of %part",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
         "tags": ["count"],
         "origin": "latin"
     },

@@ -402,7 +402,7 @@ class Word:
 # Morph Helpers ===============================
 
 def check_req(morph, referents):
-    
+
     # No requirements to check, it's ok
     if not "requires" in morph:
         return True
