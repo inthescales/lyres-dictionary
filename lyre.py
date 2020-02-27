@@ -2,6 +2,8 @@ import random
 import getopt
 import sys
 
+import botbuddy
+
 from src.morphary import Morphary
 from src.generator import generate_word, word_for_keys
 import src.validator as validator
@@ -96,12 +98,12 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         print("> Defaulting to test mode")
         mode = "test"
         
-    if keys == None and count == None:
+    if mode == "test" and keys == None and count == None:
         print("> Defaulting to count 1")
         count = 1
     
     if mode == "publish":
-        print("-- publish --")
+        botbuddy.post(generate_entry, test=True)
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)

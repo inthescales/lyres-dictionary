@@ -1,1 +1,2 @@
 lemminflect>=0.2.0
+git+git://github.com/inthescales/bot-buddy#egg=botbuddy
