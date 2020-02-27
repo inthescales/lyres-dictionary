@@ -1,5 +1,4 @@
 import sys
-
 import src.helpers as helpers
 
 def evaluate_expression(expression, referent):
@@ -119,7 +118,7 @@ def evaluate_conjugation(acceptable, conjugation):
         print("Error: referent lacks conjugation")
         sys.exit(1)
         
-    if isinstance(acceptable, str):
+    if isinstance(acceptable, int):
         return conjugation == acceptable
     
     elif isinstance(acceptable, list):
