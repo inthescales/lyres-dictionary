@@ -1,14 +1,14 @@
 import random
 from src.expressions import evaluate_expression
-from src.morphary import Morphary
+from src.morphothec import Morphothec
 import src.inflection as inflection
 import src.helpers as helpers
 
 class Morph:
     
-    def __init__(self, key, morphary):
-        self.morphary = morphary
-        self.base = morphary.morph_for_key[key]
+    def __init__(self, key, morphothec):
+        self.morphothec = morphothec
+        self.base = morphothec.morph_for_key[key]
         self.prev = None
         self.next = None
         self.refreshMorph()
@@ -188,9 +188,9 @@ class Morph:
 
 class Word:
     
-    def __init__(self, morphary):
+    def __init__(self, morphothec):
         self.morphs = []
-        self.morphary = morphary
+        self.morphothec = morphothec
         
     def first_morph(self):
         if len(self.morphs) > 0:
@@ -220,7 +220,7 @@ class Word:
         self.morphs = []
         
         for key in keys:
-            self.morphs.append( Morph(key, self.morphary) )
+            self.morphs.append( Morph(key, self.morphothec) )
             
         for i in range(0, len(self.morphs)-1):
             self.morphs[i].join(self.morphs[i+1])

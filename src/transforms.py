@@ -1,19 +1,19 @@
 import random
 import src.helpers as helpers
 from src.models import Morph, Word, check_req
-from src.morphary import Morphary
+from src.morphothec import Morphothec
 
-def seed_word(word, morphary):
-    word.morphs = [get_latin_root(morphary)]
+def seed_word(word, morphothec):
+    word.morphs = [get_latin_root(morphothec)]
 
-def transform_word(word, morphary):
+def transform_word(word, morphothec):
 
     if word.get_origin() == "latin":
-        return transform_word_latin(word, morphary)
+        return transform_word_latin(word, morphothec)
     else:
         print("Bad origin: " + word.get_origin())
 
-def get_latin_root(morphary):
+def get_latin_root(morphothec):
 
     bag = [
         ("noun", 1),
@@ -22,11 +22,11 @@ def get_latin_root(morphary):
     ]
 
     type = helpers.choose_bag(bag)
-    key = random.choice(morphary.type_morphs[type])
-    morph = Morph(key, morphary)
+    key = random.choice(morphothec.type_morphs[type])
+    morph = Morph(key, morphothec)
     return morph
         
-def transform_word_latin(word, morphary):
+def transform_word_latin(word, morphothec):
 
     current_type = word.get_type()
     last_morph = word.last_morph()
@@ -67,36 +67,36 @@ def transform_word_latin(word, morphary):
     
     # Add Suffix
     if choice == "add_suffix":
-        choices = morphary.morphs_from[current_type]
+        choices = morphothec.morphs_from[current_type]
         valid_choices = list(choices)
 
         if last_morph.morph["key"] in choices:
             valid_choices.remove(last_morph.morph["key"])
         for choice in choices:
-            if not check_req(morphary.morph_for_key[choice], { "preceding": last_morph.morph } ):
+            if not check_req(morphothec.morph_for_key[choice], { "preceding": last_morph.morph } ):
                 valid_choices.remove(choice)
                 #print("Refused to join " + last_morph.morph["key"] + " - " + choice)
 
         choice = random.choice(valid_choices)
-        new_morph = Morph(choice, morphary)
+        new_morph = Morph(choice, morphothec)
         word.add_suffix(new_morph)
 
     # Add Preposition
     elif choice == "add_prep_prefix":
-        choices = morphary.type_morphs["prep"]
+        choices = morphothec.type_morphs["prep"]
         valid_choices = list(choices)
 
         for choice in choices:
-            if helpers.has_tag(morphary.morph_for_key[choice], "no-verb"):
+            if helpers.has_tag(morphothec.morph_for_key[choice], "no-verb"):
                 valid_choices.remove(choice)
 
         choice = random.choice(valid_choices)
-        new_morph = Morph(choice, morphary)
+        new_morph = Morph(choice, morphothec)
         word.add_prefix(new_morph)
             
     # Add Prefix
     elif choice == "add_prefix":
-        new_morph = Morph( random.choice(morphary.type_morphs["prefix"]), morphary)
+        new_morph = Morph( random.choice(morphothec.type_morphs["prefix"]), morphothec)
         word.add_prefix(new_morph)
 
     # Relational
@@ -104,12 +104,12 @@ def transform_word_latin(word, morphary):
         prep_choices = ["in", "ex", "inter", "trans"]
         if last_morph.has_tag("concrete"):
             prep_choices += ["sub", "super", "infra", "supra"]
-        prep_morph = Morph(random.choice(prep_choices), morphary)
-        end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify"]), morphary )
+        prep_morph = Morph(random.choice(prep_choices), morphothec)
+        end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify"]), morphothec )
         word.add_affixes(prep_morph, end_morph)
     
     # Numerical
     elif choice == "numerical":
-        num_morph = Morph( random.choice(morphary.type_morphs["number"]), morphary)
-        end_morph = Morph("al-number", morphary)
+        num_morph = Morph( random.choice(morphothec.type_morphs["number"]), morphothec)
+        end_morph = Morph("al-number", morphothec)
         word.add_affixes(num_morph, end_morph)

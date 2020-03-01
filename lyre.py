@@ -4,43 +4,43 @@ import sys
 
 import botbuddy
 
-from src.morphary import Morphary
+from src.morphothec import Morphothec
 from src.generator import generate_word, word_for_keys
 import src.validator as validator
 
 def setup():
-    global morphary
+    global morphothec
     
-    morphary = Morphary(["data/morphs-latin.json"])
+    morphothec = Morphothec(["data/morphs-latin.json"])
 
 def needs_setup():
-    return morphary == None
+    return morphothec == None
 
-morphary = None
+morphothec = None
         
 # Generating operations
 
 def generate_entry():
-    global morphary
+    global morphothec
     
     if needs_setup():
         setup()
     
     # Generate until we have a valid entry
     while True:
-        word = generate_word(morphary)
+        word = generate_word(morphothec)
         entry = word.entry()
         
         if validator.validate(entry):
             return entry
 
 def entry_for_keys(keys):
-    global morphary
+    global morphothec
     
     if needs_setup():
         setup()
         
-    word = word_for_keys(keys, morphary)
+    word = word_for_keys(keys, morphothec)
     
     return word.entry()
 

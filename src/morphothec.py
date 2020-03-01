@@ -1,6 +1,6 @@
 import json
     
-class Morphary:
+class Morphothec:
     
     def __init__(self, files):
 
