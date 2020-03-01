@@ -1,4 +1,6 @@
 import json
+
+import src.expressions as expressions   
     
 class Morphothec:
     
@@ -8,7 +10,6 @@ class Morphothec:
         self.roots = []
         self.type_morphs = {}
         self.morphs_from = {}
-        self.words = []
         
         for file in files:
             
@@ -57,6 +58,14 @@ class Morphothec:
                 if errors > 0:
                     print("Exiting with " + str(errors) + " validation errors")
                     exit(0)
+                    
+    def filter_morphs(self, morph_type, morph_filter):
+        selected = []
+        for morph in self.type_morphs[morph_type]:
+            if expressions.evaluate_expression(morph_filter, self.morph_for_key[morph]):
+                selected.append(morph)
+        
+        return selected
 
 def validate_morph(morph):
     
