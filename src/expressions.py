@@ -27,7 +27,7 @@ def evaluate_expression(expression, referent):
             sys.exit(1)
         
         for clause in expression["and"]:
-            if evaluate_expression(clause, referent):
+            if not evaluate_expression(clause, referent):
                 return False
             
         return True
@@ -81,6 +81,10 @@ def evaluate_type(type_, comparand):
         sys.exit(1)
         
 def evaluate_tag(tag, referent_tags):
+    if not isinstance(tag, str):
+        print ("Error: tag must be string")
+        sys.exit(1)
+        
     return tag in referent_tags
         
 def evaluate_all_tags(tags, referent_tags):
@@ -105,7 +109,7 @@ def evaluate_suffix(suffix, form):
         for cur in suffix:
             if form.endswith(suffix):
                 return True
-            
+        
         return False
     
     else:
