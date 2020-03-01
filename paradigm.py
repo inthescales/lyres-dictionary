@@ -1,8 +1,7 @@
 import sys
-sys.path.append(".")
 
-from models import Morph, Word, check_req
-from morphary import Morphary
+from src.models import Morph, Word, check_req
+from src.morphary import Morphary
 
 morphary = Morphary(["data/morphs-latin.json"])
 
