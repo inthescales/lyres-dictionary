@@ -46,17 +46,17 @@ def evaluate_expression(expression, referent):
     elif key == "has-any-tags":
         return evaluate_any_tags(value, referent["tags"])
     elif key == "has-suffix":
-        return evaluate_suffix(value, referent["link"])
+        return evaluate_suffix(value, referent["form"])
     elif key == "has-conjugation":
         return evaluate_conjugation(value, referent["conjugation"])
     elif key == "even-syllables":
-        return evaluate_even_syllables(referent["link"])
+        return evaluate_even_syllables(referent["form"])
     elif key == "odd-syllables":
-        return evaluate_odd_syllables(referent["link"])
+        return evaluate_odd_syllables(referent["form"])
     elif key == "is-root" and value == True:
         return evaluate_is_root(referent["type"])
     elif key == "final_or_semifinal_l" and value == True:
-        return helpers.l_in_last_two(referent["link"])
+        return helpers.l_in_last_two(referent["form"])
         
 def evaluate_key(key, comparand):
     if isinstance(key, str):

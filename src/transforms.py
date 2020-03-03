@@ -73,7 +73,7 @@ def transform_word_latin(word, morphothec):
         if last_morph.morph["key"] in choices:
             valid_choices.remove(last_morph.morph["key"])
         for choice in choices:
-            if not check_req(morphothec.morph_for_key[choice], { "preceding": last_morph.morph } ):
+            if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
                 valid_choices.remove(choice)
                 #print("Refused to join " + last_morph.morph["key"] + " - " + choice)
 

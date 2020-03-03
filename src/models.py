@@ -18,7 +18,12 @@ class Morph:
             return False
         
         return self.morph["key"] == other.morph["key"]
-        
+    
+    def as_dict(self):
+        dict_ = self.morph.copy()
+        dict_["form"] = self.get_form()
+        return dict_
+    
     def join(self, next_morph):
         self.next = next_morph
         next_morph.prev = self
@@ -43,12 +48,12 @@ class Morph:
                 case = exception["case"]
 
                 if "precedes" in case and self.next:
-                    if evaluate_expression(case["precedes"], self.next.morph):
+                    if evaluate_expression(case["precedes"], self.next.as_dict()):
                         apply(exception)
                         return
 
                 if "follows" in case and self.prev:
-                    if evaluate_expression(case["follows"], self.prev.morph):
+                    if evaluate_expression(case["follows"], self.prev.as_dict()):
                         apply(exception)
                         return
     

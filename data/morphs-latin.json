@@ -6902,6 +6902,15 @@
                 "has-all-tags": ["count", "concrete"]
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "ic"
+                }
+            },
+            "final": ["ule", "le"],
+            "link": "ul"
+        }],
         "origin": "latin"
     },
     {
@@ -7281,6 +7290,27 @@
         "to": "noun",
         "tags": ["stem-change"],
         "gloss": "one who %3sg",
+        "origin": "latin"
+    },
+    {
+        "key": "trix",
+        "final": "trix",
+        "link": "tric",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "perfect",
+        "gloss": "a woman who %3sg",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "t"
+                }
+            },
+            "final": "rix",
+            "link": "ric"
+        }],
+        "tags": ["count"],
         "origin": "latin"
     },
     {

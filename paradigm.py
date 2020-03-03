@@ -1,9 +1,9 @@
 import sys
 
 from src.models import Morph, Word, check_req
-from src.morphary import Morphary
+from src.morphothec import Morphothec
 
-morphary = Morphary(["data/morphs-latin.json"])
+morphothec = Morphothec(["data/morphs-latin.json"])
 
 class Series:
     def __init__(self):
@@ -12,7 +12,7 @@ class Series:
         self.elements = []
         self.is_valid = []
 
-def series_root_suffix(roots, suffixes, morphary):
+def series_root_suffix(roots, suffixes, morphothec):
     series = Series()
     series.x_labels = suffixes
     series.y_labels = roots
@@ -21,15 +21,15 @@ def series_root_suffix(roots, suffixes, morphary):
         series.elements.append([])
         series.is_valid.append([])
         for j, suffix in enumerate(suffixes):
-            word = Word(morphary)
+            word = Word(morphothec)
             word.set_keys([root, suffix])
             series.elements[i].append(word.compose())
             
-            root_morph = morphary.morph_for_key[root]
-            suffix_morph = morphary.morph_for_key[suffix]
+            root_morph = morphothec.morph_for_key[root]
+            suffix_morph = morphothec.morph_for_key[suffix]
             if "requires" in suffix_morph:
                 referents = {"preceding": root_morph}
-                series.is_valid[i].append(check_req(morphary.morph_for_key[suffix], referents))
+                series.is_valid[i].append(check_req(morphothec.morph_for_key[suffix], referents))
             else:
                 series.is_valid[i].append(True)
     
@@ -77,7 +77,7 @@ def getHTML(series):
     
     return output
 
-#test_series = series_root_suffix(["canis", "tempus"], ["al", "ous"], morphary)
-test_series = series_root_suffix(morphary.type_morphs["noun"], morphary.morphs_from["noun"], morphary)
+#test_series = series_root_suffix(["canis", "tempus"], ["al", "ous"], morphothec)
+test_series = series_root_suffix(morphothec.type_morphs["verb"], ["trix"], morphothec)
 
 print(getHTML(test_series))
