@@ -4719,7 +4719,7 @@
         "key": "potare",
         "link-present": "pota",
         "link-perfect": "potat",
-        "final": "potate",
+        "final": "pote",
         "type": "verb",
         "conjugation": 2,
         "gloss": "drink",
@@ -6312,14 +6312,6 @@
         "origin": "latin"
     },
     {
-        "key": "ab",
-        "link": "ab",
-        "type": "prep",
-        "gloss-verb": "%@ away",
-        "gloss-noun": "away from %sg",
-        "origin": "latin"
-    },
- {
         "key": "one-join",
         "link": "uni",
         "type": "number",
@@ -6448,6 +6440,15 @@
         "origin": "latin"
     },
     {
+        "key": "ab",
+        "link": "ab",
+        "type": "prep",
+        "gloss-verb": "%@ away",
+        "gloss-noun": "away from %sg",
+        "tags": ["verbal"],
+        "origin": "latin"
+    },
+    {
         "key": "ad",
         "link": "ad",
         "link-assim": "a",
@@ -6455,11 +6456,12 @@
         "gloss-verb": "%@ to",
         "gloss-noun": "to %sg",
         "assimilation": {
-		"link": ["a", "d", "e", "j", "m", "o", "*"],
-		"link-assim": ["b"],
-		"double": ["c", "d", "f", "g", "l", "n", "p", "r", "s", "t"],
-		"ac": ["q"]
+            "link": ["a", "d", "e", "j", "m", "o", "*"],
+            "link-assim": ["b"],
+            "double": ["c", "d", "f", "g", "l", "n", "p", "r", "s", "t"],
+            "ac": ["q"]
         },
+        "tags": ["verbal"],
         "origin": "latin",
         "notes": "need 'aspire' - cut before 'sp'"
     },
@@ -6469,6 +6471,7 @@
 		"type": "prep",
         "gloss-verb": "%@ around",
         "gloss-noun": "around %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6477,7 +6480,6 @@
         "type": "prep",
         "gloss-verb": "%@ on the same side",
         "gloss-noun": "on this side of %sg",
-	"tags": "no-verb",
         "origin": "latin"
     },
 	{
@@ -6487,11 +6489,12 @@
 		"type": "prep",
         "gloss-verb": "%@ together",
         "gloss-noun": "together with %sg",
-	"assimilation": {
-		"link-assim": ["a", "e", "i", "u", "o", "h"],
-		"double": ["l", "r"],
-		"nasal": ["*"]
+        "assimilation": {
+           "link-assim": ["a", "e", "i", "u", "o", "h"],
+           "double": ["l", "r"],
+           "nasal": ["*"]
         },
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6500,6 +6503,7 @@
         "type": "prep",
         "gloss-verb": "%@ down",
         "gloss-noun": "down from %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6511,34 +6515,37 @@
         "gloss-noun": "apart from %sg",
         "assimilation": {
         	"link": ["*"],
-		"link-assim": ["l"]
+            "link-assim": ["l"]
         },
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "in",
-	"link-assim": "i",
-	"type": "prep",
+        "link-assim": "i",
+        "type": "prep",
         "gloss-verb": "%@ in",
         "gloss-noun": "in %sg",
-	"assimilation": {
-		"nasal": ["*"]
-	},
+        "assimilation": {
+		  "nasal": ["*"]
+        },
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "ex",
         "link": "ex",
-	"link-assim": "e",
-	"type": "prep",
+        "link-assim": "e",
+        "type": "prep",
         "gloss-verb": "%@ out from",
         "gloss-noun": "out of %sg",
-	"assimilation": {
-	    "link": ["a", "e", "i", "o", "h", "c", "p", "q", "t", "*"],
-	    "link-assim": ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
-	    "cut": ["s", "x"],
-	    "double": ["f"]
+        "assimilation": {
+            "link": ["a", "e", "i", "o", "h", "c", "p", "q", "t", "*"],
+            "link-assim": ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
+            "cut": ["s", "x"],
+            "double": ["f"]
         },
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6547,7 +6554,6 @@
         "type": "prep",
         "gloss-verb": "%@ below",
         "gloss-noun": "below %sg",
-        "tags": ["no-verb"],
         "origin": "latin"
     },
     {
@@ -6556,6 +6562,7 @@
         "type": "prep",
         "gloss-verb": "%@ between",
         "gloss-noun": "between %pl",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6574,9 +6581,10 @@
         "gloss-verb": "%@ away",
         "gloss-noun": "away from %sg",
         "assimilation": {
-		"link": ["*"],
-		"double": ["c", "p"]
+            "link": ["*"],
+            "double": ["c", "p"]
         },
+        "tags": ["verbal"],
         "origin": "latin",
         "notes": "need spelling change for ostentatious"
     },
@@ -6586,6 +6594,7 @@
         "type": "prep",
         "gloss-verb": "%@ through",
         "gloss-noun": "through %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6594,6 +6603,7 @@
         "type": "prep",
         "gloss-verb": "%@ beyond",
         "gloss-noun": "beyond %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6602,6 +6612,7 @@
         "type": "prep",
         "gloss-verb": "%@ before",
         "gloss-noun": "before %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6610,6 +6621,7 @@
         "type": "prep",
         "gloss-verb": "%@ forward",
         "gloss-noun": "before %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6618,6 +6630,7 @@
         "type": "prep",
         "gloss-verb": "%@ backward",
         "gloss-noun": "backward %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6625,6 +6638,7 @@
         "link": "re",
         "type": "prep",
         "gloss-verb": "%@ back",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6633,10 +6647,11 @@
         "type": "prep",
         "gloss-verb": "%@ apart",
         "gloss-noun": "apart from %sg",
-	"assimilation": {
-		"link": ["*"],
-		"sed": ["a", "e", "i", "o", "u", "y"]
+        "assimilation": {
+            "link": ["*"],
+            "sed": ["a", "e", "i", "o", "u", "y"]
         },
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6651,6 +6666,7 @@
             "double": ["p"],
             "sus": ["c"]
         },
+        "tags": ["verbal"],
         "origin": "latin",
         "notes": "need 'sus' for cases like sustain"
     },
@@ -6660,6 +6676,7 @@
         "type": "prep",
         "gloss-verb": "%@ above",
         "gloss-noun": "above %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -6668,7 +6685,6 @@
         "type": "prep",
         "gloss-verb": "%@ above",
         "gloss-noun": "above %sg",
-        "tags": ["no-verb"],
         "origin": "latin"
     },
     {
@@ -6677,6 +6693,7 @@
         "type": "prep",
         "gloss-verb": "%@ across",
         "gloss-noun": "across %sg",
+        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -7135,15 +7152,6 @@
             },
             "link": "eti",
             "final": "ety"
-        },
-        {
-            "case": {
-                "follows": {
-                    "has-suffix": "t"
-                }
-            },
-            "link": "i",
-            "final": "y"
         }],
         "gloss": "the quality of being %@",
         "origin": "latin"

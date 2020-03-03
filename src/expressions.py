@@ -40,10 +40,16 @@ def evaluate_expression(expression, referent):
     elif key == "has-type":
         return evaluate_type(value, referent["type"])
     elif key == "has-tag":
+        if "tags" not in referent:
+            return False
         return evaluate_tag(value, referent["tags"])
     elif key == "has-all-tags":
+        if "tags" not in referent:
+            return False
         return evaluate_all_tags(value, referent["tags"])
     elif key == "has-any-tags":
+        if "tags" not in referent:
+            return False
         return evaluate_any_tags(value, referent["tags"])
     elif key == "has-suffix":
         return evaluate_suffix(value, referent["form"])

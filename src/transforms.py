@@ -83,14 +83,8 @@ def transform_word_latin(word, morphothec):
 
     # Add Preposition
     elif choice == "add_prep_prefix":
-        choices = morphothec.type_morphs["prep"]
-        valid_choices = list(choices)
-
-        for choice in choices:
-            if helpers.has_tag(morphothec.morph_for_key[choice], "no-verb"):
-                valid_choices.remove(choice)
-
-        choice = random.choice(valid_choices)
+        choices = morphothec.filter_type("prep", { "has-tag": "verbal" })
+        choice = random.choice(choices)
         new_morph = Morph(choice, morphothec)
         word.add_prefix(new_morph)
             
