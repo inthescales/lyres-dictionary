@@ -34,7 +34,31 @@ def series_root_suffix(roots, suffixes, morphothec):
                 series.is_valid[i].append(True)
     
     return series
+
+def series_verb(root, prefixes, suffixes, morphothec):
+    series = Series()
+    series.x_labels = suffixes
+    series.y_labels = prefixes
     
+    for i, prefix in enumerate(prefixes):
+        series.elements.append([])
+        series.is_valid.append([])
+        for j, suffix in enumerate(suffixes):
+            word = Word(morphothec)
+            word.set_keys([prefix, root, suffix])
+            series.elements[i].append(word.compose())
+
+            prefix_morph = morphothec.morph_for_key[prefix]
+            root_morph = morphothec.morph_for_key[root]
+            suffix_morph = morphothec.morph_for_key[suffix]
+            if "requires" in suffix_morph:
+                referents = {"preceding": root_morph}
+                series.is_valid[i].append(check_req(morphothec.morph_for_key[suffix], referents))
+            else:
+                series.is_valid[i].append(True)
+    
+    return series
+
 def getHTML(series):
     
     tdstyle = "border: 1px solid black; padding: 8px;"
@@ -77,7 +101,9 @@ def getHTML(series):
     
     return output
 
-#test_series = series_root_suffix(["canis", "tempus"], ["al", "ous"], morphothec)
-test_series = series_root_suffix(morphothec.type_morphs["verb"], ["trix"], morphothec)
+#test_series = series_root_suffix(morphothec.type_morphs["verb"], morphothec.filter_appends_to("verb"), morphothec)
+test_series = series_verb("frangere", 
+                          morphothec.filter_type("prep", { "has-tag": "verbal" }),
+                          morphothec.filter_appends_to("verb"), morphothec)
 
 print(getHTML(test_series))
