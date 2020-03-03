@@ -59,7 +59,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "air",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "gas"],
         "origin": "latin"
     },
     {
@@ -253,7 +253,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "water",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "liquid"],
         "origin": "latin"
     },
     {
@@ -2760,7 +2760,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "milk",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "liquid"],
         "origin": "latin"
     },
     {
@@ -3338,7 +3338,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "honey",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "liquid"],
         "origin": "latin"
     },
     {
@@ -3640,7 +3640,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "slime",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "liquid"],
         "origin": "latin"
     },
     {
@@ -5246,7 +5246,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "blood",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "liquid"],
         "origin": "latin"
     },
     {
@@ -7124,6 +7124,21 @@
                 "link": "i"
             }
         ],
+        "origin": "latin"
+    },
+    {
+        "key": "ipote",
+        "final": "ipote",
+        "link": "ipot",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "gloss": "one who drinks %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
         "origin": "latin"
     },
     {
