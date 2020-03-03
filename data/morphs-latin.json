@@ -537,7 +537,7 @@
                 "final": "cise"
             }
         ],
-        "tags": ["intransitive", "motion"],
+        "tags": ["intransitive", "dividing"],
         "origin": "latin",
         "notes": "'e' in prepositionless forms is my guess based on 'ae'->'e' sound change."
     },
@@ -721,7 +721,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "separate",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin",
         "notes": "verb: secret vs excrete vs discern"
     },    
@@ -1286,7 +1286,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "divide",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin"
     },
     {
@@ -1740,7 +1740,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "fasten",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -1760,7 +1760,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "split",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin"
     },
     {
@@ -1952,7 +1952,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "shatter",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin",
         "notes": "also fragile"
     },
@@ -2288,7 +2288,7 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "stick",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "joining"],
         "origin": "latin"
     },
     {
@@ -2637,7 +2637,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "join",
-        "tags": ["transitive", "motion"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -2648,7 +2648,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "join",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin",
         "notes": "also jointure"
     },
@@ -2985,7 +2985,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "bind",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -3533,7 +3533,7 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "mix",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -3707,7 +3707,7 @@
         "key": "natare",
         "link-present": "nata",
         "link-perfect": "natat",
-        "final": "natate",
+        "final": "nate",
         "type": "verb",
         "conjugation": 2,
         "gloss": "swim",
@@ -3759,7 +3759,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "tie",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin",
         "notes": "connect vs annex. Chose connect as that's the more common word."
     },
@@ -3876,7 +3876,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "marry",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -4192,7 +4192,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "[fix] in place",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin",
         "notes": "compact vs impinge. Went with pact as it's also in impact"
     },
@@ -4246,7 +4246,7 @@
         "type": "verb",
         "conjugation": 4,
         "gloss": "divide",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin"
     },
     {
@@ -4390,7 +4390,7 @@
         "key": "pensare",
         "link-present": "pensa",
         "link-perfect": "pensat",
-        "final": "pensate",
+        "final": ["pensate", "pense"],
         "type": "verb",
         "conjugation": 1,
         "gloss": "weigh",
@@ -4572,7 +4572,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "braid",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -5185,7 +5185,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "break",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin"
     },
     {
@@ -5205,7 +5205,8 @@
         "conjugation": 1,
         "gloss": "[make] holy",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "consecrate vs sacrament?"
     },
     {
         "key": "salire",
@@ -5290,7 +5291,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "cut",
-        "tags": ["transitive", "motion"],
+        "tags": ["transitive", "dividing"],
         "origin": "latin"
     },
     {
@@ -5366,9 +5367,8 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "join",
-        "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "do we want this without being able to make 'desert'? idk"
+        "tags": ["transitive", "joining"],
+        "origin": "latin"
     },
     {
         "key": "serpentus",
@@ -5665,7 +5665,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "sew",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -6270,7 +6270,7 @@
         "key": "volvere",
         "link-present": "volve",
         "link-perfect": "volut",
-        "final": "volve",
+        "final": ["volve", "volute"],
         "type": "verb",
         "conjugation": 3,
         "gloss": "roll",
