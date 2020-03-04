@@ -68,14 +68,14 @@ def transform_word_latin(word, morphothec):
     # Add Suffix
     if choice == "add_suffix":
         choices = morphothec.morphs_from[current_type]
-        valid_choices = list(choices)
+        valid_choices = choices.copy()
 
         if last_morph.morph["key"] in choices:
             valid_choices.remove(last_morph.morph["key"])
+            
         for choice in choices:
             if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
                 valid_choices.remove(choice)
-                #print("Refused to join " + last_morph.morph["key"] + " - " + choice)
 
         choice = random.choice(valid_choices)
         new_morph = Morph(choice, morphothec)
@@ -84,6 +84,15 @@ def transform_word_latin(word, morphothec):
     # Add Preposition
     elif choice == "add_prep_prefix":
         choices = morphothec.filter_type("prep", { "has-tag": "verbal" })
+        valid_choices = choices.copy()
+        
+        if last_morph.morph["key"] in choices:
+            valid_choices.remove(last_morph.morph["key"])
+            
+        for choice in choices:
+            if not check_req(Morph(choice, morphothec).as_dict(), { "following": first_morph.morph } ):
+                valid_choices.remove(choice)
+                
         choice = random.choice(choices)
         new_morph = Morph(choice, morphothec)
         word.add_prefix(new_morph)

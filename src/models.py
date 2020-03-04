@@ -138,7 +138,10 @@ class Morph:
 
         # The final morph form
         else:
-           form = self.morph["final"]
+            if self.morph["type"] == "prep":
+                form = self.morph["link"]
+            else:
+                form = self.morph["final"]
         
         if isinstance(form, list):
             form = random.choice(form)
@@ -422,7 +425,7 @@ def check_req(morph, referents):
             print("Error: precedes block but no following morph given")
             sys.exit(1)
         
-        return evaluate_expression(requirements["precedes"], referents["preceding"])
+        return evaluate_expression(requirements["precedes"], referents["following"])
     
     if "follows" in keys:
         if not "preceding" in referents:
