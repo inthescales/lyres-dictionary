@@ -657,7 +657,7 @@
         "final": "cave",
         "type": "verb",
         "conjugation": 2,
-        "gloss": "[take] caution",
+        "gloss": "[be] wary",
         "tags": ["intransitive", "no-prep"],
         "origin": "latin",
         "notes": "not sure on verb."
@@ -2584,7 +2584,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "[shout] for joy",
-        "tags": ["transitive", "no-prep"],
+        "tags": ["intransitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -3168,6 +3168,15 @@
         "origin": "latin"
     },
     {
+        "key": "luna-singleton",
+        "link": "lun",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "moon",
+        "tags": ["singleton", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "lupus",
         "link": "lup",
         "type": "noun",
@@ -3240,8 +3249,7 @@
         "conjugation": 1,
         "gloss": "order",
         "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "verb form - remand, demand, countermand vs mandate"
+        "origin": "latin"
     },
     {
         "key": "manus",
@@ -3306,12 +3314,11 @@
         "origin": "latin"
     },
     {
-        "key": "maximum",
+        "key": "maxima",
         "link": "maxim",
-        "type": "noun",
-        "declension": 2,
+        "type": "adj",
+        "declension": 12,
         "gloss": "maximum",
-        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -3485,12 +3492,11 @@
         "notes": "guessed on perfect"
     },
     {
-        "key": "minimum",
+        "key": "minima",
         "link": "minim",
-        "type": "noun",
-        "declension": 2,
+        "type": "adj",
+        "declension": 12,
         "gloss": "minimum",
-        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -5451,6 +5457,15 @@
         "origin": "latin"
     },
     {
+        "key": "sol-singleton",
+        "link": "sol",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "sun",
+        "tags": ["singleton", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "solari",
         "link-present": "sola",
         "link-perfect": "solat",
@@ -5793,6 +5808,24 @@
         ],
         "origin": "latin",
         "notes": "spelling for sustenance"
+    },
+    {
+        "key": "terra",
+        "link": "terr",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "earth",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
+        "key": "terra-singleton",
+        "link": "terr",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "latin"
     },
     {
         "key": "testari",
@@ -6508,6 +6541,20 @@
             "precedes": {
                 "not": { "has-tag": "dividing"}
             }
+        },
+        "tags": ["verbal"],
+        "origin": "latin"
+    },
+	{
+        "key": "com-intensive",
+        "link": "com",
+		"link-assim": "co",
+		"type": "prep",
+        "gloss-verb": "wholly %@",
+        "assimilation": {
+           "link-assim": ["a", "e", "i", "u", "o", "h"],
+           "double": ["l", "r"],
+           "nasal": ["*"]
         },
         "tags": ["verbal"],
         "origin": "latin"

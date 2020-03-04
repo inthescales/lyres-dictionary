@@ -356,13 +356,17 @@ class Word:
                     elif word == "%sg":
                         if last_morph.has_tag("count"):
                             words[index] = inflection.inflect(definition, "sg")
-                        else:
+                        elif last_morph.has_tag("mass"):
                             words[index] = inflection.inflect(definition, "mass")
+                        elif last_morph.has_tag("singleton"):
+                            words[index] = inflection.inflect(definition, "singleton")
                     elif word == "%pl":
                         if last_morph.has_tag("count"):
                             words[index] = inflection.inflect(definition, "pl")
-                        else:
+                        elif last_morph.has_tag("mass"):
                             words[index] = inflection.inflect(definition, "mass")
+                        elif last_morph.has_tag("singleton"):
+                            words[index] = inflection.inflect(definition, "singleton")
                     elif word == "%!pl":
                         words[index] = inflection.inflect(definition, "pl")
 

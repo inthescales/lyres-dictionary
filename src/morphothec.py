@@ -103,8 +103,8 @@ class Morphothec:
             if not "link" in morph or not "declension" in morph:
                 print(" - noun must have 'link' and 'declension'")
                 return False
-            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"])):
-                print(" - noun must have tag 'count' or 'mass'")
+            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
+                print(" - noun must have tag 'count', 'mass', or 'singleton'")
                 return False
             elif morph["declension"] not in [0, 1, 2, 3, 4, 5]:
                 print(" - invalid declension '" + str(morph["declension"]) + "'")

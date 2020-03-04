@@ -33,6 +33,9 @@ def inflect(string, mode):
         elif mode == "mass":
             # No action needed
             continue
+        elif mode == "singleton":
+            words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
+            words.insert(i, "the")
             
     return " ".join(words)
 
