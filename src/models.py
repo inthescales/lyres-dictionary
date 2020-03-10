@@ -352,21 +352,24 @@ class Word:
                     elif word == "%3sg":
                         words[index] = inflection.inflect(definition, "3sg")
                     elif word == "%inf":
-                        words[index] = inflection.inflect(definition, "inf")
+                        words[index] = inflection.inflect("to " + definition, "inf")
                     elif word == "%sg":
                         if last_morph.has_tag("count"):
-                            words[index] = inflection.inflect(definition, "sg")
+                            article = helpers.indefinite_article_for(definition)
+                            words[index] = inflection.inflect(article + " " + definition, "sg")
                         elif last_morph.has_tag("mass"):
                             words[index] = inflection.inflect(definition, "mass")
                         elif last_morph.has_tag("singleton"):
-                            words[index] = inflection.inflect(definition, "singleton")
+                            article = "the"
+                            words[index] = inflection.inflect(article + " " + definition, "singleton")
                     elif word == "%pl":
                         if last_morph.has_tag("count"):
                             words[index] = inflection.inflect(definition, "pl")
                         elif last_morph.has_tag("mass"):
                             words[index] = inflection.inflect(definition, "mass")
                         elif last_morph.has_tag("singleton"):
-                            words[index] = inflection.inflect(definition, "singleton")
+                            article = "the"
+                            words[index] = inflection.inflect(article + " " + definition, "singleton")
                     elif word == "%!pl":
                         words[index] = inflection.inflect(definition, "pl")
 
@@ -398,7 +401,9 @@ class Word:
 
         # Verbs not otherwise resolved become infinitives
         if morph.get_type() == "verb":
-            return inflection.inflect(definition, "inf")
+            return "to " + inflection.inflect(definition, "inf")
+        elif morph.get_type() == "noun":
+            return inflection.inflect(definition, "sg")
         else:
             return definition
     

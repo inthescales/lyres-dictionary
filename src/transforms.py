@@ -76,6 +76,8 @@ def transform_word_latin(word, morphothec):
         for choice in choices:
             if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
                 valid_choices.remove(choice)
+            elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 5) > 0:
+                valid_choices.remove(choice)
 
         choice = random.choice(valid_choices)
         new_morph = Morph(choice, morphothec)
