@@ -103,7 +103,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         count = 1
     
     if mode == "publish":
-        botbuddy.post(generate_entry, test=True)
+        botbuddy.post(generate_entry)
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)

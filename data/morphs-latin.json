@@ -4464,6 +4464,15 @@
         "origin": "latin"
     },
     {
+        "key": "pestis",
+        "link": "pest",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "plague",
+        "tags": ["mass", "abstract", "living"],
+        "origin": "latin"
+    },
+    {
         "key": "petere",
         "link-present": "pete",
         "link-perfect": "petit",
