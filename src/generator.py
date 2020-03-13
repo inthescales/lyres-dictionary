@@ -7,7 +7,8 @@ import src.transforms as transforms
 def generate_word(morphothec):
     word = Word(morphothec)
     transforms.seed_word(word, morphothec)
-    while word.size() < 2:
+    size = random.randint(2,3)
+    while word.size() < size:
         transforms.transform_word(word, morphothec)
     return word
 

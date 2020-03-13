@@ -46,6 +46,14 @@
         "origin": "latin"
     },
     {
+        "key": "aegra",
+        "link": "aegr",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sick",
+        "origin": "latin"
+    },
+    {
         "key": "aequus",
         "link": "equ",
         "type": "adj",
@@ -140,6 +148,14 @@
         "conjugation": 1,
         "gloss": "walk",
         "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "ampla",
+        "link": "ampl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "[wide], [abundant]",
         "origin": "latin"
     },
     {
@@ -431,6 +447,14 @@
         "origin": "latin"
     },
     {
+        "key": "bella",
+        "link": "beat",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "beautiful",
+        "origin": "latin"
+    },
+    {
         "key": "bellum",
         "link": "bell",
         "type": "noun",
@@ -680,6 +704,30 @@
         "type": "adj",
         "declension": 12,
         "gloss": "quick",
+        "origin": "latin"
+    },
+    {
+        "key": "celsa",
+        "link": "cels",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "lofty",
+        "origin": "latin"
+    },
+    {
+        "key": "certa",
+        "link": "cert",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "certain",
+        "origin": "latin"
+    },
+    {
+        "key": "crassa",
+        "link": "crass",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "thick",
         "origin": "latin"
     },
     {
@@ -2152,6 +2200,15 @@
         "origin": "latin"
     },
     {  
+        "key": "glomus",
+        "link": "glomer",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "mass",
+        "tags": ["count", "concrete", "grouping"],
+        "origin": "latin"
+    },
+    {  
         "key": "gloria",
         "link": "glori",
         "type": "noun",
@@ -2185,7 +2242,7 @@
         "link": "grat",
         "type": "adj",
         "declension": 12,
-        "gloss": "pleasing",
+        "gloss": "pleased",
         "origin": "latin"
     },
     {  
@@ -2794,6 +2851,22 @@
         "origin": "latin"
     },
     {
+        "key": "larga",
+        "link": "larg",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "broad",
+        "origin": "latin"
+    },
+    {
+        "key": "lassa",
+        "link": "lass",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "weary",
+        "origin": "latin"
+    },
+    {
         "key": "latrare",
         "link-present": "latra",
         "link-perfect": "latrat",
@@ -2866,6 +2939,14 @@
         "tags": ["transitive", "no-prep"],
         "origin": "latin",
         "notes": "no prep just 'cause only re- seems at all ok. Figure out later"
+    },
+    {
+        "key": "limpida",
+        "link": "limpid",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "[clear] or [transparent]",
+        "origin": "latin"
     },
     {
         "key": "luere",
@@ -3557,6 +3638,15 @@
         "declension": 2,
         "gloss": "manner",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "moles",
+        "link": "mol",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "mass",
+        "tags": ["count", "concrete", "grouping"],
         "origin": "latin"
     },
     {
@@ -4263,6 +4353,14 @@
         "declension": 3,
         "gloss": "part",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "parv",
+        "link": "parv",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "small",
         "origin": "latin"
     },
     {
@@ -5006,6 +5104,14 @@
         "origin": "latin"
     },
     {
+        "key": "puter",
+        "link": "putr",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "rotten",
+        "origin": "latin"
+    },
+    {
         "key": "quaerere",
         "link-present": "quere",
         "link-perfect": "quisit",
@@ -5235,6 +5341,14 @@
         "tags": ["intransitive", "motion"],
         "origin": "latin",
         "names": "conflict: salient vs resilient"
+    },
+    {
+        "key": "salsus",
+        "link": "sals",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "salty",
+        "origin": "latin"
     },
     {
         "key": "salus",
@@ -5476,6 +5590,14 @@
         "origin": "latin"
     },
     {
+        "key": "sola",
+        "link": "sol",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "alone",
+        "origin": "latin"
+    },
+    {
         "key": "solari",
         "link-present": "sola",
         "link-perfect": "solat",
@@ -5507,6 +5629,15 @@
         "gloss": "[suck] in",
         "gloss-relative": "suck",
         "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "sordes",
+        "link": "sord",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "filth",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -5680,6 +5811,14 @@
         "conjugation": 2,
         "gloss": "convince",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "suava",
+        "link": "suav",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "smooth",
         "origin": "latin"
     },
     {
@@ -6014,6 +6153,15 @@
         "declension": 0,
         "gloss": "one",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "urbs",
+        "link": "urb",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "city",
+        "tags": ["count", "concrete", "terrain", "region"],
         "origin": "latin"
     },
     {
@@ -6367,7 +6515,6 @@
         "link": "bi",
         "type": "number",
         "gloss": "two %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6375,7 +6522,6 @@
         "link": "tri",
         "type": "number",
         "gloss": "three %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6383,7 +6529,6 @@
         "link": "quadri",
         "type": "number",
         "gloss": "four %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6391,7 +6536,6 @@
         "link": "quinti",
         "type": "number",
         "gloss": "five %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6399,7 +6543,6 @@
         "link": "sexi",
         "type": "number",
         "gloss": "six %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6407,7 +6550,6 @@
         "link": "septi",
         "type": "number",
         "gloss": "seven %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6415,7 +6557,6 @@
         "link": "octi",
         "type": "number",
         "gloss": "eight %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6423,7 +6564,6 @@
         "link": "noni",
         "type": "number",
         "gloss": "nine %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6431,7 +6571,6 @@
         "link": "deci",
         "type": "number",
         "gloss": "ten %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6439,7 +6578,6 @@
         "link": "undeci",
         "type": "number",
         "gloss": "eleven %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6447,7 +6585,6 @@
         "link": "duodeci",
         "type": "number",
         "gloss": "twelve %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6455,7 +6592,6 @@
         "link": "centi",
         "type": "number",
         "gloss": "one-hundred %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6463,7 +6599,6 @@
         "link": "milli",
         "type": "number",
         "gloss": "one-thousand %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6471,7 +6606,6 @@
         "link": "multi",
         "type": "number",
         "gloss": "many %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6479,7 +6613,6 @@
         "link": "omni",
         "type": "number",
         "gloss": "all %!pl",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -6892,6 +7025,7 @@
         "type": "derive",
         "from": ["noun", "adj"],
         "to": "verb",
+        "conjugation": 1,
         "gloss": "[cause] to be %@",
         "gloss-relative": "%@",
         "tags": ["transitive", "no-gen"],
@@ -6962,6 +7096,7 @@
         "type": "derive",
         "from": "adj",
         "to": "verb",
+        "conjugation": 0,
         "gloss": "[become] %@",
         "origin": "latin"
     },
@@ -7088,6 +7223,7 @@
         "type": "derive",
         "from": ["noun", "adj"],
         "to": "verb",
+        "conjugation": 3,
         "gloss-noun": "[make] into %sg",
         "gloss-adj": "[make] %@",
         "gloss-relative": "[make] %@",
@@ -7235,10 +7371,20 @@
         "final": "itude",
         "link": "itudin",
         "type": "derive",
-        "from": ["adj", "noun"],
+        "from": "adj",
         "to": "noun",
-        "gloss-adj": "the quality of being %@",
-        "gloss-noun": "the state or quality of being %sg",
+        "gloss": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
+        "key": "itude",
+        "final": "itude",
+        "link": "itudin",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "gloss": "the state or quality of being %sg",
+        "tags": ["rare"],
         "origin": "latin"
     },
     {
@@ -7445,10 +7591,11 @@
         "origin": "latin"
     },
     {
-        "key": "re",
-        "link": "re",
+        "key": "in-negative",
+        "link": "in",
         "type": "prefix",
-        "gloss": "%@ again",
+        "gloss": "not %@",
+        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -7456,6 +7603,13 @@
         "link": "mis",
         "type": "prefix",
         "gloss": "%@ incorrectly",
+        "origin": "latin"
+    },
+    {
+        "key": "re",
+        "link": "re",
+        "type": "prefix",
+        "gloss": "%@ again",
         "origin": "latin"
     },
     {

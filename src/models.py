@@ -335,6 +335,10 @@ class Word:
 
             part = morph.get_gloss()
             
+            # Adjectives don't get inflected, so proactively strip their brackets
+            if morph.get_type() == "adj":
+                definition = definition.replace("[","").replace("]", "")
+            
             if last_morph is None:
                 definition = part
             else:
@@ -362,6 +366,8 @@ class Word:
                         elif last_morph.has_tag("singleton"):
                             article = "the"
                             words[index] = inflection.inflect(article + " " + definition, "singleton")
+                        else:
+                            words[index] = definition
                     elif word == "%pl":
                         if last_morph.has_tag("count"):
                             words[index] = inflection.inflect(definition, "pl")
@@ -370,6 +376,8 @@ class Word:
                         elif last_morph.has_tag("singleton"):
                             article = "the"
                             words[index] = inflection.inflect(article + " " + definition, "singleton")
+                        else:
+                            words[index] = definition
                     elif word == "%!pl":
                         words[index] = inflection.inflect(definition, "pl")
 

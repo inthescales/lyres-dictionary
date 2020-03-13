@@ -58,6 +58,8 @@ def transform_word_latin(word, morphothec):
     if word.size() == 1 and current_type == "noun":
         bag.append(("numerical", 5))
 
+    if last_morph.morph["key"] in ["ble", "ify"]:
+        bag.append(("negate", 1000000))
         
     # Choose --------------------------
     if not override:
@@ -70,14 +72,14 @@ def transform_word_latin(word, morphothec):
         choices = morphothec.morphs_from[current_type]
         valid_choices = choices.copy()
 
-        if last_morph.morph["key"] in choices:
-            valid_choices.remove(last_morph.morph["key"])
-            
         for choice in choices:
             if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
                 valid_choices.remove(choice)
-            elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 5) > 0:
+            elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
                 valid_choices.remove(choice)
+                
+        if last_morph.morph["key"] in valid_choices:
+            valid_choices.remove(last_morph.morph["key"])
 
         choice = random.choice(valid_choices)
         new_morph = Morph(choice, morphothec)
@@ -87,13 +89,13 @@ def transform_word_latin(word, morphothec):
     elif choice == "add_prep_prefix":
         choices = morphothec.filter_type("prep", { "has-tag": "verbal" })
         valid_choices = choices.copy()
-        
-        if last_morph.morph["key"] in choices:
-            valid_choices.remove(last_morph.morph["key"])
-            
+
         for choice in choices:
             if not check_req(Morph(choice, morphothec).as_dict(), { "following": first_morph.morph } ):
                 valid_choices.remove(choice)
+                
+        if last_morph.morph["key"] in valid_choices:
+            valid_choices.remove(last_morph.morph["key"])
                 
         choice = random.choice(choices)
         new_morph = Morph(choice, morphothec)
@@ -118,3 +120,7 @@ def transform_word_latin(word, morphothec):
         num_morph = Morph( random.choice(morphothec.type_morphs["number"]), morphothec)
         end_morph = Morph("al-number", morphothec)
         word.add_affixes(num_morph, end_morph)
+        
+    elif choice == "negate":
+        morph = Morph("in-negative", morphothec)
+        word.add_prefix(morph)

@@ -31,6 +31,9 @@ class Morphothec:
 
                     self.morph_for_key[morph["key"]] = morph
 
+                    if "tags" in morph and "no-gen" in morph["tags"]:
+                        continue
+                    
                     morph_type = morph["type"]
                     if morph_type != "derive":
 
@@ -52,8 +55,7 @@ class Morphothec:
                             if not from_type in self.morphs_from:
                                 self.morphs_from[from_type] = []
 
-                            if "tags" not in morph or not "no-gen" in morph["tags"]:
-                                self.morphs_from[from_type].append(morph["key"])
+                            self.morphs_from[from_type].append(morph["key"])
                                 
                 if errors > 0:
                     print("Exiting with " + str(errors) + " validation errors")
