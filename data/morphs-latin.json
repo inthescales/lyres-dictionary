@@ -306,6 +306,15 @@
         "type": "noun",
         "declension": 2,
         "gloss": "arch",
+        "tags": ["count", "abstract", "shape"],
+        "origin": "latin"
+    },
+    {
+        "key": "arcus-arch",
+        "link": "arch",
+        "type": "noun",
+        "declension": 0,
+        "gloss": "arch",
         "tags": ["count", "concrete"],
         "origin": "latin"
     },
@@ -566,12 +575,39 @@
         "notes": "'e' in prepositionless forms is my guess based on 'ae'->'e' sound change."
     },
     {
+        "key": "calix",
+        "link": "calic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "cup",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "camera",
         "link": "camer",
         "type": "noun",
         "declension": 1,
         "gloss": "chamber",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "campana",
+        "link": "campan",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "bell",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "cancer",
+        "link": "cancr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "crab",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -630,6 +666,24 @@
         "origin": "latin"
     },
     {
+        "key": "capilla",
+        "link": "capill",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "hair",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
+    },
+    {
+        "key": "capilla-mass",
+        "link": "capill",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "hair",
+        "tags": ["mass", "concrete", "bodypart", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "caput",
         "link": "capit",
         "type": "noun",
@@ -645,6 +699,15 @@
         "declension": 2,
         "gloss": "prison",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "caseus",
+        "link": "case",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "cheese",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -712,6 +775,15 @@
         "type": "adj",
         "declension": 12,
         "gloss": "lofty",
+        "origin": "latin"
+    },
+    {
+        "key": "cerebrum",
+        "link": "cerebr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "brain",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -863,7 +935,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "circle",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "abstract", "shape"],
         "origin": "latin"
     },
     {
@@ -2360,6 +2432,15 @@
         "origin": "latin"
     },
     {
+        "key": "helix",
+        "link": "helic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "spiral",
+        "tags": ["count", "abstract", "shape"],
+        "origin": "latin"
+    },
+    {
         "key": "herba",
         "link": "herb",
         "type": "noun",
@@ -3123,7 +3204,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "line",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "abstract", "shape"],
         "origin": "latin"
     },
     {
@@ -6015,7 +6096,7 @@
         "link": "tintinnabul",
         "type": "noun",
         "declension": 2,
-        "gloss": "bell",
+        "gloss": "jingle [bell]",
         "tags": ["count", "concrete"],
         "origin": "latin"
     },
@@ -7243,9 +7324,22 @@
         "gloss": "having the shape of %sg",
         "requires": {
             "follows": {
-                "has-all-tags": ["count", "concrete"]
+                "and": [
+                    { "has-tag": "count" },
+                    { "has-any-tags": ["concrete", "shape"] }
+                ]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "person"
+                    }
+                },
+                "gloss": "having the appearance of %sg"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -7694,7 +7788,7 @@
             { "key": "ous" }
         ],
         "participle-type": "perfect",
-        "gloss": "%part",
+        "gloss": "the state of %part",
         "tags": ["mass"],
         "origin": "latin"
     },
