@@ -3172,7 +3172,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ous"
+                        "has-key": ["ous-full", "ous-material"]
                     }
                 },
                 "link": "ligne"
@@ -7263,6 +7263,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
+        "suffixes": ["al", "ary"],
         "gloss": "a small %@",
         "requires": {
             "follows": {
@@ -7278,7 +7279,9 @@
             "final": ["ule", "le"],
             "link": "ul"
         }],
-        "origin": "latin"
+        "tags": ["count", "concrete"],
+        "origin": "latin",
+        "notes": "find a way to make this plural..."
     },
     {
         "key": "id-animal",
@@ -7510,7 +7513,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": ["al", "ary"],
+        "suffixes": ["al", "ary", "ous-full"],
         "participle-type": "perfect",
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
@@ -7518,7 +7521,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ous"
+                        "has-key": "ous-full"
                     }
                 },
                 "link": "i"
@@ -7673,7 +7676,12 @@
         "gloss": "one who eats %pl",
         "requires": {
             "follows": {
-                "has-tag": "concrete"
+                "and": [
+                    { "has-tag": "concrete" },
+                    { "not": {
+                        "has-tag": "liquid"
+                    } }
+                ]
             }
         },
         "exception": [
@@ -7742,7 +7750,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": ["al", "ous"],
+        "suffixes": ["al", "ous-full"],
         "participle-type": "perfect",
         "gloss": "the state of %part",
         "tags": ["mass"],
@@ -7756,16 +7764,18 @@
         "from": "noun",
         "to": "adj",
         "suffixes": ["ity"],
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-key": ["icide", "ifer", "iform", "iger", "itude", "itude-noun", "ity", "ivore"]
-                    }
-                },
-                "gloss": "%@"
-            }
-        ],
+        "gloss": "%@",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "ous-full",
+        "final": "ous",
+        "link": "os",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": ["ity"],
         "gloss": "full of %pl",
         "origin": "latin"
     },
