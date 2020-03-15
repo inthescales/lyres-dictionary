@@ -305,7 +305,7 @@
         "link": "arc",
         "type": "noun",
         "declension": 2,
-        "gloss": "arch",
+        "gloss": "arc",
         "tags": ["count", "abstract", "shape"],
         "origin": "latin"
     },
@@ -6952,7 +6952,7 @@
         "gloss-noun": "apart from %sg",
         "assimilation": {
             "link": ["*"],
-            "sed": ["a", "e", "i", "o", "u", "y"]
+            "sed": ["a", "e", "i", "o", "u", "ia"]
         },
         "tags": ["verbal"],
         "origin": "latin"
@@ -7030,6 +7030,22 @@
                 },
                 "final": "ar",
                 "link": "ar"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["icide", "iform"]
+                    }
+                },
+                "gloss": "%@"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["iger"]
+                    }
+                },
+                "gloss": "of %@"
             }
         ],
         "origin": "latin"
@@ -7092,7 +7108,7 @@
                        "has-key": "or"
                    }
                },
-               "final": "y",
+               "final": "ia",
                "link": "i"
            },
            {
@@ -7232,14 +7248,8 @@
         "from": "noun",
         "to": "noun",
         "suffixes": [
-            {
-                "key": "al",
-                "gloss": "%@"
-            },
-            {
-                "key": "ous",
-                "gloss": "%@"
-            },
+            { "key": "al" },
+            { "key": "ous" },
             { "key": "ism" }
         ],
         "gloss": "the act of killing %pl",
@@ -7308,18 +7318,9 @@
         "from": "noun",
         "to": "adj",
         "suffixes": [
-            {
-                "key": "ity",
-                "gloss": "the quality of %@"
-            },
-            { 
-                "key": "al",
-                "gloss": "%@"
-            },
-            { 
-                "key": "ous",
-                "gloss": "%@"
-            }
+            { "key": "ity" },
+            { "key": "al" },
+            { "key": "ous" }
         ],
         "gloss": "having the shape of %sg",
         "requires": {
@@ -7350,22 +7351,10 @@
         "from": "noun",
         "to": "noun",
         "suffixes": [
-            { 
-                "key": "ous",
-                "gloss": "%@"
-            },
-            {
-                "key": "nt",
-                "gloss": "%@"
-            },
-            {
-                "key": "nce",
-                "gloss": "%@"
-            },
-            { 
-                "key": "ize",
-                "gloss": "[cause] to %@"
-            }
+            { "key": "ous" },
+            { "key": "nt" },
+            { "key": "nce" },
+            { "key": "ize" }
         ],
         "gloss": "one who brings %pl",
         "requires": {
@@ -7384,10 +7373,18 @@
         {
             "case": {
                 "precedes": {
-                    "has-key": ["ous", "nt", "nce"]
+                    "has-key": ["ous", "nt"]
                 }
             },
             "gloss": "bearing %pl"
+        },
+        {
+            "case": {
+                "precedes": {
+                    "has-key": ["nce"]
+                }
+            },
+            "gloss": "the bearing of %pl"
         },
         {
             "case": {
@@ -7443,22 +7440,10 @@
         "from": "noun",
         "to": "noun",
         "suffixes": [
-            { 
-                "key": "ous",
-                "gloss": "%@"
-            },
-            {
-                "key": "nt",
-                "gloss": "%@"
-            },
-            {
-                "key": "nce",
-                "gloss": "%@"
-            },
-            { 
-                "key": "al",
-                "gloss": "of %@"
-            }
+            { "key": "ous" },
+            { "key": "nt" },
+            { "key": "nce" },
+            { "key": "al" }
         ],
         "gloss": "one who carries %pl",
         "requires": {
@@ -7477,10 +7462,18 @@
         {
             "case": {
                 "precedes": {
-                    "has-key": ["ous", "nt", "nce"]
+                    "has-key": ["ous", "nt"]
                 }
             },
             "gloss": "carrying %pl"
+        },
+        {
+            "case": {
+                "precedes": {
+                    "has-key": ["nce"]
+                }
+            },
+            "gloss": "the carrying of %pl"
         }],
         "tags": ["count", "concrete"],
         "origin": "latin",
@@ -7534,11 +7527,7 @@
         "from": "noun",
         "to": "adj",
         "suffixes": [
-            { "key": "ity" },
-            {
-                "key": "al",
-                "gloss": "%@"
-            }
+            { "key": "ity" }
         ],
         "gloss": "having the nature of %sg",
         "requires": {
@@ -7628,6 +7617,16 @@
             { "key": "ary" },
             { "key": "ous" }
         ],
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "ous"
+                    }
+                },
+                "gloss": "%@"
+            }
+        ],
         "gloss": "the quality of being %@",
         "origin": "latin"
     },
@@ -7643,6 +7642,16 @@
             { "key": "ary" },
             { "key": "ous" }
         ],
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "ous"
+                    }
+                },
+                "gloss": "%@"
+            }
+        ],
         "gloss": "the state or quality of being %sg",
         "tags": ["rare"],
         "origin": "latin"
@@ -7655,10 +7664,7 @@
         "from": "adj",
         "to": "noun",
         "suffixes": [
-            { 
-                "key": "ous",
-                "gloss": "%@"
-            }
+            { "key": "ous" }
         ],
         "exception": [{
             "case": {
@@ -7671,6 +7677,14 @@
             },
             "link": "eti",
             "final": "ety"
+        },
+        {
+            "case": {
+                "follows": {
+                    "has-key": ["iform", "ivore"]
+                }
+            },
+            "gloss": "the quality of %@"
         },
         {
             "case": {
@@ -7705,18 +7719,9 @@
         "from": "noun",
         "to": "noun",
         "suffixes": [
-            {
-                "key": "ous",
-                "gloss": "%@"
-            },
-            {
-                "key": "y",
-                "gloss": "the quality of %@"
-            },
-            {
-                "key": "ity",
-                "gloss": "the quality of %@"
-            }
+            { "key": "ous" },
+            { "key": "ia" },
+            { "key": "ity" }
         ],
         "gloss": "one who eats %pl",
         "requires": {
@@ -7728,7 +7733,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["ous", "y", "ity"]
+                        "has-key": ["ous", "ia", "ity"]
                     }
                 },
                 "gloss": "eating %pl"
@@ -7746,6 +7751,16 @@
         "to": "verb",
         "conjugation": 1,
         "gloss": "[cause] to be %@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "ifer"
+                    }
+                },
+                "gloss": "[cause] to %@"
+            }
+        ],
         "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
@@ -7758,7 +7773,7 @@
         "to": "noun",
         "suffixes": [
             { "key": "al" },
-            { "key": "y" }
+            { "key": "ia" }
         ],
         "participle-type": "perfect",
         "gloss": "one who %3sg",
@@ -7802,6 +7817,16 @@
         "suffixes": [
             { "key": "ity" }
         ],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["icide", "ifer", "iform", "iger", "itude", "itude-noun", "ity", "ivore"]
+                    }
+                },
+                "gloss": "%@"
+            }
+        ],
         "gloss": "full of %pl",
         "origin": "latin"
     },
@@ -7833,6 +7858,16 @@
         "suffixes": [
             { "key": "al" },
             { "key": "ary" }
+        ],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["ifer", "iger"]
+                    }
+                },
+                "gloss": "%@"
+            }
         ],
         "participle-type": "present",
         "tags": ["stem-change"],
@@ -7868,6 +7903,16 @@
         "suffixes": [
             { "key": "al" },
             { "key": "ary" }
+        ],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["ifer", "iger"]
+                    }
+                },
+                "gloss": "%@"
+            }
         ],
         "participle-type": "present",
         "tags": ["stem-change"],
@@ -7927,7 +7972,7 @@
         "origin": "latin"
     },
     {
-        "key": "y",
+        "key": "ia",
         "final": "y",
         "link": "i",
         "type": "derive",
@@ -7936,7 +7981,15 @@
         "suffixes": [
             { "key": "al" }
         ],
-        "gloss": "pertaining to %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-key": "or"
+                }
+            },
+            "gloss": "pertaining to %@"
+        }],
+        "gloss": "the quality of %@",
         "tags": ["no-gen"],
         "origin": "latin",
         "notes": "general adjectivizing suffix"

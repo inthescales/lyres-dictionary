@@ -48,11 +48,6 @@ class Morph:
                 if "follows" in case and self.prev:
                     if evaluate_expression(case["follows"], self.prev.as_dict()):
                         self.apply_override(exception)
-        
-        if self.prev and self.prev.suffixes() is not None:
-            for suffix in self.prev.suffixes():
-                if suffix["key"] == self.morph["key"]:
-                    self.apply_override(suffix)
     
     def apply_override(self, override):
         for key, value in override.items():
@@ -369,13 +364,14 @@ class Word:
                         words[index] = inflection.inflect("to " + definition, "inf")
                     elif word == "%sg":
                         if last_morph.has_tag("count"):
-                            article = helpers.indefinite_article_for(definition)
-                            words[index] = inflection.inflect(article + " " + definition, "sg")
+                            inflected = inflection.inflect(definition, "sg")
+                            article = helpers.indefinite_article_for(inflected)
+                            words[index] = article + " " + inflected
                         elif last_morph.has_tag("mass"):
                             words[index] = inflection.inflect(definition, "mass")
                         elif last_morph.has_tag("singleton"):
                             article = "the"
-                            words[index] = inflection.inflect(article + " " + definition, "singleton")
+                            words[index] = article + " " +inflection.inflect(definition, "singleton")
                         else:
                             words[index] = definition
                     elif word == "%pl":
@@ -385,7 +381,7 @@ class Word:
                             words[index] = inflection.inflect(definition, "mass")
                         elif last_morph.has_tag("singleton"):
                             article = "the"
-                            words[index] = inflection.inflect(article + " " + definition, "singleton")
+                            words[index] = article + " " +inflection.inflect(definition, "singleton")
                         else:
                             words[index] = definition
                     elif word == "%!pl":
