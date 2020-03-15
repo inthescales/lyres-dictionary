@@ -98,7 +98,7 @@ def transform_word_latin(word, morphothec):
             # For words ending in suffixes with restriction, choose from their valid list
             valid_choices = last_morph.suffixes()
             choice = random.choice(valid_choices)
-            new_morph = Morph(choice["key"], morphothec)
+            new_morph = Morph(choice, morphothec)
             
         if new_morph is not None:
             word.add_suffix(new_morph)

@@ -7006,10 +7006,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" },
-            { "key": "ize"}
-        ],
+        "suffixes": ["ity", "ize"],
         "gloss": "of or relating to %pl",
         "gloss-relative": "%@",
         "exception": [
@@ -7096,9 +7093,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "gloss": "pertaining to %pl",
         "gloss-relative": "%@",
         "exception": [
@@ -7134,6 +7129,16 @@
         "conjugation": 1,
         "gloss": "[cause] to be %@",
         "gloss-relative": "%@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "esce"
+                    }
+                },
+                "gloss": "[cause] %inf"
+            }
+        ],
         "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
@@ -7144,9 +7149,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ion" }
-        ],
+        "suffixes": ["ion"],
         "gloss": "having %pl",
         "requires": {
             "follows": {
@@ -7162,10 +7165,7 @@
         "type": "derive",
         "from": "verb",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" },
-            { "key": "ize" }
-        ],
+        "suffixes": ["ity", "ize"],
         "participle-type": "present",
         "tags": ["stem-raise"],
         "gloss": "able to be %ppart",
@@ -7183,10 +7183,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ist" }
-        ],
+        "suffixes": ["al", "ist"],
         "gloss": "the cultivation of %pl",
         "requires": {
             "follows": {
@@ -7212,14 +7209,7 @@
         "type": "derive",
         "from": "adj",
         "to": "verb",
-        "suffixes": [
-            { "key": "nt" },
-            { "key": "nce" },
-            {
-                "key": "ate",
-                "gloss": "[cause] %inf"
-            }
-        ],
+        "suffixes": ["nt", "nce", "ate"],
         "conjugation": 0,
         "gloss": "[become] %@",
         "origin": "latin"
@@ -7247,11 +7237,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ous" },
-            { "key": "ism" }
-        ],
+        "suffixes": ["al", "ous", "ism"],
         "gloss": "the act of killing %pl",
         "requires": {
             "follows": {
@@ -7317,11 +7303,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" },
-            { "key": "al" },
-            { "key": "ous" }
-        ],
+        "suffixes": ["ity", "al", "ous"],
         "gloss": "having the shape of %sg",
         "requires": {
             "follows": {
@@ -7350,12 +7332,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "ous" },
-            { "key": "nt" },
-            { "key": "nce" },
-            { "key": "ize" }
-        ],
+        "suffixes": ["ous", "nt", "nce", "ize"],
         "gloss": "one who brings %pl",
         "requires": {
             "follows": {
@@ -7439,12 +7416,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "ous" },
-            { "key": "nt" },
-            { "key": "nce" },
-            { "key": "al" }
-        ],
+        "suffixes": ["ous", "nt", "nce", "al"],
         "gloss": "one who carries %pl",
         "requires": {
             "follows": {
@@ -7486,9 +7458,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
@@ -7504,9 +7474,7 @@
         "type": "derive",
         "from": "verb",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "participle-type": "perfect",
         "gloss": "able %inf",
         "exception": [{
@@ -7526,9 +7494,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
@@ -7544,10 +7510,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ary" }
-        ],
+        "suffixes": ["al", "ary"],
         "participle-type": "perfect",
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
@@ -7612,11 +7575,7 @@
         "type": "derive",
         "from": "adj",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ary" },
-            { "key": "ous" }
-        ],
+        "suffixes": ["al", "ary", "ous"],
         "exception": [
             {
                 "case": {
@@ -7637,11 +7596,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ary" },
-            { "key": "ous" }
-        ],
+        "suffixes": ["al", "ary", "ous"],
         "exception": [
             {
                 "case": {
@@ -7663,9 +7618,7 @@
         "type": "derive",
         "from": "adj",
         "to": "noun",
-        "suffixes": [
-            { "key": "ous" }
-        ],
+        "suffixes": ["ous"],
         "exception": [{
             "case": {
                 "follows": {
@@ -7704,9 +7657,7 @@
         "type": "derive",
         "from": "verb",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "participle-type": "perfect",
         "gloss": "given to %part",
         "origin": "latin"
@@ -7718,11 +7669,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "ous" },
-            { "key": "ia" },
-            { "key": "ity" }
-        ],
+        "suffixes": ["ous", "ia", "ity"],
         "gloss": "one who eats %pl",
         "requires": {
             "follows": {
@@ -7771,10 +7718,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ia" }
-        ],
+        "suffixes": ["al", "ia"],
         "participle-type": "perfect",
         "gloss": "one who %3sg",
         "tags": ["count"],
@@ -7798,10 +7742,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ous" }
-        ],
+        "suffixes": ["al", "ous"],
         "participle-type": "perfect",
         "gloss": "the state of %part",
         "tags": ["mass"],
@@ -7814,9 +7755,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "exception": [
             {
                 "case": {
@@ -7837,9 +7776,7 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": [
-            { "key": "ity" }
-        ],
+        "suffixes": ["ity"],
         "gloss": "made of or resembling %sg",
         "requires": {
             "follows": {
@@ -7855,10 +7792,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ary" }
-        ],
+        "suffixes": ["al", "ary"],
         "exception": [
             {
                 "case": {
@@ -7900,10 +7834,7 @@
         "type": "derive",
         "from": "verb",
         "to": "adj",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ary" }
-        ],
+        "suffixes": ["al", "ary"],
         "exception": [
             {
                 "case": {
@@ -7927,10 +7858,7 @@
         "participle-type": "present",
         "from": "verb",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" },
-            { "key": "ary" }
-        ],
+        "suffixes": ["al", "ary"],
         "tags": ["stem-change"],
         "gloss": "one who %3sg",
         "origin": "latin"
@@ -7963,9 +7891,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" }
-        ],
+        "suffixes": ["al"],
         "participle-type": "perfect",
         "gloss": "the result of %part",
         "tags": ["mass"],
@@ -7978,9 +7904,7 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": [
-            { "key": "al" }
-        ],
+        "suffixes": ["al"],
         "exception": [{
             "case": {
                 "follows": {
