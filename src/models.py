@@ -31,12 +31,6 @@ class Morph:
         next_morph.refreshMorph()
         
     def refreshMorph(self):
-        
-        def apply(case):
-            for key, value in case.items():
-                if key != "case":
-                    self.morph[key] = value
-        
         self.morph = self.base.copy()
         self.morph["exception"] = ""
 
@@ -49,13 +43,21 @@ class Morph:
 
                 if "precedes" in case and self.next:
                     if evaluate_expression(case["precedes"], self.next.as_dict()):
-                        apply(exception)
-                        return
+                        self.apply_override(exception)
 
                 if "follows" in case and self.prev:
                     if evaluate_expression(case["follows"], self.prev.as_dict()):
-                        apply(exception)
-                        return
+                        self.apply_override(exception)
+        
+        if self.prev and self.prev.suffixes() is not None:
+            for suffix in self.prev.suffixes():
+                if suffix["key"] == self.morph["key"]:
+                    self.apply_override(suffix)
+    
+    def apply_override(self, override):
+        for key, value in override.items():
+            if key != "case":
+                self.morph[key] = value
     
     def get_form(self):
         
@@ -180,11 +182,19 @@ class Morph:
         print("ERROR - failed to find gloss for " + self.morph["key"])
         
     def get_type(self):
-        
         if self.morph["type"] == "derive":
             return self.morph["to"]
         else:
             return self.morph["type"]
+        
+    def is_root(self):
+        return self.morph["type"] in ["noun", "verb", "adj"]
+        
+    def suffixes(self):
+        if "suffixes" not in self.morph:
+            return None
+        else:
+            return self.morph["suffixes"]
         
     def has_tag(self, target):
 
@@ -335,12 +345,12 @@ class Word:
 
             part = morph.get_gloss()
             
-            # Adjectives don't get inflected, so proactively strip their brackets
-            if morph.get_type() == "adj":
-                definition = definition.replace("[","").replace("]", "")
-            
             if last_morph is None:
                 definition = part
+                
+                # Adjectives don't get inflected, so proactively strip their brackets
+                if morph.is_root() and morph.get_type() == "adj":
+                    definition = definition.replace("[","").replace("]", "")
             else:
 
                 words = part.split(" ")

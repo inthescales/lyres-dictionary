@@ -33,14 +33,15 @@ def transform_word_latin(word, morphothec):
     first_morph = word.first_morph()
     has_prep = first_morph.get_type() == "prep"
     has_prefix = first_morph.get_type() == "prefix"
-
+    
     choice = None
     override = False
-    bag = [
-        ("add_suffix", 100),
-    ]
+    bag = []
 
     # Conditions and probabilities --------------------------
+    
+    if last_morph.is_root() or last_morph.suffixes() is None or len(last_morph.suffixes()) > 0:
+        bag.append(("add_suffix", 100))
     
     if word.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not has_prep and not has_prefix:
         if last_morph.has_tag("always-prep"):
@@ -59,9 +60,13 @@ def transform_word_latin(word, morphothec):
         bag.append(("numerical", 5))
 
     if last_morph.morph["key"] in ["ble", "ify"]:
-        bag.append(("negate", 1000000))
+        bag.append(("negate", 20))
         
-    # Choose --------------------------
+    # Fail if no transformations ---------------
+    if len(bag) == 0:
+        return
+        
+    # Choose -----------------------------------
     if not override:
         choice = helpers.choose_bag(bag)
     
@@ -69,21 +74,34 @@ def transform_word_latin(word, morphothec):
     
     # Add Suffix
     if choice == "add_suffix":
-        choices = morphothec.morphs_from[current_type]
-        valid_choices = choices.copy()
+        
+        new_morph = None
+        
+        if last_morph.is_root() or last_morph.suffixes() is None:
+            # For unsuffixed words or ones with unlimited suffixing, choose based on type
+            choices = morphothec.morphs_from[current_type]
+            valid_choices = choices.copy()
 
-        for choice in choices:
-            if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
-                valid_choices.remove(choice)
-            elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
-                valid_choices.remove(choice)
+            for choice in choices:
+                if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
+                    valid_choices.remove(choice)
+                elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
+                    valid_choices.remove(choice)
                 
-        if last_morph.morph["key"] in valid_choices:
-            valid_choices.remove(last_morph.morph["key"])
-
-        choice = random.choice(valid_choices)
-        new_morph = Morph(choice, morphothec)
-        word.add_suffix(new_morph)
+            if last_morph.morph["key"] in valid_choices:
+                valid_choices.remove(last_morph.morph["key"])
+            
+            choice = random.choice(valid_choices)
+            new_morph = Morph(choice, morphothec)
+                
+        else:
+            # For words ending in suffixes with restriction, choose from their valid list
+            valid_choices = last_morph.suffixes()
+            choice = random.choice(valid_choices)
+            new_morph = Morph(choice["key"], morphothec)
+            
+        if new_morph is not None:
+            word.add_suffix(new_morph)
 
     # Add Preposition
     elif choice == "add_prep_prefix":

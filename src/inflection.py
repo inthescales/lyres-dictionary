@@ -43,5 +43,8 @@ def override_inflection(string, mode):
     elif string == "two":
         if mode == "pl":
             return "twos"
+    elif string == "omen":
+        if mode == "pl":
+            return "omens"
 
     return None
