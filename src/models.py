@@ -41,13 +41,15 @@ class Morph:
                 match = True
                 case = exception["case"]
 
-                if "precedes" in case and self.next:
-                    if evaluate_expression(case["precedes"], self.next.as_dict()):
-                        self.apply_override(exception)
+                if "precedes" in case:
+                    if self.next is None or not evaluate_expression(case["precedes"], self.next.as_dict()):
+                        continue
 
                 if "follows" in case and self.prev:
-                    if evaluate_expression(case["follows"], self.prev.as_dict()):
-                        self.apply_override(exception)
+                    if self.prev is None or not evaluate_expression(case["follows"], self.prev.as_dict()):
+                        continue
+                        
+                self.apply_override(exception)
     
     def apply_override(self, override):
         for key, value in override.items():
@@ -443,16 +445,20 @@ def check_req(morph, referents):
         print("Error: currently, requirement can only have one referent child")
         sys.exit(1)
         
+    passes = True
+        
     if "precedes" in keys:
         if not "following" in referents:
             print("Error: precedes block but no following morph given")
             sys.exit(1)
         
-        return evaluate_expression(requirements["precedes"], referents["following"])
+        passes = passes and evaluate_expression(requirements["precedes"], referents["following"])
     
     if "follows" in keys:
         if not "preceding" in referents:
             print("Error: follows block but no following morph given")
             sys.exit(1)
 
-        return evaluate_expression(requirements["follows"], referents["preceding"])
+        passes = passes and evaluate_expression(requirements["follows"], referents["preceding"])
+    
+    return passes

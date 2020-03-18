@@ -71,6 +71,15 @@
         "origin": "latin"
     },
     {
+        "key": "aes",
+        "link": "aer",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "bronze",
+        "tags": ["mass", "concrete", "material", "metal"],
+        "origin": "latin"
+    },
+    {
         "key": "agere",
         "link-present": "age",
         "link-perfect": "act",
@@ -92,6 +101,15 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "exigent vs cogent"
+    },
+    {
+        "key": "ala",
+        "link": "al",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "wing",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
     },
     {
         "key": "alba",
@@ -156,6 +174,15 @@
         "type": "adj",
         "declension": 12,
         "gloss": "[wide], [abundant]",
+        "origin": "latin"
+    },
+    {
+        "key": "angulus",
+        "link": "angul",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "angle",
+        "tags": ["count", "abstract", "shape"],
         "origin": "latin"
     },
     {
@@ -330,6 +357,24 @@
         "origin": "latin"
     },
     {
+        "key": "argentum",
+        "link": "argent",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "silver",
+        "tags": ["mass", "concrete", "material", "metal"],
+        "origin": "latin"
+    },
+    {
+        "key": "argilla",
+        "link": "argill",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "clay",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "arguere",
         "link-present": "argue",
         "link-perfect": "argut",
@@ -338,6 +383,24 @@
         "conjugation": 3,
         "gloss": "argue",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "arma",
+        "link": "arm",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "arms",
+        "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "ars",
+        "link": "art",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "art",
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -372,7 +435,7 @@
     },
     {
         "key": "auctor",
-        "link": "authori",
+        "link": ["authori", "auctori"],
         "type": "noun",
         "declension": 2,
         "gloss": "leader",
@@ -397,6 +460,15 @@
         "declension": 1,
         "gloss": "dawn",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "aurum",
+        "link": "aur",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "gold",
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "latin"
     },
     {
@@ -434,6 +506,15 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
+    {
+        "key": "baca",
+        "link": "bacc",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "bery",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },    
     {
         "key": "battuere",
         "link-present": "bata",
@@ -519,11 +600,29 @@
         "origin": "latin"
     },
     {
+        "key": "branchia",
+        "link": "branch",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "gills",
+        "tags": ["mass", "concrete", "bodypart"],
+        "origin": "latin"
+    },
+    {
         "key": "brevis",
         "link": "brevi",
         "type": "adj",
         "declension": 12,
         "gloss": "short",
+        "origin": "latin"
+    },
+    {
+        "key": "brutum",
+        "link": "brut",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "beast",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -573,6 +672,15 @@
         "tags": ["intransitive", "dividing"],
         "origin": "latin",
         "notes": "'e' in prepositionless forms is my guess based on 'ae'->'e' sound change."
+    },
+    {
+        "key": "calcem",
+        "link": "calc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "chalc",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
     },
     {
         "key": "calix",
@@ -689,7 +797,16 @@
         "type": "noun",
         "declension": 3,
         "gloss": "head",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "bodypart-single"],
+        "origin": "latin"
+    },
+    {
+        "key": "carbo",
+        "link": "carbon",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "coal",
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -778,12 +895,21 @@
         "origin": "latin"
     },
     {
+        "key": "cera",
+        "link": "cer",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "wax",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "cerebrum",
         "link": "cerebr",
         "type": "noun",
         "declension": 2,
         "gloss": "brain",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -792,6 +918,24 @@
         "type": "adj",
         "declension": 12,
         "gloss": "certain",
+        "origin": "latin"
+    },
+    {
+        "key": "columna",
+        "link": "column",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "column",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "cortex",
+        "link": "cortic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "tree [bark]",
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -822,15 +966,6 @@
         "conjugation": 4,
         "gloss": "try",
         "tags": ["intransitive", "no-prep"],
-        "origin": "latin"
-    },
-    {
-        "key": "cerebrum",
-        "link": "cerebr",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "brain",
-        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -1068,6 +1203,15 @@
         "origin": "latin"
     },
     {
+        "key": "conus",
+        "link": "con",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "cone",
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
+        "origin": "latin"
+    },
+    {
         "key": "consolari",
         "link-present": "consola",
         "link-perfect": "consolat",
@@ -1104,7 +1248,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "heart",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -1123,7 +1267,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "body",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -1223,6 +1367,15 @@
         "conjugation": 3,
         "gloss": "[long] for",
         "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "cuprum",
+        "link": "cupr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "copper",
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "latin"
     },
     {
@@ -1553,6 +1706,15 @@
         "origin": "latin"
     },
     {
+        "key": "electrum",
+        "link": "electr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "amber",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "emere",
         "link-present": "emeri",
         "link-perfect": "empt",
@@ -1681,7 +1843,7 @@
         "type": "noun",
         "declension": 5,
         "gloss": "face",
-        "tags": ["count", "contract", "bodypart"],
+        "tags": ["count", "contract", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -1690,6 +1852,15 @@
         "type": "adj",
         "declension": 3,
         "gloss": "easy",
+        "origin": "latin"
+    },
+    {
+        "key": "falx",
+        "link": "falc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "sickle",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -1770,6 +1941,15 @@
         "origin": "latin"
     },
     {
+        "key": "febris",
+        "link": "febr",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "fever",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "felis",
         "link": "fel",
         "type": "noun",
@@ -1826,6 +2006,15 @@
         "origin": "latin"
     },
     {
+        "key": "ferrum",
+        "link": "ferr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "iron",
+        "tags": ["mass", "concrete", "material", "metal"],
+        "origin": "latin"
+    },
+    {
         "key": "fertilis",
         "link": "fertil",
         "type": "adj",
@@ -1870,6 +2059,15 @@
         "declension": 1,
         "gloss": "child",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
+        "key": "filum",
+        "link": "fil",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "thread",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -2114,6 +2312,15 @@
         "origin": "latin"
     },
     {
+        "key": "frons",
+        "link": "frond",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "frond",
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
+        "origin": "latin"
+    },
+    {
         "key": "fructus",
         "link": "fructu",
         "type": "noun",
@@ -2143,6 +2350,15 @@
         "origin": "latin"
     },
     {
+        "key": "frux",
+        "link": "frugis",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "fruit",
+        "tags": ["mass", "concrete", "living", "plant"],
+        "origin": "latin"
+    },
+    {
         "key": "fugere",
         "link-present": "fuga",
         "link-perfect": "fugit",
@@ -2151,6 +2367,15 @@
         "conjugation": 3,
         "gloss": "flee",
         "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "fumus",
+        "link": "fum",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "smoke",
+        "tags": ["mass", "concrete", "fluid", "gas"],
         "origin": "latin"
     },
     {
@@ -2271,6 +2496,15 @@
         "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
+    {
+        "key": "glans",
+        "link": "gland",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "acorn",
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
+        "origin": "latin"
+    },
     {  
         "key": "glomus",
         "link": "glomer",
@@ -2307,6 +2541,15 @@
         "declension": 1,
         "gloss": "grammar",
         "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "granus",
+        "link": "gran",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "grain",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {  
@@ -2429,6 +2672,15 @@
         "conjugation": 4,
         "gloss": "drain",
         "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "hedera",
+        "link": "hedere",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "ivy",
+        "tags": ["mass", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {
@@ -2673,6 +2925,15 @@
         "conjugation": 1,
         "gloss": "initiate",
         "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "insectum",
+        "link": "insect",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "insect",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -2979,6 +3240,15 @@
         "origin": "latin"
     },
     {
+        "key": "laureus",
+        "link": "laure",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "laurel",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "latin"
+    },
+    {
         "key": "lavare",
         "link-present": "lava",
         "link-perfect": "lavat",
@@ -3213,7 +3483,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "tongue",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -3299,6 +3569,15 @@
         "notes": "filled out by analogy with mirari"
     },
     {
+        "key": "lucrum",
+        "link": "lucr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "wealth",
+        "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "luctari",
         "link-present": "lucta",
         "link-perfect": "luct",
@@ -3368,6 +3647,15 @@
         "origin": "latin"
     },
     {
+        "key": "macula",
+        "link": "macul",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "stain",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "magna",
         "link": "magn",
         "type": "adj",
@@ -3400,6 +3688,15 @@
         "conjugation": 1,
         "gloss": "hammer",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "mamma",
+        "link": "mamm",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "breast",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {
@@ -3577,6 +3874,15 @@
         "origin": "latin"
     },
     {
+        "key": "merda",
+        "link": "merd",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "dung",
+        "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "mergere",
         "link-present": "merge",
         "link-perfect": "mers",
@@ -3609,6 +3915,15 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "compare metertix"
+    },
+    {
+        "key": "metallum",
+        "link": "metall",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "metal",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
     },
     {
         "key": "migrare",
@@ -3771,6 +4086,15 @@
         "notes": "consider changing root to 'demonstrare'"
     },
     {
+        "key": "morbus",
+        "link": "morb",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "disease",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "mordere",
         "link-present": "morda",
         "link-perfect": "mors",
@@ -3877,7 +4201,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "nose",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -3926,6 +4250,15 @@
         "type": "adj",
         "declension": 0,
         "gloss": "needed",
+        "origin": "latin"
+    },
+    {
+        "key": "nectar",
+        "link": "nectar",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "nectar",
+        "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "latin"
     },
     {
@@ -4126,6 +4459,15 @@
         "origin": "latin"
     },
     {
+        "key": "nux",
+        "link": "nuc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "nut",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "oblivion",
         "link": "oblivi",
         "type": "noun",
@@ -4189,6 +4531,15 @@
         "declension": 2,
         "gloss": "duty",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "oleum",
+        "link": "ole",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "oil",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -4285,7 +4636,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "mouth",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -4304,6 +4655,15 @@
         "declension": 4,
         "gloss": "remains",
         "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "ostreum",
+        "link": "ostre",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "oyster",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -4526,7 +4886,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "chest",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -4834,6 +5194,15 @@
         "origin": "latin"
     },
     {
+        "key": "plumbum",
+        "link": "plumb",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "lead",
+        "tags": ["mass", "concrete", "material", "metal"],
+        "origin": "latin"
+    },
+    {
         "key": "plura",
         "link": "plur",
         "type": "adj",
@@ -5060,7 +5429,16 @@
         "gloss": "deep",
         "origin": "latin"
     },
-    {  
+    {
+        "key": "proles",
+        "link": "prol",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "offspring",
+        "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "propinqua",
         "link": "propinqu",
         "type": "adj",
@@ -5392,6 +5770,15 @@
         "origin": "latin"
     },
     {
+        "key": "saccharum",
+        "link": "sacchar",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "sugar",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "sacra",
         "link": "sacr",
         "type": "adj",
@@ -5410,6 +5797,24 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "consecrate vs sacrament?"
+    },
+    {
+        "key": "sagitta",
+        "link": "sagitt",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "arrow",
+        "tags": ["count", "concrete", "tool", "weapon"],
+        "origin": "latin"
+    },
+    {
+        "key": "sal",
+        "link": "sal",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "salt",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
     },
     {
         "key": "salire",
@@ -5495,6 +5900,15 @@
         "origin": "latin"
     },
     {
+        "key": "scutum",
+        "link": "scut",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "shield",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "secare",
         "link-present": "seca",
         "link-perfect": "sect",
@@ -5514,6 +5928,15 @@
         "conjugation": 2,
         "gloss": "sit",
         "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "semen",
+        "link": "semin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "seed",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -5633,6 +6056,15 @@
         "origin": "latin"
     },
     {
+        "key": "signum",
+        "link": "sign",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "sign",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "similis",
         "link": "simil",
         "type": "adj",
@@ -5698,6 +6130,15 @@
         "conjugation": 3,
         "gloss": "loosen",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "somnus",
+        "link": "somn",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "sleep",
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -5798,6 +6239,15 @@
         "origin": "latin"
     },
     {
+        "key": "spuma",
+        "link": "spum",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "foam",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "stabilis",
         "link": "stabil",
         "type": "adj",
@@ -5828,6 +6278,15 @@
         "tags": ["intransitive"],
         "origin": "latin",
         "notes": "meaning on destitute"
+    },
+    {
+        "key": "stella",
+        "link": "stell",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "star",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
     },
     {
         "key": "sternere",
@@ -6066,6 +6525,15 @@
         "conjugation": 1,
         "gloss": "[bear] witness",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "thuris",
+        "link": "thur",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "incense",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -6466,6 +6934,15 @@
         "declension": 2,
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
+        "key": "virus",
+        "link": "vir",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "venom",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     },
     {
@@ -7149,13 +7626,42 @@
         "type": "derive",
         "from": "noun",
         "to": "adj",
-        "suffixes": ["ion"],
+        "suffixes": ["ion", "ure"],
         "gloss": "having %pl",
         "requires": {
             "follows": {
                 "has-tag": "bodypart"
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    }
+                },
+                "gloss": "having %sg"
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "ure"
+                    }
+                },
+                "gloss": "%pl"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    },
+                    "precedes": {
+                        "has-key": "ure"
+                    }
+                },
+                "gloss": "%sg"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -7336,51 +7842,55 @@
         "from": "noun",
         "to": "noun",
         "suffixes": ["ous", "nt", "nce", "ize"],
-        "gloss": "one who brings %pl",
+        "gloss": "one who bears %pl",
         "requires": {
             "follows": {
-                "has-tag": "concrete"
+                "and": [
+                    { "has-tag": "concrete" },
+                    { "not": { "has-tag": "bodypart" }}
+                ]
             }
         },
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-key": ["nt", "nce"]
-                }
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["nt", "nce"]
+                    }
+                },
+                "link": "ifere"
             },
-            "link": "ifere"
-        },
-        {
-            "case": {
-                "precedes": {
-                    "has-key": ["ous", "nt"]
-                }
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["ous", "nt"]
+                    }
+                },
+                "gloss": "bearing %pl"
             },
-            "gloss": "bearing %pl"
-        },
-        {
-            "case": {
-                "precedes": {
-                    "has-key": ["nce"]
-                }
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["nce"]
+                    }
+                },
+                "gloss": "the bearing of %pl"
             },
-            "gloss": "the bearing of %pl"
-        },
-        {
-            "case": {
-                "precedes": {
-                    "has-key": "ize"
-                }
-            },
-            "gloss": "[bear] %pl"
-        }],
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "ize"
+                    }
+                },
+                "gloss": "[bear] %pl"
+            }
+        ],
         "tags": ["count", "concrete"],
-        "origin": "latin",
-        "notes": "add necessary exception for 'ous'"
+        "origin": "latin"
     },
     {
         "key": "ify",
-        "link-present": "ifice",
+        "link-present": ["ifice", "ifice", "ifia", "ifacie"],
         "link-perfect": "ificat",
         "final": "ify",
         "type": "derive",
@@ -7397,7 +7907,7 @@
                         "has-key": "or"
                     }
                 },
-                "link": "ifact"
+                "link": ["ifact", "ificat"]
             },
             {
                 "case": {
@@ -7525,6 +8035,14 @@
                     }
                 },
                 "link": "i"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "ate-bodypart"
+                    }
+                },
+                "gloss": "the condition of %@"
             }
         ],
         "origin": "latin"
@@ -7898,12 +8416,22 @@
         "key": "ure",
         "final": "ure",
         "link": "ur",
+        "participle-type": "perfect",
         "type": "derive",
         "from": "verb",
         "to": "noun",
         "suffixes": ["al"],
-        "participle-type": "perfect",
         "gloss": "the result of %part",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "ate-bodypart"
+                    }
+                },
+                "gloss": "the arrangement of one's %@"
+            }
+        ],
         "tags": ["mass"],
         "origin": "latin"
     },

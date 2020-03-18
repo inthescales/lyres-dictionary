@@ -16,9 +16,9 @@ def transform_word(word, morphothec):
 def get_latin_root(morphothec):
 
     bag = [
-        ("noun", 2),
-        ("adj", 1),
-        ("verb", 4)
+        ("noun", 3),
+        ("adj", 3),
+        ("verb", 5)
     ]
 
     type = helpers.choose_bag(bag)
