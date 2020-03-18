@@ -7,14 +7,20 @@ import src.transforms as transforms
 def generate_word(morphothec):
     word = Word(morphothec)
     transforms.seed_word(word, morphothec)
-    transform_count = random.randint(1,2)
+
+    bag = [
+        (1, 5),
+        (2, 3)
+    ]
+    transform_count = helpers.choose_bag(bag)
     maximum_size = 3
     
-    for i in range(0, transform_count):
+    transforms_done = 0
+    while (transforms_done < transform_count and word.size() < maximum_size) \
+        or word.last_morph().has_tag("non-final"):
+    
         transforms.transform_word(word, morphothec)
-        
-        if word.size() >= maximum_size:
-            break
+        transforms_done += 1
             
     return word
 
