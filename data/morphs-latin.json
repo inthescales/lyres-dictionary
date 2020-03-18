@@ -117,6 +117,7 @@
         "type": "adj",
         "declension": 12,
         "gloss": "white",
+        "tags": ["color"],
         "origin": "latin"
     },
     {
@@ -1860,7 +1861,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "sickle",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     },
     {
@@ -2326,7 +2327,7 @@
         "type": "noun",
         "declension": 4,
         "gloss": "fruit",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
         "origin": "latin"
     },
     {
@@ -2355,7 +2356,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "fruit",
-        "tags": ["mass", "concrete", "living", "plant"],
+        "tags": ["mass", "concrete", "bodypart", "bodypart-plant"],
         "origin": "latin"
     },
     {
@@ -2397,7 +2398,7 @@
         "final": "funct",
         "type": "verb",
         "conjugation": 3,
-        "gloss": "perform",
+        "gloss": "[perform] a task",
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "final is a guess"
@@ -2521,6 +2522,14 @@
         "declension": 1,
         "gloss": "glory",
         "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "gracilis",
+        "link": "gracil",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "graceful",
         "origin": "latin"
     },
     {
@@ -3139,7 +3148,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "tear",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "material", "fluid", "liquid", "secretion"],
         "origin": "latin"
     },
     {
@@ -3159,7 +3168,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "milk",
-        "tags": ["mass", "concrete", "material", "liquid"],
+        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
         "origin": "latin"
     },
     {
@@ -3308,6 +3317,15 @@
         "conjugation": 3,
         "gloss": "wash",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "lumen",
+        "link": "lumin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "lamp",
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     },
     {
@@ -4722,6 +4740,15 @@
         "origin": "latin"
     },
     {
+        "key": "palustris",
+        "link": "palustr",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "marsh",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "latin"
+    },
+    {
         "key": "pangere",
         "link-present": "pinge",
         "link-perfect": "pact",
@@ -5748,6 +5775,15 @@
         "origin": "latin"
     },
     {
+        "key": "rubra",
+        "link": "rubr",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "red",
+        "tags": ["color"],
+        "origin": "latin"
+    },
+    {
         "key": "ructare",
         "link-present": "ructa",
         "link-perfect": "ructat",
@@ -5862,7 +5898,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "blood",
-        "tags": ["mass", "concrete", "material", "liquid"],
+        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
         "origin": "latin"
     },
     {
@@ -6362,6 +6398,15 @@
         "origin": "latin"
     },
     {
+        "key": "sudor",
+        "link": "sud",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "sweat",
+        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
+        "origin": "latin"
+    },
+    {
         "key": "suere",
         "link-present": "sue",
         "link-perfect": "sut",
@@ -6711,6 +6756,15 @@
         "declension": 3,
         "gloss": "city",
         "tags": ["count", "concrete", "terrain", "region"],
+        "origin": "latin"
+    },
+    {
+        "key": "urina",
+        "link": "urin",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "urine",
+        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
         "origin": "latin"
     },
     {
@@ -7605,7 +7659,6 @@
         "to": "verb",
         "conjugation": 1,
         "gloss": "[cause] to be %@",
-        "gloss-relative": "%@",
         "exception": [
             {
                 "case": {
@@ -7665,6 +7718,21 @@
         "origin": "latin"
     },
     {
+        "key": "ate-secretion",
+        "link": "at",
+        "final": "ate",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "gloss": "[produce] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "secretion"
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "ble",
         "final": "ble",
         "link": "bil",
@@ -7718,6 +7786,24 @@
         "suffixes": ["nt", "nce", "ate"],
         "conjugation": 0,
         "gloss": "[become] %@",
+        "origin": "latin"
+    },
+    {
+        "key": "esce-plant",
+        "link-present": "esce",
+        "link-perfect": "esc",
+        "final": "esce",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "suffixes": ["nt", "nce"],
+        "conjugation": 0,
+        "gloss": "[put] forth %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart-plant"
+            }
+        },
         "origin": "latin"
     },
     {
@@ -7845,10 +7931,7 @@
         "gloss": "one who bears %pl",
         "requires": {
             "follows": {
-                "and": [
-                    { "has-tag": "concrete" },
-                    { "not": { "has-tag": "bodypart" }}
-                ]
+                "has-tag": "concrete"
             }
         },
         "exception": [
@@ -8014,6 +8097,16 @@
                 "has-any-tags": ["living", "terrain"]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "terrain"
+                    }
+                },
+                "gloss": "of, pertaining to, or inhabiting %pl"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -8048,7 +8141,7 @@
         "origin": "latin"
     },
     {
-        "key": "ipote",
+        "key": "ipote-drink",
         "final": "ipote",
         "link": "ipot",
         "type": "derive",
@@ -8061,6 +8154,28 @@
                 "has-tag": "liquid"
             }
         },
+        "origin": "latin"
+    },
+    {
+        "key": "ipote-power",
+        "final": "ipote",
+        "link": "ipote",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["nt", "nce"],
+        "gloss": "[have] command over %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": "skilled in the use of %pl"
+            }
+        ],
+        "tags": ["non-final"],
         "origin": "latin"
     },
     {
@@ -8097,16 +8212,6 @@
         "from": "adj",
         "to": "noun",
         "suffixes": ["al", "ary", "ous"],
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "ous"
-                    }
-                },
-                "gloss": "%@"
-            }
-        ],
         "gloss": "the quality of being %@",
         "origin": "latin"
     },
@@ -8118,16 +8223,6 @@
         "from": "noun",
         "to": "noun",
         "suffixes": ["al", "ary", "ous"],
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "ous"
-                    }
-                },
-                "gloss": "%@"
-            }
-        ],
         "gloss": "the state or quality of being %sg",
         "tags": ["rare"],
         "origin": "latin"
@@ -8159,14 +8254,6 @@
                 }
             },
             "gloss": "the quality of %@"
-        },
-        {
-            "case": {
-                "precedes": {
-                    "has-key": "ous"
-                }
-            },
-            "gloss": "%@"
         }],
         "gloss": "the quality of being %@",
         "origin": "latin"
@@ -8283,6 +8370,16 @@
         "to": "adj",
         "suffixes": ["ity"],
         "gloss": "%@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["ory", "ity", "itude", "itude-noun"]
+                    }
+                },
+                "gloss": "characterized by %@"
+            }
+        ],
         "tags": ["no-gen"],
         "origin": "latin"
     },
@@ -8305,12 +8402,22 @@
         "from": "noun",
         "to": "adj",
         "suffixes": ["ity"],
-        "gloss": "made of or resembling %sg",
+        "gloss": "made of or resembling %pl",
         "requires": {
             "follows": {
                 "has-tag": "material"
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "metal"
+                    }
+                },
+                "gloss": "containing or yielding %pl"
+            }
+        ],
         "origin": "latin"
     },
     {

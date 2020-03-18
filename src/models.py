@@ -341,7 +341,6 @@ class Word:
         def build_def(morph, last_morph, definition):
 
             part = morph.get_gloss()
-            
             if last_morph is None:
                 definition = part
                 
