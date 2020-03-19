@@ -7922,7 +7922,7 @@
         "type": "derive",
         "from": "noun",
         "to": "verb",
-        "suffixes": ["agent-silent", "ous", "nt", "nce", "ize"],
+        "suffixes": ["silent-agent", "ous", "nt", "nce", "ize"],
         "gloss": "[bear] %pl",
         "requires": {
             "follows": {
@@ -7939,19 +7939,7 @@
                 "link": "ifere"
             }
         ],
-        "tags": ["suffix-only", "non-final"],
-        "origin": "latin"
-    },
-    {
-        "key": "agent-silent",
-        "final": "",
-        "link": "",
-        "type": "derive",
-        "from": "verb",
-        "to": "noun",
-        "suffixes": ["al"],
-        "gloss": "one who %3sg",
-        "tags": ["count", "concrete", "no-gen"],
+        "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin"
     },
     {
@@ -7995,7 +7983,7 @@
         "type": "derive",
         "from": "noun",
         "to": "verb",
-        "suffixes": ["agent-silent", "ous", "nt", "nce"],
+        "suffixes": ["silent-agent", "ous", "nt", "nce"],
         "gloss": "[bring] %pl",
         "requires": {
             "follows": {
@@ -8018,7 +8006,7 @@
             },
             "gloss": "[bear] %pl"
         }],
-        "tags": ["suffix-only", "non-final"],
+        "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin",
         "notes": "add exceptions for 'ous'"
     },
@@ -8525,6 +8513,18 @@
         "tags": ["no-gen"],
         "origin": "latin",
         "notes": "general adjectivizing suffix"
+    },
+    {
+        "key": "silent-agent",
+        "final": "",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": ["al"],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "latin"
     },
     {
         "key": "contra",

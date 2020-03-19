@@ -220,7 +220,12 @@ class Word:
             return None
         
     def size(self):
-        return len(self.morphs)
+        length = 0
+        for morph in self.morphs:
+            if not morph.has_tag("no-length"):
+                length += 1
+                
+        return length
         
     def get_type(self):
         return self.last_morph().get_type()
