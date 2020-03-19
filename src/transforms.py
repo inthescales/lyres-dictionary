@@ -37,11 +37,15 @@ def transform_word_latin(word, morphothec):
     choice = None
     override = False
     bag = []
-
+    
     # Conditions and probabilities --------------------------
     
     if last_morph.is_root() or last_morph.suffixes() is None or len(last_morph.suffixes()) > 0:
-        bag.append(("add_suffix", 100))
+        if last_morph.has_tag("suffix-only"):
+            override = True
+            choice = "add_suffix"
+        else:
+            bag.append(("add_suffix", 100))
     
     if word.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not has_prep and not has_prefix:
         if last_morph.has_tag("always-prep"):
@@ -71,7 +75,7 @@ def transform_word_latin(word, morphothec):
         choice = helpers.choose_bag(bag)
     
     # Transformations --------------------------
-    
+
     # Add Suffix
     if choice == "add_suffix":
         

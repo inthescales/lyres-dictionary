@@ -6399,7 +6399,7 @@
     },
     {
         "key": "sudor",
-        "link": "sud",
+        "link": "sudor",
         "type": "adj",
         "declension": 3,
         "gloss": "sweat",
@@ -6973,7 +6973,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["nt", "nt-n", "nce"]
+                        "has-key": ["nt", "", "nce"]
                     }
                 },
                 "link": "viole"
@@ -7544,7 +7544,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": ["or", "nt", "nt-n", "nce"]
+                        "has-key": ["or", "nt", "nt-noun", "nce"]
                     }
                 },
                 "final": "ial",
@@ -7566,14 +7566,6 @@
                     }
                 },
                 "gloss": "%@"
-            },
-            {
-                "case": {
-                    "follows": {
-                        "has-key": ["iger"]
-                    }
-                },
-                "gloss": "of %@"
             }
         ],
         "origin": "latin"
@@ -7589,7 +7581,10 @@
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
-                "has-tag": "animal"
+                "and": [
+                    { "has-tag": "animal" },
+                    { "has-fuffix": "i" }
+                ]
             }
         },
         "origin": "latin"
@@ -7608,7 +7603,7 @@
            {
                "case": {
                    "follows": {
-                       "has-key": ["nt", "nt-n", "nce"]
+                       "has-key": ["nt", "nt-noun", "nce"]
                    }
                },
                "final": ["iarium", "iary"],
@@ -7640,7 +7635,7 @@
            {
                "case": {
                    "follows": {
-                       "has-key": ["nt", "nt-n", "nce"]
+                       "has-key": ["nt", "nt-noun", "nce"]
                    }
                },
                "final": "iary",
@@ -7926,9 +7921,9 @@
         "link": "ifer",
         "type": "derive",
         "from": "noun",
-        "to": "noun",
-        "suffixes": ["ous", "nt", "nce", "ize"],
-        "gloss": "one who bears %pl",
+        "to": "verb",
+        "suffixes": ["agent-silent", "ous", "nt", "nce", "ize"],
+        "gloss": "[bear] %pl",
         "requires": {
             "follows": {
                 "has-tag": "concrete"
@@ -7942,33 +7937,21 @@
                     }
                 },
                 "link": "ifere"
-            },
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": ["ous", "nt"]
-                    }
-                },
-                "gloss": "bearing %pl"
-            },
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": ["nce"]
-                    }
-                },
-                "gloss": "the bearing of %pl"
-            },
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "ize"
-                    }
-                },
-                "gloss": "[bear] %pl"
             }
         ],
-        "tags": ["count", "concrete"],
+        "tags": ["suffix-only", "non-final"],
+        "origin": "latin"
+    },
+    {
+        "key": "agent-silent",
+        "final": "",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": ["al"],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
         "origin": "latin"
     },
     {
@@ -8011,9 +7994,9 @@
         "link": "iger",
         "type": "derive",
         "from": "noun",
-        "to": "noun",
-        "suffixes": ["ous", "nt", "nce", "al"],
-        "gloss": "one who carries %pl",
+        "to": "verb",
+        "suffixes": ["agent-silent", "ous", "nt", "nce"],
+        "gloss": "[bring] %pl",
         "requires": {
             "follows": {
                 "has-tag": "concrete"
@@ -8030,20 +8013,12 @@
         {
             "case": {
                 "precedes": {
-                    "has-key": ["ous", "nt"]
+                    "has-key": ["ous", "nt", "nce"]
                 }
             },
-            "gloss": "carrying %pl"
-        },
-        {
-            "case": {
-                "precedes": {
-                    "has-key": ["nce"]
-                }
-            },
-            "gloss": "the carrying of %pl"
+            "gloss": "[bear] %pl"
         }],
-        "tags": ["count", "concrete"],
+        "tags": ["suffix-only", "non-final"],
         "origin": "latin",
         "notes": "add exceptions for 'ous'"
     },
@@ -8366,11 +8341,19 @@
         "final": "ous",
         "link": "os",
         "type": "derive",
-        "from": "noun",
+        "from": ["noun", "verb"],
         "to": "adj",
         "suffixes": ["ity"],
         "gloss": "%@",
         "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "verb"
+                    }
+                },
+                "gloss": "%part"
+            },
             {
                 "case": {
                     "follows": {
@@ -8428,16 +8411,6 @@
         "from": "verb",
         "to": "noun",
         "suffixes": ["al", "ary"],
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-key": ["ifer", "iger"]
-                    }
-                },
-                "gloss": "%@"
-            }
-        ],
         "participle-type": "present",
         "tags": ["stem-change"],
         "gloss-link": "the state of %part",
@@ -8470,23 +8443,13 @@
         "from": "verb",
         "to": "adj",
         "suffixes": ["al", "ary"],
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-key": ["ifer", "iger"]
-                    }
-                },
-                "gloss": "%@"
-            }
-        ],
         "participle-type": "present",
         "tags": ["stem-change"],
         "gloss": "%part",
         "origin": "latin"
     },
     {
-        "key": "nt-n",
+        "key": "nt-noun",
         "final": "nt",
         "link": "nti",
         "type": "derive",
