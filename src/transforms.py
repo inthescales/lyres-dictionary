@@ -62,9 +62,6 @@ def transform_word_latin(word, morphothec):
 
     if word.size() == 1 and current_type == "noun":
         bag.append(("numerical", 5))
-
-    if last_morph.morph["key"] in ["ble", "ify"]:
-        bag.append(("negate", 20))
         
     # Fail if no transformations ---------------
     if len(bag) == 0:
@@ -142,7 +139,3 @@ def transform_word_latin(word, morphothec):
         num_morph = Morph( random.choice(morphothec.type_morphs["number"]), morphothec)
         end_morph = Morph("al-number", morphothec)
         word.add_affixes(num_morph, end_morph)
-        
-    elif choice == "negate":
-        morph = Morph("in-negative", morphothec)
-        word.add_prefix(morph)

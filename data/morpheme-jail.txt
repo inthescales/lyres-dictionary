@@ -1,4 +1,4 @@
-    #Need to fix the inflection on the singular here
+    # Need to fix the inflection on the singular here
     {
         "key": "icule",
         "final": ["icule", "icle"],
@@ -25,6 +25,16 @@
         "tags": ["count", "concrete"],
         "origin": "latin",
         "notes": "find a way to make this plural..."
+    },
+    
+    # The word order doesn't work out right
+    {
+        "key": "in-negative",
+        "link": "in",
+        "type": "prefix",
+        "gloss": "not %@",
+        "tags": ["no-gen"],
+        "origin": "latin"
     },
     
     # bad results

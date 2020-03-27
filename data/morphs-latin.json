@@ -8739,14 +8739,6 @@
         "origin": "latin"
     },
     {
-        "key": "in-negative",
-        "link": "in",
-        "type": "prefix",
-        "gloss": "not %@",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
         "key": "mis",
         "link": "mis",
         "type": "prefix",
