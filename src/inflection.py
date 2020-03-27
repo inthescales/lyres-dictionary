@@ -46,7 +46,7 @@ def override_inflection(string, mode):
     elif string == "omen":
         if mode == "pl":
             return "omens"
-    elif string == "rune":
+    elif string == "urine":
         if mode == "pl":
             return "urines"
 

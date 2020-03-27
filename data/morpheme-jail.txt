@@ -1,17 +1,30 @@
-    # Try again with Greek
+    #Need to fix the inflection on the singular here
     {
-        "key": "ize",
-        "link-present": "iza",
-        "link-perfect": "izat",
-        "final": "ize",
+        "key": "icule",
+        "final": ["icule", "icle"],
+        "link": "icul",
         "type": "derive",
-        "from": ["noun", "adj"],
-        "to": "verb",
-        "gloss-noun": "[make] into %sg",
-        "gloss-adj": "[make] %@",
-        "gloss-relative": "[make] %@",
-        "tags": ["transitive"],
-        "origin": "latin"
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["al", "ary"],
+        "gloss": "a small %@",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["count", "concrete"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "ic"
+                }
+            },
+            "final": ["ule", "le"],
+            "link": "ul"
+        }],
+        "tags": ["count", "concrete"],
+        "origin": "latin",
+        "notes": "find a way to make this plural..."
     },
     
     # bad results
@@ -22,16 +35,6 @@
         "from": "noun,adj",
         "to": "noun",
         "definition": "the practice, system, or doctrine of %@",
-        "origin": "latin"
-    },
-    {
-        "key": "ic",
-        "final": "ic",
-        "link": "ic",
-        "type": "derive",
-        "from": "noun",
-        "to": "adj",
-        "definition": "pertaining to %pl",
         "origin": "latin"
     },
     {
@@ -54,6 +57,14 @@
     },
     
     # not sure how to use
+    {
+        "key": "pia",
+        "link": "pi",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "pious",
+        "origin": "latin"
+    },
     {
         "base": "cubare",
         "link-present": "cuba",

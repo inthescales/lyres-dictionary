@@ -20,7 +20,7 @@
     },
     {
         "key": "acris",
-        "link": "acrid",
+        "link": "acr",
         "type": "adj",
         "declension": 3,
         "gloss": "sharp",
@@ -145,6 +145,14 @@
         "conjugation": 1,
         "gloss": "alternate",
         "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "amara",
+        "link": "amar",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "bitter",
         "origin": "latin"
     },
     {
@@ -546,6 +554,14 @@
         "origin": "latin"
     },
     {
+        "key": "blanda",
+        "link": "bland",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "[soothing], [bland]",
+        "origin": "latin"
+    },
+    {
         "key": "bellum",
         "link": "bell",
         "type": "noun",
@@ -708,6 +724,15 @@
         "declension": 1,
         "gloss": "bell",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "cana",
+        "link": "can",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "gray",
+        "tags": ["color"],
         "origin": "latin"
     },
     {
@@ -896,6 +921,15 @@
         "origin": "latin"
     },
     {
+        "key": "cepa",
+        "link": "cep",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "onion",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "latin"
+    },
+    {
         "key": "cera",
         "link": "cer",
         "type": "noun",
@@ -945,6 +979,14 @@
         "type": "adj",
         "declension": 12,
         "gloss": "thick",
+        "origin": "latin"
+    },
+    {
+        "key": "crispa",
+        "link": "crisp",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "curly",
         "origin": "latin"
     },
     {
@@ -1292,6 +1334,17 @@
         "origin": "latin"
     },
     {
+        "key": "crepare",
+        "link-present": "crepa",
+        "link-perfect": "crepit",
+        "final": "crepate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "crack",
+        "tags": ["transitive", "dividing"],
+        "origin": "latin"
+    },
+    {
         "key": "crescere",
         "link-present": "cresce",
         "link-perfect": "cret",
@@ -1357,6 +1410,15 @@
         "conjugation": 1,
         "gloss": "[reach] the highest point",
         "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "culter",
+        "link": "cultr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "knife",
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     },
     {
@@ -1550,6 +1612,14 @@
         "type": "adj",
         "declension": 12,
         "gloss": "worthy",
+        "origin": "latin"
+    },
+    {
+        "key": "diversa",
+        "link": "divers",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "diverse",
         "origin": "latin"
     },
     {
@@ -1753,6 +1823,17 @@
         "origin": "latin"
     },
     {
+        "key": "esse",
+        "link-present": "esse",
+        "link-perfect": "essat",
+        "final": "est",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "be",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "essencia",
         "link": "essenti",
         "type": "noun",
@@ -1784,6 +1865,14 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "guess on all but present"
+    },
+    {
+        "key": "exacta",
+        "link": "exact",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "precise",
+        "origin": "latin"
     },
     {
         "key": "exemplum",
@@ -2021,6 +2110,14 @@
         "type": "adj",
         "declension": 3,
         "gloss": "fertile",
+        "origin": "latin"
+    },
+    {
+        "key": "fessa",
+        "link": "fess",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "weary",
         "origin": "latin"
     },
     {
@@ -2421,6 +2518,15 @@
         "tags": ["singleton", "abstract"],
         "origin": "latin"
     },
+    {
+        "key": "gallina",
+        "link": "gallin",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "poultry",
+        "tags": ["mass", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
     {  
         "key": "gemma",
         "link": "gemm",
@@ -2541,6 +2647,15 @@
         "conjugation": 3,
         "gloss": "step",
         "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "gramen",
+        "link": "gramin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "grass",
+        "tags": ["mass", "concrete", "living", "plant"],
         "origin": "latin"
     },
     {  
@@ -3351,6 +3466,14 @@
         "origin": "latin"
     },
     {
+        "key": "lenis",
+        "link": "len",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "[soft], [smooth]",
+        "origin": "latin"
+    },
+    {
         "key": "leo",
         "link": "leon",
         "type": "noun",
@@ -3662,6 +3785,14 @@
         "declension": 3,
         "gloss": "light",
         "tags": ["mass", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "macer",
+        "link": "macr",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "meager",
         "origin": "latin"
     },
     {
@@ -4887,6 +5018,15 @@
         "origin": "latin"
     },
     {
+        "key": "pavo",
+        "link": "pavon",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "peacock",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
+    {
         "key": "pax",
         "link": "paci",
         "type": "noun",
@@ -5069,11 +5209,11 @@
         "origin": "latin"
     },
     {
-        "key": "pia",
-        "link": "pi",
+        "key": "piger",
+        "link": "pigr",
         "type": "adj",
-        "declension": 12,
-        "gloss": "pious",
+        "declension": 3,
+        "gloss": "lazy",
         "origin": "latin"
     },
     {
@@ -5124,6 +5264,14 @@
         "conjugation": 2,
         "gloss": "please",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "plana",
+        "link": "plan",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "flat",
         "origin": "latin"
     },
     {
@@ -5649,6 +5797,15 @@
         "origin": "latin"
     },
     {
+        "key": "rana",
+        "link": "ran",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "frog",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
+    {
         "key": "rancor",
         "link": "rancor",
         "type": "noun",
@@ -5890,6 +6047,14 @@
         "conjugation": 1,
         "gloss": "greet",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "sana",
+        "link": "san",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "healthy",
         "origin": "latin"
     },
     {
@@ -6367,7 +6532,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "build",
-        "tags": ["transitive"],
+        "tags": ["transitive", "joining"],
         "origin": "latin"
     },
     {
@@ -6390,17 +6555,17 @@
         "origin": "latin"
     },
     {
-        "key": "suava",
+        "key": "suavis",
         "link": "suav",
         "type": "adj",
         "declension": 3,
-        "gloss": "smooth",
+        "gloss": "soft, pleasant",
         "origin": "latin"
     },
     {
         "key": "sudor",
         "link": "sudor",
-        "type": "adj",
+        "type": "noun",
         "declension": 3,
         "gloss": "sweat",
         "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
@@ -6519,6 +6684,14 @@
         "conjugation": 3,
         "gloss": "stretch",
         "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "tenera",
+        "link": "tener",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "tender",
         "origin": "latin"
     },
     {
@@ -6741,6 +6914,14 @@
         "origin": "latin"
     },
     {
+        "key": "turpis",
+        "link": "turp",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "vile",
+        "origin": "latin"
+    },
+    {
         "key": "unus",
         "link": "un",
         "type": "noun",
@@ -6860,6 +7041,15 @@
         "conjugation": 1,
         "gloss": "beat",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "vermis",
+        "link": "verm",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "worm",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     },
     {
@@ -7562,18 +7752,26 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": ["icide", "iform"]
+                        "has-key": "iform"
                     }
                 },
                 "gloss": "%@"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-type": ["verb"]
+                    }
+                },
+                "gloss": "%part"
             }
         ],
         "origin": "latin"
     },
     {
-        "key": "an-animal",
-        "final": "an",
-        "link": "an",
+        "key": "ian-animal",
+        "final": "ian",
+        "link": "ian",
         "type": "derive",
         "from": "noun",
         "to": "adj",
@@ -7581,12 +7779,20 @@
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
-                "and": [
-                    { "has-tag": "animal" },
-                    { "has-fuffix": "i" }
-                ]
+                "has-tag": "animal"
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "i"
+                    }
+                },
+                "link": "an",
+                "final": "an"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -7802,6 +8008,18 @@
         "origin": "latin"
     },
     {
+        "key": "e-agent",
+        "final": "e",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "latin"
+    },
+    {
         "key": "etum",
         "final": "etum",
         "link": "etum",
@@ -7844,33 +8062,6 @@
         "origin": "latin"
     },
     {
-        "key": "icule",
-        "final": ["icule", "icle"],
-        "link": "icul",
-        "type": "derive",
-        "from": "noun",
-        "to": "noun",
-        "suffixes": ["al", "ary"],
-        "gloss": "a small %@",
-        "requires": {
-            "follows": {
-                "has-all-tags": ["count", "concrete"]
-            }
-        },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-suffix": "ic"
-                }
-            },
-            "final": ["ule", "le"],
-            "link": "ul"
-        }],
-        "tags": ["count", "concrete"],
-        "origin": "latin",
-        "notes": "find a way to make this plural..."
-    },
-    {
         "key": "id-animal",
         "final": "id",
         "link": "id",
@@ -7910,7 +8101,7 @@
                         "has-tag": "person"
                     }
                 },
-                "gloss": "having the appearance of %sg"
+                "gloss": "[having] the appearance of %sg"
             }
         ],
         "origin": "latin"
@@ -8213,10 +8404,18 @@
         {
             "case": {
                 "follows": {
-                    "has-key": ["iform", "ivore"]
+                    "has-key": "iform"
                 }
             },
             "gloss": "the quality of %@"
+        },
+        {
+            "case": {
+                "follows": {
+                    "has-type": "verb"
+                }
+            },
+            "gloss": "the quality of %part"
         }],
         "gloss": "the quality of being %@",
         "origin": "latin"
@@ -8234,34 +8433,30 @@
         "origin": "latin"
     },
     {
-        "key": "ivore",
-        "final": "ivore",
+        "key": "ivor",
+        "final": "ivor",
         "link": "ivor",
         "type": "derive",
         "from": "noun",
-        "to": "noun",
-        "suffixes": ["ous", "ia", "ity"],
-        "gloss": "one who eats %pl",
+        "to": "verb",
+        "suffixes": ["e-agent", "ous", "ia", "ity"],
+        "gloss": "[eat] %pl",
         "requires": {
             "follows": {
-                "and": [
-                    { "has-tag": "concrete" },
-                    { "not": {
-                        "has-tag": "liquid"
-                    } }
-                ]
+                "has-tag": "concrete"
             }
         },
         "exception": [
             {
                 "case": {
-                    "precedes": {
-                        "has-key": ["ous", "ia", "ity"]
+                    "follows": {
+                        "has-any-tag": ["fluid", "liquid"]
                     }
                 },
-                "gloss": "eating %pl"
+                "gloss": "[consume] %pl"
             }
         ],
+        "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin"
     },
     {
@@ -8501,14 +8696,24 @@
         "from": "noun",
         "to": "noun",
         "suffixes": ["al"],
-        "exception": [{
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "or"
+                    }
+                },
+                "gloss": "pertaining to %@"
+            },
+            {
             "case": {
                 "follows": {
-                    "has-key": "or"
+                    "has-type": "verb"
                 }
             },
-            "gloss": "pertaining to %@"
-        }],
+            "gloss": "the quality of %part"
+        }
+        ],
         "gloss": "the quality of %@",
         "tags": ["no-gen"],
         "origin": "latin",
