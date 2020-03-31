@@ -1899,7 +1899,7 @@
         "final": "fabulate",
         "type": "verb",
         "conjugation": 1,
-        "gloss": "to make a story",
+        "gloss": "[tell] stories",
         "tags": ["intransitive"],
         "origin": "latin"
     },
@@ -2301,6 +2301,17 @@
         "declension": 2,
         "gloss": "river",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "latin"
+    },
+    {
+        "key": "fodere",
+        "link-present": "fode",
+        "link-perfect": "foss",
+        "final": "fode",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "dig",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -2800,7 +2811,7 @@
     },
     {
         "key": "hedera",
-        "link": "hedere",
+        "link": "heder",
         "type": "noun",
         "declension": 1,
         "gloss": "ivy",
@@ -4294,6 +4305,17 @@
         "origin": "latin"
     },
     {
+        "key": "mugire",
+        "link-present": "mugie",
+        "link-perfect": "mugit",
+        "final": "muge",
+        "type": "verb",
+        "conjugation": 4,
+        "gloss": "bellow",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "muscus",
         "link": "musc",
         "type": "noun",
@@ -4963,21 +4985,23 @@
         "origin": "latin"
     },
     {
+        "key": "pascere",
+        "link-present": "pasce",
+        "link-perfect": "past",
+        "final": "past",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "herd",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "passer",
         "link": "passer",
         "type": "noun",
         "declension": 2,
         "gloss": "sparrow",
         "tags": ["count", "concrete", "living", "animal"],
-        "origin": "latin"
-    },
-    {
-        "key": "pastor",
-        "link": "pastor",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "shepherd",
-        "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
     {
