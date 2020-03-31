@@ -209,7 +209,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "year",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -494,7 +494,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "autumn",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -868,7 +868,7 @@
         "type": "noun",
         "declension": 4,
         "gloss": "case",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -1595,6 +1595,15 @@
                 "link": "dicta"
             }
         ],
+        "origin": "latin"
+    },
+    {
+        "key": "dies",
+        "link": "di",
+        "type": "noun",
+        "declension": 5,
+        "gloss": "day",
+        "tags": ["count", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -2869,7 +2878,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "hour",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -3519,6 +3528,15 @@
         "declension": 3,
         "gloss": "law",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "lex-singleton",
+        "link": "leg",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "law",
+        "tags": ["singleton", "abstract"],
         "origin": "latin"
     },
     {
@@ -4546,7 +4564,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "night",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -4639,12 +4657,14 @@
         "origin": "latin"
     },
     {
-        "key": "oblivion",
-        "link": "oblivi",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "forgetting",
-        "tags": ["mass", "abstract"],
+        "key": "obliviare",
+        "link-present": "oblivia",
+        "link-perfect": "obliviat",
+        "final": "obliviate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "forget",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -5199,7 +5219,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "plague",
-        "tags": ["mass", "abstract", "living"],
+        "tags": ["mass", "abstract", "living", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -6363,7 +6383,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "sleep",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {
@@ -6684,7 +6704,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "time",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "time", "bounded"],
         "origin": "latin"
     },
     {

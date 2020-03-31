@@ -57,7 +57,7 @@ def transform_word_latin(word, morphothec):
     if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"]:
         bag.append(("add_prefix", 10))
 
-    if word.size() == 1 and current_type == "noun":
+    if word.size() == 1 and current_type == "noun" and (last_morph.has_tag("concrete") or last_morph.has_tag("bounded")):
         bag.append(("relational", 10))
 
     if word.size() == 1 and current_type == "noun":
