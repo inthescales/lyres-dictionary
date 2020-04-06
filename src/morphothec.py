@@ -4,12 +4,42 @@ import src.expressions as expressions
     
 class Morphothec:
     
-    def __init__(self, files):
+    class Language:
+        def __init__(self):
+            self.roots = []
+            self.type_morphs = {}
+            self.morphs_from = {}
+        
+        def add_morph(self, morph):
+            morph_key = morph["key"]
+            morph_type = morph["type"]
 
+            if "tags" in morph and "no-gen" in morph["tags"]:
+                return
+
+            if morph_type != "derive":
+                if not morph_type in self.type_morphs:
+                    self.type_morphs[morph_type] = []
+
+                self.type_morphs[morph_type].append(morph_key)
+
+                if morph_type in ["noun", "adj", "verb"]:
+                    self.roots.append(morph)
+            else:
+                if isinstance(morph["from"], str):
+                    from_types = [morph["from"]]
+                else:
+                    from_types = morph["from"]
+
+                for from_type in from_types:
+                    if not from_type in self.morphs_from:
+                        self.morphs_from[from_type] = []
+
+                    self.morphs_from[from_type].append(morph_key)
+    
+    def __init__(self, files):
         self.morph_for_key = {}
-        self.roots = []
-        self.type_morphs = {}
-        self.morphs_from = {}
+        self.languages = {}
         
         for file in files:
             
@@ -28,54 +58,33 @@ class Morphothec:
                             print(morph)
                         errors += 1
                         continue
-
-                    self.morph_for_key[morph["key"]] = morph
-
-                    if "tags" in morph and "no-gen" in morph["tags"]:
-                        continue
                     
-                    morph_type = morph["type"]
-                    if morph_type != "derive":
-
-                        if not morph_type in self.type_morphs:
-                            self.type_morphs[morph_type] = []
-
-                        self.type_morphs[morph_type].append(morph["key"])
-
-                        if morph_type in ["noun", "adj", "verb"]:
-                            self.roots.append(morph)
-
-                    else:
-                        if isinstance(morph["from"], str):
-                            from_types = [morph["from"]]
-                        else:
-                            from_types = morph["from"]
+                    if not morph["origin"] in self.languages:
+                        self.languages[morph["origin"]] = self.Language()
+                    
+                    self.morph_for_key[morph["key"]] = morph
+                    language = self.languages["latin"]
+                    language.add_morph(morph)
                             
-                        for from_type in from_types:
-                            if not from_type in self.morphs_from:
-                                self.morphs_from[from_type] = []
-
-                            self.morphs_from[from_type].append(morph["key"])
-                                
                 if errors > 0:
                     print("Exiting with " + str(errors) + " validation errors")
                     exit(0)
                     
-    def filter_type(self, morph_type, morph_filter=None):
+    def filter_type(self, morph_type, language="latin", morph_filter=None):
 
         if morph_filter is None:
-            return self.type_morphs[morph_type]
+            return self.languages[language].type_morphs[morph_type]
         
         selected = []
-        for morph in self.type_morphs[morph_type]:
+        for morph in self.languages[language].type_morphs[morph_type]:
             if expressions.evaluate_expression(morph_filter, self.morph_for_key[morph]):
                 selected.append(morph)
         
         return selected
 
-    def filter_appends_to(self, base_type, morph_filter=None):
+    def filter_appends_to(self, base_type, language="latin", morph_filter=None):
         if morph_filter is None:
-            return self.morphs_from[base_type]
+            return self.languages[language].morphs_from[base_type]
         
         selected = []
         for morph in self.morphs_from[base_type]:

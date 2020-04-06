@@ -28,6 +28,7 @@ def get_latin_root(morphothec):
         
 def transform_word_latin(word, morphothec):
 
+    language = "latin"
     current_type = word.get_type()
     last_morph = word.last_morph()
     first_morph = word.first_morph()
@@ -80,7 +81,7 @@ def transform_word_latin(word, morphothec):
         
         if last_morph.is_root() or last_morph.suffixes() is None:
             # For unsuffixed words or ones with unlimited suffixing, choose based on type
-            choices = morphothec.filter_appends_to(current_type)
+            choices = morphothec.filter_appends_to(current_type, language)
             valid_choices = choices.copy()
 
             for choice in choices:
@@ -106,7 +107,7 @@ def transform_word_latin(word, morphothec):
 
     # Add Preposition
     elif choice == "add_prep_prefix":
-        choices = morphothec.filter_type("prep", { "has-tag": "verbal" })
+        choices = morphothec.filter_type("prep", language, { "has-tag": "verbal" })
         valid_choices = choices.copy()
 
         for choice in choices:
@@ -122,7 +123,7 @@ def transform_word_latin(word, morphothec):
             
     # Add Prefix
     elif choice == "add_prefix":
-        new_morph = Morph( random.choice(morphothec.filter_type("prefix")), morphothec)
+        new_morph = Morph( random.choice(morphothec.filter_type("prefix", language)), morphothec)
         word.add_prefix(new_morph)
 
     # Relational
@@ -136,6 +137,6 @@ def transform_word_latin(word, morphothec):
     
     # Numerical
     elif choice == "numerical":
-        num_morph = Morph( random.choice(morphothec.filter_type("number")), morphothec)
+        num_morph = Morph( random.choice(morphothec.filter_type("number", language)), morphothec)
         end_morph = Morph("al-number", morphothec)
         word.add_affixes(num_morph, end_morph)
