@@ -64,6 +64,8 @@ def evaluate_expression(expression, referent):
         return evaluate_odd_syllables(referent["form"])
     elif key == "is-root" and value == True:
         return evaluate_is_root(referent["type"])
+    elif key == "is-final" and value == True:
+        return referent["final"] == True
     elif key == "final_or_semifinal_l" and value == True:
         return helpers.l_in_last_two(referent["form"])
         

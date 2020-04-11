@@ -22,6 +22,7 @@ class Morph:
     def as_dict(self):
         dict_ = self.morph.copy()
         dict_["form"] = self.get_form()
+        dict_["final"] = self.next is None
         return dict_
     
     def join(self, next_morph):

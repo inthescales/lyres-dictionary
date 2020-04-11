@@ -5,7 +5,7 @@ from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
     bag = [
-        ("latin", 1),
+        ("latin", 0),
         ("greek", 1)
     ]
     choice = helpers.choose_bag(bag)
