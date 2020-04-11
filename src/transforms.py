@@ -4,12 +4,22 @@ from src.models import Morph, Word, check_req
 from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
-    word.morphs = [get_latin_root(morphothec)]
+    bag = [
+        ("latin", 1),
+        ("greek", 1)
+    ]
+    choice = helpers.choose_bag(bag)
+    if choice == "latin":
+        word.morphs = [get_latin_root(morphothec)]
+    if choice == "greek":
+        word.morphs = [get_greek_root(morphothec)]
 
 def transform_word(word, morphothec):
 
     if word.get_origin() == "latin":
         return transform_word_latin(word, morphothec)
+    elif word.get_origin() == "greek":
+        return transform_word_greek(word, morphothec)
     else:
         print("Bad origin: " + word.get_origin())
 
@@ -23,6 +33,18 @@ def get_latin_root(morphothec):
 
     type = helpers.choose_bag(bag)
     key = random.choice(morphothec.filter_type(type))
+    morph = Morph(key, morphothec)
+    return morph
+
+def get_greek_root(morphothec):
+
+    bag = [
+        ("noun", 1),
+        ("adj", 1)
+    ]
+
+    type = helpers.choose_bag(bag)
+    key = random.choice(morphothec.filter_type(type, language="greek"))
     morph = Morph(key, morphothec)
     return morph
         
@@ -64,13 +86,12 @@ def transform_word_latin(word, morphothec):
     if word.size() == 1 and current_type == "noun":
         bag.append(("numerical", 5))
         
-    # Fail if no transformations ---------------
-    if len(bag) == 0:
-        return
-        
-    # Choose -----------------------------------
-    if not override:
-        choice = helpers.choose_bag(bag)
+    # If there is no override, choose, or return if no choices ------
+    if not override: 
+        if len(bag) > 0:
+            choice = helpers.choose_bag(bag)
+        else:
+            return
     
     # Transformations --------------------------
 
@@ -140,3 +161,65 @@ def transform_word_latin(word, morphothec):
         num_morph = Morph( random.choice(morphothec.filter_type("number", language)), morphothec)
         end_morph = Morph("al-number", morphothec)
         word.add_affixes(num_morph, end_morph)
+        
+def transform_word_greek(word, morphothec):
+
+    language = "greek"
+    current_type = word.get_type()
+    last_morph = word.last_morph()
+    first_morph = word.first_morph()
+    has_prep = first_morph.get_type() == "prep"
+    has_prefix = first_morph.get_type() == "prefix"
+    
+    choice = None
+    override = False
+    bag = []
+    
+    # Conditions and probabilities --------------------------
+    
+    if last_morph.is_root() or last_morph.suffixes() is None or len(last_morph.suffixes()) > 0:
+        if last_morph.has_tag("suffix-only"):
+            override = True
+            choice = "add_suffix"
+        else:
+            bag.append(("add_suffix", 100))
+    
+    # If there is no override, choose, or return if no choices ------
+    if not override: 
+        if len(bag) > 0:
+            choice = helpers.choose_bag(bag)
+        else:
+            return
+    
+    # Transformations --------------------------
+
+    # Add Suffix
+    if choice == "add_suffix":
+        
+        new_morph = None
+        
+        if last_morph.is_root() or last_morph.suffixes() is None:
+            # For unsuffixed words or ones with unlimited suffixing, choose based on type
+            choices = morphothec.filter_appends_to(current_type, language)
+            valid_choices = choices.copy()
+
+            for choice in choices:
+                if not check_req(Morph(choice, morphothec).as_dict(), { "preceding": last_morph.morph } ):
+                    valid_choices.remove(choice)
+                elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
+                    valid_choices.remove(choice)
+                
+            if last_morph.morph["key"] in valid_choices:
+                valid_choices.remove(last_morph.morph["key"])
+            
+            choice = random.choice(valid_choices)
+            new_morph = Morph(choice, morphothec)
+                
+        else:
+            # For words ending in suffixes with restriction, choose from their valid list
+            valid_choices = last_morph.suffixes()
+            choice = random.choice(valid_choices)
+            new_morph = Morph(choice, morphothec)
+            
+        if new_morph is not None:
+            word.add_suffix(new_morph)

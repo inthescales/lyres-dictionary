@@ -11,7 +11,7 @@ import src.validator as validator
 def setup():
     global morphothec
     
-    morphothec = Morphothec(["data/morphs-latin.json"])
+    morphothec = Morphothec(["data/morphs-latin.json", "data/morphs-greek.json"])
 
 def needs_setup():
     return morphothec == None
