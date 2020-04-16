@@ -93,6 +93,13 @@ class Morphothec:
         
         return selected
 
+    def root_count_for_language(self, language):
+        if not language in self.languages:
+            print("Error: language \"" + language + "\" not found.")
+            return 0
+                  
+        return len(self.languages[language].roots)
+    
     @classmethod
     def validate_morph(cls, morph):
     
