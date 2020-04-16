@@ -1,0 +1,1024 @@
+[
+    {
+        "key": "agatha",
+        "link": "agath",
+        "type": "adj",
+        "gloss": "good",
+        "origin": "greek"
+    },
+    {
+        "key": "ander",
+        "link": "andr",
+        "type": "noun",
+        "gloss": "man",
+        "tags": ["count", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "angelos",
+        "link": "angel",
+        "type": "noun",
+        "gloss": "angel",
+        "tags": ["count", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "arithmos",
+        "link": "arithm",
+        "type": "noun",
+        "gloss": "number",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "arktos",
+        "link": "arct",
+        "type": "noun",
+        "gloss": "bear",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "astros",
+        "link": "astr",
+        "type": "noun",
+        "gloss": "star",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "anthropos",
+        "link": "anthrop",
+        "type": "noun",
+        "gloss": "human",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "arachne",
+        "link": "arachn",
+        "type": "noun",
+        "gloss": "spider",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "auto-",
+        "link": "aut",
+        "type": "noun",
+        "gloss": "one's self",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "cephalo-",
+        "link": "cephal",
+        "type": "noun",
+        "gloss": "head",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "chiro-",
+        "link": "chir",
+        "type": "noun",
+        "gloss": "hand",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "chrom-",
+        "link": ["chrom", "chromat"],
+        "type": "noun",
+        "gloss": "color",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "chronos",
+        "link": "chron",
+        "type": "noun",
+        "gloss": "time",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "copro-",
+        "link": "copr",
+        "type": "noun",
+        "gloss": "feces",
+        "tags": ["mass", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "cryo-adj",
+        "link": "cry",
+        "type": "adj",
+        "gloss": "cold",
+        "origin": "greek"
+    },
+    {
+        "key": "cryo-noun",
+        "link": "cry",
+        "type": "noun",
+        "gloss": "cold",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "cyno-",
+        "link": "cyn",
+        "type": "noun",
+        "gloss": "dog",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "demos",
+        "link": "dem",
+        "type": "noun",
+        "gloss": "people",
+        "tags": ["singleton", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "dendro-",
+        "link": "dendr",
+        "type": "noun",
+        "gloss": "tree",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "greek"
+    },
+    {
+        "key": "diabolos",
+        "link": "diabol",
+        "type": "noun",
+        "gloss": "devil",
+        "tags": ["count", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "galacto-",
+        "link": "galact",
+        "type": "noun",
+        "gloss": "milk",
+        "tags": ["mass", "concrete", "liquid", "fluid"],
+        "origin": "greek"
+    },
+    {
+        "key": "gastros",
+        "link": "gastr",
+        "type": "noun",
+        "gloss": "stomach",
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
+        "origin": "greek"
+    },
+    {
+        "key": "gaea",
+        "link": "ge",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "greek"
+    },
+    {
+        "key": "gerontos",
+        "link": "geront",
+        "type": "noun",
+        "gloss": "elder",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "gyn-",
+        "link": ["gyn", "gynec"],
+        "type": "noun",
+        "gloss": "woman",
+        "tags": ["count", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "helios",
+        "link": "heli",
+        "type": "noun",
+        "gloss": "sun",
+        "tags": ["singleton", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "hemo-",
+        "link": "hem",
+        "type": "noun",
+        "gloss": "blood",
+        "tags": ["mass", "concrete", "liquid", "fluid"],
+        "origin": "greek"
+    },
+    {
+        "key": "hippos",
+        "link": "hipp",
+        "type": "noun",
+        "gloss": "horse",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "hydro-",
+        "link": "hydr",
+        "type": "noun",
+        "gloss": "water",
+        "tags": ["mass", "concrete", "liquid", "fluid"],
+        "origin": "greek"
+    },
+    {
+        "key": "litho-",
+        "link": "lith",
+        "type": "noun",
+        "gloss": "stone",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "logos",
+        "link": "log",
+        "type": "noun",
+        "gloss": "word",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "molybd-",
+        "link": "molybd",
+        "type": "noun",
+        "gloss": "lead",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "greek"
+    },
+    {
+        "key": "mycos",
+        "link": "myc",
+        "type": "noun",
+        "gloss": "fungus",
+        "tags": ["mass", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "necros",
+        "link": "necr",
+        "type": "noun",
+        "gloss": "dead",
+        "tags": ["singleton", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "nea",
+        "link": "ne",
+        "type": "adj",
+        "gloss": "new",
+        "origin": "greek"
+    },
+    {
+        "key": "ortho-",
+        "link": "orth",
+        "type": "adj",
+        "gloss": "straight",
+        "origin": "greek"
+    },
+    {
+        "key": "paleo",
+        "link": "pale",
+        "type": "adj",
+        "gloss": "old",
+        "origin": "greek"
+    },
+    {
+        "key": "paedo-",
+        "link": "ped",
+        "type": "noun",
+        "gloss": "child",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "phallos",
+        "link": "phall",
+        "type": "noun",
+        "gloss": "penis",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "pneuma",
+        "link": "pneum",
+        "type": "noun",
+        "gloss": "air",
+        "tags": ["mass", "concrete", "gas", "fluid"],
+        "origin": "greek"
+    },
+    {
+        "key": "polemos",
+        "link": "polem",
+        "type": "noun",
+        "gloss": "war",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "polis",
+        "link": "pol",
+        "type": "noun",
+        "gloss": "city",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "greek"
+    },
+    {
+        "key": "psyche",
+        "link": "psych",
+        "type": "noun",
+        "gloss": "mind",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "pyro-",
+        "link": "pyr",
+        "type": "noun",
+        "gloss": "fire",
+        "tags": ["mass", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "ophis",
+        "link": "oph",
+        "type": "noun",
+        "gloss": "snake",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "sapra",
+        "link": "sapr",
+        "type": "adj",
+        "gloss": "putrid",
+        "origin": "greek"
+    },
+    {
+        "key": "sarco-",
+        "link": "sarc",
+        "type": "noun",
+        "gloss": "flesh",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "selene",
+        "link": "selen",
+        "type": "noun",
+        "gloss": "moon",
+        "tags": ["singleton", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "soma",
+        "link": "somat",
+        "type": "noun",
+        "gloss": "body",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "thalassos",
+        "link": "thalass",
+        "type": "noun",
+        "gloss": "sea",
+        "tags": ["singleton", "concrete", "fluid", "liquid"],
+        "origin": "greek"
+    },
+    {
+        "key": "theo-",
+        "link": "the",
+        "type": "noun",
+        "gloss": "god",
+        "tags": ["count", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "thermo-adj",
+        "link": "therm",
+        "type": "adj",
+        "gloss": "hot",
+        "origin": "greek"
+    },
+    {
+        "key": "thermo-noun",
+        "link": "therm",
+        "type": "noun",
+        "gloss": "heat",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "topos",
+        "link": "top",
+        "type": "noun",
+        "gloss": "place",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "arch-noun",
+        "final": "arch",
+        "link": "arch",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent", "ic-character", "y-passthrough"],
+        "gloss": "rule by %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "gloss": "one who rules or oversees %pl"
+            }
+        ],
+        "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ocrat-adj",
+        "final": "ocrat",
+        "link": "ocrat",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "suffixes": ["greek-silent", "ic-def", "y-def"],
+        "gloss": "[rule] by the %@",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "gloss": "a member of the ruling %@"
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "y-def"
+                    }
+                },
+                "link": "ocrac"
+            }
+        ],
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ocrat-noun",
+        "final": "ocrat",
+        "link": "ocrat",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent", "ic-def", "y-def"],
+        "gloss": "[rule] by %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "person"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "gloss": "a member of the ruling %pl"
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "y-def"
+                    }
+                },
+                "link": "ocrac"
+            }
+        ],
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ogog",
+        "final": "agog",
+        "link": "agog",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "suffixes": ["ue-agent", "ic-def", "y-def"],
+        "gloss": "leading of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-tag": "ue-agent"
+                    }
+                },
+                "gloss": "one who leads %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "olat",
+        "final": "olat",
+        "link": "olatr",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent", "y-def"],
+        "gloss": "worship of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "link": "olater",
+                "gloss": "one who worships %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "olog-adj",
+        "final": "olog",
+        "link": "olog",
+        "type": "derive",
+        "from": "adj",
+        "to": "verb",
+        "suffixes": ["greek-ist", "ic-def", "y-def"],
+        "gloss": "study of %pl things",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "olog-noun",
+        "final": "olog",
+        "link": "olog",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "suffixes": ["greek-ist", "ic-def", "y-def"],
+        "gloss": "study of %pl",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "oman-noun",
+        "final": "oman",
+        "link": "oman",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["ia-def", "ic-def", "iac-haver"],
+        "gloss": "obsession or excessive desire for %pl",
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "oman-verb",
+        "final": "oman",
+        "link": "oman",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": ["ia-def", "ic-def", "iac-haver"],
+        "gloss": "excessive desire %inf",
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "omant",
+        "final": "omant",
+        "link": "omanc",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["er-practitioner", "ic-def", "y-def"],
+        "gloss": "divination by means of %pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "ic-def"
+                }
+            },
+            "link": "omant"
+        }],
+        "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ometr",
+        "final": "ometer",
+        "link": "ometr",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent", "ic-def", "y-def"],
+        "gloss": "measurement of %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "link": "ometer",
+                "gloss": "one who measures %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "onom-adj",
+        "final": "onom",
+        "link": "onom",
+        "type": "derive",
+        "from": "adj",
+        "to": "verb",
+        "suffixes": ["greek-ist", "ic-def", "y-def"],
+        "gloss": "study of %pl things",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "onom-noun",
+        "final": "onom",
+        "link": "onom",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "suffixes": ["greek-ist", "ic-def", "y-def"],
+        "gloss": "study of %pl",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ophag",
+        "final": "ophag",
+        "link": "ophag",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["e-agent", "ic-def", "y-def"],
+        "gloss": "eating of %pl",
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "fluid" }
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "e-agent"
+                }
+            },
+            "gloss": "[eat] %3sg"
+        }],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ophil-adj",
+        "final": "ophil",
+        "link": "ophil",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "suffixes": ["e-haver", "ic-def", "ia-def"],
+        "gloss": "[love] of %pl things",
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ophil-noun",
+        "final": "ophil",
+        "link": "ophil",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["e-haver", "ic-def", "ia-def"],
+        "gloss": "[love] of %pl",
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "paedo-" }
+            }
+        },
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ophob-adj",
+        "final": "ophob",
+        "link": "ophob",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "suffixes": ["e-haver", "ic-def", "ia-def"],
+        "gloss": "[fear] of %pl things",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "ophob-noun",
+        "final": "ophob",
+        "link": "ophob",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["e-haver", "ic-def", "ia-def"],
+        "gloss": "[fear] of %pl",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "opot",
+        "final": "opot",
+        "link": "opot",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["e-agent", "ic-def", "ia-def"],
+        "gloss": "drinking of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "e-agent"
+                }
+            },
+            "gloss": "[drink] %sg"
+        }],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "orrhea-noun",
+        "final": "orrhea",
+        "link": "orrhe",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "a flowing of %pl",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "oscop-adj",
+        "final": "oscop",
+        "link": "oscop",
+        "type": "derive",
+        "from": "adj",
+        "to": "verb",
+        "suffixes": ["e-instrument", "ic-verb", "y-def"],
+        "gloss": "viewing of %pl things",
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "oscop-noun",
+        "final": "oscop",
+        "link": "oscop",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "suffixes": ["e-instrument", "ic-verb", "y-def"],
+        "gloss": "viewing of %pl",
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "paedo-" }
+            }
+        },
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "greek-silent",
+        "final": "",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "%@",
+        "tags": ["no-gen", "final"],
+        "origin": "greek"
+    },
+    {
+        "key": "e-agent",
+        "final": "e",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "e-haver",
+        "final": "e",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "one who has %sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "e-instrument",
+        "final": "e",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "an instrument for the %@",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "ia-def",
+        "final": "ia",
+        "link": "i",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "the %@",
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "iac-haver",
+        "final": "iac",
+        "link": "iac",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "one who has %sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "y-def",
+        "final": "y",
+        "link": "i",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "%sg",
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "y-passthrough",
+        "final": "y",
+        "link": "i",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "%@",
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "ic",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "pertaining to %pl",
+        "tags": ["final"],
+        "origin": "greek",
+        "notes": "add suffixes ity, ize"
+    },
+    {
+        "key": "ic-character",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "characterized by %@",
+        "tags": ["final", "no-gen"],
+        "origin": "greek",
+        "notes": "add suffixes ity, ize"
+    },
+    {
+        "key": "ic-def",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "pertaining to %sg",
+        "tags": ["final", "no-gen"],
+        "origin": "greek",
+        "notes": "add suffixes ity, ize"
+    },
+    {
+        "key": "ic-verb",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "pertaining to the %part",
+        "tags": ["final", "no-gen"],
+        "origin": "greek",
+        "notes": "add suffixes ity, ize"
+    },
+    {
+        "key": "greek-ist",
+        "link": "ist",
+        "final": "ist",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "[one] engaged in %sg",
+        "tags": ["count", "concrete", "living", "person", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "er-practitioner",
+        "link": "er",
+        "final": "er",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "[one] who practices %sg",
+        "tags": ["count", "concrete", "living", "person", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "oid",
+        "link": "oid",
+        "final": "oid",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["ic"],
+        "gloss": "something that resembles %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "ue-agent",
+        "final": "ue",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "greek"
+    }
+]
