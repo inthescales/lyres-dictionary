@@ -111,14 +111,6 @@
         "origin": "greek"
     },
     {
-        "key": "belos",
-        "link": "bel",
-        "type": "noun",
-        "gloss": "arrow",
-        "tags": ["count", "concrete", "tool"],
-        "origin": "greek"
-    },
-    {
         "key": "biblion",
         "link": "bibli",
         "type": "noun",
@@ -179,7 +171,7 @@
         "link": "cet",
         "type": "noun",
         "gloss": "whale",
-        "tags": ["mass", "concrete", "living", "animal"],
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
     },
     {
@@ -330,7 +322,7 @@
         "key": "entomos",
         "link": "entom",
         "type": "noun",
-        "gloss": "insekt",
+        "gloss": "insect",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
     },
@@ -425,7 +417,7 @@
     {
         "key": "gramma",
         "link": "grammat",
-        "type": "adj",
+        "type": "noun",
         "gloss": "writing",
         "tags": ["mass", "abstract"],
         "origin": "greek"
@@ -465,7 +457,7 @@
     {
         "key": "hagia-saint",
         "link": "hagi",
-        "type": "adj",
+        "type": "noun",
         "gloss": "saint",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
@@ -568,7 +560,7 @@
     },
     {
         "key": "kakist",
-        "link": "cacist",
+        "link": "kakist",
         "type": "adj",
         "gloss": "worst",
         "tags": ["superlative", "character"],
@@ -728,7 +720,7 @@
     },
     {
         "key": "nous",
-        "link": "no",
+        "link": "nou",
         "type": "noun",
         "gloss": "mind",
         "tags": ["mass", "abstract"],
@@ -921,7 +913,7 @@
         "link": "pter",
         "type": "noun",
         "gloss": "wing",
-        "tags": ["mass", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
     },
     {
@@ -1117,7 +1109,7 @@
     },
     {
         "key": "zoon",
-        "link": "zo",
+        "link": "zoo",
         "type": "noun",
         "gloss": "animal",
         "tags": ["count", "concrete", "living", "animal"],
