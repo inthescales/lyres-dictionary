@@ -436,6 +436,7 @@ class Word:
         if morph.get_type() == "verb":
             return "to " + inflection.inflect(definition, "inf")
         elif morph.get_type() == "noun":
+            # TODO - Do necessary article handling here. Reuse the code lower down.
             return inflection.inflect(definition, "sg")
         else:
             return definition

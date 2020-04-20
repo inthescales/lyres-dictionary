@@ -2,7 +2,7 @@ import lemminflect
 import src.helpers as helpers
 
 def inflect(string, mode):
-    
+
     words = string.split(" ")    
     for i, word in enumerate(words):
         if word[0] == "[" and word[-1] == "]":

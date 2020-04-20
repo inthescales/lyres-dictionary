@@ -83,7 +83,7 @@ def transform_word_latin(word, morphothec):
     if word.size() == 1 and current_type == "noun" and (last_morph.has_tag("concrete") or last_morph.has_tag("bounded")):
         bag.append(("relational", 10))
 
-    if word.size() == 1 and current_type == "noun":
+    if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
         bag.append(("numerical", 5))
         
     # If there is no override, choose, or return if no choices ------
@@ -184,7 +184,7 @@ def transform_word_greek(word, morphothec):
         else:
             bag.append(("add_suffix", 100))
     
-    if word.size() == 1 and current_type == "noun":
+    if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
         bag.append(("numerical", 5))
     
     # If there is no override, choose, or return if no choices ------

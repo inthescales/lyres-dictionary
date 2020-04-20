@@ -720,7 +720,7 @@
     },
     {
         "key": "nous",
-        "link": "nou",
+        "link": "noo",
         "type": "noun",
         "gloss": "mind",
         "tags": ["mass", "abstract"],
@@ -1875,7 +1875,7 @@
         "from": "verb",
         "to": "noun",
         "suffixes": [],
-        "gloss": "an instrument for the %@",
+        "gloss": "instrument for the %@",
         "tags": ["count", "concrete", "no-gen"],
         "origin": "greek"
     },
@@ -2130,7 +2130,7 @@
         "from": "noun",
         "to": "noun",
         "suffixes": [],
-        "gloss": "[collection] of %!pl",
+        "gloss": "a collection of %!pl",
         "requires": {
             "follows": {
                 "not": { "has-tag": "singleton" }
