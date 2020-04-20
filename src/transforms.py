@@ -5,8 +5,8 @@ from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
     bag = [
-        ("latin", 0), #morphothec.root_count_for_language("latin")),
-        ("greek", 1) #morphothec.root_count_for_language("greek"))
+        ("latin", morphothec.root_count_for_language("latin")),
+        ("greek", morphothec.root_count_for_language("greek"))
     ]
     choice = helpers.choose_bag(bag)
     if choice == "latin":
@@ -31,20 +31,20 @@ def get_latin_root(morphothec):
         ("verb", 5)
     ]
 
-    type = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type))
+    type_ = helpers.choose_bag(bag)
+    key = random.choice(morphothec.filter_type(type_))
     morph = Morph(key, morphothec)
     return morph
 
 def get_greek_root(morphothec):
 
     bag = [
-        ("noun", 4),
+        ("noun", 5),
         ("adj", 1)
     ]
 
-    type = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type, language="greek"))
+    type_ = helpers.choose_bag(bag)
+    key = random.choice(morphothec.filter_type(type_, language="greek"))
     morph = Morph(key, morphothec)
     return morph
         

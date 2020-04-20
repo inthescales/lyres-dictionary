@@ -143,14 +143,6 @@
         "origin": "greek"
     },
     {
-        "key": "carcinos",
-        "link": "carcin",
-        "type": "noun",
-        "gloss": "crab",
-        "tags": ["count", "concrete", "living", "animal"],
-        "origin": "greek"
-    },
-    {
         "key": "cephale",
         "link": "cephal",
         "type": "noun",
@@ -491,6 +483,14 @@
         "link": "heli",
         "type": "noun",
         "gloss": "sun",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "helios-singleton",
+        "link": "heli",
+        "type": "noun",
+        "gloss": "sun",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
     },
@@ -559,7 +559,7 @@
         "origin": "greek"
     },
     {
-        "key": "kakist",
+        "key": "kakista",
         "link": "kakist",
         "type": "adj",
         "gloss": "worst",
@@ -584,7 +584,7 @@
     },
     {
         "key": "lexi",
-        "link": ["lexi/", "lexic"],
+        "link": "lexic",
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
@@ -941,7 +941,7 @@
     },
     {
         "key": "ornis",
-        "link": ["orn", "ornith"],
+        "link": "ornith",
         "type": "noun",
         "gloss": "bird",
         "tags": ["count", "concrete", "living", "animal"],
@@ -981,6 +981,14 @@
     },
     {
         "key": "selene",
+        "link": "selen",
+        "type": "noun",
+        "gloss": "moon",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "selene-singleton",
         "link": "selen",
         "type": "noun",
         "gloss": "moon",
