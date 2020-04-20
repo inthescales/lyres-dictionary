@@ -41,12 +41,12 @@ class Morph:
                 # Match the first case that we fill
                 match = True
                 case = exception["case"]
-
+                
                 if "precedes" in case:
                     if self.next is None or not evaluate_expression(case["precedes"], self.next.as_dict()):
                         continue
 
-                if "follows" in case and self.prev:
+                if "follows" in case:
                     if self.prev is None or not evaluate_expression(case["follows"], self.prev.as_dict()):
                         continue
                         
@@ -58,7 +58,6 @@ class Morph:
                 self.morph[key] = value
     
     def get_form(self):
-        
         form = ""
         
         if self.next:
@@ -141,7 +140,11 @@ class Morph:
             if self.morph["type"] == "prep":
                 form = self.morph["link"]
             else:
-                form = self.morph["final"]
+                if "final" in self.morph:
+                    form = self.morph["final"]
+                else:
+                    # If there's no final form, use link
+                    form = self.morph["link"]
         
         if isinstance(form, list):
             form = random.choice(form)
@@ -379,6 +382,15 @@ class Word:
                         elif last_morph.has_tag("singleton"):
                             article = "the"
                             words[index] = article + " " +inflection.inflect(definition, "singleton")
+                        else:
+                            words[index] = definition
+                    elif word == "%!sg":
+                        if last_morph.has_tag("count"):
+                            words[index] = inflection.inflect(definition, "sg")
+                        elif last_morph.has_tag("mass"):
+                            words[index] = inflection.inflect(definition, "mass")
+                        elif last_morph.has_tag("singleton"):
+                            words[index] = inflection.inflect(definition, "singleton")
                         else:
                             words[index] = definition
                     elif word == "%pl":

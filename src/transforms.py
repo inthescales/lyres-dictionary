@@ -39,7 +39,7 @@ def get_latin_root(morphothec):
 def get_greek_root(morphothec):
 
     bag = [
-        ("noun", 1),
+        ("noun", 4),
         ("adj", 1)
     ]
 
@@ -184,6 +184,9 @@ def transform_word_greek(word, morphothec):
         else:
             bag.append(("add_suffix", 100))
     
+    if word.size() == 1 and current_type == "noun":
+        bag.append(("numerical", 5))
+    
     # If there is no override, choose, or return if no choices ------
     if not override: 
         if len(bag) > 0:
@@ -223,3 +226,9 @@ def transform_word_greek(word, morphothec):
             
         if new_morph is not None:
             word.add_suffix(new_morph)
+            
+        # Numerical
+    elif choice == "numerical":
+        num_morph = Morph( random.choice(morphothec.filter_type("number", language)), morphothec)
+        end_morph = Morph(random.choice(["ic-number", "y-number"]), morphothec)
+        word.add_affixes(num_morph, end_morph)

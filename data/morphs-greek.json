@@ -16,7 +16,7 @@
         "origin": "greek"
     },
     {
-        "key": "ander",
+        "key": "aner",
         "link": "andr",
         "type": "noun",
         "gloss": "man",
@@ -80,10 +80,18 @@
         "origin": "greek"
     },
     {
-        "key": "auto-",
+        "key": "autos",
         "link": "aut",
         "type": "noun",
         "gloss": "one's self",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-type": "number"
+                }
+            },
+            "gloss": "self"
+        }],
         "tags": ["count", "concrete"],
         "origin": "greek"
     },
@@ -96,7 +104,7 @@
         "origin": "greek"
     },
     {
-        "key": "bibilon",
+        "key": "biblion",
         "link": "bibli",
         "type": "noun",
         "gloss": "book",
@@ -120,7 +128,7 @@
         "origin": "greek"
     },
     {
-        "key": "cephalo-",
+        "key": "cephale",
         "link": "cephal",
         "type": "noun",
         "gloss": "head",
@@ -136,7 +144,7 @@
         "origin": "greek"
     },
     {
-        "key": "chart-",
+        "key": "chartes",
         "link": "chart",
         "type": "noun",
         "gloss": "paper",
@@ -144,7 +152,7 @@
         "origin": "greek"
     },
     {
-        "key": "chiro-",
+        "key": "cheir",
         "link": "chir",
         "type": "noun",
         "gloss": "hand",
@@ -152,7 +160,7 @@
         "origin": "greek"
     },
     {
-        "key": "chrom-",
+        "key": "chroma",
         "link": ["chrom", "chromat"],
         "type": "noun",
         "gloss": "color",
@@ -168,7 +176,7 @@
         "origin": "greek"
     },
     {
-        "key": "copro-",
+        "key": "copros",
         "link": "copr",
         "type": "noun",
         "gloss": "feces",
@@ -176,14 +184,39 @@
         "origin": "greek"
     },
     {
-        "key": "cryo-adj",
-        "link": "cry",
-        "type": "adj",
-        "gloss": "cold",
+        "key": "cosmos",
+        "link": "cosmo",
+        "type": "noun",
+        "gloss": "universe",
+        "tags": ["singleton", "concrete"],
         "origin": "greek"
     },
     {
-        "key": "crystall-",
+        "key": "cranion",
+        "link": "crani",
+        "type": "noun",
+        "gloss": "skull",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "crya-adj",
+        "link": "cry",
+        "type": "adj",
+        "gloss": "cold",
+        "tags": ["material"],
+        "origin": "greek"
+    },
+    {
+        "key": "crya-noun",
+        "link": "cry",
+        "type": "noun",
+        "gloss": "cold",
+        "tags": ["singleton", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "crystallos",
         "link": "crystall",
         "type": "noun",
         "gloss": "crystal",
@@ -191,19 +224,19 @@
         "origin": "greek"
     },
     {
-        "key": "cryo-noun",
-        "link": "cry",
-        "type": "noun",
-        "gloss": "cold",
-        "tags": ["mass", "abstract"],
-        "origin": "greek"
-    },
-    {
-        "key": "cyno-",
+        "key": "cynos",
         "link": "cyn",
         "type": "noun",
         "gloss": "dog",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "daemon",
+        "link": "daemon",
+        "type": "noun",
+        "gloss": "spirit",
+        "tags": ["count", "concrete", "living"],
         "origin": "greek"
     },
     {
@@ -215,7 +248,7 @@
         "origin": "greek"
     },
     {
-        "key": "dendro-",
+        "key": "dendron",
         "link": "dendr",
         "type": "noun",
         "gloss": "tree",
@@ -231,7 +264,23 @@
         "origin": "greek"
     },
     {
-        "key": "galacto-",
+        "key": "stylos",
+        "link": "styl",
+        "type": "noun",
+        "gloss": "column",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "entomos",
+        "link": "entom",
+        "type": "noun",
+        "gloss": "insekt",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
+        "key": "gala",
         "link": "galact",
         "type": "noun",
         "gloss": "milk",
@@ -247,7 +296,7 @@
         "origin": "greek"
     },
     {
-        "key": "gaea",
+        "key": "ge",
         "link": "ge",
         "type": "noun",
         "gloss": "earth",
@@ -263,7 +312,7 @@
         "origin": "greek"
     },
     {
-        "key": "gigas",
+        "key": "gigantos",
         "link": "gigant",
         "type": "noun",
         "gloss": "giant",
@@ -271,7 +320,23 @@
         "origin": "greek"
     },
     {
-        "key": "gyn-",
+        "key": "glossa",
+        "link": "gloss",
+        "type": "noun",
+        "gloss": "tongue",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "gonos",
+        "link": "gon",
+        "type": "noun",
+        "gloss": "angle",
+        "tags": ["count", "abstract", "shape"],
+        "origin": "greek"
+    },
+    {
+        "key": "gyne",
         "link": ["gyn", "gynec"],
         "type": "noun",
         "gloss": "woman",
@@ -279,11 +344,19 @@
         "origin": "greek"
     },
     {
-        "key": "hal-",
+        "key": "hals",
         "link": "hal",
         "type": "noun",
         "gloss": "salt",
         "tags": ["mass", "concrete", "material"],
+        "origin": "greek"
+    },
+    {
+        "key": "hedron",
+        "link": "hedr",
+        "type": "noun",
+        "gloss": "face",
+        "tags": ["count", "abstract"],
         "origin": "greek"
     },
     {
@@ -295,11 +368,19 @@
         "origin": "greek"
     },
     {
-        "key": "hemo-",
+        "key": "haema",
         "link": "hem",
         "type": "noun",
         "gloss": "blood",
         "tags": ["mass", "concrete", "liquid", "fluid"],
+        "origin": "greek"
+    },
+    {
+        "key": "hiera",
+        "link": "hier",
+        "type": "adj",
+        "gloss": "sacred",
+        "tags": ["character"],
         "origin": "greek"
     },
     {
@@ -311,7 +392,7 @@
         "origin": "greek"
     },
     {
-        "key": "horo-",
+        "key": "hora",
         "link": "hor",
         "type": "noun",
         "gloss": "hour",
@@ -319,7 +400,7 @@
         "origin": "greek"
     },
     {
-        "key": "hydro-",
+        "key": "hydor",
         "link": "hydr",
         "type": "noun",
         "gloss": "water",
@@ -335,7 +416,31 @@
         "origin": "greek"
     },
     {
-        "key": "litho-",
+        "key": "kakist",
+        "link": "cacist",
+        "type": "adj",
+        "gloss": "worst",
+        "tags": ["character"],
+        "origin": "greek"
+    },
+    {
+        "key": "krata",
+        "link": "crat",
+        "type": "adj",
+        "gloss": "strong",
+        "tags": ["character"],
+        "origin": "greek"
+    },
+    {
+        "key": "kratos",
+        "link": "crat",
+        "type": "noun",
+        "gloss": "strength",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "lithos",
         "link": "lith",
         "type": "noun",
         "gloss": "stone",
@@ -359,11 +464,43 @@
         "origin": "greek"
     },
     {
-        "key": "meteor-",
+        "key": "mathe",
+        "link": "math",
+        "type": "noun",
+        "gloss": "learning",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "mechane",
+        "link": "machin",
+        "type": "noun",
+        "gloss": "machine",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "mega",
+        "link": ["megal", "megal", "meg"],
+        "type": "adj",
+        "gloss": "large",
+        "tags": ["character"],
+        "origin": "greek"
+    },
+    {
+        "key": "meteora",
         "link": "meteor",
         "type": "noun",
         "gloss": "weather",
         "tags": ["singleton", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "meter",
+        "link": "metr",
+        "type": "noun",
+        "gloss": "mother",
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
     },
     {
@@ -375,11 +512,19 @@
         "origin": "greek"
     },
     {
-        "key": "molybd-",
+        "key": "molybdos",
         "link": "molybd",
         "type": "noun",
         "gloss": "lead",
         "tags": ["mass", "concrete", "material"],
+        "origin": "greek"
+    },
+    {
+        "key": "morphe",
+        "link": "morph",
+        "type": "noun",
+        "gloss": "form",
+        "tags": ["count", "abstract", "shape"],
         "origin": "greek"
     },
     {
@@ -388,6 +533,14 @@
         "type": "noun",
         "gloss": "fungus",
         "tags": ["mass", "concrete", "living"],
+        "origin": "greek"
+    },
+    {
+        "key": "mythos",
+        "link": "myth",
+        "type": "noun",
+        "gloss": "story",
+        "tags": ["count", "abstract"],
         "origin": "greek"
     },
     {
@@ -407,7 +560,7 @@
         "origin": "greek"
     },
     {
-        "key": "oneiro-",
+        "key": "oneiros",
         "link": "oneir",
         "type": "noun",
         "gloss": "dream",
@@ -418,19 +571,27 @@
         "key": "onoma",
         "link": ["onom", "onomat"],
         "type": "noun",
-        "gloss": "weather",
-        "tags": ["singleton", "concrete"],
+        "gloss": "name",
+        "tags": ["count", "abstract"],
         "origin": "greek"
     },
     {
-        "key": "ortho-",
+        "key": "ortha",
         "link": "orth",
         "type": "adj",
         "gloss": "straight",
         "origin": "greek"
     },
     {
-        "key": "paleo",
+        "key": "pais",
+        "link": "ped",
+        "type": "noun",
+        "gloss": "child",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "palea",
         "link": "pale",
         "type": "adj",
         "gloss": "old",
@@ -438,10 +599,10 @@
         "origin": "greek"
     },
     {
-        "key": "paedo-",
-        "link": "ped",
+        "key": "pater",
+        "link": "patr",
         "type": "noun",
-        "gloss": "child",
+        "gloss": "father",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
     },
@@ -451,6 +612,14 @@
         "type": "noun",
         "gloss": "penis",
         "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "pharmakon",
+        "link": "pharmac",
+        "type": "noun",
+        "gloss": "medicine",
+        "tags": ["mass", "concrete"],
         "origin": "greek"
     },
     {
@@ -467,6 +636,22 @@
         "type": "noun",
         "gloss": "light",
         "tags": ["mass", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "phyton",
+        "link": "phyt",
+        "type": "noun",
+        "gloss": "plant",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "greek"
+    },
+    {
+        "key": "plutos",
+        "link": "plut",
+        "type": "noun",
+        "gloss": "wealth",
+        "tags": ["mass", "abstract"],
         "origin": "greek"
     },
     {
@@ -494,6 +679,37 @@
         "origin": "greek"
     },
     {
+        "key": "poly",
+        "link": "poly",
+        "type": "adj",
+        "gloss": "many",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": "o"
+                }
+            },
+            "link": "poly/"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "pous",
+        "link": "pod",
+        "type": "noun",
+        "gloss": "foot",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "pseuda",
+        "link": "pseud",
+        "type": "adj",
+        "gloss": "false",
+        "tags": ["character"],
+        "origin": "greek"
+    },
+    {
         "key": "psyche",
         "link": "psych",
         "type": "noun",
@@ -502,11 +718,18 @@
         "origin": "greek"
     },
     {
-        "key": "pyro-",
+        "key": "pyr",
         "link": "pyr",
         "type": "noun",
         "gloss": "fire",
         "tags": ["mass", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "oliga",
+        "link": "olig",
+        "type": "adj",
+        "gloss": "few",
         "origin": "greek"
     },
     {
@@ -518,7 +741,7 @@
         "origin": "greek"
     },
     {
-        "key": "ornith-",
+        "key": "ornis",
         "link": ["orn", "ornith"],
         "type": "noun",
         "gloss": "bird",
@@ -526,7 +749,7 @@
         "origin": "greek"
     },
     {
-        "key": "osteo-",
+        "key": "osteon",
         "link": "oste",
         "type": "noun",
         "gloss": "bone",
@@ -546,10 +769,11 @@
         "link": "sapr",
         "type": "adj",
         "gloss": "putrid",
+        "tags": ["material"],
         "origin": "greek"
     },
     {
-        "key": "sarco-",
+        "key": "sarx",
         "link": "sarc",
         "type": "noun",
         "gloss": "flesh",
@@ -573,11 +797,35 @@
         "origin": "greek"
     },
     {
+        "key": "spelaion",
+        "link": "spele",
+        "type": "noun",
+        "gloss": "cave",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "stylos",
+        "link": "styl",
+        "type": "noun",
+        "gloss": "column",
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
         "key": "tachya",
         "link": "tachy",
         "type": "adj",
         "gloss": "fast",
         "tags": ["character"],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": "o"
+                }
+            },
+            "link": "tachy/"
+        }],
         "origin": "greek"
     },
     {
@@ -597,7 +845,15 @@
         "origin": "greek"
     },
     {
-        "key": "theo-",
+        "key": "thanatos",
+        "link": "thanat",
+        "type": "noun",
+        "gloss": "death",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "theos",
         "link": "the",
         "type": "noun",
         "gloss": "god",
@@ -605,14 +861,15 @@
         "origin": "greek"
     },
     {
-        "key": "thermo-adj",
+        "key": "therma-adj",
         "link": "therm",
         "type": "adj",
         "gloss": "hot",
+        "tags": ["material"],
         "origin": "greek"
     },
     {
-        "key": "thermo-noun",
+        "key": "therma-noun",
         "link": "therm",
         "type": "noun",
         "gloss": "heat",
@@ -627,86 +884,201 @@
         "tags": ["count", "concrete"],
         "origin": "greek"
     },
-{
-        "key": "one-join",
-        "link": "mono",
-        "type": "number",
-        "gloss": "one %sg",
-        "tags": ["no-gen"],
+    {
+        "key": "toxon",
+        "link": "tox",
+        "type": "noun",
+        "gloss": "poison",
+        "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "greek"
     },
     {
-        "key": "two-join",
+        "key": "greek-none-join",
+        "link": "a",
+        "type": "number",
+        "gloss": "no %pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u", "h"]
+                }
+            },
+            "link": "an"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "greek-one-join",
+        "link": "mono",
+        "type": "number",
+        "gloss": "one %!sg",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "mon"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "greek-two-join",
         "link": "di",
         "type": "number",
         "gloss": "two %!pl",
         "origin": "greek"
     },
     {
-        "key": "three-join",
+        "key": "greek-three-join",
         "link": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "greek"
     },
     {
-        "key": "four-join",
+        "key": "greek-four-join",
         "link": "tetra",
         "type": "number",
         "gloss": "four %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "tetr"
+        }],
         "origin": "greek"
     },
     {
-        "key": "five-join",
+        "key": "greek-five-join",
         "link": "penta",
         "type": "number",
         "gloss": "five %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "pent"
+        }],
         "origin": "greek"
     },
     {
-        "key": "six-join",
+        "key": "greek-six-join",
         "link": "hexa",
         "type": "number",
         "gloss": "six %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "hex"
+        }],
         "origin": "greek"
     },
     {
-        "key": "seven-join",
+        "key": "greek-seven-join",
         "link": "hepta",
         "type": "number",
         "gloss": "seven %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "hept"
+        }],
         "origin": "greek"
     },
     {
-        "key": "eight-join",
-        "link": "octa",
+        "key": "greek-eight-join",
+        "link": "octo",
         "type": "number",
         "gloss": "eight %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "oct"
+        }],
         "origin": "greek"
     },
     {
-        "key": "nine-join",
-        "link": "nona",
+        "key": "greek-nine-join",
+        "link": "ennea",
         "type": "number",
         "gloss": "nine %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "enne"
+        }],
         "origin": "greek"
     },
     {
-        "key": "nine-join",
+        "key": "greek-hundred-join",
+        "link": "hecato",
+        "type": "number",
+        "gloss": "one-hundred %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "hecat"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "greek-thousand-join",
         "link": "chili",
         "type": "number",
         "gloss": "one-thousand %!pl",
         "origin": "greek"
     },
     {
-        "key": "nine-join",
+        "key": "greek-ten-thousand-join",
         "link": "myri",
+        "type": "number",
+        "gloss": "ten-thousand %!pl",
+        "origin": "greek"
+    },
+    {
+        "key": "greek-few-join",
+        "link": "oligo",
+        "type": "number",
+        "gloss": "few %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "olig"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "greek-many-join",
+        "link": "poly",
         "type": "number",
         "gloss": "many %!pl",
         "origin": "greek"
     },
     {
-        "key": "arch",
+        "key": "greek-arch",
         "final": "arch",
         "link": "arch",
         "type": "derive",
@@ -806,6 +1178,11 @@
         "to": "verb",
         "suffixes": ["ue-agent", "ic-def", "y-def"],
         "gloss": "leading of %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -995,7 +1372,10 @@
         "gloss": "eating of %pl",
         "requires": {
             "follows": {
-                "not": { "has-tag": "fluid" }
+                "and": [
+                    { "has-tag": "concrete" },
+                    { "not": { "has-tag": "fluid" } }
+                ]
             }
         },
         "exception": [{
@@ -1063,7 +1443,54 @@
         "origin": "greek"
     },
     {
-        "key": "opot",
+        "key": "ophor",
+        "final": "ophor",
+        "link": "ophor",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["e-agent", "ic-part", "ia-def"],
+        "gloss": "carrying of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["e-agent", "ic-part"]
+                    }
+                },
+                "gloss": "[carry] %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "opot-adj",
+        "final": "opot",
+        "link": "opot",
+        "type": "derive",
+        "from": "adj",
+        "to": "noun",
+        "suffixes": ["e-agent", "ic-def", "ia-def"],
+        "gloss": "drinking of %@ liquids",
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "e-agent"
+                }
+            },
+            "gloss": "[drink] %@ liquids"
+        }],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "opot-noun",
         "final": "opot",
         "link": "opot",
         "type": "derive",
@@ -1146,6 +1573,18 @@
         "origin": "greek"
     },
     {
+        "key": "greek-silent-haver",
+        "final": "",
+        "link": "",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "one who has %!sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "greek"
+    },
+    {
         "key": "e-agent",
         "final": "e",
         "link": "",
@@ -1202,6 +1641,26 @@
         "to": "noun",
         "suffixes": [],
         "gloss": "the %@",
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "y-number",
+        "final": ["y", "ia"],
+        "link": "i",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "the state of having %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "i"
+                }
+            },
+            "final": "a"
+        }],
         "tags": ["mass", "abstract", "no-gen"],
         "origin": "greek"
     },
@@ -1294,6 +1753,44 @@
         "notes": "add suffixes ity, ize"
     },
     {
+        "key": "ic-part",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "%part",
+        "tags": ["final", "no-gen"],
+        "origin": "greek",
+        "notes": "add suffixes ity, ize"
+    },
+    {
+        "key": "ic-having",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "having %@",
+        "tags": ["final", "no-gen"],
+        "origin": "greek",
+        "notes": "add suffixes ity, ize"
+    },
+    {
+        "key": "ic-number",
+        "final": "ic",
+        "link": "ic",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "having %@",
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
         "key": "greek-ist",
         "link": "ist",
         "final": "ist",
@@ -1347,6 +1844,26 @@
         "origin": "greek"
     },
     {
+        "key": "omorph",
+        "link": "omorph",
+        "final": "omorph",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent-haver", "ic-having"],
+        "gloss": "the shape of %sg",
+        "requires": {
+            "follows": {
+                "or": [
+                    { "has-all-tags": ["count", "concrete"] },
+                    { "has-tag": "shape" }
+                ]
+            }
+        },
+        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
         "key": "othec",
         "link": "othec",
         "final": "othec",
@@ -1354,7 +1871,7 @@
         "from": "noun",
         "to": "noun",
         "suffixes": [],
-        "gloss": "a collection of %pl",
+        "gloss": "a collection of %!pl",
         "requires": {
             "follows": {
                 "not": { "has-tag": "singleton" }

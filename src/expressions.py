@@ -9,7 +9,7 @@ def evaluate_expression(expression, referent):
     
     key = list(expression.keys())[0]
     value = expression[key]
-    
+
     # Logical operators
     if key == "or":
         if type(expression["or"]) != list:
@@ -54,6 +54,8 @@ def evaluate_expression(expression, referent):
         if "tags" not in referent:
             return False
         return evaluate_any_tags(value, referent["tags"])
+    elif key == "has-prefix":
+        return evaluate_prefix(value, referent["form"])
     elif key == "has-suffix":
         return evaluate_suffix(value, referent["form"])
     elif key == "has-conjugation":
@@ -112,13 +114,29 @@ def evaluate_any_tags(tags, referent_tags):
     
     return False
 
+def evaluate_prefix(prefix, form):
+    if isinstance(prefix, str):
+        return form.startswith(prefix)
+    
+    elif isinstance(prefix, list):
+        for cur in prefix:
+            if form.startswith(cur):
+                return True
+        
+        return False
+    
+    else:
+        print("Error: bad value for has-prefix:")
+        print(prefix)
+        sys.exit(1)
+
 def evaluate_suffix(suffix, form):
     if isinstance(suffix, str):
         return form.endswith(suffix)
     
     elif isinstance(suffix, list):
         for cur in suffix:
-            if form.endswith(suffix):
+            if form.endswith(cur):
                 return True
         
         return False

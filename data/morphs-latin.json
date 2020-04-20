@@ -7353,7 +7353,6 @@
         "link": "uni",
         "type": "number",
         "gloss": "one %sg",
-        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
