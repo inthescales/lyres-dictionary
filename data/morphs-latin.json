@@ -520,7 +520,7 @@
         "link": "bacc",
         "type": "noun",
         "declension": 1,
-        "gloss": "bery",
+        "gloss": "berry",
         "tags": ["count", "concrete"],
         "origin": "latin"
     },    
@@ -547,7 +547,7 @@
     },
     {
         "key": "bella",
-        "link": "beat",
+        "link": "bell",
         "type": "adj",
         "declension": 12,
         "gloss": "beautiful",
@@ -1073,28 +1073,6 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "reconcile vs conciliate"
-    },
-    {
-        "key": "cipere",
-        "link-present": "cipie",
-        "link-perfect": "cept",
-        "final": "cept",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "take",
-        "exception": [
-            { 
-                "case": {
-                    "precedes": {
-                        "has-key": "ble"
-                    }
-                },
-                "link": "cepti"
-            }
-        ],
-        "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "see capere"
     },
     {
         "key": "citare",
@@ -3120,6 +3098,17 @@
         "origin": "latin"
     },
     {
+        "key": "joculare",
+        "link-present": "jocula",
+        "link-perfect": "joculat",
+        "final": "joculate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "joke",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "jubilare",
         "link-present": "jubila",
         "link-perfect": "jubilat",
@@ -3184,6 +3173,15 @@
         "origin": "latin"
     },
     {
+        "key": "jugum",
+        "link": "jug",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "[yoke] or [bond]",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "jungere",
         "link-present": "junge",
         "link-perfect": "junct",
@@ -3194,6 +3192,14 @@
         "tags": ["transitive", "joining"],
         "origin": "latin",
         "notes": "also jointure"
+    },
+    {
+        "key": "junior",
+        "link": "junior",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "younger",
+        "origin": "latin"
     },
     {
         "key": "jurare",
@@ -4706,7 +4712,7 @@
     },
     {
         "key": "offendere",
-        "link-present": "offe",
+        "link-present": "offende",
         "link-perfect": "offens",
         "final": "offend",
         "type": "verb",
@@ -5832,6 +5838,17 @@
         "origin": "latin"
     },
     {
+        "key": "radere",
+        "link-present": "rade",
+        "link-perfect": "ras",
+        "final": ["rade", "rase"],
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "scrape",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "radix",
         "link": "radic",
         "type": "noun",
@@ -5961,6 +5978,17 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "strengthen",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "rodere",
+        "link-present": "rode",
+        "link-perfect": "ros",
+        "final": "rode",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "gnaw",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -6182,6 +6210,23 @@
         "declension": 3,
         "gloss": "seed",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "senex",
+        "link": "sen",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "elder",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
+        "key": "senior",
+        "link": "senior",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "older",
         "origin": "latin"
     },
     {
@@ -7352,7 +7397,7 @@
         "key": "one-join",
         "link": "uni",
         "type": "number",
-        "gloss": "one %sg",
+        "gloss": "one %!sg",
         "origin": "latin"
     },
     {
@@ -8372,7 +8417,7 @@
                 "gloss": "skilled in the use of %pl"
             }
         ],
-        "tags": ["non-final"],
+        "tags": ["non-final", "rare"],
         "origin": "latin"
     },
     {

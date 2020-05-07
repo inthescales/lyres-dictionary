@@ -1281,9 +1281,17 @@
     },
     {
         "key": "greek-ten-thousand-join",
-        "link": "myri",
+        "link": "myria",
         "type": "number",
         "gloss": "ten-thousand %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "link": "myri"
+        }],
         "origin": "greek"
     },
     {
