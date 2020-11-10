@@ -2001,7 +2001,7 @@
     {
         "key": "fatigare",
         "link-present": "fatiga",
-        "link-perfect": "fatig",
+        "link-perfect": "fatigat",
         "final": "fatigue",
         "type": "verb",
         "conjugation": 1,
@@ -2247,7 +2247,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "flower",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
         "origin": "latin"
     },
     {
@@ -5858,6 +5858,15 @@
         "origin": "latin"
     },
     {
+        "key": "ramus",
+        "link": "ram",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "branch",
+        "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
+        "origin": "latin"
+    },
+    {
         "key": "rana",
         "link": "ran",
         "type": "noun",
@@ -8414,7 +8423,7 @@
                         "has-tag": "tool"
                     }
                 },
-                "gloss": "skilled in the use of %pl"
+                "gloss": "[be] skilled in the use of %pl"
             }
         ],
         "tags": ["non-final", "rare"],
