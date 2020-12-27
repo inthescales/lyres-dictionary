@@ -1,0 +1,75 @@
+{
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "type": {"const": "noun"}
+                }
+            },
+            "then": {
+                "properties": {
+                    "link": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "tags": {
+                        "contains": {
+                            "oneOf": [
+                                {"const": "count"},
+                                {"const": "mass"},
+                                {"const": "singleton"}
+                            ]
+                         }
+                    }
+                },  
+              "required": ["link", "tags"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {"const": "adj"}
+                }
+            },
+            "then": {
+                "properties": {
+                    "link": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    }
+                },
+                "required": ["link"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {"const": "verb"}
+                }
+            },
+            "then": {
+                "properties": {
+                    "link-present": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "link-perfect": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "final": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "conjugation": {
+                        "type": "number",
+                        "enum": [0, 1, 2, 3, 4],
+                        "title": "TEST",
+                        "description": "EHHH"
+                    }
+                },
+                "required": ["link-present", "link-perfect", "final", "conjugation"]
+            }
+        }
+    ]
+}

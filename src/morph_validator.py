@@ -66,3 +66,22 @@ def validate_morph(morph):
             return False
 
     return True
+
+
+# Schema validation
+
+def import_schemata():
+    schemata = {}
+
+    with open("data/schemata/morph.schema") as morph_schema:
+        schemata["base"] = json.load(morph_schema)
+
+    for origin in ["latin", "greek"]:        
+        with open(f"data/schemata/morph-{origin}.schema") as origin_schema:
+            schemata[origin] = json.load(origin_schema)
+
+    return schemata
+
+def validate_morph2(morph, schemata):
+    for schema in schemata:
+        jsonschema.validate(instance=morph, schema=schema)

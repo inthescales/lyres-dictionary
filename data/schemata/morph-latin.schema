@@ -1,0 +1,83 @@
+{
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "type": {"const": "noun"}
+                }
+            },
+            "then": {
+                "properties": {
+                    "link": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "declension": {
+                        "type": "number",
+                        "enum": [1, 2, 3, 4, 5, 0]
+                    },
+                    "tags": {
+                        "contains": {
+                            "oneOf": [
+                                {"const": "count"},
+                                {"const": "mass"},
+                                {"const": "singleton"}
+                            ]
+                         }
+                    }
+                },  
+              "required": ["link", "declension", "tags"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {"const": "adj"}
+                }
+            },
+            "then": {
+                "properties": {
+                    "link": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "declension": {
+                        "type": "number",
+                        "enum": [0, 12, 3]
+                    }
+                },
+                "required": ["link", "declension"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {"const": "verb"}
+                }
+            },
+            "then": {
+                "properties": {
+                    "link-present": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "link-perfect": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "final": {
+                        "type": ["string", "array"],
+                        "items": {"type": "string"}
+                    },
+                    "conjugation": {
+                        "type": "number",
+                        "enum": [0, 1, 2, 3, 4],
+                        "title": "TEST",
+                        "description": "EHHH"
+                    }
+                },
+                "required": ["link-present", "link-perfect", "final", "conjugation"]
+            }
+        }
+    ]
+}
