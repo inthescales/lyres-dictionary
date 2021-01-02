@@ -6,6 +6,7 @@ import botbuddy
 
 from src.morphothec import Morphothec
 from src.generator import generate_word, word_for_keys
+import src.composer as composer
 import src.validator as validator
 
 def setup():
@@ -26,10 +27,17 @@ def generate_entry():
     if needs_setup():
         setup()
     
+    def create_entry(word):        
+        composed = composer.get_form(word)
+        tag = composer.get_part_tag(word)
+        definition = composer.get_definition(word)
+        entry = composed + " " + tag + "\n" + definition
+        return entry
+    
     # Generate until we have a valid entry
     while True:
         word = generate_word(morphothec)
-        entry = word.entry()
+        entry = create_entry(word)
         
         if validator.validate(entry):
             return entry
