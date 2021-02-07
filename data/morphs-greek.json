@@ -259,7 +259,7 @@
         "link": "dactyl",
         "type": "noun",
         "gloss": "finger",
-        "tags": ["mass", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
     },
     {
@@ -1623,7 +1623,7 @@
                     "has-key": "e-agent"
                 }
             },
-            "gloss": "[eat] %3sg"
+            "gloss": "[eat] %pl"
         }],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
