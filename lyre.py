@@ -27,17 +27,10 @@ def generate_entry():
     if needs_setup():
         setup()
     
-    def create_entry(word):        
-        composed = composer.get_form(word)
-        tag = composer.get_part_tag(word)
-        definition = composer.get_definition(word)
-        entry = composed + " " + tag + "\n" + definition
-        return entry
-    
     # Generate until we have a valid entry
     while True:
         word = generate_word(morphothec)
-        entry = create_entry(word)
+        entry = composer.get_entry(word)
         
         if validator.validate(entry):
             return entry
@@ -50,7 +43,7 @@ def entry_for_keys(keys):
         
     word = word_for_keys(keys, morphothec)
     
-    return word.entry()
+    return composer.get_entry(word)
 
 def test_with_count(count):
     

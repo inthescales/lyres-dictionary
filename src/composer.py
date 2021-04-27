@@ -2,6 +2,13 @@ from src.models import Morph, Word
 import src.inflection as inflection
 import src.helpers as helpers
 
+def get_entry(word):        
+    composed = get_form(word)
+    tag = get_part_tag(word)
+    definition = get_definition(word)
+    entry = composed + " " + tag + "\n" + definition
+    return entry
+
 def get_part_tag(word):
 
     pos = word.get_type()
