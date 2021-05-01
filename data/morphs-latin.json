@@ -4631,16 +4631,16 @@
         "origin": "latin"
     },
     {
-        "key": "nuntia",
+        "key": "nuntiare",
         "link-present": "nuntia",
-        "link-perfect": "nuntiat",
+        "link-perfect": "nunciat",
         "final": "nounce",
         "type": "verb",
         "conjugation": 1,
         "gloss": "report",
         "tags": ["transitive"],
         "origin": "latin",
-        "notes": "Ignored annunciate"
+        "notes": "Ignored prenuntiate"
     },
     {
         "key": "nutrire",
@@ -7538,7 +7538,7 @@
         "assimilation": {
             "link": ["a", "d", "e", "j", "m", "o", "*"],
             "link-assim": ["b"],
-            "double": ["c", "d", "f", "g", "l", "n", "p", "r", "s", "t"],
+            "double": ["c", "f", "g", "l", "n", "p", "r", "s", "t"],
             "ac": ["q"]
         },
         "requires": {
