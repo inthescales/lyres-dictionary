@@ -1450,6 +1450,17 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "sentence",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "demna",
+                "link-perfect": "demnat"
+            }
+        ],
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "damn / damnation vs condemn / condemnation"
@@ -4466,7 +4477,7 @@
         "gloss": "tie",
         "tags": ["transitive", "joining"],
         "origin": "latin",
-        "notes": "connect vs annex. Chose connect as that's the more common word."
+        "notes": "connect vs annex. Chose connect as that's the more common word. Make 'nex' a noun form."
     },
     {
         "key": "negare",
@@ -5835,7 +5846,7 @@
         "gloss": "shake",
         "tags": ["transitive"],
         "origin": "latin",
-        "notes": "present form is a hack"
+        "notes": "present form is a hack. Conquest - probably should be a separate noun form."
     },
     {
         "key": "quercus",
@@ -7584,7 +7595,7 @@
         "gloss-verb": "%@ together",
         "gloss-noun": "together with %sg",
         "assimilation": {
-           "link-assim": ["a", "e", "i", "u", "o", "h"],
+           "link-assim": ["a", "e", "h", "i", "o"],
            "double": ["l", "r"],
            "nasal": ["*"]
         },
@@ -7665,7 +7676,7 @@
         "gloss-noun": "out of %sg",
         "assimilation": {
             "link": ["a", "c", "e", "h", "i", "o", "p", "q", "t", "*"],
-            "link-assim": ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
+            "link-assim": ["b", "d", "g", "j", "l", "m", "n", "r", "v"],
             "cut": ["s", "x"],
             "double": ["f"]
         },

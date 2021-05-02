@@ -40,6 +40,34 @@ class FormTests(unittest.TestCase):
         # ad -> ab
         # As in 'abbreviate'
         
+        # 'com' ----------
+        
+        # com + b, as in 'combine' or 'combat'        
+        self.assertForm(["com", "mandare"], "command")
+        self.assertForm(["com", "pungere", "ion"], "compunction")
+        
+        # com -> con
+        self.assertForm(["com", "cedere", "ion"], "concession")
+        self.assertForm(["com", "ducere", "or"], "conductor")
+        self.assertForm(["com", "fundere", "ion"], "confusion")
+        self.assertForm(["com", "gerere", "ion"], "congestion")
+        self.assertForm(["com", "nectare", "ive"], "connective")
+        # con + q, as in 'conquest'
+        self.assertForm(["com", "sequi", "nt"], "consequent")
+        self.assertForm(["com", "tenere", "nt"], "continent")
+        
+        
+        # com -> co
+        # a, as in coagulate
+        # e, as in coexist
+        self.assertForm(["com", "haerere", "nt"], "coherent")
+        self.assertForm(["com", "ire", "ion"], "coition")
+        self.assertForm(["com", "ordinare", "ion"], "coordination")
+        
+        #com -> co+
+        self.assertForm(["com", "laborare", "or"], "collaborator")
+        self.assertForm(["com", "regere", "ive"], "corrective")
+        
         # 'ex' ----------
 
         self.assertForm(["ex", "agere"], "exact")
