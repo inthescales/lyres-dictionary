@@ -4758,6 +4758,15 @@
         "origin": "latin"
     },
     {
+        "key": "onus",
+        "link": "oner",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "burden",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "optare",
         "link-present": "opta",
         "link-perfect": "opt",
@@ -7536,7 +7545,7 @@
         "gloss-verb": "%@ to",
         "gloss-noun": "to %sg",
         "assimilation": {
-            "link": ["a", "d", "e", "j", "m", "o", "*"],
+            "link": ["a", "d", "e", "j", "m", "o", "v", "*"],
             "link-assim": ["b"],
             "double": ["c", "f", "g", "l", "n", "p", "r", "s", "t"],
             "ac": ["q"]
@@ -7655,7 +7664,7 @@
         "gloss-verb": "%@ out from",
         "gloss-noun": "out of %sg",
         "assimilation": {
-            "link": ["a", "e", "i", "o", "h", "c", "p", "q", "t", "*"],
+            "link": ["a", "c", "e", "h", "i", "o", "p", "q", "t", "*"],
             "link-assim": ["b", "d", "j", "l", "m", "n", "r", "v", "g"],
             "cut": ["s", "x"],
             "double": ["f"]
