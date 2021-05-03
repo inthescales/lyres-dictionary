@@ -7557,8 +7557,7 @@
         "gloss-noun": "to %sg",
         "assimilation": {
             "link": ["a", "d", "e", "j", "m", "o", "v", "*"],
-            "link-assim": ["b"],
-            "double": ["c", "f", "g", "l", "n", "p", "r", "s", "t"],
+            "double": ["b", "c", "f", "g", "l", "n", "p", "r", "s", "t"],
             "ac": ["q"]
         },
         "requires": {

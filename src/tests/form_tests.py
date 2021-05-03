@@ -22,7 +22,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ad", "venire", "ure"], "adventure")
         
         # ad -> a
-        # As in 'adapt'
+        self.assertForm(["ad", "arguere", "or"], "adargutor") #*
         
         # ad doubling
         self.assertForm(["ad", "cedere", "ion"], "accession")
@@ -38,7 +38,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ad", "quaerere", "ion"], "acquisition")
         
         # ad -> ab
-        # As in 'abbreviate'
+        self.assertForm(["ad", "bibere"], "abbibe")
         
         # 'com' ----------
         
@@ -52,14 +52,14 @@ class FormTests(unittest.TestCase):
         self.assertForm(["com", "fundere", "ion"], "confusion")
         self.assertForm(["com", "gerere", "ion"], "congestion")
         self.assertForm(["com", "nectare", "ive"], "connective")
-        # con + q, as in 'conquest'
+        self.assertForm(["com", "quaerere", "or"], "conquisitor") #*
         self.assertForm(["com", "sequi", "nt"], "consequent")
         self.assertForm(["com", "tenere", "nt"], "continent")
         
         
         # com -> co
-        # a, as in coagulate
-        # e, as in coexist
+        self.assertForm(["com", "arguere", "or"], "coargutor") #*
+        self.assertForm(["com", "esse", "nt"], "coessent") #*
         self.assertForm(["com", "haerere", "nt"], "coherent")
         self.assertForm(["com", "ire", "ion"], "coition")
         self.assertForm(["com", "ordinare", "ion"], "coordination")
@@ -82,7 +82,8 @@ class FormTests(unittest.TestCase):
         # ex -> e
         # ebullient
         self.assertForm(["ex", "pellere", "ion"], "expulsion")
-        # ex + d-, as in education
+        self.assertForm(["ex", "donare", "ion"], "edonation") #*
+        self.assertForm(["com", "sequi", "nt"], "consequent")
         self.assertForm(["ex", "jacere", "ion"], "ejection")
         # self.assertForm(["ex", "ferre", "ion"], "elation") # BROKEN - this form doesn't work. Need estimate form when assimilating.
         self.assertForm(["ex", "mergere", "nt"], "emergent")
@@ -94,7 +95,6 @@ class FormTests(unittest.TestCase):
         
         # ex -> ex/
         self.assertForm(["ex", "sequi", "or"], "executor")
-        # ex + x-
         
         # ex -> e+
         self.assertForm(["ex", "fluere", "nt"], "effluent")
@@ -105,13 +105,13 @@ class FormTests(unittest.TestCase):
         self.assertForm(["in", "ducere", "ion"], "induction")
         self.assertForm(["in", "clinare", "ion"], "inclination")
         self.assertForm(["in", "ducere", "ive"], "inductive")
-        # in + e-, as in 'inestimable'
+        self.assertForm(["in", "educare", "ble"], "ineducable") #*
         self.assertForm(["in", "facere", "ion"], "infection")
         self.assertForm(["in", "gerere", "ion"], "ingestion")
         self.assertForm(["in", "habitare", "nt"], "inhabitant")
-        # in + i-, as in 'inimitable'
-        # in + n-, as in 'innumerable'
-        # in + o-, as in 'inoperative'
+        self.assertForm(["in", "imitari", "ble"], "inimitable") #*
+        self.assertForm(["in", "numerare", "ble"], "innumerable") #*
+        self.assertForm(["in", "optare", "ive"], "inoptive") #*
         self.assertForm(["in", "quaerere", "ive"], "inquisitive")
         self.assertForm(["in", "scribere", "ion"], "inscription")
         self.assertForm(["in", "trudere", "ive"], "intrusive")
@@ -120,7 +120,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["in", "bibere"], "imbibe")
         self.assertForm(["in", "mergere", "ion"], "immersion")
         self.assertForm(["in", "pellere", "ive"], "impulsive")
-        # in + u, can't think of an example
+        self.assertForm(["in", "urbs", "ify"], "inurbify") #*
         
         # in -> i+
         self.assertForm(["in", "ludere", "ion"], "illusion")
