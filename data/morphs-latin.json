@@ -7662,7 +7662,8 @@
         "gloss-verb": "%@ in",
         "gloss-noun": "in %sg",
         "assimilation": {
-		  "nasal": ["*"]
+            "double": ["l", "r"],
+            "nasal": ["*"]
         },
         "tags": ["verbal"],
         "origin": "latin"

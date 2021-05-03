@@ -99,7 +99,33 @@ class FormTests(unittest.TestCase):
         # ex -> e+
         self.assertForm(["ex", "fluere", "nt"], "effluent")
         
+        # 'in' ----------
+        
+        # in + a-, as in 'inactive'
+        self.assertForm(["in", "ducere", "ion"], "induction")
+        self.assertForm(["in", "clinare", "ion"], "inclination")
+        self.assertForm(["in", "ducere", "ive"], "inductive")
+        # in + e-, as in 'inestimable'
+        self.assertForm(["in", "facere", "ion"], "infection")
+        self.assertForm(["in", "gerere", "ion"], "ingestion")
+        self.assertForm(["in", "habitare", "nt"], "inhabitant")
+        # in + i-, as in 'inimitable'
+        # in + n-, as in 'innumerable'
+        # in + o-, as in 'inoperative'
+        self.assertForm(["in", "quaerere", "ive"], "inquisitive")
+        self.assertForm(["in", "scribere", "ion"], "inscription")
+        self.assertForm(["in", "trudere", "ive"], "intrusive")
 
+        # in -> im
+        self.assertForm(["in", "bibere"], "imbibe")
+        self.assertForm(["in", "mergere", "ion"], "immersion")
+        self.assertForm(["in", "pellere", "ive"], "impulsive")
+        # in + u, can't think of an example
+        
+        # in -> i+
+        self.assertForm(["in", "ludere", "ion"], "illusion")
+        # in + r- as in 'irregular'
+        
 
 
     # Miscellaneous tests confirming that real words have the correct forms.
