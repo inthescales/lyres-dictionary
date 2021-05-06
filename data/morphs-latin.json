@@ -2379,7 +2379,7 @@
         "gloss": "shatter",
         "tags": ["transitive", "dividing"],
         "origin": "latin",
-        "notes": "also fragile"
+        "notes": "also fragile, disfrange"
     },
     {
         "key": "frater",
@@ -4201,7 +4201,8 @@
                 "link": "missi"
             }
         ],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Verb form: transmit vs dismiss"
     },
     {
         "key": "miscere",
@@ -4946,6 +4947,19 @@
         "gloss": "marsh",
         "tags": ["count", "concrete", "terrain"],
         "origin": "latin"
+    },
+    {
+        "key": "pandere",
+        "link-present": "pande",
+        "link-perfect": "pans",
+        "final": "pand",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "[spread] out",
+        "gloss-relative": "[spread]",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin",
+        "notes": "Actual perfect form is 'pass', but I've gone with 'pans' in imitation of 'expansion'."
     },
     {
         "key": "pangere",
@@ -6504,6 +6518,18 @@
         "notes": "assort and consort actually are prep + sors (a share). Deal with it later."
     },
     {
+        "key": "spargere",
+        "link-present": "sparge",
+        "link-perfect": "spers",
+        "final": "sperse",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "[scatter] or [sprinkle]",
+        "tags": ["intransitive"],
+        "origin": "latin",
+        "notes": "Perfect is originally 'spars', changed to match 'dispersion' etc. Verb forms sperge, sparse, sperse are seen. Investigate more."
+    },
+    {
         "key": "specere",
         "link-present": "specte",
         "link-perfect": "spect",
@@ -7078,6 +7104,17 @@
         "origin": "latin"
     },
     {
+        "key": "vagari",
+        "link-present": "vaga",
+        "link-perfect": "vagat",
+        "final": "vagate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "wander",
+        "tags": ["intransitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "key": "valere",
         "link-present": "vale",
         "link-perfect": "valit",
@@ -7643,7 +7680,8 @@
         "gloss-noun": "apart from %sg",
         "assimilation": {
         	"link": ["*"],
-            "link-assim": ["l"]
+            "link-assim": ["d", "g", "l", "r", "v"],
+            "double": ["f"]
         },
         "requires": {
             "precedes": {
@@ -7651,7 +7689,8 @@
             }
         },
         "tags": ["verbal"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Assimilation concerns: digress vs disgregate? The common digress and digest make me lean that way."
     },
     {
         "key": "in",
@@ -7780,7 +7819,8 @@
         "type": "prep",
         "gloss-verb": "%@ back",
         "tags": ["verbal"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "In early latin, became 'red-' before a vowel."
     },
     {
         "key": "se",

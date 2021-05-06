@@ -55,7 +55,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["com", "quaerere", "or"], "conquisitor") #*
         self.assertForm(["com", "sequi", "nt"], "consequent")
         self.assertForm(["com", "tenere", "nt"], "continent")
-        
+        self.assertForm(["com", "venire", "ion"], "convention")
         
         # com -> co
         self.assertForm(["com", "arguere", "or"], "coargutor") #*
@@ -67,6 +67,33 @@ class FormTests(unittest.TestCase):
         #com -> co+
         self.assertForm(["com", "laborare", "or"], "collaborator")
         self.assertForm(["com", "regere", "ive"], "corrective")
+        
+        # 'dis' ----------
+        
+        self.assertForm(["dis", "apparere", "nt"], "disapparent") #*
+        self.assertForm(["dis", "battuere", "nt"], "disbatant") #*
+        self.assertForm(["dis", "cernere", "ion"], "discretion")
+        self.assertForm(["dis", "aequus", "ity"], "disequity") #*
+        self.assertForm(["dis", "gradi", "ion"], "digression")
+        self.assertForm(["dis", "hortari"], "dishort")
+        self.assertForm(["dis", "identa", "ity"], "disidentity") #*
+        self.assertForm(["dis", "jacere"], "disject")
+        self.assertForm(["dis", "mittere", "ion"], "dismission") #*
+        self.assertForm(["dis", "numerare", "ion"], "disnumeration") #*
+        self.assertForm(["dis", "pandere", "ion"], "dispansion") #*
+        self.assertForm(["dis", "quaerere", "ion"], "disquisition")
+        self.assertForm(["dis", "secare", "ion"], "dissection")
+        self.assertForm(["dis", "trahere", "ion"], "distraction")
+        self.assertForm(["dis", "unus", "ity"], "disunity")
+        
+        # dis -> di
+        self.assertForm(["dis", "ducere", "ion"], "diduction") #*
+        self.assertForm(["dis", "luere", "ion"], "dilution")
+        self.assertForm(["dis", "regere", "ion"], "direction")
+        self.assertForm(["dis", "vagari", "ion"], "divagation")
+        
+        # dis -> di+
+        self.assertForm(["dis", "ferre", "nt"], "different")
         
         # 'ex' ----------
 
@@ -90,7 +117,6 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ex", "numerare", "or"], "enumerator")
         self.assertForm(["ex", "regere", "ion"], "erection")
         self.assertForm(["ex", "vadere", "ive"], "evasive")
-        self.assertForm(["ex", "numerare", "or"], "enumerator")
         self.assertForm(["ex", "numerare", "or"], "enumerator")
         
         # ex -> ex/
@@ -121,12 +147,12 @@ class FormTests(unittest.TestCase):
         self.assertForm(["in", "mergere", "ion"], "immersion")
         self.assertForm(["in", "pellere", "ive"], "impulsive")
         self.assertForm(["in", "urbs", "ify"], "inurbify") #*
+        self.assertForm(["in", "vadere", "ion"], "invasion")
         
         # in -> i+
         self.assertForm(["in", "ludere", "ion"], "illusion")
-        # in + r- as in 'irregular'
+        self.assertForm(["in", "rogare", "nt"], "irrogant") #*
         
-
 
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualForms(self):        
