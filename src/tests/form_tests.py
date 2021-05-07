@@ -208,6 +208,34 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ob", "cadere", "ion"], "occasion")
         self.assertForm(["ob", "ferre"], "offer")
         self.assertForm(["ob", "premere", "ion"], "oppression")
+        
+        # 'se' ----------
+        # b
+        self.assertForm(["se", "cedere", "ion"], "secession")
+        self.assertForm(["se", "ducere", "ion"], "seduction")
+        self.assertForm(["se", "ferre", "nt"], "seferent") #*
+        self.assertForm(["se", "grex", "ate"], "segregate")
+        self.assertForm(["se", "haerere", "ion"], "sehesion") #*
+        self.assertForm(["se", "jungere", "ion"], "sejunction") #*
+        self.assertForm(["se", "ligere", "ion"], "selection")
+        self.assertForm(["se", "haerere", "ion"], "sehesion") #*
+        self.assertForm(["se", "movere", "ion"], "semotion") #*
+        self.assertForm(["se", "narrare", "or"], "senarrator") #*
+        self.assertForm(["se", "parare", "ion"], "separation")
+        self.assertForm(["se", "quaerere", "ion"], "sequisition") #*
+        self.assertForm(["se", "quaerere", "ion"], "sequisition") #*
+        self.assertForm(["se", "radere", "ive"], "serasive") #*
+        self.assertForm(["se", "salire", "nt"], "sesilient") #*
+        self.assertForm(["se", "trahere", "ion"], "setraction") #*
+        self.assertForm(["se", "vocare", "ion"], "sevocation")
+        
+        # se -> sed
+        self.assertForm(["se", "agere", "ion"], "sedaction") #*
+        self.assertForm(["se", "errare", "nt"], "sederrant") #*
+        self.assertForm(["se", "ire", "ion"], "sedition")
+        self.assertForm(["se", "uti"], "seduse") #*
+        
+        # 'sub' ----------
 
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualForms(self):        

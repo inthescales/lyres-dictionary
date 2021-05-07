@@ -7794,7 +7794,8 @@
         "gloss-verb": "%@ between",
         "gloss-noun": "between %pl",
         "tags": ["verbal"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "intelligent and other derivates seems to be a unique case of assimilation, which I will not represent here."
     },
     {
         "key": "intra",
