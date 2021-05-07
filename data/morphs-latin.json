@@ -1462,8 +1462,7 @@
             }
         ],
         "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "damn / damnation vs condemn / condemnation"
+        "origin": "latin"
     },
     {
         "key": "deminuere",
@@ -2091,7 +2090,8 @@
             }
         ],
         "tags": ["transitive", "motion"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Consider 'fer' or 'late' for verb"
     },
     {
         "key": "ferrum",
@@ -7762,11 +7762,12 @@
         "gloss-noun": "away from %sg",
         "assimilation": {
             "link": ["*"],
-            "double": ["c", "p"]
+            "link-assim": ["m"],
+            "double": ["c", "p", "f"]
         },
         "tags": ["verbal"],
         "origin": "latin",
-        "notes": "need spelling change for ostentatious"
+        "notes": "need spelling change for ostentatious. Can find 'obc' but only in later French or scientific words (maybe add as a separate suffix). 'obf' appears, as in obfuscate, but seems rarer. Also see 'oflete' for multi-char-prefix variation. 'g' seems to go both ways."
     },
     {
         "key": "per",

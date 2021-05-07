@@ -153,6 +153,33 @@ class FormTests(unittest.TestCase):
         self.assertForm(["in", "ludere", "ion"], "illusion")
         self.assertForm(["in", "rogare", "nt"], "irrogant") #*
         
+        # 'ob' ----------
+
+        self.assertForm(["ob", "ambulare"], "obambulate")
+        self.assertForm(["ob", "battuere", "nt"], "obbatant") #*
+        self.assertForm(["ob", "durare", "ion"], "obduration")
+        self.assertForm(["ob", "emere", "ion"], "obemption")
+        self.assertForm(["ob", "gerere", "ion"], "obgestion") #*
+        self.assertForm(["ob", "haurire", "ion"], "obhaustion") #*
+        self.assertForm(["ob", "ignorare", "nt"], "obignorant") #*
+        self.assertForm(["ob", "jacere", "ion"], "objection")
+        self.assertForm(["ob", "ligare", "ion"], "obligation")
+        self.assertForm(["ob", "nectare", "ion"], "obnection")
+        self.assertForm(["ob", "ordinare", "ure"], "obordinature") #*
+        self.assertForm(["ob", "quaerere", "or"], "obquisitor") #*
+        self.assertForm(["ob", "rumpere", "nt"], "obrumpent")
+        self.assertForm(["ob", "sequi", "nt"], "obsequent")
+        self.assertForm(["ob", "temperare"], "obtemper")
+        self.assertForm(["ob", "volare"], "obvolate")
+        
+        # ob -> o
+        # Before 'st', as in ostentatious
+        self.assertForm(["ob", "mittere", "ion"], "omission")
+        
+        # ob -> o+
+        self.assertForm(["ob", "cadere", "ion"], "occasion")
+        self.assertForm(["ob", "ferre"], "offer")
+        self.assertForm(["ob", "premere", "ion"], "oppression")
 
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualForms(self):        

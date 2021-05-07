@@ -1,3 +1,16 @@
+    # Can't think of a good gloss
+    {
+        "key": "varicare",
+        "link-present": "varica",
+        "link-perfect": "varicat",
+        "final": "varicate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "go",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+
     # Need to fix the inflection on the singular here
     {
         "key": "icule",
