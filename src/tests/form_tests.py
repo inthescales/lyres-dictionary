@@ -261,6 +261,28 @@ class FormTests(unittest.TestCase):
         self.assertForm(["sub", "rogare"], "surrogate")
         
         # sub -> sus
+        
+    def testStemChange(self):
+        self.assertForm(["mugire", "nt"], "mugient")
+        self.assertForm(["mugire", "nt"], "mugient")
+        self.assertForm(["nutrire", "nt"], "nutrient")
+        self.assertForm(["oriri", "nt"], "orient")
+        self.assertForm(["sentire", "nt"], "sentient")
+        self.assertForm(["com", "venire", "nt"], "convenient")
+        self.assertForm(["re", "salire", "nt"], "resilient")
+        
+        self.assertFormIn(["experiri", "nce"], ["experience", "experiency"])
+        self.assertFormIn(["scire", "nce"], ["science", "sciency"])
+    
+    def testStemRaise(self):
+        self.assertForm(["credere", "ble"], "credible")
+        self.assertForm(["fallere", "ble"], "fallible")
+        self.assertForm(["fungi", "ble"], "fungible")
+        self.assertForm(["legere", "ble"], "legible")
+        self.assertForm(["neglegere", "ble"], "negligible")
+        self.assertForm(["tangere", "ble"], "tangible")
+        self.assertForm(["com", "vertere", "ble"], "convertible")
+        self.assertForm(["in", "vincere", "ble"], "invincible")
 
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualForms(self):        
@@ -270,7 +292,13 @@ class FormTests(unittest.TestCase):
     
     def assertForm(self, keys, form):
         word = word_for_keys(keys, self.morphothec)
+        form = composer.get_form(word)
         self.assertEqual(composer.get_form(word), form)
+
+    def assertFormIn(self, keys, forms):
+        word = word_for_keys(keys, self.morphothec)
+        form = composer.get_form(word)
+        self.assertIn(form, forms)
 
 if __name__ == '__main__':    
     unittest.main()

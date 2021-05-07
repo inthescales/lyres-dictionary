@@ -4461,7 +4461,7 @@
         "link-perfect": "natat",
         "final": "nate",
         "type": "verb",
-        "conjugation": 2,
+        "conjugation": 1,
         "gloss": "swim",
         "tags": ["intransitive", "motion"],
         "origin": "latin"
@@ -5392,7 +5392,8 @@
         "conjugation": 2,
         "gloss": "please",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "implacable vs complacent"
     },
     {
         "key": "plana",
@@ -5588,7 +5589,7 @@
         "link-perfect": "potat",
         "final": "pote",
         "type": "verb",
-        "conjugation": 2,
+        "conjugation": 1,
         "gloss": "drink",
         "tags": ["transitive"],
         "origin": "latin"
@@ -6170,15 +6171,26 @@
     },
     {
         "key": "salire",
-        "link-present": "sili",
-        "link-perfect": "salt",
+        "link-present": "sali",
+        "link-perfect": ["salt", "salit"],
         "final": "sult",
         "type": "verb",
         "conjugation": 4,
         "gloss": "jump",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "sili",
+                "link-perfect": "hibit"
+            }
+        ],
         "tags": ["intransitive", "motion"],
         "origin": "latin",
-        "names": "conflict: salient vs resilient"
+        "names": "Others: assail, assault"
     },
     {
         "key": "salsus",
@@ -7138,7 +7150,7 @@
     },
     {
         "key": "uti",
-        "link-present": "ut",
+        "link-present": "ute",
         "link-perfect": "ut",
         "final": "use",
         "type": "verb",
