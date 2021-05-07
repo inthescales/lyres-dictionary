@@ -11,6 +11,34 @@ class FormTests(unittest.TestCase):
     # Tests that prefix sound assimilation resolves correctly.
     def testPrefixAssimilation(self):
         
+        # 'ab' ----------
+        self.assertForm(["ab", "ambulare", "ion"], "abambulation") #*
+        self.assertForm(["ab", "ducere", "ion"], "abduction")
+        self.assertForm(["ab", "errare", "ion"], "aberration")
+        self.assertForm(["ab", "grex", "ate"], "abgregate")
+        self.assertForm(["ab", "horrere"], "abhor")
+        self.assertForm(["ab", "ire", "nt"], "abient")
+        self.assertForm(["ab", "jacere", "ion"], "abjection")
+        self.assertForm(["ab", "lact", "ate"], "ablactate")
+        self.assertForm(["ab", "negare", "ion"], "abnegation")
+        self.assertForm(["ab", "oriri", "ion"], "abortion")
+        self.assertForm(["ab", "rogare", "ion"], "abrogation")
+        self.assertForm(["ab", "solvere", "ion"], "absolution")
+        self.assertForm(["ab", "uti"], "abuse")
+        
+        # ab -> a
+        self.assertForm(["ab", "movere"], "amove")
+        self.assertForm(["ab", "pellere", "ion"], "apulsion") #*
+        self.assertForm(["ab", "vertere", "ion"], "aversion")
+        
+        # ab -> abs
+        self.assertForm(["ab", "condere"], "abscond")
+        self.assertForm(["ab", "quaerere", "ion"], "absquisition") #*
+        self.assertForm(["ab", "trahere", "ion"], "abstraction")
+        
+        # ab -> au
+        self.assertForm(["ab", "ferre", "nt"], "auferent") #*
+        
         # 'ad' ----------
         
         self.assertForm(["ad", "ducere", "ion"], "adduction")
@@ -158,7 +186,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ob", "ambulare"], "obambulate")
         self.assertForm(["ob", "battuere", "nt"], "obbatant") #*
         self.assertForm(["ob", "durare", "ion"], "obduration")
-        self.assertForm(["ob", "emere", "ion"], "obemption")
+        self.assertForm(["ob", "errare", "ion"], "oberration")
         self.assertForm(["ob", "gerere", "ion"], "obgestion") #*
         self.assertForm(["ob", "haurire", "ion"], "obhaustion") #*
         self.assertForm(["ob", "ignorare", "nt"], "obignorant") #*

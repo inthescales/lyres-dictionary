@@ -251,6 +251,15 @@
         "origin": "latin"
     },
     {
+        "key": "apex",
+        "link": "apic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "peak",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "apparere",
         "link-present": "appare",
         "link-perfect": "apparit",
@@ -1224,6 +1233,17 @@
         "origin": "latin"
     },
     {
+        "key": "condere",
+        "link-present": "conde",
+        "link-perfect": "condit",
+        "final": "cond",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "keep",
+        "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "key": "conus",
         "link": "con",
         "type": "noun",
@@ -1817,6 +1837,18 @@
         "declension": 2,
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    },
+    {
+        "key": "errare",
+        "link-present": "erra",
+        "link-perfect": "errat",
+        "final": "err",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "[go] astray",
+        "gloss-relative": "[wander]",
+        "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
     {
@@ -6858,7 +6890,7 @@
             }
         ],
         "origin": "latin",
-        "notes": "spelling for sustenance"
+        "notes": "spelling for sustenance. For perfect, both tens- and tent- are seen."
     },
     {
         "key": "terra",
@@ -7091,6 +7123,18 @@
         "gloss": "urine",
         "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
         "origin": "latin"
+    },
+    {
+        "key": "uti",
+        "link-present": "ut",
+        "link-perfect": "ut",
+        "final": "use",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "use",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "no actual present form, I believe. Perfect could be 'ut' (utility) or 'us' (abuse/abusion)"
     },
     {
         "key": "vadere",
@@ -7574,10 +7618,17 @@
     {
         "key": "ab",
         "link": "ab",
+        "link-assim": "a",
         "type": "prep",
         "gloss-verb": "%@ away",
         "gloss-noun": "away from %sg",
         "tags": ["verbal"],
+        "assimilation": {
+            "link": ["*"],
+            "link-assim": ["b", "p", "m", "v"],
+            "abs": ["c", "q", "t"],
+            "au": ["f"]
+        },
         "requires": {
             "precedes": {
                 "not": { "has-tag": "joining"}
@@ -7831,7 +7882,7 @@
         "gloss-noun": "apart from %sg",
         "assimilation": {
             "link": ["*"],
-            "sed": ["a", "e", "i", "o", "u", "ia"]
+            "sed": ["a", "e", "i", "o", "u"]
         },
         "tags": ["verbal"],
         "origin": "latin"
