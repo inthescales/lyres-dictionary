@@ -236,6 +236,31 @@ class FormTests(unittest.TestCase):
         self.assertForm(["se", "uti"], "seduse") #*
         
         # 'sub' ----------
+        self.assertForm(["sub", "alternare"], "subalternate")
+        self.assertForm(["sub", "bracchium", "al"], "subbracchial")
+        self.assertForm(["sub", "ducere", "ion"], "subduction")
+        self.assertForm(["sub", "errare", "ion"], "suberration")
+        self.assertForm(["sub", "haurire", "ion"], "subhaustion") #*
+        self.assertForm(["sub", "ire"], "subit") #*
+        self.assertForm(["sub", "jacere", "nt"], "subjacent")
+        self.assertForm(["sub", "linere", "ion"], "sublition")
+        self.assertForm(["sub", "nasci", "nt"], "subnascent")
+        self.assertForm(["sub", "oculus", "al"], "subocular")
+        self.assertForm(["sub", "quaerere", "ive"], "subquisitive") #*
+        self.assertForm(["sub", "secare"], "subsect")
+        self.assertForm(["sub", "tendere"], "subtend")
+        self.assertForm(["sub", "urbs", "al"], "suburbal") #*
+        self.assertForm(["sub", "venire", "ion"], "subvention")
+        
+        # sub -> su+
+        self.assertForm(["sub", "cedere", "ion"], "succession")
+        self.assertForm(["sub", "ferre"], "suffer")
+        self.assertForm(["sub", "gerere", "ion"], "suggestion")
+        self.assertForm(["sub", "mandare"], "summand")
+        self.assertForm(["sub", "ponere", "ion"], "supposition")
+        self.assertForm(["sub", "rogare"], "surrogate")
+        
+        # sub -> sus
 
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualForms(self):        

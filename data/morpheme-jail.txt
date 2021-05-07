@@ -229,6 +229,30 @@
         "origin": "latin"
     },
     
+        # put this one back in w/ word filter
+    {
+        "key": "rapere",
+        "link-present": "rapi",
+        "link-perfect": "rapt",
+        "final": "rape",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "seize",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-perfect": "rept",
+                "final": "rept"
+            }
+        ],
+        "tags": ["transitive"],
+        "origin": "latin",
+    },
+    
     # MAYBE JUST FOR VERBS?
     {
         "base": "ist",

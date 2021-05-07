@@ -36,8 +36,8 @@
     },
     {
         "key": "adjutare",
-        "link-present": "juta",
-        "link-perfect": "jutat",
+        "link-present": "adjuta",
+        "link-perfect": "adjutat",
         "final": "aid",
         "type": "verb",
         "conjugation": 1,
@@ -806,7 +806,8 @@
             }
         ],
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "irregular 'susceptible'"
     },
     {
         "key": "capilla",
@@ -3490,6 +3491,17 @@
         "type": "adj",
         "declension": 12,
         "gloss": "[clear] or [transparent]",
+        "origin": "latin"
+    },
+    {
+        "key": "linere",
+        "link-present": "line",
+        "link-perfect": "lit",
+        "final": "line",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "smear",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -6800,7 +6812,7 @@
         "key": "tangere",
         "link-present": "tange",
         "link-perfect": "tact",
-        "final": "tain",
+        "final": "tact",
         "type": "verb",
         "conjugation": 3,
         "gloss": "touch",
@@ -7896,13 +7908,12 @@
         "gloss-verb": "%@ under",
         "gloss-noun": "under %sg",
         "assimilation": {
-	    "link": ["*"],
-            "double": ["p"],
-            "sus": ["c"]
+            "link": ["*"],
+            "double": ["c", "f", "g", "p", "m", "r"]
         },
         "tags": ["verbal"],
         "origin": "latin",
-        "notes": "need 'sus' for cases like sustain"
+        "notes": "need 'sus' for cases like sustain, susceptible, but occurrence is a bit arbitrary. Should be 'su' before 'sp' (suspect). 'subp*' could happen in later joinings (ex. medical)"
     },
     {
         "key": "super",
