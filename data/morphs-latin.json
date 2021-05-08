@@ -178,6 +178,15 @@
         "origin": "latin"
     },
     {
+        "key": "amor",
+        "link": "amor",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "love",
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
         "key": "ampla",
         "link": "ampl",
         "type": "adj",
@@ -7891,7 +7900,7 @@
         "origin": "latin"
     },
     {
-        "key": "re-prep",
+        "key": "re",
         "link": "re",
         "type": "prep",
         "gloss-verb": "%@ back",
@@ -8979,7 +8988,7 @@
         "origin": "latin"
     },
     {
-        "key": "re",
+        "key": "re-again",
         "link": "re",
         "type": "prefix",
         "gloss": "%@ again",

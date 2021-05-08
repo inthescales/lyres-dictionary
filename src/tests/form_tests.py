@@ -70,7 +70,7 @@ class FormTests(unittest.TestCase):
         
         # 'com' ----------
         
-        # com + b, as in 'combine' or 'combat'        
+        self.assertForm(["com", "battuere"], "combate") #*
         self.assertForm(["com", "mandare"], "command")
         self.assertForm(["com", "pungere", "ion"], "compunction")
         
@@ -138,7 +138,6 @@ class FormTests(unittest.TestCase):
         # ebullient
         self.assertForm(["ex", "pellere", "ion"], "expulsion")
         self.assertForm(["ex", "donare", "ion"], "edonation") #*
-        self.assertForm(["com", "sequi", "nt"], "consequent")
         self.assertForm(["ex", "jacere", "ion"], "ejection")
         # self.assertForm(["ex", "ferre", "ion"], "elation") # BROKEN - this form doesn't work. Need estimate form when assimilating.
         self.assertForm(["ex", "mergere", "nt"], "emergent")
@@ -281,24 +280,65 @@ class FormTests(unittest.TestCase):
         self.assertForm(["legere", "ble"], "legible")
         self.assertForm(["neglegere", "ble"], "negligible")
         self.assertForm(["tangere", "ble"], "tangible")
-        self.assertForm(["com", "vertere", "ble"], "convertible")
+        self.assertForm(["re", "vertere", "ble"], "reversible")
         self.assertForm(["in", "vincere", "ble"], "invincible")
 
     # Miscellaneous tests confirming that real words have the correct forms.
-    def testActualForms(self):        
+    def testActualForms(self):
+        
+        # noun + suffix
+        self.assertForm(["amor", "ous"], "amorous")
+        
+        # preposition + verb
+        self.assertForm(["com", "venire"], "convene")
+        self.assertForm(["ab", "battuere"], "abate")
+        self.assertForm(["dis", "apparere"], "disappear")
+        self.assertForm(["in", "bibere"], "imbibe")
+        self.assertForm(["re", "agere"], "react")
+        self.assertForm(["re", "apparere"], "reappear")
+        
+        # verb + suffix
+        self.assertForm(["abundare", "nt"], "abundant")
+        self.assertForm(["adjutare", "nt-noun"], "adjutant")
+        self.assertForm(["agere", "or"], "actor")
+        self.assertForm(["alternare", "or"], "alternator")
+        self.assertFormIn(["ambulare", "nce"], ["ambulance", "ambulancy"])
+        self.assertForm(["apparere", "nt"], "apparent")
+        self.assertForm(["appellare", "ion"], "appellation")
+        self.assertForm(["ardere", "nt"], "ardent")
+        self.assertForm(["attendere", "ion"], "attention")
+        self.assertForm(["audire", "or"], "auditor")
+        
+        # preposition + verb + suffix
+        self.assertForm(["com", "battuere", "nt"], "combatant")
         self.assertForm(["com", "venire", "ion"], "convention")
+        self.assertForm(["de", "cadere", "nt"], "decident") #*
+        self.assertForm(["ob", "cadere", "ion"], "occasion")
+        self.assertForm(["re", "agere", "ion"], "reaction")
+    
+    # Miscellaneous tests confirming that real words have the correct forms.
+    def testFormException(self):
+        self.assertFormIn(["cadere", "nce"], ["cadence", "cadency"])
+        self.assertForm(["in", "cadere", "nt"], "incident")
+        self.assertForm(["com-intensive", "in", "cadere", "nt"], "coincident")
+        self.assertFormNot(["de", "cadere", "nt"], "decadent")
     
     # Helpers ==========
     
     def assertForm(self, keys, form):
         word = word_for_keys(keys, self.morphothec)
-        form = composer.get_form(word)
-        self.assertEqual(composer.get_form(word), form)
+        composed = composer.get_form(word)
+        self.assertEqual(composed, form)
 
     def assertFormIn(self, keys, forms):
         word = word_for_keys(keys, self.morphothec)
         form = composer.get_form(word)
         self.assertIn(form, forms)
+        
+    def assertFormNot(self, keys, form):
+        word = word_for_keys(keys, self.morphothec)
+        composed = composer.get_form(word)
+        self.assertNotEqual(composed, form)
 
 if __name__ == '__main__':    
     unittest.main()
