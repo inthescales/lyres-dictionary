@@ -286,16 +286,70 @@ class FormTests(unittest.TestCase):
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualForms(self):
         
-        # noun + suffix
-        self.assertForm(["amor", "ous"], "amorous")
+        # Latin nouns, 1st declension
+        self.assertForm(["anima", "al"], "animal")
+        self.assertForm(["bestia", "al"], "bestial")
+        self.assertForm(["littera", "al"], "literal")
+        self.assertForm(["materia", "al"], "material")
+        self.assertForm(["persona", "al"], "personal")
+        self.assertForm(["ancilla", "ary"], "ancillary")
+        self.assertForm(["culina", "ary"], "culinary")
+        self.assertForm(["epistula", "ary"], "epistulary")
+        self.assertForm(["littera", "ary"], "literary")
+        self.assertForm(["pecunia", "ary"], "pecuniary")
+        self.assertFormIn(["columba", "arium"], ["columbary", "columbarium"])
+        self.assertFormIn(["planeta", "arium"], ["planetary", "planetarium"])
+        self.assertFormIn(["terra", "arium"], ["terrary", "terrarium"])
+        self.assertForm(["branchia", "ate-bodypart"], "branchiate")
+        self.assertForm(["labia", "ate-bodypart"], "labiate")
+        self.assertForm(["lingua", "ate-bodypart"], "linguate")
+        self.assertForm(["mamma", "ate-bodypart"], "mammate")
+        self.assertForm(["idea", "ate-secretion"], "ideate")
+        self.assertForm(["urina", "ate-secretion"], "urinate")
+        self.assertForm(["aquila", "ine"], "aquiline")
+        self.assertForm(["columba", "ine"], "columbine")
+        self.assertForm(["femina", "ine"], "feminine")
+        self.assertForm(["rana", "ine"], "ranine")
+        self.assertForm(["palma", "etum"], "palmetum")
+        self.assertForm(["copia", "ous"], "copious")
+        self.assertForm(["fabula", "ous"], "fabulous")
+        self.assertForm(["fama", "ous"], "famous")
+        self.assertForm(["gloria", "ous"], "glorious")
+        self.assertForm(["pecunia", "ous"], "pecunious")
+        self.assertForm(["aqua", "ifer"], "aquifer")
+        self.assertForm(["mamma", "ifer"], "mammifer")
+        self.assertForm(["arma", "iger"], "armiger")
+        self.assertForm(["campana", "iform"], "campaniform")
+        self.assertForm(["columna", "iform"], "columniform")
+        self.assertForm(["luna", "iform"], "luniform")
+        self.assertForm(["palma", "iform"], "palmiform")
+        self.assertForm(["rana", "iform"], "raniform")
+        self.assertForm(["femina", "icide"], "feminicide")
+        self.assertForm(["filia", "icide"], "filicide")
+        self.assertForm(["gallina", "icide"], "gallinicide")
+        self.assertForm(["herba", "icide"], "herbicide")
+
+        self.assertForm(["digna", "ity"], "dignity")
+        self.assertForm(["digna", "ify"], "dignify")
+        self.assertForm(["diversa", "ity"], "diversity")
+        self.assertForm(["exacta", "itude"], "exactitude")
+        self.assertForm(["felix", "ity"], "felicity")
+        self.assertForm(["fertilis", "ity"], "fertility")
         
         # preposition + verb
+        self.assertForm(["com", "coquere"], "concoct")
+        self.assertForm(["com", "fateri"], "confess")
+        self.assertForm(["com", "finire"], "confine")
         self.assertForm(["com", "venire"], "convene")
         self.assertForm(["ab", "battuere"], "abate")
+        self.assertForm(["ad", "facere"], "affect")
         self.assertForm(["dis", "apparere"], "disappear")
+        self.assertForm(["dis", "cernere"], "discern")
+        self.assertForm(["ex", "facere"], "effect")
         self.assertForm(["in", "bibere"], "imbibe")
         self.assertForm(["re", "agere"], "react")
         self.assertForm(["re", "apparere"], "reappear")
+        self.assertForm(["per", "facere"], "perfect")
         
         # verb + suffix
         self.assertForm(["abundare", "nt"], "abundant")
@@ -308,19 +362,65 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ardere", "nt"], "ardent")
         self.assertForm(["attendere", "ion"], "attention")
         self.assertForm(["audire", "or"], "auditor")
+        self.assertForm(["capere", "or"], "captor")
+        self.assertForm(["excellere", "nt"], "excellent")
+        self.assertFormIn(["dividere", "nd"], ["dividend", "dividendum"])
+        self.assertForm(["dormire", "nt"], "dormant")
+        self.assertFormIn(["dormire", "orium"], ["dormitorium", "dormitory"])
+        self.assertForm(["durare", "ion"], "duration")
+        self.assertForm(["educare", "ble"], "educable")
+        self.assertForm(["facere", "ion"], "faction")
+        self.assertForm(["facere", "or"], "factor")
+        self.assertFormIn(["facere", "orium"], ["factory", "factorium"])
+
         
         # preposition + verb + suffix
+        self.assertForm(["ad", "figere", "ion"], "affixation")
         self.assertForm(["com", "battuere", "nt"], "combatant")
+        self.assertForm(["com", "fateri", "ion"], "confession")
         self.assertForm(["com", "venire", "ion"], "convention")
-        self.assertForm(["de", "cadere", "nt"], "decident") #*
+        self.assertForm(["de", "caedere", "ion"], "decision")
+        self.assertForm(["ex", "citare", "ion"], "excitation")
+        self.assertForm(["ex", "facere", "nt"], "efficient")
+        self.assertForm(["ex", "facere", "ive"], "effective")
+        self.assertForm(["in", "cantare", "ion"], "incantation")
+        self.assertForm(["in", "capere", "nt"], "incipient")
         self.assertForm(["ob", "cadere", "ion"], "occasion")
         self.assertForm(["re", "agere", "ion"], "reaction")
+        self.assertForm(["re", "capere", "ive"], "receptive")
+        self.assertForm(["re", "currere", "nt"], "recurrent")
+        self.assertForm(["per", "emere", "ory"], "peremptory")
+        
+        # prefix + verb
+        self.assertForm(["re-again", "cruda", "esce"], "recrudesce")
+        
+        # two suffixes
+        self.assertForm(["com", "fidere", "nce", "al"], "confidential")
+        self.assertForm(["duo", "al", "ity"], "duality")
+        self.assertForm(["funis", "ipote-power", "nt"], "funipotent")
+        self.assertForm(["diversa", "ify", "ion"], "diversification")
+        self.assertForm(["esse", "nce", "al"], "essential")
+        
+        # relative constructions
+        self.assertForm(["de", "fenestra", "ate"], "defenestrate")
     
-    # Miscellaneous tests confirming that real words have the correct forms.
+    # Tests confirming that exception cases work as expected.
     def testFormException(self):
+        # Latin nouns
+        self.assertForm(["aqua", "ous"], "aqueous")
+        self.assertForm(["lignum", "ous"], "ligneous")
+        
+        # Latin verbs
         self.assertFormIn(["cadere", "nce"], ["cadence", "cadency"])
         self.assertForm(["in", "cadere", "nt"], "incident")
         self.assertForm(["com-intensive", "in", "cadere", "nt"], "coincident")
+        self.assertForm(["com", "damnare", "ion"], "condemnation")
+        self.assertForm(["debere", "or"], "debtor")
+        self.assertForm(["pre", "dicere", "ble"], "predictable")
+    
+    # Tests that forms that were made impossible in order to make other forms possible still don't work.
+    # If these fail, it may not be a problem, but I should confirm that no other desired forms were lost.
+    def testUnrealizedForms(self):
         self.assertFormNot(["de", "cadere", "nt"], "decadent")
     
     # Helpers ==========

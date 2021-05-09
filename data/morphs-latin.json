@@ -319,10 +319,20 @@
     },
     {
         "key": "aqua",
-        "link": "aque",
+        "link": "aqu",
         "type": "noun",
         "declension": 1,
         "gloss": "water",
+            "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["ous", "ous-full", "ous-material"]
+                    }
+                },
+                "link": "aque"
+            }
+        ],
         "tags": ["mass", "concrete", "material", "liquid"],
         "origin": "latin"
     },
@@ -636,7 +646,7 @@
     },
     {
         "key": "branchia",
-        "link": "branch",
+        "link": "branchi",
         "type": "noun",
         "declension": 1,
         "gloss": "gills",
@@ -1738,7 +1748,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "drama",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "rare"],
         "origin": "latin"
     },
     {
@@ -1959,7 +1969,7 @@
                 },
                 "link-present": "fici",
                 "link-perfect": "fect",
-                "final": ["fect"]
+                "final": "fect"
             }
         ],
         "tags": ["transitive"],
@@ -2240,7 +2250,8 @@
         "conjugation": 4,
         "gloss": "limit",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also 'finish' for verb form."
     },
     {
         "key": "firma",
@@ -2560,7 +2571,16 @@
         "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
-    {  
+    {
+        "key": "funis",
+        "link": "fun",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "rope",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "futurus",
         "link": "futur",
         "type": "noun",
@@ -2733,15 +2753,6 @@
         "type": "adj",
         "declension": 12,
         "gloss": "pleased",
-        "origin": "latin"
-    },
-    {  
-        "key": "gratia",
-        "link": "grati",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "favor",
-        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {  
@@ -2976,6 +2987,15 @@
         "type": "adj",
         "declension": 12,
         "gloss": "humble",
+        "origin": "latin"
+    },
+    {
+        "key": "idea",
+        "link": "ide",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "idea",
+        "tags": ["count", "abstract", "secretion"],
         "origin": "latin"
     },
     {
@@ -3682,7 +3702,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["ous-full", "ous-material"]
+                        "has-key": ["ous", "ous-full", "ous-material"]
                     }
                 },
                 "link": "ligne"
@@ -8377,7 +8397,7 @@
     },
     {
         "key": "ify",
-        "link-present": ["ifice", "ifice", "ifia", "ifacie"],
+        "link-present": "ifice",
         "link-perfect": "ificat",
         "final": "ify",
         "type": "derive",
@@ -8407,7 +8427,7 @@
         ],
         "tags": ["transitive"],
         "origin": "latin",
-        "notes": "magnificent vs significant"
+        "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
     },
     {
         "key": "iger",
