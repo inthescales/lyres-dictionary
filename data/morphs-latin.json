@@ -309,15 +309,6 @@
         "origin": "latin"
     },
     {
-        "key": "aer",
-        "link": "aeri",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "air",
-        "tags": ["mass", "concrete", "material"],
-        "origin": "latin"
-    },
-    {
         "key": "aqua",
         "link": "aqu",
         "type": "noun",
@@ -637,7 +628,7 @@
     },
     {
         "key": "bracchium",
-        "link": "bracchi",
+        "link": "brachi",
         "type": "noun",
         "declension": 2,
         "gloss": "arm",
@@ -829,7 +820,7 @@
         "notes": "irregular 'susceptible'"
     },
     {
-        "key": "capilla",
+        "key": "capillus",
         "link": "capill",
         "type": "noun",
         "declension": 2,
@@ -838,7 +829,7 @@
         "origin": "latin"
     },
     {
-        "key": "capilla-mass",
+        "key": "capillus-mass",
         "link": "capill",
         "type": "noun",
         "declension": 2,
@@ -2441,7 +2432,8 @@
         "declension": 2,
         "gloss": "brother",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Also link 'fratr', as in 'fratricide'"
     },
     {
         "key": "frequens",
@@ -5348,7 +5340,7 @@
         "notes": "present - compete vs petulant"
     },
     {
-        "key": "petra",
+        "key": "peter",
         "link": "petr",
         "type": "noun",
         "declension": 2,
@@ -6220,6 +6212,15 @@
         "tags": ["intransitive", "motion"],
         "origin": "latin",
         "names": "Others: assail, assault"
+    },
+    {
+        "key": "saliva",
+        "link": "saliv",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "spittle",
+        "tags": ["mass", "concrete", "secretion"],
+        "origin": "latin"
     },
     {
         "key": "salsus",
@@ -8324,7 +8325,7 @@
         "origin": "latin"
     },
     {
-        "key": "id-animal",
+        "key": "id",
         "final": "id",
         "link": "id",
         "type": "derive",
