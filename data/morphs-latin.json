@@ -2478,6 +2478,16 @@
         "type": "noun",
         "declension": 4,
         "gloss": "fruit",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": {
+                        "has-key": "esce-plant"
+                    }
+                },
+                "link": "fruct"
+            }
+        ],
         "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
         "origin": "latin"
     },
@@ -2762,7 +2772,8 @@
         "declension": 3,
         "gloss": "herd",
         "tags": ["count", "concrete", "grouping"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "also meaning 'common people'"
     },
     {
         "key": "gubernare",
@@ -2903,6 +2914,16 @@
         "type": "noun",
         "declension": 3,
         "gloss": "human",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "icide"
+                    }
+                },
+                "link": "hom"
+            }
+        ],
         "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
@@ -3404,8 +3425,19 @@
         "type": "noun",
         "declension": 3,
         "gloss": "stone",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "ous"
+                    }
+                },
+                "link": "lapide"
+            }
+        ],
         "tags": ["count", "concrete"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "lapidous and lapideous both exist"
     },
     {
         "key": "larga",
@@ -3421,6 +3453,14 @@
         "type": "adj",
         "declension": 12,
         "gloss": "weary",
+        "origin": "latin"
+    },
+    {
+        "key": "lata",
+        "link": "lat",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "wide",
         "origin": "latin"
     },
     {
@@ -3976,6 +4016,16 @@
         "type": "noun",
         "declension": 4,
         "gloss": "hand",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": {
+                        "has-key": "iform"
+                    }
+                },
+                "link": "man"
+            }
+        ],
         "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
@@ -4736,6 +4786,16 @@
         "type": "noun",
         "declension": 3,
         "gloss": "nut",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "ous"
+                    }
+                },
+                "link": "nuce"
+            }
+        ],
         "tags": ["count", "concrete"],
         "origin": "latin"
     },
@@ -7504,7 +7564,7 @@
         "origin": "latin"
     },
     {
-        "key": "volume",
+        "key": "volumen",
         "link": "volumin",
         "type": "noun",
         "declension": 3,
