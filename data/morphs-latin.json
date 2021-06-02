@@ -646,7 +646,7 @@
     },
     {
         "key": "brevis",
-        "link": "brevi",
+        "link": "brev",
         "type": "adj",
         "declension": 3,
         "gloss": "short",
@@ -3934,7 +3934,7 @@
         "key": "macer",
         "link": "macr",
         "type": "adj",
-        "declension": 3,
+        "declension": 12,
         "gloss": "meager",
         "origin": "latin"
     },
@@ -5424,7 +5424,7 @@
         "key": "piger",
         "link": "pigr",
         "type": "adj",
-        "declension": 3,
+        "declension": 12,
         "gloss": "lazy",
         "origin": "latin"
     },
@@ -5483,7 +5483,7 @@
         "key": "plana",
         "link": "plan",
         "type": "adj",
-        "declension": 3,
+        "declension": 12,
         "gloss": "flat",
         "origin": "latin"
     },
@@ -6317,7 +6317,7 @@
         "key": "sana",
         "link": "san",
         "type": "adj",
-        "declension": 3,
+        "declension": 12,
         "gloss": "healthy",
         "origin": "latin"
     },
@@ -8205,10 +8205,24 @@
                     }
                 },
                 "gloss": "[cause] %inf"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "adj" },
+                            { "has-declension": 3 }
+                        ]
+                    }
+                },
+                "link-present": "itata",
+                "link-perfect": "itat",
+                "final": "itate"
             }
         ],
         "tags": ["transitive", "no-gen"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "3rd declension exception doesn't fit with 'humiliate'"
     },
     {
         "key": "ate-bodypart",

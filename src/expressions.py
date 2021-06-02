@@ -60,6 +60,8 @@ def evaluate_expression(expression, referent):
         return evaluate_suffix(value, referent["form"])
     elif key == "has-conjugation":
         return evaluate_conjugation(value, referent["conjugation"])
+    elif key == "has-declension":
+        return evaluate_declension(value, referent["declension"])
     elif key == "even-syllables":
         return evaluate_even_syllables(referent["form"])
     elif key == "odd-syllables":
@@ -159,6 +161,21 @@ def evaluate_conjugation(acceptable, conjugation):
     
     else:
         print("Error: Bad value for has-conjugation")
+        sys.exit(1)
+
+def evaluate_declension(acceptable, declension):
+    if declension is None:
+        print("Error: referent lacks declension")
+        sys.exit(1)
+        
+    if isinstance(acceptable, int):
+        return declension == acceptable
+    
+    elif isinstance(acceptable, list):
+        return declension in acceptable
+    
+    else:
+        print("Error: Bad value for has-declension")
         sys.exit(1)
     
 def evaluate_even_syllables(form):

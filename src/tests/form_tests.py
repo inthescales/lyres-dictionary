@@ -498,6 +498,22 @@ class FormTests(unittest.TestCase):
         self.assertForm(["puter", "esce", "nt"], "putrescent")
         self.assertFormIn(["antiqua", "arium"], ["antiquarium", "antiquary"])
         
+        # Latin adjectives, 3rd declension
+        self.assertForm(["communis", "ity"], "community")
+        self.assertForm(["levis", "ity"], "levity")
+        self.assertForm(["maior", "ity"], "majority")
+        self.assertForm(["real", "ity"], "reality")
+        self.assertForm(["stabilis", "ity"], "stability")
+        self.assertForm(["humilis", "itude"], "humilitude")
+        self.assertForm(["lenis", "itude"], "lenitude")
+        self.assertForm(["similis", "itude"], "similitude")
+        self.assertForm(["turpis", "itude"], "turpitude")
+        self.assertForm(["mollis", "ify"], "mollify")
+        self.assertForm(["debilis", "ate"], "debilitate")
+        self.assertForm(["facilis", "ate"], "facilitate")
+        self.assertForm(["levis", "ate"], "levitate")
+        self.assertForm(["facilis", "ate"], "facilitate")
+        
         # preposition + verb
         self.assertForm(["com", "coquere"], "concoct")
         self.assertForm(["com", "fateri"], "confess")
@@ -589,6 +605,8 @@ class FormTests(unittest.TestCase):
     # Tests that forms that were made impossible in order to make other forms possible still don't work.
     # If these fail, it may not be a problem, but I should confirm that no other desired forms were lost.
     def testUnrealizedForms(self):
+        self.assertFormNot(["humilis", "ate"], "humiliate")
+        
         self.assertFormNot(["de", "cadere", "nt"], "decadent")
     
     # Helpers ==========
