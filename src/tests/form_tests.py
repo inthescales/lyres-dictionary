@@ -101,7 +101,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["dis", "apparere", "nt"], "disapparent") #*
         self.assertForm(["dis", "battuere", "nt"], "disbatant") #*
         self.assertForm(["dis", "cernere", "ion"], "discretion")
-        self.assertForm(["dis", "aequus", "ity"], "disequity") #*
+        self.assertForm(["dis", "aequa", "ity"], "disequity") #*
         self.assertForm(["dis", "gradi", "ion"], "digression")
         self.assertForm(["dis", "hortari"], "dishort")
         self.assertForm(["dis", "identa", "ity"], "disidentity") #*
@@ -463,15 +463,40 @@ class FormTests(unittest.TestCase):
         self.assertForm(["dies", "ary"], "diary")
         self.assertForm(["facies", "al"], "facial")
         
-        self.assertForm(["digna", "ity"], "dignity")
-        self.assertForm(["digna", "ify"], "dignify")
-        self.assertForm(["diversa", "ity"], "diversity")
-        self.assertForm(["exacta", "itude"], "exactitude")
-        self.assertForm(["felix", "ity"], "felicity")
-        self.assertForm(["fertilis", "ity"], "fertility")
+        # Latin nouns, indeclinable
+        self.assertForm(["unus", "ity"], "unity")
+        self.assertForm(["duo", "al"], "dual")
+        self.assertForm(["ad", "nihil", "ate"], "annihilate")
         
-        # Latin nouns, 4th declension
-        self.assertForm(["casus", "al"], "casual")
+        # Latin adjectives, 1st/2nd declension
+        self.assertForm(["acerba", "ity"], "acerbity")
+        self.assertForm(["digna", "ity"], "dignity")
+        self.assertForm(["aequa", "ity"], "equity")
+        self.assertForm(["obscura", "ity"], "obscurity")
+        self.assertForm(["tranquilla", "ity"], "tranquility")
+        self.assertForm(["alta", "itude"], "altitude")
+        self.assertForm(["certa", "itude"], "certitude")
+        self.assertForm(["crassa", "itude"], "crassitude")
+        self.assertForm(["pulchra", "itude"], "pulchritude")
+        self.assertForm(["sola", "itude"], "solitude")
+        self.assertForm(["digna", "ify"], "dignify")
+        self.assertForm(["falsa", "ify"], "falsify")
+        self.assertForm(["magna", "ify"], "magnify")
+        self.assertForm(["puter", "ify"], "putrify")
+        self.assertForm(["aequa", "ate"], "equate")
+        self.assertForm(["integra", "ate"], "integrate")
+        self.assertForm(["libera", "ate"], "liberate")
+        self.assertForm(["valida", "ate"], "validate")
+        self.assertForm(["stulta", "ify"], "stultify")
+        self.assertForm(["maxima", "ize"], "maximize")
+        self.assertForm(["minima", "ize"], "minimize")
+        self.assertForm(["pessima", "ize"], "pessimize")
+        self.assertForm(["privata", "ize"], "privatize")
+        self.assertForm(["tranquilla", "ize"], "tranquilize")
+        self.assertForm(["re", "cruda", "esce"], "recrudesce")
+        self.assertForm(["matura", "esce"], "maturesce")
+        self.assertForm(["puter", "esce", "nt"], "putrescent")
+        self.assertFormIn(["antiqua", "arium"], ["antiquarium", "antiquary"])
         
         # preposition + verb
         self.assertForm(["com", "coquere"], "concoct")

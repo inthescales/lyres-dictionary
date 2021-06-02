@@ -54,7 +54,7 @@
         "origin": "latin"
     },
     {
-        "key": "aequus",
+        "key": "aequa",
         "link": "equ",
         "type": "adj",
         "declension": 12,
@@ -648,7 +648,7 @@
         "key": "brevis",
         "link": "brevi",
         "type": "adj",
-        "declension": 12,
+        "declension": 3,
         "gloss": "short",
         "origin": "latin"
     },
@@ -1010,28 +1010,6 @@
         "origin": "latin"
     },
     {
-        "key": "excellere",
-        "link-present": "excelle",
-        "link-perfect": "excels",
-        "final": "excel",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "[rise] high",
-        "tags": ["intransitive", "no-prep"],
-        "origin": "latin"
-    },
-    {
-        "key": "experiri",
-        "link-present": "experie",
-        "link-perfect": "expert",
-        "final": "exper",
-        "type": "verb",
-        "conjugation": 4,
-        "gloss": "try",
-        "tags": ["intransitive", "no-prep"],
-        "origin": "latin"
-    },
-    {
         "key": "cernere",
         "link-present": "creme",
         "link-perfect": "cret",
@@ -1043,14 +1021,6 @@
         "origin": "latin",
         "notes": "verb: secret vs excrete vs discern"
     },    
-    {
-        "key": "certa",
-        "link": "cert",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "certain",
-        "origin": "latin"
-    },
     {
         "key": "certare",
         "link-present": "certa",
@@ -1921,6 +1891,28 @@
         "declension": 2,
         "gloss": "example",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "excellere",
+        "link-present": "excelle",
+        "link-perfect": "excels",
+        "final": "excel",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "[rise] high",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "experiri",
+        "link-present": "experie",
+        "link-perfect": "expert",
+        "final": "exper",
+        "type": "verb",
+        "conjugation": 4,
+        "gloss": "try",
+        "tags": ["intransitive", "no-prep"],
         "origin": "latin"
     },
     {
@@ -2995,10 +2987,10 @@
         "origin": "latin"
     },
     {
-        "key": "humila",
+        "key": "humilis",
         "link": "humil",
         "type": "adj",
-        "declension": 12,
+        "declension": 3,
         "gloss": "humble",
         "origin": "latin"
     },
@@ -4011,6 +4003,17 @@
         "origin": "latin"
     },
     {
+        "key": "manere",
+        "link-present": "mane",
+        "link-perfect": "mans",
+        "final": "main",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "stay",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "manus",
         "link": "manu",
         "type": "noun",
@@ -4075,7 +4078,7 @@
         "origin": "latin"
     },
     {
-        "key": "maturus",
+        "key": "matura",
         "link": "matur",
         "type": "adj",
         "declension": 12,
@@ -6329,12 +6332,23 @@
     },
     {
         "key": "scandere",
-        "link-present": "scenda",
-        "link-perfect": "scens",
+        "link-present": "scanda",
+        "link-perfect": "scans",
         "final": "scend",
         "type": "verb",
         "conjugation": 3,
         "gloss": "climb",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "scenda",
+                "link-perfect": "scens"
+            }
+        ],
         "tags": ["intransitive", "motion"],
         "origin": "latin"
     },
@@ -8257,6 +8271,21 @@
         "origin": "latin"
     },
     {
+        "key": "ate-tool",
+        "link": "at",
+        "final": "ate",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "gloss": "[use] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "tool"
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "ble",
         "final": "ble",
         "link": "bil",
@@ -8709,9 +8738,10 @@
         "final": "ity",
         "link": "iti",
         "type": "derive",
-        "from": "adj",
+        "from": ["noun", "adj"],
         "to": "noun",
         "suffixes": ["ous"],
+        "gloss": "the quality of being %sg",
         "exception": [{
             "case": {
                 "follows": {
@@ -8740,7 +8770,6 @@
             },
             "gloss": "the quality of %part"
         }],
-        "gloss": "the quality of being %@",
         "origin": "latin"
     },
     {
