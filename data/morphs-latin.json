@@ -6269,12 +6269,12 @@
                     }
                 },
                 "link-present": "sili",
-                "link-perfect": "hibit"
+                "link-perfect": "sult"
             }
         ],
         "tags": ["intransitive", "motion"],
         "origin": "latin",
-        "names": "Others: assail, assault"
+        "names": "others: assail, assault. exult"
     },
     {
         "key": "saliva",
@@ -7421,6 +7421,17 @@
         "conjugation": 1,
         "gloss": "trouble",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "vibrare",
+        "link-present": "vibra",
+        "link-perfect": "vibrat",
+        "final": "vibrate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "[move] to and fro",
+        "tags": ["intransitive", "motion", "no-prep"],
         "origin": "latin"
     },
     {
