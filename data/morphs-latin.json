@@ -3037,7 +3037,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "image",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "secretion"],
         "origin": "latin"
     },
     {
@@ -7970,7 +7970,7 @@
         "origin": "latin"
     },
     {
-        "key": "preter",
+        "key": "praeter",
         "link": "preter",
         "type": "prep",
         "gloss-verb": "%@ beyond",

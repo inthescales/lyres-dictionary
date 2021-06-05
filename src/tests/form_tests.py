@@ -635,7 +635,42 @@ class FormTests(unittest.TestCase):
         self.assertForm(["funis", "ipote-power", "nt"], "funipotent")
         
         # relative constructions
+        self.assertForm(["ad", "glomus", "ate"], "agglomerate")
+        self.assertForm(["ad", "grex", "ate"], "aggregate")
+        self.assertForm(["ad", "nihil", "ate"], "annihilate")
+        self.assertForm(["com", "grex", "ate"], "congregate")
+        self.assertForm(["com", "mensa", "al"], "commensal")
+        self.assertForm(["com", "mensus", "ate"], "commensurate")
         self.assertForm(["de", "fenestra", "ate"], "defenestrate")
+        self.assertForm(["ex", "onus", "ate"], "exonerate")
+        self.assertForm(["ex", "pectus", "ate"], "expectorate")
+        self.assertForm(["ex", "radix", "ate"], "eradicate")
+        self.assertForm(["in", "carcer", "ate"], "incarcerate")
+        self.assertForm(["in", "corpus", "ate"], "incorporate")
+        self.assertForm(["in", "persona", "ate"], "impersonate")
+        self.assertForm(["in", "semen", "ate"], "inseminate")
+        self.assertForm(["re-again", "in", "caro", "ate", "ion"], "reincarnation")
+        self.assertForm(["inter", "columna", "al"], "intercolumnar")
+        self.assertForm(["inter", "crus", "al"], "intercrural")
+        self.assertForm(["inter", "dens", "al"], "interdental")
+        self.assertForm(["inter", "planeta", "ary"], "interplanetary")
+        self.assertForm(["inter", "stella", "al"], "interstellar")
+        self.assertForm(["praeter", "natura", "al"], "preternatural")
+        self.assertForm(["pre", "industria", "al"], "preindustrial")
+        self.assertForm(["sub", "apex", "al"], "subapical")
+        self.assertForm(["sub", "bracchium", "al"], "subbrachial")
+        self.assertForm(["sub", "limen", "al"], "subliminal")
+        self.assertForm(["super", "natura", "al"], "supernatural")
+        self.assertForm(["trans", "dermis", "al"], "transdermal")
+        self.assertForm(["trans", "luna", "al"], "translunar")
+        
+        # numerical constructions
+        self.assertForm(["two-join", "camera", "al"], "bicameral")
+        self.assertForm(["two-join", "latus", "al"], "bilateral")
+        self.assertForm(["three-join", "geminus", "al"], "trigeminal")
+        self.assertForm(["three-join", "angulus", "al"], "triangular")
+        self.assertForm(["three-join", "latus", "al"], "trilateral")
+        self.assertForm(["four-join", "latus", "al"], "quadrilateral")
     
     # Tests confirming that exception cases work as expected.
     def testFormException(self):
@@ -664,6 +699,7 @@ class FormTests(unittest.TestCase):
         self.assertFormNot(["humilis", "ate"], "humiliate")
         
         self.assertFormNot(["de", "cadere", "nt"], "decadent")
+        self.assertFormNot(["ex", "sanguis", "ate"], "exsanguinate")
     
     # Helpers ==========
     
