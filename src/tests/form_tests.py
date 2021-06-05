@@ -677,21 +677,58 @@ class FormTests(unittest.TestCase):
         # Latin nouns
         # aerial
         self.assertForm(["aqua", "ous"], "aqueous")
+        self.assertForm(["arbor", "al"], "arboreal")
         self.assertForm(["homo", "icide"], "homicide")
-        self.assertForm(["fructus", "esce-plant", "nt"], "fructescent")     
+        self.assertForm(["fructus", "esce-plant", "nt"], "fructescent") 
+        self.assertForm(["homo", "icide"], "homicide")
+        self.assertForm(["lapis", "ous"], "lapideous")
         self.assertForm(["lignum", "ous"], "ligneous")
         self.assertForm(["manus", "iform"], "maniform")
         self.assertForm(["nux", "ous"], "nuceous")
         self.assertForm(["vitis", "etum"], "viticetum")
         
         # Latin verbs
+        self.assertForm(["debere", "or"], "debtor")
+        self.assertForm(["jurare", "or"], "juror")
+        
+        # Verbs with alternate prefixed fors
         self.assertFormIn(["cadere", "nce"], ["cadence", "cadency"])
         self.assertForm(["in", "cadere", "nt"], "incident")
-        self.assertForm(["com-intensive", "in", "cadere", "nt"], "coincident")
+        self.assertForm(["capere", "ive"], "captive")
+        self.assertForm(["re", "capere", "ive"], "receptive")
+        self.assertForm(["re", "capere", "nt"], "recipient")
+        self.assertForm(["damnare", "ion"], "damnation")
         self.assertForm(["com", "damnare", "ion"], "condemnation")
-        self.assertForm(["debere", "or"], "debtor")
+        self.assertForm(["facere", "ion"], "faction")
+        self.assertForm(["in", "facere", "ion"], "infection")
+        self.assertForm(["ex", "facere", "nt"], "efficient")
+        self.assertForm(["in", "habere", "ion"], "inhibition")
+        self.assertForm(["ad", "jacere", "nt"], "adjacent")
+        self.assertForm(["com", "jacere", "ure"], "conjecture")
+        self.assertForm(["re", "jacere"], "reject")
+        self.assertForm(["salire", "nt"], "salient")
+        self.assertForm(["re", "salire", "nt"], "resilient")
+        self.assertForm(["scandere", "ion"], "scansion")
+        #self.assertForm(["ad", "scandere", "ion"], "ascension")
+        #self.assertForm(["ad", "scandere", "nt"], "ascendant")
+        self.assertForm(["tenere", "ion"], "tension")
+        self.assertForm(["ad", "tenere", "ion"], "attention")
+        self.assertForm(["tenere", "nt"], "tenent")
+        self.assertForm(["com", "tenere", "nt"], "continent")
+        self.assertForm(["violare", "nt"], "violent")
+        
+        # Verbs with exceptions for "ble"
         self.assertForm(["pre", "dicere", "ble"], "predictable")
-        self.assertForm(["jurare", "or"], "juror")
+        self.assertForm(["trans", "ferre", "ble"], "transferable")
+        self.assertForm(["flectere", "ble"], "flexible")
+        #self.assertForm(["sub", "mergere", "ble"], "submersible")
+        self.assertForm(["ad", "mittere", "ble"], "admissible")
+        self.assertForm(["movere", "ble"], "movable")
+        self.assertForm(["com", "plere", "ble"], "completable")
+        self.assertForm(["com", "prehendere", "ble"], "comprehensible")
+        self.assertForm(["ad", "quaerere", "ble"], "acquirable")
+        self.assertForm(["re", "vertere", "ble"], "reversible")
+        self.assertForm(["videre", "ble"], "visible")
     
     # Tests that forms that were made impossible in order to make other forms possible still don't work.
     # If these fail, it may not be a problem, but I should confirm that no other desired forms were lost.

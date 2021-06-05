@@ -2804,7 +2804,7 @@
         "key": "habere",
         "link-present": "habe",
         "link-perfect": "habit",
-        "final": "hibit",
+        "final": "habit",
         "type": "verb",
         "conjugation": 2,
         "gloss": "hold",
@@ -2816,11 +2816,13 @@
                     }
                 },
                 "link-present": "hibe",
-                "link-perfect": "hibit"
+                "link-perfect": "hibit",
+                "final": "hibit"
             }
         ],
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": ""
     },
     {
         "key": "habituare",
@@ -5607,16 +5609,6 @@
         "conjugation": 3,
         "gloss": "put",
         "tags": ["transitive", "motion"],
-        "exception": [
-            { 
-                "case": {
-                    "precedes": {
-                        "has-key": "ble"
-                    }
-                },
-                "link": "posa"
-            }
-        ],
         "origin": "latin"
     },
     {
@@ -5977,7 +5969,8 @@
                 "link": "quira"
             }
         ],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "conquerable vs acquirable"
     },
     {
         "key": "quatere",
@@ -7000,7 +6993,7 @@
     },
     {
         "key": "tenere",
-        "link-present": "tine",
+        "link-present": "tene",
         "link-perfect": "tens",
         "final": "tain",
         "type": "verb",
@@ -7008,6 +7001,15 @@
         "gloss": "hold",
         "tags": ["transitive"],
         "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "tine",
+                "link-perfect": "tent"
+            },
             { 
                 "case": {
                     "precedes": {
@@ -7501,7 +7503,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["nt", "", "nce"]
+                        "has-key": ["nt", "nce"]
                     }
                 },
                 "link": "viole"
