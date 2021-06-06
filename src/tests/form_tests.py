@@ -261,6 +261,37 @@ class FormTests(unittest.TestCase):
         
         # sub -> sus
         
+    def testLRDissimilation(self):        
+        score = 0
+
+        # Has an L, ends in L
+        score += self.countForm(["familia", "al"], "familial")
+        score += self.countForm(["labia", "al"], "labial")
+        score += self.countForm(["lingua", "al"], "lingual")
+        score += self.countForm(["littera", "al"], "literal")
+        score += self.countForm(["locus", "al"], "local")
+        score += self.countForm(["helix", "al"], "helical")
+        score += self.countForm(["latus", "al"], "lateral")
+        score += self.countForm(["lex", "al"], "legal")
+        score += self.countForm(["limen", "al"], "liminal")
+        score += self.countForm(["glacies", "al"], "glacial")
+        
+        # Has an L, ends in R
+        score += self.countForm(["ala", "al"], "alar")
+        score += self.countForm(["columna", "al"], "columnar")
+        score += self.countForm(["familia", "al"], "familiar")
+        score += self.countForm(["insula", "al"], "insular")
+        score += self.countForm(["linea", "al"], "linear")
+        score += self.countForm(["luna", "al"], "lunar")
+        score += self.countForm(["stella", "al"], "stellar")
+        score += self.countForm(["angulus", "al"], "angular")
+        score += self.countForm(["anulus", "al"], "annular")
+        score += self.countForm(["oculus", "al"], "ocular")
+        score += self.countForm(["populus", "al"], "popular")
+        score += self.countForm(["sol", "al"], "solar")
+        
+        self.assertTrue(score >= 15)
+        
     def testStemChange(self):
         self.assertForm(["mugire", "nt"], "mugient")
         self.assertForm(["mugire", "nt"], "mugient")
@@ -754,6 +785,15 @@ class FormTests(unittest.TestCase):
         word = word_for_keys(keys, self.morphothec)
         composed = composer.get_form(word)
         self.assertNotEqual(composed, form)
+        
+    def countForm(self, keys, form):
+        word = word_for_keys(keys, self.morphothec)
+        composed = composer.get_form(word)
+        print(composed + ", " + str(composed == form))
+        if composed == form:
+            return 1
+        else:
+            return 0
 
 if __name__ == '__main__':    
     unittest.main()
