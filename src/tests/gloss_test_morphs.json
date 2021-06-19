@@ -1,0 +1,96 @@
+[
+    {
+        "key": "avis",
+        "link": "avi",
+        "type": "noun",
+        "declension": 3,
+        "tags": ["count", "concrete"],
+        "gloss": "bird",
+        "origin": "latin"
+    },
+    {  
+        "key": "gravis",
+        "link": "grav",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "heavy",
+        "origin": "latin"
+    },
+    {
+        "key": "iacere",
+        "link-present": "jace",
+        "link-perfect": "jact",
+        "final": "jact",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "throw",
+        "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
+        "key": "al",
+        "link": "al",
+        "final": "al",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "gloss": "pertaining to %pl",
+        "origin": "latin"
+    },
+    {
+        "key": "ity",
+        "link": "iti",
+        "final": "ity",
+        "type": "derive",
+        "from": ["noun", "adj"],
+        "to": "noun",
+        "gloss": "the quality of being %sg",
+        "origin": "latin"
+    },
+    {
+        "key": "esce",
+        "link-present": "esce",
+        "link-perfect": "esc",
+        "final": "esce",
+        "type": "derive",
+        "from": "adj",
+        "to": "verb",
+        "conjugation": 0,
+        "gloss": "[become] %@",
+        "origin": "latin"
+    },
+    {
+        "key": "nt",
+        "final": "nt",
+        "link": "nti",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "present",
+        "gloss": "%part",
+        "origin": "latin"
+    },
+    {
+        "key": "ble",
+        "final": "ble",
+        "link": "bil",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "present",
+        "gloss": "able to be %ppart",
+        "origin": "latin"
+    },
+    {
+        "key": "ion",
+        "final": "ion",
+        "link": "ion",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "perfect",
+        "gloss-link": "%part",
+        "gloss-final": "the act of %part",
+        "origin": "latin"
+    }
+]

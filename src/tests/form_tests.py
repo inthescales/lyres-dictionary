@@ -789,7 +789,6 @@ class FormTests(unittest.TestCase):
     def countForm(self, keys, form):
         word = word_for_keys(keys, self.morphothec)
         composed = composer.get_form(word)
-        print(composed + ", " + str(composed == form))
         if composed == form:
             return 1
         else:
