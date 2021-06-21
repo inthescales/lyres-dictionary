@@ -28,6 +28,17 @@
         "origin": "latin"
     },
     {
+        "key": "vehere",
+        "link-present": "vehe",
+        "link-perfect": "vect",
+        "final": "veigh",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "carry",
+        "tags": ["transitive", "motion"],
+        "origin": "latin"
+    },
+    {
         "key": "al",
         "link": "al",
         "final": "al",
@@ -91,6 +102,33 @@
         "participle-type": "perfect",
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
+        "origin": "latin"
+    },
+    {
+        "key": "ad",
+        "link": "ad",
+        "link-assim": "a",
+        "type": "prep",
+        "gloss-verb": "%@ to",
+        "gloss-noun": "to %sg",
+        "tags": ["verbal"],
+        "origin": "latin"
+    },
+    {
+        "key": "in",
+        "link": "in",
+        "link-assim": "a",
+        "type": "prep",
+        "gloss-verb": "%@ in",
+        "gloss-noun": "in %sg",
+        "tags": ["verbal"],
+        "origin": "latin"
+    },
+    {
+        "key": "re-again",
+        "link": "re",
+        "type": "prefix",
+        "gloss": "%@ again",
         "origin": "latin"
     }
 ]

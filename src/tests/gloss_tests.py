@@ -18,6 +18,8 @@ class GlossTests(unittest.TestCase):
         
         self.assertGloss(["iacere", "nt"], "throwing")
         self.assertGloss(["iacere", "ble"], "able to be thrown")
+        self.assertGloss(["vehere", "nt"], "carrying")
+        self.assertGloss(["vehere", "ion"], "the act of carrying")
         
         # Multiple suffixes
         self.assertGloss(["iacere", "nt", "al"], "pertaining to throwing")
@@ -27,7 +29,28 @@ class GlossTests(unittest.TestCase):
         # Separate link and final glosses
         self.assertGloss(["iacere", "ion"], "the act of throwing")
         self.assertGloss(["iacere", "ion", "al"], "pertaining to throwing")
+    
+    def testPrefixation(self):
+        # Prepositional verb prefixes
+        self.assertGloss(["ad", "iacere"], "to throw to")
+        self.assertGloss(["in", "iacere"], "to throw in")
+        self.assertGloss(["ad", "vehere"], "to carry to")
+        self.assertGloss(["in", "vehere"], "to carry in")
         
+        # Non-prepositional prefixes
+        self.assertGloss(["re-again", "iacere"], "to throw again")
+        self.assertGloss(["re-again", "vehere"], "to carry again")
+        
+        # Both kinds of prefixes
+        self.assertGloss(["re-again", "in", "iacere"], "to throw in again")
+        self.assertGloss(["re-again", "ad", "vehere"], "to carry to again")
+    
+    def testCombinedAffixation(self):
+        # Test suffixes and prefixes together
+        self.assertGloss(["ad", "iacere", "nt"], "throwing to")
+        self.assertGloss(["in", "vehere", "ble"], "able to be carried in")
+        self.assertGloss(["re-again", "ad", "iacere", "nt"], "throwing to again")
+        self.assertGloss(["re-again", "in", "vehere", "ble"], "able to be carried in again") 
         
     # Helpers ===============================
     
