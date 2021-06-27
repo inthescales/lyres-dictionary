@@ -8,7 +8,25 @@
         "gloss": "bird",
         "origin": "latin"
     },
-    {  
+    {
+        "key": "tempus",
+        "link": "tempor",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "time",
+        "tags": ["mass", "abstract", "time", "bounded"],
+        "origin": "latin"
+    },
+    {
+        "key": "terra-singleton",
+        "link": "terr",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "latin"
+    },
+    {
         "key": "gravis",
         "link": "grav",
         "type": "adj",
@@ -39,6 +57,27 @@
         "origin": "latin"
     },
     {
+        "key": "one-join",
+        "link": "uni",
+        "type": "number",
+        "gloss": "one %!sg",
+        "origin": "latin"
+    },
+    {
+        "key": "three-join",
+        "link": "tri",
+        "type": "number",
+        "gloss": "three %!pl",
+        "origin": "latin"
+    },
+    {
+        "key": "ten-join",
+        "link": "deci",
+        "type": "number",
+        "gloss": "ten %!pl",
+        "origin": "latin"
+    },
+    {
         "key": "al",
         "link": "al",
         "final": "al",
@@ -46,6 +85,18 @@
         "from": "noun",
         "to": "adj",
         "gloss": "pertaining to %pl",
+        "gloss-relative": "%@",
+        "origin": "latin"
+    },
+    {
+        "key": "al-number",
+        "final": "al",
+        "link": "al",
+        "type": "derive",
+        "from": "noun",
+        "to": "adj",
+        "gloss": "having %@",
+        "tags": ["no-gen"],
         "origin": "latin"
     },
     {
@@ -93,6 +144,29 @@
         "origin": "latin"
     },
     {
+        "key": "ile-verb",
+        "final": "ile",
+        "link": "il",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "perfect",
+        "gloss": "able %inf",
+        "origin": "latin"
+    },
+    {
+        "key": "or",
+        "final": "or",
+        "link": "or",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "perfect",
+        "gloss": "one who %3sg",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
         "key": "ion",
         "final": "ion",
         "link": "ion",
@@ -102,6 +176,19 @@
         "participle-type": "perfect",
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
+        "origin": "latin"
+    },
+    {
+        "key": "ate",
+        "link-present": "ata",
+        "link-perfect": "at",
+        "final": "ate",
+        "type": "derive",
+        "from": ["noun", "adj"],
+        "to": "verb",
+        "conjugation": 1,
+        "gloss": "[cause] to be %@",
+        "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
     {

@@ -51,6 +51,43 @@ class GlossTests(unittest.TestCase):
         self.assertGloss(["in", "vehere", "ble"], "able to be carried in")
         self.assertGloss(["re-again", "ad", "iacere", "nt"], "throwing to again")
         self.assertGloss(["re-again", "in", "vehere", "ble"], "able to be carried in again") 
+    
+    def testRelativeConstructs(self):
+        self.assertGloss(["in", "avis", "al"], "in a bird")
+        self.assertGloss(["in", "avis", "ate"], "to cause to be in a bird")
+    
+    def testNumericalConstructs(self):
+        self.assertGloss(["three-join", "avis", "al-number"], "having three birds")
+        self.assertGloss(["ten-join", "avis", "al-number"], "having ten birds")
+        
+    def testInflections(self):
+        # Count nouns
+        self.assertGloss(["avis", "al"], "pertaining to birds")
+        self.assertGloss(["avis", "ity"], "the quality of being a bird")
+        self.assertGloss(["one-join", "avis", "al-number"], "having one bird")
+        self.assertGloss(["three-join", "avis", "al-number"], "having three birds")
+        
+        # Mass nouns
+        self.assertGloss(["tempus", "al"], "pertaining to time")
+        self.assertGloss(["tempus", "ity"], "the quality of being time")
+        self.assertGloss(["one-join", "tempus", "al-number"], "having one time")
+        self.assertGloss(["three-join", "tempus", "al-number"], "having three times")
+        
+        # Singleton nouns
+        self.assertGloss(["terra-singleton", "al"], "pertaining to the earth")
+        self.assertGloss(["terra-singleton", "ity"], "the quality of being the earth")
+        self.assertGloss(["one-join", "terra-singleton", "al-number"], "having one earth")
+        self.assertGloss(["three-join", "terra-singleton", "al-number"], "having three earths")
+        
+        # Adjectives
+        self.assertGloss(["gravis", "esce"], "to become heavy")
+        
+        # Verbs
+        self.assertGloss(["iacere", "nt"], "throwing")
+        self.assertGloss(["iacere", "ble"], "able to be thrown")
+        self.assertGloss(["iacere", "ile-verb"], "able to throw")
+        self.assertGloss(["iacere", "or"], "one who throws")
+        
         
     # Helpers ===============================
     
