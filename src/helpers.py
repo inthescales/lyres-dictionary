@@ -53,14 +53,14 @@ def l_in_last_two(word):
 
 def syllable_count(word):
     count = 0
-    state = 0
+    in_vowels = False
     prev = None
-    for char in word[::-1]:
-        if is_vowel(char) and (prev is None or not is_vowel(prev)):
-            state = 1
+    for char in word:
+        if is_vowel(char) and (prev is None or not is_vowel(prev)) and not in_vowels:
+            in_vowels = True
             count += 1
-        elif is_consonant(char) and (prev is None or not is_vowel(prev)):
-            state = 0
+        elif is_consonant(char):
+            in_vowels = False
         prev = char
     return count
 
