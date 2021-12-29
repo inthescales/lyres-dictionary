@@ -63,15 +63,15 @@ def evaluate_expression(expression, referent):
     elif key == "has-declension":
         return evaluate_declension(value, referent["declension"])
     elif key == "even-syllables":
-        return evaluate_even_syllables(referent["form"])
+        return evaluate_even_syllables(referent["form"]) == value
     elif key == "odd-syllables":
-        return evaluate_odd_syllables(referent["form"])
-    elif key == "is-root" and value == True:
-        return evaluate_is_root(referent["type"])
-    elif key == "is-final" and value == True:
-        return referent["final"] == True
-    elif key == "final_or_semifinal_l" and value == True:
-        return helpers.l_in_last_two(referent["form"])
+        return evaluate_even_syllables(referent["form"]) != value
+    elif key == "is-root":
+        return evaluate_is_root(referent["type"]) == value
+    elif key == "is-final":
+        return referent["final"] == value
+    elif key == "final_or_semifinal_l":
+        return helpers.l_in_last_two(referent["form"]) == value
         
 def evaluate_key(key, comparand):
     if isinstance(key, str):
@@ -181,7 +181,7 @@ def evaluate_declension(acceptable, declension):
 def evaluate_even_syllables(form):
     return helpers.syllable_count(form) % 2 == 0
 
-def evaluate_even_syllables(form):
+def evaluate_odd_syllables(form):
     return helpers.syllable_count(form) % 2 == 1
 
 def evaluate_is_root(morph_type):
