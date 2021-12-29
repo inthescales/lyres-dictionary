@@ -1,5 +1,3 @@
-import jsonschema
-
 def validate_morph(morph):
 
     if not "key" in morph:
