@@ -8093,7 +8093,7 @@
             {
                 "case": {
                     "follows": {
-                        "final_or_semifinal_l": true
+                        "final-or-semifinal-l": true
                     }
                 },
                 "final": "ar",

@@ -70,7 +70,7 @@ def evaluate_expression(expression, referent):
         return evaluate_is_root(referent["type"]) == value
     elif key == "is-final":
         return referent["final"] == value
-    elif key == "final_or_semifinal_l":
+    elif key == "final-or-semifinal-l":
         return helpers.l_in_last_two(referent["form"]) == value
         
 def evaluate_key(key, comparand):
