@@ -294,7 +294,6 @@ class FormTests(unittest.TestCase):
         
     def testStemChange(self):
         self.assertForm(["mugire", "nt"], "mugient")
-        self.assertForm(["mugire", "nt"], "mugient")
         self.assertForm(["nutrire", "nt"], "nutrient")
         self.assertForm(["oriri", "nt"], "orient")
         self.assertForm(["sentire", "nt"], "sentient")

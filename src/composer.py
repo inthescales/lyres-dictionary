@@ -1,4 +1,5 @@
-from src.models import Morph, Word
+#from src.models import Morph, Word
+import src.models
 import src.inflection as inflection
 import src.helpers as helpers
 
