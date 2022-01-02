@@ -30,7 +30,7 @@ def generate_entry():
     # Generate until we have a valid entry
     while True:
         word = generate_word(morphothec)
-        entry = composer.get_entry(word)
+        entry = composer.entry(word)
         
         if validator.validate(entry):
             return entry
@@ -43,7 +43,7 @@ def entry_for_keys(keys):
         
     word = word_for_keys(keys, morphothec)
     
-    return composer.get_entry(word)
+    return composer.entry(word)
 
 def test_with_count(count):
     

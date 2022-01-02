@@ -1,9 +1,9 @@
-#from src.models import Morph, Word
 import src.models
 import src.inflection as inflection
+import src.former as former
 import src.helpers as helpers
 
-def get_entry(word):
+def entry(word):
     composed = get_form(word)
     tag = get_part_tag(word)
     definition = get_definition(word)
@@ -34,7 +34,7 @@ def get_form(word):
         for index, morph in enumerate(word.morphs):
 
             env = word.environment_for_index(index)
-            addition = morph.get_form(env)
+            addition = former.form(morph, env)
 
             # Handle joining rules
             if len(addition) > 0:
@@ -95,7 +95,7 @@ def get_definition(word):
             return build_def(top, last_morph, env, definition)
 
         def build_def(morph, last_morph, env, definition):
-            part = morph.get_gloss(env)
+            part = former.gloss(morph, env)
 
             if last_morph is None:
                 definition = part

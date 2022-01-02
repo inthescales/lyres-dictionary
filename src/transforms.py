@@ -1,8 +1,10 @@
 import random
+
 import src.helpers as helpers
+import src.models
+
 from src.models.word import Word
 from src.models.morph import Morph, check_req
-import src.models
 from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
