@@ -1,6 +1,10 @@
 import sys
 
-from src.models import Morph, Word, check_req
+from src.models.morph import Morph
+from src.models.word import Word
+from src.models.environment import Environment
+
+import src.composer as composer
 from src.morphothec import Morphothec
 
 morphothec = Morphothec(["data/morphs-latin.json"])
@@ -23,13 +27,13 @@ def series_root_suffix(roots, suffixes, morphothec):
         for j, suffix in enumerate(suffixes):
             word = Word(morphothec)
             word.set_keys([root, suffix])
-            series.elements[i].append(word.compose())
+            series.elements[i].append(composer.get_form(word))
             
-            root_morph = morphothec.morph_for_key[root]
-            suffix_morph = morphothec.morph_for_key[suffix]
-            if "requires" in suffix_morph:
-                referents = {"preceding": root_morph}
-                series.is_valid[i].append(check_req(morphothec.morph_for_key[suffix], referents))
+            root_morph, suffix_morph = word.morphs[0], word.morphs[1]
+            if "requires" in suffix_morph.morph:
+                env = Environment(None, root_morph, None)
+                valid = suffix_morph.meets_requirements(env)
+                series.is_valid[i].append(valid)
             else:
                 series.is_valid[i].append(True)
     
@@ -46,18 +50,15 @@ def series_verb(root, prefixes, suffixes, morphothec):
         for j, suffix in enumerate(suffixes):
             word = Word(morphothec)
             word.set_keys([prefix, root, suffix])
-            series.elements[i].append(word.compose())
+            series.elements[i].append(composer.get_form(word))
 
-            prefix_morph = morphothec.morph_for_key[prefix]
-            root_morph = morphothec.morph_for_key[root]
-            suffix_morph = morphothec.morph_for_key[suffix]
-            if "requires" in suffix_morph or "requires" in prefix_morph:
-                suffix_referents = {"preceding": root_morph}
-                prefix_referents = {"following": root_morph}
-                series.is_valid[i].append(
-                    (check_req(morphothec.morph_for_key[suffix], suffix_referents)
-                     and check_req(morphothec.morph_for_key[prefix], prefix_referents))
-                )
+            prefix_morph, root_morph, suffix_morph = word.morphs[0], word.morphs[1], word.morphs[2]
+            if "requires" in suffix_morph.morph or "requires" in prefix_morph.morph:
+                suffix_env = Environment(None, root_morph, None)
+                prefix_env = Environment(None, None, root_morph)
+                valid = suffix_morph.meets_requirements(suffix_env)
+                valid = valid and prefix_morph.meets_requirements(prefix_env)
+                series.is_valid[i].append(valid)
             else:
                 series.is_valid[i].append(True)
                 
@@ -74,13 +75,12 @@ def series_prefix_verb(prefixes, verbs, morphothec):
         for j, verb in enumerate(verbs):
             word = Word(morphothec)
             word.set_keys([prefix, verb])
-            series.elements[i].append(word.compose())
+            series.elements[i].append(composer.get_form(word))
 
-            prefix_morph = morphothec.morph_for_key[prefix]
-            verb_morph = morphothec.morph_for_key[verb]
-            if "requires" in prefix_morph:
-                prefix_referents = {"following": verb_morph}
-                series.is_valid[i].append(check_req(morphothec.morph_for_key[prefix], prefix_referents))
+            prefix_morph, verb_morph = word.morphs[0], word.morphs[1]
+            if "requires" in prefix_morph.morph:
+                env = Environment(None, None, verb_morph)
+                series.is_valid[i].append(prefix_morph.meets_requirements(env))
             else:
                 series.is_valid[i].append(True)
     
@@ -128,13 +128,15 @@ def getHTML(series):
     
     return output
 
-#test_series = series_root_suffix(morphothec.type_morphs["verb"], morphothec.filter_appends_to("verb"), morphothec)
+test_series = series_root_suffix(morphothec.filter_type("verb"),
+                                 morphothec.filter_appends_to("verb"),
+                                 morphothec)
 #test_series = series_verb("jungere", 
 #                          morphothec.filter_type("prep", { "has-tag": "verbal" }),
 #                          morphothec.filter_appends_to("verb"),
 #                          morphothec)
-test_series = series_prefix_verb(morphothec.filter_type("prep", { "has-tag": "verbal" }),
-                                 morphothec.filter_type("verb"),
-                                 morphothec)
+# test_series = series_prefix_verb(morphothec.filter_type("prep", "latin", { "has-tag": "verbal" }),
+#                                  morphothec.filter_type("verb"),
+#                                  morphothec)
 
 print(getHTML(test_series))
