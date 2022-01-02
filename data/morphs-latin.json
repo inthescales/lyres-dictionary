@@ -1764,6 +1764,14 @@
         "notes": "change gloss to 'last'?"
     },
     {
+        "key": "ebria",
+        "link": "ebri",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "drunk, intoxicated",
+        "origin": "latin"
+    },
+    {
         "key": "educare",
         "link-present": "educa",
         "link-perfect": "educat",
@@ -8773,6 +8781,7 @@
             "case": {
                 "follows": {
                     "and": [
+                        { "has-type": "adj" },
                         { "is-root": true },
                         { "has-suffix": "i" }
                     ]
