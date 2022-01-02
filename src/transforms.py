@@ -4,7 +4,7 @@ import src.helpers as helpers
 import src.models
 
 from src.models.word import Word
-from src.models.morph import Morph, check_req
+from src.models.morph import Morph
 from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
@@ -111,7 +111,7 @@ def transform_word_latin(word, morphothec):
             env = word.suffix_environment()
             
             for choice in choices:
-                if not check_req(Morph(choice, morphothec).as_dict(env), env):
+                if not Morph(choice, morphothec).meets_requirements(env):
                     valid_choices.remove(choice)
                 elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
                     valid_choices.remove(choice)
@@ -138,7 +138,7 @@ def transform_word_latin(word, morphothec):
         env = word.prefix_environment()
 
         for choice in choices:
-            if not check_req(Morph(choice, morphothec).as_dict(env), env ):
+            if not Morph(choice, morphothec).meets_requirements(env):
                 valid_choices.remove(choice)
                 
         if last_morph.morph["key"] in valid_choices:
@@ -214,7 +214,7 @@ def transform_word_greek(word, morphothec):
             env = word.suffix_environment()
 
             for choice in choices:
-                if not check_req(Morph(choice, morphothec).as_dict(env), env):
+                if not Morph(choice, morphothec).meets_requirements(env):
                     valid_choices.remove(choice)
                 elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
                     valid_choices.remove(choice)

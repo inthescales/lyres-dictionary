@@ -71,34 +71,32 @@ class Morph:
 
         return False
 
-# Morph Helpers ===============================
+    def meets_requirements(self, env):
 
-def check_req(morph, env):
+        # No requirements to check, it's ok
+        if not "requires" in self.morph:
+            return True
+        
+        requirements = self.morph["requires"]
+        keys = requirements.keys()
+        if len(keys) != 1:
+            print("Error: currently, requirement can only have one referent child")
+            sys.exit(1)
+            
+        if "precedes" in keys:
+            if env.next == None:
+                print("Error: precedes block but no following morph given")
+                sys.exit(1)
+            
+            if not evaluate_expression(requirements["precedes"], env.next.morph):
+                return False
+        
+        if "follows" in keys:
+            if env.prev == None:
+                print("Error: follows block but no following morph given")
+                sys.exit(1)
 
-    # No requirements to check, it's ok
-    if not "requires" in morph:
+            if not evaluate_expression(requirements["follows"], env.prev.morph):
+                return False
+        
         return True
-    
-    requirements = morph["requires"]
-    keys = requirements.keys()
-    if len(keys) != 1:
-        print("Error: currently, requirement can only have one referent child")
-        sys.exit(1)
-        
-    passes = True
-        
-    if "precedes" in keys:
-        if env.next == None:
-            print("Error: precedes block but no following morph given")
-            sys.exit(1)
-        
-        passes = passes and evaluate_expression(requirements["precedes"], env.next.morph)
-    
-    if "follows" in keys:
-        if env.prev == None:
-            print("Error: follows block but no following morph given")
-            sys.exit(1)
-
-        passes = passes and evaluate_expression(requirements["follows"], env.prev.morph)
-    
-    return passes
