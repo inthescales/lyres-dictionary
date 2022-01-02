@@ -3,7 +3,7 @@ import src.models
 import src.inflection as inflection
 import src.helpers as helpers
 
-def get_entry(word):        
+def get_entry(word):
     composed = get_form(word)
     tag = get_part_tag(word)
     definition = get_definition(word)
@@ -33,7 +33,8 @@ def get_form(word):
 
         for index, morph in enumerate(word.morphs):
 
-            addition = morph.get_form()
+            env = word.environment_for_index(index)
+            addition = morph.get_form(env)
 
             # Handle joining rules
             if len(addition) > 0:
@@ -87,15 +88,15 @@ def get_definition(word):
 
         prefix_stack = []
 
-        def pop_prefix(morph, definition):
+        def pop_prefix(last_morph, definition):
 
-            top = prefix_stack.pop()
+            top, env = prefix_stack.pop()
 
-            return build_def(top, morph, definition)
+            return build_def(top, last_morph, env, definition)
 
-        def build_def(morph, last_morph, definition):
+        def build_def(morph, last_morph, env, definition):
+            part = morph.get_gloss(env)
 
-            part = morph.get_gloss()
             if last_morph is None:
                 definition = part
                 
@@ -162,21 +163,22 @@ def get_definition(word):
 
             addition = ""
 
-            last_morph = morph.prev
-            next_morph = morph.next
+            env = word.environment_for_index(index)
+            last_morph = env.prev
+            next_morph = env.next
 
             # Stack prepositions and prefixes for proper definition ordering
             if morph.get_type() == "prep" or morph.get_type() == "prefix" or morph.get_type() == "number":
-                prefix_stack.append(morph)
+                prefix_stack.append([morph, env])
             else:
-                definition = build_def(morph, last_morph, definition)
+                definition = build_def(morph, last_morph, env, definition)
 
                 if index != 0:
                     if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
                         definition = pop_prefix(morph, definition)
 
         while len(prefix_stack) > 0:
-            definition = pop_prefix(word.morphs[word.size()-1], definition)
+            definition = pop_prefix(word.last_morph(), definition)
 
         # Verbs not otherwise resolved become infinitives
         if morph.get_type() == "verb":

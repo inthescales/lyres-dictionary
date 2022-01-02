@@ -8,9 +8,7 @@ class Morph:
     def __init__(self, key, morphothec):
         self.morphothec = morphothec
         self.base = morphothec.morph_for_key[key]
-        self.prev = None
-        self.next = None
-        self.refreshMorph()
+        self.morph = self.base.copy()
         
     def __eq__(self, other):
         if other is None:
@@ -18,19 +16,13 @@ class Morph:
         
         return self.morph["key"] == other.morph["key"]
     
-    def as_dict(self):
+    def as_dict(self, env):
         dict_ = self.morph.copy()
-        dict_["form"] = self.get_form()
-        dict_["final"] = self.next is None
+        dict_["form"] = self.get_form(env)
+        dict_["final"] = env.is_final()
         return dict_
-    
-    def join(self, next_morph):
-        self.next = next_morph
-        next_morph.prev = self
-        self.refreshMorph()
-        next_morph.refreshMorph()
-        
-    def refreshMorph(self):
+
+    def refresh(self, env):
         self.morph = self.base.copy()
         self.morph["exception"] = ""
 
@@ -42,11 +34,11 @@ class Morph:
                 case = exception["case"]
                 
                 if "precedes" in case:
-                    if self.next is None or not evaluate_expression(case["precedes"], self.next.as_dict()):
+                    if env.next is None or not evaluate_expression(case["precedes"], env.next.as_dict(env)):
                         continue
 
                 if "follows" in case:
-                    if self.prev is None or not evaluate_expression(case["follows"], self.prev.as_dict()):
+                    if env.prev is None or not evaluate_expression(case["follows"], env.prev.as_dict(env)):
                         continue
                         
                 self.apply_override(exception)
@@ -56,21 +48,21 @@ class Morph:
             if key != "case":
                 self.morph[key] = value
     
-    def get_form(self):
+    def get_form(self, env):
         form = ""
         
-        if self.next:
-            next_morph = self.next.morph
+        if env.next:
+            next_morph = env.next.morph
         else:
             next_morph = None
             
-        if self.prev:
-            last_morph = self.prev.morph
+        if env.prev:
+            last_morph = env.prev.morph
         else:
             last_morph = None
     
         # Get the proper form of the morph
-        if self.next != None:
+        if env.next != None:
 
             # Follow special assimilation rules if there are any
             if "assimilation" in self.morph:
@@ -150,10 +142,10 @@ class Morph:
         
         return form
     
-    def get_gloss(self):
-
+    def get_gloss(self, env):
+        
         # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
-        if self.prev and ((self.prev.get_type() == "noun" and self.prev.prev and self.prev.prev.get_type() == "prep" ) or (self.get_type() == "verb" and self.prev.get_type() == "prep")) and "gloss-relative" in self.morph:
+        if env.prev and ((env.prev.get_type() == "noun" and env.anteprev and env.anteprev.get_type() == "prep" ) or (self.get_type() == "verb" and env.prev.get_type() == "prep")) and "gloss-relative" in self.morph:
             return self.morph["gloss-relative"]
         
         if "gloss" in self.morph:
@@ -163,7 +155,7 @@ class Morph:
                 return self.morph["gloss"]
         else:
             
-            if self.next:
+            if env.next:
                 if "gloss-link" in self.morph:
                     return self.morph["gloss-link"]
             else:
@@ -172,9 +164,9 @@ class Morph:
             
 
             if self.get_type() == "prep" or self.get_type() == "prefix":
-                relative = self.next
+                relative = env.next
             else:
-                relative = self.prev
+                relative = env.prev
 
             if relative and "gloss-" + relative.get_type() in self.morph:
                 return self.morph["gloss-" + relative.get_type()]
@@ -206,7 +198,7 @@ class Morph:
 
 # Morph Helpers ===============================
 
-def check_req(morph, referents):
+def check_req(morph, env):
 
     # No requirements to check, it's ok
     if not "requires" in morph:
@@ -221,17 +213,17 @@ def check_req(morph, referents):
     passes = True
         
     if "precedes" in keys:
-        if not "following" in referents:
+        if env.next == None:
             print("Error: precedes block but no following morph given")
             sys.exit(1)
         
-        passes = passes and evaluate_expression(requirements["precedes"], referents["following"])
+        passes = passes and evaluate_expression(requirements["precedes"], env.next.morph)
     
     if "follows" in keys:
-        if not "preceding" in referents:
+        if env.prev == None:
             print("Error: follows block but no following morph given")
             sys.exit(1)
 
-        passes = passes and evaluate_expression(requirements["follows"], referents["preceding"])
+        passes = passes and evaluate_expression(requirements["follows"], env.prev.morph)
     
     return passes

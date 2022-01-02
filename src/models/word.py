@@ -1,12 +1,39 @@
 from src.expressions import evaluate_expression
 from src.morphothec import Morphothec
+from src.models.environment import Environment
+from src.models.morph import Morph
 
 class Word:
     
     def __init__(self, morphothec):
         self.morphs = []
         self.morphothec = morphothec
+    
+    # Mutation
+    
+    def set_keys(self, keys):
+        self.morphs = [Morph(key, self.morphothec) for key in keys]
+        self.refresh_morphs()
+
+    def add_prefix(self, morph):
+        self.morphs = [morph] + self.morphs
+        self.refresh_morphs()
+            
+    def add_suffix(self, morph):
+        self.morphs = self.morphs + [morph]
+        self.refresh_morphs()
         
+    def add_affixes(self, prefix, suffix):
+        self.morphs = [prefix] + self.morphs + [suffix]
+        self.refresh_morphs()
+
+    def refresh_morphs(self):
+        for i in range(0, len(self.morphs)):
+            env = self.environment_for_index(i)
+            self.morphs[i].refresh(env)
+
+    # Public accessors
+
     def first_morph(self):
         if len(self.morphs) > 0:
             return self.morphs[0]
@@ -18,6 +45,14 @@ class Word:
             return self.morphs[len(self.morphs)-1]
         else:
             return None
+
+    # Returns the environment of a potential prefix.
+    def prefix_environment(self):
+        return self.environment_for_index(-1)
+
+    # Returns the environment of a potential suffix.
+    def suffix_environment(self):
+        return self.environment_for_index(len(self.morphs))
         
     def size(self):
         length = 0
@@ -32,27 +67,17 @@ class Word:
 
     def get_origin(self):
         return self.last_morph().morph["origin"]
-    
-    # Modifying --------------------------------
-    
-    def set_keys(self, keys):
-        
-        self.morphs = []
-        
-        for key in keys:
-            self.morphs.append( Morph(key, self.morphothec) )
-            
-        for i in range(0, len(self.morphs)-1):
-            self.morphs[i].join(self.morphs[i+1])
 
-    def add_prefix(self, morph):
-        morph.join(self.first_morph())
-        self.morphs = [morph] + self.morphs
-            
-    def add_suffix(self, morph):
-        self.last_morph().join(morph)
-        self.morphs = self.morphs + [morph]
-        
-    def add_affixes(self, prefix, suffix):
-        self.add_prefix(prefix)
-        self.add_suffix(suffix)
+    # Helpers
+
+    def environment_for_index(self, index):
+        anteprev_morph, prev_morph, next_morph = (None, None, None)
+
+        if index > 0:
+            prev_morph = self.morphs[index - 1]
+        if index > 1:
+            anteprev_morph = self.morphs[index - 2]
+        if index < len(self.morphs) - 1:
+            next_morph = self.morphs[index + 1]
+
+        return Environment(anteprev_morph, prev_morph, next_morph)
