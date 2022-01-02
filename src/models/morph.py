@@ -34,11 +34,11 @@ class Morph:
                 case = exception["case"]
                 
                 if "precedes" in case:
-                    if env.next is None or not evaluate_expression(case["precedes"], env.next.as_dict(env)):
+                    if env.next is None or not evaluate_expression(case["precedes"], env.next.as_dict(env.next_env(self))):
                         continue
 
                 if "follows" in case:
-                    if env.prev is None or not evaluate_expression(case["follows"], env.prev.as_dict(env)):
+                    if env.prev is None or not evaluate_expression(case["follows"], env.prev.as_dict(env.prev_env(self))):
                         continue
                         
                 self.apply_override(exception)
@@ -88,7 +88,7 @@ class Morph:
                 print("Error: precedes block but no following morph given")
                 sys.exit(1)
             
-            if not evaluate_expression(requirements["precedes"], env.next.morph):
+            if not evaluate_expression(requirements["precedes"], env.next.as_dict(env.next_env(self))):
                 return False
         
         if "follows" in keys:
@@ -96,7 +96,7 @@ class Morph:
                 print("Error: follows block but no following morph given")
                 sys.exit(1)
 
-            if not evaluate_expression(requirements["follows"], env.prev.morph):
+            if not evaluate_expression(requirements["follows"], env.prev.as_dict(env.prev_env(self))):
                 return False
         
         return True

@@ -71,7 +71,7 @@ class Word:
     # Helpers
 
     def environment_for_index(self, index):
-        anteprev_morph, prev_morph, next_morph = (None, None, None)
+        anteprev_morph, prev_morph, next_morph, postnext_morph = (None, None, None, None)
 
         if index > 0:
             prev_morph = self.morphs[index - 1]
@@ -79,5 +79,8 @@ class Word:
             anteprev_morph = self.morphs[index - 2]
         if index < len(self.morphs) - 1:
             next_morph = self.morphs[index + 1]
+        if index < len(self.morphs) - 2:
+            postnext_morph = self.morphs[index + 2]
 
-        return Environment(anteprev_morph, prev_morph, next_morph)
+
+        return Environment(anteprev_morph, prev_morph, next_morph, postnext_morph)

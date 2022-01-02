@@ -31,7 +31,7 @@ def series_root_suffix(roots, suffixes, morphothec):
             
             root_morph, suffix_morph = word.morphs[0], word.morphs[1]
             if "requires" in suffix_morph.morph:
-                env = Environment(None, root_morph, None)
+                env = Environment(None, root_morph, None, None)
                 valid = suffix_morph.meets_requirements(env)
                 series.is_valid[i].append(valid)
             else:
@@ -54,8 +54,8 @@ def series_verb(root, prefixes, suffixes, morphothec):
 
             prefix_morph, root_morph, suffix_morph = word.morphs[0], word.morphs[1], word.morphs[2]
             if "requires" in suffix_morph.morph or "requires" in prefix_morph.morph:
-                suffix_env = Environment(None, root_morph, None)
-                prefix_env = Environment(None, None, root_morph)
+                suffix_env = Environment(prefix_morph, root_morph, None, None)
+                prefix_env = Environment(None, None, root_morph, suffix_morph)
                 valid = suffix_morph.meets_requirements(suffix_env)
                 valid = valid and prefix_morph.meets_requirements(prefix_env)
                 series.is_valid[i].append(valid)
@@ -79,7 +79,7 @@ def series_prefix_verb(prefixes, verbs, morphothec):
 
             prefix_morph, verb_morph = word.morphs[0], word.morphs[1]
             if "requires" in prefix_morph.morph:
-                env = Environment(None, None, verb_morph)
+                env = Environment(None, None, verb_morph, None)
                 series.is_valid[i].append(prefix_morph.meets_requirements(env))
             else:
                 series.is_valid[i].append(True)
@@ -128,9 +128,12 @@ def getHTML(series):
     
     return output
 
-test_series = series_root_suffix(morphothec.filter_type("verb"),
-                                 morphothec.filter_appends_to("verb"),
+test_series = series_root_suffix(morphothec.filter_type("adj"),
+                                 morphothec.filter_appends_to("adj"),
                                  morphothec)
+#test_series = series_root_suffix(morphothec.filter_type("verb"),
+#                                 morphothec.filter_appends_to("verb"),
+#                                 morphothec)
 #test_series = series_verb("jungere", 
 #                          morphothec.filter_type("prep", { "has-tag": "verbal" }),
 #                          morphothec.filter_appends_to("verb"),
