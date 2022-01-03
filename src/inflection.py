@@ -34,7 +34,10 @@ def inflect(string, mode):
     return " ".join(words)
 
 def override_inflection(string, mode):
-    if string == "do":
+    if string == "arms":
+        if mode == "pl":
+            return "arms"
+    elif string == "do":
         if mode == "3sg":
             return "does"
         elif mode == "ppart":
