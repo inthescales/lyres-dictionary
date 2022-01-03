@@ -9,6 +9,26 @@
         "origin": "latin"
     },
     {
+        "key": "falx",
+        "link": "falc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "sickle",
+        "gloss-tool": "reap",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
+        "key": "lumen",
+        "link": "lumin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "lamp",
+        "gloss-tool": "[light] up",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
         "key": "tempus",
         "link": "tempor",
         "type": "noun",
@@ -189,6 +209,29 @@
         "conjugation": 1,
         "gloss": "[cause] to be %@",
         "tags": ["transitive", "no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "ate-tool",
+        "link": "at",
+        "final": "ate",
+        "type": "derive",
+        "from": "noun",
+        "to": "verb",
+        "gloss": "[use] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "tool"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-property": "gloss-tool"
+                }
+            },
+            "gloss": "%(gloss-tool)"
+        }],
         "origin": "latin"
     },
     {

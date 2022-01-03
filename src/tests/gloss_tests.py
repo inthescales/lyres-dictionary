@@ -87,6 +87,10 @@ class GlossTests(unittest.TestCase):
         self.assertGloss(["iacere", "ble"], "able to be thrown")
         self.assertGloss(["iacere", "ile-verb"], "able to throw")
         self.assertGloss(["iacere", "or"], "one who throws")
+
+    def testGlossAddressing(self):
+        self.assertGloss(["falx", "ate-tool", "ion"], "the act of reaping")
+        self.assertGloss(["lumen", "ate-tool", "ion"], "the act of lighting up")
         
         
     # Helpers ===============================

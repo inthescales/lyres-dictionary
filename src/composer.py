@@ -152,6 +152,25 @@ def get_definition(word):
                             words[index] = definition
                     elif word == "%!pl":
                         words[index] = inflection.inflect(definition, "pl")
+                    elif "%(" in word and ")" in word:
+                        open_index = word.index("%(")
+                        close_index = word.index(")")
+
+                        head = word[:open_index]
+                        ref_property = word[open_index + 2:close_index]
+                        tail = word[close_index + 1:]
+
+                        if ref_property in last_morph.morph:
+                            property_value = last_morph.morph[ref_property]
+
+                            # If this is a kind of gloss, and is a single word, add brackets
+                            if ref_property.startswith("gloss") and not " " in property_value:
+                                property_value = "[" + property_value + "]"
+
+                            words[index] = head + property_value + tail
+                        else:
+                            print("Error: referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
+
 
                 definition = " ".join(words)
 

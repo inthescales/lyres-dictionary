@@ -40,7 +40,7 @@ class Morph:
                 if "follows" in case:
                     if env.prev is None or not evaluate_expression(case["follows"], env.prev.as_dict(env.prev_env(self))):
                         continue
-                        
+                
                 self.apply_override(exception)
     
     def apply_override(self, override):

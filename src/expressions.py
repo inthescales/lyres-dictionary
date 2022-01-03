@@ -35,6 +35,8 @@ def evaluate_expression(expression, referent):
         return not evaluate_expression(value, referent)    
     
     # Morph operations
+    elif key == "has-property":
+        return value in referent
     elif key == "has-key":
         return evaluate_key(value, referent["key"])
     elif key == "has-type":
