@@ -41,6 +41,7 @@ class FormTests(unittest.TestCase):
         
         # 'ad' ----------
         
+        self.assertForm(["ad", "arguere", "or"], "adargutor") #*
         self.assertForm(["ad", "ducere", "ion"], "adduction")
         self.assertForm(["ad", "educare", "ion"], "adeducation") #*
         self.assertForm(["ad", "haerere", "ion"], "adhesion")
@@ -50,7 +51,9 @@ class FormTests(unittest.TestCase):
         self.assertForm(["ad", "venire", "ure"], "adventure")
         
         # ad -> a
-        self.assertForm(["ad", "arguere", "or"], "adargutor") #*
+        self.assertForm(["ad", "scandere", "nt"], "ascendant")
+        self.assertForm(["ad", "specere"], "aspect")
+        self.assertForm(["ad", "stringere"], "astrict")
         
         # ad doubling
         self.assertForm(["ad", "cedere", "ion"], "accession")
@@ -739,8 +742,8 @@ class FormTests(unittest.TestCase):
         self.assertForm(["salire", "nt"], "salient")
         self.assertForm(["re", "salire", "nt"], "resilient")
         self.assertForm(["scandere", "ion"], "scansion")
-        #self.assertForm(["ad", "scandere", "ion"], "ascension")
-        #self.assertForm(["ad", "scandere", "nt"], "ascendant")
+        self.assertForm(["ad", "scandere", "ion"], "ascension")
+        self.assertForm(["ad", "scandere", "nt"], "ascendant")
         self.assertForm(["tenere", "ion"], "tension")
         self.assertForm(["ad", "tenere", "ion"], "attention")
         self.assertForm(["tenere", "nt"], "tenent")

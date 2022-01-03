@@ -21,18 +21,26 @@ def form(morph, env):
         # Follow special assimilation rules if there are any
         if "assimilation" in morph_dict:
 
-            next_letter = list(next_morph["key"])[0]
+            next_form = env.next.as_dict(env.next_env(env.next))["form"]
+            next_letter = next_form[0]
 
+            assimilation_map = {}
             matched_case = None
             star_case = None
 
             for case, sounds in morph_dict["assimilation"].items():
+                for sound in sounds:
+                    if sound == "*":
+                        star_case = case
+                    elif sound not in assimilation_map:
+                        if sound not in assimilation_map:
+                            assimilation_map[sound] = case
+                        else:
+                            print("ERROR: Repeated assimilation sound for key " + morph_dict["key"])
 
-                if "*" in sounds:
-                    star_case = case
-
-                if next_letter in sounds:
-                    matched_case = case
+            for key in reversed(sorted(list(assimilation_map.keys()), key=len)):
+                if next_form.startswith(key):
+                    matched_case = assimilation_map[key]
                     break
 
             if matched_case:
