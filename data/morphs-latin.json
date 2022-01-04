@@ -471,6 +471,17 @@
         "origin": "latin"
     },
     {
+        "key": "audere",
+        "link-present": "aude",
+        "link-perfect": "aus",
+        "final": "aud",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "dare",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "audire",
         "link-present": "audi",
         "link-perfect": "audit",
@@ -1041,6 +1052,15 @@
         "conjugation": 1,
         "gloss": "cease",
         "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "cicatrix",
+        "link": "cicatric",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "scar",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -2602,6 +2622,18 @@
         "gloss": "poultry",
         "tags": ["mass", "concrete", "living", "animal"],
         "origin": "latin"
+    },
+    {
+        "key": "garrire",
+        "link-present": "garri",
+        "link-perfect": "garrit",
+        "final": "gare",
+        "type": "verb",
+        "conjugation": 4,
+        "gloss": "chatter",
+        "tags": ["intransitive", "no-prep"],
+        "origin": "latin",
+        "notes": "final is a guess"
     },
     {  
         "key": "gemma",
@@ -7144,8 +7176,17 @@
         "final": "toast",
         "type": "verb",
         "conjugation": 2,
-        "gloss": "dry",
+        "gloss": "heat",
         "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "totum",
+        "link": "tot",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "[whole] of something",
+        "tags": ["singleton", "abstract"],
         "origin": "latin"
     },
     {
