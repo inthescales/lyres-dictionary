@@ -6,8 +6,11 @@ import botbuddy
 
 from src.morphothec import Morphothec
 from src.generator import generate_word, word_for_keys
+
 import src.composer as composer
 import src.validator as validator
+
+morphothec = None
 
 def setup():
     global morphothec
@@ -16,8 +19,6 @@ def setup():
 
 def needs_setup():
     return morphothec == None
-
-morphothec = None
         
 # Generating operations
 
@@ -36,7 +37,7 @@ def generate_entry():
             return entry
 
 def entry_for_keys(keys):
-    global morphothec
+    global morphothec, composer
     
     if needs_setup():
         setup()

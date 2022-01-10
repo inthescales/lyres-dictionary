@@ -56,6 +56,12 @@ class Morph:
         
     def is_root(self):
         return self.morph["type"] in ["noun", "verb", "adj"]
+
+    def is_prefix(self):
+        return self.morph["type"] in ["prefix", "prep", "number"]
+
+    def is_suffix(self):
+        return self.morph["type"] == "derive"
         
     def suffixes(self):
         if "suffixes" not in self.morph:

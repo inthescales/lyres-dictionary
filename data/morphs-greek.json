@@ -650,7 +650,7 @@
         "key": "meteora",
         "link": "meteor",
         "type": "noun",
-        "gloss": "weather",
+        "gloss": "celestial [phenomenon]",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
     },

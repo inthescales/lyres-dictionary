@@ -1,7 +1,7 @@
 [
     {
         "key": "abundare",
-        "link-present": "abunda",
+        "link-present": "abund",
         "link-perfect": "abundat",
         "final": "abound",
         "type": "verb",
@@ -36,7 +36,7 @@
     },
     {
         "key": "adjutare",
-        "link-present": "adjuta",
+        "link-present": "adjut",
         "link-perfect": "adjutat",
         "final": "aid",
         "type": "verb",
@@ -81,26 +81,24 @@
     },
     {
         "key": "agere",
-        "link-present": "age",
+        "link-present": "ag",
         "link-perfect": "act",
         "final": "act",
         "type": "verb",
         "conjugation": 3,
         "gloss": "do",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "ig"
+            }
+        ],
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
-    },
-    {
-        "key": "agere-drive",
-        "link-present": "ige",
-        "link-perfect": "ag",
-        "final": "act",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "drive",
-        "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "exigent vs cogent"
     },
     {
         "key": "ala",
@@ -138,7 +136,7 @@
     },
     {
         "key": "alternare",
-        "link-present": "alterna",
+        "link-present": "altern",
         "link-perfect": "alternat",
         "final": "alternate",
         "type": "verb",
@@ -157,7 +155,7 @@
     },
     {
         "key": "amare",
-        "link-present": "ama",
+        "link-present": "am",
         "link-perfect": "amat",
         "final": "amor",
         "type": "verb",
@@ -168,7 +166,7 @@
     },
     {
         "key": "ambulare",
-        "link-present": "ambula",
+        "link-present": "ambul",
         "link-perfect": "ambulat",
         "final": "ambulate",
         "type": "verb",
@@ -240,7 +238,7 @@
     },
     {
         "key": "aperire",
-        "link-present": "aperi",
+        "link-present": "aper",
         "link-perfect": "apert",
         "final": "apert",
         "type": "verb",
@@ -270,7 +268,7 @@
     },
     {
         "key": "apparere",
-        "link-present": "appare",
+        "link-present": "appar",
         "link-perfect": "apparit",
         "final": "appear",
         "type": "verb",
@@ -282,7 +280,7 @@
     },
     {
         "key": "appellare",
-        "link-present": "appella",
+        "link-present": "appell",
         "link-perfect": "appellat",
         "final": "appeal",
         "type": "verb",
@@ -375,7 +373,7 @@
     },
     {
         "key": "ardere",
-        "link-present": "arde",
+        "link-present": "ard",
         "link-perfect": "ars",
         "final": "arde",
         "type": "verb",
@@ -404,7 +402,7 @@
     },
     {
         "key": "arguere",
-        "link-present": "argue",
+        "link-present": "argu",
         "link-perfect": "argut",
         "final": "argue",
         "type": "verb",
@@ -451,7 +449,7 @@
     },
     {
         "key": "attendere",
-        "link-present": "attenda",
+        "link-present": "attend",
         "link-perfect": "attent",
         "final": "attend",
         "type": "verb",
@@ -472,7 +470,7 @@
     },
     {
         "key": "audere",
-        "link-present": "aude",
+        "link-present": "aud",
         "link-perfect": "aus",
         "final": "aud",
         "type": "verb",
@@ -483,7 +481,7 @@
     },
     {
         "key": "audire",
-        "link-present": "audi",
+        "link-present": "aud",
         "link-perfect": "audit",
         "final": "audit",
         "type": "verb",
@@ -556,7 +554,7 @@
     },    
     {
         "key": "battuere",
-        "link-present": "bata",
+        "link-present": "bat",
         "link-perfect": "batuit",
         "final": "bate",
         "type": "verb",
@@ -564,6 +562,16 @@
         "gloss": "[beat] down",
         "gloss-relative": "beat",
         "tags": ["transitive"],
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["nt", "nce"]
+                    }
+                },
+                "link-present-join": "a"
+            }
+        ],
         "origin": "latin",
         "notes": "verb: combat vs debate vs abate"
     },
@@ -611,7 +619,7 @@
     },
     {
         "key": "bibere",
-        "link-present": "bibi",
+        "link-present": "bib",
         "link-perfect": "bibit",
         "final": "bibe",
         "type": "verb",
@@ -674,7 +682,7 @@
     },
     {
         "key": "cadere",
-        "link-present": "cade",
+        "link-present": "cad",
         "link-perfect": "cas",
         "final": "cade",
         "type": "verb",
@@ -687,7 +695,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "cide",
+                "link-present": "cid",
                 "link-perfect": "cas",
                 "final": "cide"
             }
@@ -698,7 +706,7 @@
     },
     {
         "key": "caedere",
-        "link-present": "cede",
+        "link-present": "ced",
         "link-perfect": "ces",
         "final": "cese",
         "type": "verb",
@@ -711,7 +719,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "cide",
+                "link-present": "cid",
                 "link-perfect": "cis",
                 "final": "cise"
             }
@@ -776,7 +784,7 @@
     },
     {
         "key": "canere",
-        "link-present": "cane",
+        "link-present": "can",
         "link-perfect": "cant",
         "final": "cant",
         "type": "verb",
@@ -797,7 +805,7 @@
     },
     {
         "key": "cantare",
-        "link-present": "canta",
+        "link-present": "cant",
         "link-perfect": "cantat",
         "final": "cant",
         "type": "verb",
@@ -808,7 +816,8 @@
     },
     {
         "key": "capere",
-        "link-present": "capi",
+        "link-present": "cap",
+        "link-present-join": "ie",
         "link-perfect": "capt",
         "final": ["cept", "ceive"],
         "type": "verb",
@@ -821,7 +830,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "cipi",
+                "link-present": "cip",
                 "link-perfect": "cept",
                 "final": ["cept", "ceive"]
             }
@@ -913,7 +922,7 @@
     },
     {
         "key": "cavere",
-        "link-present": "cave",
+        "link-present": "cav",
         "link-perfect": "caut",
         "final": "cave",
         "type": "verb",
@@ -925,7 +934,7 @@
     },
     {
         "key": "cedere",
-        "link-present": "cede",
+        "link-present": "ced",
         "link-perfect": "cess",
         "final": "cede",
         "type": "verb",
@@ -1022,7 +1031,7 @@
     },
     {
         "key": "cernere",
-        "link-present": "creme",
+        "link-present": "crem",
         "link-perfect": "cret",
         "final": "cern",
         "type": "verb",
@@ -1034,7 +1043,7 @@
     },    
     {
         "key": "certare",
-        "link-present": "certa",
+        "link-present": "cert",
         "link-perfect": "certat",
         "final": "cert",
         "type": "verb",
@@ -1045,7 +1054,7 @@
     },
     {
         "key": "cessare",
-        "link-present": "cessa",
+        "link-present": "cess",
         "link-perfect": "cess",
         "final": "cease",
         "type": "verb",
@@ -1074,7 +1083,7 @@
     },
     {
         "key": "ciliare",
-        "link-present": "cilia",
+        "link-present": "cili",
         "link-perfect": "ciliat",
         "final": "cile",
         "type": "verb",
@@ -1086,7 +1095,7 @@
     },
     {
         "key": "citare",
-        "link-present": "cita",
+        "link-present": "cit",
         "link-perfect": "citat",
         "final": "cite",
         "type": "verb",
@@ -1115,7 +1124,7 @@
     },
     {
         "key": "clamare",
-        "link-present": "clama",
+        "link-present": "clam",
         "link-perfect": "clamat",
         "final": "claim",
         "type": "verb",
@@ -1134,7 +1143,7 @@
     },
     {
         "key": "claudere",
-        "link-present": "clude",
+        "link-present": "clud",
         "link-perfect": "clus",
         "final": "clude",
         "type": "verb",
@@ -1155,7 +1164,7 @@
     },
     {
         "key": "clinare",
-        "link-present": "clina",
+        "link-present": "clin",
         "link-perfect": "clinat",
         "final": "cline",
         "type": "verb",
@@ -1166,7 +1175,7 @@
     },
     {
         "key": "cogitare",
-        "link-present": "cogita",
+        "link-present": "cogit",
         "link-perfect": "cogitat",
         "final": "cogitate",
         "type": "verb",
@@ -1177,7 +1186,7 @@
     },
     {
         "key": "cognoscere",
-        "link-present": "cogniza",
+        "link-present": "cogniz",
         "link-perfect": "cognit",
         "final": "cognize",
         "type": "verb",
@@ -1189,7 +1198,7 @@
     },
     {
         "key": "colare",
-        "link-present": "cola",
+        "link-present": "col",
         "link-perfect": "colat",
         "final": "colate",
         "type": "verb",
@@ -1235,7 +1244,7 @@
     },
     {
         "key": "condere",
-        "link-present": "conde",
+        "link-present": "cond",
         "link-perfect": "condit",
         "final": "cond",
         "type": "verb",
@@ -1255,7 +1264,7 @@
     },
     {
         "key": "consolari",
-        "link-present": "consola",
+        "link-present": "consol",
         "link-perfect": "consolat",
         "final": "console",
         "type": "verb",
@@ -1275,7 +1284,7 @@
     },
     {
         "key": "coquere",
-        "link-present": "coque",
+        "link-present": "coqu",
         "link-perfect": "coct",
         "final": "coct",
         "type": "verb",
@@ -1322,8 +1331,8 @@
         "origin": "latin"
     },
     {
-        "key": "credere",
-        "link-present": "crede",
+    "key": "credere",
+        "link-present": "cred",
         "link-perfect": "credit",
         "final": "crede",
         "type": "verb",
@@ -1334,7 +1343,7 @@
     },
     {
         "key": "crepare",
-        "link-present": "crepa",
+        "link-present": "crep",
         "link-perfect": "crepit",
         "final": "crepate",
         "type": "verb",
@@ -1345,7 +1354,7 @@
     },
     {
         "key": "crescere",
-        "link-present": "cresce",
+        "link-present": "cresc",
         "link-perfect": "cret",
         "final": "crease",
         "type": "verb",
@@ -1356,7 +1365,7 @@
     },
     {
         "key": "cruciare",
-        "link-present": "crucia",
+        "link-present": "cruci",
         "link-perfect": "cruciat",
         "final": "cruciate",
         "type": "verb",
@@ -1402,7 +1411,7 @@
     },
     {
         "key": "culminare",
-        "link-present": "culmina",
+        "link-present": "culmin",
         "link-perfect": "culminat",
         "final": "culminate",
         "type": "verb",
@@ -1423,7 +1432,7 @@
     },
     {
         "key": "cupere",
-        "link-present": "cupe",
+        "link-present": "cup",
         "link-perfect": "cupit",
         "final": "covet",
         "type": "verb",
@@ -1443,7 +1452,7 @@
     },
     {
         "key": "curare",
-        "link-present": "cura",
+        "link-present": "cur",
         "link-perfect": "curat",
         "final": "curate",
         "type": "verb",
@@ -1455,7 +1464,7 @@
     },
     {
         "key": "currere",
-        "link-present": "curre",
+        "link-present": "curr",
         "link-perfect": "curs",
         "final": "cur",
         "type": "verb",
@@ -1466,7 +1475,7 @@
     },
     {
         "key": "damnare",
-        "link-present": "damna",
+        "link-present": "damn",
         "link-perfect": "damnat",
         "final": "damn",
         "type": "verb",
@@ -1479,7 +1488,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "demna",
+                "link-present": "demn",
                 "link-perfect": "demnat"
             }
         ],
@@ -1488,7 +1497,7 @@
     },
     {
         "key": "deminuere",
-        "link-present": "diminue",
+        "link-present": "diminu",
         "link-perfect": "diminut",
         "final": "diminish",
         "type": "verb",
@@ -1526,7 +1535,7 @@
     },
     {
         "key": "debere",
-        "link-present": "debe",
+        "link-present": "deb",
         "link-perfect": "debit",
         "final": "debit",
         "type": "verb",
@@ -1555,7 +1564,7 @@
     },
     {
         "key": "defendere",
-        "link-present": "defende",
+        "link-present": "defend",
         "link-perfect": "defens",
         "final": "defend",
         "type": "verb",
@@ -1566,7 +1575,7 @@
     },
     {
         "key": "delectare",
-        "link-present": "delecta",
+        "link-present": "delect",
         "link-perfect": "delectat",
         "final": "delect",
         "type": "verb",
@@ -1577,7 +1586,7 @@
     },
     {
         "key": "delere",
-        "link-present": "dele",
+        "link-present": "del",
         "link-perfect": "delet",
         "final": "delete",
         "type": "verb",
@@ -1588,7 +1597,7 @@
     },
     {
         "key": "dicere",
-        "link-present": "dice",
+        "link-present": "dic",
         "link-perfect": "dict",
         "final": "dict",
         "type": "verb",
@@ -1602,7 +1611,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "dicta"
+                "link": "dict",
+                "link-present-join": "a"
             }
         ],
         "origin": "latin"
@@ -1643,7 +1653,7 @@
     },
     {
         "key": "dividere",
-        "link-present": "divide",
+        "link-present": "divid",
         "link-perfect": "divis",
         "final": "divide",
         "type": "verb",
@@ -1662,7 +1672,7 @@
     },
     {
         "key": "docere",
-        "link-present": "doce",
+        "link-present": "doc",
         "link-perfect": "doct",
         "final": "doce",
         "type": "verb",
@@ -1674,7 +1684,7 @@
     },
     {
         "key": "dolere",
-        "link-present": "dole",
+        "link-present": "dol",
         "link-perfect": "dolit",
         "final": "dole",
         "type": "verb",
@@ -1694,7 +1704,7 @@
     },
     {
         "key": "donare",
-        "link-present": "dona",
+        "link-present": "don",
         "link-perfect": "donat",
         "final": "donate",
         "type": "verb",
@@ -1705,7 +1715,7 @@
     },
     {
         "key": "dormire",
-        "link-present": "dorma",
+        "link-present": "dorm",
         "link-perfect": "dormit",
         "final": "dorm",
         "type": "verb",
@@ -1735,7 +1745,7 @@
     },
     {
         "key": "dubitare",
-        "link-present": "dubita",
+        "link-present": "dubit",
         "link-perfect": "dubit",
         "final": "doubt",
         "type": "verb",
@@ -1746,7 +1756,7 @@
     },
     {
         "key": "ducere",
-        "link-present": "duce",
+        "link-present": "duc",
         "link-perfect": "duct",
         "final": "duct",
         "type": "verb",
@@ -1774,7 +1784,7 @@
     },
     {
         "key": "durare",
-        "link-present": "dura",
+        "link-present": "dur",
         "link-perfect": "durat",
         "final": "dure",
         "type": "verb",
@@ -1794,7 +1804,7 @@
     },
     {
         "key": "educare",
-        "link-present": "educa",
+        "link-present": "educ",
         "link-perfect": "educat",
         "final": "educate",
         "type": "verb",
@@ -1814,7 +1824,7 @@
     },
     {
         "key": "emere",
-        "link-present": "emeri",
+        "link-present": "emer",
         "link-perfect": "empt",
         "final": "empt",
         "type": "verb",
@@ -1851,7 +1861,7 @@
     },
     {
         "key": "errare",
-        "link-present": "erra",
+        "link-present": "err",
         "link-perfect": "errat",
         "final": "err",
         "type": "verb",
@@ -1863,7 +1873,7 @@
     },
     {
         "key": "esse",
-        "link-present": "esse",
+        "link-present": "ess",
         "link-perfect": "essat",
         "final": "est",
         "type": "verb",
@@ -1883,7 +1893,7 @@
     },
     {
         "key": "estimare",
-        "link-present": "estima",
+        "link-present": "estim",
         "link-perfect": "estimat",
         "final": "estimate",
         "type": "verb",
@@ -1895,7 +1905,7 @@
     },
     {
         "key": "evitare",
-        "link-present": "evita",
+        "link-present": "evit",
         "link-perfect": "evitat",
         "final": "evitate",
         "type": "verb",
@@ -1924,7 +1934,7 @@
     },
     {
         "key": "excellere",
-        "link-present": "excelle",
+        "link-present": "excell",
         "link-perfect": "excels",
         "final": "excel",
         "type": "verb",
@@ -1935,7 +1945,7 @@
     },
     {
         "key": "experiri",
-        "link-present": "experie",
+        "link-present": "exper",
         "link-perfect": "expert",
         "final": "exper",
         "type": "verb",
@@ -1955,7 +1965,7 @@
     },
     {
         "key": "fabulari",
-        "link-present": "fabula",
+        "link-present": "fabul",
         "link-perfect": "fabulat",
         "final": "fabulate",
         "type": "verb",
@@ -1966,7 +1976,8 @@
     },
     {
         "key": "facere",
-        "link-present": "faci",
+        "link-present": "fac",
+        "link-present-join": "ie",
         "link-perfect": "fact",
         "final": "fact",
         "type": "verb",
@@ -1979,7 +1990,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "fici",
+                "link-present": "fic",
                 "link-perfect": "fect",
                 "final": "fect"
             }
@@ -2017,7 +2028,7 @@
     },
     {
         "key": "fallere",
-        "link-present": "falli",
+        "link-present": "fall",
         "link-perfect": "fals",
         "final": "fault",
         "type": "verb",
@@ -2064,7 +2075,7 @@
     },
     {
         "key": "fateri",
-        "link-present": "fessa",
+        "link-present": "fess",
         "link-perfect": "fess",
         "final": "fess",
         "type": "verb",
@@ -2075,7 +2086,7 @@
     },
     {
         "key": "fatigare",
-        "link-present": "fatiga",
+        "link-present": "fatig",
         "link-perfect": "fatigat",
         "final": "fatigue",
         "type": "verb",
@@ -2138,7 +2149,8 @@
     },
     {
         "key": "ferre",
-        "link-present": "fere",
+        "link-present": "fer",
+        "link-present-join": "e",
         "link-perfect": "lat",
         "final": "fer",
         "type": "verb",
@@ -2151,7 +2163,7 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "fera"
+                "link-present-join": "a"
             }
         ],
         "tags": ["transitive", "motion"],
@@ -2193,7 +2205,7 @@
     },
     {
         "key": "fidere",
-        "link-present": "fide",
+        "link-present": "fid",
         "link-perfect": "fis",
         "final": "fide",
         "type": "verb",
@@ -2204,7 +2216,7 @@
     },
     {
         "key": "figere",
-        "link-present": "fige",
+        "link-present": "fig",
         "link-perfect": "fixat",
         "final": "fix",
         "type": "verb",
@@ -2233,7 +2245,7 @@
     },
     {
         "key": "findere",
-        "link-present": "finde",
+        "link-present": "find",
         "link-perfect": "fiss",
         "final": "finde",
         "type": "verb",
@@ -2244,7 +2256,7 @@
     },
     {
         "key": "fingere",
-        "link-present": "finge",
+        "link-present": "fing",
         "link-perfect": "fict",
         "final": "feign",
         "type": "verb",
@@ -2256,7 +2268,7 @@
     },
     {
         "key": "finire",
-        "link-present": "fini",
+        "link-present": "fin",
         "link-perfect": "finit",
         "final": "fine",
         "type": "verb",
@@ -2276,7 +2288,7 @@
     },
     {
         "key": "flare",
-        "link-present": "flata",
+        "link-present": "flat",
         "link-perfect": "flat",
         "final": "flate",
         "type": "verb",
@@ -2287,7 +2299,7 @@
     },
     {
         "key": "flectere",
-        "link-present": "flecte",
+        "link-present": "flect",
         "link-perfect": "flect",
         "final": "flect",
         "type": "verb",
@@ -2301,7 +2313,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "flexi"
+                "link": "flex",
+                "link-present-join": "i"
             }
         ],
         "origin": "latin",
@@ -2309,7 +2322,7 @@
     },
     {
         "key": "fligere",
-        "link-present": "flige",
+        "link-present": "flig",
         "link-perfect": "flict",
         "final": "flict",
         "type": "verb",
@@ -2329,7 +2342,7 @@
     },
     {
         "key": "fluere",
-        "link-present": "flue",
+        "link-present": "flu",
         "link-perfect": "fluct",
         "final": "fluct",
         "type": "verb",
@@ -2340,7 +2353,7 @@
     },
     {
         "key": "fluctuare",
-        "link-present": "fluctua",
+        "link-present": "fluctu",
         "link-perfect": "fluctuat",
         "final": "fluctuate",
         "type": "verb",
@@ -2369,7 +2382,7 @@
     },
     {
         "key": "fodere",
-        "link-present": "fode",
+        "link-present": "fod",
         "link-perfect": "foss",
         "final": "fode",
         "type": "verb",
@@ -2389,7 +2402,7 @@
     },
     {
         "key": "forare",
-        "link-present": "fora",
+        "link-present": "for",
         "link-perfect": "forat",
         "final": "forate",
         "type": "verb",
@@ -2426,7 +2439,7 @@
     },
     {
         "key": "fragrare",
-        "link-present": "fragra",
+        "link-present": "fragr",
         "link-perfect": "fragrat",
         "final": "fragrate",
         "type": "verb",
@@ -2437,7 +2450,7 @@
     },
     {
         "key": "frangere",
-        "link-present": "fracta",
+        "link-present": "frang",
         "link-perfect": "fract",
         "final": "fract",
         "type": "verb",
@@ -2445,7 +2458,7 @@
         "gloss": "shatter",
         "tags": ["transitive", "dividing"],
         "origin": "latin",
-        "notes": "also fragile, disfrange"
+        "notes": "Present: refractant, frangible. Final: fragile, disfrange."
     },
     {
         "key": "frater",
@@ -2467,7 +2480,7 @@
     },
     {
         "key": "fricare",
-        "link-present": "frica",
+        "link-present": "fric",
         "link-perfect": "frict",
         "final": "fricate",
         "type": "verb",
@@ -2515,7 +2528,7 @@
     },
     {
         "key": "frustrari",
-        "link-present": "frustra",
+        "link-present": "frustr",
         "link-perfect": "frustrat",
         "final": "frustrate",
         "type": "verb",
@@ -2544,7 +2557,8 @@
     },
     {
         "key": "fugere",
-        "link-present": "fuga",
+        "link-present": "fug",
+        "link-present-join": "ie",
         "link-perfect": "fugit",
         "final": "fuge",
         "type": "verb",
@@ -2564,7 +2578,7 @@
     },
     {
         "key": "fundere",
-        "link-present": "fuse",
+        "link-present": "fus",
         "link-perfect": "fus",
         "final": "fuse",
         "type": "verb",
@@ -2576,7 +2590,7 @@
     },
     {
         "key": "fungi",
-        "link-present": "funge",
+        "link-present": "fung",
         "link-perfect": "funct",
         "final": "funct",
         "type": "verb",
@@ -2625,7 +2639,7 @@
     },
     {
         "key": "garrire",
-        "link-present": "garri",
+        "link-present": "garr",
         "link-perfect": "garrit",
         "final": "gare",
         "type": "verb",
@@ -2672,7 +2686,7 @@
     },
     {
         "key": "generare",
-        "link-present": "genera",
+        "link-present": "gener",
         "link-perfect": "generat",
         "final": "generate",
         "type": "verb",
@@ -2683,7 +2697,7 @@
     },
     {
         "key": "gerere",
-        "link-present": "gesti",
+        "link-present": "ger",
         "link-perfect": "gest",
         "final": "gest",
         "type": "verb",
@@ -2691,7 +2705,7 @@
         "gloss": "carry",
         "tags": ["intransitive", "motion"],
         "origin": "latin",
-        "notes": "digestion vs gestation"
+        "notes": "digestion vs gestation. congestant vs oxidigerence / belligerent"
     },
     {  
         "key": "gigant",
@@ -2758,7 +2772,8 @@
     },
     {
         "key": "gradi",
-        "link-present": "gradi",
+        "link-present": "grad",
+        "link-present-join": "ie",
         "link-perfect": "gress",
         "final": "gress",
         "type": "verb",
@@ -2822,7 +2837,7 @@
     },
     {
         "key": "gubernare",
-        "link-present": "governa",
+        "link-present": "govern",
         "link-perfect": "governat",
         "final": "govern",
         "type": "verb",
@@ -2833,7 +2848,7 @@
     },
     {
         "key": "gustare",
-        "link-present": "gusta",
+        "link-present": "gust",
         "link-perfect": "gustat",
         "final": "gust",
         "type": "verb",
@@ -2844,7 +2859,7 @@
     },
     {
         "key": "habitare",
-        "link-present": "habita",
+        "link-present": "habit",
         "link-perfect": "habitat",
         "final": "habit",
         "type": "verb",
@@ -2855,7 +2870,7 @@
     },
     {
         "key": "habere",
-        "link-present": "habe",
+        "link-present": "hab",
         "link-perfect": "habit",
         "final": "habit",
         "type": "verb",
@@ -2868,7 +2883,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "hibe",
+                "link-present": "hib",
                 "link-perfect": "hibit",
                 "final": "hibit"
             }
@@ -2879,7 +2894,7 @@
     },
     {
         "key": "habituare",
-        "link-present": "habitua",
+        "link-present": "habitu",
         "link-perfect": "habituat",
         "final": "habituate",
         "type": "verb",
@@ -2890,7 +2905,7 @@
     },
     {
         "key": "haerere",
-        "link-present": "here",
+        "link-present": "her",
         "link-perfect": "hes",
         "final": "here",
         "type": "verb",
@@ -2901,7 +2916,7 @@
     },
     {
         "key": "haurire",
-        "link-present": "hauri",
+        "link-present": "haur",
         "link-perfect": "haust",
         "final": "haust",
         "type": "verb",
@@ -2965,7 +2980,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "icide"
+                        "has-key": "cide"
                     }
                 },
                 "link": "hom"
@@ -2985,7 +3000,7 @@
     },
     {
         "key": "horrere",
-        "link-present": "horre",
+        "link-present": "horr",
         "link-perfect": "horat",
         "final": "hor",
         "type": "verb",
@@ -2996,7 +3011,7 @@
     },
     {
         "key": "hortari",
-        "link-present": "horta",
+        "link-present": "hort",
         "link-perfect": "hortat",
         "final": "hort",
         "type": "verb",
@@ -3077,7 +3092,7 @@
     },
     {
         "key": "ignorare",
-        "link-present": "ignora",
+        "link-present": "ignor",
         "link-perfect": "ignorat",
         "final": "ignore",
         "type": "verb",
@@ -3097,7 +3112,7 @@
     },
     {
         "key": "imitari",
-        "link-present": "imita",
+        "link-present": "imit",
         "link-perfect": "imitat",
         "final": "imitate",
         "type": "verb",
@@ -3108,7 +3123,7 @@
     },
     {
         "key": "imperare",
-        "link-present": "impera",
+        "link-present": "imper",
         "link-perfect": "imperat",
         "final": "imperate",
         "type": "verb",
@@ -3119,7 +3134,7 @@
     },
     {
         "key": "incendere",
-        "link-present": "incende",
+        "link-present": "incend",
         "link-perfect": "incens",
         "final": "incense",
         "type": "verb",
@@ -3173,7 +3188,7 @@
     },
     {
         "key": "initiare",
-        "link-present": "initia",
+        "link-present": "initi",
         "link-perfect": "initiat",
         "final": "initiate",
         "type": "verb",
@@ -3210,7 +3225,7 @@
     },
     {
         "key": "intueri",
-        "link-present": "intue",
+        "link-present": "intu",
         "link-perfect": "intuit",
         "final": "intuit",
         "type": "verb",
@@ -3232,7 +3247,7 @@
     },
     {
         "key": "joculare",
-        "link-present": "jocula",
+        "link-present": "jocul",
         "link-perfect": "joculat",
         "final": "joculate",
         "type": "verb",
@@ -3243,7 +3258,7 @@
     },
     {
         "key": "jubilare",
-        "link-present": "jubila",
+        "link-present": "jubil",
         "link-perfect": "jubilat",
         "final": "jubilate",
         "type": "verb",
@@ -3254,7 +3269,7 @@
     },
     {
         "key": "jacere",
-        "link-present": "jace",
+        "link-present": "jac",
         "link-perfect": "jact",
         "final": "jact",
         "type": "verb",
@@ -3285,7 +3300,7 @@
     },
     {
         "key": "judicare",
-        "link-present": "judica",
+        "link-present": "judic",
         "link-perfect": "judicat",
         "final": "judicate",
         "type": "verb",
@@ -3296,7 +3311,7 @@
     },
     {
         "key": "jugare",
-        "link-present": "juga",
+        "link-present": "jug",
         "link-perfect": "jugat",
         "final": "jugate",
         "type": "verb",
@@ -3316,7 +3331,7 @@
     },
     {
         "key": "jungere",
-        "link-present": "junge",
+        "link-present": "jung",
         "link-perfect": "junct",
         "final": "join",
         "type": "verb",
@@ -3336,7 +3351,7 @@
     },
     {
         "key": "jurare",
-        "link-present": "jura",
+        "link-present": "jur",
         "link-perfect": "jurat",
         "final": "jure",
         "type": "verb",
@@ -3366,7 +3381,8 @@
     },
     {
         "key": "labi",
-        "link-present": "labi",
+        "link-present": "lab",
+        "link-present-join": "ie",
         "link-perfect": "laps",
         "final": "lapse",
         "type": "verb",
@@ -3386,7 +3402,7 @@
     },
     {
         "key": "laborare",
-        "link-present": "labora",
+        "link-present": "labor",
         "link-perfect": "laborat",
         "final": "laborate",
         "type": "verb",
@@ -3407,7 +3423,7 @@
     },
     {
         "key": "lacerare",
-        "link-present": "lacera",
+        "link-present": "lacer",
         "link-perfect": "lacerat",
         "final": "lacerate",
         "type": "verb",
@@ -3427,7 +3443,7 @@
     },
     {
         "key": "lachrymare",
-        "link-present": "lachryma",
+        "link-present": "lachrym",
         "link-perfect": "lachrymat",
         "final": "lachrymate",
         "type": "verb",
@@ -3457,7 +3473,7 @@
     },
     {
         "key": "laedere",
-        "link-present": "lide",
+        "link-present": "lid",
         "link-perfect": "lis",
         "final": "lide",
         "type": "verb",
@@ -3512,7 +3528,7 @@
     },
     {
         "key": "latrare",
-        "link-present": "latra",
+        "link-present": "latr",
         "link-perfect": "latrat",
         "final": "latrate",
         "type": "verb",
@@ -3532,7 +3548,7 @@
     },
     {
         "key": "laudare",
-        "link-present": "lauda",
+        "link-present": "laud",
         "link-perfect": "laudat",
         "final": "laud",
         "type": "verb",
@@ -3552,7 +3568,7 @@
     },
     {
         "key": "lavare",
-        "link-present": "lava",
+        "link-present": "lav",
         "link-perfect": "lavat",
         "final": "lavate",
         "type": "verb",
@@ -3564,7 +3580,7 @@
     },
     {
         "key": "lavere",
-        "link-present": "lave",
+        "link-present": "lav",
         "link-perfect": "lot",
         "final": "lave",
         "type": "verb",
@@ -3583,7 +3599,7 @@
     },
     {
         "key": "laxare",
-        "link-present": "laxa",
+        "link-present": "lax",
         "link-perfect": "laxat",
         "final": "lax",
         "type": "verb",
@@ -3603,7 +3619,7 @@
     },
     {
         "key": "linere",
-        "link-present": "line",
+        "link-present": "lin",
         "link-perfect": "lit",
         "final": "line",
         "type": "verb",
@@ -3614,7 +3630,7 @@
     },
     {
         "key": "luere",
-        "link-present": "lue",
+        "link-present": "lu",
         "link-perfect": "lut",
         "final": "lute",
         "type": "verb",
@@ -3635,7 +3651,7 @@
     },
     {
         "key": "legare",
-        "link-present": "lega",
+        "link-present": "leg",
         "link-perfect": "legat",
         "final": "legate",
         "type": "verb",
@@ -3646,7 +3662,7 @@
     },
     {
         "key": "legere",
-        "link-present": "lege",
+        "link-present": "leg",
         "link-perfect": "lect",
         "final": "lege",
         "type": "verb",
@@ -3674,7 +3690,7 @@
     },
     {
         "key": "levare",
-        "link-present": "leva",
+        "link-present": "lev",
         "link-perfect": "levat",
         "final": "levate",
         "type": "verb",
@@ -3728,7 +3744,7 @@
     },
     {
         "key": "liberare",
-        "link-present": "libera",
+        "link-present": "liber",
         "link-perfect": "liberat",
         "final": "liberate",
         "type": "verb",
@@ -3739,7 +3755,7 @@
     },
     {
         "key": "lacere",
-        "link-present": "lice",
+        "link-present": "lic",
         "link-perfect": "licit",
         "final": "licit",
         "type": "verb",
@@ -3751,7 +3767,7 @@
     },
     {
         "key": "ligare",
-        "link-present": "liga",
+        "link-present": "lig",
         "link-perfect": "ligat",
         "final": "ligate",
         "type": "verb",
@@ -3762,7 +3778,7 @@
     },
     {
         "key": "ligere",
-        "link-present": "lega",
+        "link-present": "leg",
         "link-perfect": "lect",
         "final": "lect",
         "type": "verb",
@@ -3828,7 +3844,7 @@
     },
     {
         "key": "linquere",
-        "link-present": "linque",
+        "link-present": "linqu",
         "link-perfect": "lict",
         "final": "linquish",
         "type": "verb",
@@ -3876,7 +3892,7 @@
     },
     {
         "key": "loqui",
-        "link-present": "loque",
+        "link-present": "loqu",
         "link-perfect": "locut",
         "final": "locute",
         "type": "verb",
@@ -3887,7 +3903,7 @@
     },
     {
         "key": "lucere",
-        "link-present": "luce",
+        "link-present": "luc",
         "link-perfect": "luc",
         "final": "luce",
         "type": "verb",
@@ -3898,7 +3914,7 @@
     },
     {
         "key": "lucrari",
-        "link-present": "lucra",
+        "link-present": "lucr",
         "link-perfect": "lucrat",
         "final": "lucre",
         "type": "verb",
@@ -3919,7 +3935,7 @@
     },
     {
         "key": "luctari",
-        "link-present": "lucta",
+        "link-present": "luct",
         "link-perfect": "luct",
         "final": "luct",
         "type": "verb",
@@ -3930,7 +3946,7 @@
     },
     {
         "key": "ludere",
-        "link-present": "lude",
+        "link-present": "lud",
         "link-perfect": "lus",
         "final": "lude",
         "type": "verb",
@@ -3968,7 +3984,7 @@
     },
     {
         "key": "lustrare",
-        "link-present": "lustra",
+        "link-present": "lustr",
         "link-perfect": "lustrat",
         "final": "lustrate",
         "type": "verb",
@@ -4029,7 +4045,7 @@
     },
     {
         "key": "malleare",
-        "link-present": "mallea",
+        "link-present": "malle",
         "link-perfect": "malleat",
         "final": "malleate",
         "type": "verb",
@@ -4049,7 +4065,7 @@
     },
     {
         "key": "mandare",
-        "link-present": "manda",
+        "link-present": "mand",
         "link-perfect": "mandat",
         "final": "mand",
         "type": "verb",
@@ -4060,7 +4076,7 @@
     },
     {
         "key": "manere",
-        "link-present": "mane",
+        "link-present": "man",
         "link-perfect": "mans",
         "final": "main",
         "type": "verb",
@@ -4079,7 +4095,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "iform"
+                        "has-key": "form"
                     }
                 },
                 "link": "man"
@@ -4186,7 +4202,7 @@
     },
     {
         "key": "memorare",
-        "link-present": "memora",
+        "link-present": "memor",
         "link-perfect": "memorat",
         "final": "memorate",
         "type": "verb",
@@ -4233,7 +4249,7 @@
     },
     {
         "key": "mensurare",
-        "link-present": "mensura",
+        "link-present": "mensur",
         "link-perfect": "mensurat",
         "final": "mensurate",
         "type": "verb",
@@ -4253,7 +4269,7 @@
     },
     {
         "key": "mergere",
-        "link-present": "merge",
+        "link-present": "merg",
         "link-perfect": "mers",
         "final": "merse",
         "type": "verb",
@@ -4267,7 +4283,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "mersi"
+                "link": "mers",
+                "link-present-join": "i"
             }
         ],
         "origin": "latin",
@@ -4275,7 +4292,7 @@
     },
     {
         "key": "merere",
-        "link-present": "mere",
+        "link-present": "mer",
         "link-perfect": "merit",
         "final": "merit",
         "type": "verb",
@@ -4296,7 +4313,7 @@
     },
     {
         "key": "migrare",
-        "link-present": "migra",
+        "link-present": "migr",
         "link-perfect": "migrat",
         "final": "migrate",
         "type": "verb",
@@ -4316,7 +4333,7 @@
     },
     {
         "key": "militare",
-        "link-present": "milita",
+        "link-present": "milit",
         "link-perfect": "militat",
         "final": "militate",
         "type": "verb",
@@ -4327,7 +4344,8 @@
     },
     {
         "key": "minere",
-        "link-present": "mini",
+        "link-present": "min",
+        "link-present-join": "ie",
         "link-perfect": "minit",
         "final": "mine",
         "type": "verb",
@@ -4347,7 +4365,7 @@
     },
     {
         "key": "mirari",
-        "link-present": "mira",
+        "link-present": "mir",
         "link-perfect": "mirat",
         "final": "mire",
         "type": "verb",
@@ -4358,7 +4376,7 @@
     },
     {
         "key": "mittere",
-        "link-present": "mitta",
+        "link-present": "mitt",
         "link-perfect": "miss",
         "final": "mit",
         "type": "verb",
@@ -4372,7 +4390,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "missi"
+                "link": "miss",
+                "link-present-join": "i"
             }
         ],
         "origin": "latin",
@@ -4380,7 +4399,7 @@
     },
     {
         "key": "miscere",
-        "link-present": "misce",
+        "link-present": "misc",
         "link-perfect": "mixt",
         "final": "mix",
         "type": "verb",
@@ -4417,7 +4436,7 @@
     },
     {
         "key": "molestare",
-        "link-present": "molesta",
+        "link-present": "molest",
         "link-perfect": "molestat",
         "final": "molest",
         "type": "verb",
@@ -4445,7 +4464,7 @@
     },
     {
         "key": "monstrare",
-        "link-present": "monstra",
+        "link-present": "monstr",
         "link-perfect": "monstrat",
         "final": "monstrate",
         "type": "verb",
@@ -4466,7 +4485,7 @@
     },
     {
         "key": "mordere",
-        "link-present": "morda",
+        "link-present": "mord",
         "link-perfect": "mors",
         "final": "morse",
         "type": "verb",
@@ -4486,7 +4505,7 @@
     },
     {
         "key": "movere",
-        "link-present": "move",
+        "link-present": "mov",
         "link-perfect": "mot",
         "final": "move",
         "type": "verb",
@@ -4499,7 +4518,7 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "mova"
+                "link-present-join": "a"
             }
         ],
         "tags": ["transitive"],
@@ -4516,7 +4535,7 @@
     },
     {
         "key": "mugire",
-        "link-present": "mugie",
+        "link-present": "mug",
         "link-perfect": "mugit",
         "final": "muge",
         "type": "verb",
@@ -4544,7 +4563,7 @@
     },
     {
         "key": "mutare",
-        "link-present": "muta",
+        "link-present": "mut",
         "link-perfect": "mutat",
         "final": "mute",
         "type": "verb",
@@ -4556,7 +4575,7 @@
     },
     {
         "key": "narrare",
-        "link-present": "narra",
+        "link-present": "narr",
         "link-perfect": "narrat",
         "final": "narrate",
         "type": "verb",
@@ -4567,7 +4586,7 @@
     },
     {
         "key": "nasci",
-        "link-present": "nasce",
+        "link-present": "nasc",
         "link-perfect": "nat",
         "final": "nesce",
         "type": "verb",
@@ -4587,7 +4606,7 @@
     },
     {
         "key": "natare",
-        "link-present": "nata",
+        "link-present": "nat",
         "link-perfect": "natat",
         "final": "nate",
         "type": "verb",
@@ -4616,7 +4635,7 @@
     },
     {
         "key": "navigare",
-        "link-present": "naviga",
+        "link-present": "navig",
         "link-perfect": "navigat",
         "final": "navigate",
         "type": "verb",
@@ -4644,7 +4663,7 @@
     },
     {
         "key": "nectare",
-        "link-present": "necta",
+        "link-present": "nect",
         "link-perfect": "nect",
         "final": "nect",
         "type": "verb",
@@ -4656,7 +4675,7 @@
     },
     {
         "key": "negare",
-        "link-present": "nega",
+        "link-present": "neg",
         "link-perfect": "negat",
         "final": "negate",
         "type": "verb",
@@ -4667,7 +4686,7 @@
     },
     {
         "key": "neglegere",
-        "link-present": "neglige",
+        "link-present": "neglig",
         "link-perfect": "neglect",
         "final": "neglect",
         "type": "verb",
@@ -4703,7 +4722,7 @@
     },
     {
         "key": "nocere",
-        "link-present": "noce",
+        "link-present": "noc",
         "link-perfect": "nocit",
         "final": "noce",
         "type": "verb",
@@ -4723,7 +4742,7 @@
     },
     {
         "key": "nominare",
-        "link-present": "nomina",
+        "link-present": "nomin",
         "link-perfect": "nominat",
         "final": "nominate",
         "type": "verb",
@@ -4761,7 +4780,7 @@
     },
     {
         "key": "nubere",
-        "link-present": "nube",
+        "link-present": "nub",
         "link-perfect": "nupt",
         "final": "nube",
         "type": "verb",
@@ -4798,7 +4817,7 @@
     },
     {
         "key": "numerare",
-        "link-present": "numera",
+        "link-present": "numer",
         "link-perfect": "numerat",
         "final": "numerate",
         "type": "verb",
@@ -4818,7 +4837,7 @@
     },
     {
         "key": "nuntiare",
-        "link-present": "nuntia",
+        "link-present": "nunti",
         "link-perfect": "nunciat",
         "final": "nounce",
         "type": "verb",
@@ -4830,7 +4849,7 @@
     },
     {
         "key": "nutrire",
-        "link-present": "nutri",
+        "link-present": "nutr",
         "link-perfect": "nutrit",
         "final": "nutrit",
         "type": "verb",
@@ -4860,7 +4879,7 @@
     },
     {
         "key": "obliviare",
-        "link-present": "oblivia",
+        "link-present": "oblivi",
         "link-perfect": "obliviat",
         "final": "obliviate",
         "type": "verb",
@@ -4879,7 +4898,7 @@
     },
     {
         "key": "occultare",
-        "link-present": "occulta",
+        "link-present": "occult",
         "link-perfect": "occultat",
         "final": "occultate",
         "type": "verb",
@@ -4908,7 +4927,7 @@
     },
     {
         "key": "offendere",
-        "link-present": "offende",
+        "link-present": "offend",
         "link-perfect": "offens",
         "final": "offend",
         "type": "verb",
@@ -4964,7 +4983,7 @@
     },
     {
         "key": "optare",
-        "link-present": "opta",
+        "link-present": "opt",
         "link-perfect": "opt",
         "final": "opt",
         "type": "verb",
@@ -4983,7 +5002,7 @@
     },
     {
         "key": "orare",
-        "link-present": "ora",
+        "link-present": "or",
         "link-perfect": "orat",
         "final": "ore",
         "type": "verb",
@@ -5003,7 +5022,7 @@
     },
     {
         "key": "ordinare",
-        "link-present": "ordina",
+        "link-present": "ordin",
         "link-perfect": "ordinat",
         "final": "ordinate",
         "type": "verb",
@@ -5014,7 +5033,7 @@
     },
     {
         "key": "oriri",
-        "link-present": "orie",
+        "link-present": "or",
         "link-perfect": "ort",
         "final": "ort",
         "type": "verb",
@@ -5088,7 +5107,7 @@
     },
     {
         "key": "paenitere",
-        "link-present": "penite",
+        "link-present": "penit",
         "link-perfect": "penit",
         "final": "pent",
         "type": "verb",
@@ -5134,7 +5153,7 @@
     },
     {
         "key": "pandere",
-        "link-present": "pande",
+        "link-present": "pand",
         "link-perfect": "pans",
         "final": "pand",
         "type": "verb",
@@ -5147,7 +5166,7 @@
     },
     {
         "key": "pangere",
-        "link-present": "pinge",
+        "link-present": "ping",
         "link-perfect": "pact",
         "final": "pact",
         "type": "verb",
@@ -5159,7 +5178,7 @@
     },
     {
         "key": "palpitare",
-        "link-present": "palpita",
+        "link-present": "palpit",
         "link-perfect": "palpitat",
         "final": "palpitate",
         "type": "verb",
@@ -5179,7 +5198,7 @@
     },
     {
         "key": "parare",
-        "link-present": "para",
+        "link-present": "par",
         "link-perfect": "parat",
         "final": "parate",
         "type": "verb",
@@ -5190,7 +5209,7 @@
     },
     {
         "key": "parere",
-        "link-present": "pare",
+        "link-present": "par",
         "link-perfect": "part",
         "final": "pare",
         "type": "verb",
@@ -5202,7 +5221,7 @@
     },
     {
         "key": "partiri",
-        "link-present": "parti",
+        "link-present": "part",
         "link-perfect": "partit",
         "final": "part",
         "type": "verb",
@@ -5230,7 +5249,7 @@
     },
     {
         "key": "pascere",
-        "link-present": "pasce",
+        "link-present": "pasc",
         "link-perfect": "past",
         "final": "past",
         "type": "verb",
@@ -5259,7 +5278,8 @@
     },
     {
         "key": "pati",
-        "link-present": "pati",
+        "link-present": "pat",
+        "link-present-join": "ie",
         "link-perfect": "pass",
         "final": "pass",
         "type": "verb",
@@ -5305,7 +5325,7 @@
     },
     {
         "key": "peccare",
-        "link-present": "pecca",
+        "link-present": "pecc",
         "link-perfect": "peccat",
         "final": "peccate",
         "type": "verb",
@@ -5335,7 +5355,7 @@
     },
     {
         "key": "pellere",
-        "link-present": "pelle",
+        "link-present": "pell",
         "link-perfect": "puls",
         "final": "pel",
         "type": "verb",
@@ -5346,8 +5366,9 @@
     },
     {
         "key": "pendere",
-        "link-present": "penda",
+        "link-present": "pend",
         "link-perfect": "pens",
+        "link-present-join": "a",
         "final": "pend",
         "type": "verb",
         "conjugation": 3,
@@ -5357,7 +5378,7 @@
     },
     {
         "key": "penetrare",
-        "link-present": "penetra",
+        "link-present": "penetr",
         "link-perfect": "penetrat",
         "final": "penetrate",
         "type": "verb",
@@ -5369,7 +5390,7 @@
     },
     {
         "key": "pensare",
-        "link-present": "pensa",
+        "link-present": "pens",
         "link-perfect": "pensat",
         "final": ["pensate", "pense"],
         "type": "verb",
@@ -5381,7 +5402,7 @@
     },
     {
         "key": "perdere",
-        "link-present": "perde",
+        "link-present": "perd",
         "link-perfect": "perdit",
         "final": "perd",
         "type": "verb",
@@ -5392,7 +5413,8 @@
     },
     {
         "key": "performer",
-        "link-present": "performa",
+        "link-present": "perform",
+        "link-present-join": "a",
         "link-perfect": "performat",
         "final": "perform",
         "type": "verb",
@@ -5448,7 +5470,7 @@
     },
     {
         "key": "petere",
-        "link-present": "pete",
+        "link-present": "pet",
         "link-perfect": "petit",
         "final": "pete",
         "type": "verb",
@@ -5486,7 +5508,7 @@
     },
     {
         "key": "pingere",
-        "link-present": "pinge",
+        "link-present": "ping",
         "link-perfect": "pict",
         "final": "pict",
         "type": "verb",
@@ -5525,7 +5547,7 @@
     },
     {
         "key": "placere",
-        "link-present": "place",
+        "link-present": "plac",
         "link-perfect": "placat",
         "final": "place",
         "type": "verb",
@@ -5554,7 +5576,7 @@
     },
     {
         "key": "plaudere",
-        "link-present": "plaude",
+        "link-present": "plaud",
         "link-perfect": "plaus",
         "final": "plause",
         "type": "verb",
@@ -5565,7 +5587,7 @@
     },
     {
         "key": "plectere",
-        "link-present": "plecte",
+        "link-present": "plect",
         "link-perfect": "plect",
         "final": "plect",
         "type": "verb",
@@ -5584,7 +5606,8 @@
     },
     {
         "key": "plere",
-        "link-present": "ple",
+        "link-present": "pl",
+        "link-present-join": "e",
         "link-perfect": "plet",
         "final": "plete",
         "type": "verb",
@@ -5598,14 +5621,15 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "pleta"
+                "link": "plet",
+                "link-present-join": "a"
             }
         ],
         "origin": "latin"
     },
     {
         "key": "plicare",
-        "link-present": "plica",
+        "link-present": "plic",
         "link-perfect": "plicat",
         "final": "plicate",
         "type": "verb",
@@ -5617,7 +5641,7 @@
     },
     {
         "key": "plodere",
-        "link-present": "plode",
+        "link-present": "plod",
         "link-perfect": "plos",
         "final": "plode",
         "type": "verb",
@@ -5628,7 +5652,7 @@
     },
     {
         "key": "plorare",
-        "link-present": "plora",
+        "link-present": "plor",
         "link-perfect": "plorat",
         "final": "plore",
         "type": "verb",
@@ -5656,7 +5680,7 @@
     },
     {
         "key": "ponere",
-        "link-present": "pone",
+        "link-present": "pon",
         "link-perfect": "posit",
         "final": "pose",
         "type": "verb",
@@ -5685,7 +5709,7 @@
     },
     {
         "key": "portare",
-        "link-present": "porta",
+        "link-present": "port",
         "link-perfect": "portat",
         "final": "port",
         "conjugation": 1,
@@ -5696,7 +5720,7 @@
     },
     {
         "key": "possidere",
-        "link-present": "posside",
+        "link-present": "possid",
         "link-perfect": "possess",
         "final": "possess",
         "type": "verb",
@@ -5715,7 +5739,7 @@
     },
     {
         "key": "potare",
-        "link-present": "pota",
+        "link-present": "pot",
         "link-perfect": "potat",
         "final": "pote",
         "type": "verb",
@@ -5726,7 +5750,7 @@
     },
     {
         "key": "praedari",
-        "link-present": "preda",
+        "link-present": "pred",
         "link-perfect": "predat",
         "final": "predate",
         "type": "verb",
@@ -5737,7 +5761,8 @@
     },
     {
         "key": "practicare",
-        "link-present": "practica",
+        "link-present": "practic",
+        "link-present-join": "a",
         "link-perfect": "practit",
         "final": "practice",
         "type": "verb",
@@ -5757,7 +5782,7 @@
     },
     {
         "key": "prehendere",
-        "link-present": "prehende",
+        "link-present": "prehend",
         "link-perfect": "prehens",
         "final": "prehend",
         "type": "verb",
@@ -5771,14 +5796,15 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "prehensi"
+                "link": "prehens",
+                "link-present-join": "i"
             }
         ],
         "origin": "latin"
     },
     {
         "key": "premere",
-        "link-present": "preme",
+        "link-present": "prem",
         "link-perfect": "press",
         "final": "press",
         "type": "verb",
@@ -5789,7 +5815,7 @@
     },
     {
         "key": "prendere",
-        "link-present": "prende",
+        "link-present": "prend",
         "link-perfect": "pris",
         "final": "prise",
         "type": "verb",
@@ -5826,7 +5852,7 @@
     },
     {
         "key": "privare",
-        "link-present": "priva",
+        "link-present": "priv",
         "link-perfect": "privat",
         "final": "private",
         "type": "verb",
@@ -5845,7 +5871,7 @@
     },
     {
         "key": "probare",
-        "link-present": "proba",
+        "link-present": "prob",
         "link-perfect": "probat",
         "final": "prove",
         "type": "verb",
@@ -5899,7 +5925,7 @@
     },
     {
         "key": "pudere",
-        "link-present": "pude",
+        "link-present": "pud",
         "link-perfect": "pudit",
         "final": "pude",
         "type": "verb",
@@ -5929,7 +5955,7 @@
     },
     {
         "key": "pugnare",
-        "link-present": "pugna",
+        "link-present": "pugn",
         "link-perfect": "pugnat",
         "final": "pugn",
         "type": "verb",
@@ -5957,7 +5983,7 @@
     },
     {
         "key": "pulsare",
-        "link-present": "pulsa",
+        "link-present": "puls",
         "link-perfect": "pulsat",
         "final": "pulsate",
         "type": "verb",
@@ -5968,7 +5994,7 @@
     },
     {
         "key": "pungere",
-        "link-present": "punge",
+        "link-present": "pung",
         "link-perfect": "punct",
         "final": "punge",
         "type": "verb",
@@ -5987,7 +6013,7 @@
     },
     {
         "key": "putare",
-        "link-present": "puta",
+        "link-present": "put",
         "link-perfect": "putat",
         "final": "pute",
         "type": "verb",
@@ -6006,7 +6032,7 @@
     },
     {
         "key": "quaerere",
-        "link-present": "quere",
+        "link-present": "quer",
         "link-perfect": "quisit",
         "final": "quire",
         "type": "verb",
@@ -6020,7 +6046,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "quira"
+                "link": "quir",
+                "link-present-join": "a"
             }
         ],
         "origin": "latin",
@@ -6028,7 +6055,7 @@
     },
     {
         "key": "quatere",
-        "link-present": "cussa",
+        "link-present": "cuss",
         "link-perfect": "cuss",
         "final": "cuss",
         "type": "verb",
@@ -6048,8 +6075,20 @@
         "origin": "latin"
     },
     {
+        "key": "queri",
+        "link-present": "quer",
+        "link-perfect": "quest",
+        "final": "quit",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "complain",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "conquerable vs acquirable"
+    },
+    {
         "key": "radere",
-        "link-present": "rade",
+        "link-present": "rad",
         "link-perfect": "ras",
         "final": ["rade", "rase"],
         "type": "verb",
@@ -6138,7 +6177,7 @@
     },
     {
         "key": "recitare",
-        "link-present": "recita",
+        "link-present": "recit",
         "link-perfect": "recitat",
         "final": "recite",
         "type": "verb",
@@ -6149,7 +6188,7 @@
     },
     {
         "key": "regere",
-        "link-present": "rege",
+        "link-present": "reg",
         "link-perfect": "rect",
         "final": "rect",
         "type": "verb",
@@ -6160,7 +6199,8 @@
     },
     {
         "key": "revereri",
-        "link-present": "revere",
+        "link-present": "rever",
+        "link-present-join": "e",
         "link-perfect": "reverit",
         "final": "revere",
         "type": "verb",
@@ -6180,7 +6220,7 @@
     },
     {
         "key": "ridere",
-        "link-present": "ride",
+        "link-present": "rid",
         "link-perfect": "ris",
         "final": "ride",
         "type": "verb",
@@ -6191,7 +6231,7 @@
     },
     {
         "key": "roborare",
-        "link-present": "robora",
+        "link-present": "robor",
         "link-perfect": "roborat",
         "final": "roborate",
         "type": "verb",
@@ -6202,7 +6242,7 @@
     },
     {
         "key": "rodere",
-        "link-present": "rode",
+        "link-present": "rod",
         "link-perfect": "ros",
         "final": "rode",
         "type": "verb",
@@ -6213,7 +6253,7 @@
     },
     {
         "key": "rogare",
-        "link-present": "roga",
+        "link-present": "rog",
         "link-perfect": "rogat",
         "final": "rogate",
         "type": "verb",
@@ -6233,7 +6273,7 @@
     },
     {
         "key": "ructare",
-        "link-present": "ructa",
+        "link-present": "ruct",
         "link-perfect": "ructat",
         "final": "ruct",
         "type": "verb",
@@ -6244,7 +6284,7 @@
     },
     {
         "key": "rumpere",
-        "link-present": "rumpe",
+        "link-present": "rump",
         "link-perfect": "rupt",
         "final": "rupt",
         "type": "verb",
@@ -6272,15 +6312,25 @@
     },
     {
         "key": "sacrare",
-        "link-present": "secra",
-        "link-perfect": "secrat",
+        "link-present": "sacr",
+        "link-perfect": "sacrat",
         "final": "secrate",
         "type": "verb",
         "conjugation": 1,
         "gloss": "[make] holy",
         "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "consecrate vs sacrament?"
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "secr",
+                "link-perfect": "secrat"
+            }
+        ],
+        "origin": "latin"
     },
     {
         "key": "sagitta",
@@ -6303,7 +6353,7 @@
     },
     {
         "key": "salire",
-        "link-present": "sali",
+        "link-present": "sal",
         "link-perfect": ["salt", "salit"],
         "final": "sult",
         "type": "verb",
@@ -6316,7 +6366,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "sili",
+                "link-present": "sil",
                 "link-perfect": "sult"
             }
         ],
@@ -6352,7 +6402,7 @@
     },
     {
         "key": "salutare",
-        "link-present": "saluta",
+        "link-present": "salut",
         "link-perfect": "salutat",
         "final": "salute",
         "type": "verb",
@@ -6380,7 +6430,8 @@
     },
     {
         "key": "scandere",
-        "link-present": "scanda",
+        "link-present": "scand",
+        "link-present-join": "a",
         "link-perfect": "scans",
         "final": "scend",
         "type": "verb",
@@ -6393,7 +6444,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "scenda",
+                "link-present": "scend",
                 "link-perfect": "scens"
             }
         ],
@@ -6402,7 +6453,7 @@
     },
     {
         "key": "scire",
-        "link-present": "scie",
+        "link-present": "sc",
         "link-perfect": "scit",
         "final": "scit",
         "type": "verb",
@@ -6414,7 +6465,7 @@
     },
     {
         "key": "scribere",
-        "link-present": "scriba",
+        "link-present": "scrib",
         "link-perfect": "script",
         "final": "scribe",
         "type": "verb",
@@ -6434,7 +6485,7 @@
     },
     {
         "key": "secare",
-        "link-present": "seca",
+        "link-present": "sec",
         "link-perfect": "sect",
         "final": "sect",
         "type": "verb",
@@ -6445,7 +6496,7 @@
     },
     {
         "key": "sedere",
-        "link-present": "side",
+        "link-present": "sid",
         "link-perfect": "sess",
         "final": "side",
         "type": "verb",
@@ -6482,7 +6533,8 @@
     },
     {
         "key": "sensata",
-        "link-present": "sensa",
+        "link-present": "sens",
+        "link-present-join": "a",
         "link-perfect": "sensat",
         "final": "sensate",
         "type": "verb",
@@ -6494,7 +6546,7 @@
     },
     {
         "key": "sentire",
-        "link-present": "senti",
+        "link-present": "sent",
         "link-perfect": "sens",
         "final": "sent",
         "type": "verb",
@@ -6506,7 +6558,7 @@
     },
     {
         "key": "sequestrare",
-        "link-present": "sequestra",
+        "link-present": "sequestr",
         "link-perfect": "sequestrat",
         "final": "sequester",
         "type": "verb",
@@ -6517,7 +6569,7 @@
     },
     {
         "key": "sequi",
-        "link-present": "seque",
+        "link-present": "sequ",
         "link-perfect": "secut",
         "final": "secute",
         "type": "verb",
@@ -6536,7 +6588,7 @@
     },
     {
         "key": "serere",
-        "link-present": "sere",
+        "link-present": "ser",
         "link-perfect": "sert",
         "final": "sert",
         "type": "verb",
@@ -6556,7 +6608,7 @@
     },
     {
         "key": "servare",
-        "link-present": "serva",
+        "link-present": "serv",
         "link-perfect": "servat",
         "final": "serve",
         "type": "verb",
@@ -6567,7 +6619,7 @@
     },
     {
         "key": "servire",
-        "link-present": "servi",
+        "link-present": "serv",
         "link-perfect": "servit",
         "final": "serve",
         "type": "verb",
@@ -6587,7 +6639,7 @@
     },
     {
         "key": "signare",
-        "link-present": "signa",
+        "link-present": "sign",
         "link-perfect": "signat",
         "final": "sign",
         "type": "verb",
@@ -6615,7 +6667,7 @@
     },
     {
         "key": "sistere",
-        "link-present": "siste",
+        "link-present": "sist",
         "link-perfect": "stat",
         "final": "sist",
         "type": "verb",
@@ -6653,7 +6705,7 @@
     },
     {
         "key": "solari",
-        "link-present": "sola",
+        "link-present": "sol",
         "link-perfect": "solat",
         "final": "sole",
         "type": "verb",
@@ -6664,7 +6716,7 @@
     },
     {
         "key": "solvere",
-        "link-present": "solve",
+        "link-present": "solv",
         "link-perfect": "solut",
         "final": "solve",
         "type": "verb",
@@ -6684,7 +6736,7 @@
     },
     {
         "key": "sorbere",
-        "link-present": "sorbe",
+        "link-present": "sorb",
         "link-perfect": "sorbit",
         "final": "sorb",
         "type": "verb",
@@ -6714,7 +6766,7 @@
     },
     {
         "key": "sortiri",
-        "link-present": "sorti",
+        "link-present": "sort",
         "link-perfect": "sortit",
         "final": "sort",
         "type": "verb",
@@ -6727,19 +6779,30 @@
     },
     {
         "key": "spargere",
-        "link-present": "sparge",
-        "link-perfect": "spers",
-        "final": "sperse",
+        "link-present": "sparg",
+        "link-perfect": "spars",
+        "final": "sparse",
         "type": "verb",
         "conjugation": 3,
         "gloss": "[scatter] or [sprinkle]",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "sperg",
+                "link-perfect": "spers"
+            }
+        ],
         "tags": ["intransitive"],
         "origin": "latin",
-        "notes": "Perfect is originally 'spars', changed to match 'dispersion' etc. Verb forms sperge, sparse, sperse are seen. Investigate more."
+        "notes": "Verb forms sperge, sparse, sperse are seen."
     },
     {
         "key": "specere",
-        "link-present": "specte",
+        "link-present": "spect",
         "link-perfect": "spect",
         "final": "spect",
         "type": "verb",
@@ -6750,7 +6813,7 @@
     },
     {
         "key": "sperare",
-        "link-present": "spera",
+        "link-present": "sper",
         "link-perfect": "sperat",
         "final": "sper",
         "type": "verb",
@@ -6771,7 +6834,7 @@
     },
     {
         "key": "spirare",
-        "link-present": "spira",
+        "link-present": "spir",
         "link-perfect": "spirat",
         "final": "spire",
         "type": "verb",
@@ -6782,7 +6845,7 @@
     },
     {
         "key": "spondere",
-        "link-present": "sponde",
+        "link-present": "spond",
         "link-perfect": "spons",
         "final": "spond",
         "type": "verb",
@@ -6810,7 +6873,7 @@
     },
     {
         "key": "stare",
-        "link-present": "sta",
+        "link-present": "st",
         "link-perfect": "stat",
         "final": "state",
         "type": "verb",
@@ -6822,7 +6885,7 @@
     },
     {
         "key": "statuere",
-        "link-present": "stitue",
+        "link-present": "stitu",
         "link-perfect": "stitut",
         "final": "stitute",
         "type": "verb",
@@ -6843,7 +6906,7 @@
     },
     {
         "key": "sternere",
-        "link-present": "sterne",
+        "link-present": "stern",
         "link-perfect": "strat",
         "final": "strate",
         "type": "verb",
@@ -6855,7 +6918,7 @@
     },
     {
         "key": "stipulare",
-        "link-present": "stipula",
+        "link-present": "stipul",
         "link-perfect": "stipulat",
         "final": "stipulate",
         "type": "verb",
@@ -6866,7 +6929,7 @@
     },
     {
         "key": "stringere",
-        "link-present": "stringe",
+        "link-present": "string",
         "link-perfect": "strict",
         "final": "strict",
         "type": "verb",
@@ -6878,7 +6941,7 @@
     },
     {
         "key": "struere",
-        "link-present": "structe",
+        "link-present": "struct",
         "link-perfect": "struct",
         "final": "struct",
         "type": "verb",
@@ -6897,7 +6960,7 @@
     },
     {
         "key": "suadere",
-        "link-present": "suade",
+        "link-present": "suad",
         "link-perfect": "suas",
         "final": "suade",
         "type": "verb",
@@ -6925,7 +6988,7 @@
     },
     {
         "key": "suere",
-        "link-present": "sue",
+        "link-present": "su",
         "link-perfect": "sut",
         "final": "sute",
         "type": "verb",
@@ -6936,7 +6999,7 @@
     },
     {
         "key": "sumere",
-        "link-present": "sume",
+        "link-present": "sum",
         "link-perfect": "sumpt",
         "final": "sume",
         "type": "verb",
@@ -6947,7 +7010,7 @@
     },
     {
         "key": "supare",
-        "link-present": "sipa",
+        "link-present": "sip",
         "link-perfect": "sipat",
         "final": "sipate",
         "type": "verb",
@@ -6974,7 +7037,7 @@
     },
     {
         "key": "tangere",
-        "link-present": "tange",
+        "link-present": "tang",
         "link-perfect": "tact",
         "final": "tact",
         "type": "verb",
@@ -6986,7 +7049,7 @@
     },
     {
         "key": "tegere",
-        "link-present": "tege",
+        "link-present": "teg",
         "link-perfect": "tect",
         "final": "tect",
         "type": "verb",
@@ -6997,7 +7060,7 @@
     },
     {
         "key": "temperare",
-        "link-present": "tempera",
+        "link-present": "temper",
         "link-perfect": "temperat",
         "final": "temper",
         "type": "verb",
@@ -7017,7 +7080,7 @@
     },
     {
         "key": "temptare",
-        "link-present": "tempta",
+        "link-present": "tempt",
         "link-perfect": "temptat",
         "final": "tempt",
         "type": "verb",
@@ -7029,7 +7092,7 @@
     },
     {
         "key": "tendere",
-        "link-present": "tende",
+        "link-present": "tend",
         "link-perfect": "tens",
         "final": "tend",
         "type": "verb",
@@ -7048,11 +7111,11 @@
     },
     {
         "key": "tenere",
-        "link-present": "tene",
+        "link-present": "ten",
         "link-perfect": "tens",
         "final": "tain",
         "type": "verb",
-        "conjugation": 1,
+        "conjugation": 2,
         "gloss": "hold",
         "tags": ["transitive"],
         "exception": [
@@ -7062,7 +7125,7 @@
                         "has-type": "prep"
                     }
                 },
-                "link-present": "tine",
+                "link-present": "tin",
                 "link-perfect": "tent"
             },
             { 
@@ -7071,7 +7134,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "taina"
+                "link": "tain",
+                "link-present-join": "a"
             }
         ],
         "origin": "latin",
@@ -7097,7 +7161,7 @@
     },
     {
         "key": "testari",
-        "link-present": "testa",
+        "link-present": "test",
         "link-perfect": "testat",
         "final": "test",
         "type": "verb",
@@ -7117,7 +7181,7 @@
     },
     {
         "key": "tingere",
-        "link-present": "tinge",
+        "link-present": "ting",
         "link-perfect": "tinct",
         "final": "tinge",
         "type": "verb",
@@ -7129,7 +7193,7 @@
     },
     {
         "key": "tintinnabulare",
-        "link-present": "tintinnabula",
+        "link-present": "tintinnabul",
         "link-perfect": "tintinnabulat",
         "final": "tintinnabulate",
         "type": "verb",
@@ -7149,7 +7213,7 @@
     },
     {
         "key": "tolerare",
-        "link-present": "tolera",
+        "link-present": "toler",
         "link-perfect": "tolerat",
         "final": "tolerate",
         "type": "verb",
@@ -7160,7 +7224,7 @@
     },
     {
         "key": "torquere",
-        "link-present": "torse",
+        "link-present": "tors",
         "link-perfect": "tors",
         "final": "tort",
         "type": "verb",
@@ -7171,7 +7235,7 @@
     },
     {
         "key": "torrere",
-        "link-present": "torre",
+        "link-present": "torr",
         "link-perfect": "tost",
         "final": "toast",
         "type": "verb",
@@ -7200,7 +7264,7 @@
     },
     {
         "key": "trahere",
-        "link-present": "tracta",
+        "link-present": "tract",
         "link-perfect": "tract",
         "final": "tract",
         "type": "verb",
@@ -7228,7 +7292,7 @@
     },
     {
         "key": "trudere",
-        "link-present": "trude",
+        "link-present": "trud",
         "link-perfect": "trus",
         "final": "trude",
         "type": "verb",
@@ -7240,7 +7304,7 @@
     },
     {
         "key": "tueri",
-        "link-present": "tue",
+        "link-present": "tu",
         "link-perfect": "tuit",
         "final": "tuit",
         "type": "verb",
@@ -7263,7 +7327,7 @@
     },
     {
         "key": "tundere",
-        "link-present": "tunde",
+        "link-present": "tund",
         "link-perfect": "tus",
         "final": "tuse",
         "type": "verb",
@@ -7274,7 +7338,7 @@
     },
     {
         "key": "turbare",
-        "link-present": "turba",
+        "link-present": "turb",
         "link-perfect": "turbat",
         "final": "turb",
         "type": "verb",
@@ -7320,7 +7384,7 @@
     },
     {
         "key": "uti",
-        "link-present": "ute",
+        "link-present": "ut",
         "link-perfect": "ut",
         "final": "use",
         "type": "verb",
@@ -7332,7 +7396,7 @@
     },
     {
         "key": "vadere",
-        "link-present": "vade",
+        "link-present": "vad",
         "link-perfect": "vas",
         "final": "vade",
         "type": "verb",
@@ -7343,7 +7407,7 @@
     },
     {
         "key": "vagari",
-        "link-present": "vaga",
+        "link-present": "vag",
         "link-perfect": "vagat",
         "final": "vagate",
         "type": "verb",
@@ -7354,7 +7418,7 @@
     },
     {
         "key": "valere",
-        "link-present": "vale",
+        "link-present": "val",
         "link-perfect": "valit",
         "final": "vail",
         "type": "verb",
@@ -7374,7 +7438,7 @@
     },
     {
         "key": "vehere",
-        "link-present": "vehe",
+        "link-present": "veh",
         "link-perfect": "vect",
         "final": "veigh",
         "type": "verb",
@@ -7385,7 +7449,8 @@
     },
     {
         "key": "velle",
-        "link-present": "vole",
+        "link-present": "vol",
+        "link-present-join": "e",        
         "link-perfect": "volit",
         "final": "vell",
         "type": "verb",
@@ -7396,7 +7461,7 @@
     },
     {
         "key": "vellere",
-        "link-present": "velle",
+        "link-present": "vell",
         "link-perfect": "vuls",
         "final": "vulse",
         "type": "verb",
@@ -7407,7 +7472,7 @@
     },
     {
         "key": "venire",
-        "link-present": "veni",
+        "link-present": "ven",
         "link-perfect": "vent",
         "final": "vene",
         "type": "verb",
@@ -7427,7 +7492,7 @@
     },
     {
         "key": "verberare",
-        "link-present": "verbera",
+        "link-present": "verber",
         "link-perfect": "verberat",
         "final": "verberate",
         "type": "verb",
@@ -7447,7 +7512,7 @@
     },
     {
         "key": "vertere",
-        "link-present": "verte",
+        "link-present": "vert",
         "link-perfect": "vers",
         "final": "vert",
         "type": "verb",
@@ -7461,7 +7526,7 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "versi"
+                "link": "vers"
             }
         ],
         "origin": "latin",
@@ -7469,7 +7534,7 @@
     },
     {
         "key": "vestire",
-        "link-present": "vesti",
+        "link-present": "vest",
         "link-perfect": "vestit",
         "final": "vest",
         "type": "verb",
@@ -7480,7 +7545,7 @@
     },
     {
         "key": "vexare",
-        "link-present": "vexa",
+        "link-present": "vex",
         "link-perfect": "vexat",
         "final": "vex",
         "type": "verb",
@@ -7491,7 +7556,7 @@
     },
     {
         "key": "vibrare",
-        "link-present": "vibra",
+        "link-present": "vibr",
         "link-perfect": "vibrat",
         "final": "vibrate",
         "type": "verb",
@@ -7502,7 +7567,7 @@
     },
     {
         "key": "videre",
-        "link-present": "vide",
+        "link-present": "vid",
         "link-perfect": "vis",
         "final": "vise",
         "type": "verb",
@@ -7516,14 +7581,14 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "visi"
+                "link": "vis"
             }
         ],
         "origin": "latin"
     },
     {
         "key": "vigilare",
-        "link-present": "vigila",
+        "link-present": "vigil",
         "link-perfect": "vigilat",
         "final": "vigilate",
         "type": "verb",
@@ -7534,7 +7599,7 @@
     },  
     {
         "key": "vincere",
-        "link-present": "vince",
+        "link-present": "vinc",
         "link-perfect": "vict",
         "final": "vince",
         "type": "verb",
@@ -7545,7 +7610,7 @@
     },
     {
         "key": "vindicare",
-        "link-present": "vindica",
+        "link-present": "vindic",
         "link-perfect": "vindicat",
         "final": "vindicate",
         "type": "verb",
@@ -7556,7 +7621,7 @@
     },
     {
         "key": "violare",
-        "link-present": "viola",
+        "link-present": "viol",
         "link-perfect": "violat",
         "final": "violate",
         "type": "verb",
@@ -7570,7 +7635,7 @@
                         "has-key": ["nt", "nce"]
                     }
                 },
-                "link": "viole"
+                "link-present-join": "e"
             }
         ],
         "origin": "latin"
@@ -7623,7 +7688,8 @@
     },
     {
         "key": "vivere",
-        "link-present": "vivi",
+        "link-present": "viv",
+        "link-present-join": "ie",
         "link-perfect": "vivat",
         "final": "vive",
         "type": "verb",
@@ -7634,7 +7700,7 @@
     },
     {
         "key": "vocare",
-        "link-present": "voca",
+        "link-present": "voc",
         "link-perfect": "vocat",
         "final": "voke",
         "type": "verb",
@@ -7645,7 +7711,7 @@
     },
     {
         "key": "volare",
-        "link-present": "vola",
+        "link-present": "vol",
         "link-perfect": "volat",
         "final": "volate",
         "type": "verb",
@@ -7665,7 +7731,7 @@
     },
     {
         "key": "volvere",
-        "link-present": "volve",
+        "link-present": "volv",
         "link-perfect": "volut",
         "final": ["volve", "volute"],
         "type": "verb",
@@ -7677,7 +7743,7 @@
     },
     {
         "key": "vorare",
-        "link-present": "vora",
+        "link-present": "vor",
         "link-perfect": "vorat",
         "final": "vour",
         "type": "verb",
@@ -7689,7 +7755,7 @@
     },
     {
         "key": "vovere",
-        "link-present": "vove",
+        "link-present": "vov",
         "link-perfect": "vot",
         "final": "vote",
         "type": "verb",
@@ -8167,7 +8233,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": "iform"
+                        "has-key": "form"
                     }
                 },
                 "gloss": "%@"
@@ -8267,7 +8333,7 @@
     },
     {
         "key": "ate",
-        "link-present": "ata",
+        "link-present": "at",
         "link-perfect": "at",
         "final": "ate",
         "type": "derive",
@@ -8293,7 +8359,7 @@
                         ]
                     }
                 },
-                "link-present": "itata",
+                "link-present": "itat",
                 "link-perfect": "itat",
                 "final": "itate"
             }
@@ -8386,6 +8452,23 @@
         "origin": "latin"
     },
     {
+        "key": "ax",
+        "link": "aci",
+        "final": "ax",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "participle-type": "present",
+        "suffixes": ["ous", "ity"],
+        "gloss": "inclined toward %part",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
+        "origin": "latin"
+    },
+    {
         "key": "ble",
         "final": "ble",
         "link": "bil",
@@ -8394,7 +8477,6 @@
         "to": "adj",
         "suffixes": ["ity", "ize"],
         "participle-type": "present",
-        "tags": ["stem-raise"],
         "gloss": "able to be %ppart",
         "requires": {
             "follows": {
@@ -8430,7 +8512,8 @@
     },
     {
         "key": "esce",
-        "link-present": "esce",
+        "link-present": "esc",
+        "link-present-join": "e",
         "link-perfect": "esc",
         "final": "esce",
         "type": "derive",
@@ -8443,7 +8526,8 @@
     },
     {
         "key": "esce-plant",
-        "link-present": "esce",
+        "link-present": "esc",
+        "link-present-join": "e",
         "link-perfect": "esc",
         "final": "esce",
         "type": "derive",
@@ -8466,6 +8550,7 @@
         "type": "derive",
         "from": "verb",
         "to": "noun",
+        "participle-type": "present",
         "suffixes": [],
         "gloss": "one who %3sg",
         "tags": ["count", "concrete", "no-gen"],
@@ -8488,9 +8573,9 @@
         "origin": "latin"
     },
     {
-        "key": "icide",
-        "final": "icide",
-        "link": "icid",
+        "key": "cide",
+        "final": "cide",
+        "link": "cid",
         "type": "derive",
         "from": "noun",
         "to": "noun",
@@ -8514,7 +8599,7 @@
         "origin": "latin"
     },
     {
-        "key": "id",
+        "key": "id-descendant",
         "final": "id",
         "link": "id",
         "type": "derive",
@@ -8530,9 +8615,26 @@
         "origin": "latin"
     },
     {
-        "key": "iform",
-        "final": "iform",
-        "link": "iform",
+        "key": "id-deverbative",
+        "final": "id",
+        "link": "id",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "participle-type": "present",
+        "suffixes": [],
+        "gloss": "inclined %inf",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "form",
+        "final": "form",
+        "link": "form",
         "type": "derive",
         "from": "noun",
         "to": "adj",
@@ -8559,12 +8661,14 @@
         "origin": "latin"
     },
     {
-        "key": "ifer",
-        "final": "ifer",
-        "link": "ifer",
+        "key": "fer",
+        "final": "fer",
+        "link": "fer",
+        "link-present-join": "e",
         "type": "derive",
         "from": "noun",
         "to": "verb",
+        "conjugation": 0,
         "suffixes": ["silent-agent", "ous", "nt", "nce", "ize"],
         "gloss": "[bear] %pl",
         "requires": {
@@ -8572,22 +8676,12 @@
                 "has-tag": "concrete"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": ["nt", "nce"]
-                    }
-                },
-                "link": "ifere"
-            }
-        ],
         "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin"
     },
     {
         "key": "ify",
-        "link-present": "ifice",
+        "link-present": "ific",
         "link-perfect": "ificat",
         "final": "ify",
         "type": "derive",
@@ -8612,7 +8706,8 @@
                         "has-key": "ble"
                     }
                 },
-                "link": "ifica"
+                "link": "ific",
+                "link-present-join": "a"
             }
         ],
         "tags": ["transitive"],
@@ -8620,13 +8715,14 @@
         "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
     },
     {
-        "key": "iger",
-        "final": "iger",
-        "link": "iger",
+        "key": "ger",
+        "final": "ger",
+        "link": "ger",
         "type": "derive",
         "from": "noun",
         "to": "verb",
         "suffixes": ["silent-agent", "ous", "nt", "nce"],
+        "conjugation": 3,
         "gloss": "[bring] %pl",
         "requires": {
             "follows": {
@@ -8639,7 +8735,7 @@
                     "has-key": ["nt", "nce"]
                 }
             },
-            "link": "igere"
+            "link": "gere"
         },
         {
             "case": {
@@ -8747,9 +8843,25 @@
         "origin": "latin"
     },
     {
-        "key": "ipote-drink",
-        "final": "ipote",
-        "link": "ipot",
+        "key": "or-quality",
+        "final": "or",
+        "link": "or",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "the quality of %part",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "pote-drink",
+        "final": "pote",
+        "link": "pot",
         "type": "derive",
         "from": "noun",
         "to": "noun",
@@ -8763,13 +8875,15 @@
         "origin": "latin"
     },
     {
-        "key": "ipote-power",
-        "final": "ipote",
-        "link": "ipote",
+        "key": "pote-power",
+        "link-present": "pot",
+        "link-perfect": "pot",
+        "final": "pote",
         "type": "derive",
         "from": "noun",
-        "to": "noun",
+        "to": "verb",
         "suffixes": ["nt", "nce"],
+        "conjugation": 3,
         "gloss": "[have] command over %pl",
         "exception": [
             {
@@ -8811,9 +8925,9 @@
         "origin": "latin"
     },
     {
-        "key": "itude",
-        "final": "itude",
-        "link": "itudin",
+        "key": "tude",
+        "final": "tude",
+        "link": "tudin",
         "type": "derive",
         "from": "adj",
         "to": "noun",
@@ -8822,9 +8936,9 @@
         "origin": "latin"
     },
     {
-        "key": "itude-noun",
-        "final": "itude",
-        "link": "itudin",
+        "key": "tude-noun",
+        "final": "tude",
+        "link": "tudin",
         "type": "derive",
         "from": "noun",
         "to": "noun",
@@ -8858,7 +8972,7 @@
         {
             "case": {
                 "follows": {
-                    "has-key": "iform"
+                    "has-key": "form"
                 }
             },
             "gloss": "the quality of %@"
@@ -8886,9 +9000,9 @@
         "origin": "latin"
     },
     {
-        "key": "ivor",
-        "final": "ivor",
-        "link": "ivor",
+        "key": "vore",
+        "final": "vor",
+        "link": "vor",
         "type": "derive",
         "from": "noun",
         "to": "verb",
@@ -8914,7 +9028,7 @@
     },
     {
         "key": "ize",
-        "link-present": "ize",
+        "link-present": "iz",
         "link-perfect": "izat",
         "final": "ize",
         "type": "derive",
@@ -8926,7 +9040,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": "ifer"
+                        "has-key": "fer"
                     }
                 },
                 "gloss": "[cause] to %@"
@@ -9048,7 +9162,6 @@
         "to": "noun",
         "suffixes": ["al", "ary"],
         "participle-type": "present",
-        "tags": ["stem-change"],
         "gloss-link": "the state of %part",
         "gloss-final": "the process, state, or quality of %part",
         "origin": "latin"
@@ -9062,7 +9175,6 @@
         "to": "noun",
         "suffixes": [],
         "participle-type": "present",
-        "tags": ["stem-change"],
         "gloss": "something that must be %ppart",
         "requires": {
             "follows": {
@@ -9080,7 +9192,6 @@
         "to": "adj",
         "suffixes": ["al", "ary"],
         "participle-type": "present",
-        "tags": ["stem-change"],
         "gloss": "%part",
         "origin": "latin"
     },
@@ -9093,7 +9204,6 @@
         "from": "verb",
         "to": "noun",
         "suffixes": ["al", "ary"],
-        "tags": ["stem-change"],
         "gloss": "one who %3sg",
         "origin": "latin"
     },
@@ -9115,7 +9225,32 @@
             "final": ["rix", "rice"],
             "link": "ric"
         }],
-        "tags": ["count", "rare"],
+        "tags": ["count", "no-joiner", "rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "ulous",
+        "link": "ulos",
+        "final": "ulous",
+        "participle-type": "present",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "suffixes": ["ity"],
+        "gloss": "tending %inf",
+        "tags": ["rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "uous",
+        "link": "uos",
+        "final": "uous",
+        "participle-type": "present",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "suffixes": ["ity"],
+        "gloss": "%part",
         "origin": "latin"
     },
     {

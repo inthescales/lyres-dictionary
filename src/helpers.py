@@ -30,8 +30,11 @@ def has_tag(morph, tag):
 
 # Language
 
-def is_vowel(letter):
-    return letter in ["a", "i", "e", "o", "u"]
+def is_vowel(letter, y_is_vowel=False):
+    if not y_is_vowel:
+        return letter in ["a", "i", "e", "o", "u"]
+    else:
+        return letter in ["a", "i", "e", "o", "u", "y"]
 
 def is_consonant(letter):
     return not is_vowel(letter)
