@@ -119,6 +119,16 @@
         "origin": "latin"
     },
     {
+        "key": "alea",
+        "link": "ale",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "die",
+        "gloss-tool": "[decide] at random",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
         "key": "alta",
         "link": "alt",
         "type": "adj",
@@ -2287,6 +2297,16 @@
         "origin": "latin"
     },
     {
+        "key": "flagellum",
+        "link": "flagell",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "whip",
+        "gloss-tool": "whip",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
         "key": "flare",
         "link-present": "flat",
         "link-perfect": "flat",
@@ -3586,6 +3606,18 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "wash",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "link-present": "lu",
+                "link-perfect": "lute",
+                "final": "lute"
+            }
+        ],
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -3625,17 +3657,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "smear",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    {
-        "key": "luere",
-        "link-present": "lu",
-        "link-perfect": "lut",
-        "final": "lute",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "wash",
         "tags": ["transitive"],
         "origin": "latin"
     },
@@ -7192,23 +7213,13 @@
         "notes": "tint vs tinge vs taint"
     },
     {
-        "key": "tintinnabulare",
-        "link-present": "tintinnabul",
-        "link-perfect": "tintinnabulat",
-        "final": "tintinnabulate",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "jingle",
-        "tags": ["intransitive"],
-        "origin": "latin"
-    },
-    {
         "key": "tinnabulum",
         "link": "tintinnabul",
         "type": "noun",
         "declension": 2,
-        "gloss": "jingle [bell]",
-        "tags": ["count", "concrete"],
+        "gloss": "bell",
+        "gloss-tool": "jingle",
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     },
     {
@@ -7533,6 +7544,15 @@
         "notes": "convert / converse"
     },
     {
+        "key": "vertex",
+        "link": "vertic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "highest [point]",
+        "tags": ["singleton", "concrete"],
+        "origin": "latin"
+    },
+    {
         "key": "vestire",
         "link-present": "vest",
         "link-perfect": "vestit",
@@ -7751,6 +7771,15 @@
         "gloss": "[swallow] whole",
         "gloss-relative": "swallow",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "vortex",
+        "link": "vortic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "whirlpool",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -8622,7 +8651,7 @@
         "from": "verb",
         "to": "adj",
         "participle-type": "present",
-        "suffixes": [],
+        "suffixes": ["ity"],
         "gloss": "inclined %inf",
         "requires": {
             "follows": {
