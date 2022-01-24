@@ -15,7 +15,7 @@
         "origin": "greek"
     },
     {
-        "key": "aleruon",
+        "key": "aleuron",
         "link": "aleur",
         "type": "noun",
         "gloss": "flour",
@@ -116,6 +116,14 @@
         "type": "noun",
         "gloss": "book",
         "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "bios",
+        "link": "bi",
+        "type": "noun",
+        "gloss": "life",
+        "tags": ["mass", "abstract"],
         "origin": "greek"
     },
     {
@@ -543,6 +551,14 @@
         "origin": "greek"
     },
     {
+        "key": "hypnos",
+        "link": "hypn",
+        "type": "noun",
+        "gloss": "sleep",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "ichthys",
         "link": "ichthy",
         "type": "noun",
@@ -723,6 +739,14 @@
         "link": "noo",
         "type": "noun",
         "gloss": "mind",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "nyx",
+        "link": "nyct",
+        "type": "noun",
+        "gloss": "night",
         "tags": ["mass", "abstract"],
         "origin": "greek"
     },
@@ -1323,13 +1347,13 @@
         "type": "derive",
         "from": "noun",
         "to": "noun",
-        "suffixes": ["greek-silent", "ic-character", "y-passthrough"],
+        "suffixes": ["greek-silent-agent", "ic-character", "y-passthrough"],
         "gloss": "rule by %pl",
         "exception": [
             {
                 "case": {
                     "precedes": {
-                        "has-key": "greek-silent"
+                        "has-key": "greek-silent-agent"
                     }
                 },
                 "gloss": "one who rules or oversees %pl"
@@ -1409,6 +1433,18 @@
         "origin": "greek"
     },
     {
+        "key": "ogen",
+        "link": "ogen",
+        "final": "ogen",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent-agent", "ic-part"],
+        "gloss": "[produce] %pl",
+        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
         "key": "agog",
         "final": "agog",
         "link": "agog",
@@ -1477,18 +1513,6 @@
                 "gloss": "one who worships %pl"
             }
         ],
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "olog-adj",
-        "final": "olog",
-        "link": "olog",
-        "type": "derive",
-        "from": "adj",
-        "to": "verb",
-        "suffixes": ["greek-ist", "ic-def", "y-def"],
-        "gloss": "study of %pl things",
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     },
@@ -1577,15 +1601,23 @@
         "origin": "greek"
     },
     {
-        "key": "onom-adj",
-        "final": "onom",
-        "link": "onom",
+        "key": "omorph",
+        "link": "omorph",
+        "final": "omorph",
         "type": "derive",
-        "from": "adj",
-        "to": "verb",
-        "suffixes": ["greek-ist", "ic-def", "y-def"],
-        "gloss": "study of %pl things",
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent-haver", "ic-having"],
+        "gloss": "the shape of %sg",
+        "requires": {
+            "follows": {
+                "or": [
+                    { "has-all-tags": ["count", "concrete"] },
+                    { "has-tag": "shape" }
+                ]
+            }
+        },
+        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     },
     {
@@ -1754,7 +1786,7 @@
         "origin": "greek"
     },
     {
-        "key": "orrhea-noun",
+        "key": "orrhea",
         "final": "orrhea",
         "link": "orrhe",
         "type": "derive",
@@ -1800,7 +1832,24 @@
         "origin": "greek"
     },
     {
-        "key": "otechn-noun",
+        "key": "othec",
+        "link": "othec",
+        "final": "othec",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "a collection of %!pl",
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "singleton" }
+            }
+        },
+        "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "otechn",
         "final": "otechn",
         "link": "otechn",
         "type": "derive",
@@ -1832,7 +1881,7 @@
         "to": "noun",
         "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["no-gen", "final"],
+        "tags": ["count", "concrete", "no-gen", "final"],
         "origin": "greek"
     },
     {
@@ -2090,18 +2139,6 @@
         "origin": "greek"
     },
     {
-        "key": "ogen",
-        "link": "ogen",
-        "final": "ogen",
-        "type": "derive",
-        "from": "noun",
-        "to": "noun",
-        "suffixes": ["greek-silent-agent", "ic-part"],
-        "gloss": "[produce] %pl",
-        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
         "key": "oid",
         "link": "oid",
         "final": "oid",
@@ -2113,43 +2150,6 @@
         "requires": {
             "follows": {
                 "has-tag": "concrete"
-            }
-        },
-        "tags": ["count", "concrete"],
-        "origin": "greek"
-    },
-    {
-        "key": "omorph",
-        "link": "omorph",
-        "final": "omorph",
-        "type": "derive",
-        "from": "noun",
-        "to": "noun",
-        "suffixes": ["greek-silent-haver", "ic-having"],
-        "gloss": "the shape of %sg",
-        "requires": {
-            "follows": {
-                "or": [
-                    { "has-all-tags": ["count", "concrete"] },
-                    { "has-tag": "shape" }
-                ]
-            }
-        },
-        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "othec",
-        "link": "othec",
-        "final": "othec",
-        "type": "derive",
-        "from": "noun",
-        "to": "noun",
-        "suffixes": [],
-        "gloss": "a collection of %!pl",
-        "requires": {
-            "follows": {
-                "not": { "has-tag": "singleton" }
             }
         },
         "tags": ["count", "concrete"],

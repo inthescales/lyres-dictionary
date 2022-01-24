@@ -8,6 +8,8 @@ class FormTests(unittest.TestCase):
     def setUp(self):
         self.morphothec = Morphothec(["data/morphs-latin.json", "data/morphs-greek.json"])
 
+    # Latin ===========================
+
     # Tests that prefix sound assimilation resolves correctly.
     def testPrefixAssimilation(self):
         
@@ -317,7 +319,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["in", "vincere", "ble"], "invincible")
 
     # Miscellaneous tests confirming that real words have the correct forms.
-    def testActualForms(self):
+    def testActualFormsLatin(self):
         
         # Latin nouns, 1st declension
         self.assertForm(["anima", "al"], "animal")
@@ -771,6 +773,81 @@ class FormTests(unittest.TestCase):
         self.assertFormNot(["de", "cadere", "nt"], "decadent")
         self.assertFormNot(["ex", "sanguis", "ate"], "exsanguinate")
     
+    # Greek =============================
+
+    # Miscellaneous tests confirming that real words have the correct forms.
+    def testActualFormsLatin(self):
+        
+        # Greek nouns
+
+        self.assertForm(["autos", "greek-arch", "greek-silent-agent"], "autarch")
+        self.assertForm(["hippos", "greek-arch", "ic-character"], "hipparchic")
+        self.assertForm(["demos", "greek-arch", "y-passthrough"], "demarchy")
+        self.assertForm(["plutos", "ocrat-noun", "greek-silent"], "plutocrat")
+        self.assertForm(["demos", "ocrat-noun", "ic"], "democratic")
+        self.assertForm(["gerontos", "ocrat-noun", "y-passthrough"], "gerontocracy")
+        self.assertForm(["arista", "ocrat-adj", "greek-silent"], "aristocrat")
+        self.assertForm(["arista", "ocrat-adj", "ic"], "aristocratic")
+        self.assertForm(["arista", "ocrat-adj", "y-passthrough"], "aristocracy")
+        self.assertForm(["aner", "ogen", "greek-silent-agent"], "androgen")
+        self.assertForm(["pathos", "ogen", "ic-part"], "pathogenic")
+        self.assertForm(["demos", "agog", "ue-agent"], "demagogue")
+        self.assertForm(["hypnos", "agog", "ic-def"], "hypnagogic")
+        self.assertForm(["pais", "agog", "y-def"], "pedagogy")
+        self.assertForm(["biblion", "ograph", "y-def"], "bibliography")
+        self.assertForm(["bios", "ograph", "er-agent"], "biographer")
+        self.assertForm(["calla", "ograph", "ic-def"], "calligraphic")
+        self.assertForm(["hagia-saint", "olat", "greek-silent"], "hagiolater")
+        self.assertForm(["angelos", "olat", "y-def"], "angelolatry")
+        self.assertForm(["bryon", "olog-noun", "greek-ist"], "bryologist")
+        self.assertForm(["ge", "olog-noun", "ic-def"], "geologic")
+        self.assertForm(["cosmos", "olog-noun", "y-def"], "cosmology")
+        self.assertForm(["pyr", "oman-noun", "ia-def"], "pyromania")
+        self.assertForm(["plutos", "oman-noun", "ic-def"], "plutomanic")
+        self.assertForm(["autos", "oman-noun", "iac-haver"], "automaniac")
+        # oman-verb
+        self.assertForm(["necros", "omant", "er-practitioner"], "necromancer")
+        self.assertFormIn(["onoma", "omant", "ic-def"], ["onomomantic", "onomatomantic"])
+        self.assertForm(["ge", "omant", "y-def"], "geomancy")
+        self.assertForm(["aleuron", "ometr", "greek-silent"], "aleurometer")
+        self.assertForm(["astros", "ometr", "ic-def"], "astrometric")
+        self.assertForm(["ge", "ometr", "y-def"], "geometry")
+        self.assertForm(["zoon", "omorph", "greek-silent-haver"], "zoomorph")
+        self.assertForm(["pais", "omorph", "ic-def"], "pedomorphic")
+        self.assertForm(["plutos", "onom-noun", "greek-ist"], "plutonomist")
+        self.assertForm(["gastros", "onom-noun", "ic-def"], "gastronomic")
+        self.assertForm(["astros", "onom-noun", "y-def"], "astronomy")
+        self.assertForm(["copros", "ophag", "e-agent"], "coprophage")
+        self.assertForm(["zoon", "ophag", "ic-def"], "zoophagic")
+        self.assertForm(["autos", "ophag", "y-def"], "autophagy")
+        self.assertFormIn(["gyne", "ophil-noun", "e-haver"], ["gynophile", "gynecophile"])
+        self.assertForm(["hydor", "ophil-noun", "ic-def"], "hydrophilic")
+        self.assertForm(["necros", "ophil-noun", "ia-def"], "necrophilia")
+        self.assertForm(["arachne", "ophob-noun", "e-haver"], "arachnophobe")
+        self.assertForm(["hydor", "ophob-noun", "ic-def"], "hydrophobic")
+        self.assertForm(["nyx", "ophob-noun", "ia-def"], "nyctophobia")
+        self.assertForm(["gala", "ophor", "e-agent"], "galactophore")
+        self.assertFormIn(["gyne", "ophor", "ic-part"], ["gynophoric", "gynecophoric"])
+        self.assertForm(["phallos", "ophor", "ia-def"], "phallophoria")
+        self.assertForm(["therma-adj", "opot-adj", "e-agent"], "thermopote")
+        self.assertForm(["crya-adj", "opot-adj", "ic-def"], "cryopotic")
+        self.assertForm(["gala", "opot-noun", "e-agent"], "galactopote")
+        self.assertForm(["hydor", "opot-noun", "ia-def"], "hydropotia")
+        self.assertForm(["gala", "orrhea"], "galactorrhea")
+        self.assertForm(["logos", "orrhea"], "logorrhea")
+        self.assertForm(["mikra", "oscop-adj", "e-instrument"], "microscope")
+        self.assertForm(["makra", "oscop-adj", "ic-def"], "macroscopic")
+        self.assertForm(["crya-adj", "oscop-adj", "y-def"], "cryoscopy")
+        self.assertForm(["astros", "oscop-noun", "e-instrument"], "astroscope")
+        self.assertForm(["hagia-saint", "oscop-noun", "ic-def"], "hagioscopic")
+        self.assertForm(["autos", "oscop-noun", "y-def"], "autoscopy")
+        self.assertForm(["pyr", "otechn", "ic-def"], "pyrotechnic")
+        self.assertForm(["hals", "otechn", "y-def"], "halotechny")
+        self.assertForm(["botane", "ic"], "botanic")
+        self.assertForm(["cynos", "ic"], "cynic")
+        self.assertForm(["iconos", "ic"], "iconic")
+        self.assertForm(["anthropos", "oid"], "anthropoid")
+
     # Helpers ==========
     
     def assertForm(self, keys, form):
