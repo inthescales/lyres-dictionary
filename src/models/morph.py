@@ -2,6 +2,7 @@ import src.former as former
 
 from src.expressions import evaluate_expression
 from src.morphothec import Morphothec
+import src.models.language as language
 
 class Morph:
     
@@ -78,6 +79,10 @@ class Morph:
         return False
 
     def meets_requirements(self, env):
+
+        # Check general and language requirements
+        if not language.meets_requirements(self, env):
+            return False
 
         # No requirements to check, it's ok
         if not "requires" in self.morph:

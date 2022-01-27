@@ -111,14 +111,19 @@ def transform_word_latin(word, morphothec):
             env = word.suffix_environment()
             
             for choice in choices:
-                if not Morph(choice, morphothec).meets_requirements(env):
+                choice_morph = Morph(choice, morphothec)
+                if not choice_morph.meets_requirements(env):
                     valid_choices.remove(choice)
-                elif Morph(choice, morphothec).has_tag("rare") and random.randint(0, 10) > 0:
+                elif choice_morph.has_tag("rare") and random.randint(0, 10) > 0:
                     valid_choices.remove(choice)
                 
             if last_morph.morph["key"] in valid_choices:
                 valid_choices.remove(last_morph.morph["key"])
-            
+    
+            if len(valid_choices) == 0:
+                print("Error: No valid suffixes following morph:")
+                print(last_morph.morph)
+
             choice = random.choice(valid_choices)
             new_morph = Morph(choice, morphothec)
                 

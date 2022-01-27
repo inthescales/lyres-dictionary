@@ -50,7 +50,7 @@ def validate_morph(morph):
 
     elif morph_type == "verb":
         if morph["origin"] == "latin":
-            if not ("link-present" in morph and "link-perfect" in morph and "final" in morph and "conjugation" in morph):
+            if not ("link-present" in morph and "final" in morph and "conjugation" in morph):
                 print(" - verbs require 'link-present', 'link-perfect', 'final', and 'conjugation'")
                 return False
 

@@ -793,6 +793,17 @@
         "origin": "latin"
     },
     {
+        "key": "candere",
+        "link-present": "cand",
+        "final": "cand",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] honest",
+        "gloss-state": "honest",
+        "tags": ["intransitive", "stative", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "canere",
         "link-present": "can",
         "link-perfect": "cant",
@@ -1884,7 +1895,6 @@
     {
         "key": "esse",
         "link-present": "ess",
-        "link-perfect": "essat",
         "final": "est",
         "type": "verb",
         "conjugation": 3,
@@ -2198,6 +2208,17 @@
         "origin": "latin"
     },
     {
+        "key": "fervere",
+        "link-present": "ferv",
+        "final": "splend",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "boil",
+        "gloss-state": "boiling",
+        "tags": ["intransitive", "stative", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "fessa",
         "link": "fess",
         "type": "adj",
@@ -2257,7 +2278,7 @@
         "key": "findere",
         "link-present": "find",
         "link-perfect": "fiss",
-        "final": "finde",
+        "final": "fise",
         "type": "verb",
         "conjugation": 3,
         "gloss": "split",
@@ -3025,9 +3046,10 @@
         "final": "hor",
         "type": "verb",
         "conjugation": 2,
-        "gloss": "tremble",
+        "gloss": "shudder",
         "tags": ["intransitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "horrendous is transitive"
     },
     {
         "key": "hortari",
@@ -3659,6 +3681,18 @@
         "gloss": "smear",
         "tags": ["transitive"],
         "origin": "latin"
+    },
+    {
+        "key": "liquere",
+        "link-present": "liqu",
+        "final": "lique",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] fluid",
+        "gloss-state": "fluid",
+        "tags": ["intransitive", "stative", "no-prep"],
+        "origin": "latin",
+        "notes": "If I find a way to make it gloss as 'melt' with 'esce', allow preps"
     },
     {
         "key": "lumen",
@@ -4321,7 +4355,7 @@
         "gloss": "deserve",
         "tags": ["transitive"],
         "origin": "latin",
-        "notes": "compare metertix"
+        "notes": "compare meretrix"
     },
     {
         "key": "metallum",
@@ -4366,15 +4400,12 @@
     {
         "key": "minere",
         "link-present": "min",
-        "link-present-join": "ie",
-        "link-perfect": "minit",
         "final": "mine",
         "type": "verb",
         "conjugation": 2,
         "gloss": "protrude",
         "tags": ["intransitive", "motion"],
-        "origin": "latin",
-        "notes": "guessed on perfect"
+        "origin": "latin"
     },
     {
         "key": "minima",
@@ -5147,11 +5178,14 @@
         "origin": "latin"
     },
     {
-        "key": "pallidus",
-        "link": "pallid",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "pale",
+        "key": "pallere",
+        "link-present": "pall",
+        "final": "pale",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] pale",
+        "gloss-state": "pale",
+        "tags": ["intransitive", "stative", "no-prep"],
         "origin": "latin"
     },
     {
@@ -6146,14 +6180,16 @@
         "origin": "latin"
     },
     {
-        "key": "rancor",
-        "link": "rancor",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "bitterness",
-        "tags": ["mass", "abstract"],
+        "key": "rancere",
+        "link-present": "ranc",
+        "final": "rance",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] rotten",
+        "gloss-state": "rotten",
+        "tags": ["intransitive", "stative", "no-prep"],
         "origin": "latin"
-    },    
+    },
     {
         "key": "rapax",
         "link": "rapaci",
@@ -6865,6 +6901,16 @@
         "origin": "latin"
     },
     {
+        "key": "splendere",
+        "link-present": "splend",
+        "final": "splend",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "shine",
+        "tags": ["intransitive", "stative", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "spondere",
         "link-present": "spond",
         "link-perfect": "spons",
@@ -6882,6 +6928,17 @@
         "declension": 1,
         "gloss": "foam",
         "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
+        "key": "squalere",
+        "link-present": "squal",
+        "final": "squale",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] filthy",
+        "gloss-state": "filthy",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -7181,6 +7238,16 @@
         "origin": "latin"
     },
     {
+        "key": "terrere",
+        "link-present": "terr",
+        "final": "territ",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "frighten",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "testari",
         "link-present": "test",
         "link-perfect": "testat",
@@ -7231,6 +7298,17 @@
         "conjugation": 1,
         "gloss": "tolerate",
         "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
+        "key": "torpere",
+        "link-present": "torp",
+        "final": "torp",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] inactive",
+        "gloss-state": "inactive",
+        "tags": ["intransitive", "stative", "no-prep"],
         "origin": "latin"
     },
     {
@@ -7310,8 +7388,7 @@
         "conjugation": 3,
         "gloss": "thrust",
         "tags": ["intransitive", "motion"],
-        "origin": "latin",
-        "notes": "guessed on perfect"
+        "origin": "latin"
     },
     {
         "key": "tueri",
@@ -7356,6 +7433,18 @@
         "conjugation": 1,
         "gloss": "disturb",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
+        "key": "turgere",
+        "link-present": "torp",
+        "link-perfect": "turs",
+        "final": "torp",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] sowllen",
+        "gloss-state": "swollen",
+        "tags": ["intransitive", "stative", "no-prep"],
         "origin": "latin"
     },
     {
@@ -7435,17 +7524,9 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "[be] strong",
-        "tags": ["intransitive", "no-prep"],
+        "tags": ["intransitive", "stative", "no-prep"],
         "origin": "latin",
         "notes": "prevalent vs valiant"
-    },
-    {
-        "key": "valida",
-        "link": "valid",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "valid",
-        "origin": "latin"
     },
     {
         "key": "vehere",
@@ -8374,7 +8455,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": "esce"
+                        "has-key": ["esce", "esce-verb"]
                     }
                 },
                 "gloss": "[cause] %inf"
@@ -8449,6 +8530,7 @@
         "type": "derive",
         "from": "noun",
         "to": "verb",
+        "conjugation": 1,
         "gloss": "[produce] %sg",
         "requires": {
             "follows": {
@@ -8464,6 +8546,7 @@
         "type": "derive",
         "from": "noun",
         "to": "verb",
+        "conjugation": 1,
         "gloss": "[use] %sg",
         "requires": {
             "follows": {
@@ -8495,6 +8578,7 @@
                 "has-conjugation": 2
             }
         },
+        "tags": ["non-final"],
         "origin": "latin"
     },
     {
@@ -8551,6 +8635,29 @@
         "suffixes": ["nt", "nce", "ate"],
         "conjugation": 0,
         "gloss": "[become] %@",
+        "origin": "latin"
+    },
+    {
+        "key": "esce-verb",
+        "link-present": "esc",
+        "link-present-join": "e",
+        "link-perfect": "esc",
+        "final": "esce",
+        "type": "derive",
+        "from": "verb",
+        "to": "verb",
+        "conjugation": 0,
+        "suffixes": ["nt", "nce", "ate"],
+        "participle-type": "present",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-conjugation": 2 },
+                    { "has-property": "gloss-state" }
+                ]
+            }
+        },
+        "gloss": "[become] %(gloss-state)",
         "origin": "latin"
     },
     {
@@ -8658,6 +8765,16 @@
                 "has-conjugation": 2
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-property": "gloss-state"
+                    }
+                },
+                "gloss": "%(gloss-state)"
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -8717,7 +8834,7 @@
         "from": ["noun", "adj"],
         "to": "verb",
         "conjugation": 3,
-        "gloss-noun": "[make] into %sg",
+        "gloss-noun": "[make] %sg",
         "gloss-adj": "[make] %@",
         "gloss-relative": "[make] %@",
         "exception": [
@@ -8879,6 +8996,7 @@
         "from": "verb",
         "to": "noun",
         "suffixes": [],
+        "participle-type": "present",
         "gloss": "the quality of %part",
         "requires": {
             "follows": {
@@ -9001,7 +9119,7 @@
         {
             "case": {
                 "follows": {
-                    "has-key": "form"
+                    "has-key": ["form", "uous", "ulous"]
                 }
             },
             "gloss": "the quality of %@"
@@ -9035,6 +9153,7 @@
         "type": "derive",
         "from": "noun",
         "to": "verb",
+        "conjugation": 0,
         "suffixes": ["e-agent", "ous", "ia", "ity"],
         "gloss": "[eat] %pl",
         "requires": {
@@ -9099,6 +9218,7 @@
         "from": "verb",
         "to": "noun",
         "suffixes": [],
+        "participle-type": "perfect",
         "gloss-verb": "a place where one %3sg",
         "origin": "latin"
     },
@@ -9267,6 +9387,11 @@
         "to": "adj",
         "suffixes": ["ity"],
         "gloss": "tending %inf",
+        "requires": {
+            "follows": {
+                "not": { "has-suffix": "qu" }
+            }
+        },
         "tags": ["rare"],
         "origin": "latin"
     },

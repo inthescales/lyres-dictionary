@@ -169,7 +169,7 @@ def get_definition(word):
                         property_value = last_morph.morph[ref_property]
 
                         # If this is a kind of gloss, and is a single word, add brackets
-                        if ref_property.startswith("gloss") and not " " in property_value:
+                        if ref_property.startswith("gloss") and not " " in property_value and morph.get_type() in ["noun", "verb"]:
                             property_value = "[" + property_value + "]"
 
                         words[index] = head + property_value + tail
