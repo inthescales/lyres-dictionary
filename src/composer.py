@@ -215,15 +215,15 @@ def get_definition(word):
 
 def get_joining_vowel(language, first, second, form, addition):
 
+    # If either morph rejects joining vowels, don't use one
+    if first.has_tag("no-joiner") or second.has_tag("no-joiner"):
+        return ""
+
     if language == "latin":
 
         # Prefixes never need joining vowels
         if first.is_prefix():
             return None
-
-        # If either morph rejects joining vowels, don't use one
-        if first.has_tag("no-joiner") or second.has_tag("no-joiner"):
-            return ""
 
         # For verb suffixes using the present participle stem
         if first.get_type() == "verb" and second.morph["participle-type"] == "present":

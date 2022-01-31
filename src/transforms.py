@@ -43,8 +43,9 @@ def get_latin_root(morphothec):
 def get_greek_root(morphothec):
 
     bag = [
-        ("noun", 5),
-        ("adj", 1)
+        ("noun", 3),
+        ("adj", 1),
+        ("verb", 3)
     ]
 
     type_ = helpers.choose_bag(bag)
