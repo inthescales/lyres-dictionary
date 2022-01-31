@@ -933,6 +933,16 @@
         "origin": "latin"
     },
     {
+        "key": "catena",
+        "link": "caten",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "chain",
+        "gloss-tool": "link",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
         "key": "causa",
         "link": "caus",
         "type": "noun",
@@ -1670,6 +1680,17 @@
         "type": "adj",
         "declension": 12,
         "gloss": "diverse",
+        "origin": "latin"
+    },
+    {
+        "key": "divinare",
+        "link-present": "divin",
+        "link-perfect": "divinat",
+        "final": "divine",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "foresee",
+        "tags": ["transitive"],
         "origin": "latin"
     },
     {
@@ -4099,14 +4120,13 @@
         "origin": "latin"
     },
     {
-        "key": "malleare",
-        "link-present": "malle",
-        "link-perfect": "malleat",
-        "final": "malleate",
-        "type": "verb",
-        "conjugation": 1,
+        "key": "malleus",
+        "link": "malle",
+        "type": "noun",
+        "declension": 1,
         "gloss": "hammer",
-        "tags": ["transitive"],
+        "gloss-tool": "hammer",
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     },
     {
@@ -6869,6 +6889,16 @@
         "origin": "latin"
     },
     {
+        "key": "speculum",
+        "link": "specul",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "mirror",
+        "gloss-tool": "reflect",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
         "key": "sperare",
         "link-present": "sper",
         "link-perfect": "sperat",
@@ -8521,6 +8551,25 @@
                 "gloss": "%sg"
             }
         ],
+        "origin": "latin"
+    },
+    {
+        "key": "ate-frequentative",
+        "link": "at",
+        "final": "ate",
+        "type": "derive",
+        "from": "verb",
+        "to": "verb",
+        "participle-type": "perfect",
+        "conjugation": 1,
+        "gloss": "%@ repeatedly or at length",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-suffix": "at"
+                }
+            }
+        },
         "origin": "latin"
     },
     {
