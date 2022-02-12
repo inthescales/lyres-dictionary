@@ -278,16 +278,6 @@
     
     # ante -> anticipate
     
-    # currently no way to have both capacious and capacity. See also rapax / rapacious
-    {
-        "base": "capax",
-        "link": "capac",
-        "type": "noun",
-        "definition": "holding",
-        "tags": ["count", "concrete", "living", "animal"],
-        "origin": "latin"
-    },
-    
     
     {
         "base": "infra",

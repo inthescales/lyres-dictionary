@@ -7,7 +7,7 @@ from src.models.environment import Environment
 import src.composer as composer
 from src.morphothec import Morphothec
 
-morphothec = Morphothec(["data/morphs-latin.json"])
+morphothec = Morphothec(["data/morphs-greek.json"])
 
 class Series:
     def __init__(self):
@@ -128,8 +128,8 @@ def getHTML(series):
     
     return output
 
-test_series = series_root_suffix(morphothec.filter_type("adj"),
-                                 morphothec.filter_appends_to("adj"),
+test_series = series_root_suffix(morphothec.filter_type("noun", language="greek"),
+                                 morphothec.filter_appends_to("noun", language="greek"),
                                  morphothec)
 #test_series = series_root_suffix(morphothec.filter_type("verb"),
 #                                 morphothec.filter_appends_to("verb"),

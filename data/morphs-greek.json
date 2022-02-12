@@ -23,6 +23,14 @@
         "origin": "greek"
     },
     {
+        "key": "arkhein",
+        "link": "arche",
+        "type": "verb",
+        "gloss": "rule",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "asthanesthai",
         "link": "aesthe",
         "type": "verb",
@@ -191,6 +199,14 @@
         "origin": "greek"
     },
     {
+        "key": "cardia",
+        "link": "cardi",
+        "type": "noun",
+        "gloss": "heart",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
         "key": "cephale",
         "link": "cephal",
         "type": "noun",
@@ -247,6 +263,13 @@
         "origin": "greek"
     },
     {
+        "key": "clasta",
+        "link": "clast",
+        "type": "adj",
+        "gloss": "broken",
+        "origin": "greek"
+    },
+    {
         "key": "copros",
         "link": "copr",
         "type": "noun",
@@ -256,7 +279,7 @@
     },
     {
         "key": "cosmos",
-        "link": "cosmo",
+        "link": "cosm",
         "type": "noun",
         "gloss": "universe",
         "tags": ["singleton", "concrete"],
@@ -351,7 +374,7 @@
         "origin": "greek"
     },
     {
-        "key": "dynazein",
+        "key": "dynasthai",
         "link": "dynas",
         "type": "verb",
         "gloss": "[be] powerful",
@@ -447,6 +470,22 @@
         "origin": "greek"
     },
     {
+        "key": "gignesthai",
+        "link": "gene",
+        "type": "verb",
+        "gloss": "[give] birth",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "gignoskein",
+        "link": "gnos",
+        "type": "verb",
+        "gloss": "kno",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "glossa",
         "link": "gloss",
         "type": "noun",
@@ -471,6 +510,14 @@
         "origin": "greek"
     },
     {
+        "key": "graphein",
+        "link": "graphe",
+        "type": "verb",
+        "gloss": "write",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "gymna",
         "link": "gymn",
         "type": "adj",
@@ -487,11 +534,12 @@
     },
     {
         "key": "gyne",
-        "link": ["gyn", "gynec"],
+        "link": "gynec",
         "type": "noun",
         "gloss": "woman",
         "tags": ["count", "concrete", "living"],
-        "origin": "greek"
+        "origin": "greek",
+        "notes": "gyn- in modern coinages only"
     },
     {
         "key": "iconos",
@@ -669,8 +717,8 @@
         "origin": "greek"
     },
     {
-        "key": "lexi",
-        "link": "lexic",
+        "key": "lexis",
+        "link": "lex",
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
@@ -718,7 +766,7 @@
     },
     {
         "key": "mechane",
-        "link": "machin",
+        "link": "mechan",
         "type": "noun",
         "gloss": "machine",
         "tags": ["count", "concrete"],
@@ -747,6 +795,15 @@
         "gloss": "celestial [phenomenon]",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
+    },
+    {
+        "key": "metrein",
+        "link": "metre",
+        "type": "verb",
+        "gloss": "measure",
+        "tags": ["transitive"],
+        "origin": "greek",
+        "notes": "Don't know ancient greek infinitive, guessed"
     },
     {
         "key": "meter",
@@ -869,6 +926,14 @@
         "origin": "greek"
     },
     {
+        "key": "ode",
+        "link": "od",
+        "type": "noun",
+        "gloss": "song",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "oneiros",
         "link": "oneir",
         "type": "noun",
@@ -932,24 +997,6 @@
         "origin": "greek"
     },
     {
-        "key": "pegnynai",
-        "link": "peg",
-        "type": "verb",
-        "gloss": "[fix], [fasten]",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-prefix": "t"
-                    }
-                },
-                "link": "pec"
-            }
-        ],
-        "tags": ["transitive"],
-        "origin": "greek"
-    },
-    {
         "key": "phallos",
         "link": "phall",
         "type": "noun",
@@ -959,7 +1006,7 @@
     },
     {
         "key": "phanein",
-        "link": "phan",
+        "link": "phane",
         "type": "verb",
         "gloss": "show",
         "tags": ["transitive"],
@@ -991,7 +1038,7 @@
     },
     {
         "key": "phonein",
-        "link": "phon",
+        "link": "phone",
         "type": "verb",
         "gloss": "speak",
         "tags": ["transitive"],
@@ -1035,6 +1082,14 @@
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living", "plant"],
+        "origin": "greek"
+    },
+    {
+        "key": "plastein",
+        "link": "plaste",
+        "type": "verb",
+        "gloss": "[mould] or [form]",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {
@@ -1082,6 +1137,14 @@
         "link": "pol",
         "type": "noun",
         "gloss": "city",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "ic"
+                }
+            },
+            "link": "polit"
+        }],
         "tags": ["count", "concrete", "terrain"],
         "origin": "greek"
     },
@@ -1563,6 +1626,28 @@
         "origin": "greek"
     },
     {
+        "key": "oclast",
+        "final": "oclast",
+        "link": "oclast",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent", "y-def", "ic"],
+        "gloss": "breaking of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "gloss": "one who breaks %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
         "key": "ocrat-adj",
         "final": "ocrat",
         "link": "ocrat",
@@ -1936,6 +2021,28 @@
         "origin": "greek"
     },
     {
+        "key": "oplast",
+        "final": "oplast",
+        "link": "oplast",
+        "type": "derive",
+        "from": "noun",
+        "to": "noun",
+        "suffixes": ["greek-silent", "y-def", "ic"],
+        "gloss": "forming of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "gloss": "one who forms %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
         "key": "opot-adj",
         "final": "opot",
         "link": "opot",
@@ -2213,6 +2320,24 @@
         "origin": "greek"
     },
     {
+        "key": "y-verb",
+        "link": "i",
+        "final": ["y", "ia"],
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "the act or state of %part",
+        "requires": {
+            "follows": {
+                "has-suffix": "s"
+            }
+        },
+        "tags": [],
+        "origin": "greek",
+        "notes": "These seem rare in English except in compounds. Using a req for now."
+    },
+    {
         "key": "ic",
         "final": "ic",
         "link": "ic",
@@ -2230,9 +2355,9 @@
                 },
                 "link": "iac",
                 "final": "iac"
-            },
+            }
         ],
-        "tags": ["final"],
+        "tags": ["final", "no-joiner"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -2314,6 +2439,18 @@
         "origin": "greek"
     },
     {
+        "key": "tic-verb",
+        "final": "tic",
+        "link": "tic",
+        "type": "derive",
+        "from": "verb",
+        "to": "adj",
+        "suffixes": [],
+        "gloss": "relating to %part",
+        "tags": ["no-joiner"],
+        "origin": "greek"
+    },
+    {
         "key": "greek-ist",
         "link": "ist",
         "final": "ist",
@@ -2338,7 +2475,7 @@
         "origin": "greek"
     },
     {
-        "key": "ugreek-e-agent",
+        "key": "greek-e-agent",
         "final": "ue",
         "link": "",
         "type": "derive",
@@ -2390,7 +2527,7 @@
                         "has-suffix": "e"
                     }
                 },
-                "final": "me"
+                "final": ["ma", "me"]
             },
             {
                 "case": {
@@ -2398,7 +2535,7 @@
                         "has-suffix": "s"
                     }
                 },
-                "final": ["m", "ma"],
+                "final": ["ma", "m"],
                 "tags": ["count", "concrete", "no-joiner"]
             },
             {
@@ -2410,29 +2547,17 @@
                 "gloss": "the result of %part"
             }
         ],
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "no-joiner"],
         "origin": "greek"
     },
     {
-        "key": "ium",
-        "link": "ium",
-        "final": "ium",
-        "type": "derive",
-        "from": "verb",
-        "to": "noun",
-        "suffixes": [],
-        "gloss": "a place for %part",
-        "tags": ["count", "concrete"],
-        "origin": "greek"
-    },
-    {
-        "key": "t",
+        "key": "t-agent",
         "link": "t",
         "final": "t",
         "type": "derive",
         "from": "verb",
         "to": "noun",
-        "suffixes": ["ic"],
+        "suffixes": ["ic", "erion"],
         "gloss": "one who %3sg",
         "exception": [{
             "case": {
@@ -2447,6 +2572,38 @@
         "origin": "greek"
     },
     {
+        "key": "sis",
+        "link": "s",
+        "final": "sis",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "the act or state of %part",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "s"
+                }
+            },
+            "final": "is"
+        }],
+        "tags": ["count", "concrete", "living", "person", "no-joiner"],
+        "origin": "greek"
+    },
+    {
+        "key": "erion",
+        "link": "teri",
+        "final": "tery",
+        "type": "derive",
+        "from": "verb",
+        "to": "noun",
+        "suffixes": [],
+        "gloss": "a place for %part",
+        "tags": ["count", "concrete", "no-gen", "no-joiner"],
+        "origin": "greek"
+    },
+    {
         "key": "greek-ize",
         "link": "iz",
         "final": "ize",
@@ -2456,6 +2613,17 @@
         "suffixes": [],
         "gloss": "[make] into %sg",
         "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "greek-ize-adj",
+        "link": "as",
+        "final": "ize",
+        "type": "derive",
+        "from": "adj",
+        "to": "verb",
+        "gloss": "[be] %@",
+        "tags": ["intransitive", "non-final"],
         "origin": "greek"
     }
 ]
