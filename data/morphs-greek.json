@@ -1267,6 +1267,22 @@
         "origin": "greek"
     },
     {
+        "key": "schema",
+        "link": "schemat",
+        "type": "noun",
+        "gloss": "[form] or [appearance]",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "schizein",
+        "link": "schis",
+        "type": "verb",
+        "gloss": "split",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "selene",
         "link": "selen",
         "type": "noun",
@@ -1360,6 +1376,14 @@
         "type": "noun",
         "gloss": "death",
         "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "thein",
+        "link": "the",
+        "type": "verb",
+        "gloss": "propose",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {
