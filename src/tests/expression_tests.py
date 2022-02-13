@@ -13,7 +13,7 @@ test_morphs = {
 
     "arktos": { "key": "arktos", "link": "arct", "type": "noun", "gloss": "bear", "tags": ["count", "concrete", "living", "animal"], "origin": "greek", "form": "arct", "final": False },
     "enigma": { "key": "enigma", "link": "enigmat", "type": "noun", "gloss": "riddle", "tags": ["count", "abstract"], "origin": "greek", "form": "enigmat", "final": False },
-    "ic":     { "key": "ic", "final": "ic", "link": "ic", "type": "derive", "from": "noun", "to": "adj", "suffixes": [], "gloss": "pertaining to %pl", "tags": ["final"], "origin": "greek", "form": "ic", "final": True }
+    "ic":     { "key": "ic", "final": "ic", "link": "ic", "type": "derive", "derive-from": "noun", "derive-to": "adj", "suffixes": [], "gloss": "pertaining to %pl", "tags": ["final"], "origin": "greek", "form": "ic", "final": True }
 }
 
 

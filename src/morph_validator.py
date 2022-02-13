@@ -59,8 +59,8 @@ def validate_morph(morph):
                 return False
 
     elif morph_type == "derive":
-        if not ("from" in morph and "to" in morph):
-            print(" - derive morphs must have 'from' and 'to'")
+        if not ("derive-from" in morph and "derive-to" in morph):
+            print(" - derive morphs must have 'derive-from' and 'derive-to'")
             return False
 
     return True

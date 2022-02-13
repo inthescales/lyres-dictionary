@@ -42,7 +42,7 @@ def evaluate_expression(expression, referent):
     elif key == "has-type":
         type_ = referent["type"]
         if referent["type"] == "derive":
-            type_ = referent["to"]
+            type_ = referent["derive-to"]
         return evaluate_type(value, type_)
     elif key == "has-tag":
         if "tags" not in referent:

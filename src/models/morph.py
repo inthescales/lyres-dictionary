@@ -51,7 +51,7 @@ class Morph:
         
     def get_type(self):
         if self.morph["type"] == "derive":
-            return self.morph["to"]
+            return self.morph["derive-to"]
         else:
             return self.morph["type"]
         

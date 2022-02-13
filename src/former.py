@@ -72,7 +72,7 @@ def form(morph, env):
                 form = morph_dict["link"]
 
             # Verbs or verbal derivations need to take participle form into account
-            elif morph_dict["type"] == "verb" or (morph_dict["type"] == "derive" and morph_dict["to"] == "verb"):
+            elif morph_dict["type"] == "verb" or (morph_dict["type"] == "derive" and morph_dict["derive-to"] == "verb"):
                 if next_morph and "participle-type" in next_morph:
                     if next_morph["participle-type"] == "present":
                         form = morph_dict["link-present"]

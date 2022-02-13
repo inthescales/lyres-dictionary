@@ -27,10 +27,10 @@ class Morphothec:
                 if morph_type in ["noun", "adj", "verb"]:
                     self.roots.append(morph)
             else:
-                if isinstance(morph["from"], str):
-                    from_types = [morph["from"]]
+                if isinstance(morph["derive-from"], str):
+                    from_types = [morph["derive-from"]]
                 else:
-                    from_types = morph["from"]
+                    from_types = morph["derive-from"]
 
                 for from_type in from_types:
                     if not from_type in self.morphs_from:
