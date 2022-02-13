@@ -1088,7 +1088,7 @@
         "key": "plastein",
         "link": "plaste",
         "type": "verb",
-        "gloss": "[mould] or [form]",
+        "gloss": "[shape] or [form]",
         "tags": ["transitive"],
         "origin": "greek"
     },
@@ -2617,8 +2617,8 @@
     },
     {
         "key": "erion",
-        "link": "teri",
-        "final": "tery",
+        "link": "eri",
+        "final": "ery",
         "type": "derive",
         "from": "verb",
         "to": "noun",
