@@ -121,7 +121,7 @@ class FormTests(unittest.TestCase):
         
         # dis -> di
         self.assertForm(["dis", "ducere", "ion"], "diduction") #*
-        self.assertForm(["dis", "luere", "ion"], "dilution")
+        self.assertForm(["dis", "lavere", "ion"], "dilution")
         self.assertForm(["dis", "regere", "ion"], "direction")
         self.assertForm(["dis", "vagari", "ion"], "divagation")
         
@@ -521,7 +521,6 @@ class FormTests(unittest.TestCase):
         self.assertForm(["aequa", "ate"], "equate")
         self.assertForm(["integra", "ate"], "integrate")
         self.assertForm(["libera", "ate"], "liberate")
-        self.assertForm(["valida", "ate"], "validate")
         self.assertForm(["stulta", "ify"], "stultify")
         self.assertForm(["maxima", "ize"], "maximize")
         self.assertForm(["minima", "ize"], "minimize")
@@ -776,7 +775,7 @@ class FormTests(unittest.TestCase):
     # Greek =============================
 
     # Miscellaneous tests confirming that real words have the correct forms.
-    def testActualFormsLatin(self):
+    def testActualFormsGreek(self):
         
         # Greek nouns
 
@@ -791,7 +790,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["arista", "ocrat-adj", "y-passthrough"], "aristocracy")
         self.assertForm(["aner", "ogen", "greek-silent-agent"], "androgen")
         self.assertForm(["pathos", "ogen", "ic-part"], "pathogenic")
-        self.assertForm(["demos", "agog", "ue-agent"], "demagogue")
+        self.assertForm(["demos", "agog", "greek-e-agent"], "demagogue")
         self.assertForm(["hypnos", "agog", "ic-def"], "hypnagogic")
         self.assertForm(["pais", "agog", "y-def"], "pedagogy")
         self.assertForm(["biblion", "ograph", "y-def"], "bibliography")
