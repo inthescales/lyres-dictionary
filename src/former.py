@@ -48,55 +48,55 @@ def form(morph, env):
             elif star_case:
                 case = star_case
 
-            if case == "link":
-                form = morph_dict["link"]
-            elif case == "link-assim":
-                form = morph_dict["link-assim"]
+            if case == "form-stem":
+                form = morph_dict["form-stem"]
+            elif case == "form-stem-assim":
+                form = morph_dict["form-stem-assim"]
             elif case == "cut":
-                form = morph_dict["link"] + "/"
+                form = morph_dict["form-stem"] + "/"
             elif case == "double":
-                form = morph_dict["link-assim"] + next_letter
+                form = morph_dict["form-stem-assim"] + next_letter
             elif case == "nasal":
                 if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-                    form = morph_dict["link-assim"] + 'm'
+                    form = morph_dict["form-stem-assim"] + 'm'
                 else:
-                    form = morph_dict["link-assim"] + 'n'
+                    form = morph_dict["form-stem-assim"] + 'n'
             else:
                 form = case
 
 
         # Default rules
         else:
-            # Usually we'll use link form
-            if "link" in morph_dict:
-                form = morph_dict["link"]
+            # Usually we'll use stem form
+            if "form-stem" in morph_dict:
+                form = morph_dict["form-stem"]
 
             # Verbs or verbal derivations need to take participle form into account
             elif morph_dict["type"] == "verb" or (morph_dict["type"] == "derive" and morph_dict["derive-to"] == "verb"):
                 if next_morph and "participle-type" in next_morph:
                     if next_morph["participle-type"] == "present":
-                        form = morph_dict["link-present"]
+                        form = morph_dict["form-stem-present"]
                     elif next_morph["participle-type"] == "perfect":
-                        form = morph_dict["link-perfect"]
-                elif "link-verb" in morph_dict:
-                    form = morph_dict["link-verb"]
+                        form = morph_dict["form-stem-perfect"]
+                elif "form-stem-verb" in morph_dict:
+                    form = morph_dict["form-stem-verb"]
                 else:
-                    form = morph_dict["link-perfect"]
+                    form = morph_dict["form-stem-perfect"]
 
             # Use final form if nothing overrides
             else:
-                form = morph_dict["final"]
+                form = morph_dict["form-final"]
 
     # The final morph form
     else:
         if morph_dict["type"] == "prep":
-            form = morph_dict["link"]
+            form = morph_dict["form-stem"]
         else:
-            if "final" in morph_dict:
-                form = morph_dict["final"]
+            if "form-final" in morph_dict:
+                form = morph_dict["form-final"]
             else:
-                # If there's no final form, use link
-                form = morph_dict["link"]
+                # If there's no final form, use stem
+                form = morph_dict["form-stem"]
     
     if isinstance(form, list):
         form = random.choice(form)

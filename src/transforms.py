@@ -124,7 +124,7 @@ def transform_word_latin(word, morphothec):
             if len(valid_choices) == 0:
                 print("Error: No valid suffixes following morph:")
                 print(last_morph.morph)
-
+            
             choice = random.choice(valid_choices)
             new_morph = Morph(choice, morphothec)
                 

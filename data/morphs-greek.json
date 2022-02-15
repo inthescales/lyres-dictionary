@@ -1,14 +1,14 @@
 [
     {
         "key": "acra",
-        "link": "acr",
+        "form-stem": "acr",
         "type": "adj",
         "gloss": "high",
         "origin": "greek"
     },
     {
         "key": "agatha",
-        "link": "agath",
+        "form-stem": "agath",
         "type": "adj",
         "gloss": "good",
         "tags": ["character"],
@@ -16,7 +16,7 @@
     },
     {
         "key": "agonizesthai",
-        "link": "agonis",
+        "form-stem": "agonis",
         "type": "verb",
         "gloss": "struggle",
         "tags": ["intransitive"],
@@ -24,7 +24,7 @@
     },
     {
         "key": "arkhein",
-        "link": "arche",
+        "form-stem": "arche",
         "type": "verb",
         "gloss": "rule",
         "tags": ["transitive"],
@@ -32,7 +32,7 @@
     },
     {
         "key": "asthanesthai",
-        "link": "aesthe",
+        "form-stem": "aesthe",
         "type": "verb",
         "gloss": "perceive",
         "tags": ["transitive"],
@@ -40,7 +40,7 @@
     },
     {
         "key": "aleuron",
-        "link": "aleur",
+        "form-stem": "aleur",
         "type": "noun",
         "gloss": "flour",
         "tags": ["mass", "concrete"],
@@ -48,7 +48,7 @@
     },
     {
         "key": "aner",
-        "link": "andr",
+        "form-stem": "andr",
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living"],
@@ -56,7 +56,7 @@
     },
     {
         "key": "angelos",
-        "link": "angel",
+        "form-stem": "angel",
         "type": "noun",
         "gloss": "angel",
         "tags": ["count", "concrete", "living"],
@@ -64,7 +64,7 @@
     },
     {
         "key": "arista",
-        "link": "arist",
+        "form-stem": "arist",
         "type": "adj",
         "gloss": "best",
         "tags": ["superlative", "character"],
@@ -72,7 +72,7 @@
     },
     {
         "key": "arithmos",
-        "link": "arithm",
+        "form-stem": "arithm",
         "type": "noun",
         "gloss": "number",
         "tags": ["count", "abstract"],
@@ -80,7 +80,7 @@
     },
     {
         "key": "arktos",
-        "link": "arct",
+        "form-stem": "arct",
         "type": "noun",
         "gloss": "bear",
         "tags": ["count", "concrete", "living", "animal"],
@@ -88,7 +88,7 @@
     },
     {
         "key": "athlein",
-        "link": "athle",
+        "form-stem": "athle",
         "type": "verb",
         "gloss": "compete",
         "tags": ["intransitive"],
@@ -96,7 +96,7 @@
     },
     {
         "key": "atmos",
-        "link": "atm",
+        "form-stem": "atm",
         "type": "noun",
         "gloss": "vapor",
         "tags": ["mass", "concrete", "fluid", "gas"],
@@ -104,7 +104,7 @@
     },
     {
         "key": "astros",
-        "link": "astr",
+        "form-stem": "astr",
         "type": "noun",
         "gloss": "star",
         "tags": ["count", "concrete"],
@@ -112,7 +112,7 @@
     },
     {
         "key": "anthropos",
-        "link": "anthrop",
+        "form-stem": "anthrop",
         "type": "noun",
         "gloss": "human",
         "tags": ["count", "concrete", "living", "person"],
@@ -120,7 +120,7 @@
     },
     {
         "key": "arachne",
-        "link": "arachn",
+        "form-stem": "arachn",
         "type": "noun",
         "gloss": "spider",
         "tags": ["count", "concrete", "living", "animal"],
@@ -128,7 +128,7 @@
     },
     {
         "key": "autos",
-        "link": "aut",
+        "form-stem": "aut",
         "type": "noun",
         "gloss": "one's self",
         "exception": [{
@@ -144,7 +144,7 @@
     },
     {
         "key": "ballein",
-        "link": "balle",
+        "form-stem": "balle",
         "type": "verb",
         "gloss": "dance",
         "tags": ["intransitive"],
@@ -152,7 +152,7 @@
     },
     {
         "key": "ballizein",
-        "link": "ballis",
+        "form-stem": "ballis",
         "type": "verb",
         "gloss": "throw",
         "tags": ["transitive"],
@@ -160,7 +160,7 @@
     },
     {
         "key": "biblion",
-        "link": "bibli",
+        "form-stem": "bibli",
         "type": "noun",
         "gloss": "book",
         "tags": ["count", "concrete"],
@@ -168,7 +168,7 @@
     },
     {
         "key": "bios",
-        "link": "bi",
+        "form-stem": "bi",
         "type": "noun",
         "gloss": "life",
         "tags": ["mass", "abstract"],
@@ -176,7 +176,7 @@
     },
     {
         "key": "botane",
-        "link": "botan",
+        "form-stem": "botan",
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living"],
@@ -184,7 +184,7 @@
     },
     {
         "key": "bryon",
-        "link": "bry",
+        "form-stem": "bry",
         "type": "noun",
         "gloss": "moss",
         "tags": ["mass", "concrete", "living", "plant"],
@@ -192,7 +192,7 @@
     },
     {
         "key": "calla",
-        "link": "calli/",
+        "form-stem": "calli/",
         "type": "adj",
         "gloss": "beautiful",
         "tags": ["character"],
@@ -200,7 +200,7 @@
     },
     {
         "key": "cardia",
-        "link": "cardi",
+        "form-stem": "cardi",
         "type": "noun",
         "gloss": "heart",
         "tags": ["count", "concrete", "bodypart"],
@@ -208,7 +208,7 @@
     },
     {
         "key": "cephale",
-        "link": "cephal",
+        "form-stem": "cephal",
         "type": "noun",
         "gloss": "head",
         "tags": ["count", "concrete", "bodypart"],
@@ -216,7 +216,7 @@
     },
     {
         "key": "cera",
-        "link": "cer",
+        "form-stem": "cer",
         "type": "noun",
         "gloss": "wax",
         "tags": ["mass", "concrete", "material"],
@@ -224,7 +224,7 @@
     },
     {
         "key": "cetos",
-        "link": "cet",
+        "form-stem": "cet",
         "type": "noun",
         "gloss": "whale",
         "tags": ["count", "concrete", "living", "animal"],
@@ -232,7 +232,7 @@
     },
     {
         "key": "chartes",
-        "link": "chart",
+        "form-stem": "chart",
         "type": "noun",
         "gloss": "paper",
         "tags": ["mass", "concrete", "material"],
@@ -240,7 +240,7 @@
     },
     {
         "key": "cheir",
-        "link": "chir",
+        "form-stem": "chir",
         "type": "noun",
         "gloss": "hand",
         "tags": ["count", "concrete", "bodypart"],
@@ -248,7 +248,7 @@
     },
     {
         "key": "chroma",
-        "link": ["chrom", "chromat"],
+        "form-stem": ["chrom", "chromat"],
         "type": "noun",
         "gloss": "color",
         "tags": ["mass", "abstract"],
@@ -256,7 +256,7 @@
     },
     {
         "key": "chronos",
-        "link": "chron",
+        "form-stem": "chron",
         "type": "noun",
         "gloss": "time",
         "tags": ["mass", "abstract"],
@@ -264,14 +264,14 @@
     },
     {
         "key": "clasta",
-        "link": "clast",
+        "form-stem": "clast",
         "type": "adj",
         "gloss": "broken",
         "origin": "greek"
     },
     {
         "key": "copros",
-        "link": "copr",
+        "form-stem": "copr",
         "type": "noun",
         "gloss": "feces",
         "tags": ["mass", "concrete"],
@@ -279,7 +279,7 @@
     },
     {
         "key": "cosmos",
-        "link": "cosm",
+        "form-stem": "cosm",
         "type": "noun",
         "gloss": "universe",
         "tags": ["singleton", "concrete"],
@@ -287,7 +287,7 @@
     },
     {
         "key": "cranion",
-        "link": "crani",
+        "form-stem": "crani",
         "type": "noun",
         "gloss": "skull",
         "tags": ["count", "concrete", "bodypart"],
@@ -295,7 +295,7 @@
     },
     {
         "key": "crya-adj",
-        "link": "cry",
+        "form-stem": "cry",
         "type": "adj",
         "gloss": "cold",
         "tags": ["material"],
@@ -303,7 +303,7 @@
     },
     {
         "key": "crya-noun",
-        "link": "cry",
+        "form-stem": "cry",
         "type": "noun",
         "gloss": "cold",
         "tags": ["singleton", "abstract"],
@@ -311,7 +311,7 @@
     },
     {
         "key": "crystallos",
-        "link": "crystall",
+        "form-stem": "crystall",
         "type": "noun",
         "gloss": "crystal",
         "tags": ["count", "concrete", "material"],
@@ -319,7 +319,7 @@
     },
     {
         "key": "cynos",
-        "link": "cyn",
+        "form-stem": "cyn",
         "type": "noun",
         "gloss": "dog",
         "tags": ["count", "concrete", "living", "animal"],
@@ -327,7 +327,7 @@
     },
     {
         "key": "dactylos",
-        "link": "dactyl",
+        "form-stem": "dactyl",
         "type": "noun",
         "gloss": "finger",
         "tags": ["count", "concrete", "bodypart"],
@@ -335,7 +335,7 @@
     },
     {
         "key": "daemon",
-        "link": "daemon",
+        "form-stem": "daemon",
         "type": "noun",
         "gloss": "spirit",
         "tags": ["count", "concrete", "living"],
@@ -343,7 +343,7 @@
     },
     {
         "key": "demos",
-        "link": "dem",
+        "form-stem": "dem",
         "type": "noun",
         "gloss": "people",
         "tags": ["singleton", "concrete", "living", "person"],
@@ -351,7 +351,7 @@
     },
     {
         "key": "dendron",
-        "link": "dendr",
+        "form-stem": "dendr",
         "type": "noun",
         "gloss": "tree",
         "tags": ["count", "concrete", "living", "plant"],
@@ -359,7 +359,7 @@
     },
     {
         "key": "diabolos",
-        "link": ["diabol", "diabol", "diab"],
+        "form-stem": ["diabol", "diabol", "diab"],
         "type": "noun",
         "gloss": "devil",
         "tags": ["count", "concrete", "living"],
@@ -367,7 +367,7 @@
     },
     {
         "key": "dogma",
-        "link": "dogmat",
+        "form-stem": "dogmat",
         "type": "noun",
         "gloss": "belief",
         "tags": ["count", "abstract"],
@@ -375,7 +375,7 @@
     },
     {
         "key": "dynasthai",
-        "link": "dynas",
+        "form-stem": "dynas",
         "type": "verb",
         "gloss": "[be] powerful",
         "tags": ["intransitive"],
@@ -383,7 +383,7 @@
     },
     {
         "key": "enigma",
-        "link": "enigmat",
+        "form-stem": "enigmat",
         "type": "noun",
         "gloss": "riddle",
         "tags": ["count", "abstract"],
@@ -391,7 +391,7 @@
     },
     {
         "key": "entomos",
-        "link": "entom",
+        "form-stem": "entom",
         "type": "noun",
         "gloss": "insect",
         "tags": ["count", "concrete", "living", "animal"],
@@ -399,7 +399,7 @@
     },
     {
         "key": "ergon",
-        "link": "erg",
+        "form-stem": "erg",
         "type": "noun",
         "gloss": "work",
         "tags": ["mass", "abstract"],
@@ -407,7 +407,7 @@
     },
     {
         "key": "eros",
-        "link": "erot",
+        "form-stem": "erot",
         "type": "noun",
         "gloss": "sex",
         "tags": ["mass", "abstract"],
@@ -415,7 +415,7 @@
     },
     {
         "key": "eschata",
-        "link": "eschat",
+        "form-stem": "eschat",
         "type": "adj",
         "gloss": "last",
         "tags": ["superlative"],
@@ -423,7 +423,7 @@
     },
     {
         "key": "ethos",
-        "link": "eth",
+        "form-stem": "eth",
         "type": "noun",
         "gloss": "custom",
         "tags": ["count", "abstract"],
@@ -431,7 +431,7 @@
     },
     {
         "key": "gala",
-        "link": "galact",
+        "form-stem": "galact",
         "type": "noun",
         "gloss": "milk",
         "tags": ["mass", "concrete", "liquid", "fluid"],
@@ -439,7 +439,7 @@
     },
     {
         "key": "gastros",
-        "link": "gastr",
+        "form-stem": "gastr",
         "type": "noun",
         "gloss": "stomach",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
@@ -447,7 +447,7 @@
     },
     {
         "key": "ge",
-        "link": "ge",
+        "form-stem": "ge",
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "terrain"],
@@ -455,7 +455,7 @@
     },
     {
         "key": "gerontos",
-        "link": "geront",
+        "form-stem": "geront",
         "type": "noun",
         "gloss": "elder",
         "tags": ["count", "concrete", "living", "person"],
@@ -463,7 +463,7 @@
     },
     {
         "key": "gigantos",
-        "link": "gigant",
+        "form-stem": "gigant",
         "type": "noun",
         "gloss": "giant",
         "tags": ["count", "concrete", "living", "person"],
@@ -471,7 +471,7 @@
     },
     {
         "key": "gignesthai",
-        "link": "gene",
+        "form-stem": "gene",
         "type": "verb",
         "gloss": "[give] birth",
         "tags": ["transitive"],
@@ -479,7 +479,7 @@
     },
     {
         "key": "gignoskein",
-        "link": "gnos",
+        "form-stem": "gnos",
         "type": "verb",
         "gloss": "kno",
         "tags": ["transitive"],
@@ -487,7 +487,7 @@
     },
     {
         "key": "glossa",
-        "link": "gloss",
+        "form-stem": "gloss",
         "type": "noun",
         "gloss": "tongue",
         "tags": ["count", "concrete", "bodypart"],
@@ -495,7 +495,7 @@
     },
     {
         "key": "gonos",
-        "link": "gon",
+        "form-stem": "gon",
         "type": "noun",
         "gloss": "angle",
         "tags": ["count", "abstract", "shape"],
@@ -503,7 +503,7 @@
     },
     {
         "key": "gramma",
-        "link": "grammat",
+        "form-stem": "grammat",
         "type": "noun",
         "gloss": "writing",
         "tags": ["mass", "abstract"],
@@ -511,7 +511,7 @@
     },
     {
         "key": "graphein",
-        "link": "graphe",
+        "form-stem": "graphe",
         "type": "verb",
         "gloss": "write",
         "tags": ["transitive"],
@@ -519,14 +519,14 @@
     },
     {
         "key": "gymna",
-        "link": "gymn",
+        "form-stem": "gymn",
         "type": "adj",
         "gloss": "naked",
         "origin": "greek"
     },
     {
         "key": "gymnazein",
-        "link": "gymnas",
+        "form-stem": "gymnas",
         "type": "verb",
         "gloss": "train",
         "tags": ["intransitive"],
@@ -534,7 +534,7 @@
     },
     {
         "key": "gyne",
-        "link": "gynec",
+        "form-stem": "gynec",
         "type": "noun",
         "gloss": "woman",
         "tags": ["count", "concrete", "living"],
@@ -543,7 +543,7 @@
     },
     {
         "key": "iconos",
-        "link": "icon",
+        "form-stem": "icon",
         "type": "noun",
         "gloss": "image",
         "tags": ["count", "abstract"],
@@ -551,7 +551,7 @@
     },
     {
         "key": "haema",
-        "link": "hem",
+        "form-stem": "hem",
         "type": "noun",
         "gloss": "blood",
         "tags": ["mass", "concrete", "liquid", "fluid"],
@@ -559,7 +559,7 @@
     },
     {
         "key": "hagia-adj",
-        "link": "hagi",
+        "form-stem": "hagi",
         "type": "adj",
         "gloss": "holy",
         "tags": ["character"],
@@ -567,7 +567,7 @@
     },
     {
         "key": "hagia-saint",
-        "link": "hagi",
+        "form-stem": "hagi",
         "type": "noun",
         "gloss": "saint",
         "tags": ["count", "concrete", "living", "person"],
@@ -575,7 +575,7 @@
     },
     {
         "key": "hals",
-        "link": "hal",
+        "form-stem": "hal",
         "type": "noun",
         "gloss": "salt",
         "tags": ["mass", "concrete", "material"],
@@ -583,7 +583,7 @@
     },
     {
         "key": "hedone",
-        "link": "hedon",
+        "form-stem": "hedon",
         "type": "noun",
         "gloss": "pleasure",
         "tags": ["mass", "abstract"],
@@ -591,7 +591,7 @@
     },
     {
         "key": "hedron",
-        "link": "hedr",
+        "form-stem": "hedr",
         "type": "noun",
         "gloss": "face",
         "tags": ["count", "abstract"],
@@ -599,7 +599,7 @@
     },
     {
         "key": "helios",
-        "link": "heli",
+        "form-stem": "heli",
         "type": "noun",
         "gloss": "sun",
         "tags": ["count", "concrete"],
@@ -607,7 +607,7 @@
     },
     {
         "key": "helios-singleton",
-        "link": "heli",
+        "form-stem": "heli",
         "type": "noun",
         "gloss": "sun",
         "tags": ["singleton", "concrete"],
@@ -615,7 +615,7 @@
     },
     {
         "key": "heros",
-        "link": "hero",
+        "form-stem": "hero",
         "type": "noun",
         "gloss": "hero",
         "tags": ["count", "concrete", "living", "person"],
@@ -623,7 +623,7 @@
     },
     {
         "key": "hiera",
-        "link": "hier",
+        "form-stem": "hier",
         "type": "adj",
         "gloss": "sacred",
         "tags": ["character"],
@@ -631,7 +631,7 @@
     },
     {
         "key": "hippos",
-        "link": "hipp",
+        "form-stem": "hipp",
         "type": "noun",
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal"],
@@ -639,7 +639,7 @@
     },
     {
         "key": "hora",
-        "link": "hor",
+        "form-stem": "hor",
         "type": "noun",
         "gloss": "hour",
         "tags": ["count", "abstract"],
@@ -647,7 +647,7 @@
     },
     {
         "key": "hydor",
-        "link": "hydr",
+        "form-stem": "hydr",
         "type": "noun",
         "gloss": "water",
         "tags": ["mass", "concrete", "liquid", "fluid"],
@@ -655,7 +655,7 @@
     },
     {
         "key": "hygeine",
-        "link": "hygien",
+        "form-stem": "hygien",
         "type": "noun",
         "gloss": "health",
         "tags": ["mass", "abstract"],
@@ -663,7 +663,7 @@
     },
     {
         "key": "hypnos",
-        "link": "hypn",
+        "form-stem": "hypn",
         "type": "noun",
         "gloss": "sleep",
         "tags": ["mass", "abstract"],
@@ -671,7 +671,7 @@
     },
     {
         "key": "ichthys",
-        "link": "ichthy",
+        "form-stem": "ichthy",
         "type": "noun",
         "gloss": "fish",
         "tags": ["count", "concrete", "living", "animal"],
@@ -679,14 +679,14 @@
     },
     {
         "key": "idia",
-        "link": "idi",
+        "form-stem": "idi",
         "type": "adj",
         "gloss": "one's own",
         "origin": "greek"
     },
     {
         "key": "kaka",
-        "link": "cac",
+        "form-stem": "cac",
         "type": "adj",
         "gloss": "bad",
         "tags": ["character"],
@@ -694,7 +694,7 @@
     },
     {
         "key": "kakista",
-        "link": "kakist",
+        "form-stem": "kakist",
         "type": "adj",
         "gloss": "worst",
         "tags": ["superlative", "character"],
@@ -702,7 +702,7 @@
     },
     {
         "key": "krata",
-        "link": "crat",
+        "form-stem": "crat",
         "type": "adj",
         "gloss": "strong",
         "tags": ["character"],
@@ -710,7 +710,7 @@
     },
     {
         "key": "kratos",
-        "link": "crat",
+        "form-stem": "crat",
         "type": "noun",
         "gloss": "strength",
         "tags": ["mass", "abstract"],
@@ -718,7 +718,7 @@
     },
     {
         "key": "lexis",
-        "link": "lex",
+        "form-stem": "lex",
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
@@ -726,7 +726,7 @@
     },
     {
         "key": "lithos",
-        "link": "lith",
+        "form-stem": "lith",
         "type": "noun",
         "gloss": "stone",
         "tags": ["count", "concrete"],
@@ -734,7 +734,7 @@
     },
     {
         "key": "logos",
-        "link": "log",
+        "form-stem": "log",
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
@@ -742,7 +742,7 @@
     },
     {
         "key": "makra",
-        "link": "macr",
+        "form-stem": "macr",
         "type": "adj",
         "gloss": "large",
         "tags": ["character"],
@@ -750,7 +750,7 @@
     },
     {
         "key": "mathe",
-        "link": "math",
+        "form-stem": "math",
         "type": "noun",
         "gloss": "learning",
         "tags": ["mass", "abstract"],
@@ -758,7 +758,7 @@
     },
     {
         "key": "mathein",
-        "link": "mathe",
+        "form-stem": "mathe",
         "type": "verb",
         "gloss": "learn",
         "tags": ["transitive"],
@@ -766,7 +766,7 @@
     },
     {
         "key": "mechane",
-        "link": "mechan",
+        "form-stem": "mechan",
         "type": "noun",
         "gloss": "machine",
         "tags": ["count", "concrete"],
@@ -774,7 +774,7 @@
     },
     {
         "key": "mega",
-        "link": ["megal", "megal", "meg"],
+        "form-stem": ["megal", "megal", "meg"],
         "type": "adj",
         "gloss": "large",
         "tags": ["character"],
@@ -782,7 +782,7 @@
     },
     {
         "key": "melissa",
-        "link": "meliss",
+        "form-stem": "meliss",
         "type": "noun",
         "gloss": "bee",
         "tags": ["count", "concrete", "living", "animal"],
@@ -790,7 +790,7 @@
     },
     {
         "key": "meteora",
-        "link": "meteor",
+        "form-stem": "meteor",
         "type": "noun",
         "gloss": "celestial [phenomenon]",
         "tags": ["singleton", "concrete"],
@@ -798,7 +798,7 @@
     },
     {
         "key": "metrein",
-        "link": "metre",
+        "form-stem": "metre",
         "type": "verb",
         "gloss": "measure",
         "tags": ["transitive"],
@@ -807,7 +807,7 @@
     },
     {
         "key": "meter",
-        "link": "metr",
+        "form-stem": "metr",
         "type": "noun",
         "gloss": "mother",
         "tags": ["count", "concrete", "living", "person"],
@@ -815,7 +815,7 @@
     },
     {
         "key": "mainein",
-        "link": "mias",
+        "form-stem": "mias",
         "type": "verb",
         "gloss": "stain",
         "tags": ["transitive"],
@@ -823,7 +823,7 @@
     },
     {
         "key": "mikra",
-        "link": "micr",
+        "form-stem": "micr",
         "type": "adj",
         "gloss": "small",
         "tags": ["character"],
@@ -831,7 +831,7 @@
     },
     {
         "key": "mimesthai",
-        "link": "mime",
+        "form-stem": "mime",
         "type": "verb",
         "gloss": "imitate",
         "tags": ["transitive"],
@@ -839,7 +839,7 @@
     },
     {
         "key": "mnasthai",
-        "link": "mne",
+        "form-stem": "mne",
         "type": "verb",
         "gloss": "remember",
         "tags": ["transitive"],
@@ -847,7 +847,7 @@
     },
     {
         "key": "molybdos",
-        "link": "molybd",
+        "form-stem": "molybd",
         "type": "noun",
         "gloss": "lead",
         "tags": ["mass", "concrete", "material"],
@@ -855,7 +855,7 @@
     },
     {
         "key": "monazein",
-        "link": "monas",
+        "form-stem": "monas",
         "type": "verb",
         "gloss": "[live] alone",
         "tags": ["intransitive"],
@@ -863,7 +863,7 @@
     },
     {
         "key": "morphe",
-        "link": "morph",
+        "form-stem": "morph",
         "type": "noun",
         "gloss": "form",
         "tags": ["count", "abstract", "shape"],
@@ -871,7 +871,7 @@
     },
     {
         "key": "mycos",
-        "link": "myc",
+        "form-stem": "myc",
         "type": "noun",
         "gloss": "fungus",
         "tags": ["mass", "concrete", "living"],
@@ -879,7 +879,7 @@
     },
     {
         "key": "mythos",
-        "link": "myth",
+        "form-stem": "myth",
         "type": "noun",
         "gloss": "story",
         "tags": ["count", "abstract"],
@@ -887,7 +887,7 @@
     },
     {
         "key": "necros",
-        "link": "necr",
+        "form-stem": "necr",
         "type": "noun",
         "gloss": "dead",
         "tags": ["singleton", "concrete"],
@@ -895,7 +895,7 @@
     },
     {
         "key": "nea",
-        "link": "ne",
+        "form-stem": "ne",
         "type": "adj",
         "gloss": "new",
         "tags": ["character"],
@@ -903,7 +903,7 @@
     },
     {
         "key": "noein",
-        "link": "noe",
+        "form-stem": "noe",
         "type": "verb",
         "gloss": "understand",
         "tags": ["transitive"],
@@ -911,7 +911,7 @@
     },
     {
         "key": "nous",
-        "link": "noo",
+        "form-stem": "noo",
         "type": "noun",
         "gloss": "mind",
         "tags": ["mass", "abstract"],
@@ -919,7 +919,7 @@
     },
     {
         "key": "nyx",
-        "link": "nyct",
+        "form-stem": "nyct",
         "type": "noun",
         "gloss": "night",
         "tags": ["mass", "abstract"],
@@ -927,7 +927,7 @@
     },
     {
         "key": "ode",
-        "link": "od",
+        "form-stem": "od",
         "type": "noun",
         "gloss": "song",
         "tags": ["count", "abstract"],
@@ -935,7 +935,7 @@
     },
     {
         "key": "oneiros",
-        "link": "oneir",
+        "form-stem": "oneir",
         "type": "noun",
         "gloss": "dream",
         "tags": ["count", "abstract"],
@@ -943,7 +943,7 @@
     },
     {
         "key": "onoma",
-        "link": ["onom", "onomat"],
+        "form-stem": ["onom", "onomat"],
         "type": "noun",
         "gloss": "name",
         "tags": ["count", "abstract"],
@@ -951,14 +951,14 @@
     },
     {
         "key": "ortha",
-        "link": "orth",
+        "form-stem": "orth",
         "type": "adj",
         "gloss": "straight",
         "origin": "greek"
     },
     {
         "key": "pais",
-        "link": "ped",
+        "form-stem": "ped",
         "type": "noun",
         "gloss": "child",
         "tags": ["count", "concrete", "living", "person"],
@@ -966,7 +966,7 @@
     },
     {
         "key": "palea",
-        "link": "pale",
+        "form-stem": "pale",
         "type": "adj",
         "gloss": "old",
         "tags": ["character"],
@@ -974,7 +974,7 @@
     },
     {
         "key": "paskhein",
-        "link": "pathe",
+        "form-stem": "pathe",
         "type": "verb",
         "gloss": "suffer",
         "tags": ["transitive"],
@@ -982,7 +982,7 @@
     },
     {
         "key": "pater",
-        "link": "patr",
+        "form-stem": "patr",
         "type": "noun",
         "gloss": "father",
         "tags": ["count", "concrete", "living", "person"],
@@ -990,7 +990,7 @@
     },
     {
         "key": "pathos",
-        "link": "path",
+        "form-stem": "path",
         "type": "noun",
         "gloss": "disease",
         "tags": ["count", "abstract"],
@@ -998,7 +998,7 @@
     },
     {
         "key": "phallos",
-        "link": "phall",
+        "form-stem": "phall",
         "type": "noun",
         "gloss": "penis",
         "tags": ["count", "concrete", "bodypart"],
@@ -1006,7 +1006,7 @@
     },
     {
         "key": "phanein",
-        "link": "phane",
+        "form-stem": "phane",
         "type": "verb",
         "gloss": "show",
         "tags": ["transitive"],
@@ -1014,7 +1014,7 @@
     },
     {
         "key": "phantazein",
-        "link": "phantas",
+        "form-stem": "phantas",
         "type": "verb",
         "gloss": "imagine",
         "tags": ["transitive"],
@@ -1022,7 +1022,7 @@
     },
     {
         "key": "pharmakon",
-        "link": "pharmac",
+        "form-stem": "pharmac",
         "type": "noun",
         "gloss": "medicine",
         "tags": ["mass", "concrete"],
@@ -1030,7 +1030,7 @@
     },
     {
         "key": "philia",
-        "link": "phil",
+        "form-stem": "phil",
         "type": "noun",
         "gloss": "love",
         "tags": ["mass", "abstract"],
@@ -1038,7 +1038,7 @@
     },
     {
         "key": "phonein",
-        "link": "phone",
+        "form-stem": "phone",
         "type": "verb",
         "gloss": "speak",
         "tags": ["transitive"],
@@ -1046,7 +1046,7 @@
     },
     {
         "key": "phonos",
-        "link": "phon",
+        "form-stem": "phon",
         "type": "noun",
         "gloss": "sound",
         "tags": ["count", "abstract"],
@@ -1054,7 +1054,7 @@
     },
     {
         "key": "photos",
-        "link": "phot",
+        "form-stem": "phot",
         "type": "noun",
         "gloss": "light",
         "tags": ["mass", "concrete"],
@@ -1062,7 +1062,7 @@
     },
     {
         "key": "phren",
-        "link": "phren",
+        "form-stem": "phren",
         "type": "noun",
         "gloss": "mind",
         "tags": ["count", "abstract"],
@@ -1070,7 +1070,7 @@
     },
     {
         "key": "phrontizein",
-        "link": "phrontis",
+        "form-stem": "phrontis",
         "type": "verb",
         "gloss": "[think] deeply",
         "tags": ["intransitive"],
@@ -1078,7 +1078,7 @@
     },
     {
         "key": "phyton",
-        "link": "phyt",
+        "form-stem": "phyt",
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living", "plant"],
@@ -1086,7 +1086,7 @@
     },
     {
         "key": "plastein",
-        "link": "plaste",
+        "form-stem": "plaste",
         "type": "verb",
         "gloss": "[shape] or [form]",
         "tags": ["transitive"],
@@ -1094,7 +1094,7 @@
     },
     {
         "key": "plutos",
-        "link": "plut",
+        "form-stem": "plut",
         "type": "noun",
         "gloss": "wealth",
         "tags": ["mass", "abstract"],
@@ -1102,7 +1102,7 @@
     },
     {
         "key": "pneuma",
-        "link": "pneum",
+        "form-stem": "pneum",
         "type": "noun",
         "gloss": "air",
         "tags": ["mass", "concrete", "gas", "fluid"],
@@ -1110,7 +1110,7 @@
     },
     {
         "key": "poein",
-        "link": "poe",
+        "form-stem": "poe",
         "type": "verb",
         "gloss": "create",
         "tags": ["transitive"],
@@ -1118,7 +1118,7 @@
     },
     {
         "key": "polemos",
-        "link": "polem",
+        "form-stem": "polem",
         "type": "noun",
         "gloss": "war",
         "tags": ["mass", "abstract"],
@@ -1126,7 +1126,7 @@
     },
     {
         "key": "polemizein",
-        "link": "polemis",
+        "form-stem": "polemis",
         "type": "verb",
         "gloss": "[wage] war",
         "tags": ["intransitive"],
@@ -1134,7 +1134,7 @@
     },
     {
         "key": "polis",
-        "link": "pol",
+        "form-stem": "pol",
         "type": "noun",
         "gloss": "city",
         "exception": [{
@@ -1143,14 +1143,14 @@
                     "has-key": "ic"
                 }
             },
-            "link": "polit"
+            "form-stem": "polit"
         }],
         "tags": ["count", "concrete", "terrain"],
         "origin": "greek"
     },
     {
         "key": "poly",
-        "link": "poly",
+        "form-stem": "poly",
         "type": "adj",
         "gloss": "many",
         "exception": [{
@@ -1159,13 +1159,13 @@
                     "has-prefix": "o"
                 }
             },
-            "link": "poly/"
+            "form-stem": "poly/"
         }],
         "origin": "greek"
     },
     {
         "key": "potamos",
-        "link": "potam",
+        "form-stem": "potam",
         "type": "noun",
         "gloss": "river",
         "tags": ["count", "concrete", "terrain"],
@@ -1173,7 +1173,7 @@
     },
     {
         "key": "pous",
-        "link": "pod",
+        "form-stem": "pod",
         "type": "noun",
         "gloss": "foot",
         "tags": ["count", "concrete", "bodypart"],
@@ -1181,7 +1181,7 @@
     },
     {
         "key": "pseuda",
-        "link": "pseud",
+        "form-stem": "pseud",
         "type": "adj",
         "gloss": "false",
         "tags": ["character"],
@@ -1189,7 +1189,7 @@
     },
     {
         "key": "psyche",
-        "link": "psych",
+        "form-stem": "psych",
         "type": "noun",
         "gloss": "mind",
         "tags": ["count", "concrete"],
@@ -1197,7 +1197,7 @@
     },
     {
         "key": "pteron",
-        "link": "pter",
+        "form-stem": "pter",
         "type": "noun",
         "gloss": "wing",
         "tags": ["count", "concrete", "bodypart"],
@@ -1205,7 +1205,7 @@
     },
     {
         "key": "pyr",
-        "link": "pyr",
+        "form-stem": "pyr",
         "type": "noun",
         "gloss": "fire",
         "tags": ["mass", "concrete"],
@@ -1213,14 +1213,14 @@
     },
     {
         "key": "oliga",
-        "link": "olig",
+        "form-stem": "olig",
         "type": "adj",
         "gloss": "few",
         "origin": "greek"
     },
     {
         "key": "ophis",
-        "link": "ophi",
+        "form-stem": "ophi",
         "type": "noun",
         "gloss": "snake",
         "tags": ["count", "concrete", "living", "animal"],
@@ -1228,7 +1228,7 @@
     },
     {
         "key": "ornis",
-        "link": "ornith",
+        "form-stem": "ornith",
         "type": "noun",
         "gloss": "bird",
         "tags": ["count", "concrete", "living", "animal"],
@@ -1236,7 +1236,7 @@
     },
     {
         "key": "osteon",
-        "link": "oste",
+        "form-stem": "oste",
         "type": "noun",
         "gloss": "bone",
         "tags": ["count", "concrete", "bodypart"],
@@ -1244,7 +1244,7 @@
     },
     {
         "key": "ouranos",
-        "link": "uran",
+        "form-stem": "uran",
         "type": "noun",
         "gloss": "sky",
         "tags": ["singleton", "concrete"],
@@ -1252,7 +1252,7 @@
     },
     {
         "key": "sapra",
-        "link": "sapr",
+        "form-stem": "sapr",
         "type": "adj",
         "gloss": "putrid",
         "tags": ["material"],
@@ -1260,7 +1260,7 @@
     },
     {
         "key": "sarx",
-        "link": "sarc",
+        "form-stem": "sarc",
         "type": "noun",
         "gloss": "flesh",
         "tags": ["count", "concrete", "bodypart"],
@@ -1268,7 +1268,7 @@
     },
     {
         "key": "schema",
-        "link": "schemat",
+        "form-stem": "schemat",
         "type": "noun",
         "gloss": "[form] or [appearance]",
         "tags": ["count", "abstract"],
@@ -1276,7 +1276,7 @@
     },
     {
         "key": "schizein",
-        "link": "schis",
+        "form-stem": "schis",
         "type": "verb",
         "gloss": "split",
         "tags": ["transitive"],
@@ -1284,7 +1284,7 @@
     },
     {
         "key": "selene",
-        "link": "selen",
+        "form-stem": "selen",
         "type": "noun",
         "gloss": "moon",
         "tags": ["count", "concrete"],
@@ -1292,7 +1292,7 @@
     },
     {
         "key": "selene-singleton",
-        "link": "selen",
+        "form-stem": "selen",
         "type": "noun",
         "gloss": "moon",
         "tags": ["singleton", "concrete"],
@@ -1300,7 +1300,7 @@
     },
     {
         "key": "sema",
-        "link": "sem",
+        "form-stem": "sem",
         "type": "noun",
         "gloss": "sign",
         "tags": ["count", "abstract"],
@@ -1308,7 +1308,7 @@
     },
     {
         "key": "soma",
-        "link": "somat",
+        "form-stem": "somat",
         "type": "noun",
         "gloss": "body",
         "tags": ["count", "concrete"],
@@ -1316,7 +1316,7 @@
     },
     {
         "key": "soteria",
-        "link": "soteri",
+        "form-stem": "soteri",
         "type": "noun",
         "gloss": "salvation",
         "tags": ["mass", "abstract"],
@@ -1324,7 +1324,7 @@
     },
     {
         "key": "spelaion",
-        "link": "spele",
+        "form-stem": "spele",
         "type": "noun",
         "gloss": "cave",
         "tags": ["count", "concrete"],
@@ -1332,7 +1332,7 @@
     },
     {
         "key": "stylos",
-        "link": "styl",
+        "form-stem": "styl",
         "type": "noun",
         "gloss": "column",
         "tags": ["count", "concrete"],
@@ -1340,7 +1340,7 @@
     },
     {
         "key": "tachya",
-        "link": "tachy",
+        "form-stem": "tachy",
         "type": "adj",
         "gloss": "fast",
         "tags": ["character"],
@@ -1350,13 +1350,13 @@
                     "has-prefix": "o"
                 }
             },
-            "link": "tachy/"
+            "form-stem": "tachy/"
         }],
         "origin": "greek"
     },
     {
         "key": "techne",
-        "link": "techn",
+        "form-stem": "techn",
         "type": "noun",
         "gloss": "skill",
         "tags": ["mass", "abstract"],
@@ -1364,7 +1364,7 @@
     },
     {
         "key": "thalassos",
-        "link": "thalass",
+        "form-stem": "thalass",
         "type": "noun",
         "gloss": "sea",
         "tags": ["singleton", "concrete", "fluid", "liquid"],
@@ -1372,7 +1372,7 @@
     },
     {
         "key": "thanatos",
-        "link": "thanat",
+        "form-stem": "thanat",
         "type": "noun",
         "gloss": "death",
         "tags": ["mass", "abstract"],
@@ -1380,7 +1380,7 @@
     },
     {
         "key": "thein",
-        "link": "the",
+        "form-stem": "the",
         "type": "verb",
         "gloss": "propose",
         "tags": ["transitive"],
@@ -1388,7 +1388,7 @@
     },
     {
         "key": "theos",
-        "link": "the",
+        "form-stem": "the",
         "type": "noun",
         "gloss": "god",
         "tags": ["count", "concrete", "living"],
@@ -1396,7 +1396,7 @@
     },
     {
         "key": "therma-adj",
-        "link": "therm",
+        "form-stem": "therm",
         "type": "adj",
         "gloss": "hot",
         "tags": ["material"],
@@ -1404,7 +1404,7 @@
     },
     {
         "key": "therma-noun",
-        "link": "therm",
+        "form-stem": "therm",
         "type": "noun",
         "gloss": "heat",
         "tags": ["mass", "abstract"],
@@ -1412,7 +1412,7 @@
     },
     {
         "key": "topos",
-        "link": "top",
+        "form-stem": "top",
         "type": "noun",
         "gloss": "place",
         "tags": ["count", "concrete"],
@@ -1420,7 +1420,7 @@
     },
     {
         "key": "toxon",
-        "link": "tox",
+        "form-stem": "tox",
         "type": "noun",
         "gloss": "poison",
         "tags": ["mass", "concrete", "fluid", "liquid"],
@@ -1428,7 +1428,7 @@
     },
     {
         "key": "zoon",
-        "link": "zoo",
+        "form-stem": "zoo",
         "type": "noun",
         "gloss": "animal",
         "tags": ["count", "concrete", "living", "animal"],
@@ -1436,7 +1436,7 @@
     },
     {
         "key": "greek-none-join",
-        "link": "a",
+        "form-stem": "a",
         "type": "number",
         "gloss": "no %pl",
         "exception": [{
@@ -1445,13 +1445,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u", "h"]
                 }
             },
-            "link": "an"
+            "form-stem": "an"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-one-join",
-        "link": "mono",
+        "form-stem": "mono",
         "type": "number",
         "gloss": "one %!sg",
         "exception": [{
@@ -1460,27 +1460,27 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "mon"
+            "form-stem": "mon"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-two-join",
-        "link": "di",
+        "form-stem": "di",
         "type": "number",
         "gloss": "two %!pl",
         "origin": "greek"
     },
     {
         "key": "greek-three-join",
-        "link": "tri",
+        "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "greek"
     },
     {
         "key": "greek-four-join",
-        "link": "tetra",
+        "form-stem": "tetra",
         "type": "number",
         "gloss": "four %!pl",
         "exception": [{
@@ -1489,13 +1489,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "tetr"
+            "form-stem": "tetr"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-five-join",
-        "link": "penta",
+        "form-stem": "penta",
         "type": "number",
         "gloss": "five %!pl",
         "exception": [{
@@ -1504,13 +1504,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "pent"
+            "form-stem": "pent"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-six-join",
-        "link": "hexa",
+        "form-stem": "hexa",
         "type": "number",
         "gloss": "six %!pl",
         "exception": [{
@@ -1519,13 +1519,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "hex"
+            "form-stem": "hex"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-seven-join",
-        "link": "hepta",
+        "form-stem": "hepta",
         "type": "number",
         "gloss": "seven %!pl",
         "exception": [{
@@ -1534,13 +1534,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "hept"
+            "form-stem": "hept"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-eight-join",
-        "link": "octo",
+        "form-stem": "octo",
         "type": "number",
         "gloss": "eight %!pl",
         "exception": [{
@@ -1549,13 +1549,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "oct"
+            "form-stem": "oct"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-nine-join",
-        "link": "ennea",
+        "form-stem": "ennea",
         "type": "number",
         "gloss": "nine %!pl",
         "exception": [{
@@ -1564,13 +1564,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "enne"
+            "form-stem": "enne"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-hundred-join",
-        "link": "hecato",
+        "form-stem": "hecato",
         "type": "number",
         "gloss": "one-hundred %!pl",
         "exception": [{
@@ -1579,20 +1579,20 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "hecat"
+            "form-stem": "hecat"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-thousand-join",
-        "link": "chili",
+        "form-stem": "chili",
         "type": "number",
         "gloss": "one-thousand %!pl",
         "origin": "greek"
     },
     {
         "key": "greek-ten-thousand-join",
-        "link": "myria",
+        "form-stem": "myria",
         "type": "number",
         "gloss": "ten-thousand %!pl",
         "exception": [{
@@ -1601,13 +1601,13 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "myri"
+            "form-stem": "myri"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-few-join",
-        "link": "oligo",
+        "form-stem": "oligo",
         "type": "number",
         "gloss": "few %!pl",
         "exception": [{
@@ -1616,21 +1616,21 @@
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
             },
-            "link": "olig"
+            "form-stem": "olig"
         }],
         "origin": "greek"
     },
     {
         "key": "greek-many-join",
-        "link": "poly",
+        "form-stem": "poly",
         "type": "number",
         "gloss": "many %!pl",
         "origin": "greek"
     },
     {
         "key": "greek-arch",
-        "final": "arch",
-        "link": "arch",
+        "form-final": "arch",
+        "form-stem": "arch",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1651,8 +1651,8 @@
     },
     {
         "key": "oclast",
-        "final": "oclast",
-        "link": "oclast",
+        "form-final": "oclast",
+        "form-stem": "oclast",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1673,8 +1673,8 @@
     },
     {
         "key": "ocrat-adj",
-        "final": "ocrat",
-        "link": "ocrat",
+        "form-final": "ocrat",
+        "form-stem": "ocrat",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
@@ -1700,7 +1700,7 @@
                         "has-key": "y-passthrough"
                     }
                 },
-                "link": "ocrac"
+                "form-stem": "ocrac"
             }
         ],
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
@@ -1708,8 +1708,8 @@
     },
     {
         "key": "ocrat-noun",
-        "final": "ocrat",
-        "link": "ocrat",
+        "form-final": "ocrat",
+        "form-stem": "ocrat",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1735,7 +1735,7 @@
                         "has-key": "y-passthrough"
                     }
                 },
-                "link": "ocrac"
+                "form-stem": "ocrac"
             }
         ],
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
@@ -1743,8 +1743,8 @@
     },
     {
         "key": "ogen",
-        "link": "ogen",
-        "final": "ogen",
+        "form-stem": "ogen",
+        "form-final": "ogen",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1755,8 +1755,8 @@
     },
     {
         "key": "agog",
-        "final": "agog",
-        "link": "agog",
+        "form-final": "agog",
+        "form-stem": "agog",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -1775,7 +1775,7 @@
                     }
                 },
                 "gloss": "[lead] %pl",
-                "link": "agogu"
+                "form-stem": "agogu"
             }
         ],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
@@ -1783,8 +1783,8 @@
     },
     {
         "key": "ograph",
-        "final": "ograph",
-        "link": "ograph",
+        "form-final": "ograph",
+        "form-stem": "ograph",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -1805,8 +1805,8 @@
     },
     {
         "key": "olat",
-        "final": "olat",
-        "link": "olatr",
+        "form-final": "olat",
+        "form-stem": "olatr",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1819,7 +1819,7 @@
                         "has-key": "greek-silent"
                     }
                 },
-                "link": "olater",
+                "form-stem": "olater",
                 "gloss": "one who worships %pl"
             }
         ],
@@ -1828,8 +1828,8 @@
     },
     {
         "key": "olog-noun",
-        "final": "olog",
-        "link": "olog",
+        "form-final": "olog",
+        "form-stem": "olog",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -1840,8 +1840,8 @@
     },
     {
         "key": "oman-noun",
-        "final": "oman",
-        "link": "oman",
+        "form-final": "oman",
+        "form-stem": "oman",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1852,8 +1852,8 @@
     },
     {
         "key": "oman-verb",
-        "final": "oman",
-        "link": "oman",
+        "form-final": "oman",
+        "form-stem": "oman",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -1864,8 +1864,8 @@
     },
     {
         "key": "omant",
-        "final": "omant",
-        "link": "omanc",
+        "form-final": "omant",
+        "form-stem": "omanc",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1877,15 +1877,15 @@
                     "has-key": "ic-def"
                 }
             },
-            "link": "omant"
+            "form-stem": "omant"
         }],
         "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     },
     {
         "key": "ometr",
-        "final": "ometer",
-        "link": "ometr",
+        "form-final": "ometer",
+        "form-stem": "ometr",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1903,7 +1903,7 @@
                         "has-key": "greek-silent"
                     }
                 },
-                "link": "ometer",
+                "form-stem": "ometer",
                 "gloss": "one who measures %pl"
             }
         ],
@@ -1912,8 +1912,8 @@
     },
     {
         "key": "omorph",
-        "link": "omorph",
-        "final": "omorph",
+        "form-stem": "omorph",
+        "form-final": "omorph",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1932,8 +1932,8 @@
     },
     {
         "key": "onom-noun",
-        "final": "onom",
-        "link": "onom",
+        "form-final": "onom",
+        "form-stem": "onom",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -1944,8 +1944,8 @@
     },
     {
         "key": "ophag",
-        "final": "ophag",
-        "link": "ophag",
+        "form-final": "ophag",
+        "form-stem": "ophag",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -1972,8 +1972,8 @@
     },
     {
         "key": "ophil-adj",
-        "final": "ophil",
-        "link": "ophil",
+        "form-final": "ophil",
+        "form-stem": "ophil",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
@@ -1984,8 +1984,8 @@
     },
     {
         "key": "ophil-noun",
-        "final": "ophil",
-        "link": "ophil",
+        "form-final": "ophil",
+        "form-stem": "ophil",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2001,8 +2001,8 @@
     },
     {
         "key": "ophob-adj",
-        "final": "ophob",
-        "link": "ophob",
+        "form-final": "ophob",
+        "form-stem": "ophob",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
@@ -2013,8 +2013,8 @@
     },
     {
         "key": "ophob-noun",
-        "final": "ophob",
-        "link": "ophob",
+        "form-final": "ophob",
+        "form-stem": "ophob",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2025,8 +2025,8 @@
     },
     {
         "key": "ophor",
-        "final": "ophor",
-        "link": "ophor",
+        "form-final": "ophor",
+        "form-stem": "ophor",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2047,8 +2047,8 @@
     },
     {
         "key": "oplast",
-        "final": "oplast",
-        "link": "oplast",
+        "form-final": "oplast",
+        "form-stem": "oplast",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2069,8 +2069,8 @@
     },
     {
         "key": "opot-adj",
-        "final": "opot",
-        "link": "opot",
+        "form-final": "opot",
+        "form-stem": "opot",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
@@ -2094,8 +2094,8 @@
     },
     {
         "key": "opot-noun",
-        "final": "opot",
-        "link": "opot",
+        "form-final": "opot",
+        "form-stem": "opot",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2119,8 +2119,8 @@
     },
     {
         "key": "orrhea",
-        "final": "orrhea",
-        "link": "orrhe",
+        "form-final": "orrhea",
+        "form-stem": "orrhe",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2136,8 +2136,8 @@
     },
     {
         "key": "oscop-adj",
-        "final": "oscop",
-        "link": "oscop",
+        "form-final": "oscop",
+        "form-stem": "oscop",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",
@@ -2148,8 +2148,8 @@
     },
     {
         "key": "oscop-noun",
-        "final": "oscop",
-        "link": "oscop",
+        "form-final": "oscop",
+        "form-stem": "oscop",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -2165,8 +2165,8 @@
     },
     {
         "key": "othec",
-        "link": "othec",
-        "final": "othec",
+        "form-stem": "othec",
+        "form-final": "othec",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2182,8 +2182,8 @@
     },
     {
         "key": "otechn",
-        "final": "otechn",
-        "link": "otechn",
+        "form-final": "otechn",
+        "form-stem": "otechn",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2194,32 +2194,32 @@
     },
     {
         "key": "greek-silent",
-        "final": "",
-        "link": "",
+        "form-final": "",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "%@",
-        "tags": ["no-gen", "final"],
+        "tags": ["no-gen", "form-final"],
         "origin": "greek"
     },
     {
         "key": "greek-silent-agent",
-        "final": "",
-        "link": "",
+        "form-final": "",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["count", "concrete", "no-gen", "final"],
+        "tags": ["count", "concrete", "no-gen", "form-final"],
         "origin": "greek"
     },
     {
         "key": "greek-silent-haver",
-        "final": "",
-        "link": "",
+        "form-final": "",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2230,8 +2230,8 @@
     },
     {
         "key": "greek-e-agent",
-        "final": "e",
-        "link": "",
+        "form-final": "e",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2242,8 +2242,8 @@
     },
     {
         "key": "er-agent",
-        "final": "er",
-        "link": "",
+        "form-final": "er",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2254,8 +2254,8 @@
     },
     {
         "key": "e-haver",
-        "final": "e",
-        "link": "",
+        "form-final": "e",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2266,8 +2266,8 @@
     },
     {
         "key": "e-instrument",
-        "final": "e",
-        "link": "",
+        "form-final": "e",
+        "form-stem": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2278,8 +2278,8 @@
     },
     {
         "key": "ia-def",
-        "final": "ia",
-        "link": "i",
+        "form-final": "ia",
+        "form-stem": "i",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2290,8 +2290,8 @@
     },
     {
         "key": "y-number",
-        "final": ["y", "ia"],
-        "link": "i",
+        "form-final": ["y", "ia"],
+        "form-stem": "i",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2303,15 +2303,15 @@
                     "has-suffix": "i"
                 }
             },
-            "final": "a"
+            "form-final": "a"
         }],
         "tags": ["mass", "abstract", "no-gen"],
         "origin": "greek"
     },
     {
         "key": "iac-haver",
-        "final": "iac",
-        "link": "iac",
+        "form-final": "iac",
+        "form-stem": "iac",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2322,8 +2322,8 @@
     },
     {
         "key": "y-def",
-        "final": "y",
-        "link": "i",
+        "form-final": "y",
+        "form-stem": "i",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2334,8 +2334,8 @@
     },
     {
         "key": "y-passthrough",
-        "final": "y",
-        "link": "i",
+        "form-final": "y",
+        "form-stem": "i",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2346,8 +2346,8 @@
     },
     {
         "key": "y-verb",
-        "link": "i",
-        "final": ["y", "ia"],
+        "form-stem": "i",
+        "form-final": ["y", "ia"],
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2364,8 +2364,8 @@
     },
     {
         "key": "ic",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
@@ -2378,83 +2378,83 @@
                         "has-suffix": "i"
                     }
                 },
-                "link": "iac",
-                "final": "iac"
+                "form-stem": "iac",
+                "form-final": "iac"
             }
         ],
-        "tags": ["final", "no-joiner"],
+        "tags": ["form-final", "no-joiner"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
     {
         "key": "ic-character",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "characterized by %@",
-        "tags": ["final", "no-gen"],
+        "tags": ["form-final", "no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
     {
         "key": "ic-def",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "pertaining to %sg",
-        "tags": ["final", "no-gen"],
+        "tags": ["form-final", "no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
     {
         "key": "ic-verb",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "pertaining to the %part",
-        "tags": ["final", "no-gen"],
+        "tags": ["form-final", "no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
     {
         "key": "ic-part",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "%part",
-        "tags": ["final", "no-gen"],
+        "tags": ["form-final", "no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
     {
         "key": "ic-having",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "having %@",
-        "tags": ["final", "no-gen"],
+        "tags": ["form-final", "no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
     {
         "key": "ic-number",
-        "final": "ic",
-        "link": "ic",
+        "form-final": "ic",
+        "form-stem": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2465,8 +2465,8 @@
     },
     {
         "key": "tic-verb",
-        "final": "tic",
-        "link": "tic",
+        "form-final": "tic",
+        "form-stem": "tic",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
@@ -2477,8 +2477,8 @@
     },
     {
         "key": "greek-ist",
-        "link": "ist",
-        "final": "ist",
+        "form-stem": "ist",
+        "form-final": "ist",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2489,8 +2489,8 @@
     },
     {
         "key": "er-practitioner",
-        "link": "er",
-        "final": "er",
+        "form-stem": "er",
+        "form-final": "er",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2501,8 +2501,8 @@
     },
     {
         "key": "oid",
-        "link": "oid",
-        "final": "oid",
+        "form-stem": "oid",
+        "form-final": "oid",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -2518,8 +2518,8 @@
     },
     {
         "key": "ma",
-        "link": "mat",
-        "final": "m",
+        "form-stem": "mat",
+        "form-final": "m",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2532,7 +2532,7 @@
                         "has-suffix": "g"
                     }
                 },
-                "final": "ma"
+                "form-final": "ma"
             },
             {
                 "case": {
@@ -2540,7 +2540,7 @@
                         "has-suffix": "e"
                     }
                 },
-                "final": ["ma", "me"]
+                "form-final": ["ma", "me"]
             },
             {
                 "case": {
@@ -2548,7 +2548,7 @@
                         "has-suffix": "s"
                     }
                 },
-                "final": ["ma", "m"],
+                "form-final": ["ma", "m"],
                 "tags": ["count", "concrete", "no-joiner"]
             },
             {
@@ -2565,8 +2565,8 @@
     },
     {
         "key": "t-agent",
-        "link": "t",
-        "final": "t",
+        "form-stem": "t",
+        "form-final": "t",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2578,16 +2578,16 @@
                     "has-suffix": "e"
                 }
             },
-            "link": "t",
-            "final": "te"
+            "form-stem": "t",
+            "form-final": "te"
         }],
         "tags": ["count", "concrete", "living", "person", "no-joiner"],
         "origin": "greek"
     },
     {
         "key": "sis",
-        "link": "s",
-        "final": "sis",
+        "form-stem": "s",
+        "form-final": "sis",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2599,15 +2599,15 @@
                     "has-suffix": "s"
                 }
             },
-            "final": "is"
+            "form-final": "is"
         }],
         "tags": ["count", "concrete", "living", "person", "no-joiner"],
         "origin": "greek"
     },
     {
         "key": "erion",
-        "link": "eri",
-        "final": "ery",
+        "form-stem": "eri",
+        "form-final": "ery",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -2618,8 +2618,8 @@
     },
     {
         "key": "greek-ize",
-        "link": "iz",
-        "final": "ize",
+        "form-stem": "iz",
+        "form-final": "ize",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -2630,8 +2630,8 @@
     },
     {
         "key": "greek-ize-adj",
-        "link": "as",
-        "final": "ize",
+        "form-stem": "as",
+        "form-final": "ize",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",

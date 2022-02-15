@@ -18,8 +18,8 @@ def validate_morph(morph):
     # TODO - make countability a property, not a tag
     if morph_type == "noun":
         if morph["origin"] == "latin":
-            if not "link" in morph or not "declension" in morph:
-                print(" - noun must have 'link' and 'declension'")
+            if not "form-stem" in morph or not "declension" in morph:
+                print(" - noun must have 'form-stem' and 'declension'")
                 return False
             elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
                 print(" - noun must have tag 'count', 'mass', or 'singleton'")
@@ -28,8 +28,8 @@ def validate_morph(morph):
                 print(" - invalid declension '" + str(morph["declension"]) + "'")
                 return False
         elif morph["origin"] == "greek":
-            if not "link" in morph:
-                print(" - noun must have 'link'")
+            if not "form-stem" in morph:
+                print(" - noun must have 'form-stem'")
                 return False
             elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
                 print(" - noun must have tag 'count', 'mass', or 'singleton'")
@@ -37,21 +37,21 @@ def validate_morph(morph):
 
     elif morph_type == "adj":
         if morph["origin"] == "latin":
-            if not "link" in morph or not "declension" in morph:
-                print(" - adjective must have 'link' and 'declension'")
+            if not "form-stem" in morph or not "declension" in morph:
+                print(" - adjective must have 'form-stem' and 'declension'")
                 return False
             elif morph["declension"] not in [0, 12, 3]:
                 print(" - invalid declension '" + str(morph["declension"]) + "'")
                 return False
         elif morph["origin"] == "greek":
-            if not "link" in morph:
-                print(" - adjective must have 'link'")
+            if not "form-stem" in morph:
+                print(" - adjective must have 'form-stem'")
                 return False
 
     elif morph_type == "verb":
         if morph["origin"] == "latin":
-            if not ("link-present" in morph and "final" in morph and "conjugation" in morph):
-                print(" - verbs require 'link-present', 'link-perfect', 'final', and 'conjugation'")
+            if not ("form-stem-present" in morph and "form-final" in morph and "conjugation" in morph):
+                print(" - verbs require 'form-stem-present', 'form-stem-perfect', 'final', and 'conjugation'")
                 return False
 
             if morph["conjugation"] not in [0, 1, 2, 3, 4]:

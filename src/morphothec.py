@@ -84,6 +84,9 @@ class Morphothec:
         return selected
 
     def filter_appends_to(self, base_type, language="latin", morph_filter=None):
+        #print("type: " + base_type)
+        #print("Follows: ", self.languages[language].morphs_from["verb"])
+        #print("Follows2: ", self.languages[language].morphs_from[base_type])
         if morph_filter is None:
             return self.languages[language].morphs_from[base_type]
         

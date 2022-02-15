@@ -3,17 +3,17 @@ import unittest
 from src.expressions import evaluate_expression
 
 test_morphs = {
-    "nuntiare": { "key": "nuntiare", "link-present": "nuntia", "link-perfect": "nunciat", "final": "nounce", "type": "verb", "conjugation": 1, "gloss": "report", "tags": ["transitive"], "origin": "latin", "form": "nuntiat", "final": False },
-    "audire": { "key": "audire", "link-present": "audi", "link-perfect": "audit", "final": "audit", "type": "verb", "conjugation": 4, "gloss": "hear", "tags": ["transitive"], "origin": "latin", "form": "audit", "final": False },
-    "cancer": { "key": "cancer", "link": "cancr", "type": "noun", "declension": 2, "gloss": "crab", "tags": ["count", "concrete", "living", "animal"], "origin": "latin", "form": "cancr", "final": False },
-    "lumen": { "key": "lumen", "link": "lumin", "type": "noun", "declension": 3, "gloss": "lamp", "tags": ["count", "concrete", "tool"], "origin": "latin", "form": "lumin", "Final": False },
-    "stella": { "key": "stella", "link": "stell", "type": "noun", "declension": 1, "gloss": "star", "tags": ["count", "concrete"], "origin": "latin", "form": "stell", "final": False },
-    "volumen": { "key": "volumen", "link": "volumin", "type": "noun", "declension": 3, "gloss": "volume", "tags": ["mass", "abstract"], "origin": "latin", "form": "volumin", "final" : False},
-    "columna": { "key": "columna", "link": "column", "type": "noun", "declension": 1, "gloss": "column", "tags": ["count", "concrete"], "origin": "latin", "form": "column", "final": False },
+    "nuntiare": { "key": "nuntiare", "form-stem-present": "nuntia", "form-stem-perfect": "nunciat", "form-final": "nounce", "type": "verb", "conjugation": 1, "gloss": "report", "tags": ["transitive"], "origin": "latin", "form": "nuntiat", "form-final": False },
+    "audire": { "key": "audire", "form-stem-present": "audi", "form-stem-perfect": "audit", "form-final": "audit", "type": "verb", "conjugation": 4, "gloss": "hear", "tags": ["transitive"], "origin": "latin", "form": "audit", "form-final": False },
+    "cancer": { "key": "cancer", "form-stem": "cancr", "type": "noun", "declension": 2, "gloss": "crab", "tags": ["count", "concrete", "living", "animal"], "origin": "latin", "form": "cancr", "form-final": False },
+    "lumen": { "key": "lumen", "form-stem": "lumin", "type": "noun", "declension": 3, "gloss": "lamp", "tags": ["count", "concrete", "tool"], "origin": "latin", "form": "lumin", "form-final": False },
+    "stella": { "key": "stella", "form-stem": "stell", "type": "noun", "declension": 1, "gloss": "star", "tags": ["count", "concrete"], "origin": "latin", "form": "stell", "form-final": False },
+    "volumen": { "key": "volumen", "form-stem": "volumin", "type": "noun", "declension": 3, "gloss": "volume", "tags": ["mass", "abstract"], "origin": "latin", "form": "volumin", "form-final" : False},
+    "columna": { "key": "columna", "form-stem": "column", "type": "noun", "declension": 1, "gloss": "column", "tags": ["count", "concrete"], "origin": "latin", "form": "column", "form-final": False },
 
-    "arktos": { "key": "arktos", "link": "arct", "type": "noun", "gloss": "bear", "tags": ["count", "concrete", "living", "animal"], "origin": "greek", "form": "arct", "final": False },
-    "enigma": { "key": "enigma", "link": "enigmat", "type": "noun", "gloss": "riddle", "tags": ["count", "abstract"], "origin": "greek", "form": "enigmat", "final": False },
-    "ic":     { "key": "ic", "final": "ic", "link": "ic", "type": "derive", "derive-from": "noun", "derive-to": "adj", "suffixes": [], "gloss": "pertaining to %pl", "tags": ["final"], "origin": "greek", "form": "ic", "final": True }
+    "arktos": { "key": "arktos", "form-stem": "arct", "type": "noun", "gloss": "bear", "tags": ["count", "concrete", "living", "animal"], "origin": "greek", "form": "arct", "form-final": False },
+    "enigma": { "key": "enigma", "form-stem": "enigmat", "type": "noun", "gloss": "riddle", "tags": ["count", "abstract"], "origin": "greek", "form": "enigmat", "form-final": False },
+    "ic":     { "key": "ic", "form-final": "ic", "form-stem": "ic", "type": "derive", "derive-from": "noun", "derive-to": "adj", "suffixes": [], "gloss": "pertaining to %pl", "tags": ["form-final"], "origin": "greek", "form": "ic", "form-final": True }
 }
 
 

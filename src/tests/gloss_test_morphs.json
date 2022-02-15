@@ -1,7 +1,7 @@
 [
     {
         "key": "avis",
-        "link": "avi",
+        "form-stem": "avi",
         "type": "noun",
         "declension": 3,
         "tags": ["count", "concrete"],
@@ -10,7 +10,7 @@
     },
     {
         "key": "falx",
-        "link": "falc",
+        "form-stem": "falc",
         "type": "noun",
         "declension": 3,
         "gloss": "sickle",
@@ -20,7 +20,7 @@
     },
     {
         "key": "lumen",
-        "link": "lumin",
+        "form-stem": "lumin",
         "type": "noun",
         "declension": 3,
         "gloss": "lamp",
@@ -30,7 +30,7 @@
     },
     {
         "key": "tempus",
-        "link": "tempor",
+        "form-stem": "tempor",
         "type": "noun",
         "declension": 3,
         "gloss": "time",
@@ -39,7 +39,7 @@
     },
     {
         "key": "terra-singleton",
-        "link": "terr",
+        "form-stem": "terr",
         "type": "noun",
         "declension": 1,
         "gloss": "earth",
@@ -48,7 +48,7 @@
     },
     {
         "key": "gravis",
-        "link": "grav",
+        "form-stem": "grav",
         "type": "adj",
         "declension": 3,
         "gloss": "heavy",
@@ -56,9 +56,9 @@
     },
     {
         "key": "iacere",
-        "link-present": "jace",
-        "link-perfect": "jact",
-        "final": "jact",
+        "form-stem-present": "jace",
+        "form-stem-perfect": "jact",
+        "form-final": "jact",
         "type": "verb",
         "conjugation": 3,
         "gloss": "throw",
@@ -67,9 +67,9 @@
     },
     {
         "key": "vehere",
-        "link-present": "vehe",
-        "link-perfect": "vect",
-        "final": "veigh",
+        "form-stem-present": "vehe",
+        "form-stem-perfect": "vect",
+        "form-final": "veigh",
         "type": "verb",
         "conjugation": 3,
         "gloss": "carry",
@@ -78,29 +78,29 @@
     },
     {
         "key": "one-join",
-        "link": "uni",
+        "form-stem": "uni",
         "type": "number",
         "gloss": "one %!sg",
         "origin": "latin"
     },
     {
         "key": "three-join",
-        "link": "tri",
+        "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "latin"
     },
     {
         "key": "ten-join",
-        "link": "deci",
+        "form-stem": "deci",
         "type": "number",
         "gloss": "ten %!pl",
         "origin": "latin"
     },
     {
         "key": "al",
-        "link": "al",
-        "final": "al",
+        "form-stem": "al",
+        "form-final": "al",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
@@ -110,8 +110,8 @@
     },
     {
         "key": "al-number",
-        "final": "al",
-        "link": "al",
+        "form-final": "al",
+        "form-stem": "al",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
@@ -121,8 +121,8 @@
     },
     {
         "key": "ity",
-        "link": "iti",
-        "final": "ity",
+        "form-stem": "iti",
+        "form-final": "ity",
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
@@ -131,9 +131,9 @@
     },
     {
         "key": "esce",
-        "link-present": "esce",
-        "link-perfect": "esc",
-        "final": "esce",
+        "form-stem-present": "esce",
+        "form-stem-perfect": "esc",
+        "form-final": "esce",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",
@@ -143,8 +143,8 @@
     },
     {
         "key": "nt",
-        "final": "nt",
-        "link": "nti",
+        "form-final": "nt",
+        "form-stem": "nti",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
@@ -154,8 +154,8 @@
     },
     {
         "key": "ble",
-        "final": "ble",
-        "link": "bil",
+        "form-final": "ble",
+        "form-stem": "bil",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
@@ -165,8 +165,8 @@
     },
     {
         "key": "ile-verb",
-        "final": "ile",
-        "link": "il",
+        "form-final": "ile",
+        "form-stem": "il",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
@@ -176,8 +176,8 @@
     },
     {
         "key": "or",
-        "final": "or",
-        "link": "or",
+        "form-final": "or",
+        "form-stem": "or",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -188,8 +188,8 @@
     },
     {
         "key": "ion",
-        "final": "ion",
-        "link": "ion",
+        "form-final": "ion",
+        "form-stem": "ion",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -200,9 +200,9 @@
     },
     {
         "key": "ate",
-        "link-present": "ata",
-        "link-perfect": "at",
-        "final": "ate",
+        "form-stem-present": "ata",
+        "form-stem-perfect": "at",
+        "form-final": "ate",
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "verb",
@@ -213,8 +213,8 @@
     },
     {
         "key": "ate-tool",
-        "link": "at",
-        "final": "ate",
+        "form-stem": "at",
+        "form-final": "ate",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -236,8 +236,8 @@
     },
     {
         "key": "ad",
-        "link": "ad",
-        "link-assim": "a",
+        "form-stem": "ad",
+        "form-stem-assim": "a",
         "type": "prep",
         "gloss-verb": "%@ to",
         "gloss-noun": "to %sg",
@@ -246,8 +246,8 @@
     },
     {
         "key": "in",
-        "link": "in",
-        "link-assim": "a",
+        "form-stem": "in",
+        "form-stem-assim": "a",
         "type": "prep",
         "gloss-verb": "%@ in",
         "gloss-noun": "in %sg",
@@ -256,7 +256,7 @@
     },
     {
         "key": "re-again",
-        "link": "re",
+        "form-stem": "re",
         "type": "prefix",
         "gloss": "%@ again",
         "origin": "latin"
