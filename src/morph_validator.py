@@ -1,3 +1,37 @@
+valid_properties = [
+    "key",
+    "type",
+    "derive-from",              # Type derive attaches to
+    "derive-to",                # Type derive produces
+    "derive-participle",        # Participle type used by a suffix
+    "form",
+    "form-final",
+    "form-stem",
+    "form-stem-present",        # Present participle stem for Latin verbs
+    "form-stem-perfect",        # Perfect participle stem for Latin verbs
+    "form-stem-assim",          # Stem for assimilating prefixes
+    "form-joiner-present",      # Joining vowel(s) used for Latin present participles
+    "form-assimilation",        # Assimilation rules
+    "conjugation",
+    "declension",
+    "gloss",
+    "gloss-final",              # Gloss used when this is the last morph
+    "gloss-link",               # Gloss used when not the last morph
+    "gloss-relative",           # Verb:   Alternate gloss used with prepositional prefix
+                                # Derive: Gloss used in relative constructs
+    "gloss-adj",                # Gloss used when derive is attached to adjective.
+    "gloss-noun",               # Gloss used when preposition attaches to noun in relative construct
+    "gloss-verb",               # Gloss used when preposition or derive is attached to verb
+    "gloss-state",              # Adjective gloss associated with a stative verb
+    "gloss-tool",               # Verb gloss associated with a tool noun
+    "suffixes",                 # Valid suffixes that can follow this morph
+    "tags",
+    "requires",
+    "exception",
+    "origin",
+    "notes"
+]
+
 def validate_morph(morph):
 
     if not "key" in morph:
@@ -62,5 +96,10 @@ def validate_morph(morph):
         if not ("derive-from" in morph and "derive-to" in morph):
             print(" - derive morphs must have 'derive-from' and 'derive-to'")
             return False
+
+    # Check key whitelist
+    for key in morph:
+        if not key in valid_properties:
+            print("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
 
     return True

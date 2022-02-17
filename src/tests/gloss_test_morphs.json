@@ -148,7 +148,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "participle-type": "present",
+        "derive-participle": "present",
         "gloss": "%part",
         "origin": "latin"
     },
@@ -159,7 +159,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "participle-type": "present",
+        "derive-participle": "present",
         "gloss": "able to be %ppart",
         "origin": "latin"
     },
@@ -170,7 +170,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "participle-type": "perfect",
+        "derive-participle": "perfect",
         "gloss": "able %inf",
         "origin": "latin"
     },
@@ -181,7 +181,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "participle-type": "perfect",
+        "derive-participle": "perfect",
         "gloss": "one who %3sg",
         "tags": ["count"],
         "origin": "latin"
@@ -193,7 +193,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "participle-type": "perfect",
+        "derive-participle": "perfect",
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
         "origin": "latin"

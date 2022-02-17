@@ -19,7 +19,7 @@ def form(morph, env):
     if env.next != None:
 
         # Follow special assimilation rules if there are any
-        if "assimilation" in morph_dict:
+        if "form-assimilation" in morph_dict:
 
             next_form = env.next.as_dict(env.next_env(env.next))["form"]
             next_letter = next_form[0]
@@ -28,7 +28,7 @@ def form(morph, env):
             matched_case = None
             star_case = None
 
-            for case, sounds in morph_dict["assimilation"].items():
+            for case, sounds in morph_dict["form-assimilation"].items():
                 for sound in sounds:
                     if sound == "*":
                         star_case = case
@@ -73,10 +73,10 @@ def form(morph, env):
 
             # Verbs or verbal derivations need to take participle form into account
             elif morph_dict["type"] == "verb" or (morph_dict["type"] == "derive" and morph_dict["derive-to"] == "verb"):
-                if next_morph and "participle-type" in next_morph:
-                    if next_morph["participle-type"] == "present":
+                if next_morph and "derive-participle" in next_morph:
+                    if next_morph["derive-participle"] == "present":
                         form = morph_dict["form-stem-present"]
-                    elif next_morph["participle-type"] == "perfect":
+                    elif next_morph["derive-participle"] == "perfect":
                         form = morph_dict["form-stem-perfect"]
                 elif "form-stem-verb" in morph_dict:
                     form = morph_dict["form-stem-verb"]

@@ -226,7 +226,7 @@ def get_joining_vowel(language, first, second, form, addition):
             return None
 
         # For verb suffixes using the present participle stem
-        if first.get_type() == "verb" and second.morph["participle-type"] == "present":
+        if first.get_type() == "verb" and second.morph["derive-participle"] == "present":
 
             # If the verb declares a joiner for this case, use it
             if "form-joiner-present" in first.morph:
