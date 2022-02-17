@@ -579,7 +579,7 @@
                         "has-key": ["nt", "nce"]
                     }
                 },
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "origin": "latin",
@@ -838,7 +838,7 @@
     {
         "key": "capere",
         "form-stem-present": "cap",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "capt",
         "form-final": ["cept", "ceive"],
         "type": "verb",
@@ -1643,7 +1643,7 @@
                     }
                 },
                 "form-stem": "dict",
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "origin": "latin"
@@ -2018,7 +2018,7 @@
     {
         "key": "facere",
         "form-stem-present": "fac",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "fact",
         "form-final": "fact",
         "type": "verb",
@@ -2191,7 +2191,7 @@
     {
         "key": "ferre",
         "form-stem-present": "fer",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "form-stem-perfect": "lat",
         "form-final": "fer",
         "type": "verb",
@@ -2204,7 +2204,7 @@
                         "has-key": "ble"
                     }
                 },
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "tags": ["transitive", "motion"],
@@ -2376,7 +2376,7 @@
                     }
                 },
                 "form-stem": "flex",
-                "form-stem-present-join": "i"
+                "form-joiner-present": "i"
             }
         ],
         "origin": "latin",
@@ -2620,7 +2620,7 @@
     {
         "key": "fugere",
         "form-stem-present": "fug",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "fugit",
         "form-final": "fuge",
         "type": "verb",
@@ -2835,7 +2835,7 @@
     {
         "key": "gradi",
         "form-stem-present": "grad",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "gress",
         "form-final": "gress",
         "type": "verb",
@@ -3446,7 +3446,7 @@
     {
         "key": "labi",
         "form-stem-present": "lab",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "laps",
         "form-final": "lapse",
         "type": "verb",
@@ -4360,7 +4360,7 @@
                     }
                 },
                 "form-stem": "mers",
-                "form-stem-present-join": "i"
+                "form-joiner-present": "i"
             }
         ],
         "origin": "latin",
@@ -4464,7 +4464,7 @@
                     }
                 },
                 "form-stem": "miss",
-                "form-stem-present-join": "i"
+                "form-joiner-present": "i"
             }
         ],
         "origin": "latin",
@@ -4591,7 +4591,7 @@
                         "has-key": "ble"
                     }
                 },
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "tags": ["transitive"],
@@ -5355,7 +5355,7 @@
     {
         "key": "pati",
         "form-stem-present": "pat",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "pass",
         "form-final": "pass",
         "type": "verb",
@@ -5444,7 +5444,7 @@
         "key": "pendere",
         "form-stem-present": "pend",
         "form-stem-perfect": "pens",
-        "form-stem-present-join": "a",
+        "form-joiner-present": "a",
         "form-final": "pend",
         "type": "verb",
         "conjugation": 3,
@@ -5490,7 +5490,7 @@
     {
         "key": "performer",
         "form-stem-present": "perform",
-        "form-stem-present-join": "a",
+        "form-joiner-present": "a",
         "form-stem-perfect": "performat",
         "form-final": "perform",
         "type": "verb",
@@ -5683,7 +5683,7 @@
     {
         "key": "plere",
         "form-stem-present": "pl",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "form-stem-perfect": "plet",
         "form-final": "plete",
         "type": "verb",
@@ -5698,7 +5698,7 @@
                     }
                 },
                 "form-stem": "plet",
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "origin": "latin"
@@ -5838,7 +5838,7 @@
     {
         "key": "practicare",
         "form-stem-present": "practic",
-        "form-stem-present-join": "a",
+        "form-joiner-present": "a",
         "form-stem-perfect": "practit",
         "form-final": "practice",
         "type": "verb",
@@ -5873,7 +5873,7 @@
                     }
                 },
                 "form-stem": "prehens",
-                "form-stem-present-join": "i"
+                "form-joiner-present": "i"
             }
         ],
         "origin": "latin"
@@ -6123,7 +6123,7 @@
                     }
                 },
                 "form-stem": "quir",
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "origin": "latin",
@@ -6278,7 +6278,7 @@
     {
         "key": "revereri",
         "form-stem-present": "rever",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "form-stem-perfect": "reverit",
         "form-final": "revere",
         "type": "verb",
@@ -6509,7 +6509,7 @@
     {
         "key": "scandere",
         "form-stem-present": "scand",
-        "form-stem-present-join": "a",
+        "form-joiner-present": "a",
         "form-stem-perfect": "scans",
         "form-final": "scend",
         "type": "verb",
@@ -6612,7 +6612,7 @@
     {
         "key": "sensata",
         "form-stem-present": "sens",
-        "form-stem-present-join": "a",
+        "form-joiner-present": "a",
         "form-stem-perfect": "sensat",
         "form-final": "sensate",
         "type": "verb",
@@ -7244,7 +7244,7 @@
                     }
                 },
                 "form-stem": "tain",
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "origin": "latin",
@@ -7573,7 +7573,7 @@
     {
         "key": "velle",
         "form-stem-present": "vol",
-        "form-stem-present-join": "e",        
+        "form-joiner-present": "e",        
         "form-stem-perfect": "volit",
         "form-final": "vell",
         "type": "verb",
@@ -7767,7 +7767,7 @@
                         "has-key": ["nt", "nce"]
                     }
                 },
-                "form-stem-present-join": "e"
+                "form-joiner-present": "e"
             }
         ],
         "origin": "latin"
@@ -7821,7 +7821,7 @@
     {
         "key": "vivere",
         "form-stem-present": "viv",
-        "form-stem-present-join": "ie",
+        "form-joiner-present": "ie",
         "form-stem-perfect": "vivat",
         "form-final": "vive",
         "type": "verb",
@@ -8676,7 +8676,7 @@
     {
         "key": "esce",
         "form-stem-present": "esc",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "form-stem-perfect": "esc",
         "form-final": "esce",
         "type": "derive",
@@ -8690,7 +8690,7 @@
     {
         "key": "esce-verb",
         "form-stem-present": "esc",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "form-stem-perfect": "esc",
         "form-final": "esce",
         "type": "derive",
@@ -8713,7 +8713,7 @@
     {
         "key": "esce-plant",
         "form-stem-present": "esc",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "form-stem-perfect": "esc",
         "form-final": "esce",
         "type": "derive",
@@ -8860,7 +8860,7 @@
         "key": "fer",
         "form-final": "fer",
         "form-stem": "fer",
-        "form-stem-present-join": "e",
+        "form-joiner-present": "e",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
@@ -8903,7 +8903,7 @@
                     }
                 },
                 "form-stem": "ific",
-                "form-stem-present-join": "a"
+                "form-joiner-present": "a"
             }
         ],
         "tags": ["transitive"],

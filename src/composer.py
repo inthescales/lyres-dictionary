@@ -229,8 +229,8 @@ def get_joining_vowel(language, first, second, form, addition):
         if first.get_type() == "verb" and second.morph["participle-type"] == "present":
 
             # If the verb declares a joiner for this case, use it
-            if "form-stem-present-join" in first.morph:
-                return first.morph["form-stem-present-join"]
+            if "form-joiner-present" in first.morph:
+                return first.morph["form-joiner-present"]
 
             # Exceptional present-stem verb endings
             if first.get_type() == "verb" and second.morph["key"] in ["nt", "nt-noun", "nce", "nd"]:
