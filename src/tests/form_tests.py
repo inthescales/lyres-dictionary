@@ -847,6 +847,31 @@ class FormTests(unittest.TestCase):
         self.assertForm(["iconos", "ic"], "iconic")
         self.assertForm(["anthropos", "oid"], "anthropoid")
 
+        # Greek verbs
+        self.assertFormIn(["agonizesthai", "ma"], ["agonism", "agonisma"])
+        self.assertFormIn(["mainein", "ma"], ["miasm", "miasma"])
+        self.assertFormIn(["graphein", "ma"], ["grapheme", "graphema"])
+        self.assertFormIn(["thein", "ma"], ["theme", "thema"])
+        # add something like pragma
+        self.assertForm(["mainein", "ma", "ic"], "miasmatic")
+        self.assertForm(["thein", "ma", "ic"], "thematic")
+
+        self.assertForm(["asthanesthai", "t-agent"], "aesthete")
+        self.assertForm(["dynasthai", "t-agent"], "dynast")
+        self.assertForm(["gymnazein", "t-agent"], "gymnast")
+        self.assertForm(["mathein", "t-agent"], "mathete")
+        self.assertForm(["monazein", "t-agent", "erion"], "monastery")
+        self.assertForm(["phrontizein", "t-agent", "erion"], "phrontistery")
+
+        self.assertForm(["athlein", "tic-verb"], "athletic")
+        self.assertForm(["gymnazein", "tic-verb"], "gymnastic")
+        self.assertForm(["monazein", "tic-verb"], "monastic")
+        self.assertForm(["poein", "tic-verb"], "poetic")
+
+        self.assertForm(["gignesthai", "sis"], "genesis")
+        self.assertForm(["gignoskein", "sis"], "gnosis")
+        self.assertForm(["noein", "sis"], "noesis")
+
     # Helpers ==========
     
     def assertForm(self, keys, form):
