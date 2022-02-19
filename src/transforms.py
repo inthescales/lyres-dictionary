@@ -243,5 +243,5 @@ def transform_word_greek(word, morphothec):
         # Numerical
     elif choice == "numerical":
         num_morph = Morph( random.choice(morphothec.filter_type("number", language)), morphothec)
-        end_morph = Morph(random.choice(["ic-number", "y-number"]), morphothec)
+        end_morph = Morph(random.choice(["-ic-number", "-y-number"]), morphothec)
         word.add_affixes(num_morph, end_morph)
