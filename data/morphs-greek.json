@@ -481,7 +481,7 @@
         "key": "gignoskein",
         "form-stem": "gnos",
         "type": "verb",
-        "gloss": "kno",
+        "gloss": "know",
         "tags": ["transitive"],
         "origin": "greek"
     },
@@ -1435,7 +1435,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-none-join",
+        "key": "a-",
         "form-stem": "a",
         "type": "number",
         "gloss": "no %pl",
@@ -1450,7 +1450,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-one-join",
+        "key": "mono-",
         "form-stem": "mono",
         "type": "number",
         "gloss": "one %!sg",
@@ -1465,21 +1465,21 @@
         "origin": "greek"
     },
     {
-        "key": "greek-two-join",
+        "key": "di-",
         "form-stem": "di",
         "type": "number",
         "gloss": "two %!pl",
         "origin": "greek"
     },
     {
-        "key": "greek-three-join",
+        "key": "tri-greek",
         "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "greek"
     },
     {
-        "key": "greek-four-join",
+        "key": "tetra-",
         "form-stem": "tetra",
         "type": "number",
         "gloss": "four %!pl",
@@ -1494,7 +1494,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-five-join",
+        "key": "penta-",
         "form-stem": "penta",
         "type": "number",
         "gloss": "five %!pl",
@@ -1509,7 +1509,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-six-join",
+        "key": "hexa-",
         "form-stem": "hexa",
         "type": "number",
         "gloss": "six %!pl",
@@ -1524,7 +1524,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-seven-join",
+        "key": "hepta-",
         "form-stem": "hepta",
         "type": "number",
         "gloss": "seven %!pl",
@@ -1539,7 +1539,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-eight-join",
+        "key": "octo-",
         "form-stem": "octo",
         "type": "number",
         "gloss": "eight %!pl",
@@ -1554,7 +1554,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-nine-join",
+        "key": "ennea-",
         "form-stem": "ennea",
         "type": "number",
         "gloss": "nine %!pl",
@@ -1569,7 +1569,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-hundred-join",
+        "key": "hecato-",
         "form-stem": "hecato",
         "type": "number",
         "gloss": "one-hundred %!pl",
@@ -1584,14 +1584,14 @@
         "origin": "greek"
     },
     {
-        "key": "greek-thousand-join",
+        "key": "chili-",
         "form-stem": "chili",
         "type": "number",
         "gloss": "one-thousand %!pl",
         "origin": "greek"
     },
     {
-        "key": "greek-ten-thousand-join",
+        "key": "myria",
         "form-stem": "myria",
         "type": "number",
         "gloss": "ten-thousand %!pl",
@@ -1606,7 +1606,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-few-join",
+        "key": "oligo-",
         "form-stem": "oligo",
         "type": "number",
         "gloss": "few %!pl",
@@ -1621,7 +1621,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-many-join",
+        "key": "poly-",
         "form-stem": "poly",
         "type": "number",
         "gloss": "many %!pl",

@@ -699,12 +699,12 @@ class FormTests(unittest.TestCase):
         self.assertForm(["trans-", "luna", "-al"], "translunar")
         
         # numerical constructions
-        self.assertForm(["two-join", "camera", "-al"], "bicameral")
-        self.assertForm(["two-join", "latus", "-al"], "bilateral")
-        self.assertForm(["three-join", "geminus", "-al"], "trigeminal")
-        self.assertForm(["three-join", "angulus", "-al"], "triangular")
-        self.assertForm(["three-join", "latus", "-al"], "trilateral")
-        self.assertForm(["four-join", "latus", "-al"], "quadrilateral")
+        self.assertForm(["bi-", "camera", "-al"], "bicameral")
+        self.assertForm(["bi-", "latus", "-al"], "bilateral")
+        self.assertForm(["tri-", "geminus", "-al"], "trigeminal")
+        self.assertForm(["tri-", "angulus", "-al"], "triangular")
+        self.assertForm(["tri-", "latus", "-al"], "trilateral")
+        self.assertForm(["quadri-", "latus", "-al"], "quadrilateral")
     
     # Tests confirming that exception cases work as expected.
     def testFormException(self):
@@ -870,6 +870,11 @@ class FormTests(unittest.TestCase):
         self.assertForm(["gignesthai", "-sis"], "genesis")
         self.assertForm(["gignoskein", "-sis"], "gnosis")
         self.assertForm(["noein", "-sis"], "noesis")
+
+        # numerical constructions
+        self.assertForm(["a-", "sema", "-ic"], "asemic")
+        self.assertForm(["octo-", "gonos", "-ic"], "octogonic")
+        self.assertForm(["poly-", "morphe", "-ic"], "polymorphic")
 
     # Helpers ==========
     

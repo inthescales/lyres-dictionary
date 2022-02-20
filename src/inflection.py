@@ -37,25 +37,31 @@ def override_inflection(string, mode):
     if string == "arms":
         if mode == "pl":
             return "arms"
+
     elif string == "do":
         if mode == "3sg":
             return "does"
         elif mode == "ppart":
             return "done"
-    elif string == "two":
-        if mode == "pl":
-            return "twos"
-    elif string == "omen":
-        if mode == "pl":
-            return "omens"
-    elif string == "urine":
-        if mode == "pl":
-            return "urines"
-    elif string == "people":
-        if mode == "pl":
-            return "peoples"
+
     elif string == "flour":
         if mode == "pl":
             return "flours"
+
+    elif string == "omen":
+        if mode == "pl":
+            return "omens"
+
+    elif string == "people":
+        if mode == "pl":
+            return "peoples"
+
+    elif string == "two":
+        if mode == "pl":
+            return "twos"
+
+    elif string == "urine":
+        if mode == "pl":
+            return "urines"
 
     return None

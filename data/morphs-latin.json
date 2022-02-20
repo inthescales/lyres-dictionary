@@ -7906,112 +7906,112 @@
         "origin": "latin"
     },
     {
-        "key": "one-join",
+        "key": "uni-",
         "form-stem": "uni",
         "type": "number",
         "gloss": "one %!sg",
         "origin": "latin"
     },
     {
-        "key": "two-join",
+        "key": "bi-",
         "form-stem": "bi",
         "type": "number",
         "gloss": "two %!pl",
         "origin": "latin"
     },
     {
-        "key": "three-join",
+        "key": "tri-",
         "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "latin"
     },
     {
-        "key": "four-join",
+        "key": "quadri-",
         "form-stem": "quadri",
         "type": "number",
         "gloss": "four %!pl",
         "origin": "latin"
     },
     {
-        "key": "five-join",
+        "key": "quinti-",
         "form-stem": "quinti",
         "type": "number",
         "gloss": "five %!pl",
         "origin": "latin"
     },
     {
-        "key": "six-join",
+        "key": "sexi-",
         "form-stem": "sexi",
         "type": "number",
         "gloss": "six %!pl",
         "origin": "latin"
     },
     {
-        "key": "seven-join",
+        "key": "septi-",
         "form-stem": "septi",
         "type": "number",
         "gloss": "seven %!pl",
         "origin": "latin"
     },
     {
-        "key": "eight-join",
+        "key": "octi-",
         "form-stem": "octi",
         "type": "number",
         "gloss": "eight %!pl",
         "origin": "latin"
     },
     {
-        "key": "nine-join",
+        "key": "noni-",
         "form-stem": "noni",
         "type": "number",
         "gloss": "nine %!pl",
         "origin": "latin"
     },
     {
-        "key": "ten-join",
+        "key": "deci-",
         "form-stem": "deci",
         "type": "number",
         "gloss": "ten %!pl",
         "origin": "latin"
     },
     {
-        "key": "eleven-join",
+        "key": "undeci-",
         "form-stem": "undeci",
         "type": "number",
         "gloss": "eleven %!pl",
         "origin": "latin"
     },
     {
-        "key": "twelve-join",
+        "key": "duodeci-",
         "form-stem": "duodeci",
         "type": "number",
         "gloss": "twelve %!pl",
         "origin": "latin"
     },
     {
-        "key": "hundred-join",
+        "key": "centi-",
         "form-stem": "centi",
         "type": "number",
         "gloss": "one-hundred %!pl",
         "origin": "latin"
     },
     {
-        "key": "thousand-join",
+        "key": "milli-",
         "form-stem": "milli",
         "type": "number",
         "gloss": "one-thousand %!pl",
         "origin": "latin"
     },
     {
-        "key": "multi-join",
+        "key": "multi-",
         "form-stem": "multi",
         "type": "number",
         "gloss": "many %!pl",
         "origin": "latin"
     },
     {
-        "key": "all-join",
+        "key": "omni-",
         "form-stem": "omni",
         "type": "number",
         "gloss": "all %!pl",

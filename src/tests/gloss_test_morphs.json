@@ -77,28 +77,28 @@
         "origin": "latin"
     },
     {
-        "key": "one-join",
+        "key": "uni-",
         "form-stem": "uni",
         "type": "number",
         "gloss": "one %!sg",
         "origin": "latin"
     },
     {
-        "key": "three-join",
+        "key": "tri-",
         "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "latin"
     },
     {
-        "key": "ten-join",
+        "key": "deci-",
         "form-stem": "deci",
         "type": "number",
         "gloss": "ten %!pl",
         "origin": "latin"
     },
     {
-        "key": "al",
+        "key": "-al",
         "form-stem": "al",
         "form-final": "al",
         "type": "derive",
@@ -109,7 +109,7 @@
         "origin": "latin"
     },
     {
-        "key": "al-number",
+        "key": "-al-number",
         "form-final": "al",
         "form-stem": "al",
         "type": "derive",
@@ -120,7 +120,7 @@
         "origin": "latin"
     },
     {
-        "key": "ity",
+        "key": "-ity",
         "form-stem": "iti",
         "form-final": "ity",
         "type": "derive",
@@ -130,7 +130,7 @@
         "origin": "latin"
     },
     {
-        "key": "esce",
+        "key": "-esce",
         "form-stem-present": "esce",
         "form-stem-perfect": "esc",
         "form-final": "esce",
@@ -142,7 +142,7 @@
         "origin": "latin"
     },
     {
-        "key": "nt",
+        "key": "-nt",
         "form-final": "nt",
         "form-stem": "nti",
         "type": "derive",
@@ -153,7 +153,7 @@
         "origin": "latin"
     },
     {
-        "key": "ble",
+        "key": "-ble",
         "form-final": "ble",
         "form-stem": "bil",
         "type": "derive",
@@ -164,7 +164,7 @@
         "origin": "latin"
     },
     {
-        "key": "ile-verb",
+        "key": "-ile-verb",
         "form-final": "ile",
         "form-stem": "il",
         "type": "derive",
@@ -175,7 +175,7 @@
         "origin": "latin"
     },
     {
-        "key": "or",
+        "key": "-or",
         "form-final": "or",
         "form-stem": "or",
         "type": "derive",
@@ -187,7 +187,7 @@
         "origin": "latin"
     },
     {
-        "key": "ion",
+        "key": "-ion",
         "form-final": "ion",
         "form-stem": "ion",
         "type": "derive",
@@ -199,7 +199,7 @@
         "origin": "latin"
     },
     {
-        "key": "ate",
+        "key": "-ate",
         "form-stem-present": "ata",
         "form-stem-perfect": "at",
         "form-final": "ate",
@@ -212,7 +212,7 @@
         "origin": "latin"
     },
     {
-        "key": "ate-tool",
+        "key": "-ate-tool",
         "form-stem": "at",
         "form-final": "ate",
         "type": "derive",
@@ -235,7 +235,7 @@
         "origin": "latin"
     },
     {
-        "key": "ad",
+        "key": "ad-",
         "form-stem": "ad",
         "form-stem-assim": "a",
         "type": "prep",
@@ -245,7 +245,7 @@
         "origin": "latin"
     },
     {
-        "key": "in",
+        "key": "in-",
         "form-stem": "in",
         "form-stem-assim": "a",
         "type": "prep",
