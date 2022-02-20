@@ -161,17 +161,17 @@ def transform_word_latin(word, morphothec):
 
     # Relational
     elif choice == "relational":
-        prep_choices = ["in", "ex", "inter", "trans"]
+        prep_choices = ["in-", "ex-", "inter-", "trans-"]
         if last_morph.has_tag("concrete"):
-            prep_choices += ["sub", "super", "infra", "supra"]
+            prep_choices += ["sub-", "super-", "infra-", "supra-"]
         prep_morph = Morph(random.choice(prep_choices), morphothec)
-        end_morph = Morph( random.choice(["ate", "al", "al", "ary", "ify"]), morphothec )
+        end_morph = Morph( random.choice(["-ate", "-al", "-al", "-ary", "-ify"]), morphothec )
         word.add_affixes(prep_morph, end_morph)
     
     # Numerical
     elif choice == "numerical":
         num_morph = Morph( random.choice(morphothec.filter_type("number", language)), morphothec)
-        end_morph = Morph("al-number", morphothec)
+        end_morph = Morph("-al-number", morphothec)
         word.add_affixes(num_morph, end_morph)
         
 def transform_word_greek(word, morphothec):

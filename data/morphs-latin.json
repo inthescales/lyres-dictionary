@@ -326,7 +326,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["ous", "ous-full", "ous-material"]
+                        "has-key": ["-ous", "-ous-full", "-ous-material"]
                     }
                 },
                 "form-stem": "aque"
@@ -355,7 +355,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "al"
+                        "has-key": "-al"
                     }
                 },
                 "form-stem": "arbore"
@@ -576,7 +576,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["nt", "nce"]
+                        "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
                     }
                 },
                 "form-joiner-present": "a"
@@ -707,7 +707,7 @@
                 },
                 "form-stem-present": "cid",
                 "form-stem-perfect": "cas",
-                "form-final": "cide"
+                "form-final": "-cide"
             }
         ],
         "tags": ["intransitive", "motion"],
@@ -1577,7 +1577,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "or"
+                        "has-key": "-or"
                     }
                 },
                 "form-stem": "debt"
@@ -1639,7 +1639,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "dict",
@@ -2046,7 +2046,7 @@
         "type": "noun",
         "declension": 5,
         "gloss": "face",
-        "tags": ["count", "contract", "bodypart", "bodypart-single"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     },
     {
@@ -2201,7 +2201,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-joiner-present": "a"
@@ -2372,7 +2372,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "flex",
@@ -2579,7 +2579,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "esce-plant"
+                        "has-key": "-esce-plant"
                     }
                 },
                 "form-stem": "fruct"
@@ -3043,7 +3043,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "cide"
+                        "has-key": "-cide"
                     }
                 },
                 "form-stem": "hom"
@@ -3426,7 +3426,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "or"
+                        "has-key": "-or"
                     }
                 },
                 "form-stem": "jur"
@@ -3556,7 +3556,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ous"
+                        "has-key": "-ous"
                     }
                 },
                 "form-stem": "lapide"
@@ -3875,7 +3875,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["ous", "ous-full", "ous-material"]
+                        "has-key": ["-ous", "-ous-full", "-ous-material"]
                     }
                 },
                 "form-stem": "ligne"
@@ -4171,7 +4171,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "form"
+                        "has-key": "-form"
                     }
                 },
                 "form-stem": "man"
@@ -4356,7 +4356,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "mers",
@@ -4460,7 +4460,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "miss",
@@ -4588,7 +4588,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-joiner-present": "a"
@@ -4941,7 +4941,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ous"
+                        "has-key": "-ous"
                     }
                 },
                 "form-stem": "nuce"
@@ -5694,7 +5694,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "plet",
@@ -5869,7 +5869,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "prehens",
@@ -6119,7 +6119,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "quir",
@@ -7240,7 +7240,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "tain",
@@ -7435,7 +7435,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "or"
+                        "has-key": "-or"
                     }
                 },
                 "form-stem": "tut"
@@ -7646,7 +7646,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "vers"
@@ -7710,7 +7710,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "vis"
@@ -7764,7 +7764,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["nt", "nce"]
+                        "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
                     }
                 },
                 "form-joiner-present": "e"
@@ -7806,16 +7806,6 @@
         "declension": 3,
         "gloss": "vine",
         "tags": ["count", "concrete", "living", "plant"],
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "etum"
-                    }
-                },
-                "form-stem": "vitic"
-            }
-        ],
         "origin": "latin"
     },
     {
@@ -8028,7 +8018,7 @@
         "origin": "latin"
     },
     {
-        "key": "ab",
+        "key": "ab-",
         "form-stem": "ab",
         "form-stem-assim": "a",
         "type": "prep",
@@ -8049,7 +8039,7 @@
         "origin": "latin"
     },
     {
-        "key": "ad",
+        "key": "ad-",
         "form-stem": "ad",
         "form-stem-assim": "a",
         "type": "prep",
@@ -8071,7 +8061,7 @@
         "notes": "need 'aspire' - cut before 'sp'"
     },
 	{
-        "key": "circum",
+        "key": "circum-",
 		"form-stem": "circum",
 		"type": "prep",
         "gloss-verb": "%@ around",
@@ -8080,7 +8070,7 @@
         "origin": "latin"
     },
     {
-        "key": "cis",
+        "key": "cis-",
         "form-stem": "cis",
         "type": "prep",
         "gloss-verb": "%@ on the same side",
@@ -8088,7 +8078,7 @@
         "origin": "latin"
     },
 	{
-        "key": "com",
+        "key": "com-",
         "form-stem": "com",
 		"form-stem-assim": "co",
 		"type": "prep",
@@ -8122,7 +8112,7 @@
         "origin": "latin"
     },
     {
-        "key": "de",
+        "key": "de-",
         "form-stem": "de",
         "type": "prep",
         "gloss-verb": "%@ down",
@@ -8136,7 +8126,7 @@
         "origin": "latin"
     },
     {
-        "key": "dis",
+        "key": "dis-",
         "form-stem": "dis",
         "form-stem-assim": "di",
         "type": "prep",
@@ -8157,7 +8147,7 @@
         "notes": "Assimilation concerns: digress vs disgregate? The common digress and digest make me lean that way."
     },
     {
-        "key": "in",
+        "key": "in-",
         "form-stem": "in",
         "form-stem-assim": "i",
         "type": "prep",
@@ -8171,7 +8161,7 @@
         "origin": "latin"
     },
     {
-        "key": "ex",
+        "key": "ex-",
         "form-stem": "ex",
         "form-stem-assim": "e",
         "type": "prep",
@@ -8193,7 +8183,7 @@
         "notes": "execute vs exsanguinate"
     },
     {
-        "key": "infra",
+        "key": "infra-",
         "form-stem": "infra",
         "type": "prep",
         "gloss-verb": "%@ below",
@@ -8201,7 +8191,7 @@
         "origin": "latin"
     },
     {
-        "key": "inter",
+        "key": "inter-",
         "form-stem": "inter",
         "type": "prep",
         "gloss-verb": "%@ between",
@@ -8211,7 +8201,7 @@
         "notes": "intelligent and other derivates seems to be a unique case of assimilation, which I will not represent here."
     },
     {
-        "key": "intra",
+        "key": "intra-",
         "form-stem": "intra",
         "type": "prep",
         "gloss-verb": "%@ within",
@@ -8219,7 +8209,7 @@
         "origin": "latin"
     },
     {
-        "key": "ob",
+        "key": "ob-",
         "form-stem": "ob",
         "form-stem-assim": "o",
         "type": "prep",
@@ -8235,7 +8225,7 @@
         "notes": "need spelling change for ostentatious. Can find 'obc' but only in later French or scientific words (maybe add as a separate suffix). 'obf' appears, as in obfuscate, but seems rarer. Also see 'oflete' for multi-char-prefix variation. 'g' seems to go both ways."
     },
     {
-        "key": "per",
+        "key": "per-",
         "form-stem": "per",
         "type": "prep",
         "gloss-verb": "%@ through",
@@ -8244,7 +8234,7 @@
         "origin": "latin"
     },
     {
-        "key": "praeter",
+        "key": "preter-",
         "form-stem": "preter",
         "type": "prep",
         "gloss-verb": "%@ beyond",
@@ -8253,7 +8243,7 @@
         "origin": "latin"
     },
     {
-        "key": "pre",
+        "key": "pre-",
         "form-stem": "pre",
         "type": "prep",
         "gloss-verb": "%@ before",
@@ -8262,7 +8252,7 @@
         "origin": "latin"
     },
     {
-        "key": "pro",
+        "key": "pro-",
         "form-stem": "pro",
         "type": "prep",
         "gloss-verb": "%@ forward",
@@ -8271,7 +8261,7 @@
         "origin": "latin"
     },
     {
-        "key": "retro",
+        "key": "retro-",
         "form-stem": "retro",
         "type": "prep",
         "gloss-verb": "%@ backward",
@@ -8280,7 +8270,7 @@
         "origin": "latin"
     },
     {
-        "key": "re",
+        "key": "re-",
         "form-stem": "re",
         "type": "prep",
         "gloss-verb": "%@ back",
@@ -8289,7 +8279,7 @@
         "notes": "In early latin, became 'red-' before a vowel."
     },
     {
-        "key": "se",
+        "key": "se-",
         "form-stem": "se",
         "type": "prep",
         "gloss-verb": "%@ apart",
@@ -8302,7 +8292,7 @@
         "origin": "latin"
     },
     {
-        "key": "sub",
+        "key": "sub-",
         "form-stem": "sub",
         "form-stem-assim": "su",
         "type": "prep",
@@ -8317,7 +8307,7 @@
         "notes": "need 'sus' for cases like sustain, susceptible, but occurrence is a bit arbitrary. Should be 'su' before 'sp' (suspect). 'subp*' could happen in later joinings (ex. medical)"
     },
     {
-        "key": "super",
+        "key": "super-",
         "form-stem": "super",
         "type": "prep",
         "gloss-verb": "%@ above",
@@ -8326,7 +8316,7 @@
         "origin": "latin"
     },
     {
-        "key": "supra",
+        "key": "supra-",
         "form-stem": "supra",
         "type": "prep",
         "gloss-verb": "%@ above",
@@ -8334,7 +8324,7 @@
         "origin": "latin"
     },
     {
-        "key": "trans",
+        "key": "trans-",
         "form-stem": "trans",
         "type": "prep",
         "gloss-verb": "%@ across",
@@ -8343,20 +8333,20 @@
         "origin": "latin"
     },
     {
-        "key": "al",
+        "key": "-al",
         "form-final": "al",
         "form-stem": "al",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity", "ize"],
+        "suffixes": ["-ity", "-ize"],
         "gloss": "of or relating to %pl",
         "gloss-relative": "%@",
         "exception": [
             {
                 "case": {
                     "follows": {
-                        "has-key": ["or", "nt", "nt-noun", "nce"]
+                        "has-key": ["-or", "-nt", "-nt-noun", "-nce", "-nd"]
                     }
                 },
                 "form-final": "ial",
@@ -8374,7 +8364,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": "form"
+                        "has-key": "-form"
                     }
                 },
                 "gloss": "%@"
@@ -8391,7 +8381,7 @@
         "origin": "latin"
     },
     {
-        "key": "ian-animal",
+        "key": "-ian-animal",
         "form-final": "ian",
         "form-stem": "ian",
         "type": "derive",
@@ -8418,7 +8408,7 @@
         "origin": "latin"
     },
     {
-        "key": "arium",
+        "key": "-arium",
         "form-final": ["arium", "ary"],
         "form-stem": "ari",
         "type": "derive",
@@ -8431,7 +8421,7 @@
            {
                "case": {
                    "follows": {
-                       "has-key": ["nt", "nt-noun", "nce"]
+                       "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
                    }
                },
                "form-final": ["iarium", "iary"],
@@ -8441,20 +8431,20 @@
         "origin": "latin"
     },
     {
-        "key": "ary",
+        "key": "-ary",
         "form-final": "ary",
         "form-stem": "ari",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "pertaining to %pl",
         "gloss-relative": "%@",
         "exception": [
            {
                "case": {
                    "follows": {
-                       "has-key": "or"
+                       "has-key": "-or"
                    }
                },
                "form-final": "ia",
@@ -8463,7 +8453,7 @@
            {
                "case": {
                    "follows": {
-                       "has-key": ["nt", "nt-noun", "nce"]
+                       "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
                    }
                },
                "form-final": "iary",
@@ -8473,7 +8463,7 @@
         "origin": "latin"
     },
     {
-        "key": "ate",
+        "key": "-ate",
         "form-stem-present": "at",
         "form-stem-perfect": "at",
         "form-final": "ate",
@@ -8486,7 +8476,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": ["esce", "esce-verb"]
+                        "has-key": ["-esce", "-esce-verb"]
                     }
                 },
                 "gloss": "[cause] %inf"
@@ -8510,13 +8500,13 @@
         "notes": "3rd declension exception doesn't fit with 'humiliate'"
     },
     {
-        "key": "ate-bodypart",
+        "key": "-ate-bodypart",
         "form-stem": "at",
         "form-final": "ate",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ion", "ure"],
+        "suffixes": ["-ion", "-ure"],
         "gloss": "having %pl",
         "requires": {
             "follows": {
@@ -8535,7 +8525,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ure"
+                        "has-key": "-ure"
                     }
                 },
                 "gloss": "%pl"
@@ -8546,7 +8536,7 @@
                         "has-tag": "bodypart-single"
                     },
                     "precedes": {
-                        "has-key": "ure"
+                        "has-key": "-ure"
                     }
                 },
                 "gloss": "%sg"
@@ -8555,7 +8545,7 @@
         "origin": "latin"
     },
     {
-        "key": "ate-frequentative",
+        "key": "-ate-frequentative",
         "form-stem": "at",
         "form-final": "ate",
         "type": "derive",
@@ -8574,7 +8564,7 @@
         "origin": "latin"
     },
     {
-        "key": "ate-secretion",
+        "key": "-ate-secretion",
         "form-stem": "at",
         "form-final": "ate",
         "type": "derive",
@@ -8590,7 +8580,7 @@
         "origin": "latin"
     },
     {
-        "key": "ate-tool",
+        "key": "-ate-tool",
         "form-stem": "at",
         "form-final": "ate",
         "type": "derive",
@@ -8614,14 +8604,14 @@
         "origin": "latin"
     },
     {
-        "key": "ax",
+        "key": "-ax",
         "form-stem": "aci",
         "form-final": "ax",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "present",
-        "suffixes": ["ous", "ity"],
+        "suffixes": ["-ous", "-ity"],
         "gloss": "inclined toward %part",
         "requires": {
             "follows": {
@@ -8632,13 +8622,13 @@
         "origin": "latin"
     },
     {
-        "key": "ble",
+        "key": "-ble",
         "form-final": "ble",
         "form-stem": "bil",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": ["ity", "ize"],
+        "suffixes": ["-ity", "-ize"],
         "derive-participle": "present",
         "gloss": "able to be %ppart",
         "requires": {
@@ -8649,13 +8639,13 @@
         "origin": "latin"
     },
     {
-        "key": "culture",
+        "key": "-culture",
         "form-final": "iculture",
         "form-stem": "icultur",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["al", "ist"],
+        "suffixes": ["-al", "-ist"],
         "gloss": "the cultivation of %pl",
         "requires": {
             "follows": {
@@ -8674,7 +8664,7 @@
         "origin": "latin"
     },
     {
-        "key": "esce",
+        "key": "-esce",
         "form-stem-present": "esc",
         "form-stem-perfect": "esc",
         "form-joiner-present": "e",
@@ -8682,13 +8672,13 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",
-        "suffixes": ["nt", "nce", "ate"],
+        "suffixes": ["-nt", "-nce", "-ate"],
         "conjugation": 0,
         "gloss": "[become] %@",
         "origin": "latin"
     },
     {
-        "key": "esce-verb",
+        "key": "-esce-verb",
         "form-stem-present": "esc",
         "form-stem-perfect": "esc",
         "form-joiner-present": "e",
@@ -8697,7 +8687,7 @@
         "derive-from": "verb",
         "derive-to": "verb",
         "conjugation": 0,
-        "suffixes": ["nt", "nce", "ate"],
+        "suffixes": ["-nt", "-nce", "-ate"],
         "derive-participle": "present",
         "requires": {
             "follows": {
@@ -8711,7 +8701,7 @@
         "origin": "latin"
     },
     {
-        "key": "esce-plant",
+        "key": "-esce-plant",
         "form-stem-present": "esc",
         "form-stem-perfect": "esc",
         "form-joiner-present": "e",
@@ -8719,7 +8709,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
-        "suffixes": ["nt", "nce"],
+        "suffixes": ["-nt", "-nce"],
         "conjugation": 0,
         "gloss": "[put] forth %pl",
         "requires": {
@@ -8730,7 +8720,7 @@
         "origin": "latin"
     },
     {
-        "key": "e-agent",
+        "key": "-e-agent",
         "form-final": "e",
         "form-stem": "",
         "type": "derive",
@@ -8743,7 +8733,7 @@
         "origin": "latin"
     },
     {
-        "key": "etum",
+        "key": "-etum",
         "form-final": "etum",
         "form-stem": "etum",
         "type": "derive",
@@ -8759,13 +8749,13 @@
         "origin": "latin"
     },
     {
-        "key": "cide",
+        "key": "-cide",
         "form-final": "cide",
         "form-stem": "cid",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["al", "ous", "ism"],
+        "suffixes": ["-al", "-ous", "-ism"],
         "gloss": "the act of killing %pl",
         "requires": {
             "follows": {
@@ -8776,7 +8766,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": ["al", "ous", "ism"]
+                        "has-key": ["-al", "-ous", "-ism"]
                     }
                 },
                 "gloss": "killing %pl"
@@ -8785,7 +8775,7 @@
         "origin": "latin"
     },
     {
-        "key": "id-descendant",
+        "key": "-id-descendant",
         "form-final": "id",
         "form-stem": "id",
         "type": "derive",
@@ -8801,14 +8791,14 @@
         "origin": "latin"
     },
     {
-        "key": "id-deverbative",
+        "key": "-id-deverbative",
         "form-final": "id",
         "form-stem": "id",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
         "derive-participle": "present",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "inclined %inf",
         "requires": {
             "follows": {
@@ -8828,13 +8818,13 @@
         "origin": "latin"
     },
     {
-        "key": "form",
+        "key": "-form",
         "form-final": "form",
         "form-stem": "form",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity", "al", "ous"],
+        "suffixes": ["-ity", "-al", "-ous"],
         "gloss": "having the shape of %sg",
         "requires": {
             "follows": {
@@ -8857,7 +8847,7 @@
         "origin": "latin"
     },
     {
-        "key": "fer",
+        "key": "-fer",
         "form-final": "fer",
         "form-stem": "fer",
         "form-joiner-present": "e",
@@ -8865,7 +8855,7 @@
         "derive-from": "noun",
         "derive-to": "verb",
         "conjugation": 0,
-        "suffixes": ["silent-agent", "ous", "nt", "nce", "ize"],
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce", "-ize"],
         "gloss": "[bear] %pl",
         "requires": {
             "follows": {
@@ -8876,7 +8866,7 @@
         "origin": "latin"
     },
     {
-        "key": "ify",
+        "key": "-ify",
         "form-stem-present": "ific",
         "form-stem-perfect": "ificat",
         "form-final": "ify",
@@ -8891,7 +8881,7 @@
             { 
                 "case": {
                     "precedes": {
-                        "has-key": "or"
+                        "has-key": "-or"
                     }
                 },
                 "form-stem": ["ifact", "ificat"]
@@ -8899,7 +8889,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ble"
+                        "has-key": "-ble"
                     }
                 },
                 "form-stem": "ific",
@@ -8911,13 +8901,13 @@
         "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
     },
     {
-        "key": "ger",
+        "key": "-ger",
         "form-final": "ger",
         "form-stem": "ger",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
-        "suffixes": ["silent-agent", "ous", "nt", "nce"],
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce"],
         "conjugation": 3,
         "gloss": "[bring] %pl",
         "requires": {
@@ -8928,7 +8918,7 @@
         "exception": [{
             "case": {
                 "precedes": {
-                    "has-key": ["nt", "nce"]
+                    "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
                 }
             },
             "form-stem": "gere"
@@ -8936,7 +8926,7 @@
         {
             "case": {
                 "precedes": {
-                    "has-key": ["ous", "nt", "nce"]
+                    "has-key": ["-ous", "-nt", "-nt-noun", "-nce", "-nd"]
                 }
             },
             "gloss": "[bear] %pl"
@@ -8946,13 +8936,13 @@
         "notes": "add exceptions for 'ous'"
     },
     {
-        "key": "ile",
+        "key": "-ile",
         "form-final": "ile",
         "form-stem": "il",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
@@ -8962,13 +8952,13 @@
         "origin": "latin"
     },
     {
-        "key": "ile-verb",
+        "key": "-ile-verb",
         "form-final": "ile",
         "form-stem": "il",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "derive-participle": "perfect",
         "gloss": "able %inf",
         "exception": [{
@@ -8982,13 +8972,13 @@
         "origin": "latin"
     },
     {
-        "key": "ine",
+        "key": "-ine",
         "form-final": "ine",
         "form-stem": "in",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "having the nature of %sg",
         "requires": {
             "follows": {
@@ -9008,13 +8998,13 @@
         "origin": "latin"
     },
     {
-        "key": "ion",
+        "key": "-ion",
         "form-final": "ion",
         "form-stem": "ion",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al", "ary", "ous-full"],
+        "suffixes": ["-al", "-ary", "-ous-full"],
         "derive-participle": "perfect",
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
@@ -9022,7 +9012,7 @@
             {
                 "case": {
                     "precedes": {
-                        "has-key": "ous-full"
+                        "has-key": "-ous-full"
                     }
                 },
                 "form-stem": "i"
@@ -9030,7 +9020,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": "ate-bodypart"
+                        "has-key": "-ate-bodypart"
                     }
                 },
                 "gloss": "the condition of %@"
@@ -9039,7 +9029,7 @@
         "origin": "latin"
     },
     {
-        "key": "or-quality",
+        "key": "-or-quality",
         "form-final": "or",
         "form-stem": "or",
         "type": "derive",
@@ -9056,7 +9046,7 @@
         "origin": "latin"
     },
     {
-        "key": "pote-drink",
+        "key": "-pote-drink",
         "form-final": "pote",
         "form-stem": "pot",
         "type": "derive",
@@ -9072,14 +9062,14 @@
         "origin": "latin"
     },
     {
-        "key": "pote-power",
+        "key": "-pote-power",
         "form-stem-present": "pot",
         "form-stem-perfect": "pot",
         "form-final": "pote",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
-        "suffixes": ["nt", "nce"],
+        "suffixes": ["-nt", "-nce"],
         "conjugation": 3,
         "gloss": "[have] command over %pl",
         "exception": [
@@ -9096,7 +9086,7 @@
         "origin": "latin"
     },
     {
-        "key": "ism",
+        "key": "-ism",
         "form-stem": "ism",
         "form-final": "ism",
         "type": "derive",
@@ -9109,7 +9099,7 @@
         "origin": "latin"
     },
     {
-        "key": "ist",
+        "key": "-ist",
         "form-stem": "ist",
         "form-final": "ist",
         "type": "derive",
@@ -9122,36 +9112,36 @@
         "origin": "latin"
     },
     {
-        "key": "tude",
+        "key": "-tude",
         "form-final": "tude",
         "form-stem": "tudin",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
-        "suffixes": ["al", "ary", "ous"],
+        "suffixes": ["-al", "-ary", "-ous"],
         "gloss": "the quality of being %@",
         "origin": "latin"
     },
     {
-        "key": "tude-noun",
+        "key": "-tude-noun",
         "form-final": "tude",
         "form-stem": "tudin",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["al", "ary", "ous"],
+        "suffixes": ["-al", "-ary", "-ous"],
         "gloss": "the state or quality of being %sg",
         "tags": ["rare"],
         "origin": "latin"
     },
     {
-        "key": "ity",
+        "key": "-ity",
         "form-final": "ity",
         "form-stem": "iti",
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
-        "suffixes": ["ous"],
+        "suffixes": ["-ous"],
         "gloss": "the quality of being %sg",
         "exception": [{
             "case": {
@@ -9169,7 +9159,7 @@
         {
             "case": {
                 "follows": {
-                    "has-key": ["form", "uous", "ulous"]
+                    "has-key": ["-form", "-uous", "-ulous"]
                 }
             },
             "gloss": "the quality of %@"
@@ -9185,26 +9175,26 @@
         "origin": "latin"
     },
     {
-        "key": "ive",
+        "key": "-ive",
         "form-final": "ive",
         "form-stem": "iv",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "derive-participle": "perfect",
         "gloss": "given to %part",
         "origin": "latin"
     },
     {
-        "key": "vore",
+        "key": "-vor-",
         "form-final": "vor",
         "form-stem": "vor",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
         "conjugation": 0,
-        "suffixes": ["e-agent", "ous", "ia", "ity"],
+        "suffixes": ["-e-agent", "-ous", "-ia", "-ity"],
         "gloss": "[eat] %pl",
         "requires": {
             "follows": {
@@ -9225,7 +9215,7 @@
         "origin": "latin"
     },
     {
-        "key": "ize",
+        "key": "-ize",
         "form-stem-present": "iz",
         "form-stem-perfect": "izat",
         "form-final": "ize",
@@ -9238,7 +9228,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": "fer"
+                        "has-key": "-fer"
                     }
                 },
                 "gloss": "[cause] to %@"
@@ -9248,20 +9238,20 @@
         "origin": "latin"
     },
     {
-        "key": "or",
+        "key": "-or",
         "form-final": "or",
         "form-stem": "or",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al", "ia"],
+        "suffixes": ["-al", "-ia"],
         "derive-participle": "perfect",
         "gloss": "one who %3sg",
         "tags": ["count"],
         "origin": "latin"
     },
     {
-        "key": "orium",
+        "key": "-orium",
         "form-final": ["orium", "ory"],
         "form-stem": "ori",
         "type": "derive",
@@ -9273,26 +9263,26 @@
         "origin": "latin"
     },
     {
-        "key": "ory",
+        "key": "-ory",
         "form-final": "ory",
         "form-stem": "ori",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al", "ous-full"],
+        "suffixes": ["-al", "-ous-full"],
         "derive-participle": "perfect",
         "gloss": "the state of %part",
         "tags": ["mass"],
         "origin": "latin"
     },
     {
-        "key": "ous",
+        "key": "-ous",
         "form-final": "ous",
         "form-stem": "os",
         "type": "derive",
         "derive-from": ["noun", "verb"],
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "%@",
         "exception": [
             {
@@ -9306,7 +9296,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-key": ["ory", "ity", "itude", "itude-noun"]
+                        "has-key": ["-ory", "-ity", "-tude", "-tude-noun"]
                     }
                 },
                 "gloss": "characterized by %@"
@@ -9316,24 +9306,24 @@
         "origin": "latin"
     },
     {
-        "key": "ous-full",
+        "key": "-ous-full",
         "form-final": "ous",
         "form-stem": "os",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "full of %pl",
         "origin": "latin"
     },
     {
-        "key": "ous-material",
+        "key": "-ous-material",
         "form-final": "ous",
         "form-stem": "os",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "made of or resembling %pl",
         "requires": {
             "follows": {
@@ -9353,20 +9343,20 @@
         "origin": "latin"
     },
     {
-        "key": "nce",
+        "key": "-nce",
         "form-final": ["nce", "ncy"],        
         "form-stem": "nti",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al", "ary"],
+        "suffixes": ["-al", "-ary"],
         "derive-participle": "present",
         "gloss-link": "the state of %part",
         "gloss-final": "the process, state, or quality of %part",
         "origin": "latin"
     },
     {
-        "key": "nd",
+        "key": "-nd",
         "form-final": ["nd", "ndum"],
         "form-stem": "ndi",
         "type": "derive",
@@ -9383,31 +9373,31 @@
         "origin": "latin"
     },
     {
-        "key": "nt",
+        "key": "-nt",
         "form-final": "nt",
         "form-stem": "nti",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": ["al", "ary"],
+        "suffixes": ["-al", "-ary"],
         "derive-participle": "present",
         "gloss": "%part",
         "origin": "latin"
     },
     {
-        "key": "nt-noun",
+        "key": "-nt-noun",
         "form-final": "nt",
         "form-stem": "nti",
         "type": "derive",
         "derive-participle": "present",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al", "ary"],
+        "suffixes": ["-al", "-ary"],
         "gloss": "one who %3sg",
         "origin": "latin"
     },
     {
-        "key": "trix",
+        "key": "-trix",
         "form-final": ["trix", "trice"],
         "form-stem": "tric",
         "type": "derive",
@@ -9428,14 +9418,14 @@
         "origin": "latin"
     },
     {
-        "key": "ulous",
+        "key": "-ulous",
         "form-stem": "ulos",
         "form-final": "ulous",
         "derive-participle": "present",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "tending %inf",
         "requires": {
             "follows": {
@@ -9446,32 +9436,33 @@
         "origin": "latin"
     },
     {
-        "key": "uous",
+        "key": "-uous",
         "form-stem": "uos",
         "form-final": "uous",
         "derive-participle": "present",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": ["ity"],
+        "suffixes": ["-ity"],
         "gloss": "%part",
+        "tags": ["rare"],
         "origin": "latin"
     },
     {
-        "key": "ure",
+        "key": "-ure",
         "form-final": "ure",
         "form-stem": "ur",
         "derive-participle": "perfect",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al"],
+        "suffixes": ["-al"],
         "gloss": "the result of %part",
         "exception": [
             {
                 "case": {
                     "follows": {
-                        "has-key": "ate-bodypart"
+                        "has-key": "-ate-bodypart"
                     }
                 },
                 "gloss": "the arrangement of one's %@"
@@ -9481,18 +9472,18 @@
         "origin": "latin"
     },
     {
-        "key": "ia",
+        "key": "-ia",
         "form-final": "y",
         "form-stem": "i",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["al"],
+        "suffixes": ["-al"],
         "exception": [
             {
                 "case": {
                     "follows": {
-                        "has-key": "or"
+                        "has-key": "-or"
                     }
                 },
                 "gloss": "pertaining to %@"
@@ -9518,20 +9509,20 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["al"],
+        "suffixes": ["-al"],
         "gloss": "one who %3sg",
         "tags": ["count", "concrete", "no-gen"],
         "origin": "latin"
     },
     {
-        "key": "contra",
+        "key": "contra-",
         "form-stem": "contra",
         "type": "prefix",
         "gloss": "%@ against",
         "origin": "latin"
     },
     {
-        "key": "mis",
+        "key": "mis-",
         "form-stem": "mis",
         "type": "prefix",
         "gloss": "%@ incorrectly",
@@ -9545,7 +9536,7 @@
         "origin": "latin"
     },
     {
-        "key": "al-number",
+        "key": "-al-number",
         "form-final": "al",
         "form-stem": "al",
         "type": "derive",

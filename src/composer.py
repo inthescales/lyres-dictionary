@@ -233,11 +233,11 @@ def get_joining_vowel(language, first, second, form, addition):
                 return first.morph["form-joiner-present"]
 
             # Exceptional present-stem verb endings
-            if first.get_type() == "verb" and second.morph["key"] in ["nt", "nt-noun", "nce", "nd"]:
+            if first.get_type() == "verb" and second.morph["key"] in ["-nt", "-nt-noun", "-nce", "-nd"]:
                 verb_vowels = {1: "a", 2: "e", 3: "e", 4: "ie", 0: ""}
                 return verb_vowels[first.morph["conjugation"]]
 
-            if first.get_type() == "verb" and second.morph["key"] in ["ble"]:
+            if first.get_type() == "verb" and second.morph["key"] in ["-ble"]:
                 verb_vowels = {1: "a", 2: "i", 3: "i", 4: "i", 0: ""}
                 return verb_vowels[first.morph["conjugation"]]
 

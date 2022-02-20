@@ -1672,14 +1672,15 @@
         "origin": "greek"
     },
     {
-        "key": "-crat/adj",
+        "key": "-crat",
         "form-final": "crat",
         "form-stem": "crat",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
         "suffixes": ["greek-silent-agent", "-ic", "-y-passthrough"],
-        "gloss": "rule by the %@",
+        "gloss-adj": "rule by the %@",
+        "gloss-noun": "rule by %pl",
         "requires": {
             "follows": {
                 "has-tag": "character"
@@ -1692,7 +1693,8 @@
                         "has-key": "greek-silent-agent"
                     }
                 },
-                "gloss": "a member of the ruling %@"
+                "gloss-adj": "a member of the ruling %@",
+                "gloss-noun": "a member of the ruling %pl"
             },
             {
                 "case": {
