@@ -6,7 +6,7 @@ import src.composer as composer
 
 class FormTests(unittest.TestCase):
     def setUp(self):
-        self.morphothec = Morphothec(["data/morphs-latin.json", "data/morphs-greek.json"])
+        self.morphothec = Morphothec("data/")
 
     # Latin ===========================
 
@@ -789,9 +789,9 @@ class FormTests(unittest.TestCase):
         self.assertForm(["arista", "-crat", "-y-passthrough"], "aristocracy")
         self.assertForm(["aner", "-gen", "greek-silent-agent"], "androgen")
         self.assertForm(["pathos", "-gen", "-ic-part"], "pathogenic")
-        self.assertForm(["demos", "agog", "greek-e-agent"], "demagogue")
-        self.assertForm(["hypnos", "agog", "-ic-def"], "hypnagogic")
-        self.assertForm(["pais", "agog", "-y-def"], "pedagogy")
+        self.assertForm(["demos", "-agog", "greek-e-agent"], "demagogue")
+        self.assertForm(["hypnos", "-agog", "-ic-def"], "hypnagogic")
+        self.assertForm(["pais", "-agog", "-y-def"], "pedagogy")
         self.assertForm(["biblion", "-graph-", "-y-def"], "bibliography")
         self.assertForm(["bios", "-graph-", "-er-agent"], "biographer")
         self.assertForm(["calla", "-graph-", "-ic-def"], "calligraphic")

@@ -1,0 +1,195 @@
+[
+    {
+        "key": "a-",
+        "form-stem": "a",
+        "type": "number",
+        "gloss": "no %pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u", "h"]
+                }
+            },
+            "form-stem": "an"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "mono-",
+        "form-stem": "mono",
+        "type": "number",
+        "gloss": "one %!sg",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "mon"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "di-",
+        "form-stem": "di",
+        "type": "number",
+        "gloss": "two %!pl",
+        "origin": "greek"
+    },
+    {
+        "key": "tri-greek",
+        "form-stem": "tri",
+        "type": "number",
+        "gloss": "three %!pl",
+        "origin": "greek"
+    },
+    {
+        "key": "tetra-",
+        "form-stem": "tetra",
+        "type": "number",
+        "gloss": "four %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "tetr"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "penta-",
+        "form-stem": "penta",
+        "type": "number",
+        "gloss": "five %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "pent"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "hexa-",
+        "form-stem": "hexa",
+        "type": "number",
+        "gloss": "six %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "hex"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "hepta-",
+        "form-stem": "hepta",
+        "type": "number",
+        "gloss": "seven %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "hept"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "octo-",
+        "form-stem": "octo",
+        "type": "number",
+        "gloss": "eight %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "oct"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "ennea-",
+        "form-stem": "ennea",
+        "type": "number",
+        "gloss": "nine %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "enne"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "hecato-",
+        "form-stem": "hecato",
+        "type": "number",
+        "gloss": "one-hundred %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "hecat"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "chili-",
+        "form-stem": "chili",
+        "type": "number",
+        "gloss": "one-thousand %!pl",
+        "origin": "greek"
+    },
+    {
+        "key": "myria",
+        "form-stem": "myria",
+        "type": "number",
+        "gloss": "ten-thousand %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "myri"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "oligo-",
+        "form-stem": "oligo",
+        "type": "number",
+        "gloss": "few %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u"]
+                }
+            },
+            "form-stem": "olig"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "poly-",
+        "form-stem": "poly",
+        "type": "number",
+        "gloss": "many %!pl",
+        "origin": "greek"
+    }
+]

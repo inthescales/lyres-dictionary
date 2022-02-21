@@ -15,7 +15,7 @@ morphothec = None
 def setup():
     global morphothec
     
-    morphothec = Morphothec("./data/")
+    morphothec = Morphothec("data/")
 
 def needs_setup():
     return morphothec == None

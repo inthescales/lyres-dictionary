@@ -1,0 +1,1195 @@
+[
+    {
+        "key": "-al",
+        "form-final": "al",
+        "form-stem": "al",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity", "-ize"],
+        "gloss": "of or relating to %pl",
+        "gloss-relative": "%@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["-or", "-nt", "-nt-noun", "-nce", "-nd"]
+                    }
+                },
+                "form-final": "ial",
+                "form-stem": "ial"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "final-or-semifinal-l": true
+                    }
+                },
+                "form-final": "ar",
+                "form-stem": "ar"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "-form"
+                    }
+                },
+                "gloss": "%@"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-type": ["verb"]
+                    }
+                },
+                "gloss": "%part"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-al-number",
+        "form-final": "al",
+        "form-stem": "al",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "having %@",
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ian-animal",
+        "form-final": "ian",
+        "form-stem": "ian",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "having the nature of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "i"
+                    }
+                },
+                "form-stem": "an",
+                "form-final": "an"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-arium",
+        "form-final": ["arium", "ary"],
+        "form-stem": "ari",
+        "type": "derive",
+        "derive-from": ["noun", "adj"],
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss-noun": "a place for %pl",
+        "gloss-adj": "a place where %@ things are kept",
+        "exception": [
+           {
+               "case": {
+                   "follows": {
+                       "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
+                   }
+               },
+               "form-final": ["iarium", "iary"],
+               "form-stem": "iari"
+           }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-ary",
+        "form-final": "ary",
+        "form-stem": "ari",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "pertaining to %pl",
+        "gloss-relative": "%@",
+        "exception": [
+           {
+               "case": {
+                   "follows": {
+                       "has-key": "-or"
+                   }
+               },
+               "form-final": "ia",
+               "form-stem": "i"
+           },
+           {
+               "case": {
+                   "follows": {
+                       "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
+                   }
+               },
+               "form-final": "iary",
+               "form-stem": "iari"
+           }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-ate",
+        "form-stem-present": "at",
+        "form-stem-perfect": "at",
+        "form-final": "ate",
+        "type": "derive",
+        "derive-from": ["noun", "adj"],
+        "derive-to": "verb",
+        "conjugation": 1,
+        "gloss": "[cause] to be %@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["-esce", "-esce-verb"]
+                    }
+                },
+                "gloss": "[cause] %inf"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "adj" },
+                            { "has-declension": 3 }
+                        ]
+                    }
+                },
+                "form-stem-present": "itat",
+                "form-stem-perfect": "itat",
+                "form-final": "itate"
+            }
+        ],
+        "tags": ["transitive", "no-gen"],
+        "origin": "latin",
+        "notes": "3rd declension exception doesn't fit with 'humiliate'"
+    },
+    {
+        "key": "-ate-bodypart",
+        "form-stem": "at",
+        "form-final": "ate",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ion", "-ure"],
+        "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    }
+                },
+                "gloss": "having %sg"
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-ure"
+                    }
+                },
+                "gloss": "%pl"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    },
+                    "precedes": {
+                        "has-key": "-ure"
+                    }
+                },
+                "gloss": "%sg"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-ate-frequentative",
+        "form-stem": "at",
+        "form-final": "ate",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "verb",
+        "derive-participle": "perfect",
+        "conjugation": 1,
+        "gloss": "%@ repeatedly or at length",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-suffix": "at"
+                }
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-ate-secretion",
+        "form-stem": "at",
+        "form-final": "ate",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 1,
+        "gloss": "[produce] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "secretion"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-ate-tool",
+        "form-stem": "at",
+        "form-final": "ate",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 1,
+        "gloss": "[use] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "tool"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-property": "gloss-tool"
+                }
+            },
+            "gloss": "%(gloss-tool)"
+        }],
+        "origin": "latin"
+    },
+    {
+        "key": "-ax",
+        "form-stem": "aci",
+        "form-final": "ax",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "derive-participle": "present",
+        "suffixes": ["-ous", "-ity"],
+        "gloss": "inclined toward %part",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
+        "tags": ["non-final"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ble",
+        "form-final": "ble",
+        "form-stem": "bil",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "suffixes": ["-ity", "-ize"],
+        "derive-participle": "present",
+        "gloss": "able to be %ppart",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-culture",
+        "form-final": "iculture",
+        "form-stem": "icultur",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ist"],
+        "gloss": "the cultivation of %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["animal", "person"]
+                }
+            },
+            "gloss": "the rearing of %pl"
+        }],
+        "tags": ["mass", "abstract"],
+        "origin": "latin"
+    },
+    {
+        "key": "-esce",
+        "form-stem-present": "esc",
+        "form-stem-perfect": "esc",
+        "form-joiner-present": "e",
+        "form-final": "esce",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "verb",
+        "suffixes": ["-nt", "-nce", "-ate"],
+        "conjugation": 0,
+        "gloss": "[become] %@",
+        "origin": "latin"
+    },
+    {
+        "key": "-esce-verb",
+        "form-stem-present": "esc",
+        "form-stem-perfect": "esc",
+        "form-joiner-present": "e",
+        "form-final": "esce",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "verb",
+        "conjugation": 0,
+        "suffixes": ["-nt", "-nce", "-ate"],
+        "derive-participle": "present",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-conjugation": 2 },
+                    { "has-property": "gloss-state" }
+                ]
+            }
+        },
+        "gloss": "[become] %(gloss-state)",
+        "origin": "latin"
+    },
+    {
+        "key": "-esce-plant",
+        "form-stem-present": "esc",
+        "form-stem-perfect": "esc",
+        "form-joiner-present": "e",
+        "form-final": "esce",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["-nt", "-nce"],
+        "conjugation": 0,
+        "gloss": "[put] forth %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart-plant"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-e-agent",
+        "form-final": "e",
+        "form-stem": "",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "derive-participle": "present",
+        "suffixes": [],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "-etum",
+        "form-final": "etum",
+        "form-stem": "etum",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "[place] where %pl are grown",
+        "requires": {
+            "follows": {
+                "has-tag": "plant"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-cide",
+        "form-final": "cide",
+        "form-stem": "cid",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ous", "-ism"],
+        "gloss": "the act of killing %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["-al", "-ous", "-ism"]
+                    }
+                },
+                "gloss": "killing %pl"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-id-descendant",
+        "form-final": "id",
+        "form-stem": "id",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "a member of the %sg family",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-id-deverbative",
+        "form-final": "id",
+        "form-stem": "id",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "derive-participle": "present",
+        "suffixes": ["-ity"],
+        "gloss": "inclined %inf",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-property": "gloss-state"
+                    }
+                },
+                "gloss": "%(gloss-state)"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-form",
+        "form-final": "form",
+        "form-stem": "form",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity", "-al", "-ous"],
+        "gloss": "having the shape of %sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "count" },
+                    { "has-any-tags": ["concrete", "shape"] }
+                ]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "person"
+                    }
+                },
+                "gloss": "having the appearance of %sg"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-fer",
+        "form-final": "fer",
+        "form-stem": "fer",
+        "form-joiner-present": "e",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 0,
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce", "-ize"],
+        "gloss": "[bear] %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ify",
+        "form-stem-present": "ific",
+        "form-stem-perfect": "ificat",
+        "form-final": "ify",
+        "type": "derive",
+        "derive-from": ["noun", "adj"],
+        "derive-to": "verb",
+        "conjugation": 3,
+        "gloss-noun": "[make] %sg",
+        "gloss-adj": "[make] %@",
+        "gloss-relative": "[make] %@",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": {
+                        "has-key": "-or"
+                    }
+                },
+                "form-stem": ["ifact", "ificat"]
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-ble"
+                    }
+                },
+                "form-stem": "ific",
+                "form-joiner-present": "a"
+            }
+        ],
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
+    },
+    {
+        "key": "-ger",
+        "form-final": "ger",
+        "form-stem": "ger",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce"],
+        "conjugation": 3,
+        "gloss": "[bring] %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
+                }
+            },
+            "form-stem": "gere"
+        },
+        {
+            "case": {
+                "precedes": {
+                    "has-key": ["-ous", "-nt", "-nt-noun", "-nce", "-nd"]
+                }
+            },
+            "gloss": "[bear] %pl"
+        }],
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin",
+        "notes": "add exceptions for 'ous'"
+    },
+    {
+        "key": "-ile",
+        "form-final": "ile",
+        "form-stem": "il",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "having the nature of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "person"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-ile-verb",
+        "form-final": "ile",
+        "form-stem": "il",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "derive-participle": "perfect",
+        "gloss": "able %inf",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "transitive"
+                }
+            },
+            "gloss": "capable of being %ppart"
+        }],
+        "origin": "latin"
+    },
+    {
+        "key": "-ine",
+        "form-final": "ine",
+        "form-stem": "in",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "having the nature of %sg",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["living", "terrain"]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "terrain"
+                    }
+                },
+                "gloss": "of, pertaining to, or inhabiting %pl"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-ion",
+        "form-final": "ion",
+        "form-stem": "ion",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ary", "-ous-full"],
+        "derive-participle": "perfect",
+        "gloss-link": "%part",
+        "gloss-final": "the act of %part",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-ous-full"
+                    }
+                },
+                "form-stem": "i"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "-ate-bodypart"
+                    }
+                },
+                "gloss": "the condition of %@"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-or-quality",
+        "form-final": "or",
+        "form-stem": "or",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "derive-participle": "present",
+        "gloss": "the quality of %part",
+        "requires": {
+            "follows": {
+                "has-conjugation": 2
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-pote-drink",
+        "form-final": "pote",
+        "form-stem": "pot",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "one who drinks %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-pote-power",
+        "form-stem-present": "pot",
+        "form-stem-perfect": "pot",
+        "form-final": "pote",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["-nt", "-nce"],
+        "conjugation": 3,
+        "gloss": "[have] command over %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": "[be] skilled in the use of %pl"
+            }
+        ],
+        "tags": ["non-final", "rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ism",
+        "form-stem": "ism",
+        "form-final": "ism",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "declension": 3,
+        "gloss": "the practice of %@",
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ist",
+        "form-stem": "ist",
+        "form-final": "ist",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "declension": 3,
+        "gloss": "[one] engaged in %@",
+        "tags": ["count", "concrete", "living", "person", "no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "-tude",
+        "form-final": "tude",
+        "form-stem": "tudin",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ary", "-ous"],
+        "gloss": "the quality of being %@",
+        "origin": "latin"
+    },
+    {
+        "key": "-tude-noun",
+        "form-final": "tude",
+        "form-stem": "tudin",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ary", "-ous"],
+        "gloss": "the state or quality of being %sg",
+        "tags": ["rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ity",
+        "form-final": "ity",
+        "form-stem": "iti",
+        "type": "derive",
+        "derive-from": ["noun", "adj"],
+        "derive-to": "noun",
+        "suffixes": ["-ous"],
+        "gloss": "the quality of being %sg",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "and": [
+                        { "has-type": "adj" },
+                        { "is-root": true },
+                        { "has-suffix": "i" }
+                    ]
+                }
+            },
+            "form-stem": "eti",
+            "form-final": "ety"
+        },
+        {
+            "case": {
+                "follows": {
+                    "has-key": ["-form", "-uous", "-ulous"]
+                }
+            },
+            "gloss": "the quality of %@"
+        },
+        {
+            "case": {
+                "follows": {
+                    "has-type": "verb"
+                }
+            },
+            "gloss": "the quality of %part"
+        }],
+        "origin": "latin"
+    },
+    {
+        "key": "-ive",
+        "form-final": "ive",
+        "form-stem": "iv",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "derive-participle": "perfect",
+        "gloss": "given to %part",
+        "origin": "latin"
+    },
+    {
+        "key": "-vor-",
+        "form-final": "vor",
+        "form-stem": "vor",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 0,
+        "suffixes": ["-e-agent", "-ous", "-ia", "-ity"],
+        "gloss": "[eat] %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-any-tag": ["fluid", "liquid"]
+                    }
+                },
+                "gloss": "[consume] %pl"
+            }
+        ],
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ize",
+        "form-stem-present": "iz",
+        "form-stem-perfect": "izat",
+        "form-final": "ize",
+        "type": "derive",
+        "derive-from": ["adj", "noun"],
+        "derive-to": "verb",
+        "conjugation": 1,
+        "gloss": "[cause] to be %@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "-fer"
+                    }
+                },
+                "gloss": "[cause] to %@"
+            }
+        ],
+        "tags": ["transitive", "no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "-or",
+        "form-final": "or",
+        "form-stem": "or",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ia"],
+        "derive-participle": "perfect",
+        "gloss": "one who %3sg",
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
+        "key": "-orium",
+        "form-final": ["orium", "ory"],
+        "form-stem": "ori",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "derive-participle": "perfect",
+        "gloss-verb": "a place where one %3sg",
+        "origin": "latin"
+    },
+    {
+        "key": "-ory",
+        "form-final": "ory",
+        "form-stem": "ori",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ous-full"],
+        "derive-participle": "perfect",
+        "gloss": "the state of %part",
+        "tags": ["mass"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ous",
+        "form-final": "ous",
+        "form-stem": "os",
+        "type": "derive",
+        "derive-from": ["noun", "verb"],
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "%@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "verb"
+                    }
+                },
+                "gloss": "%part"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-key": ["-ory", "-ity", "-tude", "-tude-noun"]
+                    }
+                },
+                "gloss": "characterized by %@"
+            }
+        ],
+        "tags": ["no-gen"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ous-full",
+        "form-final": "ous",
+        "form-stem": "os",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "full of %pl",
+        "origin": "latin"
+    },
+    {
+        "key": "-ous-material",
+        "form-final": "ous",
+        "form-stem": "os",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "made of or resembling %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "material"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "metal"
+                    }
+                },
+                "gloss": "containing or yielding %pl"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-nce",
+        "form-final": ["nce", "ncy"],        
+        "form-stem": "nti",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ary"],
+        "derive-participle": "present",
+        "gloss-link": "the state of %part",
+        "gloss-final": "the process, state, or quality of %part",
+        "origin": "latin"
+    },
+    {
+        "key": "-nd",
+        "form-final": ["nd", "ndum"],
+        "form-stem": "ndi",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "derive-participle": "present",
+        "gloss": "something that must be %ppart",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
+        "origin": "latin"
+    },
+    {
+        "key": "-nt",
+        "form-final": "nt",
+        "form-stem": "nti",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "suffixes": ["-al", "-ary"],
+        "derive-participle": "present",
+        "gloss": "%part",
+        "origin": "latin"
+    },
+    {
+        "key": "-nt-noun",
+        "form-final": "nt",
+        "form-stem": "nti",
+        "type": "derive",
+        "derive-participle": "present",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al", "-ary"],
+        "gloss": "one who %3sg",
+        "origin": "latin"
+    },
+    {
+        "key": "-trix",
+        "form-final": ["trix", "trice"],
+        "form-stem": "tric",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "derive-participle": "perfect",
+        "gloss": "a woman who %3sg",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "t"
+                }
+            },
+            "form-final": ["rix", "rice"],
+            "form-stem": "ric"
+        }],
+        "tags": ["count", "no-joiner", "rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ulous",
+        "form-stem": "ulos",
+        "form-final": "ulous",
+        "derive-participle": "present",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "tending %inf",
+        "requires": {
+            "follows": {
+                "not": { "has-suffix": "qu" }
+            }
+        },
+        "tags": ["rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-uous",
+        "form-stem": "uos",
+        "form-final": "uous",
+        "derive-participle": "present",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "suffixes": ["-ity"],
+        "gloss": "%part",
+        "tags": ["rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ure",
+        "form-final": "ure",
+        "form-stem": "ur",
+        "derive-participle": "perfect",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al"],
+        "gloss": "the result of %part",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "-ate-bodypart"
+                    }
+                },
+                "gloss": "the arrangement of one's %@"
+            }
+        ],
+        "tags": ["mass"],
+        "origin": "latin"
+    },
+    {
+        "key": "-ia",
+        "form-final": "y",
+        "form-stem": "i",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-al"],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-key": "-or"
+                    }
+                },
+                "gloss": "pertaining to %@"
+            },
+            {
+            "case": {
+                "follows": {
+                    "has-type": "verb"
+                }
+            },
+            "gloss": "the quality of %part"
+        }
+        ],
+        "gloss": "the quality of %@",
+        "tags": ["no-gen"],
+        "origin": "latin",
+        "notes": "general adjectivizing suffix"
+    },
+    {
+        "key": "silent-agent",
+        "form-final": "",
+        "form-stem": "",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": ["-al"],
+        "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "no-gen"],
+        "origin": "latin"
+    }
+]
