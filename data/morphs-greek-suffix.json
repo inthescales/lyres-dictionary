@@ -15,7 +15,7 @@
                         "has-key": "greek-silent-agent"
                     }
                 },
-                "gloss": "one who rules or oversees %pl"
+                "gloss": "[rule] or [oversee] %pl"
             }
         ],
         "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
@@ -37,7 +37,7 @@
                         "has-key": "greek-silent-agent"
                     }
                 },
-                "gloss": "one who breaks %pl"
+                "gloss": "[break] %pl"
             }
         ],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
@@ -48,60 +48,38 @@
         "form-final": "crat",
         "form-stem": "crat",
         "type": "derive",
-        "derive-from": "adj",
+        "derive-from": ["noun", "adj"],
         "derive-to": "noun",
-        "suffixes": ["greek-silent-agent", "-ic", "-y-passthrough"],
+        "suffixes": ["greek-silent", "-ic", "-y-passthrough"],
         "gloss-adj": "rule by the %@",
         "gloss-noun": "rule by %pl",
         "requires": {
             "follows": {
-                "has-tag": "character"
+                "or": [
+                    {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "person" }
+                        ]
+                    },
+                    {
+                        "and": [
+                            { "has-type": "adj" },
+                            { "has-tag": "character" }
+                        ]
+                    }
+                ]
             }
         },
         "exception": [
             {
                 "case": {
                     "precedes": {
-                        "has-key": "greek-silent-agent"
+                        "has-key": "greek-silent"
                     }
                 },
                 "gloss-adj": "a member of the ruling %@",
                 "gloss-noun": "a member of the ruling %pl"
-            },
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "-y-passthrough"
-                    }
-                },
-                "form-stem": "crac"
-            }
-        ],
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "-crat/noun",
-        "form-final": "crat",
-        "form-stem": "crat",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "suffixes": ["greek-silent-agent", "-ic", "-y-passthrough"],
-        "gloss": "rule by %pl",
-        "requires": {
-            "follows": {
-                "has-tag": "person"
-            }
-        },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-silent-agent"
-                    }
-                },
-                "gloss": "a member of the ruling %pl"
             },
             {
                 "case": {
@@ -201,7 +179,7 @@
         "origin": "greek"
     },
     {
-        "key": "-log-/noun",
+        "key": "-log-",
         "form-final": "log",
         "form-stem": "log",
         "type": "derive",
@@ -213,26 +191,15 @@
         "origin": "greek"
     },
     {
-        "key": "-man-/noun",
+        "key": "-man-",
         "form-final": "man",
         "form-stem": "man",
         "type": "derive",
-        "derive-from": "noun",
+        "derive-from": ["noun", "verb"],
         "derive-to": "noun",
         "suffixes": ["-ia-def", "-ic-def", "-iac-haver"],
-        "gloss": "obsession or excessive desire for %pl",
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "-man-/verb",
-        "form-final": "man",
-        "form-stem": "man",
-        "type": "derive",
-        "derive-from": "verb",
-        "derive-to": "noun",
-        "suffixes": ["-ia-def", "-ic-def", "-iac-haver"],
-        "gloss": "excessive desire %inf",
+        "gloss-noun": "obsession or excessive desire for %pl",
+        "gloss-verb": "excessive desire %inf",
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     },
@@ -305,7 +272,7 @@
         "origin": "greek"
     },
     {
-        "key": "-nom-/noun",
+        "key": "-nom-",
         "form-final": "nom",
         "form-stem": "nom",
         "type": "derive",
@@ -345,26 +312,15 @@
         "origin": "greek"
     },
     {
-        "key": "-phil-/adj",
+        "key": "-phil-",
         "form-final": "ophil",
         "form-stem": "ophil",
         "type": "derive",
-        "derive-from": "adj",
+        "derive-from": ["adj", "noun"],
         "derive-to": "noun",
         "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
-        "gloss": "[love] of %pl things",
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "-phil-/noun",
-        "form-final": "phil",
-        "form-stem": "phil",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
-        "gloss": "[love] of %pl",
+        "gloss-adj": "[love] of %pl things",
+        "gloss-noun": "[love] of %pl",
         "requires": {
             "follows": {
                 "not": { "has-key": "pais" }
@@ -374,26 +330,15 @@
         "origin": "greek"
     },
     {
-        "key": "-phob-/adj",
+        "key": "-phob-",
         "form-final": "phob",
         "form-stem": "phob",
         "type": "derive",
-        "derive-from": "adj",
+        "derive-from": ["adj", "noun"],
         "derive-to": "noun",
         "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
-        "gloss": "[fear] of %pl things",
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "-phob-/noun",
-        "form-final": "phob",
-        "form-stem": "phob",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
-        "gloss": "[fear] of %pl",
+        "gloss-adj": "[fear] of %pl things",
+        "gloss-noun": "[fear] of %pl",
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     },
@@ -442,32 +387,7 @@
         "origin": "greek"
     },
     {
-        "key": "-pot-/adj",
-        "form-final": "pot",
-        "form-stem": "pot",
-        "type": "derive",
-        "derive-from": "adj",
-        "derive-to": "noun",
-        "suffixes": ["greek-e-agent", "-ic-def", "-ia-def"],
-        "gloss": "drinking of %@ liquids",
-        "requires": {
-            "follows": {
-                "has-tag": "liquid"
-            }
-        },
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-key": "greek-e-agent"
-                }
-            },
-            "gloss": "[drink] %@ liquids"
-        }],
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "-pot-/noun",
+        "key": "-pot-",
         "form-final": "pot",
         "form-stem": "pot",
         "type": "derive",
@@ -509,26 +429,15 @@
         "origin": "greek"
     },
     {
-        "key": "-scop-/adj",
+        "key": "-scop-",
         "form-final": "scop",
         "form-stem": "scop",
         "type": "derive",
-        "derive-from": "adj",
+        "derive-from": ["adj", "noun"],
         "derive-to": "verb",
         "suffixes": ["-e-instrument", "-ic-verb", "-y-def"],
-        "gloss": "viewing of %pl things",
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    },
-    {
-        "key": "-scop-/noun",
-        "form-final": "scop",
-        "form-stem": "scop",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "verb",
-        "suffixes": ["-e-instrument", "-ic-verb", "-y-def"],
-        "gloss": "viewing of %pl",
+        "gloss-adj": "viewing of %pl things",
+        "gloss-noun": "viewing of %pl",
         "requires": {
             "follows": {
                 "not": { "has-key": "pais" }
@@ -574,7 +483,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
-        "gloss": "pertaining to %pl",
+        "gloss-noun": "pertaining to %pl",
         "exception": [
             {
                 "case": {
@@ -844,7 +753,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-silent-agent",
+        "key": "greek-silent",
         "form-final": "",
         "form-stem": "",
         "type": "derive",
@@ -996,9 +905,9 @@
         "origin": "greek"
     },
     {
-        "key": "-y-verb",
-        "form-stem": "i",
-        "form-final": ["y", "ia"],
+        "key": "-y/verb",
+        "form-stem": "si",
+        "form-final": ["sy", "sia"],
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -1009,8 +918,18 @@
                 "has-suffix": "s"
             }
         },
-        "tags": [],
-        "origin": "greek",
-        "notes": "These seem rare in English except in compounds. Using a req for now."
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "s"
+                    }
+                },
+                "form-stem": "i",
+                "form-final": ["y", "ia"]
+            }  
+        ],
+        "tags": ["no-joiner"],
+        "origin": "greek"
     }
 ]
