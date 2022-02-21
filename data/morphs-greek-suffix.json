@@ -913,11 +913,6 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "the act or state of %part",
-        "requires": {
-            "follows": {
-                "has-suffix": "s"
-            }
-        },
         "exception": [
             {
                 "case": {
