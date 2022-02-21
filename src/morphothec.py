@@ -1,3 +1,4 @@
+import os
 import json
 
 import src.expressions as expressions  
@@ -38,10 +39,23 @@ class Morphothec:
 
                     self.morphs_from[from_type].append(morph_key)
     
-    def __init__(self, files):
+    def __init__(self, input):
         self.morph_for_key = {}
         self.languages = {}
+
+        files = []
+
+        if isinstance(input, list):
+            files = input
+        elif isinstance(input, str):
+            all_files = os.listdir("./" + input)
+            files = [input + file for file in all_files if file.startswith("morphs-") and file.endswith(".json")]
+        else:
+            print("ERROR - invalid morphothec initialization")
         
+        if len(files) == 0:
+            print("ERROR - no morph files found")
+
         for file in files:
             
             errors = 0
