@@ -95,6 +95,14 @@
         "origin": "greek"
     },
     {
+        "key": "athlon",
+        "form-stem": "athl",
+        "type": "noun",
+        "gloss": "contest",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "atmos",
         "form-stem": "atm",
         "type": "noun",
@@ -143,11 +151,20 @@
         "origin": "greek"
     },
     {
+        "key": "bainein",
+        "form-stem": "ba",
+        "type": "verb",
+        "gloss": "go",
+        "tags": ["intransitive", "motion"],
+        "origin": "greek"
+    },
+    {
         "key": "ballein",
         "form-stem": "balle",
         "type": "verb",
         "gloss": "dance",
-        "tags": ["intransitive"],
+        "gloss-relative": "throw",
+        "tags": ["transitive", "motion"],
         "origin": "greek"
     },
     {
@@ -155,7 +172,7 @@
         "form-stem": "ballis",
         "type": "verb",
         "gloss": "throw",
-        "tags": ["transitive"],
+        "tags": ["transitive", "motion"],
         "origin": "greek"
     },
     {
@@ -374,6 +391,15 @@
         "origin": "greek"
     },
     {
+        "key": "dyein",
+        "form-stem": "dy",
+        "type": "verb",
+        "gloss": "put",
+        "gloss-relative": "put",
+        "tags": ["transitive", "motion", "always-prep"],
+        "origin": "greek"
+    },
+    {
         "key": "dynasthai",
         "form-stem": "dynas",
         "type": "verb",
@@ -473,8 +499,8 @@
         "key": "gignesthai",
         "form-stem": "gene",
         "type": "verb",
-        "gloss": "[give] birth",
-        "tags": ["transitive"],
+        "gloss": "[be] born",
+        "tags": ["intransitive"],
         "origin": "greek"
     },
     {
@@ -646,6 +672,14 @@
         "origin": "greek"
     },
     {
+        "key": "hyalos",
+        "form-stem": "hyal",
+        "type": "noun",
+        "gloss": "glass",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "greek"
+    },
+    {
         "key": "hydor",
         "form-stem": "hydr",
         "type": "noun",
@@ -806,6 +840,14 @@
         "notes": "Don't know ancient greek infinitive, guessed"
     },
     {
+        "key": "metron",
+        "form-stem": "metr",
+        "type": "noun",
+        "gloss": "measure",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "meter",
         "form-stem": "metr",
         "type": "noun",
@@ -817,7 +859,7 @@
         "key": "mainein",
         "form-stem": "mias",
         "type": "verb",
-        "gloss": "stain",
+        "gloss": "poison",
         "tags": ["transitive"],
         "origin": "greek"
     },
@@ -981,6 +1023,14 @@
         "origin": "greek"
     },
     {
+        "key": "passein",
+        "form-stem": "pas",
+        "type": "verb",
+        "gloss": "sprinkle",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "pater",
         "form-stem": "patr",
         "type": "noun",
@@ -1002,6 +1052,14 @@
         "type": "noun",
         "gloss": "penis",
         "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
+        "key": "phanai",
+        "form-stem": "pha",
+        "type": "verb",
+        "gloss": "say",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {
@@ -1279,7 +1337,7 @@
         "form-stem": "schis",
         "type": "verb",
         "gloss": "split",
-        "tags": ["transitive"],
+        "tags": ["transitive", "dividing"],
         "origin": "greek"
     },
     {
@@ -1379,11 +1437,12 @@
         "origin": "greek"
     },
     {
-        "key": "thein",
+        "key": "tithenai",
         "form-stem": "the",
         "type": "verb",
         "gloss": "propose",
-        "tags": ["transitive"],
+        "gloss-relative": "put",
+        "tags": ["transitive", "motion"],
         "origin": "greek"
     },
     {

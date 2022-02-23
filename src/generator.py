@@ -17,7 +17,7 @@ def generate_word(morphothec):
     
     transforms_done = 0
     while (transforms_done < transform_count and word.size() < maximum_size) \
-        or word.last_morph().has_tag("non-final"):
+        or not word.last_morph().final_ok():
         
         transforms.transform_word(word, morphothec)
         transforms_done += 1

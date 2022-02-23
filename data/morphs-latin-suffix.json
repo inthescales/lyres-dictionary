@@ -342,6 +342,26 @@
         "origin": "latin"
     },
     {
+        "key": "-e",
+        "form-final": "e",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "%sg",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": ["mb", "mp", "nt", "ns", "rc", "rs", "rt"]
+                    }
+                },
+                "form-final": ""
+            }  
+        ],
+        "tags": ["final"],
+        "origin": "latin"
+    },
+    {
         "key": "-esce",
         "form-stem-present": "esc",
         "form-stem-perfect": "esc",

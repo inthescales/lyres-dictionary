@@ -195,13 +195,14 @@
         "form-final": "man",
         "form-stem": "man",
         "type": "derive",
-        "derive-from": ["noun", "verb"],
+        "derive-from": ["noun"],
         "derive-to": "noun",
         "suffixes": ["-ia-def", "-ic-def", "-iac-haver"],
         "gloss-noun": "obsession or excessive desire for %pl",
         "gloss-verb": "excessive desire %inf",
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
+        "origin": "greek",
+        "notes": "Removing verb from derive-from until joining vowels are changed"
     },
     {
         "key": "-mant-",
@@ -630,7 +631,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": "g"
+                        "has-suffix": ["g", "y"]
                     }
                 },
                 "form-final": "ma"
@@ -638,7 +639,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": "e"
+                        "has-suffix": ["a", "e"]
                     }
                 },
                 "form-final": ["ma", "me"]
@@ -676,7 +677,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-suffix": "e"
+                    "has-suffix": ["a", "e", "y"]
                 }
             },
             "form-stem": "t",

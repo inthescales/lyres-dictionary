@@ -1,5 +1,160 @@
 [
     {
+        "key": "ana-",
+        "form-stem": "ana",
+        "form-stem-assim": "an",
+        "form-assimilation": {
+            "form-stem-assim": ["a", "e", "i", "o", "u"],
+            "form-stem": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ up",
+        "gloss-noun": "on %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    }, {
+        "key": "anti-",
+        "form-stem": "anti",
+        "form-stem-assim": "ant",
+        "form-assimilation": {
+            "form-stem-assim": ["a"],
+            "form-stem": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ against",
+        "gloss-noun": "against %sg",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["motion", "transitive"]
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    }, {
+        "key": "cata-",
+        "form-stem": "cata",
+        "type": "prep",
+        "gloss-verb": "%@ down",
+        "gloss-noun": "down %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    }, {
+        "key": "dia-",
+        "form-stem": "dia",
+        "form-stem-assim": "di",
+        "form-assimilation": {
+            "form-stem-assim": ["a"],
+            "form-stem": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ across",
+        "gloss-noun": "across %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    }, {
+        "key": "ec-",
+        "form-stem": "ec",
+        "type": "prep",
+        "gloss-verb": "%@ out from",
+        "gloss-noun": "out of %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    },
+    {
+        "key": "en-",
+        "form-stem": "en",
+        "form-stem-assim": "e",
+        "form-assimilation": {
+            "nasal": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ in",
+        "gloss-noun": "in %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    },
+    {
+        "key": "epi-",
+        "form-stem": "epi",
+        "form-stem-assim": "ep",
+        "type": "prep",
+        "gloss-verb": "%@ upon",
+        "gloss-noun": "upon %sg",
+        "form-assimilation": {
+            "form-stem-assim": ["a", "e", "i", "o", "u", "y"],
+            "form-stem": ["*"]
+        },
+        "tags": ["verbal"],
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "origin": "greek"
+    },
+    {
+        "key": "meta-",
+        "form-stem": "meta",
+        "form-stem-assim": "met",
+        "form-assimilation": {
+            "form-stem-assim": ["a"],
+            "form-stem": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ beyond",
+        "gloss-noun": "beyond %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    }, 
+    {
+        "key": "syn-",
+        "form-stem": "syn",
+        "form-stem-assim": "sy",
+        "form-assimilation": {
+            "nasal": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ together",
+        "gloss-noun": "the same %sg",
+        "requires": {
+            "precedes": {
+                "not": { "has-tag": "dividing" }
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    },
+    {
         "key": "a-",
         "form-stem": "a",
         "type": "number",

@@ -128,9 +128,12 @@ def getHTML(series):
     
     return output
 
-test_series = series_root_suffix(morphothec.filter_type("verb", language="greek"),
-                                 morphothec.filter_appends_to("verb", language="greek"),
+test_series = series_root_suffix(morphothec.filter_type("noun", language="latin"),
+                                 ["-e"],
                                  morphothec)
+#test_series = series_root_suffix(morphothec.filter_type("verb", language="greek"),
+#                                 morphothec.filter_appends_to("verb", language="greek"),
+#                                 morphothec)
 #test_series = series_root_suffix(morphothec.filter_type("verb"),
 #                                 morphothec.filter_appends_to("verb"),
 #                                 morphothec)

@@ -11,6 +11,26 @@
         "origin": "latin"
     },
 
+    # Like it, but need it to not conflict with -ma
+    {
+        "key": "auto-",
+        "form-stem": "auto",
+        "form-stem-assim": "aut",
+        "form-assimilation": {
+            "form-stem-assim": ["a"],
+            "form-stem": ["*"]
+        },
+        "type": "prep",
+        "gloss": "%@ one's self",
+        "requires": {
+            "precedes": {
+                "has-tag": "transitive"
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    }, 
+
     # Need to fix the inflection on the singular here
     {
         "key": "icule",
