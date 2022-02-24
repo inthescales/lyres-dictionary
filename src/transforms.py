@@ -9,7 +9,7 @@ from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
     bag = [
-        ("latin", morphothec.root_count_for_language("latin")),
+        #("latin", morphothec.root_count_for_language("latin")),
         ("greek", morphothec.root_count_for_language("greek"))
     ]
     choice = helpers.choose_bag(bag)

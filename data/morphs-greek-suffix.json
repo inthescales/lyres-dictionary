@@ -285,6 +285,23 @@
         "origin": "greek"
     },
     {
+        "key": "-osis",
+        "form-stem": "osis",
+        "form-final": "ot",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "a disease or disorder of the %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart"
+            }
+        },
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "-phag-",
         "form-final": "phag",
         "form-stem": "phag",
@@ -419,11 +436,11 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
+        "suffixes": ["ic"],
         "gloss": "a flowing of %pl",
         "requires": {
             "follows": {
-                "has-any-tag": ["fluid", "abstract"]
+                "has-any-tags": ["fluid", "abstract"]
             }
         },
         "tags": ["count", "abstract"],
@@ -631,7 +648,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["g", "y"]
+                        "has-suffix": ["c", "k", "g", "y"]
                     }
                 },
                 "form-final": "ma"
@@ -639,7 +656,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["a", "e"]
+                        "has-suffix": ["e"]
                     }
                 },
                 "form-final": ["ma", "me"]
@@ -647,7 +664,15 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": "s"
+                        "has-suffix": ["a"]
+                    }
+                },
+                "form-final": "me"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "as"
                     }
                 },
                 "form-final": ["ma", "m"]
@@ -658,7 +683,7 @@
                         "has-tag": "intransitive"
                     }
                 },
-                "gloss": "the result of %part"
+                "gloss": "the act of %part"
             }
         ],
         "tags": ["count", "concrete", "no-joiner", "object-specifier"],
@@ -913,6 +938,11 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "the act or state of %part",
+        "requires": {
+            "follows": {
+                "not": { "has-suffix": "is" }
+            }
+        },
         "exception": [
             {
                 "case": {

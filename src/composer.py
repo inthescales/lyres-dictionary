@@ -86,6 +86,20 @@ def get_form(word):
 
             form += addition
 
+    # Language-specific phonotactics
+    if word.get_origin() == "greek":
+        form = form.replace("cs", "x")
+        form = form.replace("gs", "x")
+        form = form.replace("ks", "x")
+        form = form.replace("cm", "gm")
+        form = form.replace("km", "gm")
+
+        if form.endswith("tia") and form[-4] != "s":
+            form = form[:-3] + "sia"
+
+        if form.endswith("ty") and form[-3] != "s":
+            form = form[:-2] + "sy"
+
     return form
     
 def get_definition(word):

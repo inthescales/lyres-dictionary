@@ -23,6 +23,22 @@
         "origin": "greek"
     },
     {
+        "key": "algein",
+        "form-stem": "alge",
+        "type": "verb",
+        "gloss": "[feel] pain",
+        "tags": ["intransitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "algos",
+        "form-stem": "alg",
+        "type": "noun",
+        "gloss": "pain",
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "arkhein",
         "form-stem": "arche",
         "type": "verb",
@@ -383,11 +399,27 @@
         "origin": "greek"
     },
     {
+        "key": "didaskein",
+        "form-stem": "didac",
+        "type": "verb",
+        "gloss": "teach",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "dogma",
         "form-stem": "dogmat",
         "type": "noun",
         "gloss": "belief",
         "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "dokein",
+        "form-stem": "doc",
+        "type": "verb",
+        "gloss": "believe",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {
@@ -566,6 +598,14 @@
         "tags": ["count", "concrete", "living"],
         "origin": "greek",
         "notes": "gyn- in modern coinages only"
+    },
+    {
+        "key": "iatros",
+        "form-stem": "iatr",
+        "type": "noun",
+        "gloss": "doctor",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
     },
     {
         "key": "iconos",
@@ -751,6 +791,14 @@
         "origin": "greek"
     },
     {
+        "key": "krinein",
+        "form-stem": "cri",
+        "type": "verb",
+        "gloss": "judge",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "lexis",
         "form-stem": "lex",
         "type": "noun",
@@ -783,7 +831,7 @@
         "origin": "greek"
     },
     {
-        "key": "mathe",
+        "key": "mantanein",
         "form-stem": "math",
         "type": "noun",
         "gloss": "learning",
@@ -944,6 +992,14 @@
         "origin": "greek"
     },
     {
+        "key": "neuron",
+        "form-stem": "neur",
+        "type": "noun",
+        "gloss": "nerve",
+        "tags": ["count", "concrete", "living", "bodypart"],
+        "origin": "greek"
+    },
+    {
         "key": "noein",
         "form-stem": "noe",
         "type": "verb",
@@ -989,6 +1045,14 @@
         "type": "noun",
         "gloss": "name",
         "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "orgiazein",
+        "form-stem": "orgias",
+        "type": "verb",
+        "gloss": "[celebrate] orgies",
+        "tags": ["intransitive"],
         "origin": "greek"
     },
     {
@@ -1246,6 +1310,14 @@
         "origin": "greek"
     },
     {
+        "key": "prattein",
+        "form-stem": "prac",
+        "type": "verb",
+        "gloss": "do",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "pseuda",
         "form-stem": "pseud",
         "type": "adj",
@@ -1409,15 +1481,15 @@
         "form-stem": "tachy",
         "type": "adj",
         "gloss": "fast",
-        "tags": ["character"],
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-prefix": "o"
-                }
-            },
-            "form-stem": "tachy/"
-        }],
+        "tags": ["character", "no-joiner"],
+        "origin": "greek"
+    },
+    {
+        "key": "tassein",
+        "form-stem": "tac",
+        "type": "verb",
+        "gloss": "arrange",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {

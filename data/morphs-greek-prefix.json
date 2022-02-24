@@ -118,6 +118,34 @@
         "origin": "greek"
     },
     {
+        "key": "hyper-/verb",
+        "form-stem": "hyper",
+        "type": "prep",
+        "gloss-verb": "%@ over",
+        "gloss-noun": "over %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal", "rare"],
+        "origin": "greek"
+    },
+    {
+        "key": "hypo-/verb",
+        "form-stem": "hypo",
+        "type": "prep",
+        "gloss-verb": "%@ under",
+        "gloss-noun": "under %sg",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "tags": ["verbal", "rare"],
+        "origin": "greek"
+    },
+    {
         "key": "meta-",
         "form-stem": "meta",
         "form-stem-assim": "met",
@@ -135,7 +163,26 @@
         },
         "tags": ["verbal"],
         "origin": "greek"
-    }, 
+    },
+    {
+        "key": "anti-",
+        "form-stem": "anti",
+        "form-stem-assim": "ant",
+        "form-assimilation": {
+            "form-stem-assim": ["a"],
+            "form-stem": ["*"]
+        },
+        "type": "prep",
+        "gloss-verb": "%@ against",
+        "gloss-noun": "against %sg",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["motion", "transitive"]
+            }
+        },
+        "tags": ["verbal"],
+        "origin": "greek"
+    },
     {
         "key": "syn-",
         "form-stem": "syn",
@@ -348,6 +395,29 @@
         "origin": "greek"
     },
     {
+        "key": "a-/verb",
+        "form-stem": "a",
+        "type": "prefix",
+        "gloss": "not %@",
+        "requires": {
+            "precedes": {
+                "and": [
+                    { "has-type": "verb" },
+                    { "has-tag": "transitive" }
+                ]
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a", "e", "i", "o", "u", "h"]
+                }
+            },
+            "form-stem": "an"
+        }],
+        "origin": "greek"
+    },
+    {
         "key": "auto-",
         "form-stem": "auto",
         "form-stem-assim": "aut",
@@ -359,7 +429,30 @@
         "gloss": "%@ one's self",
         "requires": {
             "precedes": {
-                "has-tag": "transitive"
+                "and": [
+                    { "has-type": "verb" },
+                    { "has-tag": "transitive" }
+                ]
+            }
+        },
+        "tags": ["object-specifier"],
+        "origin": "greek"
+    },
+    {
+        "key": "pan-/verb",
+        "form-stem": "pan",
+        "form-stem-assim": "pa",
+        "form-assimilation": {
+            "nasal": ["*"]
+        },
+        "type": "prefix",
+        "gloss": "%@ everything",
+        "requires": {
+            "precedes": {
+                "and": [
+                    { "has-type": "verb" },
+                    { "has-tag": "transitive" }
+                ]
             }
         },
         "tags": ["object-specifier"],
