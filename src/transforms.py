@@ -9,7 +9,7 @@ from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
     bag = [
-        #("latin", morphothec.root_count_for_language("latin")),
+        ("latin", morphothec.root_count_for_language("latin")),
         ("greek", morphothec.root_count_for_language("greek"))
     ]
     choice = helpers.choose_bag(bag)
@@ -205,8 +205,11 @@ def transform_word_greek(word, morphothec):
             if first_morph.has_tag("motion"):
                 bag.append(("add_prep_prefix", 33))
             else:
-                bag.append(("add_prep_prefix", 2))
+                bag.append(("add_prep_prefix", 10))
     
+    if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"]:
+        bag.append(("add_prefix", 10))
+
     if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
         bag.append(("numerical", 5))
     
@@ -261,13 +264,25 @@ def transform_word_greek(word, morphothec):
             if not Morph(choice, morphothec).meets_requirements(env):
                 valid_choices.remove(choice)
                 
-        if last_morph.morph["key"] in valid_choices:
-            valid_choices.remove(last_morph.morph["key"])
-                
         if len(valid_choices) > 0:
             choice = random.choice(valid_choices)
             new_morph = Morph(choice, morphothec)
-            print("PREFIXING ===")
+            word.add_prefix(new_morph)
+
+    # Add Prefix
+    elif choice == "add_prefix":
+        #new_morph = Morph( random.choice(morphothec.filter_type("prefix", language)), morphothec)
+        choices = morphothec.filter_type("prefix", language)
+        valid_choices = choices.copy()
+        env = word.prefix_environment()
+
+        for choice in choices:
+            if not Morph(choice, morphothec).meets_requirements(env):
+                valid_choices.remove(choice)
+
+        if len(valid_choices) > 0:
+            choice = random.choice(valid_choices)
+            new_morph = Morph(choice, morphothec)
             word.add_prefix(new_morph)
 
     # Numerical

@@ -346,5 +346,23 @@
         "type": "number",
         "gloss": "many %!pl",
         "origin": "greek"
+    },
+    {
+        "key": "auto-",
+        "form-stem": "auto",
+        "form-stem-assim": "aut",
+        "form-assimilation": {
+            "form-stem-assim": ["a"],
+            "form-stem": ["*"]
+        },
+        "type": "prefix",
+        "gloss": "%@ one's self",
+        "requires": {
+            "precedes": {
+                "has-tag": "transitive"
+            }
+        },
+        "tags": ["object-specifier"],
+        "origin": "greek"
     }
 ]

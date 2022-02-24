@@ -1,9 +1,11 @@
 class Environment:
-    def __init__(self, anteprev, prev, next, postnext):
+    def __init__(self, anteprev, prev, next, postnext, object_specified=False):
         self.anteprev = anteprev
         self.prev = prev
         self.next = next
         self.postnext = postnext
+        
+        self.object_specified = object_specified
 
     def is_initial(self):
         return self.prev == None

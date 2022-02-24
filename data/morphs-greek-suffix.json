@@ -650,8 +650,7 @@
                         "has-suffix": "s"
                     }
                 },
-                "form-final": ["ma", "m"],
-                "tags": ["count", "concrete", "no-joiner"]
+                "form-final": ["ma", "m"]
             },
             {
                 "case": {
@@ -662,7 +661,7 @@
                 "gloss": "the result of %part"
             }
         ],
-        "tags": ["count", "concrete", "no-joiner"],
+        "tags": ["count", "concrete", "no-joiner", "object-specifier"],
         "origin": "greek"
     },
     {

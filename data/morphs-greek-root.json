@@ -155,7 +155,7 @@
         "form-stem": "ba",
         "type": "verb",
         "gloss": "go",
-        "tags": ["intransitive", "motion"],
+        "tags": ["intransitive", "motion", "always-prep"],
         "origin": "greek"
     },
     {
@@ -827,7 +827,7 @@
         "form-stem": "meteor",
         "type": "noun",
         "gloss": "celestial [phenomenon]",
-        "tags": ["singleton", "concrete"],
+        "tags": ["count", "concrete"],
         "origin": "greek"
     },
     {
@@ -1087,6 +1087,14 @@
         "origin": "greek"
     },
     {
+        "key": "pherein",
+        "form-stem": "phore",
+        "type": "verb",
+        "gloss": "carry",
+        "tags": ["transitive", "motion"],
+        "origin": "greek"
+    },
+    {
         "key": "philia",
         "form-stem": "phil",
         "type": "noun",
@@ -1321,7 +1329,7 @@
         "form-stem": "sarc",
         "type": "noun",
         "gloss": "flesh",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["mass", "concrete", "bodypart"],
         "origin": "greek"
     },
     {

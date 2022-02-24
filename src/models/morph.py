@@ -2,7 +2,7 @@ import src.former as former
 
 from src.expressions import evaluate_expression
 from src.morphothec import Morphothec
-import src.models.language as language
+from src.requirements import meets_requirements
 
 class Morph:
     
@@ -83,35 +83,4 @@ class Morph:
         return False
 
     def meets_requirements(self, env):
-
-        # Check general and language requirements
-        if not language.meets_requirements(self, env):
-            return False
-
-        # No requirements to check, it's ok
-        if not "requires" in self.morph:
-            return True
-        
-        requirements = self.morph["requires"]
-        keys = requirements.keys()
-        if len(keys) != 1:
-            print("Error: currently, requirement can only have one referent child")
-            sys.exit(1)
-            
-        if "precedes" in keys:
-            if env.next == None:
-                print("Error: precedes block but no following morph given")
-                sys.exit(1)
-            
-            if not evaluate_expression(requirements["precedes"], env.next.as_dict(env.next_env(self))):
-                return False
-        
-        if "follows" in keys:
-            if env.prev == None:
-                print("Error: follows block but no following morph given")
-                sys.exit(1)
-
-            if not evaluate_expression(requirements["follows"], env.prev.as_dict(env.prev_env(self))):
-                return False
-        
-        return True
+        return meets_requirements(self, env)

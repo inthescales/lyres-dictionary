@@ -68,6 +68,17 @@ class Word:
     def get_origin(self):
         return self.last_morph().morph["origin"]
 
+    # Whether this is a verb that specifies its own object
+    def specifies_object(self):
+        if self.get_type() != "verb":
+            return False
+
+        for morph in self.morphs:
+            if morph.has_tag("object-specifier"):
+                return True
+
+        return False
+
     # Helpers
 
     def environment_for_index(self, index):
@@ -82,5 +93,6 @@ class Word:
         if index < len(self.morphs) - 2:
             postnext_morph = self.morphs[index + 2]
 
+        specifies_object = self.specifies_object()
 
-        return Environment(anteprev_morph, prev_morph, next_morph, postnext_morph)
+        return Environment(anteprev_morph, prev_morph, next_morph, postnext_morph, specifies_object)
