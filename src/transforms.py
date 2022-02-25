@@ -210,8 +210,11 @@ def transform_word_greek(word, morphothec):
     if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"]:
         bag.append(("add_prefix", 10))
 
-    if word.size() == 1 and current_type == "noun" and (last_morph.has_tag("concrete") or last_morph.has_tag("bounded")):
-        bag.append(("relational", 10))
+    if word.size() == 1 and current_type == "noun":
+        if (last_morph.has_tag("concrete") or last_morph.has_tag("bounded")):
+            bag.append(("relational", 10))
+        else:
+            bag.append(("relational", 8))
 
     if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
         bag.append(("numerical", 5))
@@ -289,7 +292,9 @@ def transform_word_greek(word, morphothec):
 
     # Relational
     elif choice == "relational":
-        prep_choices = ["anti-", "dia-", "en-", "syn-", "meta-"]
+        prep_choices = ["anti-", "syn-", "meta-"]
+        if last_morph.has_tag("concrete") or last_morph.has_tag("bounded"):
+            prep_choices += ["dia-", "en-"]
         if last_morph.has_tag("concrete"):
             prep_choices += ["epi-", "hyper-", "hypo-", "peri-"]
         prep_morph = Morph(random.choice(prep_choices), morphothec)

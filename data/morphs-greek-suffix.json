@@ -385,7 +385,7 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "suffixes": ["greek-e-agent", "-ic-part", "-ia-def"],
-        "gloss": "carrying of %pl",
+        "gloss": "bearing of %pl",
         "exception": [
             {
                 "case": {
@@ -393,7 +393,7 @@
                         "has-key": ["greek-e-agent", "-ic-part"]
                     }
                 },
-                "gloss": "[carry] %pl"
+                "gloss": "[bear] %pl"
             }
         ],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
@@ -757,7 +757,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "a place for %part",
-        "tags": ["count", "concrete", "no-joiner"],
+        "tags": ["count", "concrete", "rare", "no-joiner"],
         "origin": "greek"
     },
     {

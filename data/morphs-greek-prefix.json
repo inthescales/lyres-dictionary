@@ -27,7 +27,7 @@
         },
         "type": "prep",
         "gloss-verb": "%@ against",
-        "gloss-noun": "against %sg",
+        "gloss-noun": "against %pl",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "transitive"]
