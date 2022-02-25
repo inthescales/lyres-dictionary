@@ -12,9 +12,8 @@ def inflect(string, mode):
         # Local checking for forms 3rd party library does wrong
         override = override_inflection(words[i], mode)
         if override != None:
-            return override  
-        
-        if mode == "ppart":
+            words[i] = override          
+        elif mode == "ppart":
             words[i] = lemminflect.getInflection(words[i], tag='VBN')[0]
         elif mode == "part":
             words[i] = lemminflect.getInflection(words[i], tag='VBG')[0]

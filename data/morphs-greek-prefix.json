@@ -118,11 +118,11 @@
         "origin": "greek"
     },
     {
-        "key": "hyper-/verb",
+        "key": "hyper-",
         "form-stem": "hyper",
         "type": "prep",
         "gloss-verb": "%@ over",
-        "gloss-noun": "over %sg",
+        "gloss-noun": "above %sg",
         "requires": {
             "precedes": {
                 "has-tag": "motion"
@@ -132,7 +132,7 @@
         "origin": "greek"
     },
     {
-        "key": "hypo-/verb",
+        "key": "hypo-",
         "form-stem": "hypo",
         "type": "prep",
         "gloss-verb": "%@ under",
@@ -165,6 +165,14 @@
         "origin": "greek"
     },
     {
+        "key": "peri-",
+        "form-stem": "peri",
+        "type": "prep",
+        "gloss-verb": "%@ around",
+        "gloss-noun": "around %sg",
+        "origin": "greek"
+    }, 
+    {
         "key": "anti-",
         "form-stem": "anti",
         "form-stem-assim": "ant",
@@ -192,7 +200,7 @@
         },
         "type": "prep",
         "gloss-verb": "%@ together",
-        "gloss-noun": "the same %sg",
+        "gloss-noun": "of the same %!sg",
         "requires": {
             "precedes": {
                 "not": { "has-tag": "dividing" }
@@ -395,6 +403,31 @@
         "origin": "greek"
     },
     {
+        "key": "pan-/number",
+        "form-stem": "pan",
+        "form-stem-assim": "pa",
+        "form-assimilation": {
+            "nasal": ["*"]
+        },
+        "type": "number",
+        "gloss": "all %pl",
+        "origin": "greek"
+    },
+    {
+        "key": "hyper-/number",
+        "form-stem": "hyper",
+        "type": "number",
+        "gloss": "excessive %pl",
+        "origin": "greek"
+    },
+    {
+        "key": "hypo-/number",
+        "form-stem": "hypo",
+        "type": "number",
+        "gloss": "insufficient %pl",
+        "origin": "greek"
+    },
+    {
         "key": "a-/verb",
         "form-stem": "a",
         "type": "prefix",
@@ -439,14 +472,15 @@
         "origin": "greek"
     },
     {
-        "key": "pan-/verb",
+        "key": "pan-",
         "form-stem": "pan",
         "form-stem-assim": "pa",
         "form-assimilation": {
             "nasal": ["*"]
         },
         "type": "prefix",
-        "gloss": "%@ everything",
+        "gloss-verb": "%@ everything",
+        "gloss-noun": "all %pl",
         "requires": {
             "precedes": {
                 "and": [

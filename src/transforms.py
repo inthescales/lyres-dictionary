@@ -9,7 +9,7 @@ from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
     bag = [
-        #("latin", morphothec.root_count_for_language("latin")),
+        ("latin", morphothec.root_count_for_language("latin")),
         ("greek", morphothec.root_count_for_language("greek"))
     ]
     choice = helpers.choose_bag(bag)
@@ -164,7 +164,7 @@ def transform_word_latin(word, morphothec):
     elif choice == "relational":
         prep_choices = ["in-", "ex-", "inter-", "trans-"]
         if last_morph.has_tag("concrete"):
-            prep_choices += ["sub-", "super-", "infra-", "supra-"]
+            prep_choices += ["circum-", "sub-", "super-", "infra-", "supra-"]
         prep_morph = Morph(random.choice(prep_choices), morphothec)
         end_morph = Morph( random.choice(["-ate", "-al", "-al", "-ary", "-ify"]), morphothec )
         word.add_affixes(prep_morph, end_morph)
@@ -209,6 +209,9 @@ def transform_word_greek(word, morphothec):
     
     if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"]:
         bag.append(("add_prefix", 10))
+
+    if word.size() == 1 and current_type == "noun" and (last_morph.has_tag("concrete") or last_morph.has_tag("bounded")):
+        bag.append(("relational", 10))
 
     if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
         bag.append(("numerical", 5))
@@ -271,7 +274,6 @@ def transform_word_greek(word, morphothec):
 
     # Add Prefix
     elif choice == "add_prefix":
-        #new_morph = Morph( random.choice(morphothec.filter_type("prefix", language)), morphothec)
         choices = morphothec.filter_type("prefix", language)
         valid_choices = choices.copy()
         env = word.prefix_environment()
@@ -284,6 +286,15 @@ def transform_word_greek(word, morphothec):
             choice = random.choice(valid_choices)
             new_morph = Morph(choice, morphothec)
             word.add_prefix(new_morph)
+
+    # Relational
+    elif choice == "relational":
+        prep_choices = ["anti-", "dia-", "en-", "syn-", "meta-"]
+        if last_morph.has_tag("concrete"):
+            prep_choices += ["epi-", "hyper-", "hypo-", "peri-"]
+        prep_morph = Morph(random.choice(prep_choices), morphothec)
+        end_morph = Morph( random.choice(["-ic", "-y-relative", "-ize"]), morphothec )
+        word.add_affixes(prep_morph, end_morph)
 
     # Numerical
     elif choice == "numerical":

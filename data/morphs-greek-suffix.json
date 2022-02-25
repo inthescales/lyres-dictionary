@@ -286,8 +286,8 @@
     },
     {
         "key": "-osis",
-        "form-stem": "osis",
-        "form-final": "ot",
+        "form-stem": "ot",
+        "form-final": "osis",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -436,7 +436,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["ic"],
+        "suffixes": ["-ic"],
         "gloss": "a flowing of %pl",
         "requires": {
             "follows": {
@@ -502,6 +502,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss-noun": "pertaining to %pl",
+        "gloss-relative": "%@",
         "exception": [
             {
                 "case": {
@@ -656,7 +657,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["e"]
+                        "has-suffix": ["e", "i"]
                     }
                 },
                 "form-final": ["ma", "me"]
@@ -696,7 +697,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["-ic", "-erion"],
+        "suffixes": ["-ic"],
         "gloss": "one who %3sg",
         "exception": [{
             "case": {
@@ -731,15 +732,15 @@
         "origin": "greek"
     },
     {
-        "key": "-erion",
-        "form-stem": "eri",
-        "form-final": "ery",
+        "key": "-tery",
+        "form-stem": "teri",
+        "form-final": "tery",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "a place for %part",
-        "tags": ["count", "concrete", "no-gen", "no-joiner"],
+        "tags": ["count", "concrete", "no-joiner"],
         "origin": "greek"
     },
     {
@@ -750,7 +751,8 @@
         "derive-from": "noun",
         "derive-to": "verb",
         "suffixes": [],
-        "gloss": "[make] into %sg",
+        "gloss": "[make] %sg",
+        "gloss-relative": "cause to be %@",
         "tags": ["transitive"],
         "origin": "greek"
     },
@@ -874,6 +876,26 @@
         "origin": "greek"
     },
     {
+        "key": "-y-relative",
+        "form-final": ["y", "ia"],
+        "form-stem": "i",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the state of being %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "i"
+                }
+            },
+            "form-final": "a"
+        }],
+        "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
         "key": "-y-number",
         "form-final": ["y", "ia"],
         "form-stem": "i",
@@ -940,7 +962,7 @@
         "gloss": "the act or state of %part",
         "requires": {
             "follows": {
-                "not": { "has-suffix": "is" }
+                "not": { "has-suffix": ["is", "i"] }
             }
         },
         "exception": [

@@ -115,7 +115,7 @@
         "form-stem": "athl",
         "type": "noun",
         "gloss": "contest",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -204,7 +204,7 @@
         "form-stem": "bi",
         "type": "noun",
         "gloss": "life",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -292,7 +292,7 @@
         "form-stem": "chron",
         "type": "noun",
         "gloss": "time",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -460,7 +460,7 @@
         "form-stem": "erg",
         "type": "noun",
         "gloss": "work",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -708,7 +708,7 @@
         "form-stem": "hor",
         "type": "noun",
         "gloss": "hour",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -740,7 +740,7 @@
         "form-stem": "hypn",
         "type": "noun",
         "gloss": "sleep",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -892,7 +892,7 @@
         "form-stem": "metr",
         "type": "noun",
         "gloss": "measure",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -972,7 +972,7 @@
         "form-stem": "myth",
         "type": "noun",
         "gloss": "story",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -1020,7 +1020,7 @@
         "form-stem": "nyct",
         "type": "noun",
         "gloss": "night",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -1028,7 +1028,7 @@
         "form-stem": "od",
         "type": "noun",
         "gloss": "song",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -1036,7 +1036,7 @@
         "form-stem": "oneir",
         "type": "noun",
         "gloss": "dream",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -1195,7 +1195,7 @@
         "form-stem": "phren",
         "type": "noun",
         "gloss": "mind",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
     },
     {
@@ -1251,7 +1251,7 @@
         "form-stem": "polem",
         "type": "noun",
         "gloss": "war",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
     },
     {
