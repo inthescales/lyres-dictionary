@@ -830,7 +830,6 @@ class FormTests(unittest.TestCase):
         self.assertForm(["therma-adj", "-pot-", "greek-e-agent"], "thermopote")
         self.assertForm(["crya-adj", "-pot-", "-ic-def"], "cryopotic")
         self.assertForm(["gala", "-pot-", "greek-e-agent"], "galactopote")
-        self.assertForm(["hydor", "-pot-", "-ia-def"], "hydropotia")
         self.assertForm(["gala", "-rrhea"], "galactorrhea")
         self.assertForm(["logos", "-rrhea"], "logorrhea")
         self.assertForm(["mikra", "-scop-", "-e-instrument"], "microscope")

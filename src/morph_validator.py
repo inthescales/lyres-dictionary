@@ -32,6 +32,55 @@ valid_properties = [
     "notes"
 ]
 
+valid_tags = [
+    "count",                    # Noun countability - countable
+    "mass",                     # Noun countability - mass
+    "singleton",                # Noun countability - singleton, e.g. "The Earth"
+    "concrete",                 # Noun actuality - a concrete object in the world
+    "abstract",                 # Noun actuality - something no physically in the world
+    "bounded",                  # Noun actuality - optionally for abstracts, does it have a bounded aspect (e.g. a length of time)
+    "living",                   # Noun semantics - a living being
+    "animal",                   # Noun semantics - an animal
+    "plant",                    # Noun semantics - a plant
+    "person",                   # Noun semantics - a kind of person
+    "bodypart",                 # Noun semantics - member or organ of a living being, animal or plant
+    "bodypart-plant",           # Noun semantics - a member belonging only to a plant, like a leaf or stem
+    "bodypart-single",          # Noun semantics - a bodypart that someone has only one of
+    "secretion",                # Noun semantics - a bodily secretion
+    "tool",                     # Noun semantics - a tool
+    "weapon",                   # Noun semantics - a weapon
+    "material",                 # Noun semantics - a material things can be made out of
+    "metal",                    # Noun semantics - a metal
+    "fluid",                    # Noun semantics - a fluid, like a liquid or gas
+    "liquid",                   # Noun semantics - a liquid
+    "gas",                      # Noun semantics - a gas
+    "region",                   # Noun semantics - a region
+    "terrain",                  # Noun semantics - a type of land
+    "grouping",                 # Noun semantics - a group or collection of things
+    "color",                    # Noun semantics - a color
+    "shape",                    # Noun semantics - a shape
+    "time",                     # Noun semantics - a period of time
+    "number",                   # Noun semantics - a number (used as a noun)
+    "superlative",              # Adjective morphology - a superlative
+    "character",                # Adjective semantics - descriptor of a person's character
+    "transitive",               # Verb transitivity - transitive verb
+    "intransitive",             # Verb transitivity - intransitive verb
+    "no-prep",                  # Verb morphology - cannot take a prepositional prefix
+    "always-prep",              # Verb morphology - must always have a prepositional prefix
+    "stative",                  # Verb syntax - describes being in a particular state, as a verb
+    "object-specifier",         # Verb syntax - specifies the object of an attached verb
+    "motion",                   # Verb semantics - moving or causing motion
+    "joining",                  # Verb semantics - joining or connecting two things into one
+    "dividing",                 # Verb semantics - dividing one thing into two or more
+    "verbal",                   # Preposition - can be used before a verb
+    "no-joiner",                # Form - Doesn't take joining vowels on either side
+    "no-length",                # Generation - does not count towards maximum morph count
+    "rare",                     # Generation - occurs less often in generation
+    "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix
+    "non-final",                # Generation - cannot be the final morph in the word"
+    "suffix-only",              # Generation - adding a suffix is the only valid transformation following this morph
+]
+
 def validate_morph(morph):
 
     if not "key" in morph:
@@ -101,5 +150,11 @@ def validate_morph(morph):
     for key in morph:
         if not key in valid_properties:
             print("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
+
+    # Check tag whitelist
+    if "tags" in morph:
+        for tag in morph["tags"]:
+            if not tag in valid_tags:
+                print("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
 
     return True

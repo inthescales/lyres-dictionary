@@ -514,7 +514,7 @@
                 "form-final": "iac"
             }
         ],
-        "tags": ["form-final", "no-joiner"],
+        "tags": ["no-joiner"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -527,7 +527,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "characterized by %@",
-        "tags": ["form-final", "no-gen"],
+        "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -540,7 +540,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "pertaining to %sg",
-        "tags": ["form-final", "no-gen"],
+        "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -553,7 +553,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "pertaining to the %part",
-        "tags": ["form-final", "no-gen"],
+        "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -566,7 +566,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "%part",
-        "tags": ["form-final", "no-gen"],
+        "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -579,7 +579,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "having %@",
-        "tags": ["form-final", "no-gen"],
+        "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -788,7 +788,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "%@",
-        "tags": ["no-gen", "form-final"],
+        "tags": ["no-gen"],
         "origin": "greek"
     },
     {
@@ -800,7 +800,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["count", "concrete", "no-gen", "form-final"],
+        "tags": ["count", "concrete", "no-gen"],
         "origin": "greek"
     },
     {

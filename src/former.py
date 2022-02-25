@@ -109,7 +109,7 @@ def gloss(morph, env):
 
     # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
     if env.prev and ((env.prev.get_type() == "noun" and env.anteprev and env.anteprev.get_type() == "prep" ) or (morph.get_type() == "verb" and env.prev.get_type() == "prep")) and "gloss-relative" in morph_dict:
-        if morph.get_type() == "verb":
+        if morph.get_type() == "verb" and len(morph_dict["gloss-relative"].split(" ")) == 1:
             return "[" + morph_dict["gloss-relative"] + "]"
         else:
             return morph_dict["gloss-relative"]

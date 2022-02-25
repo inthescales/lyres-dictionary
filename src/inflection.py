@@ -29,7 +29,7 @@ def inflect(string, mode):
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
         elif mode == "singleton":
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
-            
+    
     return " ".join(words)
 
 def override_inflection(string, mode):

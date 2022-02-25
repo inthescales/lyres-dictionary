@@ -347,6 +347,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "suffixes": [],
         "gloss": "%sg",
         "exception": [
             {
@@ -358,7 +359,28 @@
                 "form-final": ""
             }  
         ],
-        "tags": ["final"],
+        "tags": ["rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-e/adj",
+        "form-final": "e",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "%@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": ["mb", "mp", "nt", "ns", "rc", "rs", "rt"]
+                    }
+                },
+                "form-final": ""
+            }
+        ],
+        "tags": ["rare"],
         "origin": "latin"
     },
     {
