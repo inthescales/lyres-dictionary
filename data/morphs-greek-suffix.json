@@ -302,6 +302,23 @@
         "origin": "greek"
     },
     {
+        "key": "-itis",
+        "form-stem": "it",
+        "form-final": "itis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "inflammation of the %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart"
+            }
+        },
+        "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "-phag-",
         "form-final": "phag",
         "form-stem": "phag",

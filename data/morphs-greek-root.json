@@ -391,6 +391,14 @@
         "origin": "greek"
     },
     {
+        "key": "derma",
+        "form-stem": "dermat",
+        "type": "noun",
+        "gloss": "skin",
+        "tags": ["mass", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
         "key": "diabolos",
         "form-stem": ["diabol", "diabol", "diab"],
         "type": "noun",
@@ -775,6 +783,14 @@
         "origin": "greek"
     },
     {
+        "key": "klinein",
+        "form-stem": "cli",
+        "type": "verb",
+        "gloss": "lean",
+        "tags": ["intransitive", "motion"],
+        "origin": "greek"
+    },
+    {
         "key": "krata",
         "form-stem": "crat",
         "type": "adj",
@@ -836,6 +852,14 @@
         "type": "noun",
         "gloss": "learning",
         "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "mastos",
+        "form-stem": "mast",
+        "type": "noun",
+        "gloss": "breast",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
     },
     {
@@ -1008,6 +1032,14 @@
         "origin": "greek"
     },
     {
+        "key": "nomos",
+        "form-stem": "nom",
+        "type": "noun",
+        "gloss": "law",
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
         "key": "nous",
         "form-stem": "noo",
         "type": "noun",
@@ -1029,6 +1061,14 @@
         "type": "noun",
         "gloss": "song",
         "tags": ["count", "abstract", "bounded"],
+        "origin": "greek"
+    },
+    {
+        "key": "odons",
+        "form-stem": "odont",
+        "type": "noun",
+        "gloss": "tooth",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
     },
     {
@@ -1466,6 +1506,14 @@
         "type": "noun",
         "gloss": "cave",
         "tags": ["count", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "strophein",
+        "form-stem": "strophe",
+        "type": "verb",
+        "gloss": "turn",
+        "tags": ["intransitive", "motion"],
         "origin": "greek"
     },
     {

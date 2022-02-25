@@ -11,7 +11,7 @@ class FormTests(unittest.TestCase):
     # Latin ===========================
 
     # Tests that prefix sound assimilation resolves correctly.
-    def testPrefixAssimilation(self):
+    def testLatinPrefixAssimilation(self):
         
         # 'ab' ----------
         self.assertForm(["ab-", "ambulare", "-ion"], "abambulation") #*
@@ -773,6 +773,28 @@ class FormTests(unittest.TestCase):
     
     # Greek =============================
 
+    # Tests that prefix sound assimilation resolves correctly.
+    def testGreekPrefixAssimilation(self):
+        self.assertForm(["ana-", "bainein", "-sis"], "anabasis")
+        self.assertForm(["cata-", "bainein", "-sis"], "catabasis")
+        self.assertForm(["anti-", "tithenai", "-tic/verb"], "antithetic")
+        self.assertForm(["anti-", "agonizesthai", "-ma"], "antagonism")
+        self.assertForm(["dia-", "gignoskein", "-sis"], "diagnosis")
+        self.assertForm(["a-", "asthanesthai", "-tic/verb"], "anaesthetic")
+        self.assertFormIn(["a-", "phanai", "-y/verb"], ["aphasia", "aphasy"])
+        self.assertForm(["ec-", "dyein", "-sis"], "ecdysis")
+        self.assertForm(["en-", "klinein", "-tic/verb"], "enclitic")
+        self.assertForm(["en-", "phanai", "-sis"], "emphasis")
+        self.assertForm(["meta-", "athlein", "-t"], "metathlete") #*
+        self.assertForm(["meta-", "tithenai", "-sis"], "metathesis")
+        self.assertForm(["syn-", "paskhein", "-tic/verb"], "sympathetic")
+        self.assertForm(["syn-", "tassein", "-sis"], "syntaxis")
+        self.assertForm(["pan-", "noein", "-sis"], "pannoesis")
+        self.assertFormIn(["pan-", "pherein", "-y/verb"], ["pamphoresia", "pamphoresy"])
+        self.assertForm(["auto-", "didaskein", "-t"], "autodidact")
+        self.assertFormIn(["auto-", "arkhein", "-y/verb"], ["autarchesy", "autarchesia"])
+
+
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualFormsGreek(self):
         
@@ -803,7 +825,6 @@ class FormTests(unittest.TestCase):
         self.assertForm(["pyr", "-man-", "-ia-def"], "pyromania")
         self.assertForm(["plutos", "-man-", "-ic-def"], "plutomanic")
         self.assertForm(["autos", "-man-", "-iac-haver"], "automaniac")
-        # oman-verb
         self.assertForm(["necros", "-mant-", "-er-practitioner"], "necromancer")
         self.assertFormIn(["onoma", "-mant-", "-ic-def"], ["onomomantic", "onomatomantic"])
         self.assertForm(["ge", "-mant-", "-y-def"], "geomancy")
@@ -841,6 +862,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["pyr", "-techn-", "-ic-def"], "pyrotechnic")
         self.assertForm(["hals", "-techn-", "-y-def"], "halotechny")
         self.assertForm(["botane", "-ic"], "botanic")
+        self.assertForm(["cardia", "-ic"], "cardiac")
         self.assertForm(["cynos", "-ic"], "cynic")
         self.assertForm(["iconos", "-ic"], "iconic")
         self.assertForm(["anthropos", "-oid"], "anthropoid")
@@ -849,17 +871,16 @@ class FormTests(unittest.TestCase):
         self.assertFormIn(["agonizesthai", "-ma"], ["agonism", "agonisma"])
         self.assertFormIn(["mainein", "-ma"], ["miasm", "miasma"])
         self.assertFormIn(["graphein", "-ma"], ["grapheme", "graphema"])
-        self.assertFormIn(["thein", "-ma"], ["theme", "thema"])
-        # add something like pragma
+        self.assertFormIn(["tithenai", "-ma"], ["theme", "thema"])
         self.assertForm(["mainein", "-ma", "-ic"], "miasmatic")
-        self.assertForm(["thein", "-ma", "-ic"], "thematic")
+        self.assertForm(["tithenai", "-ma", "-ic"], "thematic")
 
         self.assertForm(["asthanesthai", "-t"], "aesthete")
         self.assertForm(["dynasthai", "-t"], "dynast")
         self.assertForm(["gymnazein", "-t"], "gymnast")
         self.assertForm(["mathein", "-t"], "mathete")
-        self.assertForm(["monazein", "-t", "-erion"], "monastery")
-        self.assertForm(["phrontizein", "-t", "-erion"], "phrontistery")
+        self.assertForm(["monazein", "-tery"], "monastery")
+        self.assertForm(["phrontizein", "-tery"], "phrontistery")
 
         self.assertForm(["athlein", "-tic/verb"], "athletic")
         self.assertForm(["gymnazein", "-tic/verb"], "gymnastic")
@@ -870,10 +891,31 @@ class FormTests(unittest.TestCase):
         self.assertForm(["gignoskein", "-sis"], "gnosis")
         self.assertForm(["noein", "-sis"], "noesis")
 
+        # relative constructions
+
+        self.assertForm(["anti-", "nomos", "-y-def"], "antinomy")
+        self.assertForm(["en-", "demos", "-ic"], "endemic")
+        self.assertForm(["epi-", "demos", "-ic"], "epidemic")
+        self.assertForm(["pan-", "demos", "-ic"], "pandemic")
+        self.assertForm(["dia-", "chronos", "-ic"], "diachronic")
+        self.assertForm(["syn-", "chronos", "-ic"], "synchronic")
+
         # numerical constructions
+
         self.assertForm(["a-", "sema", "-ic"], "asemic")
         self.assertForm(["octo-", "gonos", "-ic"], "octogonic")
         self.assertForm(["poly-", "morphe", "-ic"], "polymorphic")
+        self.assertForm(["pan-", "kratos", "-ic"], "pancratic")
+
+        # Greek spelling changes
+        self.assertForm(["prattein", "-ma"], "pragma")
+        self.assertForm(["prattein", "-tic/verb"], "practic")
+        self.assertForm(["prattein", "-sis"], "praxis")
+        self.assertForm(["dokein", "-ma"], "dogma")
+        self.assertForm(["dokein", "-tic/verb"], "doctic")
+        self.assertForm(["dokein", "-sis"], "doxis")
+
+        self.assertForm(["a-", "kratos", "-ia-def"], "acrasia")  
 
     # Helpers ==========
     

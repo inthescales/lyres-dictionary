@@ -173,25 +173,6 @@
         "origin": "greek"
     }, 
     {
-        "key": "anti-",
-        "form-stem": "anti",
-        "form-stem-assim": "ant",
-        "form-assimilation": {
-            "form-stem-assim": ["a"],
-            "form-stem": ["*"]
-        },
-        "type": "prep",
-        "gloss-verb": "%@ against",
-        "gloss-noun": "against %sg",
-        "requires": {
-            "precedes": {
-                "has-any-tags": ["motion", "transitive"]
-            }
-        },
-        "tags": ["verbal"],
-        "origin": "greek"
-    },
-    {
         "key": "syn-",
         "form-stem": "syn",
         "form-stem-assim": "sy",
