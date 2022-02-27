@@ -4,9 +4,9 @@
         "form-stem": "ab",
         "form-stem-assim": "a",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ away",
         "gloss-noun": "away from %sg",
-        "tags": ["verbal"],
         "form-assimilation": {
             "form-stem": ["*"],
             "form-stem-assim": ["b", "p", "m", "v"],
@@ -25,6 +25,7 @@
         "form-stem": "ad",
         "form-stem-assim": "a",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ to",
         "gloss-noun": "to %sg",
         "form-assimilation": {
@@ -38,7 +39,6 @@
                 "not": { "has-tag": "dividing"}
             }
         },
-        "tags": ["verbal"],
         "origin": "latin",
         "notes": "need 'aspire' - cut before 'sp'"
     },
@@ -46,15 +46,24 @@
         "key": "circum-",
         "form-stem": "circum",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ around",
         "gloss-noun": "around %sg",
-        "tags": ["verbal"],
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-tag": "concrete" }
+                ]
+            }
+        },
         "origin": "latin"
     },
     {
         "key": "cis-",
         "form-stem": "cis",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ on the same side",
         "gloss-noun": "on this side of %sg",
         "origin": "latin"
@@ -64,6 +73,7 @@
         "form-stem": "com",
         "form-stem-assim": "co",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ together",
         "gloss-noun": "together with %sg",
         "form-assimilation": {
@@ -76,7 +86,6 @@
                 "not": { "has-tag": "dividing"}
             }
         },
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -84,22 +93,22 @@
         "form-stem": "com",
         "form-stem-assim": "co",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "wholly %@",
         "form-assimilation": {
            "form-stem-assim": ["a", "e", "i", "u", "o", "h"],
            "double": ["l", "r"],
            "nasal": ["*"]
         },
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "de-",
         "form-stem": "de",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ down",
         "gloss-noun": "down from %sg",
-        "tags": ["verbal"],
         "requires": {
             "precedes": {
                 "not": { "has-tag": "joining"}
@@ -112,6 +121,7 @@
         "form-stem": "dis",
         "form-stem-assim": "di",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ apart",
         "gloss-noun": "apart from %sg",
         "form-assimilation": {
@@ -124,7 +134,6 @@
                 "not": { "has-tag": "joining"}
             }
         },
-        "tags": ["verbal"],
         "origin": "latin",
         "notes": "Assimilation concerns: digress vs disgregate? The common digress and digest make me lean that way."
     },
@@ -132,14 +141,22 @@
         "key": "in-",
         "form-stem": "in",
         "form-stem-assim": "i",
-        "type": "prep",
-        "gloss-verb": "%@ in",
-        "gloss-noun": "in %sg",
         "form-assimilation": {
             "double": ["l", "r"],
             "nasal": ["*"]
         },
-        "tags": ["verbal"],
+        "type": "prep",
+        "prefix-on": ["verb", "noun"],
+        "gloss-verb": "%@ in",
+        "gloss-noun": "in %sg",
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-ant-tags": ["concrete", "bounded"] }
+                ]
+            }
+        },
         "origin": "latin"
     },
     {
@@ -147,6 +164,7 @@
         "form-stem": "ex",
         "form-stem-assim": "e",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ out from",
         "gloss-noun": "out of %sg",
         "form-assimilation": {
@@ -160,7 +178,19 @@
                 "not": { "has-tag": "joining"}
             }
         },
-        "tags": ["verbal"],
+        "requires": {
+            "precedes": {
+                "or": [
+                    {
+                        "and": [
+                            { "has-type": "verb" },
+                            { "not": { "has-tag": "joining" }}
+                        ]
+                    },
+                    { "has-any-tags": ["concrete", "bounded"] }
+                ]
+            }
+        },
         "origin": "latin",
         "notes": "execute vs exsanguinate"
     },
@@ -168,17 +198,34 @@
         "key": "infra-",
         "form-stem": "infra",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ below",
         "gloss-noun": "below %sg",
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-tag": "concrete" }
+                ]
+            }
+        },
         "origin": "latin"
     },
     {
         "key": "inter-",
         "form-stem": "inter",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ between",
         "gloss-noun": "between %pl",
-        "tags": ["verbal"],
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-ant-tags": ["concrete", "bounded"] }
+                ]
+            }
+        },
         "origin": "latin",
         "notes": "intelligent and other derivates seems to be a unique case of assimilation, which I will not represent here."
     },
@@ -186,6 +233,7 @@
         "key": "intra-",
         "form-stem": "intra",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ within",
         "gloss-noun": "within %sg",
         "origin": "latin"
@@ -195,6 +243,7 @@
         "form-stem": "ob",
         "form-stem-assim": "o",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ away",
         "gloss-noun": "away from %sg",
         "form-assimilation": {
@@ -202,7 +251,6 @@
             "form-stem-assim": ["m"],
             "double": ["c", "p", "f"]
         },
-        "tags": ["verbal"],
         "origin": "latin",
         "notes": "need spelling change for ostentatious. Can find 'obc' but only in later French or scientific words (maybe add as a separate suffix). 'obf' appears, as in obfuscate, but seems rarer. Also see 'oflete' for multi-char-prefix variation. 'g' seems to go both ways."
     },
@@ -210,53 +258,53 @@
         "key": "per-",
         "form-stem": "per",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ through",
         "gloss-noun": "through %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "preter-",
         "form-stem": "preter",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ beyond",
         "gloss-noun": "beyond %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "pre-",
         "form-stem": "pre",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ before",
         "gloss-noun": "before %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "pro-",
         "form-stem": "pro",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ forward",
         "gloss-noun": "before %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "retro-",
         "form-stem": "retro",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ backward",
         "gloss-noun": "backward %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "re-",
         "form-stem": "re",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ back",
-        "tags": ["verbal"],
         "origin": "latin",
         "notes": "In early latin, became 'red-' before a vowel."
     },
@@ -264,27 +312,35 @@
         "key": "se-",
         "form-stem": "se",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ apart",
         "gloss-noun": "apart from %sg",
         "form-assimilation": {
             "form-stem": ["*"],
             "sed": ["a", "e", "i", "o", "u"]
         },
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "sub-",
         "form-stem": "sub",
         "form-stem-assim": "su",
-        "type": "prep",
-        "gloss-verb": "%@ under",
-        "gloss-noun": "under %sg",
         "form-assimilation": {
             "form-stem": ["*"],
             "double": ["c", "f", "g", "p", "m", "r"]
         },
-        "tags": ["verbal"],
+        "type": "prep",
+        "prefix-on": ["verb", "noun"],
+        "gloss-verb": "%@ under",
+        "gloss-noun": "under %sg",
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-tag": "concrete" }
+                ]
+            }
+        },
         "origin": "latin",
         "notes": "need 'sus' for cases like sustain, susceptible, but occurrence is a bit arbitrary. Should be 'su' before 'sp' (suspect). 'subp*' could happen in later joinings (ex. medical)"
     },
@@ -292,32 +348,58 @@
         "key": "super-",
         "form-stem": "super",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ above",
         "gloss-noun": "above %sg",
-        "tags": ["verbal"],
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-tag": "concrete" }
+                ]
+            }
+        },
         "origin": "latin"
     },
     {
         "key": "supra-",
         "form-stem": "supra",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ above",
         "gloss-noun": "above %sg",
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-tag": "concrete" }
+                ]
+            }
+        },
         "origin": "latin"
     },
     {
         "key": "trans-",
         "form-stem": "trans",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ across",
         "gloss-noun": "across %sg",
-        "tags": ["verbal"],
+        "requires": {
+            "precedes": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-ant-tags": ["concrete", "bounded"] }
+                ]
+            }
+        },
         "origin": "latin"
     },
     {
         "key": "contra-",
         "form-stem": "contra",
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss": "%@ against",
         "origin": "latin"
     },
@@ -325,6 +407,7 @@
         "key": "mis-",
         "form-stem": "mis",
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss": "%@ incorrectly",
         "origin": "latin"
     },
@@ -332,6 +415,7 @@
         "key": "re-again",
         "form-stem": "re",
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss": "%@ again",
         "origin": "latin"
     },

@@ -1,6 +1,7 @@
 valid_properties = [
     "key",
     "type",
+    "prefix-on",                # Preposition / Prefix - determines what root types this can be prefixed to
     "derive-from",              # Type derive attaches to
     "derive-to",                # Type derive produces
     "derive-participle",        # Participle type used by a suffix
@@ -72,7 +73,6 @@ valid_tags = [
     "motion",                   # Verb semantics - moving or causing motion
     "joining",                  # Verb semantics - joining or connecting two things into one
     "dividing",                 # Verb semantics - dividing one thing into two or more
-    "verbal",                   # Preposition - can be used before a verb
     "no-joiner",                # Form - Doesn't take joining vowels on either side
     "no-length",                # Generation - does not count towards maximum morph count
     "rare",                     # Generation - occurs less often in generation
@@ -145,6 +145,14 @@ def validate_morph(morph):
         if not ("derive-from" in morph and "derive-to" in morph):
             print(" - derive morphs must have 'derive-from' and 'derive-to'")
             return False
+
+    elif morph_type == "prefix":
+        if not ("prefix-on" in morph):
+            print(" - prefix morphs must have 'prefix-on'")
+
+    elif morph_type == "prep":
+        if not ("prefix-on" in morph):
+            print(" - prep morphs must have 'prefix-on'")
 
     # Check key whitelist
     for key in morph:

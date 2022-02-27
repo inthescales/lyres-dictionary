@@ -707,7 +707,7 @@
                 },
                 "form-stem-present": "cid",
                 "form-stem-perfect": "cas",
-                "form-final": "-cide"
+                "form-final": "cide"
             }
         ],
         "tags": ["intransitive", "motion"],
@@ -3054,7 +3054,7 @@
         "origin": "latin"
     },
     {
-        "key": "hora",
+        "key": "hora/latin",
         "form-stem": "hor",
         "type": "noun",
         "declension": 1,

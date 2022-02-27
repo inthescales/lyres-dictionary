@@ -53,7 +53,7 @@ class Word:
     # Returns the environment of a potential suffix.
     def suffix_environment(self):
         return self.environment_for_index(len(self.morphs))
-        
+    
     def size(self):
         length = 0
         for morph in self.morphs:

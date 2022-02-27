@@ -15,6 +15,7 @@ def form(morph, env):
     else:
         last_morph = None
 
+
     # Get the proper form of the morph
     if env.next != None:
 
@@ -133,7 +134,7 @@ def gloss(morph, env):
             relative = env.next
         else:
             relative = env.prev
-
+        
         if relative and "gloss-" + relative.get_type() in morph_dict:
             return morph_dict["gloss-" + relative.get_type()]
     

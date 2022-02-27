@@ -239,9 +239,9 @@
         "form-stem": "ad",
         "form-stem-assim": "a",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ to",
         "gloss-noun": "to %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
@@ -249,15 +249,16 @@
         "form-stem": "in",
         "form-stem-assim": "a",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ in",
         "gloss-noun": "in %sg",
-        "tags": ["verbal"],
         "origin": "latin"
     },
     {
         "key": "re-again",
         "form-stem": "re",
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss": "%@ again",
         "origin": "latin"
     }

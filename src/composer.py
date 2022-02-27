@@ -124,6 +124,10 @@ def get_definition(word):
                 definition = definition.replace("[","").replace("]", "")
         else:
 
+            if part == None:
+                print("NO PART WHAT")
+                print(morph.morph["key"], part)
+
             words = part.split(" ")
             for (index, word) in enumerate(words):
                 if word == "%@":

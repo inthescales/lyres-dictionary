@@ -49,6 +49,9 @@ class Morph:
             if key != "case":
                 self.morph[key] = value
         
+    def get_key(self):
+        return self.morph["key"]
+        
     def get_type(self):
         if self.morph["type"] == "derive":
             return self.morph["derive-to"]
@@ -73,6 +76,13 @@ class Morph:
             return None
         else:
             return self.morph["suffixes"]
+
+    # How often this morph should be available, as a percentage
+    def frequency(self):
+        if self.has_tag("rare"):
+            return 10
+
+        return 100
         
     def has_tag(self, target):
 

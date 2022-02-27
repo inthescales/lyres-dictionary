@@ -248,7 +248,7 @@
         "origin": "greek"
     },
     {
-        "key": "cera",
+        "key": "keros",
         "form-stem": "cer",
         "type": "noun",
         "gloss": "wax",
@@ -1135,7 +1135,7 @@
         "origin": "greek"
     },
     {
-        "key": "pater",
+        "key": "pater/greek",
         "form-stem": "patr",
         "type": "noun",
         "gloss": "father",

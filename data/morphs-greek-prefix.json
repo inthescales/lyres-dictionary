@@ -8,6 +8,7 @@
             "form-stem": ["*"]
         },
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ up",
         "gloss-noun": "on %sg",
         "requires": {
@@ -15,7 +16,6 @@
                 "has-tag": "motion"
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     }, {
         "key": "anti-",
@@ -26,19 +26,23 @@
             "form-stem": ["*"]
         },
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ against",
         "gloss-noun": "against %pl",
         "requires": {
             "precedes": {
-                "has-any-tags": ["motion", "transitive"]
+                "or": [
+                    { "has-type": "noun" },
+                    { "has-any-tags": ["motion", "transitive"] }
+                ]
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     }, {
         "key": "cata-",
         "form-stem": "cata",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ down",
         "gloss-noun": "down %sg",
         "requires": {
@@ -46,7 +50,6 @@
                 "has-tag": "motion"
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     }, {
         "key": "dia-",
@@ -57,19 +60,20 @@
             "form-stem": ["*"]
         },
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ across",
         "gloss-noun": "across %sg",
         "requires": {
             "precedes": {
-                "has-tag": "motion"
+                "has-any-tags": ["motion", "concrete", "bounded"]
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     }, {
         "key": "ec-",
         "form-stem": "ec",
         "type": "prep",
+        "prefix-on": "verb",
         "gloss-verb": "%@ out from",
         "gloss-noun": "out of %sg",
         "requires": {
@@ -77,7 +81,6 @@
                 "has-tag": "motion"
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     },
     {
@@ -88,14 +91,14 @@
             "nasal": ["*"]
         },
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ in",
         "gloss-noun": "in %sg",
         "requires": {
             "precedes": {
-                "has-tag": "motion"
+                "has-any-tags": ["motion", "concrete", "bounded"]
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     },
     {
@@ -103,16 +106,16 @@
         "form-stem": "epi",
         "form-stem-assim": "ep",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ upon",
         "gloss-noun": "upon %sg",
         "form-assimilation": {
             "form-stem-assim": ["a", "e", "i", "o", "u", "y"],
             "form-stem": ["*"]
         },
-        "tags": ["verbal"],
         "requires": {
             "precedes": {
-                "has-tag": "motion"
+                "has-any-tags": ["motion", "concrete"]
             }
         },
         "origin": "greek"
@@ -121,28 +124,30 @@
         "key": "hyper-",
         "form-stem": "hyper",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ over",
         "gloss-noun": "above %sg",
         "requires": {
             "precedes": {
-                "has-tag": "motion"
+                "has-any-tags": ["motion", "concrete"]
             }
         },
-        "tags": ["verbal", "rare"],
+        "tags": ["rare"],
         "origin": "greek"
     },
     {
         "key": "hypo-",
         "form-stem": "hypo",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ under",
         "gloss-noun": "under %sg",
         "requires": {
             "precedes": {
-                "has-tag": "motion"
+                "has-any-tags": ["motion", "concrete"]
             }
         },
-        "tags": ["verbal", "rare"],
+        "tags": ["rare"],
         "origin": "greek"
     },
     {
@@ -154,22 +159,31 @@
             "form-stem": ["*"]
         },
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ beyond",
         "gloss-noun": "beyond %sg",
         "requires": {
             "precedes": {
-                "has-tag": "motion"
+                "or": [
+                    { "has-type": "noun" },
+                    { "has-tag": "motion" }
+                ]
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     },
     {
         "key": "peri-",
         "form-stem": "peri",
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ around",
         "gloss-noun": "around %sg",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["motion", "concrete"]
+            }
+        },
         "origin": "greek"
     }, 
     {
@@ -180,6 +194,7 @@
             "nasal": ["*"]
         },
         "type": "prep",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ together",
         "gloss-noun": "of the same %!sg",
         "requires": {
@@ -187,7 +202,6 @@
                 "not": { "has-tag": "dividing" }
             }
         },
-        "tags": ["verbal"],
         "origin": "greek"
     },
     {
@@ -412,6 +426,7 @@
         "key": "a-/verb",
         "form-stem": "a",
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss": "not %@",
         "requires": {
             "precedes": {
@@ -440,6 +455,7 @@
             "form-stem": ["*"]
         },
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss": "%@ one's self",
         "requires": {
             "precedes": {
@@ -460,6 +476,7 @@
             "nasal": ["*"]
         },
         "type": "prefix",
+        "prefix-on": "verb",
         "gloss-verb": "%@ everything",
         "gloss-noun": "all %pl",
         "requires": {
