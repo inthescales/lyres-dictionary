@@ -109,7 +109,7 @@ class Morphothec:
                     print("Exiting with " + str(errors) + " validation errors")
                     exit(0)
     
-    def filter_type(self, morph_type, language="latin", morph_filter=None):
+    def filter_type(self, morph_type, language, morph_filter=None):
 
         if morph_filter is None:
             return self.languages[language].type_morphs[morph_type]
@@ -121,7 +121,7 @@ class Morphothec:
         
         return selected
 
-    def filter_prepends_to(self, base_type, language="latin", morph_filter=None):
+    def filter_prepends_to(self, base_type, language, morph_filter=None):
         if morph_filter is None:
             return self.languages[language].morphs_before[base_type]
         
@@ -132,7 +132,7 @@ class Morphothec:
 
         return selected
 
-    def filter_appends_to(self, base_type, language="latin", morph_filter=None):
+    def filter_appends_to(self, base_type, language, morph_filter=None):
         if morph_filter is None:
             return self.languages[language].morphs_from[base_type]
         

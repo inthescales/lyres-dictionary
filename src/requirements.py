@@ -3,10 +3,10 @@ import random
 from src.expressions import evaluate_expression
 
 # Check whether a morph meets the requirements to be added in a given location
-def meets_requirements(morph, env):
+def meets_requirements(morph, env, filter_frequency=True):
     return meets_universal_requirements(morph, env) \
            and meets_morph_requirements(morph, env) \
-           and frequency_filter(morph)
+           and (not filter_frequency or frequency_filter(morph))
         
 # Check placement requirements not belonging to an individual morph
 def meets_universal_requirements(morph, env):

@@ -92,5 +92,5 @@ class Morph:
 
         return False
 
-    def meets_requirements(self, env):
-        return meets_requirements(self, env)
+    def meets_requirements(self, env, filter_frequency=True):
+        return meets_requirements(self, env, filter_frequency)

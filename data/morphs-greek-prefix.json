@@ -132,6 +132,16 @@
                 "has-any-tags": ["motion", "concrete"]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-tag": "bodypart"
+                    }
+                },
+                "tags": []
+            }
+        ],
         "tags": ["rare"],
         "origin": "greek"
     },
@@ -147,6 +157,16 @@
                 "has-any-tags": ["motion", "concrete"]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-tag": "bodypart"
+                    }
+                },
+                "tags": []
+            }
+        ],
         "tags": ["rare"],
         "origin": "greek"
     },
@@ -333,6 +353,22 @@
                 "precedes": {
                     "has-prefix": ["a", "e", "i", "o", "u"]
                 }
+            },
+            "form-stem": "enne"
+        }],
+        "origin": "greek"
+    },
+    {
+        "key": "deca-",
+        "form-stem": "deca",
+        "type": "number",
+        "gloss": "ten %!pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-prefix": ["a"]
+                },
+                "form-stem": "dec"
             },
             "form-stem": "enne"
         }],
