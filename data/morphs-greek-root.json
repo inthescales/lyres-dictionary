@@ -1533,6 +1533,14 @@
         "origin": "greek"
     },
     {
+        "key": "tarassein",
+        "form-stem": "tarac",
+        "type": "verb",
+        "gloss": "disturb",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "tassein",
         "form-stem": "tac",
         "type": "verb",
@@ -1546,6 +1554,22 @@
         "type": "noun",
         "gloss": "skill",
         "tags": ["mass", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "teleoun",
+        "form-stem": "teleio",
+        "type": "verb",
+        "gloss": "complete",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "telos",
+        "form-stem": "tel",
+        "type": "noun",
+        "gloss": "purpose",
+        "tags": ["count", "abstract"],
         "origin": "greek"
     },
     {

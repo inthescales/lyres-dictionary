@@ -2655,13 +2655,13 @@
         "key": "fungi",
         "form-stem-present": "fung",
         "form-stem-perfect": "funct",
-        "form-final": "funct",
+        "form-final": ["funct", "funge"],
         "type": "verb",
         "conjugation": 3,
         "gloss": "[perform] a task",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "latin",
-        "notes": "final is a guess"
+        "notes": "could be rendered in a transitive way? fungendum seems sensical"
     },  
     {
         "key": "fungus",

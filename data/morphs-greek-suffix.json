@@ -719,7 +719,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-suffix": ["a", "e", "y"]
+                    "has-suffix": ["a", "e", "i", "o", "u", "y"]
                 }
             },
             "form-stem": "t",
