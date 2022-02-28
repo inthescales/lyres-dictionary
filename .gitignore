@@ -6,13 +6,11 @@
 *.DS_Store
 *~
 
-# Scratch and suspended morphs
-morpheme_jail
-test_morphs.json
+# Logs
+logs
 
 # Ad-hoc tools
 helpers
 
 # Deployment files
-botbuddy.py*
 creds.json

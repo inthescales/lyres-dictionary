@@ -1,6 +1,8 @@
 import re
 import sys
 
+from logging import Logger
+
 def validate(entry):
     return validate_length(entry) and validate_decent(entry)
     
@@ -27,7 +29,6 @@ def validate_decent(entry):
     return True
 
 def validator_error(entry, reason):
-    #print("> Validator flagged entry as " + reason + ":")
-    #print(entry)
-    #print("")
+    Logger.error("validator flagged entry as " + reason + ":")
+    Logger.error(" - " + str(entry))
     return

@@ -123,11 +123,6 @@ def get_definition(word):
             if morph.is_root() and morph.get_type() == "adj":
                 definition = definition.replace("[","").replace("]", "")
         else:
-
-            if part == None:
-                print("NO PART WHAT")
-                print(morph.morph["key"], part)
-
             words = part.split(" ")
             for (index, word) in enumerate(words):
                 if word == "%@":
@@ -192,7 +187,7 @@ def get_definition(word):
 
                         words[index] = head + property_value + tail
                     else:
-                        print("Error: referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
+                        Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
 
 
             definition = " ".join(words)
@@ -270,5 +265,5 @@ def get_joining_vowel(language, first, second, form, addition):
 
         return "o"
 
-    print("Error: Invalid language, or language '" + language + "' failed to pick a joining vowel")
+    Logger.error("Invalid language, or language '" + language + "' failed to pick a joining vowel")
     return ""

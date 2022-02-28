@@ -1,5 +1,7 @@
 import random
 
+from src.logging import Logger
+
 def form(morph, env):
     form = ""
 
@@ -37,7 +39,7 @@ def form(morph, env):
                         if sound not in assimilation_map:
                             assimilation_map[sound] = case
                         else:
-                            print("ERROR: Repeated assimilation sound for key " + morph_dict["key"])
+                            Logger.error("Repeated assimilation sound for key " + morph_dict["key"])
 
             for key in reversed(sorted(list(assimilation_map.keys()), key=len)):
                 if next_form.startswith(key):
@@ -138,4 +140,4 @@ def gloss(morph, env):
         if relative and "gloss-" + relative.get_type() in morph_dict:
             return morph_dict["gloss-" + relative.get_type()]
     
-    print("ERROR - failed to find gloss for " + morph_dict["key"])
+    Logger.error("failed to find gloss for " + morph_dict["key"])

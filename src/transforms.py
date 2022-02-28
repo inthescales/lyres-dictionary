@@ -5,6 +5,7 @@ import src.models
 
 from src.models.word import Word
 from src.models.morph import Morph
+from src.logging import Logger
 from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
@@ -119,8 +120,8 @@ def transform_word(word, morphothec):
                 choice = random.choice(suffixes)
                 new_morph = Morph(choice, morphothec)
             else:
-                print("Error: No valid suffixes following morph:")
-                print(last_morph.morph)
+                Logger.error("No valid suffixes following morph:")
+                Logger.error(" - " + last_morph.morph)
                 
         else:
             # For words ending in suffixes with restriction, choose from their valid list
@@ -158,7 +159,6 @@ def transform_word(word, morphothec):
         env = word.prefix_environment()
         prepositions = morphothec.filter_prepends_to(current_type, language, { "has-type": "prep" })
         prepositions = [prep for prep in prepositions if Morph(prep, morphothec).meets_requirements(env)]
-        print(prepositions)
 
         if len(prepositions) > 0:
             choice = random.choice(prepositions)

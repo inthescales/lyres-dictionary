@@ -1,6 +1,7 @@
 import random
 
 from src.expressions import evaluate_expression
+from src.logging import Logger
 
 # Check whether a morph meets the requirements to be added in a given location
 def meets_requirements(morph, env, filter_frequency=True):
@@ -40,12 +41,12 @@ def meets_morph_requirements(morph, env):
     requirements = morph_dict["requires"]
     keys = requirements.keys()
     if len(keys) != 1:
-        print("Error: currently, requirement can only have one referent child")
+        Logger.error("currently, requirement can only have one referent child")
         sys.exit(1)
         
     if "precedes" in keys:
         if env.next == None:
-            print("Error: precedes block but no following morph given")
+            Logger.error("precedes block but no following morph given")
             sys.exit(1)
         
         if not evaluate_expression(requirements["precedes"], env.next.as_dict(env.next_env(morph))):
@@ -53,7 +54,7 @@ def meets_morph_requirements(morph, env):
     
     if "follows" in keys:
         if env.prev == None:
-            print("Error: follows block but no following morph given")
+            Logger.error("follows block but no following morph given")
             sys.exit(1)
 
         if not evaluate_expression(requirements["follows"], env.prev.as_dict(env.prev_env(morph))):

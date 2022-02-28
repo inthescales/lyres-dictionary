@@ -6,6 +6,7 @@ import botbuddy
 
 from src.morphothec import Morphothec
 from src.generator import generate_word, word_for_keys
+from src.logging import Logger
 
 import src.composer as composer
 import src.validator as validator
@@ -95,15 +96,21 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             keys = map(lambda key: key.strip(), arg.split(","))
     
     # Assign defaults
-    
     if mode == None:
-        print("> Defaulting to test mode")
+        Logger.log("defaulting to test mode")
         mode = "test"
         
     if mode == "test" and keys == None and count == None:
-        print("> Defaulting to count 1")
+        Logger.log("defaulting to count 1")
         count = 1
     
+    # Configure logger
+    if mode == "test":
+        Logger.configure("terminal", "error", 1)
+    elif mode == "publish":
+        Logger.configure("file", None, 2)
+
+    # Print output
     if mode == "publish":
         botbuddy.post(generate_entry)
     elif mode == "test":

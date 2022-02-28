@@ -1,5 +1,7 @@
 import random
 
+from logging import Logger
+
 # Bag probability
 
 def choose_bag(bag):
@@ -18,7 +20,7 @@ def choose_bag(bag):
         else:
             count += item[1]
 
-    print("BAG ERROR")
+    Logger.error("BAG ERROR")
     return nil
 
 # Morphs have their own way of doing this, but this is for raw data

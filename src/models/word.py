@@ -68,6 +68,9 @@ class Word:
     def get_origin(self):
         return self.last_morph().morph["origin"]
 
+    def get_keys(self):
+        return [morph.morph["key"] for morph in self.morphs]
+
     # Whether this is a verb that specifies its own object
     def specifies_object(self):
         if self.get_type() != "verb":

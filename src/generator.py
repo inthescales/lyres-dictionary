@@ -1,8 +1,11 @@
 import random
+
 import src.helpers as helpers
+import src.transforms as transforms
+
 from src.models.word import Word
 from src.morphothec import Morphothec
-import src.transforms as transforms
+from src.logging import Logger
 
 def generate_word(morphothec):
     word = Word(morphothec)
@@ -21,7 +24,8 @@ def generate_word(morphothec):
         
         transforms.transform_word(word, morphothec)
         transforms_done += 1
-            
+    
+    Logger.trace("generated morph: " + str(word.get_keys()))
     return word
 
 def word_for_keys(keys, morphothec):

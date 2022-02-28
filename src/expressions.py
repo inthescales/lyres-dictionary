@@ -1,10 +1,12 @@
 import sys
 import src.helpers as helpers
 
+from src.logging import Logger
+
 def evaluate_expression(expression, referent):
     if len(expression.keys()) != 1:
-        print("Error: Expression dict, must have exactly one key")
-        print(expression)
+        Logger.error("Expression dict, must have exactly one key")
+        Logger.error(" - " + str(expression))
         sys.exit(1)
     
     key = list(expression.keys())[0]
@@ -13,7 +15,7 @@ def evaluate_expression(expression, referent):
     # Logical operators
     if key == "or":
         if type(expression["or"]) != list:
-            print("Error: 'or' expression requires list")
+            Logger.error("'or' expression requires list")
             sys.exit(1)
         
         for clause in expression["or"]:
@@ -23,7 +25,7 @@ def evaluate_expression(expression, referent):
         return False
     elif key == "and":
         if type(expression["and"]) != list:
-            print("Error: 'and' expression requires list")
+            Logger.error("'and' expression requires list")
             sys.exit(1)
         
         for clause in expression["and"]:
@@ -74,6 +76,8 @@ def evaluate_expression(expression, referent):
         return referent["form-final"] == value
     elif key == "final-or-semifinal-l":
         return helpers.l_in_last_two(referent["form"]) == value
+    else:
+        Logger.error("unrecognized expression operator: '" + key + "'")
         
 def evaluate_key(key, comparand):
     if isinstance(key, str):
@@ -83,7 +87,7 @@ def evaluate_key(key, comparand):
         return comparand in key
     
     else:
-        print("Error: bad value in key comparison")
+        Logger.error("bad value in key comparison: '" + str(key) + "'")
         sys.exit(1)
         
 def evaluate_type(type_, comparand):
@@ -94,12 +98,12 @@ def evaluate_type(type_, comparand):
         return comparand in type_
     
     else:
-        print("Error: bad value in type comparison")
+        Logger.error("bad value in type comparison: '" + type_ + "'")
         sys.exit(1)
         
 def evaluate_tag(tag, referent_tags):
     if not isinstance(tag, str):
-        print ("Error: tag must be string")
+        Logger.error("tag must be string")
         sys.exit(1)
         
     return tag in referent_tags
@@ -130,8 +134,8 @@ def evaluate_prefix(prefix, form):
         return False
     
     else:
-        print("Error: bad value for has-prefix:")
-        print(prefix)
+        Logger.error("bad value for has-prefix:")
+        Logger.error(" - " + str(prefix))
         sys.exit(1)
 
 def evaluate_suffix(suffix, form):
@@ -146,13 +150,13 @@ def evaluate_suffix(suffix, form):
         return False
     
     else:
-        print("Error: bad value for has-suffix:")
-        print(suffix)
+        Logger.error("bad value for has-suffix:")
+        Logger.error(" - " + str(suffix))
         sys.exit(1)
         
 def evaluate_conjugation(acceptable, conjugation):
     if conjugation is None:
-        print("Error: referent lacks conjugation")
+        Logger.error("referent lacks conjugation")
         sys.exit(1)
         
     if isinstance(acceptable, int):
@@ -162,12 +166,12 @@ def evaluate_conjugation(acceptable, conjugation):
         return conjugation in acceptable
     
     else:
-        print("Error: Bad value for has-conjugation")
+        Logger.error("Bad value for has-conjugation")
         sys.exit(1)
 
 def evaluate_declension(acceptable, declension):
     if declension is None:
-        print("Error: referent lacks declension")
+        Logger.error("referent lacks declension")
         sys.exit(1)
         
     if isinstance(acceptable, int):
@@ -177,7 +181,7 @@ def evaluate_declension(acceptable, declension):
         return declension in acceptable
     
     else:
-        print("Error: Bad value for has-declension")
+        Logger.error("bad value for has-declension")
         sys.exit(1)
     
 def evaluate_even_syllables(form):

@@ -1,3 +1,5 @@
+from src.logging import Logger
+
 valid_properties = [
     "key",
     "type",
@@ -84,85 +86,94 @@ valid_tags = [
 def validate_morph(morph):
 
     if not "key" in morph:
-        print(" - key is missing")
+        Logger.error("no key found in morph:")
+        Logger.error(" - " + str(morph))
         return False
 
+    errored = False
+    def record_error(message):
+        nonlocal errored
+
+        if errored == False:
+            Logger.warn("errors found reading morph '" + morph["key"] + "'")
+            errored = True
+
+        Logger.warn(message)
+
     if not "type" in morph:
-        print(" - type is missing")
+        record_error(" - type is missing")
         return False
 
     if not "origin" in morph:
-        print(" - origin is missing")
+        record_error(" - origin is missing")
         return False
 
     morph_type = morph["type"]
 
-    # TODO - pull these requirements into per-language data
-    # TODO - make countability a property, not a tag
     if morph_type == "noun":
         if morph["origin"] == "latin":
             if not "form-stem" in morph or not "declension" in morph:
-                print(" - noun must have 'form-stem' and 'declension'")
+                record_error(" - noun must have 'form-stem' and 'declension'")
                 return False
             elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
-                print(" - noun must have tag 'count', 'mass', or 'singleton'")
+                record_error(" - noun must have tag 'count', 'mass', or 'singleton'")
                 return False
             elif morph["declension"] not in [0, 1, 2, 3, 4, 5]:
-                print(" - invalid declension '" + str(morph["declension"]) + "'")
+                record_error(" - invalid declension '" + str(morph["declension"]) + "'")
                 return False
         elif morph["origin"] == "greek":
             if not "form-stem" in morph:
-                print(" - noun must have 'form-stem'")
+                record_error(" - noun must have 'form-stem'")
                 return False
             elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
-                print(" - noun must have tag 'count', 'mass', or 'singleton'")
+                record_error(" - noun must have tag 'count', 'mass', or 'singleton'")
                 return False
 
     elif morph_type == "adj":
         if morph["origin"] == "latin":
             if not "form-stem" in morph or not "declension" in morph:
-                print(" - adjective must have 'form-stem' and 'declension'")
+                record_error(" - adjective must have 'form-stem' and 'declension'")
                 return False
             elif morph["declension"] not in [0, 12, 3]:
-                print(" - invalid declension '" + str(morph["declension"]) + "'")
+                record_error(" - invalid declension '" + str(morph["declension"]) + "'")
                 return False
         elif morph["origin"] == "greek":
             if not "form-stem" in morph:
-                print(" - adjective must have 'form-stem'")
+                record_error(" - adjective must have 'form-stem'")
                 return False
 
     elif morph_type == "verb":
         if morph["origin"] == "latin":
             if not ("form-stem-present" in morph and "form-final" in morph and "conjugation" in morph):
-                print(" - verbs require 'form-stem-present', 'form-stem-perfect', 'final', and 'conjugation'")
+                record_error(" - verbs require 'form-stem-present', 'form-stem-perfect', 'final', and 'conjugation'")
                 return False
 
             if morph["conjugation"] not in [0, 1, 2, 3, 4]:
-                print(" - invalid conjugation '" + str(morph["conjugation"]) + "'")
+                record_error(" - invalid conjugation '" + str(morph["conjugation"]) + "'")
                 return False
 
     elif morph_type == "derive":
         if not ("derive-from" in morph and "derive-to" in morph):
-            print(" - derive morphs must have 'derive-from' and 'derive-to'")
+            record_error(" - derive morphs must have 'derive-from' and 'derive-to'")
             return False
 
     elif morph_type == "prefix":
         if not ("prefix-on" in morph):
-            print(" - prefix morphs must have 'prefix-on'")
+            record_error(" - prefix morphs must have 'prefix-on'")
 
     elif morph_type == "prep":
         if not ("prefix-on" in morph):
-            print(" - prep morphs must have 'prefix-on'")
+            record_error(" - prep morphs must have 'prefix-on'")
 
     # Check key whitelist
     for key in morph:
         if not key in valid_properties:
-            print("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
+            record_error("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
 
     # Check tag whitelist
     if "tags" in morph:
         for tag in morph["tags"]:
             if not tag in valid_tags:
-                print("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
+                record_error("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
 
     return True

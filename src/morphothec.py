@@ -3,6 +3,8 @@ import json
 
 import src.expressions as expressions  
 import src.morph_validator as validator
+
+from src.logging import Logger
     
 class Morphothec:
     
@@ -68,10 +70,10 @@ class Morphothec:
             all_files = os.listdir("./" + input)
             files = [input + file for file in all_files if file.startswith("morphs-") and file.endswith(".json")]
         else:
-            print("ERROR - invalid morphothec initialization")
+            Logger.error("invalid morphothec initialization")
         
         if len(files) == 0:
-            print("ERROR - no morph files found")
+            Logger.error("no morph files found")
 
         for file in files:
             
@@ -84,17 +86,12 @@ class Morphothec:
 
                     # Check that the morph is valid
                     if not validator.validate_morph(morph):
-                        if "key" in morph:
-                            print("ERROR - invalid morph for key " + morph["key"])
-                        else:
-                            print("ERROR - invalid morph:")
-                            print(morph)
                         errors += 1
                         continue
                     
                     # Check for key collisions
                     if morph["key"] in self.morph_for_key:
-                        print("ERROR - duplicate morph key " + morph["key"])
+                        Logger.error("duplicate morph key " + morph["key"])
                         errors += 1
                         continue
 
@@ -106,7 +103,7 @@ class Morphothec:
                     language.add_morph(morph)
                             
                 if errors > 0:
-                    print("Exiting with " + str(errors) + " validation errors")
+                    Logger.error("morphothec validation found " + str(errors) + " errors")
                     exit(0)
     
     def filter_type(self, morph_type, language, morph_filter=None):
@@ -145,7 +142,7 @@ class Morphothec:
 
     def root_count_for_language(self, language):
         if not language in self.languages:
-            print("Error: language \"" + language + "\" not found.")
+            Logger.error("language \"" + language + "\" not found.")
             return 0
                   
         return len(self.languages[language].roots)

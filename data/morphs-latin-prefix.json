@@ -153,7 +153,7 @@
             "precedes": {
                 "or": [
                     { "has-type": "verb" },
-                    { "has-ant-tags": ["concrete", "bounded"] }
+                    { "has-any-tags": ["concrete", "bounded"] }
                 ]
             }
         },
@@ -222,7 +222,7 @@
             "precedes": {
                 "or": [
                     { "has-type": "verb" },
-                    { "has-ant-tags": ["concrete", "bounded"] }
+                    { "has-any-tags": ["concrete", "bounded"] }
                 ]
             }
         },
