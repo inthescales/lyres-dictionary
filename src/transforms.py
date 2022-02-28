@@ -27,7 +27,7 @@ def get_latin_root(morphothec):
     ]
 
     type_ = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type_))
+    key = random.choice(morphothec.filter_type(type_, "latin"))
     morph = Morph(key, morphothec)
     return morph
 
@@ -40,7 +40,7 @@ def get_greek_root(morphothec):
     ]
 
     type_ = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type_, language="greek"))
+    key = random.choice(morphothec.filter_type(type_, "greek"))
     morph = Morph(key, morphothec)
     return morph
         
