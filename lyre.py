@@ -7,6 +7,7 @@ import botbuddy
 from src.morphothec import Morphothec
 from src.generator import generate_word, word_for_keys
 from src.logging import Logger
+from src.analysis import Analyst
 
 import src.composer as composer
 import src.validator as validator
@@ -59,6 +60,22 @@ def test_with_keys(keys):
     print(entry_for_keys(keys))
     print("")
 
+def analyze():
+
+    if needs_setup():
+        setup()
+
+    print("Analyzing...")
+
+    analyst = Analyst()
+    for i in range(0, count):
+        word = generate_word(morphothec)
+        analyst.register(word)
+        print(f"Analyzed: {i}/{count}", end="\r")
+
+    print("Analysis complete")
+    analyst.print_results()
+
 # Process command line input
 
 if __name__ == '__main__' and len(sys.argv) > 0:
@@ -74,9 +91,9 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "tpc:k:", ["test", "publish", "count=", "keys="])
+        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:", ["test", "publish", "analyze", "count=", "keys="])
     except getopt.GetoptError:
-        print('test.py -i <inputfile> -o <outputfile>')
+        print('lyre.py requires a mode parameter: -t/--test, -p/--publish, or -a/--analyze')
         sys.exit(2)
 
     # Process args
@@ -90,6 +107,10 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             if mode != None:
                 error_mode_conflict()
             mode = "publish"
+        elif opt in ["-a", "--analyze"]:
+            if mode != None:
+                error_mode_conflict()
+            mode = "analyze"
         elif opt in ["-c", "--count"]:
             count = int(arg)
         elif opt in ["-k", "--keys"]:
@@ -97,15 +118,18 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     
     # Assign defaults
     if mode == None:
-        Logger.log("defaulting to test mode")
+        Logger.trace("defaulting to test mode")
         mode = "test"
         
     if mode == "test" and keys == None and count == None:
-        Logger.log("defaulting to count 1")
+        Logger.trace("defaulting to count 1")
         count = 1
+
+    if mode == "analyze":
+        count = 100
     
     # Configure logger
-    if mode == "test":
+    if mode == "test" or mode == "analyze":
         Logger.configure("terminal", "error", 1)
     elif mode == "publish":
         Logger.configure("file", None, 2)
@@ -120,3 +144,5 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             test_with_count(count)
             
         print("")
+    elif mode == "analyze":
+        analyze()

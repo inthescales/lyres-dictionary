@@ -87,7 +87,7 @@ def transform_word(word, morphothec):
             else:
                 bag.append(("add_prep_prefix", 33))
     
-    if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() in ["prep", "prefix"]:
+    if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() == "prefix":
         bag.append(("add_prefix", 10))
 
     if word.size() == 1 and current_type == "noun":
