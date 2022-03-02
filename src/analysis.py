@@ -29,7 +29,7 @@ class Analyst:
         word_type = word.get_type()
         root_type = None
         for morph in word.morphs:
-            if morph.get_type() in ["noun", "adj", "verb"]:
+            if morph.is_root():
                 root_type = morph.get_type()
 
         if root_type == None:
@@ -43,9 +43,9 @@ class Analyst:
         # Construction
 
         construction = "std"
-        if word_type == "noun" and word.first_morph().get_type() in ["prep", "prefix"]:
+        if root_type == "noun" and word.first_morph().get_type() in ["prep", "prefix"]:
             construction = "rel"
-        elif word_type == "noun" and word.first_morph().get_type() in ["number"]:
+        elif root_type == "noun" and word.first_morph().get_type() in ["number"]:
             construction = "num"
 
         if not construction in self.construction_in_language[language]:

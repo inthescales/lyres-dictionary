@@ -73,6 +73,7 @@ def analyze():
         analyst.register(word)
         print(f"Analyzed: {i}/{count}", end="\r")
 
+    print(f"Analyzed: {count}/{count}")
     print("Analysis complete")
     analyst.print_results(log=True)
 
