@@ -74,7 +74,7 @@ def analyze():
         print(f"Analyzed: {i}/{count}", end="\r")
 
     print("Analysis complete")
-    analyst.print_results()
+    analyst.print_results(log=True)
 
 # Process command line input
 
@@ -126,7 +126,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         count = 1
 
     if mode == "analyze":
-        count = 100
+        count = 1000000
     
     # Configure logger
     if mode == "test" or mode == "analyze":
