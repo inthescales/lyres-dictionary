@@ -217,7 +217,7 @@
                         "has-key": "-ure"
                     }
                 },
-                "gloss": "%sg"
+                "gloss": "%!sg"
             }
         ],
         "origin": "latin"
@@ -353,13 +353,13 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["mb", "mp", "nt", "ns", "rc", "rs", "rt"]
+                        "has-suffix": ["ar", "ch", "ct", "er", "lm", "mb", "mn", "mp", "nd", "nt", "ns", "or", "rb", "rc", "rd", "rm", "rn", "rs", "rt", "sc", "sm", "st"]
                     }
                 },
                 "form-final": ""
             }  
         ],
-        "tags": ["rare"],
+        "tags": ["no-joiner", "rare"],
         "origin": "latin"
     },
     {

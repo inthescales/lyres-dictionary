@@ -63,9 +63,14 @@
         "key": "cis-",
         "form-stem": "cis",
         "type": "prep",
-        "prefix-on": "verb",
+        "prefix-on": "noun",
         "gloss-verb": "%@ on the same side",
         "gloss-noun": "on this side of %sg",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["concrete", "bounded"]
+            }
+        },
         "origin": "latin"
     },
     {
@@ -209,6 +214,16 @@
                 ]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-type": "verb"
+                    }
+                },
+                "tags": ["rare"]
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -233,9 +248,14 @@
         "key": "intra-",
         "form-stem": "intra",
         "type": "prep",
-        "prefix-on": "verb",
+        "prefix-on": "noun",
         "gloss-verb": "%@ within",
         "gloss-noun": "within %sg",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["concrete", "bounded"]
+            }
+        },
         "origin": "latin"
     },
     {
@@ -267,7 +287,7 @@
         "key": "preter-",
         "form-stem": "preter",
         "type": "prep",
-        "prefix-on": "verb",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ beyond",
         "gloss-noun": "beyond %sg",
         "origin": "latin"
@@ -276,9 +296,14 @@
         "key": "pre-",
         "form-stem": "pre",
         "type": "prep",
-        "prefix-on": "verb",
+        "prefix-on": ["verb", "noun"],
         "gloss-verb": "%@ before",
         "gloss-noun": "before %sg",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["concrete", "bounded"]
+            }
+        },
         "origin": "latin"
     },
     {
@@ -295,8 +320,18 @@
         "form-stem": "retro",
         "type": "prep",
         "prefix-on": "verb",
-        "gloss-verb": "%@ backward",
-        "gloss-noun": "backward %sg",
+        "gloss-verb": "%@ retrospectively",
+        "gloss-noun": "behind %sg",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-tag": "motion"
+                    }
+                },
+                "gloss": ["%@ backward"]
+            }
+        ],
         "origin": "latin"
     },
     {
@@ -365,15 +400,12 @@
         "key": "supra-",
         "form-stem": "supra",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "prefix-on": "noun",
         "gloss-verb": "%@ above",
         "gloss-noun": "above %sg",
         "requires": {
             "precedes": {
-                "or": [
-                    { "has-type": "verb" },
-                    { "has-tag": "concrete" }
-                ]
+                "has-tag": "concrete"
             }
         },
         "origin": "latin"

@@ -315,6 +315,14 @@
                 "has-tag": "bodypart"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "bodypart-single"
+                }
+            },
+            "gloss": "inflammation of the %!sg"
+        }],
         "tags": ["mass", "abstract"],
         "origin": "greek"
     },

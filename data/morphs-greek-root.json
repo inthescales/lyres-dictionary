@@ -47,6 +47,14 @@
         "origin": "greek"
     },
     {
+        "key": "arthron",
+        "form-stem": "arthr",
+        "type": "noun",
+        "gloss": "joint",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
         "key": "asthanesthai",
         "form-stem": "aesthe",
         "type": "verb",
@@ -236,7 +244,7 @@
         "form-stem": "cardi",
         "type": "noun",
         "gloss": "heart",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {
@@ -244,7 +252,7 @@
         "form-stem": "cephal",
         "type": "noun",
         "gloss": "head",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {
@@ -323,7 +331,7 @@
         "form-stem": "crani",
         "type": "noun",
         "gloss": "skull",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {
@@ -363,7 +371,7 @@
         "form-stem": "dactyl",
         "type": "noun",
         "gloss": "finger",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {
@@ -395,7 +403,7 @@
         "form-stem": "dermat",
         "type": "noun",
         "gloss": "skin",
-        "tags": ["mass", "concrete", "bodypart"],
+        "tags": ["mass", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {
@@ -556,7 +564,7 @@
         "form-stem": "gloss",
         "type": "noun",
         "gloss": "tongue",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {
@@ -1155,7 +1163,7 @@
         "form-stem": "phall",
         "type": "noun",
         "gloss": "penis",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
     },
     {

@@ -171,9 +171,9 @@ def getHTML(series):
     
     return output
 
-#test_series = series_root_suffix(morphothec.filter_type("verb"),
-#                                 morphothec.filter_appends_to("verb"),
-#                                 morphothec)
+test_series = series_root_suffix(morphothec.filter_type("noun", "latin"),
+                                 ["-e"],
+                                 morphothec)
 
 #test_series = series_verb("tarassein", 
 #                          morphothec.filter_prepends_to("verb", "greek", { "has-type": "prep" }),
@@ -184,10 +184,10 @@ def getHTML(series):
 #                                  morphothec.filter_type("verb"),
 #                                  morphothec)
 
-test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
-                                    morphothec.filter_type("noun", "greek"),
-                                    "-ic",
-                                    morphothec)
+#test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
+#                                    morphothec.filter_type("noun", "greek"),
+#                                    "-ic",
+#                                    morphothec)
 
 
 print(getHTML(test_series))
