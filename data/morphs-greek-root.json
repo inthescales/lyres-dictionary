@@ -408,7 +408,7 @@
     },
     {
         "key": "diabolos",
-        "form-stem": ["diabol", "diabol", "diab"],
+        "form-stem": "diabol",
         "type": "noun",
         "gloss": "devil",
         "tags": ["count", "concrete", "living"],
@@ -632,6 +632,14 @@
         "origin": "greek"
     },
     {
+        "key": "istanai",
+        "form-stem": "sta",
+        "type": "verb",
+        "gloss": "place",
+        "tags": ["transitive", "motion"],
+        "origin": "greek"
+    },
+    {
         "key": "haema",
         "form-stem": "hem",
         "type": "noun",
@@ -701,6 +709,14 @@
         "type": "noun",
         "gloss": "hero",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "hexis",
+        "form-stem": "hec",
+        "type": "noun",
+        "gloss": "habit",
+        "tags": ["count", "abstract"],
         "origin": "greek"
     },
     {
@@ -823,6 +839,29 @@
         "origin": "greek"
     },
     {
+        "key": "krypta",
+        "form-stem": "crypt",
+        "type": "adj",
+        "gloss": "hidden",
+        "origin": "greek"
+    },
+    {
+        "key": "analegein",
+        "form-stem": "analec",
+        "type": "verb",
+        "gloss": "gather up",
+        "tags": ["transitive", "no-prep"],
+        "origin": "greek"
+    },
+    {
+        "key": "eklegein",
+        "form-stem": "eclec",
+        "type": "verb",
+        "gloss": "select",
+        "tags": ["transitive", "no-prep"],
+        "origin": "greek"
+    },
+    {
         "key": "lexis",
         "form-stem": "lex",
         "type": "noun",
@@ -844,6 +883,14 @@
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "lyein",
+        "form-stem": "ly",
+        "type": "verb",
+        "gloss": "loosen",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {
@@ -903,21 +950,20 @@
         "origin": "greek"
     },
     {
+        "key": "melos",
+        "form-stem": "mel",
+        "type": "noun",
+        "gloss": "melody",
+        "tags": ["count", "abstract", "bounded"],
+        "origin": "greek"
+    },
+    {
         "key": "meteora",
         "form-stem": "meteor",
         "type": "noun",
         "gloss": "celestial [phenomenon]",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
-        "key": "metrein",
-        "form-stem": "metre",
-        "type": "verb",
-        "gloss": "measure",
-        "tags": ["transitive"],
-        "origin": "greek",
-        "notes": "Don't know ancient greek infinitive, guessed"
     },
     {
         "key": "metron",
@@ -939,7 +985,7 @@
         "key": "mainein",
         "form-stem": "mias",
         "type": "verb",
-        "gloss": "poison",
+        "gloss": "stain",
         "tags": ["transitive"],
         "origin": "greek"
     },
@@ -1159,6 +1205,22 @@
         "origin": "greek"
     },
     {
+        "key": "pegnunai",
+        "form-stem": "pec",
+        "type": "verb",
+        "gloss": "[make] solid",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "peripatein",
+        "form-stem": "peripat",
+        "type": "verb",
+        "gloss": "walk about",
+        "tags": ["intransitive"],
+        "origin": "greek"
+    },
+    {
         "key": "phallos",
         "form-stem": "phall",
         "type": "noun",
@@ -1239,6 +1301,14 @@
         "origin": "greek"
     },
     {
+        "key": "phranein",
+        "form-stem": "phra",
+        "type": "verb",
+        "gloss": "tell",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
         "key": "phren",
         "form-stem": "phren",
         "type": "noun",
@@ -1260,6 +1330,14 @@
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living", "plant"],
+        "origin": "greek"
+    },
+    {
+        "key": "planan",
+        "form-stem": "plane",
+        "type": "verb",
+        "gloss": "wander",
+        "tags": ["intransitive"],
         "origin": "greek"
     },
     {
@@ -1413,6 +1491,14 @@
         "origin": "greek"
     },
     {
+        "key": "ops",
+        "form-stem": "opt",
+        "type": "noun",
+        "gloss": "eye",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "greek"
+    },
+    {
         "key": "ornis",
         "form-stem": "ornith",
         "type": "noun",
@@ -1490,6 +1576,22 @@
         "type": "noun",
         "gloss": "sign",
         "tags": ["count", "abstract"],
+        "origin": "greek"
+    },
+    {
+        "key": "semainein",
+        "form-stem": "seman",
+        "type": "verb",
+        "gloss": "signify",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "sepein",
+        "form-stem": "sep",
+        "type": "verb",
+        "gloss": "rot",
+        "tags": ["intransitive"],
         "origin": "greek"
     },
     {
@@ -1597,12 +1699,19 @@
         "origin": "greek"
     },
     {
-        "key": "tithenai",
-        "form-stem": "the",
+        "key": "theasthai",
+        "form-stem": "thea",
         "type": "verb",
-        "gloss": "propose",
-        "gloss-relative": "put",
-        "tags": ["transitive", "motion"],
+        "gloss": "view",
+        "tags": ["transitive"],
+        "origin": "greek"
+    },
+    {
+        "key": "theorein",
+        "form-stem": "theor",
+        "type": "verb",
+        "gloss": "contemplate",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {
@@ -1630,6 +1739,15 @@
         "origin": "greek"
     },
     {
+        "key": "tithenai",
+        "form-stem": "the",
+        "type": "verb",
+        "gloss": "propose",
+        "gloss-relative": "put",
+        "tags": ["transitive", "motion"],
+        "origin": "greek"
+    },
+    {
         "key": "topos",
         "form-stem": "top",
         "type": "noun",
@@ -1638,11 +1756,43 @@
         "origin": "greek"
     },
     {
-        "key": "toxon",
+        "key": "toxon/arrow",
+        "form-stem": "tox",
+        "type": "noun",
+        "gloss": "arrow",
+        "tags": ["count", "concrete", "tool", "weapon"],
+        "origin": "greek"
+    },
+    {
+        "key": "toxon/poison",
         "form-stem": "tox",
         "type": "noun",
         "gloss": "poison",
         "tags": ["mass", "concrete", "fluid", "liquid"],
+        "origin": "greek"
+    },
+    {
+        "key": "trepein",
+        "form-stem": "trep",
+        "type": "verb",
+        "gloss": "turn",
+        "tags": ["transitive", "motion"],
+        "origin": "greek"
+    },
+    {
+        "key": "trophe",
+        "form-stem": "troph",
+        "type": "noun",
+        "gloss": "nourishment",
+        "tags": ["mass", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "trophein",
+        "form-stem": "trophe",
+        "type": "verb",
+        "gloss": "nourish",
+        "tags": ["transitive"],
         "origin": "greek"
     },
     {

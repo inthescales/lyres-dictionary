@@ -329,7 +329,7 @@
                         "has-tag": "motion"
                     }
                 },
-                "gloss": ["%@ backward"]
+                "gloss": "%@ backward"
             }
         ],
         "origin": "latin"

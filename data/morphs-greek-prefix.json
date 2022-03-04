@@ -205,7 +205,20 @@
             }
         },
         "origin": "greek"
-    }, 
+    },
+    {
+        "key": "pro-/greek",
+        "form-stem": "pro",
+        "type": "prep",
+        "prefix-on": "verb",
+        "gloss": "%@ foward",
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "origin": "greek"
+    },
     {
         "key": "syn-",
         "form-stem": "syn",

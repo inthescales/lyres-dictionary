@@ -131,7 +131,6 @@ def gloss(morph, env):
             if "gloss-final" in morph_dict:
                 return morph_dict["gloss-final"]
         
-
         if morph.get_type() == "prep" or morph.get_type() == "prefix":
             relative = env.next
         else:

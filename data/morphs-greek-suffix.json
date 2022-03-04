@@ -30,6 +30,11 @@
         "derive-to": "noun",
         "suffixes": ["greek-silent-agent", "-y-def", "-ic"],
         "gloss": "breaking of %pl",
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "fluid" }
+            }  
+        },
         "exception": [
             {
                 "case": {
@@ -519,6 +524,23 @@
         "origin": "greek"
     },
     {
+        "key": "-iatr-",
+        "form-final": "iatr",
+        "form-stem": "iatr",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-ician", "-ic-def", "-ia-def"],
+        "gloss": "medical treatment of %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["living", "bodypart"]
+            }
+        },
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
         "key": "-ic",
         "form-final": "ic",
         "form-stem": "ic",
@@ -618,6 +640,18 @@
         "suffixes": [],
         "gloss": "having %@",
         "tags": ["mass", "abstract", "no-gen"],
+        "origin": "greek"
+    },
+    {
+        "key": "-ician",
+        "form-final": "ician",
+        "form-stem": "ician",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "one who practices %sg",
+        "tags": ["count", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
     },
     {

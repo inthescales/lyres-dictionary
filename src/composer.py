@@ -93,6 +93,7 @@ def get_form(word):
         form = form.replace("ks", "x")
         form = form.replace("cm", "gm")
         form = form.replace("km", "gm")
+        form = form.replace("pm", "mm")
 
         if form.endswith("tia") and form[-4] not in ["n", "r", "s", "u"]:
             form = form[:-3] + "sia"

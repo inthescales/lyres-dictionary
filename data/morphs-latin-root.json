@@ -458,6 +458,14 @@
         "origin": "latin"
     },
     {
+        "key": "atrox",
+        "form-stem": "atroc",
+        "type": "adj",
+        "declension": 3,
+        "gloss": "cruel",
+        "origin": "latin"
+    },
+    {
         "key": "attendere",
         "form-stem-present": "attend",
         "form-stem-perfect": "attent",
@@ -607,6 +615,17 @@
         "type": "adj",
         "declension": 12,
         "gloss": "[soothing], [bland]",
+        "origin": "latin"
+    },
+    {
+        "key": "bellare",
+        "form-stem-present": "bell",
+        "form-stem-perfect": "bellat",
+        "form-final": "bellate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "[wage] war",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -2808,6 +2827,15 @@
         "origin": "latin"
     },
     {  
+        "key": "globus",
+        "form-stem": "glob",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "globe",
+        "tags": ["count", "concrete", "shape"],
+        "origin": "latin"
+    },
+    {  
         "key": "glomus",
         "form-stem": "glomer",
         "type": "noun",
@@ -4218,6 +4246,15 @@
         "origin": "latin"
     },
     {
+        "key": "matrix",
+        "form-stem": "matric",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "womb",
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
+        "origin": "latin"
+    },
+    {
         "key": "matrona",
         "form-stem": "matron",
         "type": "noun",
@@ -5243,12 +5280,22 @@
     },
     {
         "key": "pangere",
-        "form-stem-present": "ping",
+        "form-stem-present": "pang",
         "form-stem-perfect": "pact",
         "form-final": "pact",
         "type": "verb",
         "conjugation": 3,
         "gloss": "[fix] in place",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prep"
+                    }
+                },
+                "form-stem-present": "ping"
+            }
+        ],
         "tags": ["transitive", "joining"],
         "origin": "latin",
         "notes": "compact vs impinge. Went with pact as it's also in impact"
@@ -5592,7 +5639,7 @@
         "conjugation": 3,
         "gloss": "[make] a picture",
         "gloss-relative": "paint",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {

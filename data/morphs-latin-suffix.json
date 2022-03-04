@@ -339,7 +339,8 @@
             "gloss": "the rearing of %pl"
         }],
         "tags": ["mass", "abstract"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "consider expanding in line with 'menticulture'"
     },
     {
         "key": "-e",
