@@ -359,7 +359,7 @@
                 "form-final": ""
             }  
         ],
-        "tags": ["no-joiner", "rare"],
+        "tags": ["no-joiner", "no-gen", "rare"],
         "origin": "latin"
     },
     {
@@ -380,7 +380,7 @@
                 "form-final": ""
             }
         ],
-        "tags": ["rare"],
+        "tags": ["rare", "no-gen"],
         "origin": "latin"
     },
     {
