@@ -472,6 +472,14 @@
         "origin": "greek"
     },
     {
+        "key": "ephebe",
+        "form-stem": "epheb",
+        "type": "noun",
+        "gloss": "youth",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
         "key": "ergon",
         "form-stem": "erg",
         "type": "noun",
@@ -1176,7 +1184,7 @@
         "key": "paskhein",
         "form-stem": "pathe",
         "type": "verb",
-        "gloss": "suffer",
+        "gloss": "feel",
         "tags": ["transitive"],
         "origin": "greek"
     },
@@ -1230,15 +1238,15 @@
     },
     {
         "key": "phanai",
-        "form-stem": "pha",
+        "form-stem": "phe",
         "type": "verb",
         "gloss": "say",
         "tags": ["transitive"],
         "origin": "greek"
     },
     {
-        "key": "phanein",
-        "form-stem": "phane",
+        "key": "phainein",
+        "form-stem": "pha",
         "type": "verb",
         "gloss": "show",
         "tags": ["transitive"],
@@ -1258,6 +1266,14 @@
         "type": "noun",
         "gloss": "medicine",
         "tags": ["mass", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "pheme",
+        "form-stem": "phem",
+        "type": "noun",
+        "gloss": "voice",
+        "tags": ["count", "abstract"],
         "origin": "greek"
     },
     {
@@ -1301,7 +1317,7 @@
         "origin": "greek"
     },
     {
-        "key": "phranein",
+        "key": "phrazein",
         "form-stem": "phra",
         "type": "verb",
         "gloss": "tell",

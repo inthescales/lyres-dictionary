@@ -371,7 +371,7 @@
         "gloss-noun": "[love] of %pl",
         "requires": {
             "follows": {
-                "not": { "has-key": "pais" }
+                "not": { "has-key": ["pais", "ephebe"] }
             }
         },
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],

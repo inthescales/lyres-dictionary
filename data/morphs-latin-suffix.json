@@ -467,6 +467,7 @@
                 "has-tag": "plant"
             }
         },
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
