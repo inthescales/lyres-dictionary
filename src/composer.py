@@ -222,8 +222,16 @@ def get_definition(word):
     if morph.get_type() == "verb":
         return "to " + inflection.inflect(definition, "inf")
     elif morph.get_type() == "noun":
-        # TODO - Do necessary article handling here. Reuse the code lower down.
-        return inflection.inflect(definition, "sg")
+        inflected = inflection.inflect(definition, "sg")
+
+        if morph.has_tag("count"):
+            return "a " +  inflected
+        elif morph.has_tag("mass"):
+            return inflected
+        elif morph.has_tag("singleton"):
+            return "the " + inflected
+        else:
+            return inflected
     else:
         return definition
 
