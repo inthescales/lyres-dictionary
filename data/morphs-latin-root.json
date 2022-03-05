@@ -71,6 +71,15 @@
         "origin": "latin"
     },
     {
+        "key": "aerugo",
+        "form-stem": "aerugin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "verdigris",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "aes",
         "form-stem": "aer",
         "type": "noun",
@@ -2165,6 +2174,16 @@
         "origin": "latin"
     },
     {
+        "key": "favere",
+        "form-stem-present": "fav",
+        "form-final": "faut",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "support",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "febris",
         "form-stem": "febr",
         "type": "noun",
@@ -2209,6 +2228,16 @@
         "origin": "latin"
     },
     {
+        "key": "ferocier",
+        "form-stem-present": "feroc",
+        "form-final": "feroce",
+        "type": "verb",
+        "conjugation": 4,
+        "gloss": "rampage",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "ferre",
         "form-stem-present": "fer",
         "form-stem-perfect": "lat",
@@ -2238,6 +2267,15 @@
         "declension": 2,
         "gloss": "iron",
         "tags": ["mass", "concrete", "material", "metal"],
+        "origin": "latin"
+    },
+    {
+        "key": "ferrugo",
+        "form-stem": "ferrugin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "iron [rust]",
+        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
     {
@@ -4606,6 +4644,17 @@
         "origin": "latin"
     },
     {
+        "key": "mori",
+        "form-stem-present": "mor",
+        "form-stem-perfect": "mort",
+        "form-final": "mort",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "die",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "mors",
         "form-stem": "mort",
         "type": "noun",
@@ -5549,6 +5598,18 @@
         "notes": "Was tagged with French, changed to function here"
     },
     {
+        "key": "perire",
+        "form-stem-present": "per",
+        "form-stem-perfect": "perit",
+        "form-joiner-present": "ie",
+        "form-final": "per",
+        "type": "verb",
+        "conjugation": 0,
+        "gloss": "pass away",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    },
+    {
         "key": "perpetua",
         "form-stem": "perpetu",
         "type": "adj",
@@ -6389,6 +6450,15 @@
         "origin": "latin"
     },
     {
+        "key": "robigo",
+        "form-stem": ["robigin", "rubigin"],
+        "type": "noun",
+        "declension": 3,
+        "gloss": "rust",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "rubra",
         "form-stem": "rubr",
         "type": "adj",
@@ -7025,7 +7095,7 @@
         "form-stem": "stabil",
         "type": "adj",
         "declension": 3,
-        "gloss": "steadfast",
+        "gloss": "lasting",
         "origin": "latin"
     },
     {
@@ -7190,6 +7260,29 @@
         "type": "adj",
         "declension": 12,
         "gloss": "highest",
+        "origin": "latin"
+    },
+    {
+        "key": "tacere",
+        "form-stem-present": "tac",
+        "form-stem-perfect": "tacit",
+        "form-final": "tace",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] silent",
+        "gloss-state": "silent",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "prefix"
+                    }
+                },
+                "form-stem-present": "tic",
+                "form-stem-perfect": "ticit"
+            }
+        ],
+        "tags": ["intransitive", "stative", "no-prep"],
         "origin": "latin"
     },
     {
@@ -7388,7 +7481,8 @@
         "gloss": "[be] inactive",
         "gloss-state": "inactive",
         "tags": ["intransitive", "stative", "no-prep"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "no existing perfect"
     },
     {
         "key": "torquere",
@@ -7516,15 +7610,15 @@
     },
     {
         "key": "turgere",
-        "form-stem-present": "torp",
-        "form-stem-perfect": "turs",
-        "form-final": "torp",
+        "form-stem-present": "turg",
+        "form-final": "turs",
         "type": "verb",
         "conjugation": 2,
-        "gloss": "[be] sowllen",
+        "gloss": "[be] swollen",
         "gloss-state": "swollen",
         "tags": ["intransitive", "stative", "no-prep"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "no existing perfect"
     },
     {
         "key": "turpis",
