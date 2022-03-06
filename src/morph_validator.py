@@ -156,6 +156,8 @@ def validate_morph(morph):
 
     elif morph_type == "verb" or derive_type == "verb":
         if morph["origin"] == "latin":
+            if "form-stem-present" in morph and "form-stem-perfect" in morph and morph["form-stem-present"] == morph["form-stem-perfect"]:
+                print("SAME: " + morph["key"])
             if not (("form-stem-present" in morph or "form-stem" in morph) \
                  and ("form-final" or "form-stem" in morph) in morph \
                  and "conjugation" in morph):

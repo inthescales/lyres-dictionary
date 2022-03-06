@@ -120,8 +120,7 @@
     },
     {
         "key": "-ate",
-        "form-stem-present": "at",
-        "form-stem-perfect": "at",
+        "form-stem": "at",
         "form-final": "ate",
         "type": "derive",
         "derive-from": ["noun", "adj"],
@@ -327,8 +326,7 @@
     },
     {
         "key": "-esce",
-        "form-stem-present": "esc",
-        "form-stem-perfect": "esc",
+        "form-stem": "esc",
         "form-joiner-present": "e",
         "form-final": "esce",
         "type": "derive",
@@ -341,8 +339,7 @@
     },
     {
         "key": "-esce-verb",
-        "form-stem-present": "esc",
-        "form-stem-perfect": "esc",
+        "form-stem": "esc",
         "form-joiner-present": "e",
         "form-final": "esce",
         "type": "derive",
@@ -364,8 +361,7 @@
     },
     {
         "key": "-esce-plant",
-        "form-stem-present": "esc",
-        "form-stem-perfect": "esc",
+        "form-stem": "esc",
         "form-joiner-present": "e",
         "form-final": "esce",
         "type": "derive",
@@ -752,8 +748,7 @@
     },
     {
         "key": "-pote-power",
-        "form-stem-present": "pot",
-        "form-stem-perfect": "pot",
+        "form-stem": "pot",
         "form-final": "pote",
         "type": "derive",
         "derive-from": "noun",

@@ -1,3 +1,5 @@
+import time
+
 from datetime import datetime
 from pathlib import Path
 
@@ -7,6 +9,8 @@ analysis_dir = "analysis"
 class Analyst:
     def __init__(self):
         self.total_words = 0
+        self.start_time = time.time()
+
         self.roots_in_language = {}
         self.types_in_language = {}
         self.construction_in_language = {}
@@ -84,11 +88,15 @@ class Analyst:
     def print_results(self, log):
         global log_dir, analysis_dir
 
+        end_time = time.time()
+        minutes_elapsed = (end_time - self.start_time) / 60
+
         results = ""
         results += "\n"
         results += "====== ANALYSIS RESULTS ======\n"
         results += "\n"
         results += "Total words:\t" + str(self.total_words) + "\n"
+        results += "Time elapsed:\t" + str(minutes_elapsed) + " min"
 
         results += "\n"
 

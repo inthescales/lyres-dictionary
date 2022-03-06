@@ -1136,8 +1136,7 @@
     },
     {
         "key": "cessare",
-        "form-stem-present": "cess",
-        "form-stem-perfect": "cess",
+        "form-stem": "cess",
         "form-final": "cease",
         "type": "verb",
         "conjugation": 1,
@@ -1839,8 +1838,7 @@
     },
     {
         "key": "dubitare",
-        "form-stem-present": "dubit",
-        "form-stem-perfect": "dubit",
+        "form-stem": "dubit",
         "form-final": "doubt",
         "type": "verb",
         "conjugation": 1,
@@ -2168,8 +2166,7 @@
     },
     {
         "key": "fateri",
-        "form-stem-present": "fess",
-        "form-stem-perfect": "fess",
+        "form-stem": "fess",
         "form-final": "fess",
         "type": "verb",
         "conjugation": 2,
@@ -2431,8 +2428,7 @@
     },
     {
         "key": "flare",
-        "form-stem-present": "flat",
-        "form-stem-perfect": "flat",
+        "form-stem": "flat",
         "form-final": "flate",
         "type": "verb",
         "conjugation": 1,
@@ -2442,8 +2438,7 @@
     },
     {
         "key": "flectere",
-        "form-stem-present": "flect",
-        "form-stem-perfect": "flect",
+        "form-stem": "flect",
         "form-final": "flect",
         "type": "verb",
         "conjugation": 3,
@@ -2711,8 +2706,7 @@
     },
     {
         "key": "fundere",
-        "form-stem-present": "fus",
-        "form-stem-perfect": "fus",
+        "form-stem": "fus",
         "form-final": "fuse",
         "type": "verb",
         "conjugation": 3,
@@ -4070,8 +4064,7 @@
     },
     {
         "key": "lucere",
-        "form-stem-present": "luc",
-        "form-stem-perfect": "luc",
+        "form-stem": "luc",
         "form-final": "luce",
         "type": "verb",
         "conjugation": 2,
@@ -4102,8 +4095,7 @@
     },
     {
         "key": "luctari",
-        "form-stem-present": "luct",
-        "form-stem-perfect": "luct",
+        "form-stem": "luct",
         "form-final": "luct",
         "type": "verb",
         "conjugation": 1,
@@ -4836,8 +4828,7 @@
     },
     {
         "key": "nectare",
-        "form-stem-present": "nect",
-        "form-stem-perfect": "nect",
+        "form-stem": "nect",
         "form-final": "nect",
         "type": "verb",
         "conjugation": 1,
@@ -5156,8 +5147,7 @@
     },
     {
         "key": "optare",
-        "form-stem-present": "opt",
-        "form-stem-perfect": "opt",
+        "form-stem": "opt",
         "form-final": "opt",
         "type": "verb",
         "conjugation": 1,
@@ -5280,8 +5270,7 @@
     },
     {
         "key": "paenitere",
-        "form-stem-present": "penit",
-        "form-stem-perfect": "penit",
+        "form-stem": "penit",
         "form-final": "pent",
         "type": "verb",
         "conjugation": 2,
@@ -5785,8 +5774,7 @@
     },
     {
         "key": "plectere",
-        "form-stem-present": "plect",
-        "form-stem-perfect": "plect",
+        "form-stem": "plect",
         "form-final": "plect",
         "type": "verb",
         "conjugation": 3,
@@ -6253,8 +6241,7 @@
     },
     {
         "key": "quatere",
-        "form-stem-present": "cuss",
-        "form-stem-perfect": "cuss",
+        "form-stem": "cuss",
         "form-final": "cuss",
         "type": "verb",
         "conjugation": 3,
@@ -7022,8 +7009,7 @@
     },
     {
         "key": "specere",
-        "form-stem-present": "spect",
-        "form-stem-perfect": "spect",
+        "form-stem": "spect",
         "form-final": "spect",
         "type": "verb",
         "conjugation": 3,
@@ -7192,8 +7178,7 @@
     },
     {
         "key": "struere",
-        "form-stem-present": "struct",
-        "form-stem-perfect": "struct",
+        "form-stem": "struct",
         "form-final": "struct",
         "type": "verb",
         "conjugation": 3,
@@ -7520,8 +7505,7 @@
     },
     {
         "key": "torquere",
-        "form-stem-present": "tors",
-        "form-stem-perfect": "tors",
+        "form-stem": "tors",
         "form-final": "tort",
         "type": "verb",
         "conjugation": 2,
@@ -7560,14 +7544,15 @@
     },
     {
         "key": "trahere",
-        "form-stem-present": "tract",
+        "form-stem-present": "trah",
         "form-stem-perfect": "tract",
         "form-final": "tract",
         "type": "verb",
         "conjugation": 3,
         "gloss": "pull",
         "tags": ["transitive"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "trahent vs attractant. Going with the more latinate version, will handle the other with french maybe"
     },
     {
         "key": "tranquilla",
@@ -7690,8 +7675,7 @@
     },
     {
         "key": "uti",
-        "form-stem-present": "ut",
-        "form-stem-perfect": "ut",
+        "form-stem": "ut",
         "form-final": "use",
         "type": "verb",
         "conjugation": 3,
