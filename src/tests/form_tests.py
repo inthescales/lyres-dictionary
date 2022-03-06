@@ -469,7 +469,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["pax", "-ify"], "pacify")
         self.assertForm(["crux", "-fer"], "crucifer")
         self.assertForm(["lux", "-fer"], "lucifer")
-        self.assertForm(["proles", "-fer", "-ate"], "proliferate")
+        # self.assertForm(["proles", "-fer", "-ate"], "proliferate") # No convenient -ate form for verbs
         self.assertForm(["thuris", "-fer"], "thurifer")
         self.assertForm(["clavis", "-ger"], "claviger")
         self.assertForm(["calix", "-form"], "caliciform")
@@ -486,12 +486,15 @@ class FormTests(unittest.TestCase):
         # Latin nouns, 4th declension
         self.assertForm(["casus", "-al"], "casual")
         self.assertForm(["manus", "-al"], "manual")
-        self.assertFormIn(["os-remains", "-arium"], ["ossuarium", "ossuary"])
         self.assertForm(["cornus", "-ate-bodypart"], "cornuate")
+        self.assertFormIn(["os-remains", "-arium"], ["ossuarium", "ossuary"])
+
         self.assertForm(["lacus", "-ine"], "lacustrine")
         self.assertForm(["quercus", "-ine"], "quercine")
+        self.assertForm(["fructus", "-esce-plant", "-nt"], "fructescent") 
         self.assertForm(["fructus", "-ous"], "fructuous")
-        self.assertForm(["lacus", "-ine"], "lacustrine")
+
+        self.assertForm(["acus", "-form"], "aciform")
         self.assertForm(["manus", "-form"], "maniform")
 
         # Latin nouns, 5th declension
@@ -714,11 +717,9 @@ class FormTests(unittest.TestCase):
         self.assertForm(["aqua", "-ous"], "aqueous")
         self.assertForm(["arbor", "-al"], "arboreal")
         self.assertForm(["homo", "-cide"], "homicide")
-        self.assertForm(["fructus", "-esce-plant", "-nt"], "fructescent") 
         self.assertForm(["homo", "-cide"], "homicide")
         self.assertForm(["lapis", "-ous"], "lapideous")
         self.assertForm(["lignum", "-ous"], "ligneous")
-        self.assertForm(["manus", "-form"], "maniform")
         self.assertForm(["nux", "-ous"], "nuceous")
         
         # Latin verbs
@@ -768,6 +769,7 @@ class FormTests(unittest.TestCase):
     # If these fail, it may not be a problem, but I should confirm that no other desired forms were lost.
     def testUnrealizedForms(self):
         self.assertFormNot(["humilis", "-ate"], "humiliate")
+        self.assertFormNot(["genu", "-form"], "genuform")
         
         self.assertFormNot(["de-", "cadere", "-nt"], "decadent")
         self.assertFormNot(["ex-", "sanguis", "-ate"], "exsanguinate")

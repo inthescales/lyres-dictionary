@@ -27,8 +27,8 @@
         "origin": "latin"
     },
     {
-        "key": "acu",
-        "form-stem": "acu",
+        "key": "acus",
+        "form-stem": "ac",
         "type": "noun",
         "declension": 4,
         "gloss": "needle",
@@ -976,7 +976,7 @@
     },
     {
         "key": "casus",
-        "form-stem": "casu",
+        "form-stem": "cas",
         "type": "noun",
         "declension": 4,
         "gloss": "case",
@@ -1388,7 +1388,7 @@
     {
         "key": "cornus",
         "form-final": "corn",
-        "form-stem": "cornu",
+        "form-stem": "corn",
         "type": "noun",
         "declension": 4,
         "gloss": "horn",
@@ -2507,7 +2507,7 @@
     },
     {
         "key": "fluctus",
-        "form-stem": "fluctu",
+        "form-stem": "fluct",
         "type": "noun",
         "declension": 4,
         "gloss": "wave",
@@ -2652,20 +2652,10 @@
     },
     {
         "key": "fructus",
-        "form-stem": "fructu",
+        "form-stem": "fruct",
         "type": "noun",
         "declension": 4,
         "gloss": "fruit",
-        "exception": [
-            { 
-                "case": {
-                    "precedes": {
-                        "has-key": "-esce-plant"
-                    }
-                },
-                "form-stem": "fruct"
-            }
-        ],
         "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
         "origin": "latin"
     },
@@ -2818,7 +2808,16 @@
         "gloss": "generous",
         "origin": "latin"
     },
-    {  
+    {
+        "key": "genu",
+        "form-stem": "gen",
+        "type": "noun",
+        "declension": 4,
+        "gloss": "knee",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
+    },
+    {
         "key": "genus",
         "form-stem": "gener",
         "type": "noun",
@@ -2859,7 +2858,7 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     },
-    {  
+    {
         "key": "glacies",
         "form-stem": "glaci",
         "type": "noun",
@@ -3618,6 +3617,7 @@
     {
         "key": "lacus",
         "form-stem": "lacustr",
+        "form-joiner": "",
         "type": "noun",
         "declension": 4,
         "gloss": "lake",
@@ -4253,20 +4253,10 @@
     },
     {
         "key": "manus",
-        "form-stem": "manu",
+        "form-stem": "man",
         "type": "noun",
         "declension": 4,
         "gloss": "hand",
-        "exception": [
-            { 
-                "case": {
-                    "precedes": {
-                        "has-key": "-form"
-                    }
-                },
-                "form-stem": "man"
-            }
-        ],
         "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
@@ -5254,7 +5244,7 @@
     },
     {
         "key": "os-remains",
-        "form-stem": "ossu",
+        "form-stem": "oss",
         "type": "noun",
         "declension": 4,
         "gloss": "remains",
@@ -6276,6 +6266,7 @@
     {
         "key": "quercus",
         "form-stem": "querc",
+        "form-joiner": "",
         "type": "noun",
         "declension": 4,
         "gloss": "oak",
@@ -6405,6 +6396,16 @@
         "conjugation": 3,
         "gloss": "straighten",
         "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {  
+        "key": "res",
+        "form-stem": "re",
+        "form-joiner": "",
+        "type": "noun",
+        "declension": 5,
+        "gloss": "thing",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {

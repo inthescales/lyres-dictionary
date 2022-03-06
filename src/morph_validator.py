@@ -13,6 +13,7 @@ valid_properties = [
     "form-stem-present",        # Present participle stem for Latin verbs
     "form-stem-perfect",        # Perfect participle stem for Latin verbs
     "form-stem-assim",          # Stem for assimilating prefixes
+    "form-joiner",              # Joining vowel override for this morph
     "form-joiner-present",      # Joining vowel(s) used for Latin present participles
     "form-assimilation",        # Assimilation rules
     "conjugation",

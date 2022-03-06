@@ -171,8 +171,8 @@ def getHTML(series):
     
     return output
 
-test_series = series_root_suffix(morphothec.filter_type("noun", "latin"),
-                                 ["-ine"],
+test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
+                                 morphothec.filter_appends_to("noun", "latin"),
                                  morphothec)
 
 #test_series = series_verb("tarassein", 

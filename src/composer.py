@@ -50,7 +50,7 @@ def get_form(word):
                 next_morph = None
 
             # Add joining vowel if needed
-            if last_morph != None and not helpers.is_vowel(addition[0], y_is_vowel=True):
+            if last_morph != None:
                 joining_vowel = get_joining_vowel(word.get_origin(), last_morph, morph, form, addition)
                 if joining_vowel != None and form[-1] != joining_vowel:
                     form += joining_vowel
@@ -247,8 +247,19 @@ def get_joining_vowel(language, first, second, form, addition):
         if first.is_prefix():
             return None
 
+        # Override joining vowels are always used
+        if "form-joiner" in first.morph:
+            return first.morph["form-joiner"]
+
+        # Some noun declensions use a standard joining vowel
+        if first.get_type() == "noun" and first.morph["declension"] in [4, 5] \
+            and (addition[0] in ["a", "o", "u"]): # or not helpers.is_vowel(addition[0])):
+                vowels = {4: "u", 5: "i"}
+                return vowels[first.morph["declension"]]
+
         # For verb suffixes using the present participle stem
-        if first.get_type() == "verb" and second.morph["derive-participle"] == "present":
+        if first.get_type() == "verb" and second.morph["derive-participle"] == "present" \
+            and not helpers.is_vowel(addition[0], y_is_vowel=True):
 
             # If the verb declares a joiner for this case, use it
             if "form-joiner-present" in first.morph:
@@ -264,7 +275,10 @@ def get_joining_vowel(language, first, second, form, addition):
                 return verb_vowels[first.morph["conjugation"]]
 
         # Return the base vowel otherwise
-        return "i"
+        if not helpers.is_vowel(addition[0], y_is_vowel=True):
+            return "i"
+        else:
+            return ""
 
     elif language == "greek":
 
@@ -272,7 +286,10 @@ def get_joining_vowel(language, first, second, form, addition):
         if first.is_prefix():
             return None
 
-        return "o"
+        if not helpers.is_vowel(addition[0], y_is_vowel=True):
+            return "o"
+        else:
+            return ""
 
     Logger.error("Invalid language, or language '" + language + "' failed to pick a joining vowel")
     return ""

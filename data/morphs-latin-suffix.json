@@ -300,8 +300,8 @@
     },
     {
         "key": "-culture",
-        "form-final": "iculture",
-        "form-stem": "icultur",
+        "form-final": "culture",
+        "form-stem": "cultur",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -323,7 +323,7 @@
         }],
         "tags": ["mass", "abstract"],
         "origin": "latin",
-        "notes": "consider expanding in line with 'menticulture'"
+        "notes": "Consider expanding in line with 'menticulture'"
     },
     {
         "key": "-esce",
