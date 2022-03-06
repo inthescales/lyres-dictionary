@@ -32,7 +32,7 @@
         "gloss": "[breaking] of %pl",
         "requires": {
             "follows": {
-                "not": { "has-tag": "fluid" }
+                "not": { "has-any-tags": ["fluid", "living"] }
             }  
         },
         "exception": [
@@ -303,6 +303,14 @@
                 "has-tag": "bodypart"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "bodypart-single"
+                }
+            },
+            "gloss": "[disease] or [disorder] of the %!sg"
+        }],
         "tags": ["count", "abstract"],
         "origin": "greek"
     },
@@ -692,7 +700,7 @@
                 "has-tag": "concrete"
             }
         },
-        "tags": ["uncountable", "count", "concrete"],
+        "tags": ["uncountable", "concrete"],
         "origin": "greek"
     },
     {

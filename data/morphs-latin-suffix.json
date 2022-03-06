@@ -69,8 +69,8 @@
         "derive-to": "noun",
         "declension": 2,
         "suffixes": [],
-        "gloss-noun": "a place for %pl",
-        "gloss-adj": "a place where %@ things are kept",
+        "gloss-noun": "[place] for %pl",
+        "gloss-adj": "[place] where %@ things are kept",
         "exception": [
            {
                "case": {
@@ -392,7 +392,7 @@
         "declension": 0,
         "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["count", "concrete", "no-gen"],
+        "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "latin"
     },
     {
@@ -747,7 +747,7 @@
                 "has-tag": "liquid"
             }
         },
-        "tags": ["count", "concrete", "living"],
+        "tags": ["uncountable", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -943,7 +943,7 @@
         "suffixes": ["-al", "-ia"],
         "derive-participle": "perfect",
         "gloss": "one who %3sg",
-        "tags": ["count", "concrete"],
+        "tags": ["uncountable", "concrete"],
         "origin": "latin"
     },
     {
@@ -956,7 +956,7 @@
         "derive-participle": "perfect",
         "declension": 2,
         "suffixes": [],
-        "gloss-verb": "a place where one %3sg",
+        "gloss-verb": "[place] where one %3sg",
         "tags": ["count", "concrete"],
         "origin": "latin"
     },
@@ -1075,7 +1075,7 @@
                 "has-tag": "transitive"
             }
         },
-        "tags": ["count", "abstract"],
+        "tags": ["uncountable", "abstract"],
         "origin": "latin"
     },
     {
@@ -1102,7 +1102,7 @@
         "declension": 3,
         "suffixes": ["-al", "-ary"],
         "gloss": "one who %3sg",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["uncountable", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1226,7 +1226,7 @@
         "declension": 0,
         "suffixes": ["-al"],
         "gloss": "one who %3sg",
-        "tags": ["count", "concrete", "no-gen"],
+        "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "latin"
     }
 ]

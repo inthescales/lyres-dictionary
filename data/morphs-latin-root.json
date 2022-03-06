@@ -2297,7 +2297,7 @@
         "form-stem": "ferrugin",
         "type": "noun",
         "declension": 3,
-        "gloss": "iron [rust]",
+        "gloss": "rust",
         "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     },
@@ -5481,7 +5481,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "undergo",
-        "tags": ["transitive"],
+        "tags": ["transitive", "no-prep"],
         "origin": "latin",
         "notes": "verb is a guess"
     },
@@ -6320,7 +6320,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "branch",
-        "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
         "origin": "latin"
     },
     {
@@ -7666,7 +7666,7 @@
         "type": "noun",
         "declension": 0,
         "gloss": "one",
-        "tags": ["count", "abstract"],
+        "tags": ["uncountable", "abstract"],
         "origin": "latin"
     },
     {

@@ -721,7 +721,7 @@
     },
     {
         "key": "hexis",
-        "form-stem": "hec",
+        "form-stem": "hect",
         "type": "noun",
         "gloss": "habit",
         "tags": ["count", "abstract"],
@@ -857,7 +857,8 @@
         "key": "analegein",
         "form-stem": "analec",
         "type": "verb",
-        "gloss": "gather up",
+        "gloss": "[gather] up",
+        "gloss-relative": "gather",
         "tags": ["transitive", "no-prep"],
         "origin": "greek"
     },
