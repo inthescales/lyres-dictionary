@@ -258,7 +258,7 @@ def get_joining_vowel(language, first, second, form, addition):
                 return vowels[first.morph["declension"]]
 
         # For verb suffixes using the present participle stem
-        if first.get_type() == "verb" and second.morph["derive-participle"] == "present" \
+        if first.get_type() == "verb" and not helpers.is_vowel(addition[0], y_is_vowel=True) and second.morph["derive-participle"] == "present" \
             and not helpers.is_vowel(addition[0], y_is_vowel=True):
 
             # If the verb declares a joiner for this case, use it

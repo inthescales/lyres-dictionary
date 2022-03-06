@@ -811,7 +811,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-ize",
+        "key": "-ize/greek",
         "form-stem": "iz",
         "form-final": "ize",
         "type": "derive",
@@ -824,7 +824,7 @@
         "origin": "greek"
     },
     {
-        "key": "greek-ize-adj",
+        "key": "-ize/greek/adj",
         "form-stem": "as",
         "form-final": "ize",
         "type": "derive",

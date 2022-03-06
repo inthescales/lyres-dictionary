@@ -61,7 +61,7 @@ def transform_word(word, morphothec):
         relational_suffixes = ["-ate", "-al", "-al", "-ary", "-ify"]
         numerical_suffixes = ["-al-number"]
     elif language == "greek":
-        relational_suffixes = ["-ic", "-y-relative", "-ize"]
+        relational_suffixes = ["-ic", "-y-relative", "-ize/greek"]
         numerical_suffixes = ["-ic-number", "-y-number"]
 
     choice = None
