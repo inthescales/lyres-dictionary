@@ -1238,11 +1238,12 @@
     },
     {
         "key": "phanai",
-        "form-stem": "phe",
+        "form-stem": "pha",
         "type": "verb",
         "gloss": "say",
         "tags": ["transitive"],
-        "origin": "greek"
+        "origin": "greek",
+        "notes": "consider 'phe' as alternate form, as in 'pheme'"
     },
     {
         "key": "phainein",

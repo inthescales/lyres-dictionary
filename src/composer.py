@@ -143,7 +143,7 @@ def get_definition(word):
                         inflected = inflection.inflect(definition, "sg")
                         article = helpers.indefinite_article_for(inflected)
                         words[index] = article + " " + inflected
-                    elif last_morph.has_tag("mass"):
+                    elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
                         words[index] = inflection.inflect(definition, "mass")
                     elif last_morph.has_tag("singleton"):
                         article = "the"
@@ -162,7 +162,7 @@ def get_definition(word):
                 elif word == "%pl":
                     if last_morph.has_tag("count"):
                         words[index] = inflection.inflect(definition, "pl")
-                    elif last_morph.has_tag("mass"):
+                    elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
                         words[index] = inflection.inflect(definition, "mass")
                     elif last_morph.has_tag("singleton"):
                         article = "the"
@@ -226,7 +226,7 @@ def get_definition(word):
 
         if morph.has_tag("count"):
             return "a " +  inflected
-        elif morph.has_tag("mass"):
+        elif morph.has_tag("mass") or last_morph.has_tag("uncountable"):
             return inflected
         elif morph.has_tag("singleton"):
             return "the " + inflected

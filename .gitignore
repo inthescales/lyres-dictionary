@@ -11,7 +11,7 @@ logs
 
 # Ad-hoc tools
 helpers
-paradigm.html
+out.html
 
 # Deployment files
 creds.json

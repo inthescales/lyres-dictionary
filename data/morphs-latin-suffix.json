@@ -6,6 +6,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 3,
         "suffixes": ["-ity", "-ize"],
         "gloss": "of or relating to %pl",
         "gloss-relative": "%@",
@@ -54,35 +55,9 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 3,
         "gloss": "having %@",
         "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    {
-        "key": "-ian-animal",
-        "form-final": "ian",
-        "form-stem": "ian",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": [],
-        "gloss": "having the nature of %sg",
-        "requires": {
-            "follows": {
-                "has-tag": "animal"
-            }
-        },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": "i"
-                    }
-                },
-                "form-stem": "an",
-                "form-final": "an"
-            }
-        ],
         "origin": "latin"
     },
     {
@@ -92,6 +67,7 @@
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
+        "declension": 2,
         "suffixes": [],
         "gloss-noun": "a place for %pl",
         "gloss-adj": "a place where %@ things are kept",
@@ -106,6 +82,7 @@
                "form-stem": "iari"
            }
         ],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -115,6 +92,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "pertaining to %pl",
         "gloss-relative": "%@",
@@ -184,6 +162,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ion", "-ure"],
         "gloss": "having %pl",
         "requires": {
@@ -229,6 +208,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "verb",
+        "conjugation": 1,
         "derive-participle": "perfect",
         "conjugation": 1,
         "gloss": "%@ repeatedly or at length",
@@ -289,6 +269,7 @@
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "present",
+        "declension": 3,
         "suffixes": ["-ous", "-ity"],
         "gloss": "inclined toward %part",
         "requires": {
@@ -296,7 +277,7 @@
                 "has-conjugation": 2
             }
         },
-        "tags": ["non-final"],
+        "tags": ["mass", "non-final"],
         "origin": "latin"
     },
     {
@@ -306,6 +287,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
+        "declension": 3,
         "suffixes": ["-ity", "-ize"],
         "derive-participle": "present",
         "gloss": "able to be %ppart",
@@ -323,6 +305,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 1,
         "suffixes": ["-al", "-ist"],
         "gloss": "the cultivation of %pl",
         "requires": {
@@ -343,48 +326,6 @@
         "notes": "consider expanding in line with 'menticulture'"
     },
     {
-        "key": "-e",
-        "form-final": "e",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "suffixes": [],
-        "gloss": "%sg",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": ["ar", "ch", "ct", "er", "lm", "mb", "mn", "mp", "nd", "nt", "ns", "or", "rb", "rc", "rd", "rm", "rn", "rs", "rt", "sc", "sm", "st"]
-                    }
-                },
-                "form-final": ""
-            }  
-        ],
-        "tags": ["no-joiner", "no-gen", "rare"],
-        "origin": "latin"
-    },
-    {
-        "key": "-e/adj",
-        "form-final": "e",
-        "type": "derive",
-        "derive-from": "adj",
-        "derive-to": "adj",
-        "suffixes": [],
-        "gloss": "%@",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": ["mb", "mp", "nt", "ns", "rc", "rs", "rt"]
-                    }
-                },
-                "form-final": ""
-            }
-        ],
-        "tags": ["rare", "no-gen"],
-        "origin": "latin"
-    },
-    {
         "key": "-esce",
         "form-stem-present": "esc",
         "form-stem-perfect": "esc",
@@ -393,8 +334,8 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",
+        "conjugation": 3,
         "suffixes": ["-nt", "-nce", "-ate"],
-        "conjugation": 0,
         "gloss": "[become] %@",
         "origin": "latin"
     },
@@ -407,7 +348,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "verb",
-        "conjugation": 0,
+        "conjugation": 3,
         "suffixes": ["-nt", "-nce", "-ate"],
         "derive-participle": "present",
         "requires": {
@@ -431,7 +372,7 @@
         "derive-from": "noun",
         "derive-to": "verb",
         "suffixes": ["-nt", "-nce"],
-        "conjugation": 0,
+        "conjugation": 3,
         "gloss": "[put] forth %pl",
         "requires": {
             "follows": {
@@ -448,6 +389,7 @@
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "present",
+        "declension": 0,
         "suffixes": [],
         "gloss": "one who %3sg",
         "tags": ["count", "concrete", "no-gen"],
@@ -460,6 +402,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 2,
         "suffixes": [],
         "gloss": "[place] where %pl are grown",
         "requires": {
@@ -477,6 +420,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 0,
         "suffixes": ["-al", "-ous", "-ism"],
         "gloss": "the act of killing %pl",
         "requires": {
@@ -494,6 +438,7 @@
                 "gloss": "killing %pl"
             }
         ],
+        "tags": ["uncountable"],
         "origin": "latin"
     },
     {
@@ -503,13 +448,15 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 0,
         "suffixes": [],
-        "gloss": "a member of the %sg family",
+        "gloss": "[member] of the %!sg family",
         "requires": {
             "follows": {
                 "has-tag": "animal"
             }
         },
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -520,6 +467,7 @@
         "derive-from": "verb",
         "derive-to": "adj",
         "derive-participle": "present",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "inclined %inf",
         "requires": {
@@ -546,6 +494,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 3,
         "suffixes": ["-ity", "-al", "-ous"],
         "gloss": "having the shape of %sg",
         "requires": {
@@ -595,7 +544,7 @@
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "verb",
-        "conjugation": 3,
+        "conjugation": 1,
         "gloss-noun": "[make] %sg",
         "gloss-adj": "[make] %@",
         "gloss-relative": "[make] %@",
@@ -664,6 +613,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 3,
         "suffixes": ["-ity"],
         "gloss": "having the nature of %sg",
         "requires": {
@@ -680,6 +630,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
+        "declension": 3,
         "suffixes": ["-ity"],
         "derive-participle": "perfect",
         "gloss": "able %inf",
@@ -700,6 +651,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "having the nature of %sg",
         "requires": {
@@ -715,6 +667,15 @@
                     }
                 },
                 "gloss": "of, pertaining to, or inhabiting %pl"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "i"
+                    }
+                },
+                "form-final": "an",
+                "form-stem": "an"
             }
         ],
         "origin": "latin"
@@ -726,6 +687,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": ["-al", "-ary", "-ous-full"],
         "derive-participle": "perfect",
         "gloss-link": "%part",
@@ -748,6 +710,7 @@
                 "gloss": "the condition of %@"
             }
         ],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -757,6 +720,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": [],
         "derive-participle": "present",
         "gloss": "the quality of %part",
@@ -765,6 +729,7 @@
                 "has-conjugation": 2
             }
         },
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -774,6 +739,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 0,
         "suffixes": [],
         "gloss": "one who drinks %pl",
         "requires": {
@@ -781,6 +747,7 @@
                 "has-tag": "liquid"
             }
         },
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -791,8 +758,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
-        "suffixes": ["-nt", "-nce"],
         "conjugation": 3,
+        "suffixes": ["-nt", "-nce"],
         "gloss": "[have] command over %pl",
         "exception": [
             {
@@ -814,8 +781,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "declension": 3,
+        "suffixes": [],
         "gloss": "the practice of %@",
         "tags": ["mass", "abstract", "no-gen"],
         "origin": "latin"
@@ -827,8 +794,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "declension": 3,
+        "suffixes": [],
         "gloss": "[one] engaged in %@",
         "tags": ["count", "concrete", "living", "person", "no-gen"],
         "origin": "latin"
@@ -840,8 +807,10 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": ["-al", "-ary", "-ous"],
         "gloss": "the quality of being %@",
+        "tags": ["mass", "abstract"], 
         "origin": "latin"
     },
     {
@@ -851,9 +820,10 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": ["-al", "-ary", "-ous"],
         "gloss": "the state or quality of being %sg",
-        "tags": ["rare"],
+        "tags": ["mass", "abstract", "rare"],
         "origin": "latin"
     },
     {
@@ -863,6 +833,7 @@
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": ["-ous"],
         "gloss": "the quality of being %sg",
         "exception": [{
@@ -894,15 +865,17 @@
             },
             "gloss": "the quality of %part"
         }],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
         "key": "-ive",
-        "form-final": "ive",
         "form-stem": "iv",
+        "form-final": "ive",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "derive-participle": "perfect",
         "gloss": "given to %part",
@@ -966,10 +939,11 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": ["-al", "-ia"],
         "derive-participle": "perfect",
         "gloss": "one who %3sg",
-        "tags": ["count"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -979,9 +953,11 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "derive-participle": "perfect",
+        "declension": 2,
+        "suffixes": [],
         "gloss-verb": "a place where one %3sg",
+        "tags": ["count", "concrete"],
         "origin": "latin"
     },
     {
@@ -991,10 +967,11 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["-al", "-ous-full"],
         "derive-participle": "perfect",
+        "declension": 2,
+        "suffixes": ["-al", "-ous-full"],
         "gloss": "the state of %part",
-        "tags": ["mass"],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1004,6 +981,7 @@
         "type": "derive",
         "derive-from": ["noun", "verb"],
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "%@",
         "exception": [
@@ -1034,6 +1012,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "full of %pl",
         "origin": "latin"
@@ -1045,6 +1024,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "made of or resembling %pl",
         "requires": {
@@ -1071,10 +1051,12 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 1,
         "suffixes": ["-al", "-ary"],
         "derive-participle": "present",
         "gloss-link": "the state of %part",
         "gloss-final": "the process, state, or quality of %part",
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1084,6 +1066,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 2,
         "suffixes": [],
         "derive-participle": "present",
         "gloss": "something that must be %ppart",
@@ -1092,6 +1075,7 @@
                 "has-tag": "transitive"
             }
         },
+        "tags": ["count", "abstract"],
         "origin": "latin"
     },
     {
@@ -1101,6 +1085,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
+        "declension": 3,
         "suffixes": ["-al", "-ary"],
         "derive-participle": "present",
         "gloss": "%part",
@@ -1114,8 +1099,10 @@
         "derive-participle": "present",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 3,
         "suffixes": ["-al", "-ary"],
         "gloss": "one who %3sg",
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     },
     {
@@ -1126,7 +1113,8 @@
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "perfect",
-        "gloss": "a woman who %3sg",
+        "declension": 3,
+        "gloss": "[woman] who %3sg",
         "exception": [{
             "case": {
                 "follows": {
@@ -1136,7 +1124,7 @@
             "form-final": ["rix", "rice"],
             "form-stem": "ric"
         }],
-        "tags": ["count", "no-joiner", "rare"],
+        "tags": ["count", "concrete", "living", "person", "no-joiner", "rare"],
         "origin": "latin"
     },
     {
@@ -1147,6 +1135,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "tending %inf",
         "requires": {
@@ -1165,6 +1154,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
+        "declension": 12,
         "suffixes": ["-ity"],
         "gloss": "%part",
         "tags": ["rare"],
@@ -1178,6 +1168,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 1,
         "suffixes": ["-al"],
         "gloss": "the result of %part",
         "exception": [
@@ -1190,7 +1181,7 @@
                 "gloss": "the arrangement of one's %@"
             }
         ],
-        "tags": ["mass"],
+        "tags": ["mass", "abstract"],
         "origin": "latin"
     },
     {
@@ -1200,6 +1191,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
+        "declension": 1,
         "suffixes": ["-al"],
         "exception": [
             {
@@ -1220,7 +1212,7 @@
         }
         ],
         "gloss": "the quality of %@",
-        "tags": ["no-gen"],
+        "tags": ["mass", "abstract", "no-gen"],
         "origin": "latin",
         "notes": "general adjectivizing suffix"
     },
@@ -1231,6 +1223,7 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "declension": 0,
         "suffixes": ["-al"],
         "gloss": "one who %3sg",
         "tags": ["count", "concrete", "no-gen"],

@@ -27,12 +27,35 @@
         "origin": "latin"
     },
     {
+        "key": "acu",
+        "form-stem": "acu",
+        "type": "noun",
+        "declension": 4,
+        "gloss": "needle",
+        "gloss-tool": "pierce",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    },
+    {
+        "key": "acuere",
+        "form-stem-present": "acu",
+        "form-stem-perfect": "acut",
+        "form-final": "acute",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "sharpen",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "This form is classical. Was 'acuare' in later sources apparently"
+    },
+    {
         "key": "acuta",
         "form-stem": "acut",
         "type": "adj",
         "declension": 12,
         "gloss": "pointed",
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "later this could be generated from acuere maybe."
     },
     {
         "key": "adjutare",
@@ -7186,6 +7209,17 @@
         "origin": "latin"
     },
     {
+        "key": "stupere",
+        "form-stem-present": "stup",
+        "form-final": "stupe",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] senseless",
+        "gloss-state": "senseless",
+        "tags": ["intransitive", "stative", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "suadere",
         "form-stem-present": "suad",
         "form-stem-perfect": "suas",
@@ -7481,8 +7515,7 @@
         "gloss": "[be] inactive",
         "gloss-state": "inactive",
         "tags": ["intransitive", "stative", "no-prep"],
-        "origin": "latin",
-        "notes": "no existing perfect"
+        "origin": "latin"
     },
     {
         "key": "torquere",

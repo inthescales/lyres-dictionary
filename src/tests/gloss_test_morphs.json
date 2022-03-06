@@ -104,6 +104,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 3,
         "gloss": "pertaining to %pl",
         "gloss-relative": "%@",
         "origin": "latin"
@@ -115,6 +116,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
+        "declension": 3,
         "gloss": "having %@",
         "tags": ["no-gen"],
         "origin": "latin"
@@ -126,7 +128,9 @@
         "type": "derive",
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
+        "declension": 3,
         "gloss": "the quality of being %sg",
+        "tags": ["uncountable", "abstract"],
         "origin": "latin"
     },
     {
@@ -139,6 +143,7 @@
         "derive-to": "verb",
         "conjugation": 0,
         "gloss": "[become] %@",
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {
@@ -149,6 +154,7 @@
         "derive-from": "verb",
         "derive-to": "adj",
         "derive-participle": "present",
+        "declension": 3,
         "gloss": "%part",
         "origin": "latin"
     },
@@ -160,6 +166,7 @@
         "derive-from": "verb",
         "derive-to": "adj",
         "derive-participle": "present",
+        "declension": 3,
         "gloss": "able to be %ppart",
         "origin": "latin"
     },
@@ -171,6 +178,7 @@
         "derive-from": "verb",
         "derive-to": "adj",
         "derive-participle": "perfect",
+        "declension": 3,
         "gloss": "able %inf",
         "origin": "latin"
     },
@@ -182,8 +190,9 @@
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "perfect",
+        "declension": 3,
         "gloss": "one who %3sg",
-        "tags": ["count"],
+        "tags": ["uncountable", "concrete"],
         "origin": "latin"
     },
     {
@@ -194,8 +203,10 @@
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "perfect",
+        "declension": 3,
         "gloss-link": "%part",
         "gloss-final": "the act of %part",
+        "tags": ["uncountable", "abstract"],
         "origin": "latin"
     },
     {
@@ -218,6 +229,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
+        "conjugation": 1,
         "gloss": "[use] %sg",
         "requires": {
             "follows": {
@@ -232,6 +244,7 @@
             },
             "gloss": "%(gloss-tool)"
         }],
+        "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
     {

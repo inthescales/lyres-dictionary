@@ -1,356 +1,410 @@
-    # Can't think of a good gloss
-    {
-        "key": "varicare",
-        "link-present": "varica",
-        "link-perfect": "varicat",
-        "final": "varicate",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "go",
-        "tags": ["intransitive"],
-        "origin": "latin"
-    },
+# Holding off on these for now
 
-    # Need to fix the inflection on the singular here
-    {
-        "key": "icule",
-        "final": ["icule", "icle"],
-        "link": "icul",
-        "type": "derive",
-        "from": "noun",
-        "to": "noun",
-        "suffixes": ["al", "ary"],
-        "gloss": "a small %@",
-        "requires": {
-            "follows": {
-                "has-all-tags": ["count", "concrete"]
-            }
-        },
-        "exception": [{
+# -e cannot be properly said to have a count/mass, concrete/abstract distinction,
+# since it does not actually bear any semantic information – it represents a sound
+# transformation. This ultimately challenges the current system where words can
+# be unambiguously represented as a list of morphs.
+
+{
+    "key": "-e",
+    "form-stem": "",
+    "form-final": "e",
+    "type": "derive",
+    "derive-from": "noun",
+    "derive-to": "noun",
+    "declension": 0,
+    "suffixes": [],
+    "gloss": "%sg",
+    "exception": [
+        {
             "case": {
                 "follows": {
-                    "has-suffix": "ic"
+                    "has-suffix": ["ar", "ch", "ct", "er", "lm", "mb", "mn", "mp", "nd", "nt", "ns", "or", "rb", "rc", "rd", "rm", "rn", "rs", "rt", "sc", "sm", "st"]
                 }
             },
-            "final": ["ule", "le"],
-            "link": "ul"
-        }],
-        "tags": ["count", "concrete"],
-        "origin": "latin",
-        "notes": "find a way to make this plural..."
-    },
-    
-    # The word order doesn't work out right
-    {
-        "key": "in-negative",
-        "link": "in",
-        "type": "prefix",
-        "gloss": "not %@",
-        "tags": ["no-gen"],
-        "origin": "latin"
-    },
-    
-    # bad results
-    {
-        "base": "ism",
-        "link": "ism",
-        "type": "derive",
-        "from": "noun,adj",
-        "to": "noun",
-        "definition": "the practice, system, or doctrine of %@",
-        "origin": "latin"
-    },
-    {
-        "base": "licit",
-        "link-present": "licit",
-        "type": "adj",
-        "definition": "permitted",
-        "origin": "latin"
-    },
+            "form-final": ""
+        }  
+    ],
+    "tags": ["no-joiner", "no-gen", "rare"],
+    "origin": "latin"
+},
+{
+    "key": "-e/adj",
+    "form-stem": "",
+    "form-final": "e",
+    "type": "derive",
+    "derive-from": "adj",
+    "derive-to": "adj",
+    "declension": 0,
+    "suffixes": [],
+    "gloss": "%@",
+    "exception": [
+        {
+            "case": {
+                "follows": {
+                    "has-suffix": ["mb", "mp", "nt", "ns", "rc", "rs", "rt"]
+                }
+            },
+            "form-final": ""
+        }
+    ],
+    "tags": ["rare", "no-gen"],
+    "origin": "latin"
+},
 
-    {
-        "base": "ment",
-        "link": "ment",
-        "type": "derive",
-        "from": "verb",
-        "to": "noun",
-        "participle-type": "present",
-        "definition": "the act of %@",
-        "origin": "latin"
-    },
-    
-    # not sure how to use
-    {
-        "key": "pia",
-        "link": "pi",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "pious",
-        "origin": "latin"
-    },
-    {
-        "base": "cubare",
-        "link-present": "cuba",
-        "link-perfect": "cubat",
-        "link-verb": "cubate",
-        "type": "verb",
-        "definition": "to lie",
-        "tags": ["intransitive"],
-        "origin": "latin"
-    },
-    {
-        "base": "merx",
-        "link": "merci",
-        "type": "noun",
-        "definition": "wares",
-        "tags": ["mass", "concrete"],
-        "origin": "latin"
-    },
-    {
-        "key": "kalendarium",
-        "link": "calendr",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "calendar",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    },
-    {
-        "base": "discipulus",
-        "link": "discipl",
-        "type": "noun",
-        "definition": "student",
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
-    {
-        "key": "regere-rule",
-        "link-present": "rege",
-        "link-perfect": "rect",
-        "final": "reign",
-        "type": "verb",
-        "definition": "to rule",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    
-    {
-        "key": "solere",
-        "link-present": "sole",
-        "link-perfect": "solit",
-        "final": "sole",
-        "type": "verb",
-        "definition": "to accustomed to",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    
-    # Depends on technical changes
-    
-        # no valid perfect that I can see
-    {
-        "key": "ferire",
-        "link-present": "feri",
-        "link-perfect": "",
-        "final": "fere",
-        "type": "verb",
-        "definition": "to strike",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    {
-        "key": "fervere",
-        "link-present": "ferve",
-        "link-perfect": "-",
-        "final": "ferve",
-        "type": "verb",
-        "definition": "to boil",
-        "tags": ["intransitive"],
-        "origin": "latin"
-    },
-    {
-        "key": "fari",
-        "link-present": "fa",
-        "link-perfect": "f",
-        "final": "face",
-        "type": "verb",
-        "definition": "to speak",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    
-    # probably unnecessary
-    {
-        "key": "edificare",
-        "link-present": "edifica",
-        "link-perfect": "edificat",
-        "final": "edify",
-        "type": "verb",
-        "definition": "to build",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
+# Can't think of a good gloss
+{
+    "key": "varicare",
+    "link-present": "varica",
+    "link-perfect": "varicat",
+    "final": "varicate",
+    "type": "verb",
+    "conjugation": 1,
+    "gloss": "go",
+    "tags": ["intransitive"],
+    "origin": "latin"
+},
 
-    {
-        "base": "ebria",
-        "link": "ebri",
-        "type": "adjective",
-        "definition": "drunk",
-        "origin": "latin"
+# Need to fix the inflection on the singular here
+{
+    "key": "icule",
+    "final": ["icule", "icle"],
+    "link": "icul",
+    "type": "derive",
+    "from": "noun",
+    "to": "noun",
+    "suffixes": ["al", "ary"],
+    "gloss": "a small %@",
+    "requires": {
+        "follows": {
+            "has-all-tags": ["count", "concrete"]
+        }
     },
-    
-    {
-        "key": "epigramma",
-        "link": "epigramm",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "epigram",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    },
-    
-    # Uninteresting
-    
-    {
-        "key": "constantia",
-        "link": "constanti",
-        "type": "adj",
-        "definition": "constant",
-        "origin": "latin"
-    },
-    
-    # Removed for decency
-
-    {
-        "base": "nigra",
-        "link": "nigr",
-        "type": "adj",
-        "definition": "black",
-        "origin": "latin"
-    },
-    
-        # put this one back in w/ word filter
-    {
-        "key": "rapere",
-        "link-present": "rapi",
-        "link-perfect": "rapt",
-        "final": "rape",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "seize",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-type": "prep"
-                    }
-                },
-                "link-perfect": "rept",
-                "final": "rept"
+    "exception": [{
+        "case": {
+            "follows": {
+                "has-suffix": "ic"
             }
-        ],
-        "tags": ["transitive"],
-        "origin": "latin",
-    },
-    
-    # MAYBE JUST FOR VERBS?
-    {
-        "base": "ist",
-        "link": "ist",
-        "type": "derive",
-        "from": "noun,adj",
-        "to": "noun",
-        "definition": "one who does or makes %@",
-        "origin": "latin"
-    },
-    
-    # Maybe do something about different meaning per prep
-    {
-        "key": "stinguere",
-        "link-present": "stingue",
-        "link-perfect": "stinct",
-        "final": "stinguish",
-        "type": "verb",
-        "definition": "to prick",
-        "tags": ["transitive"],
-        "origin": "latin"
-    },
-    
-    # ante -> anticipate
-    
-    
-    {
-        "base": "infra",
-        "type": "prep",
-        "definition-verb": "%@ below",
-        "definition-noun": "below %sg",
-        "origin": "latin"
-    },
-    
-    # Doesn't work with pattern
-    
+        },
+        "final": ["ule", "le"],
+        "link": "ul"
+    }],
+    "tags": ["count", "concrete"],
+    "origin": "latin",
+    "notes": "find a way to make this plural..."
+},
+
+# The word order doesn't work out right
+{
+    "key": "in-negative",
+    "link": "in",
+    "type": "prefix",
+    "gloss": "not %@",
+    "tags": ["no-gen"],
+    "origin": "latin"
+},
+
+# bad results
+{
+    "base": "ism",
+    "link": "ism",
+    "type": "derive",
+    "from": "noun,adj",
+    "to": "noun",
+    "definition": "the practice, system, or doctrine of %@",
+    "origin": "latin"
+},
+{
+    "base": "licit",
+    "link-present": "licit",
+    "type": "adj",
+    "definition": "permitted",
+    "origin": "latin"
+},
+
+{
+    "base": "ment",
+    "link": "ment",
+    "type": "derive",
+    "from": "verb",
+    "to": "noun",
+    "participle-type": "present",
+    "definition": "the act of %@",
+    "origin": "latin"
+},
+
+# not sure how to use
+{
+    "key": "pia",
+    "link": "pi",
+    "type": "adj",
+    "declension": 12,
+    "gloss": "pious",
+    "origin": "latin"
+},
+{
+    "base": "cubare",
+    "link-present": "cuba",
+    "link-perfect": "cubat",
+    "link-verb": "cubate",
+    "type": "verb",
+    "definition": "to lie",
+    "tags": ["intransitive"],
+    "origin": "latin"
+},
+{
+    "base": "merx",
+    "link": "merci",
+    "type": "noun",
+    "definition": "wares",
+    "tags": ["mass", "concrete"],
+    "origin": "latin"
+},
+{
+    "key": "kalendarium",
+    "link": "calendr",
+    "type": "noun",
+    "declension": 1,
+    "gloss": "calendar",
+    "tags": ["count", "abstract"],
+    "origin": "latin"
+},
+{
+    "base": "discipulus",
+    "link": "discipl",
+    "type": "noun",
+    "definition": "student",
+    "tags": ["count", "concrete"],
+    "origin": "latin"
+},
+{
+    "key": "regere-rule",
+    "link-present": "rege",
+    "link-perfect": "rect",
+    "final": "reign",
+    "type": "verb",
+    "definition": "to rule",
+    "tags": ["transitive"],
+    "origin": "latin"
+},
+
+{
+    "key": "solere",
+    "link-present": "sole",
+    "link-perfect": "solit",
+    "final": "sole",
+    "type": "verb",
+    "definition": "to accustomed to",
+    "tags": ["transitive"],
+    "origin": "latin"
+},
+
+# Depends on technical changes
+
+    # no valid perfect that I can see
+{
+    "key": "ferire",
+    "link-present": "feri",
+    "link-perfect": "",
+    "final": "fere",
+    "type": "verb",
+    "definition": "to strike",
+    "tags": ["transitive"],
+    "origin": "latin"
+},
+{
+    "key": "fervere",
+    "link-present": "ferve",
+    "link-perfect": "-",
+    "final": "ferve",
+    "type": "verb",
+    "definition": "to boil",
+    "tags": ["intransitive"],
+    "origin": "latin"
+},
+{
+    "key": "fari",
+    "link-present": "fa",
+    "link-perfect": "f",
+    "final": "face",
+    "type": "verb",
+    "definition": "to speak",
+    "tags": ["transitive"],
+    "origin": "latin"
+},
+
+# probably unnecessary
+{
+    "key": "edificare",
+    "link-present": "edifica",
+    "link-perfect": "edificat",
+    "final": "edify",
+    "type": "verb",
+    "definition": "to build",
+    "tags": ["transitive"],
+    "origin": "latin"
+},
+
+{
+    "base": "ebria",
+    "link": "ebri",
+    "type": "adjective",
+    "definition": "drunk",
+    "origin": "latin"
+},
+
+{
+    "key": "epigramma",
+    "link": "epigramm",
+    "type": "noun",
+    "declension": 1,
+    "gloss": "epigram",
+    "tags": ["count", "abstract"],
+    "origin": "latin"
+},
+
+# Uninteresting
+
+{
+    "key": "constantia",
+    "link": "constanti",
+    "type": "adj",
+    "definition": "constant",
+    "origin": "latin"
+},
+
+# Removed for decency
+
+{
+    "base": "nigra",
+    "link": "nigr",
+    "type": "adj",
+    "definition": "black",
+    "origin": "latin"
+},
+
+    # put this one back in w/ word filter
+{
+    "key": "rapere",
+    "link-present": "rapi",
+    "link-perfect": "rapt",
+    "final": "rape",
+    "type": "verb",
+    "conjugation": 3,
+    "gloss": "seize",
+    "exception": [
         {
-        "base": "mars",
-        "link": "marti",
-        "type": "noun",
-        "definition": "mars",
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
-        {
-        "base": "venus",
-        "link": "venere",
-        "type": "noun",
-        "definition": "venus",
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    },
-    
-    # Old french is similar but may use different prefixes
-    
+            "case": {
+                "follows": {
+                    "has-type": "prep"
+                }
+            },
+            "link-perfect": "rept",
+            "final": "rept"
+        }
+    ],
+    "tags": ["transitive"],
+    "origin": "latin",
+},
+
+# MAYBE JUST FOR VERBS?
+{
+    "base": "ist",
+    "link": "ist",
+    "type": "derive",
+    "from": "noun,adj",
+    "to": "noun",
+    "definition": "one who does or makes %@",
+    "origin": "latin"
+},
+
+# Maybe do something about different meaning per prep
+{
+    "key": "stinguere",
+    "link-present": "stingue",
+    "link-perfect": "stinct",
+    "final": "stinguish",
+    "type": "verb",
+    "definition": "to prick",
+    "tags": ["transitive"],
+    "origin": "latin"
+},
+
+# ante -> anticipate
+
+
+{
+    "base": "infra",
+    "type": "prep",
+    "definition-verb": "%@ below",
+    "definition-noun": "below %sg",
+    "origin": "latin"
+},
+
+# Doesn't work with pattern
+
     {
-        "base": "avouer",
-        "link-present": "avowa",
-        "link-perfect": "contat",
-        "link-verb": "avow",
-        "type": "verb",
-        "definition": "to tell",
-        "tags": ["transitive"],
-        "origin": "old french"
-    },
+    "base": "mars",
+    "link": "marti",
+    "type": "noun",
+    "definition": "mars",
+    "tags": ["count", "concrete"],
+    "origin": "latin"
+},
     {
-        "base": "conter",
-        "link-present": "counta",
-        "link-perfect": "contat",
-        "link-verb": "count",
-        "type": "verb",
-        "definition": "to tell",
-        "tags": ["transitive"],
-        "origin": "old french"
-    }
-    {
-        "key": "issir",
-        "link-verb": "issue",
-        "origin": "old french"
-    }
-    lavish,
-    sembler (dissemble, resemble),
-    plentif - plenteous,
-    pleasant,
-    valuer,
-    pursue,
-    finer (finance),
-    regard,
-    lease / release / lessor,
-    vengier,
-    relief / relieve,
-    surpass,
-    briller,
-    rely,
-    reprieve / prendre,
-    endurer,
-    surveillance,
-    remembrer,
-    rampant,
-    
-    
+    "base": "venus",
+    "link": "venere",
+    "type": "noun",
+    "definition": "venus",
+    "tags": ["count", "concrete"],
+    "origin": "latin"
+},
+
+# Old french is similar but may use different prefixes
+
+{
+    "base": "avouer",
+    "link-present": "avowa",
+    "link-perfect": "contat",
+    "link-verb": "avow",
+    "type": "verb",
+    "definition": "to tell",
+    "tags": ["transitive"],
+    "origin": "old french"
+},
+{
+    "base": "conter",
+    "link-present": "counta",
+    "link-perfect": "contat",
+    "link-verb": "count",
+    "type": "verb",
+    "definition": "to tell",
+    "tags": ["transitive"],
+    "origin": "old french"
+}
+{
+    "key": "issir",
+    "link-verb": "issue",
+    "origin": "old french"
+}
+lavish,
+sembler (dissemble, resemble),
+plentif - plenteous,
+pleasant,
+valuer,
+pursue,
+finer (finance),
+regard,
+lease / release / lessor,
+vengier,
+relief / relieve,
+surpass,
+briller,
+rely,
+reprieve / prendre,
+endurer,
+surveillance,
+remembrer,
+rampant,
+
+

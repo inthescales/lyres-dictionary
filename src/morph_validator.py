@@ -39,6 +39,7 @@ valid_tags = [
     "count",                    # Noun countability - countable
     "mass",                     # Noun countability - mass
     "singleton",                # Noun countability - singleton, e.g. "The Earth"
+    "uncountable",              # Noun countability - generically uncountable, will never use articles
     "concrete",                 # Noun actuality - a concrete object in the world
     "abstract",                 # Noun actuality - something no physically in the world
     "bounded",                  # Noun actuality - optionally for abstracts, does it have a bounded aspect (e.g. a length of time)
@@ -110,13 +111,23 @@ def validate_morph(morph):
 
     morph_type = morph["type"]
 
-    if morph_type == "noun":
+    derive_type = None
+    if morph_type == "derive": derive_type = morph["derive-to"]
+
+    # Derives requirements (not exclusive with root type requirements)  
+    if morph_type == "derive":
+        if not ("derive-from" in morph and "derive-to" in morph):
+            record_error(" - derive morphs must have 'derive-from' and 'derive-to'")
+            return False
+
+    # Root and prefix type requirements
+    if morph_type == "noun" or derive_type == "noun":
         if morph["origin"] == "latin":
             if not "form-stem" in morph or not "declension" in morph:
                 record_error(" - noun must have 'form-stem' and 'declension'")
                 return False
-            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
-                record_error(" - noun must have tag 'count', 'mass', or 'singleton'")
+            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
+                record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
                 return False
             elif morph["declension"] not in [0, 1, 2, 3, 4, 5]:
                 record_error(" - invalid declension '" + str(morph["declension"]) + "'")
@@ -125,11 +136,11 @@ def validate_morph(morph):
             if not "form-stem" in morph:
                 record_error(" - noun must have 'form-stem'")
                 return False
-            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"])):
-                record_error(" - noun must have tag 'count', 'mass', or 'singleton'")
+            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
+                record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
                 return False
 
-    elif morph_type == "adj":
+    elif morph_type == "adj" or derive_type == "adj":
         if morph["origin"] == "latin":
             if not "form-stem" in morph or not "declension" in morph:
                 record_error(" - adjective must have 'form-stem' and 'declension'")
@@ -142,20 +153,17 @@ def validate_morph(morph):
                 record_error(" - adjective must have 'form-stem'")
                 return False
 
-    elif morph_type == "verb":
+    elif morph_type == "verb" or derive_type == "verb":
         if morph["origin"] == "latin":
-            if not ("form-stem-present" in morph and "form-final" in morph and "conjugation" in morph):
-                record_error(" - verbs require 'form-stem-present', 'form-stem-perfect', 'final', and 'conjugation'")
+            if not (("form-stem-present" in morph or "form-stem" in morph) \
+                 and ("form-final" or "form-stem" in morph) in morph \
+                 and "conjugation" in morph):
+                record_error(" - verbs require 'form-stem-present', 'form-stem-perfect', 'form-final', and 'conjugation'")
                 return False
 
             if morph["conjugation"] not in [0, 1, 2, 3, 4]:
                 record_error(" - invalid conjugation '" + str(morph["conjugation"]) + "'")
                 return False
-
-    elif morph_type == "derive":
-        if not ("derive-from" in morph and "derive-to" in morph):
-            record_error(" - derive morphs must have 'derive-from' and 'derive-to'")
-            return False
 
     elif morph_type == "prefix":
         if not ("prefix-on" in morph):
