@@ -1132,7 +1132,7 @@
         "gloss": "distinguish",
         "tags": ["transitive"],
         "origin": "latin",
-        "notes": "verb: secret vs excrete vs discern"
+        "notes": "verb: secret vs excrete vs discern. Gloss fitting discern, not excrement"
     },    
     {
         "key": "certare",
@@ -5618,7 +5618,7 @@
         "form-final": "per",
         "type": "verb",
         "conjugation": 0,
-        "gloss": "pass away",
+        "gloss": "[pass] away",
         "tags": ["intransitive"],
         "origin": "latin"
     },
@@ -7749,7 +7749,7 @@
         "type": "verb",
         "conjugation": 0,
         "gloss": "wish",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "latin"
     },
     {

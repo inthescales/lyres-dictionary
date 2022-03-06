@@ -538,7 +538,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ician", "-ic-def", "-ia-def"],
+        "suffixes": ["-ician", "-ic-def", "-y-def"],
         "gloss": "the medical treatment of %pl",
         "requires": {
             "follows": {
@@ -765,7 +765,8 @@
         "derive-to": "noun",
         "suffixes": ["-ic"],
         "gloss": "one who %3sg",
-        "exception": [{
+        "exception": [
+            {
             "case": {
                 "follows": {
                     "has-suffix": ["a", "e", "i", "o", "u", "y"]
@@ -773,7 +774,17 @@
             },
             "form-stem": "t",
             "form-final": "te"
-        }],
+            },
+{
+            "case": {
+                "follows": {
+                    "has-suffix": "t"
+                }
+            },
+            "form-stem": "",
+            "form-final": ""
+        }
+        ],
         "tags": ["uncountable", "concrete", "living", "person", "no-head-joiner"],
         "origin": "greek"
     },
