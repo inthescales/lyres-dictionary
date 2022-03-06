@@ -1103,7 +1103,7 @@
     {
         "key": "-trix",
         "form-final": ["trix", "trice"],
-        "form-stem": "tric",
+        "form-stem": "trici",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
@@ -1117,9 +1117,9 @@
                 }
             },
             "form-final": ["rix", "rice"],
-            "form-stem": "ric"
+            "form-stem": "rici"
         }],
-        "tags": ["count", "concrete", "living", "person", "no-joiner", "rare"],
+        "tags": ["count", "concrete", "living", "person", "no-head-joiner", "rare"],
         "origin": "latin"
     },
     {

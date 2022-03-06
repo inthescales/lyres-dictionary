@@ -236,7 +236,7 @@
         "form-stem": "calli",
         "type": "adj",
         "gloss": "beautiful",
-        "tags": ["character", "no-joiner"],
+        "tags": ["character", "no-tail-joiner"],
         "origin": "greek"
     },
     {
@@ -1657,7 +1657,7 @@
         "form-stem": "tachy",
         "type": "adj",
         "gloss": "fast",
-        "tags": ["character", "no-joiner"],
+        "tags": ["character", "no-tail-joiner"],
         "origin": "greek"
     },
     {

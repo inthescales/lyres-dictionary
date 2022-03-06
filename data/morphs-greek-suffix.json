@@ -569,7 +569,6 @@
                 "form-final": "iac"
             }
         ],
-        "tags": ["no-joiner"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     },
@@ -671,7 +670,7 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "relating to %part",
-        "tags": ["no-joiner"],
+        "tags": ["no-head-joiner"],
         "origin": "greek"
     },
     {
@@ -754,7 +753,7 @@
                 "gloss": "the act of %part"
             }
         ],
-        "tags": ["uncountable", "concrete", "no-joiner", "object-specifier"],
+        "tags": ["uncountable", "concrete", "no-head-joiner", "object-specifier"],
         "origin": "greek"
     },
     {
@@ -775,7 +774,7 @@
             "form-stem": "t",
             "form-final": "te"
         }],
-        "tags": ["uncountable", "concrete", "living", "person", "no-joiner"],
+        "tags": ["uncountable", "concrete", "living", "person", "no-head-joiner"],
         "origin": "greek"
     },
     {
@@ -795,7 +794,7 @@
             },
             "form-final": "is"
         }],
-        "tags": ["uncountable", "concrete", "living", "person", "no-joiner"],
+        "tags": ["uncountable", "concrete", "living", "person", "no-head-joiner"],
         "origin": "greek"
     },
     {
@@ -807,7 +806,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "[place] for %part",
-        "tags": ["count", "concrete", "rare", "no-joiner"],
+        "tags": ["count", "concrete", "rare", "no-head-joiner"],
         "origin": "greek"
     },
     {
@@ -1043,7 +1042,7 @@
                 "form-final": ["y", "ia"]
             }  
         ],
-        "tags": ["uncountable", "abstract", "no-joiner"],
+        "tags": ["uncountable", "abstract", "no-head-joiner"],
         "origin": "greek"
     }
 ]

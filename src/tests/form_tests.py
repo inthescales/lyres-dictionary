@@ -583,6 +583,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["fragrare", "-nt"], "fragrant")
         self.assertForm(["migrare", "-nt"], "migrant")
         self.assertForm(["militare", "-nt"], "militant")
+        self.assertFormIn(["causare", "-trix"], ["causatrix", "causatrice"])
         
         # Latin verbs, 2nd conjugation, suffixes
         self.assertForm(["ardere", "-nt"], "ardent")
@@ -614,6 +615,8 @@ class FormTests(unittest.TestCase):
         self.assertForm(["mittere", "-ion"], "mission")
         self.assertForm(["petere", "-ion"], "petition")
         self.assertForm(["scandere", "-ion"], "scansion")
+        self.assertFormIn(["docere", "-trix"], ["doctrix", "doctrice"])
+        self.assertFormIn(["pellere", "-trix"], ["pulstrix", "pulstrice"]) #*
 
         # Latin verbs, 4th conjugation, suffixes
         self.assertForm(["nutrire", "-nt"], "nutrient")
@@ -671,6 +674,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["duo", "-al", "-ity"], "duality")
         self.assertForm(["esse", "-nce", "-al"], "essential")
         self.assertForm(["funis", "-pote-power", "-nt"], "funipotent")
+        self.assertForm(["docere", "-trix", "-al"], "doctricial") #*
         
         # relative constructions
         self.assertForm(["ad-", "glomus", "-ate"], "agglomerate")

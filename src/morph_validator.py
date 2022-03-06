@@ -77,7 +77,8 @@ valid_tags = [
     "motion",                   # Verb semantics - moving or causing motion
     "joining",                  # Verb semantics - joining or connecting two things into one
     "dividing",                 # Verb semantics - dividing one thing into two or more
-    "no-joiner",                # Form - Doesn't take joining vowels on either side
+    "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
+    "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Generation - does not count towards maximum morph count
     "rare",                     # Generation - occurs less often in generation
     "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix

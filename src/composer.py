@@ -238,7 +238,7 @@ def get_definition(word):
 def get_joining_vowel(language, first, second, form, addition):
 
     # If either morph rejects joining vowels, don't use one
-    if first.has_tag("no-joiner") or second.has_tag("no-joiner"):
+    if first.has_tag("no-tail-joiner") or second.has_tag("no-head-joiner"):
         return ""
 
     if language == "latin":

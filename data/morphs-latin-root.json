@@ -1003,6 +1003,17 @@
         "origin": "latin"
     },
     {
+        "key": "causare",
+        "form-stem-present": "caus",
+        "form-stem-perfect": "causat",
+        "form-final": "cause",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "cause",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    },
+    {
         "key": "cavere",
         "form-stem-present": "cav",
         "form-stem-perfect": "caut",
