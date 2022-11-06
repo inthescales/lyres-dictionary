@@ -413,7 +413,6 @@ class FormTests(unittest.TestCase):
         self.assertForm(["nasus", "-form"], "nasiform")
         self.assertForm(["ovum", "-form"], "oviform")
         self.assertForm(["insectum", "-cide"], "insecticide")
-        self.assertForm(["insectum", "-cide"], "insecticide")
         self.assertForm(["vir", "-cide"], "viricide")
         self.assertForm(["virus", "-cide"], "viricide")
 
