@@ -2,21 +2,8 @@ import getopt
 import sys
 
 import src.diachron.orth_oe as old_english
+import src.diachron.me as middle_english
 import src.helpers as helpers
-
-class Letter:
-    def __init__(self, string):
-        self.value = string
-
-    def __eq__(self, other):
-        return self.value == other.value
-
-class Phoneme:
-    def __init__(self, string):
-        self.value = string
-
-    def __eq__(self, other):
-        return self.value == other.value
 
 def get_clusters(word):
     cluster = []
@@ -61,8 +48,9 @@ def get_clusters(word):
     return clusters
 
 def run(input):
-    phonemes = old_english.get_old_english_phonemes(input)
-    print(phonemes)
+    oe_phonemes = old_english.get_old_english_phonemes(input)
+    me_phonemes = middle_english.phonemes_from_oe(oe_phonemes)
+    print([phoneme.value for phoneme in me_phonemes])
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
