@@ -33,4 +33,31 @@ def phonemes_from_oe(oe_phonemes):
             new_phonemes.append(phoneme)
     phonemes = new_phonemes
 
+    # Vocalization of [ɣ] and development of new diphthongs
+    new_phonemes = []
+    for phoneme in phonemes:
+        if phoneme.value == "ɣ":
+            new_phonemes.append(Phoneme("u"))
+        else:
+            new_phonemes.append(phoneme)
+    phonemes = new_phonemes
+
+    # Breaking
+    new_phonemes = []
+    for i in range(0, len(phonemes)):
+        phoneme = phonemes[i]
+        next_phoneme = None
+        if i < len(phonemes) - 1:
+            next_phoneme = phonemes[i+1]
+
+        new_phonemes.append(phoneme)
+
+        if next_phoneme and next_phoneme.is_front_vowel() and next_phoneme.value != "a":
+            phonemes.append(Phoneme("i"))
+        if next_phoneme and (next_phoneme.is_back_vowel() or next_phoneme.value == "a"):
+            phonemes.append(Phoneme("u"))
+
+    phonemes = new_phonemes
+
+
     return phonemes
