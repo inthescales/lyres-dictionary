@@ -30,9 +30,3 @@ class Phoneme:
             if char in self.value:
                 return True
         return False
-
-    def is_ornament(self):
-        if char in ["'"]:
-            return True
-        else:
-            return False

@@ -105,7 +105,6 @@ def get_phonemes(graphs):
     for i in range(0, len(graphs)):
         if graphs[i] == "'":
             stressed = 1
-            phonemes.append(Phoneme("ˈ"))
             continue
 
         if graphs[i] in consonants:
