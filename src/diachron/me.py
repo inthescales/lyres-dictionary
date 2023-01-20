@@ -3,7 +3,7 @@ from src.diachron.phoneme import Phoneme
 def phonemes_from_oe(oe_phonemes):
     phonemes = oe_phonemes
 
-    # Skipping homorganic lengthening
+    # Skipping homorganic lengthening for now
 
     # Stressed vowel changes
     new_phonemes = []
@@ -53,7 +53,6 @@ def phonemes_from_oe(oe_phonemes):
         new_phonemes.append(phoneme)
 
         if next_phoneme and next_phoneme.value == "x":
-            print(phoneme.value + ", " + str(phoneme.is_front_vowel()))
             if phoneme.is_front_vowel() and phoneme.value != "a":
                 new_phonemes.append(Phoneme("i"))
             if phoneme.is_back_vowel() or phoneme.value == "a":
