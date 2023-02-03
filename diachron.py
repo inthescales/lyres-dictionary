@@ -50,7 +50,7 @@ def get_clusters(word):
 
 def run(input):
     inputs = [
-        "pæþ",
+        "peah",
         "cild",
         "dæg",
         "frēond",
@@ -78,14 +78,15 @@ def run(input):
 
     me_phonemes = []
     for oe in oe_phonemes:
-        transformed = middle_english.phonemes_from_oe(oe)
+        transformed = middle_english.phonemes_from_oe_3(oe)
         me_phonemes.append(transformed)
     
     oe_output = ["/" + "".join([x.value for x in word]) + "/" for word in oe_phonemes]
     me_output = ["/" + "".join([x.value for x in word]) + "/" for word in me_phonemes]
     output_table = table.make_table([
         table.TableColumn("OE written", inputs),
-        table.TableColumn("OE phonemes", oe_output)
+        table.TableColumn("OE phonemes", oe_output),
+        table.TableColumn("ME phonemes", me_output),
     ])
 
     print(output_table)

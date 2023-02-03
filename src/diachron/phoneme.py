@@ -11,13 +11,16 @@ class Phoneme:
         self.stressed = stressed
 
     def __eq__(self, other):
-        return self.value == other.value and self.stressed == other.stressed
+        return other and self.value == other.value and self.stressed == other.stressed
 
     def is_vowel(self):
-        for char in ["a", "ɑ", "e", "i", "o", "u", "y"]:
+        for char in ["a", "ɑ", "e", "ɛ", "i", "o", "u", "y", "ə"]:
             if char in self.value:
                 return True
         return False
+
+    def is_consonant(self):
+        return not self.is_vowel()
 
     def is_front_vowel(self):
         for char in ["i", "e", "ɛ", "y", "ø", "œ"]:
@@ -30,3 +33,30 @@ class Phoneme:
             if char in self.value:
                 return True
         return False
+
+    def is_short(self):
+        return not "ː" in self.value
+
+    def is_long(self):
+        return "ː" in self.value
+
+    def is_geminate(self):
+        length = len(self.value)
+        return self.is_consonant() and length % 2 == 0 \
+            and self.value[:int(length/2)] == self.value[int(length/2):]
+
+    def get_shortened(self):
+        return Phoneme(self.value.replace("ː", ""), self.stressed)
+
+    def get_lengthened(self):
+        if "ː" not in self.value:
+            return Phoneme(self.value + "ː", self.stressed)
+        else:
+            return self
+
+    def get_geminate_reduced(self):
+        length = len(self.value)
+        if self.is_geminate():
+            return Phoneme(self.value[:int(length/2)], self.stressed)
+        else:
+            return self
