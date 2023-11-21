@@ -112,7 +112,7 @@ def the_big_chart(phonemes):
             next3 = phonemes[i + 3]
 
         # Diphthongs
-        if phone.is_vowel() and next1 and next1.value in ["g", "j", "w"]:
+        if phone.is_vowel() and next1 and next1.value in ["g", "j", "w", "h"]:
             if (phone.value + next1.value in ["æj", "æːj", "ej"]) \
                 or (phone.value + next1.value == "eːj" and not next2):
 
@@ -287,10 +287,31 @@ def the_big_chart(phonemes):
 
             elif phone.value == "ə":
                 result += "e"
+
+        # Consonants
         else:
-            result += phone.value
+
+            if phone.value == "f":
+                if (prev and (prev.is_vowel() or prev.is_voiced())) \
+                    and (next1 and (next1.is_vowel() or next1.is_voiced())):
+                    result += "v"
+                else:
+                    result += "f"
+            elif phone.value == "θ":
+                result += "th"
+            elif phone.value in ["x", "xx"]:
+                if prev == None:
+                    result += "h"
+                else:
+                    result += "gh"
+            elif phone.value == "tʃ":
+                result += "ch"
+            else:
+                result += phone.value
+
             if phone.is_consonant and insert_lengthening_e and (not next1 or not next1.is_vowel()):
                 result += "e"
                 insert_lengthening_e = False
+
 
     return "".join(result)

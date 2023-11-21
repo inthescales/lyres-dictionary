@@ -211,6 +211,8 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
         return Phoneme("j", False, inflectional)
     elif graph == "h":
         return Phoneme("x", False, inflectional)
+    elif graph == "hh":
+        return Phoneme("xx", False, inflectional)
     elif graph == "i":
         return Phoneme("i", stressed, inflectional)
     elif graph == "ī":
