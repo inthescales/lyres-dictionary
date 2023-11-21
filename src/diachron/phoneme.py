@@ -6,15 +6,23 @@ class Letter:
         return self.value == other.value
 
 class Phoneme:
-    def __init__(self, string, stressed=False):
-        self.value = string
-        self.stressed = stressed
+    def __init__(self, value, stressed=False, inflectional=False, template=None):
+        self.value = value
+        if template:
+            self.stressed = template.stressed
+            self.inflectional = template.inflectional
+        else:
+            self.stressed = stressed
+            self.inflectional = inflectional
 
     def __eq__(self, other):
-        return other and self.value == other.value and self.stressed == other.stressed
+        return other \
+            and self.value == other.value \
+            and self.stressed == other.stressed \
+            and self.inflectional == other.inflectional
 
     def is_vowel(self):
-        for char in ["a", "ɑ", "e", "ɛ", "i", "o", "u", "y", "ə"]:
+        for char in ["a", "ɑ", "æ", "e", "ɛ", "i", "o", "u", "y", "ə"]:
             if char in self.value:
                 return True
         return False
@@ -46,17 +54,17 @@ class Phoneme:
             and self.value[:int(length/2)] == self.value[int(length/2):]
 
     def get_shortened(self):
-        return Phoneme(self.value.replace("ː", ""), self.stressed)
+        return Phoneme(self.value.replace("ː", ""), template=self)
 
     def get_lengthened(self):
         if "ː" not in self.value:
-            return Phoneme(self.value + "ː", self.stressed)
+            return Phoneme(self.value + "ː", template=self)
         else:
             return self
 
     def get_geminate_reduced(self):
         length = len(self.value)
         if self.is_geminate():
-            return Phoneme(self.value[:int(length/2)], self.stressed)
+            return Phoneme(self.value[:int(length/2)], template=self)
         else:
             return self

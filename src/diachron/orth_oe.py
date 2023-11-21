@@ -2,7 +2,7 @@ from src.diachron.phoneme import Phoneme
 
 consonants = ["b", "c", "ċ", "cg", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sc", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
 vowels = ["a", "ā", "æ", "ǣ", "e", "ę", "ē", "ea", "ēa", "eo", "ēo", "i", "ī", "ie", "īe", "io", "īo", "o", "ō", "oe", "ōe", "u", "ū", "y", "ȳ"]
-special_characters = ["'"]
+special_characters = ["'", "|"]
 
 front_vowels = ["æ", "ǣ", "i", "ī", "e", "ē"]
 back_vowels = ["u", "ū", "a", "ā", "o", "ō"]
@@ -50,7 +50,8 @@ graph_trie = {
     "y": TrieNode("y"),
     "ȳ": TrieNode("ȳ"),
     "z": TrieNode("z", {"z": TrieNode("zz")}),
-    "'": TrieNode("'")
+    "'": TrieNode("'"),
+    "|": TrieNode("|")
 }
 def get_old_english_phonemes(word):
     graphs = get_graphs(word)
@@ -98,6 +99,7 @@ def count_syllables(graphs):
 def get_phonemes(graphs):
     phonemes = []
     stressed = 0 # 0: unstressed, 1: next vowel will be stressed, 2: vowel is stressed
+    inflectional = False
 
     if count_syllables(graphs) == 1 or "'" not in graphs:
         stressed = 1
@@ -105,6 +107,10 @@ def get_phonemes(graphs):
     for i in range(0, len(graphs)):
         if graphs[i] == "'":
             stressed = 1
+            continue
+
+        if graphs[i] == "|":
+            inflectional = True
             continue
 
         if graphs[i] in consonants:
@@ -126,167 +132,167 @@ def get_phonemes(graphs):
         if i < len(graphs) - 1:
             next = graphs[i+1]
 
-        phonemes.append(get_phoneme(graphs[i], anteprev, prev, next, stressed == 2))
+        phonemes.append(get_phoneme(graphs[i], anteprev, prev, next, stressed == 2, inflectional))
 
     return phonemes
 
-def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed):
+def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
     if graph == "a":
-        return Phoneme("ɑ", stressed)
+        return Phoneme("ɑ", stressed, inflectional)
     elif graph == "ā":
-        return Phoneme("ɑː", stressed)
+        return Phoneme("ɑː", stressed, inflectional)
     elif graph == "æ":
-        return Phoneme("æ", stressed)
+        return Phoneme("æ", stressed, inflectional)
     elif graph == "ǣ":
-        return Phoneme("æː", stressed)
+        return Phoneme("æː", stressed, inflectional)
     elif graph == "b":
-        return Phoneme("b")
+        return Phoneme("b", False, inflectional)
     elif graph == "bb":
-        return Phoneme("bː")
+        return Phoneme("bː", False, inflectional)
     elif graph == "c":
         # need to handle intervening ns
         if next_g and next_g[0] in front_vowels:
-            return Phoneme("tʃ")
+            return Phoneme("tʃ", False, inflectional)
         if prev_g and prev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
-            return Phoneme("tʃ")
+            return Phoneme("tʃ", False, inflectional)
         if prev_g and prev_g[-1] == "n" and anteprev_g and anteprev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
-            return Phoneme("tʃ")
+            return Phoneme("tʃ", False, inflectional)
         else:
-            return Phoneme("k")
+            return Phoneme("k", False, inflectional)
     elif graph == "cc":
-        return Phoneme("kk")
+        return Phoneme("kk", False, inflectional)
     elif graph == "ċ":
-        return Phoneme("tʃ")
+        return Phoneme("tʃ", False, inflectional)
     elif graph in ["cg", "gc", "cgg", "ccg", "gcg", "ċġ", "ġċ"]:
         # sometimes, unpredictably /ɣ/ + /ɣɣ/
         if prev_g == "n":
-            return Phoneme("j")
+            return Phoneme("j", False, inflectional)
         else:
-            return Phoneme("jj")
+            return Phoneme("jj", False, inflectional)
     elif graph == "d":
-        return Phoneme("d")
+        return Phoneme("d", False, inflectional)
     elif graph == "dd":
-        return Phoneme("dd")
+        return Phoneme("dd", False, inflectional)
     elif graph == "ð":
-        return Phoneme("θ")
+        return Phoneme("θ", False, inflectional)
     elif graph == "ðð":
-        return Phoneme("θθ")
+        return Phoneme("θθ", False, inflectional)
     if graph == "e":
-        return Phoneme("e", stressed)
+        return Phoneme("e", stressed, inflectional)
     elif graph == "ē":
-        return Phoneme("eː", stressed)
+        return Phoneme("eː", stressed, inflectional)
     if graph == "æ":
-        return Phoneme("æ", stressed)
+        return Phoneme("æ", stressed, inflectional)
     elif graph == "ǣ":
-        return Phoneme("æː", stressed)
+        return Phoneme("æː", stressed, inflectional)
     elif graph == "ea":
         # Some say it's /ɑ/ after a palatal c or g
         # Wiki has /æɑ̯/, dropped the diacritic
-        return Phoneme("æɑ", stressed)
+        return Phoneme("æɑ", stressed, inflectional)
     elif graph == "ēa":
         # Dropped diacritic as above
-        return Phoneme("æːɑ", stressed)
+        return Phoneme("æːɑ", stressed, inflectional)
     elif graph == "eo":
-        return Phoneme("eo", stressed)
+        return Phoneme("eo", stressed, inflectional)
     elif graph == "ēo":
-        return Phoneme("eːo", stressed)
+        return Phoneme("eːo", stressed, inflectional)
     elif graph == "f":
-        return Phoneme("f")
+        return Phoneme("f", False, inflectional)
     elif graph == "g":
         if next_g and next_g[0] in front_vowels:
-            return Phoneme("j")
+            return Phoneme("j", False, inflectional)
         if prev_g and prev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
-            return Phoneme("j")
+            return Phoneme("j", False, inflectional)
         else:
-            return Phoneme("ɣ")
+            return Phoneme("ɣ", False, inflectional)
     elif graph == "gg":
-        return Phoneme("ɣɣ")
+        return Phoneme("ɣɣ", False, inflectional)
     elif graph == "ġ":
-        return Phoneme("j")
+        return Phoneme("j", False, inflectional)
     elif graph == "h":
-        return Phoneme("x")
+        return Phoneme("x", False, inflectional)
     elif graph == "i":
-        return Phoneme("i", stressed)
+        return Phoneme("i", stressed, inflectional)
     elif graph == "ī":
-        return Phoneme("iː", stressed)
+        return Phoneme("iː", stressed, inflectional)
     elif graph == "ie":
-        return Phoneme("iy", stressed)
+        return Phoneme("iy", stressed, inflectional)
     elif graph == "īe":
-        return Phoneme("iːy", stressed)
+        return Phoneme("iːy", stressed, inflectional)
     elif graph == "io":
-        return Phoneme("io", stressed)
+        return Phoneme("io", stressed, inflectional)
     elif graph == "īo":
-        return Phoneme("iːo", stressed)
+        return Phoneme("iːo", stressed, inflectional)
     elif graph == "k":
-        return Phoneme("k")
+        return Phoneme("k", False, inflectional)
     elif graph == "kk":
-        return Phoneme("kk")
+        return Phoneme("kk", False, inflectional)
     elif graph == "l":
-        return Phoneme("l")
+        return Phoneme("l", False, inflectional)
     elif graph == "ll":
-        return Phoneme("ll")
+        return Phoneme("ll", False, inflectional)
     elif graph == "m":
-        return Phoneme("m")
+        return Phoneme("m", False, inflectional)
     elif graph == "mm":
-        return Phoneme("mm")
+        return Phoneme("mm", False, inflectional)
     elif graph == "n":
-        return Phoneme("n")
+        return Phoneme("n", False, inflectional)
     elif graph == "nn":
-        return Phoneme("nn")
+        return Phoneme("nn", False, inflectional)
     elif graph == "o":
-        return Phoneme("o", stressed)
+        return Phoneme("o", stressed, inflectional)
     elif graph == "ō":
-        return Phoneme("oː", stressed)
+        return Phoneme("oː", stressed, inflectional)
     elif graph == "oe":
-        return Phoneme("ø", stressed)
+        return Phoneme("ø", stressed, inflectional)
     elif graph == "ōe":
-        return Phoneme("øː", stressed)
+        return Phoneme("øː", stressed, inflectional)
     elif graph == "p":
-        return Phoneme("p")
+        return Phoneme("p", False, inflectional)
     elif graph == "pp":
-        return Phoneme("pp")
+        return Phoneme("pp", False, inflectional)
     elif graph == "cw":
-        return Phoneme("kw")
+        return Phoneme("kw", False, inflectional)
     elif graph == "r":
-        return Phoneme("r")
+        return Phoneme("r", False, inflectional)
     elif graph == "rr":
-        return Phoneme("rr")
+        return Phoneme("rr", False, inflectional)
     elif graph == "s":
-        return Phoneme("s")
+        return Phoneme("s", False, inflectional)
     elif graph == "ss":
-        return Phoneme("ss")
+        return Phoneme("ss", False, inflectional)
     elif graph == "sc" or graph == "sċ":
         if prev_g in vowels and next_g in vowels:
-            return Phoneme("ʃʃ")
+            return Phoneme("ʃʃ", False, inflectional)
         else:
-            return Phoneme("ʃ")
+            return Phoneme("ʃ", False, inflectional)
     elif graph == "t":
-        return Phoneme("t")
+        return Phoneme("t", False, inflectional)
     elif graph == "tt":
-        return Phoneme("tt")
+        return Phoneme("tt", False, inflectional)
     elif graph == "th":
-        return Phoneme("θ")
+        return Phoneme("θ", False, inflectional)
     elif graph == "þ":
-        return Phoneme("θ")
+        return Phoneme("θ", False, inflectional)
     elif graph == "þþ":
-        return Phoneme("θθ")
+        return Phoneme("θθ", False, inflectional)
     elif graph == "u":
-        return Phoneme("u", stressed)
+        return Phoneme("u", stressed, inflectional)
     elif graph == "ū":
-        return Phoneme("uː", stressed)
+        return Phoneme("uː", stressed, inflectional)
     elif graph == "uu":
-        return Phoneme("w")
+        return Phoneme("w", False, inflectional)
     elif graph == "ƿ":
-        return Phoneme("w")
+        return Phoneme("w", False, inflectional)
     elif graph == "w":
-        return Phoneme("w")
+        return Phoneme("w", False, inflectional)
     elif graph == "x":
-        return Phoneme("ks")
+        return Phoneme("ks", False, inflectional)
     elif graph == "y":
-        return Phoneme("y", stressed)
+        return Phoneme("y", stressed, inflectional)
     elif graph == "ȳ":
-        return Phoneme("yː", stressed)
+        return Phoneme("yː", stressed, inflectional)
     elif graph == "z":
-        return Phoneme("ts")
+        return Phoneme("ts", False, inflectional)
 
-    return Phoneme("?", stressed)
+    return Phoneme("?", stressed, inflectional)

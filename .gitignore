@@ -6,7 +6,9 @@
 *.DS_Store
 *~
 
-# Logs
+# Development
+.gitignore
+env
 logs
 
 # Ad-hoc tools

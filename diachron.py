@@ -3,6 +3,7 @@ import sys
 
 import src.diachron.orth_oe as old_english
 import src.diachron.me as middle_english
+import src.diachron.modernize_oe as modernize_oe
 import src.diachron.table as table
 import src.helpers as helpers
 
@@ -50,11 +51,15 @@ def get_clusters(word):
 
 def run(input):
     inputs = [
-        "peah",
+        "stel",
+        "bāt",
+        "cyð",
+        "frēod",
+        "heofon",
+        "mete",
         "cild",
         "dæg",
         "frēond",
-        "wicu",
         "wudu",
         "hnutu",
         "nama",
@@ -63,12 +68,18 @@ def run(input):
         "mægden",
         "hund",
         "bryċġ",
-        "stæf",
-        "stafas",
         "gāst",
-        "gāstlic",
-        "ofermōd",
-        "wynsum"
+        "gōd",
+        "cēpan",
+        "cēpte",
+        "mætan",
+        "mētte",
+        "niht",
+        "hlæhhan",
+        "tōh",
+        "mann",
+        "lamb",
+        "nacod"
     ]
 
     oe_phonemes = []
@@ -76,20 +87,67 @@ def run(input):
         phonemes = old_english.get_old_english_phonemes(input)
         oe_phonemes.append(phonemes)
 
-    me_phonemes = []
-    for oe in oe_phonemes:
-        transformed = middle_english.phonemes_from_oe_3(oe)
-        me_phonemes.append(transformed)
+    # me_phonemes = []
+    # for oe in oe_phonemes:
+    #     transformed = middle_english.phonemes_from_oe_3(oe)
+    #     me_phonemes.append(transformed)
     
+    modern_forms = []
+    for oe in oe_phonemes:
+        transformed = modernize_oe.modernize(oe)
+        modern_forms.append(transformed)
+
     oe_output = ["/" + "".join([x.value for x in word]) + "/" for word in oe_phonemes]
-    me_output = ["/" + "".join([x.value for x in word]) + "/" for word in me_phonemes]
+    # me_output = ["/" + "".join([x.value for x in word]) + "/" for word in me_phonemes]
     output_table = table.make_table([
         table.TableColumn("OE written", inputs),
         table.TableColumn("OE phonemes", oe_output),
-        table.TableColumn("ME phonemes", me_output),
+        # table.TableColumn("ME phonemes", me_output),
+        table.TableColumn("Modern form", modern_forms),
     ])
 
     print(output_table)
+
+def test():
+    test_data = [
+        ["cild", "tʃild", "tʃild"],
+        ["dæg", "dæj", "dɛi"],
+        ["frēond", "freːond", "freːnd"], # Wiki has "fre͜oːnd" in 1
+        ["mēt|an", "meːtɑn", "meːt"],
+        ["niht", "nixt", "nixt"],
+        ["wicu", "", "weːk"]
+    ]
+
+    count_success = 0
+    count_failure = 0
+
+    for data in test_data:
+        oe_graph = data[0]
+        oe_phone = data[1]
+        me_phone = data[2]
+
+        oe_phone_proc = old_english.get_old_english_phonemes(oe_graph)
+        me_phone_proc = middle_english.phonemes_from_oe_3(oe_phone_proc)
+
+        oe_phone_test = "".join([x.value for x in oe_phone_proc])
+        me_phone_test = "".join([x.value for x in me_phone_proc])
+
+        if oe_phone != oe_phone_test:
+            print("FAILED : OE phonemes : " + oe_phone + " != " + oe_phone_test)
+            count_failure += 1
+            continue
+        if me_phone != me_phone_test:
+            print("FAILED : ME phonemes : " + me_phone + " != " + me_phone_test)
+            count_failure += 1
+            continue
+        else:
+            print("SUCCEEDED : " + oe_graph + " -> " + oe_phone + " -> " + me_phone)
+            count_success += 1
+            continue
+
+    print("\nTESTS FINISHED")
+    print("SUCCESS: " + str(count_success))
+    print("FAILURE: " + str(count_failure))
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
@@ -114,3 +172,4 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             input = arg
 
     run(input)
+    # test()

@@ -71,6 +71,7 @@ class RigState:
 
 class Rig:
     def __init__(self, phonemes):
+        # print([x.value for x in phonemes])
         self.phonemes = phonemes
 
     def run_change(self, change):
@@ -88,16 +89,23 @@ class Rig:
             return
 
         new_phonemes = []
+        last_capture = None
+
         for i in range(0, len(self.phonemes) - capture_size + 1):
+            if last_capture != None and i < last_capture + capture_size:
+                continue
+
             state = RigState(self.phonemes, (i, i + capture_size))
             added_phonemes = change(state)
-            if added_phonemes:
+            if added_phonemes != None:
                 new_phonemes += added_phonemes
+                last_capture = i
             elif i < len(self.phonemes) - capture_size:
                 new_phonemes.append(self.phonemes[i])
             else:
                 new_phonemes += self.phonemes[i:len(self.phonemes)]
 
+            # print([x.value for x in new_phonemes])
         self.phonemes = new_phonemes
 
 
