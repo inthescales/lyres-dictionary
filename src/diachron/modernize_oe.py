@@ -32,6 +32,31 @@ def modernize(oe_phonemes):
     def reduction_of_double_consonants(state):
         return [state.current.get_geminate_reduced()]
 
+    # Reduce unstressed vowels to e
+    def reduction_of_unstressed_vowels(state):
+        if state.current.is_vowel() and not state.current.stressed:
+            return [Phoneme("ə", template=state.current)]
+        else:
+            return None
+
+    # Open syllable lengthening
+    def open_syllable_lengthening(state):
+        # print("(phoneme: " + str(state.current.value) + ", open:" + str(state.syllable_data.is_open) + ")<br>")
+        if state.current.is_vowel() and state.syllable_data.is_open and state.syllable_data.following_syllable_count == 1:
+            # print("Lengthening " + str(state.current.value))
+            if state.current.value == "i":
+                return [Phoneme("iː", state.current.stressed)]
+            elif state.current.value == "e":
+                return [Phoneme("eː", state.current.stressed)]
+            elif state.current.value == "o":
+                return [Phoneme("oː", state.current.stressed)]
+            elif state.current.value == "u" and occ():
+                return [Phoneme("uː", state.current.stressed)]
+            else:
+                return [state.current.get_lengthened()]
+        else:
+            return None
+
     # m → n / _# when unstressed
     def final_unstressed_m_to_n(state):
         if state.current.value in ["m"] and state.next == None \
@@ -60,31 +85,43 @@ def modernize(oe_phonemes):
         if state.current.value == "ɣ" and state.prev.is_consonant() and state.next.is_vowel():
             return [Phoneme("w", template=state.current)]
 
-    # {e,ɑ,o} → ə → ∅ / _# 
-    def reduce_final_vowel(state):
-        if state.current.value in ["e", "ɑ" ,"o"] and state.next == None:
-            # return [Phoneme("ə", template=state.current)]
+    # ə → ∅ / _# 
+    def loss_of_final_unstressed_vowel(state):
+        if state.current.value == "ə" and state.next == None:
             return []
 
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
+    rig.run_capture(open_syllable_lengthening, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(pre_cluster_shortening, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(reduction_of_double_consonants, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
+    rig.run_capture(reduction_of_unstressed_vowels, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(final_unstressed_m_to_n, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(drop_inflecional_n, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(drop_initial_h, 2)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(initial_g, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
     rig.run_capture(g_to_w, 1)
-    rig.run_capture(reduce_final_vowel, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
+    rig.run_capture(loss_of_final_unstressed_vowel, 1)
+    print("".join([x.value for x in rig.phonemes]) + "<br>")
 
     form = the_big_chart(rig.phonemes)
     return form
 
+def often():
+    return False
+
+def occ():
+    return False
+
 def the_big_chart(phonemes):
-    def often():
-        return False
-
-    def occ():
-        return False
-
     result = []
     insert_lengthening_e = False
     skip_next = 0
@@ -112,7 +149,7 @@ def the_big_chart(phonemes):
             next3 = phonemes[i + 3]
 
         # Diphthongs
-        if phone.is_vowel() and next1 and next1.value in ["g", "j", "w", "h"]:
+        if phone.is_vowel() and next1 and next1.value in ["g", "j", "w", "x"]:
             if (phone.value + next1.value in ["æj", "æːj", "ej"]) \
                 or (phone.value + next1.value == "eːj" and not next2):
 
@@ -128,7 +165,7 @@ def the_big_chart(phonemes):
                 else:
                     result += random.choice(["ie", "uy"])
             elif (phone.value + next1.value in ["æw", "aw"]) \
-                or (phone.value + next1.value == "ag" and next1 and next1.is_vowel()):
+                or (phone.value + next1.value == "ag" and next2 and next2.is_vowel()):
 
                 result += "aw"
 
@@ -139,7 +176,7 @@ def the_big_chart(phonemes):
                     result += random.choice(["ew", "ue"])
 
             elif phone.value + next1.value in ["aːw", "ow", "oːw"] \
-                 or (phone.value + next1.value in ["aːg", "og", "oːg"] and next1 and next1.is_vowel):
+                 or (phone.value + next1.value in ["aːg", "og", "oːg"] and next2 and next2.is_vowel):
 
                 result += "ow"
 
@@ -153,26 +190,26 @@ def the_big_chart(phonemes):
                 else:
                     result += random.choose("ow", "ough")
 
-            elif phone.value + next1.value in ["æh", "ah"] \
+            elif phone.value + next1.value in ["æx", "ax"] \
                 or (phone.value + next1.value == "ag" and not next2):
 
                 result += "augh"
 
-            elif phone.value + next1.value == "eh":
+            elif phone.value + next1.value == "ex":
                 result += "ai"
 
-            elif phone.value + next1.value in ["eːh", "ih", "iːh", "yh", "yːh"]:
+            elif phone.value + next1.value in ["eːx", "ix", "iːx", "yx", "yːx"]:
                 result += "igh"
 
-            elif phone.value + next1.value in ["aːh", "oh"] \
-                or (phone.value + next1.value in ["aː", "og"] and not next1):
+            elif phone.value + next1.value in ["aːx", "ox"] \
+                or (phone.value + next1.value in ["aː", "og"] and not next2):
                 result += "ough"
 
-            elif phone.value + next1.value in ["aːh", "oh", "oːh"] and next1 and next1.is_consonant:
+            elif phone.value + next1.value in ["aːx", "ox", "oːx"] and next2 and next2.is_consonant:
                 result += random.choice(["ough", "augh"])
 
-            elif phone.value + next1.value in ["uh", "uːh"] \
-                or (phone.value + next1.value in ["oːh", "oːg", "ug", "uːg"] and not next1):
+            elif phone.value + next1.value in ["ux", "uːx"] \
+                or (phone.value + next1.value in ["oːx", "oːg", "ug", "uːg"] and not next2):
                 result += "ough"
             else:
                 # No match found
@@ -197,7 +234,7 @@ def the_big_chart(phonemes):
                 or (often() and phone.value in ["æː", "eːa"] and next1 and next1.is_geminate()) \
                 or (occ() and phone.value == "y") \
                 or (occ() and phone.value in ["æː", "eːa"] and next1 and next1.value.is_geminate()): # WS ǣ+CC
-                    if next1.value == "r":
+                    if next1 and next1.value == "r":
                         result += random.choice(["ar", "er"])
                         skip_next += 1
 
@@ -229,10 +266,10 @@ def the_big_chart(phonemes):
                         insert_lengthening_e = True
             elif (phone.value == "u" or (phone.value == "uː" and next1 and next1.is_geminate())) \
                 or (occ() and phone.value == "y"):
-                    if not syllable.is_in_open_syllable(phonemes, i):
+                    if occ() and syllable.is_in_open_syllable(phonemes, i):
+                        result += "oo"
+                    else:
                         result += "u"
-                    elif occ():
-                        result += "oo"                
 
                     # TODO: Add exception to catch 'lufian' -> 'love'?
             elif (prev and prev.value == "w" and phone.value in ["e", "eo", "o", "y"] and next1 and next1.value == "r"):
@@ -296,7 +333,20 @@ def the_big_chart(phonemes):
                     and (next1 and (next1.is_vowel() or next1.is_voiced())):
                     result += "v"
                 else:
-                    result += "f"
+                    if next1 != None:
+                        result += "f"
+                    else:
+                        result += "ff"
+            elif phone.value == "l":
+                if next1 != None or (prev and prev.is_vowel() and prev.is_long()):
+                    result += "l"
+                else:
+                    result += "ll"
+            elif phone.value == "s":
+                if next1 != None:
+                    result += "s"
+                else:
+                    result += "ss"
             elif phone.value == "θ":
                 result += "th"
             elif phone.value in ["x", "xx"]:

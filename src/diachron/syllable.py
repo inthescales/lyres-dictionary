@@ -24,11 +24,13 @@ def get_syllable_index(phonemes, index):
 # Returns true if the phoneme at the given index in the word is in an open syllable.
 # Assumes the given index points to a vowel.
 def is_in_open_syllable(phonemes, index):
-    # print("open?")
-    # print("".join([p.value for p in phonemes]) + ", " + str(index))
+    if not phonemes[index].is_vowel():
+        return
+
     state = 0
     for i in range(index + 1, len(phonemes)):
         phoneme = phonemes[i]
+        print(phoneme.value)
 
         if phoneme.is_consonant():
             if state == 0:
@@ -39,7 +41,7 @@ def is_in_open_syllable(phonemes, index):
             if state == 1:
                 return True
 
-    return False
+    return state == 1
 
 # Returns the number of syllables after the given index.
 def following_syllable_count(phonemes, index):
