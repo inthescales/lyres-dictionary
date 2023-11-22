@@ -304,8 +304,18 @@ def the_big_chart(phonemes):
                     result += "h"
                 else:
                     result += "gh"
+            elif phone.value == "k":
+                if next1 != None:
+                    result += "k"
+                else:
+                    result += "ck"
             elif phone.value == "tʃ":
                 result += "ch"
+            elif phone.value == "dʒ":
+                if next1 != None:
+                    result += "j"
+                else:
+                    result += "dge"
             else:
                 result += phone.value
 

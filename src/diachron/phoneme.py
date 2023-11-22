@@ -43,7 +43,7 @@ class Phoneme:
         return False
 
     def is_voiced(self):
-        return value in ["b", "d", "g", "m", "n", "l", "r", "w"]
+        return value in ["b", "d", "g", "m", "n", "l", "r", "w", "dʒ"]
 
     def is_short(self):
         return not "ː" in self.value

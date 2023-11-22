@@ -168,7 +168,12 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
         if prev_g == "n":
             return Phoneme("j", False, inflectional)
         else:
-            return Phoneme("jj", False, inflectional)
+            # This sound is often represented phonemically as /jj/
+            # However, reduction of double consonance makes this indistinguishable from 'ġ'
+            # I am representing it here with 'dʒ' for clarity
+
+            # return Phoneme("jj", False, inflectional)
+            return Phoneme("dʒ", False, inflectional)
     elif graph == "d":
         return Phoneme("d", False, inflectional)
     elif graph == "dd":
