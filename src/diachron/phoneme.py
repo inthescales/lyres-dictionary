@@ -61,7 +61,7 @@ class Phoneme:
 
     def get_lengthened(self):
         if "ː" not in self.value:
-            return Phoneme(self.value + "ː", template=self)
+            return Phoneme(self.value[0] + "ː" + self.value[1:], template=self)
         else:
             return self
 

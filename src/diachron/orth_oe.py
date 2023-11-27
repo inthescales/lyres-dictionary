@@ -138,9 +138,9 @@ def get_phonemes(graphs):
 
 def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
     if graph == "a":
-        return Phoneme("ɑ", stressed, inflectional)
+        return Phoneme("a", stressed, inflectional)
     elif graph == "ā":
-        return Phoneme("ɑː", stressed, inflectional)
+        return Phoneme("aː", stressed, inflectional)
     elif graph == "æ":
         return Phoneme("æ", stressed, inflectional)
     elif graph == "ǣ":
@@ -151,14 +151,15 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
         return Phoneme("bː", False, inflectional)
     elif graph == "c":
         # need to handle intervening ns
-        if next_g and next_g[0] in front_vowels:
-            return Phoneme("tʃ", False, inflectional)
-        if prev_g and prev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
-            return Phoneme("tʃ", False, inflectional)
-        if prev_g and prev_g[-1] == "n" and anteprev_g and anteprev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
-            return Phoneme("tʃ", False, inflectional)
-        else:
-            return Phoneme("k", False, inflectional)
+        # if next_g and next_g[0] in front_vowels:
+        #     return Phoneme("tʃ", False, inflectional)
+        # if prev_g and prev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
+        #     return Phoneme("tʃ", False, inflectional)
+        # if prev_g and prev_g[-1] == "n" and anteprev_g and anteprev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
+        #     return Phoneme("tʃ", False, inflectional)
+        # else:
+            # return Phoneme("k", False, inflectional)
+        return Phoneme("k", False, inflectional)
     elif graph == "cc":
         return Phoneme("kk", False, inflectional)
     elif graph == "ċ":
@@ -191,12 +192,13 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
     elif graph == "ǣ":
         return Phoneme("æː", stressed, inflectional)
     elif graph == "ea":
-        # Some say it's /ɑ/ after a palatal c or g
-        # Wiki has /æɑ̯/, dropped the diacritic
-        return Phoneme("æɑ", stressed, inflectional)
+        # Wikipedia indicates /æa̯/, or /a/ after a palatal c or g
+        # Dropping the diacritic, and using e for simplicity
+        
+        return Phoneme("ea", stressed, inflectional)
     elif graph == "ēa":
         # Dropped diacritic as above
-        return Phoneme("æːɑ", stressed, inflectional)
+        return Phoneme("eːa", stressed, inflectional)
     elif graph == "eo":
         return Phoneme("eo", stressed, inflectional)
     elif graph == "ēo":

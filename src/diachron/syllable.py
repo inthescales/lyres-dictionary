@@ -30,7 +30,6 @@ def is_in_open_syllable(phonemes, index):
     state = 0
     for i in range(index + 1, len(phonemes)):
         phoneme = phonemes[i]
-        print(phoneme.value)
 
         if phoneme.is_consonant():
             if state == 0:

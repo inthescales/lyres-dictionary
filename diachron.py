@@ -57,7 +57,7 @@ def run(input):
         "frēod",
         "heofon",
         "mete",
-        "cild",
+        "ċild",
         "dæg",
         "frēond",
         "nama",
@@ -85,22 +85,21 @@ def run(input):
         phonemes = old_english.get_old_english_phonemes(input)
         oe_phonemes.append(phonemes)
 
-    # me_phonemes = []
-    # for oe in oe_phonemes:
-    #     transformed = middle_english.phonemes_from_oe_3(oe)
-    #     me_phonemes.append(transformed)
-    
+    me_phonemes = []
     modern_forms = []
     for oe in oe_phonemes:
-        transformed = modernize_oe.modernize(oe)
-        modern_forms.append(transformed)
+        transformed = modernize_oe.me_phonemes(oe)
+        me_phonemes.append(transformed)
+
+        spelling = modernize_oe.orthography(transformed)
+        modern_forms.append(spelling)
 
     oe_output = ["/" + "".join([x.value for x in word]) + "/" for word in oe_phonemes]
-    # me_output = ["/" + "".join([x.value for x in word]) + "/" for word in me_phonemes]
+    me_output = ["/" + "".join([x.value for x in word]) + "/" for word in me_phonemes]
     output_table = table.make_table([
         table.TableColumn("OE written", inputs),
         table.TableColumn("OE phonemes", oe_output),
-        # table.TableColumn("ME phonemes", me_output),
+        table.TableColumn("ME phonemes", me_output),
         table.TableColumn("Modern form", modern_forms),
     ])
 
