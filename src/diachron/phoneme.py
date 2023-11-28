@@ -43,13 +43,18 @@ class Phoneme:
         return False
 
     def is_voiced(self):
-        return value in ["b", "d", "g", "m", "n", "l", "r", "w", "dʒ"]
+        return self.value in ["b", "d", "g", "m", "n", "l", "r", "w", "dʒ"]
 
     def is_short(self):
         return not "ː" in self.value
 
     def is_long(self):
         return "ː" in self.value
+
+    def is_diphthong(self):
+        value_cleaned = self.value
+        value_cleaned.replace("ː", "")
+        return len(value_cleaned) > 1
 
     def is_geminate(self):
         length = len(self.value)

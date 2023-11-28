@@ -26,7 +26,7 @@ def me_phonemes(oe_phonemes):
 
     def homorganic_lengthening(state):
         if state.capture[0].is_vowel() \
-            and (state.joined[1:2] in ["ld", "mb", "nd", "rd"] or state.joined[1:2] in ["ng", "rl", "rn"]) \
+            and (state.joined[1:3] in ["ld", "mb", "nd", "rd"] or state.joined[1:3] in ["ng", "rl", "rn"]) \
             and not (len(state.following) > 0 and state.following[0].is_consonant()):
             # and not state.syllable_data.following_syllable_count > 1:
             
@@ -65,13 +65,13 @@ def me_phonemes(oe_phonemes):
                     # West Saxon dialect
                     return [Phoneme("uː", template=state.current)]
 
-    # Vː → V[-long] / _C{ː,C} ! _st{#,V} or when preceding a cluster which had
-    # triggered a vowel to become long in Old English
     def pre_cluster_shortening(state):
-        if state.current.is_vowel() and state.current.is_long() and state.next and state.next.is_consonant():
-            if state.next.is_geminate() or len(state.following) > 1 and state.following[1].is_consonant():
-                # !
-                if len(state.following) >= 2:
+        if state.current.is_vowel() and state.current.is_long() \
+            and state.next and state.next.is_consonant() \
+            and (state.next.is_geminate() or len(state.following) > 1 and state.following[1].is_consonant()):
+                if state.next.is_geminate():
+                    return [state.current.get_shortened()]
+                else:
                     next_two_joined = "".join([x.value for x in state.following[:2]])
                     if next_two_joined == "st" \
                         and (len(state.following) == 2 or state.following[2].is_vowel()):
@@ -81,7 +81,7 @@ def me_phonemes(oe_phonemes):
                     if next_two_joined in lengthening_clusters:
                         return None
 
-                return [state.current.get_shortened()]
+                    return [state.current.get_shortened()]
 
     # Reduced double consonants to a single consonant
     def reduction_of_double_consonants(state):
@@ -94,9 +94,54 @@ def me_phonemes(oe_phonemes):
         else:
             return None
 
+    def vocalization_of_post_vocalic_g(state):
+        if state.current.value == "ɣ" and state.prev.is_vowel() and state.next.is_vowel():
+            return [Phoneme("w", template=state.current)]
+
+    def diphthong_formation_2(state):
+        vowel_after = state.next and state.next.is_vowel()
+        word_end = state.next == None
+
+        if state.joined in ["aj", "aːj", "ɛj"] \
+            or (state.joined == "eːj" and word_end):
+            return [Phoneme("ai", template=state.capture[0])]
+        elif (state.capture[0].value == "eːj" and vowel_after) \
+            or state.joined in ["ij", "iːj", "yj", "yːj"]:
+            return [Phoneme("iː", template=state.capture[0])]
+        elif state.joined == "au":
+            return [Phoneme("au", template=state.capture[0])]
+        elif state.joined in ["aːu", "eːau", "eu", "eou"]:
+            return [Phoneme("ɛu", template=state.capture[0])]
+        elif state.joined in ["eːu", "eːou", "iu", "iːu", "yu", "yːu"]:
+            return [Phoneme("iu", template=state.capture[0])]
+        elif state.joined in ["aːu", "ou", "oːu"]:
+            return [Phoneme("ɔu", template=state.capture[0])]
+
+    def breaking(state):
+        word_end = state.next == None
+
+        if state.joined == "ax" \
+            or (state.joined == "ag" and word_end):
+            return [Phoneme("au", template=state.capture[0]), Phoneme("x", template=state.capture[1])]
+        elif state.joined == "ex":
+            return [Phoneme("ɛi", template=state.capture[0]), Phoneme("x", template=state.capture[1])]
+        elif state.joined in ["eːx", "ix", "iːx", "yx", "yːx"]:
+            return [Phoneme("iː", template=state.capture[0]), Phoneme("x", template=state.capture[1])]
+        elif state.joined in ["aːx", "ox"] \
+            or (state.joined in ["aːg", "og"] and word_end):
+            return [Phoneme("ɔu", template=state.capture[0]), Phoneme("x", template=state.capture[1])]
+        elif state.joined in ["ux", "uːx"] \
+            or (state.joined in ["oːx", "oːg", "ug", "uːg"] and word_end):
+            return [Phoneme("ɔu", template=state.capture[0]), Phoneme("x", template=state.capture[1])]
+
+    # ɣ → w / C_V 
+    def g_to_w(state):
+        if state.current.value == "ɣ" and state.prev.is_consonant() and state.next.is_vowel():
+            return [Phoneme("w", template=state.current)]
+
     # Open syllable lengthening
     def open_syllable_lengthening(state):
-        if state.current.is_vowel() and state.syllable_data.is_open and state.syllable_data.following_syllable_count == 1:
+        if state.current.is_vowel() and not state.current.is_diphthong() and state.syllable_data.is_open and state.syllable_data.following_syllable_count == 1:
             if state.current.value in ["i", "y"]:
                 return [Phoneme("eː", state.current.stressed)]
             elif state.current.value in ["e", "eo"]:
@@ -107,179 +152,6 @@ def me_phonemes(oe_phonemes):
                 return [Phoneme("oː", state.current.stressed)]
             else:
                 return [state.current.get_lengthened()]
-        else:
-            return None
-
-    def vowel_shifts(state):
-        def value(values):
-            return state.current.value in values
-
-        def vcc(vowels):
-            if state.current.value in vowels \
-                and state.next and state.next.is_consonant() \
-                and len(state.following) > 1 and state.following[1].is_consonant():
-                return True
-
-            return False
-
-        def vcv(vowels):
-            if state.current.value in vowels \
-                and state.next and state.next.is_consonant() \
-                and len(state.following) > 1 and state.following[1].is_vowel():
-                return True
-
-            return False
-
-
-        open_syllable = state.current.is_vowel() and state.syllable_data.is_open and state.syllable_data.following_syllable_count == 1
-        if open_syllable:
-            # Address only long vowels unaltered by open-syllable lengthening
-            if state.current.value == "aː":
-                return [Phoneme("ɔː", template=state.current)]
-            elif state.current.value in ["eː", "eːo"]:
-                return [Phoneme("ɛː", template=state.current)]
-            elif state.current.value in ["æː", "eːa"]:
-                return [Phoneme("ɛː", template=state.current)]
-            elif state.current.value in ["iː", "yː"]:
-                return [Phoneme("iː", template=state.current)]
-            elif state.current.value == "oː":
-                return [Phoneme("oː", template=state.current)]
-            elif state.current.value == "uː":
-                return [Phoneme("uː", template=state.current)]
-            return
-
-        # vowel = a
-        if vcc(["a"]):
-            return [Phoneme("a", template=state.current)]
-        # elif state.current.value == "a" and open_syllable:
-        #     return [Phoneme("a", template=state.current)]
-        elif state.current.value == "a" and len(state.following) > 1 and state.following[0].value + state.following[1].value in ["ld", "mb"]:
-            return [Phoneme("ɔː", template=state.current)]
-        elif state.current.value == "a":
-            return [Phoneme("a", template=state.current)]
-        elif state.current.value == "aː":
-            return [Phoneme("ɔː", template=state.current)]
-        
-        # vowel = æ
-        # elif state.current.value == "æ" and open_syllable:
-        #     return [Phoneme("aː", template=state.current)]
-        elif state.current.value == "æ":
-            return [Phoneme("a", template=state.current)]
-        elif vcc(["æː"]):
-            if often():
-                return [Phoneme("a", template=state.current)]
-            else:
-                return [Phoneme("e", template=state.current)]
-        elif state.current.value == "æː":
-            return [Phoneme("ɛː", template=state.current)]
-        
-        # vowel = e
-        # elif state.current.value == "e" and open_syllable:
-        #     return [Phoneme("ɛː", template=state.current)]
-        elif often() and state.current.value == "e" and len(state.following) > 1 and state.following[0].value + state.following[1].value == "ld":
-            return [Phoneme("ɛː", template=state.current)]
-        elif state.current.value == "e" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
-            return [Phoneme("u", template=state.current)]
-        elif state.current.value == "e":
-            return [Phoneme("e", template=state.current)]
-        
-        # vowel = ea
-        elif state.current.value == "ea":
-            return [Phoneme("a", template=state.current)]
-
-        # vowel = eo
-        elif state.current.value == "eo" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
-            return [Phoneme("u", template=state.current)]
-        elif state.current.value == "eo":
-            return [Phoneme("e", template=state.current)]
-
-        # vowel = ē
-        elif often() and state.current.value == "eː" and len(state.following) > 0 and state.following[0].value == "c":
-                return [Phoneme("i", template=state.current)]
-        elif vcc(["eː"]):
-            if often():
-                return [Phoneme("e", template=state.current)]
-            else:
-                return [Phoneme("a", template=state.current)]
-        elif often() and state.current.value == "eː" and len(state.following) > 0 and state.following[0].value == "r":
-            return [Phoneme("ɛː", template=state.current)]
-        elif state.current.value == "eː":
-            return [Phoneme("eː", template=state.current)]
-
-        # vowel = ēa
-        elif vcc(["eːa"]):
-            if often():
-                return [Phoneme("a", template=state.current)]
-            else:
-                return [Phoneme("e", template=state.current)]
-        elif state.current.value == "eːa":
-            return [Phoneme("ɛː", template=state.current)]
-
-        # vowel = ēo
-        elif state.current.value == "eːo" and len(state.following) > 1 and state.following[0].value + state.following[1].value == "nd":
-            # Special case added for "friend". No counterexamples yet
-            return [Phoneme("eː", template=state.current)]
-        elif vcc(["eːo"]):
-            return [Phoneme("e", template=state.current)]
-        elif state.current.value == "eːo" and len(state.following) > 0 and state.following[0].value == "c":
-            if often():
-                return [Phoneme("i", template=state.current)]
-        elif state.current.value == "eːo" and len(state.following) > 0 and state.following[0].value == "r":
-            if often():
-                return [Phoneme("ɛː", template=state.current)]
-            else:
-                return [Phoneme("eː", template=state.current)]
-        elif state.current.value == "eːo":
-            if often():
-                return [Phoneme("eː", template=state.current)]
-            else:
-                return [Phoneme("oː", template=state.current)]
-
-        # vowel = y
-        elif often() and state.current.value == "y" and len(state.following) > 1 and state.following[0] + state.following[1] in ["ld", "mb", "nd"]:
-            return [Phoneme("i", template=state.current)]
-        elif state.current.value == "y" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
-            return [Phoneme("e", template=state.current)]
-        elif state.current.value == "y":
-            if often():
-                # Anglian dialect
-                return [Phoneme("i", template=state.current)]
-            elif often():
-                # Kentish dialect
-                return [Phoneme("e", template=state.current)]
-            else:
-                # West Saxon dialect
-                return [Phoneme("u", template=state.current)]
-
-        # vowel = ȳp
-        elif vcc(["yː"]):
-            return [Phoneme("i", template=state.current)]
-        elif state.current.value == "yː":
-            return [Phoneme("iː", template=state.current)]
-        elif state.current.value == "i" and len(state.following) > 1 and state.following[0].value + state.following[1].value in ["ld", "mb", "nd"]:
-            return [Phoneme("iː", template=state.current)]
-        elif state.current.value == "i":
-            return [Phoneme("i", template=state.current)]
-        elif vcc(["iː"]):
-            return [Phoneme("i", template=state.current)]
-        elif occ() and vcv(["iː"]):
-            return [Phoneme("i", template=state.current)]
-        elif state.current.value == "iː":
-            return [Phoneme("iː", template=state.current)]
-        elif vcc(["oː"]):
-            return [Phoneme("o", template=state.current)]
-        elif state.current.value == "oː":
-            return [Phoneme("oː", template=state.current)]
-        elif state.current.value == "o" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
-            return [Phoneme("u", template=state.current)]
-        elif state.current.value == "o":
-            return [Phoneme("o", template=state.current)]
-        elif state.current.value == "u":
-            return [Phoneme("u", template=state.current)]
-        elif vcc(["uː"]):
-            return [Phoneme("u", template=state.current)]
-        elif state.current.value == "uː":
-            return [Phoneme("uː", template=state.current)]
         else:
             return None
 
@@ -301,11 +173,6 @@ def me_phonemes(oe_phonemes):
         elif state.joined == "wl":
             return [Phoneme("l", template=state.capture[-1])]
 
-    # ɣ → w / C_V 
-    def g_to_w(state):
-        if state.current.value == "ɣ" and state.prev.is_consonant() and state.next.is_vowel():
-            return [Phoneme("w", template=state.current)]
-
     # ə → ∅ / _# 
     def loss_of_final_unstressed_vowel(state):
         if state.current.value == "ə" and state.next == None:
@@ -322,9 +189,10 @@ def me_phonemes(oe_phonemes):
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", verbose, separator)
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", verbose, separator)
     rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", verbose, separator)
-    # Diphthongs and g -> u
-    rig.run_capture(g_to_w, 1, "G to w", verbose, separator)
-    # Breaking, more diphthongs
+    rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", verbose, separator)
+    rig.run_capture(diphthong_formation_2, 2, "Diphthong formation", verbose, separator)
+    # rig.run_capture(g_to_w, 1, "G to w", verbose, separator)
+    rig.run_capture(breaking, 2, "Breaking", verbose, separator)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", verbose, separator)
     # Trisyllabic laxing (not sure if relevant to spelling)
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", verbose, separator)
@@ -334,6 +202,179 @@ def me_phonemes(oe_phonemes):
     # rig.run_capture(vowel_shifts, 1, "Vowel shifts", verbose, separator)
 
     return rig.phonemes
+
+    # def vowel_shifts(state):
+    #     def value(values):
+    #         return state.current.value in values
+
+    #     def vcc(vowels):
+    #         if state.current.value in vowels \
+    #             and state.next and state.next.is_consonant() \
+    #             and len(state.following) > 1 and state.following[1].is_consonant():
+    #             return True
+
+    #         return False
+
+    #     def vcv(vowels):
+    #         if state.current.value in vowels \
+    #             and state.next and state.next.is_consonant() \
+    #             and len(state.following) > 1 and state.following[1].is_vowel():
+    #             return True
+
+    #         return False
+
+
+    #     open_syllable = state.current.is_vowel() and state.syllable_data.is_open and state.syllable_data.following_syllable_count == 1
+    #     if open_syllable:
+    #         # Address only long vowels unaltered by open-syllable lengthening
+    #         if state.current.value == "aː":
+    #             return [Phoneme("ɔː", template=state.current)]
+    #         elif state.current.value in ["eː", "eːo"]:
+    #             return [Phoneme("ɛː", template=state.current)]
+    #         elif state.current.value in ["æː", "eːa"]:
+    #             return [Phoneme("ɛː", template=state.current)]
+    #         elif state.current.value in ["iː", "yː"]:
+    #             return [Phoneme("iː", template=state.current)]
+    #         elif state.current.value == "oː":
+    #             return [Phoneme("oː", template=state.current)]
+    #         elif state.current.value == "uː":
+    #             return [Phoneme("uː", template=state.current)]
+    #         return
+
+    #     # vowel = a
+    #     if vcc(["a"]):
+    #         return [Phoneme("a", template=state.current)]
+    #     # elif state.current.value == "a" and open_syllable:
+    #     #     return [Phoneme("a", template=state.current)]
+    #     elif state.current.value == "a" and len(state.following) > 1 and state.following[0].value + state.following[1].value in ["ld", "mb"]:
+    #         return [Phoneme("ɔː", template=state.current)]
+    #     elif state.current.value == "a":
+    #         return [Phoneme("a", template=state.current)]
+    #     elif state.current.value == "aː":
+    #         return [Phoneme("ɔː", template=state.current)]
+        
+    #     # vowel = æ
+    #     # elif state.current.value == "æ" and open_syllable:
+    #     #     return [Phoneme("aː", template=state.current)]
+    #     elif state.current.value == "æ":
+    #         return [Phoneme("a", template=state.current)]
+    #     elif vcc(["æː"]):
+    #         if often():
+    #             return [Phoneme("a", template=state.current)]
+    #         else:
+    #             return [Phoneme("e", template=state.current)]
+    #     elif state.current.value == "æː":
+    #         return [Phoneme("ɛː", template=state.current)]
+        
+    #     # vowel = e
+    #     # elif state.current.value == "e" and open_syllable:
+    #     #     return [Phoneme("ɛː", template=state.current)]
+    #     elif often() and state.current.value == "e" and len(state.following) > 1 and state.following[0].value + state.following[1].value == "ld":
+    #         return [Phoneme("ɛː", template=state.current)]
+    #     elif state.current.value == "e" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
+    #         return [Phoneme("u", template=state.current)]
+    #     elif state.current.value == "e":
+    #         return [Phoneme("e", template=state.current)]
+        
+    #     # vowel = ea
+    #     elif state.current.value == "ea":
+    #         return [Phoneme("a", template=state.current)]
+
+    #     # vowel = eo
+    #     elif state.current.value == "eo" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
+    #         return [Phoneme("u", template=state.current)]
+    #     elif state.current.value == "eo":
+    #         return [Phoneme("e", template=state.current)]
+
+    #     # vowel = ē
+    #     elif often() and state.current.value == "eː" and len(state.following) > 0 and state.following[0].value == "c":
+    #             return [Phoneme("i", template=state.current)]
+    #     elif vcc(["eː"]):
+    #         if often():
+    #             return [Phoneme("e", template=state.current)]
+    #         else:
+    #             return [Phoneme("a", template=state.current)]
+    #     elif often() and state.current.value == "eː" and len(state.following) > 0 and state.following[0].value == "r":
+    #         return [Phoneme("ɛː", template=state.current)]
+    #     elif state.current.value == "eː":
+    #         return [Phoneme("eː", template=state.current)]
+
+    #     # vowel = ēa
+    #     elif vcc(["eːa"]):
+    #         if often():
+    #             return [Phoneme("a", template=state.current)]
+    #         else:
+    #             return [Phoneme("e", template=state.current)]
+    #     elif state.current.value == "eːa":
+    #         return [Phoneme("ɛː", template=state.current)]
+
+    #     # vowel = ēo
+    #     elif state.current.value == "eːo" and len(state.following) > 1 and state.following[0].value + state.following[1].value == "nd":
+    #         # Special case added for "friend". No counterexamples yet
+    #         return [Phoneme("eː", template=state.current)]
+    #     elif vcc(["eːo"]):
+    #         return [Phoneme("e", template=state.current)]
+    #     elif state.current.value == "eːo" and len(state.following) > 0 and state.following[0].value == "c":
+    #         if often():
+    #             return [Phoneme("i", template=state.current)]
+    #     elif state.current.value == "eːo" and len(state.following) > 0 and state.following[0].value == "r":
+    #         if often():
+    #             return [Phoneme("ɛː", template=state.current)]
+    #         else:
+    #             return [Phoneme("eː", template=state.current)]
+    #     elif state.current.value == "eːo":
+    #         if often():
+    #             return [Phoneme("eː", template=state.current)]
+    #         else:
+    #             return [Phoneme("oː", template=state.current)]
+
+    #     # vowel = y
+    #     elif often() and state.current.value == "y" and len(state.following) > 1 and state.following[0] + state.following[1] in ["ld", "mb", "nd"]:
+    #         return [Phoneme("i", template=state.current)]
+    #     elif state.current.value == "y" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
+    #         return [Phoneme("e", template=state.current)]
+    #     elif state.current.value == "y":
+    #         if often():
+    #             # Anglian dialect
+    #             return [Phoneme("i", template=state.current)]
+    #         elif often():
+    #             # Kentish dialect
+    #             return [Phoneme("e", template=state.current)]
+    #         else:
+    #             # West Saxon dialect
+    #             return [Phoneme("u", template=state.current)]
+
+    #     # vowel = ȳp
+    #     elif vcc(["yː"]):
+    #         return [Phoneme("i", template=state.current)]
+    #     elif state.current.value == "yː":
+    #         return [Phoneme("iː", template=state.current)]
+    #     elif state.current.value == "i" and len(state.following) > 1 and state.following[0].value + state.following[1].value in ["ld", "mb", "nd"]:
+    #         return [Phoneme("iː", template=state.current)]
+    #     elif state.current.value == "i":
+    #         return [Phoneme("i", template=state.current)]
+    #     elif vcc(["iː"]):
+    #         return [Phoneme("i", template=state.current)]
+    #     elif occ() and vcv(["iː"]):
+    #         return [Phoneme("i", template=state.current)]
+    #     elif state.current.value == "iː":
+    #         return [Phoneme("iː", template=state.current)]
+    #     elif vcc(["oː"]):
+    #         return [Phoneme("o", template=state.current)]
+    #     elif state.current.value == "oː":
+    #         return [Phoneme("oː", template=state.current)]
+    #     elif state.current.value == "o" and len(state.preceding) > 0 and len(state.following) > 0 and state.preceding[0].value == "w" and state.following[0].value == "r":
+    #         return [Phoneme("u", template=state.current)]
+    #     elif state.current.value == "o":
+    #         return [Phoneme("o", template=state.current)]
+    #     elif state.current.value == "u":
+    #         return [Phoneme("u", template=state.current)]
+    #     elif vcc(["uː"]):
+    #         return [Phoneme("u", template=state.current)]
+    #     elif state.current.value == "uː":
+    #         return [Phoneme("uː", template=state.current)]
+    #     else:
+    #         return None
 
 # def the_big_chart(phonemes):
 #     result = []

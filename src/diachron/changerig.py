@@ -52,8 +52,6 @@ class RigState:
     # Returns true if the phoneme at the given index in the word is in an open syllable.
     # Assumes the given index points to a vowel.
     def is_in_open_syllable(phonemes, index):
-        # print("open?")
-        # print("".join([p.value for p in phonemes]) + ", " + str(index))
         state = 0
         for i in range(index + 1, len(phonemes)):
             phoneme = phonemes[i]
@@ -71,7 +69,6 @@ class RigState:
 
 class Rig:
     def __init__(self, phonemes):
-        # print([x.value for x in phonemes])
         self.phonemes = phonemes
 
     def run_change(self, change, name=None, verbose=False, separator="\n"):
@@ -92,21 +89,23 @@ class Rig:
             return
 
         new_phonemes = []
-        last_capture = None
+        treated = 0
 
         for i in range(0, len(self.phonemes) - capture_size + 1):
-            if last_capture != None and i < last_capture + capture_size:
+            if i < treated:
                 continue
 
             state = RigState(self.phonemes, (i, i + capture_size))
             added_phonemes = change(state)
             if added_phonemes != None:
                 new_phonemes += added_phonemes
-                last_capture = i
-            elif i < len(self.phonemes) - capture_size:
-                new_phonemes.append(self.phonemes[i])
+                treated += capture_size
             else:
-                new_phonemes += self.phonemes[i:len(self.phonemes)]
+                new_phonemes.append(self.phonemes[i])
+                treated += 1
+
+        if treated < len(self.phonemes):
+            new_phonemes += self.phonemes[treated:]
 
         if name and verbose and new_phonemes != self.phonemes:
             print("".join([p.value for p in new_phonemes]) + " — " + name + separator)
