@@ -98,28 +98,28 @@ def count_syllables(graphs):
 
 def get_phonemes(graphs):
     phonemes = []
-    stressed = 0 # 0: unstressed, 1: next vowel will be stressed, 2: vowel is stressed
+    stress_count = 0 # 0: unstressed, 1: next vowel will be stressed, 2: vowel is stressed
     inflectional = False
 
     if count_syllables(graphs) == 1 or "'" not in graphs:
-        stressed = 1
+        stress_count = 1
 
     for i in range(0, len(graphs)):
         if graphs[i] == "'":
-            stressed = 1
+            stress_count = 1
             continue
 
         if graphs[i] == "|":
             inflectional = True
             continue
 
-        if graphs[i] in consonants:
-            if stressed == 2:
-                stressed = 0
+        if graphs[i][0] in consonants:
+            if stress_count == 2:
+                stress_count = 0
 
-        if graphs[i] in vowels:
-            if stressed == 1:
-                stressed = 2
+        if graphs[i][0] in vowels:
+            if stress_count == 1:
+                stress_count = 2
 
         anteprev = None
         prev = None
@@ -132,7 +132,8 @@ def get_phonemes(graphs):
         if i < len(graphs) - 1:
             next = graphs[i+1]
 
-        phonemes.append(get_phoneme(graphs[i], anteprev, prev, next, stressed == 2, inflectional))
+        is_stressed = stress_count == 2
+        phonemes.append(get_phoneme(graphs[i], anteprev, prev, next, is_stressed, inflectional))
 
     return phonemes
 

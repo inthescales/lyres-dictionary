@@ -6,8 +6,16 @@ class Letter:
         return self.value == other.value
 
 class Phoneme:
-    def __init__(self, value, stressed=False, inflectional=False, template=None):
+    def __init__(self, value, stressed=False, inflectional=False, template=None, history=None):
         self.value = value
+
+        if template:
+            self.history = template.history
+        else:
+            self.history = []
+        if history:
+            self.history += history
+
         if template:
             self.stressed = template.stressed
             self.inflectional = template.inflectional

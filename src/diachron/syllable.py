@@ -32,6 +32,9 @@ def is_in_open_syllable(phonemes, index):
         phoneme = phonemes[i]
 
         if phoneme.is_consonant():
+            if phoneme.is_geminate():
+                return False
+            
             if state == 0:
                 state = 1
             else:
