@@ -197,7 +197,7 @@ def from_oe_phonemes(oe_phonemes):
             return [state.current.get_voiced()]
 
     verbose = False
-    separator = "<br>"
+    separator = "\n"
     if verbose:
         print("".join(p.value for p in rig.phonemes) + separator)
 

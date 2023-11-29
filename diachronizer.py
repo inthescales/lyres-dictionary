@@ -7,6 +7,15 @@ import src.diachronizer.language.ne_orthography as ne_orthography
 import src.diachronizer.table as table
 import src.helpers as helpers
 
+def form_from_oe(oe_form):
+    oe_phonemes = oe_phonology.from_oe_written(oe_form)
+    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes)
+    modern_form = ne_orthography.from_me_phonemes(me_phonemes)
+
+    return modern_form
+
+# Table Drawing =================================
+
 def make_table(input):
     inputs = [
         "stel|an",

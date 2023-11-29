@@ -1,9 +1,9 @@
 from src.diachronizer.engine.phoneme import Phoneme
 
 consonants = ["b", "c", "ċ", "cg", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sc", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
-geminates = [x + x for x in consonants if len(x) == 1]
+geminates = [x + x for x in consonants if (len(x) == 1)]
 vowels = ["a", "ā", "æ", "ǣ", "e", "ę", "ē", "ea", "ēa", "eo", "ēo", "i", "ī", "ie", "īe", "io", "īo", "o", "ō", "oe", "ōe", "u", "ū", "y", "ȳ"]
-special_characters = ["'", "|"]
+special_characters = ["'", "|", "."]
 
 front_vowels = ["æ", "ǣ", "i", "ī", "e", "ē"]
 back_vowels = ["u", "ū", "a", "ā", "o", "ō"]
@@ -112,6 +112,9 @@ def get_phonemes(graphs):
 
         if graphs[i] == "|":
             inflectional = True
+            continue
+
+        if graphs[i] == ".":
             continue
 
         if graphs[i] in (consonants + geminates):
