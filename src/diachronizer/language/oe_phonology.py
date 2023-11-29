@@ -1,6 +1,6 @@
 from src.diachronizer.engine.phoneme import Phoneme
 
-consonants = ["b", "c", "ċ", "cg", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sc", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
+consonants = ["b", "c", "ċ", "cg", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sċ", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
 geminates = [x + x for x in consonants if (len(x) == 1)]
 vowels = ["a", "ā", "æ", "ǣ", "e", "ę", "ē", "ea", "ēa", "eo", "ēo", "i", "ī", "ie", "īe", "io", "īo", "o", "ō", "oe", "ōe", "u", "ū", "y", "ȳ"]
 special_characters = ["'", "|", "."]
@@ -40,7 +40,7 @@ graph_trie = {
     "ō": TrieNode("ō", {"e": TrieNode("ōe")}),
     "p": TrieNode("p", {"p": TrieNode("pp")}),
     "r": TrieNode("r", {"r": TrieNode("rr")}),
-    "s": TrieNode("s", {"c": TrieNode("sc"), "ċ": TrieNode("sċ"), "s": TrieNode("ss")}),
+    "s": TrieNode("s", {"ċ": TrieNode("sċ"), "s": TrieNode("ss")}),
     "t": TrieNode("t", {"h": TrieNode("th"), "t": TrieNode("tt")}),
     "þ": TrieNode("þ", {"þ": TrieNode("þþ")}),
     "u": TrieNode("u", {"u": TrieNode("uu")}),

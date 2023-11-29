@@ -10,10 +10,12 @@ def from_oe_phonemes(oe_phonemes):
     rig = Rig(phonemes)
     form = ""
 
-    # ɣ → ɡ / #_ 
-    def initial_g(state):
-        if state.current.value == "ɣ" and state.syllable_data.index == 0:
+    def harden_g(state):
+        if (state.current.value == "ɣ" and state.syllable_data.index == 0) \
+             or (state.current.value == "ɣ" and state.prev and state.prev.value == "n"):
             return [Phoneme("g", template=state.current)]
+        elif state.current.value == "ɣɣ":
+            return [Phoneme("gg", template=state.current)]
 
     def homorganic_lengthening(state):
         if state.capture[0].is_vowel() \
@@ -23,14 +25,16 @@ def from_oe_phonemes(oe_phonemes):
             
             return [state.capture[0].get_lengthened(), state.capture[1], state.capture[2]]
 
-    def stressed_vowel_changess(state):
+    def stressed_vowel_changes(state):
         if state.current.stressed:
             if state.current.value in ["æ", "ea", "a"]:
                 return [Phoneme("a", template=state.current)]
             elif state.current.value in ["æː", "eːa"]:
-                return [Phoneme("ɛː", template=state.current)]
+                # return [Phoneme("ɛː", template=state.current)]
+                return [Phoneme("aː", template=state.current)]
             elif state.current.value == "aː":
-                return [Phoneme("ɔː", template=state.current)]
+                # return [Phoneme("ɔː", template=state.current)]
+                return [Phoneme("aː", template=state.current)]
             elif state.current.value == "eo":
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
@@ -59,7 +63,7 @@ def from_oe_phonemes(oe_phonemes):
     def pre_cluster_shortening(state):
         if state.current.is_vowel() and state.current.is_long() \
             and state.next and state.next.is_consonant() \
-            and (state.next.is_geminate() or len(state.following) > 1 and state.following[1].is_consonant()):
+            and (state.next.is_geminate() or (len(state.following) > 1 and state.following[1].is_consonant())):
                 if state.next.is_geminate():
                     return [state.current.get_shortened()]
                 else:
@@ -68,7 +72,7 @@ def from_oe_phonemes(oe_phonemes):
                         and (len(state.following) == 2 or state.following[2].is_vowel()):
                         return None
 
-                    lengthening_clusters = ["ld", "mb", "nd", "ng", "rd", "rl", "rn", "rs"] # rs+vowel?
+                    lengthening_clusters = ["ld", "mb", "nd", "rd", "rl", "rn", "rs"] # rs+vowel?
                     if next_two_joined in lengthening_clusters:
                         return None
 
@@ -81,7 +85,10 @@ def from_oe_phonemes(oe_phonemes):
     # Reduce all unstressed vowels to /ə/
     def reduction_of_unstressed_vowels(state):
         if state.current.is_vowel() and not state.current.stressed:
-            return [Phoneme("ə", template=state.current)]
+            if state.prev and state.prev.is_vowel() and not state.prev.stressed:
+                return []
+            else:
+                return [Phoneme("ə", template=state.current)]
 
     def vocalization_of_post_vocalic_g(state):
         if state.current.value == "ɣ" and state.prev.is_vowel() and state.next.is_vowel():
@@ -144,7 +151,9 @@ def from_oe_phonemes(oe_phonemes):
 
     # ɣ → w / C_V 
     def g_to_w(state):
-        if state.current.value == "ɣ" and state.prev.is_consonant() and state.next.is_vowel():
+        if state.current.value == "ɣ" \
+            and state.prev and state.prev.is_consonant() \
+            and state.next and state.next.is_vowel():
             return [Phoneme("w", template=state.current)]
 
     # Open syllable lengthening
@@ -169,8 +178,8 @@ def from_oe_phonemes(oe_phonemes):
 
     # m → n / _# when unstressed
     def final_unstressed_m_to_n(state):
-        if state.current.value in ["m"] and state.next == None \
-            and not (state.syllable_data.prev_vowel and not state.syllable_data.prev_vowel.stressed):
+        if state.current.value == "m" and state.next == None \
+            and not (state.syllable_data.prev_vowel and state.syllable_data.prev_vowel.stressed):
             return []
 
     # Drop final n in inflectional ending
@@ -201,9 +210,9 @@ def from_oe_phonemes(oe_phonemes):
     if verbose:
         print("".join(p.value for p in rig.phonemes) + separator)
 
-    rig.run_capture(initial_g, 1, "Harden initial g", verbose, separator)
-    rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", verbose, separator)
-    rig.run_capture(stressed_vowel_changess, 1, "Stressed vowel changes", verbose, separator)
+    rig.run_capture(harden_g, 1, "Harden g's", verbose, separator)
+    # rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", verbose, separator)
+    rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", verbose, separator)
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", verbose, separator)
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", verbose, separator)
     rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", verbose, separator)

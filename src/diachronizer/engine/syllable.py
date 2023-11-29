@@ -84,7 +84,7 @@ def get_next_consonant(phonemes, index):
 
 # Returns the previous vowel phoneme before the given index, if any.
 def get_prev_vowel(phonemes, index):
-    for i in range(index, 0):
+    for i in reversed(range(0, index)):
         if phonemes[i].is_vowel():
             return phonemes[i]
 

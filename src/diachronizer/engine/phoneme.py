@@ -30,7 +30,7 @@ class Phoneme:
             and self.inflectional == other.inflectional
 
     def is_vowel(self):
-        for char in ["a", "ɑ", "æ", "e", "ɛ", "i", "o", "u", "y", "ə"]:
+        for char in ["a", "ɑ", "æ", "e", "ɛ", "i", "o", "ɔ", "u", "y", "ə"]:
             if char in self.value:
                 return True
         return False

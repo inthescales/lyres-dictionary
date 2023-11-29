@@ -68,7 +68,8 @@ def from_me_phonemes(phonemes):
             result += "a"
         elif phone.value == "aː":
             result += "a"
-            insert_lengthening_e = True
+            if next1 and not (next1.is_geminate() or (next2 and next2.is_consonant()) or next1.value in ["ʃ"]):
+                insert_lengthening_e = True
         elif phone.value == "e" and next1 and next1.value == "r":
             # These cases seem ambiguous. 
             # "ea" may be more common when descending from "eo" spelling?
@@ -123,7 +124,8 @@ def from_me_phonemes(phonemes):
 
         # Consonants
         elif phone.value == "f":
-            if next1 != None:
+            if next1 \
+                or prev and prev.is_consonant():
                 result += "f"
             else:
                 result += "ff"
@@ -133,11 +135,12 @@ def from_me_phonemes(phonemes):
             else:
                 result += "ll"
         elif phone.value == "s":
-            if next1 != None:
-                result += "s"
-            elif next2.value == "c":
-                result += "sh"
-                skip_next = True
+            if next1:
+                if next1.value == "c":
+                    result += "sh"
+                    skip_next = True
+                else:
+                    result += "s"
             else:
                 result += "ss"
         elif phone.value in ["θ", "ð"]:
@@ -148,13 +151,18 @@ def from_me_phonemes(phonemes):
             else:
                 result += "gh"
         elif phone.value == "k":
-            if next1 != None:
-                result += "k"
-            elif next2.value == "w":
-                result += "qu"
-                skip_next = True
-            else:
+            if not next1 and prev and prev.is_vowel():
                 result += "ck"
+            elif next1 and next1.value == "w":
+                    result += "qu"
+                    skip_next = True
+            else:
+                result += "k"
+        elif phone.value == "ks":
+            result += "x"
+            skip_next = True
+        elif phone.value == "ʃ":
+            result += "sh"
         elif phone.value == "tʃ":
             result += "ch"
         elif phone.value == "dʒ":
