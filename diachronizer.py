@@ -1,10 +1,10 @@
 import getopt
 import sys
 
-import src.diachron.orth_oe as old_english
-import src.diachron.me as middle_english
-import src.diachron.modernize_oe as modernize_oe
-import src.diachron.table as table
+import src.diachronizer.language.oe_phonology as oe_phonology
+import src.diachronizer.language.me_phonology as me_phonology
+import src.diachronizer.language.ne_orthography as ne_orthography
+import src.diachronizer.table as table
 import src.helpers as helpers
 
 def get_clusters(word):
@@ -82,16 +82,17 @@ def run(input):
 
     oe_phonemes = []
     for input in inputs:
-        phonemes = old_english.get_old_english_phonemes(input)
+        phonemes = oe_phonology.from_oe_written(input)
         oe_phonemes.append(phonemes)
 
     me_phonemes = []
-    modern_forms = []
     for oe in oe_phonemes:
-        transformed = modernize_oe.me_phonemes(oe)
-        me_phonemes.append(transformed)
+        phonemes = me_phonology.from_oe_phonemes(oe)
+        me_phonemes.append(phonemes)
 
-        spelling = modernize_oe.orthography(transformed)
+    modern_forms = []
+    for me in me_phonemes:
+        spelling = ne_orthography.from_me_phonemes(me)
         modern_forms.append(spelling)
 
     oe_output = ["/" + "".join([x.value for x in word]) + "/" for word in oe_phonemes]

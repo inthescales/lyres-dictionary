@@ -1,4 +1,4 @@
-from src.diachron.phoneme import Phoneme
+from src.diachronizer.engine.phoneme import Phoneme
 
 consonants = ["b", "c", "ċ", "cg", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sc", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
 vowels = ["a", "ā", "æ", "ǣ", "e", "ę", "ē", "ea", "ēa", "eo", "ēo", "i", "ī", "ie", "īe", "io", "īo", "o", "ō", "oe", "ōe", "u", "ū", "y", "ȳ"]
@@ -53,7 +53,7 @@ graph_trie = {
     "'": TrieNode("'"),
     "|": TrieNode("|")
 }
-def get_old_english_phonemes(word):
+def from_oe_written(word):
     graphs = get_graphs(word)
     return get_phonemes(graphs)
 

@@ -1,4 +1,4 @@
-from src.diachron.syllable import SyllableData
+from src.diachronizer.engine.syllable import SyllableData
 
 import sys
 
