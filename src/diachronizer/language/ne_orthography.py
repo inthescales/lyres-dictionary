@@ -123,14 +123,10 @@ def from_me_phonemes(phonemes):
 
         # Consonants
         elif phone.value == "f":
-            if (prev and (prev.is_vowel() or prev.is_voiced())) \
-                and (next1 and (next1.is_vowel() or next1.is_voiced())):
-                result += "v"
+            if next1 != None:
+                result += "f"
             else:
-                if next1 != None:
-                    result += "f"
-                else:
-                    result += "ff"
+                result += "ff"
         elif phone.value == "l":
             if next1 != None or (prev and prev.is_vowel() and prev.is_long()):
                 result += "l"
@@ -139,9 +135,12 @@ def from_me_phonemes(phonemes):
         elif phone.value == "s":
             if next1 != None:
                 result += "s"
+            elif next2.value == "c":
+                result += "sh"
+                skip_next = True
             else:
                 result += "ss"
-        elif phone.value == "θ":
+        elif phone.value in ["θ", "ð"]:
             result += "th"
         elif phone.value in ["x", "xx"]:
             if prev == None:
@@ -151,6 +150,9 @@ def from_me_phonemes(phonemes):
         elif phone.value == "k":
             if next1 != None:
                 result += "k"
+            elif next2.value == "w":
+                result += "qu"
+                skip_next = True
             else:
                 result += "ck"
         elif phone.value == "tʃ":

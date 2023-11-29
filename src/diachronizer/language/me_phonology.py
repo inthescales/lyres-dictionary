@@ -190,6 +190,12 @@ def from_oe_phonemes(oe_phonemes):
         if state.current.value == "ə" and state.next == None:
             return []
 
+    def distinguish_voiced_fricatives(state):
+        if state.current.is_consonant() and state.current.is_fricative() \
+            and (state.prev and (state.prev.is_vowel() or state.prev.is_voiced())) \
+            and (state.next and (state.next.is_vowel() or state.next.is_voiced())):
+            return [state.current.get_voiced()]
+
     verbose = False
     separator = "<br>"
     if verbose:
@@ -212,5 +218,6 @@ def from_oe_phonemes(oe_phonemes):
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", verbose, separator)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", verbose, separator)
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", verbose, separator)
+    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", verbose, separator)
 
     return rig.phonemes

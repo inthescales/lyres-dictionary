@@ -50,8 +50,11 @@ class Phoneme:
                 return True
         return False
 
+    def is_fricative(self):
+        return self.value in ["x", "f", "s", "θ", "ɣ", "v", "z", "ð"]
+
     def is_voiced(self):
-        return self.value in ["b", "d", "g", "m", "n", "l", "r", "w", "dʒ"]
+        return self.value in ["b", "d", "g", "ɣ", "m", "n", "l", "r", "w", "dʒ", "v", "z", "ð"]
 
     def is_short(self):
         return not "ː" in self.value
@@ -68,6 +71,16 @@ class Phoneme:
         length = len(self.value)
         return self.is_consonant() and length % 2 == 0 \
             and self.value[:int(length/2)] == self.value[int(length/2):]
+
+    def get_voiced(self):
+        unvoiced = ["p", "t", "k", "x", "tʃ", "f", "s", "θ"]
+        voiced = ["b", "d", "g", "ɣ", "dʒ", "v", "z", "ð"]
+
+        index = unvoiced.index(self.value[0])
+        if not self.is_geminate():
+            return Phoneme(voiced[index], template=self)
+        else:
+            return Phoneme(voiced[index] + voiced[index], template=self)
 
     def get_shortened(self):
         return Phoneme(self.value.replace("ː", ""), template=self)
