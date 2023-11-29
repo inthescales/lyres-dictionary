@@ -7,49 +7,7 @@ import src.diachronizer.language.ne_orthography as ne_orthography
 import src.diachronizer.table as table
 import src.helpers as helpers
 
-def get_clusters(word):
-    cluster = []
-    clusters = []
-    polarity = None
-
-    def open_cluster(char):
-        nonlocal cluster, clusters, polarity
-
-        polarity = char in vowels
-        cluster = [char]
-        print("New cluster: " + char + " (" + str(polarity) + ")")
-
-    def continue_cluster(char):
-        nonlocal cluster
-
-        cluster += char
-        print("Adding " + char)
-
-    def close_cluster():
-        nonlocal cluster, clusters, polarity
-
-        clusters.append(cluster)
-        print("Finished cluster '" + str(cluster) + "'")
-        cluster = []
-        polarity = None
-
-    for i in range(0, len(word)):
-        print("char '" + word[i] + "'")
-
-        if cluster != []:
-            if polarity == (word[i] in vowels):
-                continue_cluster(word[i])
-            else:
-                close_cluster()
-
-        if cluster == []:
-            open_cluster(word[i])
-
-    close_cluster()
-
-    return clusters
-
-def run(input):
+def make_table(input):
     inputs = [
         "stel|an",
         "bāt",
@@ -106,47 +64,6 @@ def run(input):
 
     print(output_table)
 
-def test():
-    test_data = [
-        ["cild", "tʃild", "tʃild"],
-        ["dæg", "dæj", "dɛi"],
-        ["frēond", "freːond", "freːnd"], # Wiki has "fre͜oːnd" in 1
-        ["mēt|an", "meːtɑn", "meːt"],
-        ["niht", "nixt", "nixt"],
-        ["wicu", "", "weːk"]
-    ]
-
-    count_success = 0
-    count_failure = 0
-
-    for data in test_data:
-        oe_graph = data[0]
-        oe_phone = data[1]
-        me_phone = data[2]
-
-        oe_phone_proc = old_english.get_old_english_phonemes(oe_graph)
-        me_phone_proc = middle_english.phonemes_from_oe_3(oe_phone_proc)
-
-        oe_phone_test = "".join([x.value for x in oe_phone_proc])
-        me_phone_test = "".join([x.value for x in me_phone_proc])
-
-        if oe_phone != oe_phone_test:
-            print("FAILED : OE phonemes : " + oe_phone + " != " + oe_phone_test)
-            count_failure += 1
-            continue
-        if me_phone != me_phone_test:
-            print("FAILED : ME phonemes : " + me_phone + " != " + me_phone_test)
-            count_failure += 1
-            continue
-        else:
-            print("SUCCEEDED : " + oe_graph + " -> " + oe_phone + " -> " + me_phone)
-            count_success += 1
-            continue
-
-    print("\nTESTS FINISHED")
-    print("SUCCESS: " + str(count_success))
-    print("FAILURE: " + str(count_failure))
-
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     
@@ -169,5 +86,5 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         if opt in ["-w", "--word"]:
             input = arg
 
-    run(input)
+    make_table(input)
     # test()

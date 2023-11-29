@@ -1,6 +1,7 @@
 from src.diachronizer.engine.phoneme import Phoneme
 
 consonants = ["b", "c", "ċ", "cg", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sc", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
+geminates = [x + x for x in consonants if len(x) == 1]
 vowels = ["a", "ā", "æ", "ǣ", "e", "ę", "ē", "ea", "ēa", "eo", "ēo", "i", "ī", "ie", "īe", "io", "īo", "o", "ō", "oe", "ōe", "u", "ū", "y", "ȳ"]
 special_characters = ["'", "|"]
 
@@ -87,11 +88,11 @@ def count_syllables(graphs):
     for graph in graphs:
         new_polarity = None
         if graph[0] in vowels:
-            new_polarity = "vowel"
+            new_polarity = "V"
         else:
-            new_polarity = "consonant"
+            new_polarity = "C"
 
-        if new_polarity == "vowel" and polarity != new_polarity:
+        if new_polarity == "V" and polarity != new_polarity:
             count += 1
 
     return count
@@ -113,11 +114,11 @@ def get_phonemes(graphs):
             inflectional = True
             continue
 
-        if graphs[i][0] in consonants:
+        if graphs[i] in (consonants + geminates):
             if stress_count == 2:
                 stress_count = 0
 
-        if graphs[i][0] in vowels:
+        if graphs[i] in vowels:
             if stress_count == 1:
                 stress_count = 2
 
@@ -171,7 +172,7 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
             return Phoneme("j", False, inflectional)
         else:
             # This sound is often represented phonemically as /jj/
-            # However, reduction of double consonance makes this indistinguishable from 'ġ'
+            # However, reduction of double consonants makes this indistinguishable from 'ġ'
             # I am representing it here with 'dʒ' for clarity
 
             # return Phoneme("jj", False, inflectional)
