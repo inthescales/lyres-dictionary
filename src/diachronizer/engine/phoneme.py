@@ -29,6 +29,8 @@ class Phoneme:
             and self.stressed == other.stressed \
             and self.inflectional == other.inflectional
 
+    # Properties
+
     def is_vowel(self):
         for char in ["a", "ɑ", "æ", "e", "ɛ", "i", "o", "ɔ", "u", "y", "ə"]:
             if char in self.value:
@@ -50,12 +52,24 @@ class Phoneme:
                 return True
         return False
 
-    def is_fricative(self):
-        return self.value in ["x", "f", "s", "θ", "ɣ", "v", "z", "ð"]
-
     def is_voiced(self):
         return self.value in ["b", "d", "g", "ɣ", "m", "n", "l", "r", "w", "dʒ", "v", "z", "ð"]
 
+    def is_plosive(self):
+        plosives = ["b", "c", "ċ", "dʒ", "d", "g", "k", "p", "t"]
+        return self.value in plosives
+
+    def is_fricative(self):
+        return self.value in ["x", "f", "s", "θ", "ɣ", "v", "z", "ð"]
+
+    def is_nasal(self):
+        plosives = ["n", "m"]
+        return self.value in plosives
+        
+    def is_semivowel(self):
+        plosives = ["l", "r", "w", "j"]
+        return self.value in plosives
+    
     def is_short(self):
         return not "ː" in self.value
 
@@ -71,6 +85,8 @@ class Phoneme:
         length = len(self.value)
         return self.is_consonant() and length % 2 == 0 \
             and self.value[:int(length/2)] == self.value[int(length/2):]
+
+    # Transformations
 
     def get_voiced(self):
         unvoiced = ["p", "t", "k", "x", "tʃ", "f", "s", "θ"]

@@ -120,7 +120,11 @@ def from_me_phonemes(phonemes):
             if next1:
                 result += "ou"
         elif phone.value == "ə":
-            result += "e"
+            if not next2 \
+                and next1.value in ["m", "w"]:
+                result += "o"
+            else:
+                result += "e"
 
         # Consonants
         elif phone.value == "f":
@@ -132,6 +136,8 @@ def from_me_phonemes(phonemes):
         elif phone.value == "l":
             if next1 != None or (prev and prev.is_vowel() and prev.is_long()):
                 result += "l"
+            elif not next1 and prev and prev.value == "ə" and prev2 and prev2.is_consonant():
+                result = result[:-1] + ["le"]
             else:
                 result += "ll"
         elif phone.value == "s":
@@ -176,6 +182,7 @@ def from_me_phonemes(phonemes):
         if phone.is_consonant() and insert_lengthening_e and (not next1 or not next1.is_vowel()):
             result += "e"
             insert_lengthening_e = False
-
+        elif phone.is_consonant() and prev and prev.is_vowel() and prev.is_short() and next1 and next1.is_vowel() and result[-1] != "h":
+            result += result[-1]
 
     return "".join(result)

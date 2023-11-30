@@ -12,7 +12,7 @@ def from_oe_phonemes(oe_phonemes):
 
     def harden_g(state):
         if (state.current.value == "ɣ" and state.syllable_data.index == 0) \
-             or (state.current.value == "ɣ" and state.prev and state.prev.value == "n"):
+            or (state.current.value == "ɣ" and state.prev and state.prev.value == "n"):
             return [Phoneme("g", template=state.current)]
         elif state.current.value == "ɣɣ":
             return [Phoneme("gg", template=state.current)]
@@ -30,11 +30,9 @@ def from_oe_phonemes(oe_phonemes):
             if state.current.value in ["æ", "ea", "a"]:
                 return [Phoneme("a", template=state.current)]
             elif state.current.value in ["æː", "eːa"]:
-                # return [Phoneme("ɛː", template=state.current)]
-                return [Phoneme("aː", template=state.current)]
+                return [Phoneme("ɛː", template=state.current)]
             elif state.current.value == "aː":
-                # return [Phoneme("ɔː", template=state.current)]
-                return [Phoneme("aː", template=state.current)]
+                return [Phoneme("ɔː", template=state.current)]
             elif state.current.value == "eo":
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
@@ -64,18 +62,19 @@ def from_oe_phonemes(oe_phonemes):
         if state.current.is_vowel() and state.current.is_long() \
             and state.next and state.next.is_consonant() \
             and (state.next.is_geminate() or (len(state.following) > 1 and state.following[1].is_consonant())):
-                if state.next.is_geminate():
-                    return [state.current.get_shortened()]
+                next_two_joined = "".join([x.value for x in state.following[:2]])
+
+                # other lengthening clusters: mb
+                lengthening_clusters = ["ld", "nd", "rd", "rl", "rn", "rs"] # rs+vowel?
+                if next_two_joined in lengthening_clusters \
+                    or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
+                    return None
+
+                if state.current.value == "ɔː":
+                    return [Phoneme("a", template=state.current)]
+                elif state.current.value == "ɛː":
+                    return [Phoneme("a", template=state.current)]
                 else:
-                    next_two_joined = "".join([x.value for x in state.following[:2]])
-                    if next_two_joined == "st" \
-                        and (len(state.following) == 2 or state.following[2].is_vowel()):
-                        return None
-
-                    lengthening_clusters = ["ld", "mb", "nd", "rd", "rl", "rn", "rs"] # rs+vowel?
-                    if next_two_joined in lengthening_clusters:
-                        return None
-
                     return [state.current.get_shortened()]
 
     # Reduced double consonants to a single consonant
@@ -93,6 +92,21 @@ def from_oe_phonemes(oe_phonemes):
     def vocalization_of_post_vocalic_g(state):
         if state.current.value == "ɣ" and state.prev.is_vowel() and state.next.is_vowel():
             return [Phoneme("u", template=state.current, history=["vocalized-g"])]
+
+    # Insert a schwa between inconvenient final consonant clusters
+    # Not referenced in my sources, but added here to handle cases like
+    # 'hræfn' -> 'raven', 'fæþm' -> 'fathom', 'swealwe' -> 'swallow', etc.
+    #
+    # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
+    def final_consonant_cluster_breaking(state):
+        if all(phone.is_consonant() for phone in state.capture) \
+            and len(state.following) == 0 \
+            and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
+            and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
+            and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()):
+            return [state.capture[0], Phoneme("ə"), state.capture[1]]
 
     # Formation of diphthongs involving three phonemes
     # For technical reasons, separated from those involving two
@@ -205,13 +219,13 @@ def from_oe_phonemes(oe_phonemes):
             and (state.next and (state.next.is_vowel() or state.next.is_voiced())):
             return [state.current.get_voiced()]
 
-    verbose = False
+    verbose = True
     separator = "\n"
     if verbose:
         print("".join(p.value for p in rig.phonemes) + separator)
 
     rig.run_capture(harden_g, 1, "Harden g's", verbose, separator)
-    # rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", verbose, separator)
+    rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", verbose, separator)
     rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", verbose, separator)
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", verbose, separator)
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", verbose, separator)
@@ -228,5 +242,6 @@ def from_oe_phonemes(oe_phonemes):
     rig.run_capture(drop_initial_h, 2, "Drop initial h", verbose, separator)
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", verbose, separator)
     rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", verbose, separator)
+    rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", verbose, separator)
 
     return rig.phonemes
