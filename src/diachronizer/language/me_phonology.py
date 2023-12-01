@@ -61,18 +61,20 @@ def from_oe_phonemes(oe_phonemes):
     def pre_cluster_shortening(state):
         if state.current.is_vowel() and state.current.is_long() \
             and state.next and state.next.is_consonant() \
-            and (state.next.is_geminate() or (len(state.following) > 1 and state.following[1].is_consonant())):
+            and (state.next.is_geminate() \
+                or (len(state.following) > 1 and state.following[1].is_consonant()) \
+                or (len(state.following) > 0 and state.following[0].value == "ʃ")): # 'sċ' may count as a cluster (ex. 'flǣsċ')
                 next_two_joined = "".join([x.value for x in state.following[:2]])
 
-                # other lengthening clusters: mb
-                lengthening_clusters = ["ld", "nd", "rd", "rl", "rn", "rs"] # rs+vowel?
+                # other lengthening clusters: mb, ld
+                lengthening_clusters = ["nd", "rd", "rl", "rn", "rs"] # rs+vowel?
                 if next_two_joined in lengthening_clusters \
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
                     return None
 
                 if state.current.value == "ɔː":
                     return [Phoneme("a", template=state.current)]
-                elif state.current.value == "ɛː":
+                elif often() and state.current.value == "ɛː":
                     return [Phoneme("a", template=state.current)]
                 else:
                     return [state.current.get_shortened()]
@@ -92,21 +94,6 @@ def from_oe_phonemes(oe_phonemes):
     def vocalization_of_post_vocalic_g(state):
         if state.current.value == "ɣ" and state.prev.is_vowel() and state.next.is_vowel():
             return [Phoneme("u", template=state.current, history=["vocalized-g"])]
-
-    # Insert a schwa between inconvenient final consonant clusters
-    # Not referenced in my sources, but added here to handle cases like
-    # 'hræfn' -> 'raven', 'fæþm' -> 'fathom', 'swealwe' -> 'swallow', etc.
-    #
-    # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
-    def final_consonant_cluster_breaking(state):
-        if all(phone.is_consonant() for phone in state.capture) \
-            and len(state.following) == 0 \
-            and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
-            and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
-            and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
-            and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
-            and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()):
-            return [state.capture[0], Phoneme("ə"), state.capture[1]]
 
     # Formation of diphthongs involving three phonemes
     # For technical reasons, separated from those involving two
@@ -172,7 +159,9 @@ def from_oe_phonemes(oe_phonemes):
 
     # Open syllable lengthening
     def open_syllable_lengthening(state):
-        if state.current.is_vowel() and not state.current.is_diphthong() and state.syllable_data.is_open and state.syllable_data.following_syllable_count == 1:
+        if state.current.is_vowel() and state.syllable_data.is_open \
+            and not state.current.value == "ə" and not state.current.is_diphthong() \
+            and state.syllable_data.following_syllable_count == 1:
             if state.current.value in ["i", "y"]:
                 return [Phoneme("eː", state.current.stressed)]
             elif state.current.value in ["e", "eo"]:
@@ -219,6 +208,23 @@ def from_oe_phonemes(oe_phonemes):
             and (state.next and (state.next.is_vowel() or state.next.is_voiced())):
             return [state.current.get_voiced()]
 
+    # Insert a schwa between inconvenient final consonant clusters
+    # Not referenced in my sources, but added here to handle cases like
+    # 'hræfn' -> 'raven', 'fæþm' -> 'fathom', 'swealwe' -> 'swallow', etc.
+    #
+    # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
+    def final_consonant_cluster_breaking(state):
+            if all(phone.is_consonant() for phone in state.capture) \
+                and len(state.following) == 0 \
+                and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
+                and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
+                and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
+                and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
+                and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()) \
+                and not (state.capture[0].is_plosive() and state.capture[1].is_plosive()) \
+                and not (state.capture[1].value == "j"):
+                return [state.capture[0], Phoneme("ə"), state.capture[1]]
+    
     verbose = True
     separator = "\n"
     if verbose:

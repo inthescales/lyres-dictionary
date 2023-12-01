@@ -169,6 +169,8 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
         return Phoneme("kk", False, inflectional)
     elif graph == "ċ":
         return Phoneme("tʃ", False, inflectional)
+    elif graph == "ċċ":
+        return Phoneme("tʃtʃ", False, inflectional)
     elif graph in ["cg", "gc", "cgg", "ccg", "gcg", "ċġ", "ġċ"]:
         # sometimes, unpredictably /ɣ/ + /ɣɣ/
         if prev_g == "n":

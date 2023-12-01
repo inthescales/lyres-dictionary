@@ -157,11 +157,13 @@ def from_me_phonemes(phonemes):
             else:
                 result += "gh"
         elif phone.value == "k":
-            if not next1 and prev and prev.is_vowel():
+            if not next1 and prev and prev.is_vowel() and prev.is_short():
                 result += "ck"
             elif next1 and next1.value == "w":
                     result += "qu"
                     skip_next = True
+            elif not prev and not (next1 and next1.value == "n") and not (next1 and next1.value in ["e", "i"]):
+                result += "c"
             else:
                 result += "k"
         elif phone.value == "ks":
@@ -170,12 +172,20 @@ def from_me_phonemes(phonemes):
         elif phone.value == "ʃ":
             result += "sh"
         elif phone.value == "tʃ":
-            result += "ch"
+            if not next1:
+                result += "tch"
+            else:
+                result += "ch"
         elif phone.value == "dʒ":
             if next1 != None:
                 result += "j"
             else:
                 result += "dge"
+        elif phone.value == "w":
+            if prev and prev.value == "x" and not prev2:
+                result = "wh" 
+            else:
+                result += "w"
         else:
             result += phone.value
 
@@ -183,6 +193,9 @@ def from_me_phonemes(phonemes):
             result += "e"
             insert_lengthening_e = False
         elif phone.is_consonant() and prev and prev.is_vowel() and prev.is_short() and next1 and next1.is_vowel() and result[-1] != "h":
-            result += result[-1]
+            if phone.value == "k":
+                result = result[:-1] + ["ck"]
+            else:
+                result += result[-1]
 
     return "".join(result)

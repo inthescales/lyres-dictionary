@@ -49,11 +49,44 @@ class DiachronizerTests(unittest.TestCase):
         self.assertForm("pæþ", "path")
         self.assertForm("æfter", "after")
         self.assertForm("nama", "name")
+        
+        self.assertForm("nacod", "naked")
+        self.assertForm("bac|an", "bake")
+        # self.assertForm("æcer", "acre") # Irregular development due to early borrowing into latin and french
+        # self.assertForm("hwæl", "whale") # ??? Unsure why vowel is long
+        # self.assertForm("hræfn", "raven") # ??? Unsure why vowel is long
+        self.assertForm("caru", "care")
+        self.assertForm("far|an", "fare")
+        self.assertForm("stari|an", "stare")
 
+        # E        
+        self.assertForm("help|an", "help")
+        # self.assertForm("elh", "elk") # The modern word "is not the normal phonetic representative" of the Old English one [OED]
+        self.assertForm("tell|an", "tell")
+        self.assertForm("betera", "better")
+        self.assertForm("streċċ|an", "stretch")
+        # self.assertForm("seofon", "seven") # ??? Unsure why vowel is short
+        # self.assertForm("myriġ", "merry") # Confusion about form dot space. May want to condense 'iġ' endings
+        # self.assertForm("byrġ|an", "bury") # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
+        # self.assertForm("lyft", "left") # Not based on Anglian dialect. Apparently Kentish
+        # self.assertForm("cnyll", "knell") # Not based on Anglian dialect. Apparently Kentish
+        self.assertForm("cēpte", "kept")
+        self.assertForm("mētte", "met")
+        # self.assertForm("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven'
+        # self.assertForm("clǣnsi|an", "cleanse") # Occasional pre-cluster shortening
+        # self.assertForm("flǣsċ", "flesh") # Occasional pre-cluster shortening
+        # self.assertForm("lǣssa", "less") # Occasional pre-cluster shortening
+        self.assertForm("frēond", "friend")
+        # self.assertForm("þēofþ", "theft") # ??? Possible 'þ#' -> 't#' change
+        self.assertForm("hēold", "held")
+
+        self.assertForm("", "")
+        
         # self.assertForm("stel|an", "steal")
         # self.assertFormIn("bāt", ["boat", "bote"])
         # self.assertForm("frēod", "freed")
         # self.assertForm("heofon", "heaven")
+        
         # self.assertForm("mete", "meat")
         # self.assertForm("ċild", "child")
         # self.assertForm("dæg", "day")
