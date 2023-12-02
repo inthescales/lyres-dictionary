@@ -70,13 +70,16 @@ def from_me_phonemes(phonemes):
             result += "a"
             if next1 and not (next1.is_geminate() or (next2 and next2.is_consonant()) or next1.value in ["ʃ"]):
                 insert_lengthening_e = True
-        elif phone.value == "e" and next1 and next1.value == "r":
-            # These cases seem ambiguous. 
-            # "ea" may be more common when descending from "eo" spelling?
-            if often():
-                result += "ea"
-            elif often():
-                result += "a"
+        elif phone.value == "e":
+            if next1 and next1.value == "r":
+                # These cases seem ambiguous. 
+                # "ea" may be more common when descending from "eo" spelling?
+                if often():
+                    result += "ea"
+                elif often():
+                    result += "a"
+                else:
+                    result += "e"
             else:
                 result += "e"
         elif phone.value == "ɛː":
