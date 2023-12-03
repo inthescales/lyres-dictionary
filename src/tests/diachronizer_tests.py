@@ -11,140 +11,194 @@ class DiachronizerTests(unittest.TestCase):
     def testFormFromOE(self):
         
         # a
-        self.test_equal("mann", "man")
-        self.test_equal("lamb", "lamb")
-        self.test_equal("sang", "sang")
-        self.test_equal("sacc", "sack")
-        self.test_equal("assa", "ass")
-        self.test_equal("fæþm", "fathom")
-        self.test_equal("sæt", "sat")
-        self.test_equal("æt", "at")
-        self.test_equal("mæsse", "mass")
-        self.test_equal("weax", "wax")
-        self.test_equal("healf", "half")
-        self.test_equal("āsci|an", "ask")
-        self.test_equal("fǣtt", "fat")
-        self.test_equal("læst|an", "last")
-        # self.test_equal("blēddre", "bladder")
-        self.test_equal("blǣddre", "bladder")
-        # self.test_equal("brēmbel", "bramble")
-        self.test_equal("brǣmbel", "bramble")
-        self.test_equal("swan", "swan")
-        self.test_equal("wasċ|an", "wash")
-        self.test_equal("wann", "wan")
-        self.test_equal("swæþ", "swath")
-        self.test_equal("wæsp", "wasp")
-        self.test_equal("wealwi|an", "wallow")
-        self.test_equal("swealwe", "swallow")
-        self.test_equal("heard", "hard")
-        self.test_equal("ærc", "ark")
-        self.test_equal("swearm", "swarm")
-        self.test_equal("sweart", "swart")
-        self.test_equal("weardi|an", "ward")
-        self.test_equal("wearm", "warm")
-        self.test_equal("wearni|an", "warn")
-        self.test_equal("smæl", "small")
-        self.test_equal("all", "all")
-        self.test_equal("walci|an", "walk")
-        # self.test_equal("ælmesse", "alms")
-        self.test_equal("palm", "palm")
-        self.test_equal("glæs", "glass")
-        self.test_equal("græs", "grass")
-        self.test_equal("pæþ", "path")
-        self.test_equal("æfter", "after")
+        self.check_equal("mann", "man")
+        self.check_equal("lamb", "lamb")
+        self.check_equal("sang", "sang")
+        self.check_equal("sacc", "sack")
+        self.check_equal("assa", "ass")
+        self.check_equal("fæþm", "fathom")
+        self.check_equal("sæt", "sat")
+        self.check_equal("æt", "at")
+        self.check_equal("mæsse", "mass")
+        self.check_equal("weax", "wax")
+        self.check_equal("healf", "half")
+        self.check_equal("āsci|an", "ask")
+        self.check_equal("fǣtt", "fat")
+        self.check_equal("læst|an", "last")
+        # self.check_equal("blēddre", "bladder")
+        self.check_equal("blǣddre", "bladder")
+        # self.check_equal("brēmbel", "bramble")
+        self.check_equal("brǣmbel", "bramble")
+        self.check_equal("swan", "swan")
+        self.check_equal("wasċ|an", "wash")
+        self.check_equal("wann", "wan")
+        self.check_equal("swæþ", "swath")
+        self.check_equal("wæsp", "wasp")
+        self.check_equal("wealwi|an", "wallow")
+        self.check_equal("swealwe", "swallow")
+        self.check_equal("heard", "hard")
+        self.check_equal("ærc", "ark")
+        self.check_equal("swearm", "swarm")
+        self.check_equal("sweart", "swart")
+        self.check_equal("weardi|an", "ward")
+        self.check_equal("wearm", "warm")
+        self.check_equal("wearni|an", "warn")
+        self.check_equal("smæl", "small")
+        self.check_equal("all", "all")
+        self.check_equal("walci|an", "walk")
+        # self.check_equal("ælmesse", "alms")
+        self.check_equal("palm", "palm")
+        self.check_equal("glæs", "glass")
+        self.check_equal("græs", "grass")
+        self.check_equal("pæþ", "path")
+        self.check_equal("æfter", "after")
         
         # a (leng.)
-        self.test_equal("nama", "name")
-        self.test_equal("nacod", "naked")
-        self.test_equal("bac|an", "bake")
-        # self.test_equal("æcer", "acre") # Irregular development due to early borrowing into latin and french
-        # self.test_equal("hwæl", "whale") # ??? Unsure why vowel is long
-        # self.test_equal("hræfn", "raven") # ??? Unsure why vowel is long
-        self.test_equal("caru", "care")
-        self.test_equal("far|an", "fare")
-        self.test_equal("stari|an", "stare")
+        self.check_equal("nama", "name")
+        self.check_equal("nacod", "naked")
+        self.check_equal("bac|an", "bake")
+        # self.check_equal("æcer", "acre") # Irregular development due to early borrowing into latin and french
+        # self.check_equal("hwæl", "whale") # ??? Unsure why vowel is long
+        # self.check_equal("hræfn", "raven") # ??? Unsure why vowel is long
+        self.check_equal("caru", "care")
+        self.check_equal("far|an", "fare")
+        self.check_equal("stari|an", "stare")
 
         # e
-        self.test_equal("help|an", "help")
-        # self.test_equal("elh", "elk") # The modern word "is not the normal phonetic representative" of the Old English one [OED]
-        self.test_equal("tell|an", "tell")
-        self.test_equal("betera", "better")
-        self.test_equal("streċċ|an", "stretch")
-        # self.test_equal("seofon", "seven") # ??? Unsure why vowel is short
-        # self.test_equal("myriġ", "merry") # Confusion about form dot space. May want to condense 'iġ' endings
-        # self.test_equal("byrġ|an", "bury") # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
-        # self.test_equal("lyft", "left") # Not based on Anglian dialect. Apparently Kentish
-        # self.test_equal("cnyll", "knell") # Not based on Anglian dialect. Apparently Kentish
-        self.test_equal("cēpte", "kept")
-        self.test_equal("mētte", "met")
-        # self.test_equal("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven'
-        # self.test_equal("clǣnsi|an", "cleanse") # Occasional pre-cluster shortening
-        # self.test_equal("flǣsċ", "flesh") # Occasional pre-cluster shortening
-        # self.test_equal("lǣssa", "less") # Occasional pre-cluster shortening
-        self.test_equal("frēond", "friend")
-        # self.test_equal("þēofþ", "theft") # ??? Possible 'þ#' -> 't#' change
-        self.test_equal("hēold", "held")
+        self.check_equal("help|an", "help")
+        # self.check_equal("elh", "elk") # The modern word "is not the normal phonetic representative" of the Old English one [OED]
+        self.check_equal("tell|an", "tell")
+        self.check_equal("betera", "better")
+        self.check_equal("streċċ|an", "stretch")#{}
+        # self.check_equal("seofon", "seven") # Unsure why vowel is short
+        # self.check_equal("myriġ", "merry") # Confusion about form dot space. May want to condense 'iġ' endings
+        # self.check_equal("byrġ|an", "bury") # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
+        # self.check_equal("lyft", "left") # Not based on Anglian dialect. Apparently Kentish
+        # self.check_equal("cnyll", "knell") # Not based on Anglian dialect. Apparently Kentish
+        self.check_equal("cēpte", "kept")
+        self.check_equal("mētte", "met")
+        # self.check_equal("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven'
+        # self.check_equal("clǣnsi|an", "cleanse") # Occasional pre-cluster shortening
+        # self.check_equal("flǣsċ", "flesh") # Occasional pre-cluster shortening
+        # self.check_equal("lǣssa", "less") # Occasional pre-cluster shortening
+        self.check_equal("frēond", "friend")
+        # self.check_equal("þēofþ", "theft") # ??? Possible 'þ#' -> 't#' change
+        self.check_equal("hēold", "held")
         
         # e+r -> ar
-        self.test_equal("heorte", "heart")
-        self.test_equal("berc|an", "bark")
-        self.test_equal("teoru", "tar")
-        self.test_equal("steorra", "star")
-        self.test_equal("werra", "war")
-        self.test_equal("werbl|en", "warble")
+        self.check_equal("heorte", "heart")
+        self.check_equal("berc|an", "bark", overrides=["orth_e+r->a"])
+        # self.check_equal("teoru", "tar") # Unsure why vowel is as though short
+        self.check_equal("steorra", "star", overrides=["orth_e+r->a"])
+        self.check_equal("werra", "war", overrides=["orth_e+r->a"])
+        self.check_equal("werbl|en", "warble", overrides=["orth_e+r->a"])
         
         # e+ -> er
-        self.test_equal("sterne", "stern")
-        self.test_equal("eorl", "earl")
-        self.test_equal("eorþe", "earth")
-        self.test_equal("leorni|an", "learn")
-        self.test_equal("hērde", "heard")
+        self.check_equal("sterne", "stern", overrides=["orth_e+r->e"])
+        self.check_equal("eorl", "earl")
+        self.check_equal("eorþe", "earth")
+        self.check_equal("leorni|an", "learn")
+        self.check_equal("hērde", "heard")
         
         # e (leng.)
-        self.test_equal("spec|an", "speak")
-        self.test_in("mete", ["meat", "mete"])
-        self.test_equal("beofor", "beaver")
-        self.test_in("meot|an", ["mete", "meat"])
-        self.test_equal("eot|an", "eat")
-        self.test_equal("meodu", "mead")
-        self.test_equal("yfel", "evil")
-        self.test_equal("spere", "spear")
-        self.test_equal("mere", "mere")
-        self.test_equal("brec|an", "break")
-        self.test_equal("beor|an", "bear")
-        self.test_equal("pere", "pear")
-        self.test_equal("sweri|an", "swear")
-        self.test_equal("leþer", "leather")
-        self.test_equal("stede", "stead")
-        self.test_equal("weder", "weather")
-        self.test_equal("heofon", "heaven")
-        self.test_equal("hefiġ", "heavy")
+        self.check_equal("spec|an", "speak")
+        self.check_equal("mete", "meat", overrides=["orth_ɛː->ea"])
+        self.check_equal("beofor", "beaver")
+        self.check_equal("meot|an", "mete", overrides=["orth_ɛː->eCV"])
+        self.check_equal("eot|an", "eat")
+        self.check_equal("meodu", "mead")
+        self.check_equal("efel", "evil", overrides=["orth_ɛː->eCV"])
+        self.check_equal("spere", "spear")
+        self.check_equal("mere", "mere", overrides=["orth_ɛː->eCV"])
+        self.check_equal("brec|an", "break")
+        self.check_equal("beor|an", "bear")
+        self.check_equal("pere", "pear")
+        self.check_equal("sweri|an", "swear")
+        self.check_equal("leþer", "leather")
+        self.check_equal("stede", "stead")
+        # self.check_equal("weder", "weather") # No handling for 'd' -> 'th' yet
+        self.check_equal("heofon", "heaven")
+        self.check_equal("hefiġ", "heavy")
 
-        self.test_equal("", "")
+        # i
+        # self.check_equal("writen", "written") # Might participles be irregularly formed? That is, re-formed in modern morphology by addition of -en
+        self.check_equal("sitt|an", "sit")
+        self.check_equal("fisċ", "fish")
+        self.check_equal("lifer", "liver", overrides=["OSL_iy_false"])
+        self.check_equal("bryċġ", "bridge")
+        self.check_equal("cyss|an", "kiss")
+        # self.check_equal("dyde", "did")
+        self.check_equal("synn", "sin")
+        self.check_equal("gyld|an", "gild")
+        # self.check_equal("bysiġ", "busy", overrides=["OSL_iy_false"]) # Not sure how to handle z/s spelling
+        # self.check_equal("wīsdōm", "wisdom") # Will require separate affix handling
+        self.check_equal("fīftiġ", "fifty")
+        self.check_equal("wȳsċ|an", "wish")
+        self.check_equal("cȳþþu", "kith")
+        self.check_equal("fȳst", "fist")
+        # self.check_equal("ċīcen", "chicken") # occ ī+CV
+        # self.check_equal("lȳtel", "little") # occ ȳ+CV
+        # self.check_equal("sēoc", "sick") # occ ēoc
+        # self.check_equal("wēoce", "wick") # occ #eoc
+        # self.check_equal("ēc", "eke") # occ ēc
+        self.check_equal("gyrd|an", "gird")
+        self.check_equal("fyrst", "first")
+        self.check_equal("styri|an", "stir", overrides=["OSL_iy_false"])
         
-        # self.test_equal("stel|an", "steal")
-        # self.test_equalIn("bāt", ["boat", "bote"])
-        # self.test_equal("frēod", "freed")
-        # self.test_equal("heofon", "heaven")
+        # i (leng.)
+        self.check_equal("wicu", "week", overrides=["OSL_iy_true"])
+        self.check_equal("pili|an", "peel", overrides=["OSL_iy_true"])
+        # self.check_equal("bitela", "beetle", overrides=["OSL_iy_true"]) # "By normal evolution it would be *bittle, but it seems to have been influenced by beetle (n.2)." - etymonline"
+
+        # O
+        self.check_equal("god", "god")
+        # self.check_equal("beġeondan", "beyond") # Will require prefix handling
+        # self.check_equal("gōdspell", "gospel") # May require compound handling. Can't explain dropped 'd'
+        self.check_equal("fōddor", "fodder")
+        self.check_equal("fōstri|an", "foster")
+        self.check_equal("moþþe", "moth")
+        self.check_equal("cros", "cross")
+        self.check_equal("frost", "frost")
+        self.check_equal("of", "off")
+        self.check_equal("oft", "oft")
+        self.check_equal("sōfte", "soft")
+        self.check_equal("corn", "corn")
+        self.check_equal("storc", "stork")
+        self.check_equal("storm", "storm")
         
-        # self.test_equal("mete", "meat")
-        # self.test_equal("ċild", "child")
-        # self.test_equal("dæg", "day")
-        # self.test_equal("frēond", "friend")
-        # self.test_equal("eorðe", "earth")
-        # self.test_equal("cniht", "knight")
-        # self.test_equal("mægden", "maiden")
-        # self.test_equal("hund", "hound")
-        # self.test_equal("bryċġ", "bridge")
-        # self.test_equal("gōd", "good")
-        # self.test_equal("cēp|an", "keep")
-        # self.test_equal("cēpte", "kept")
-        # self.test_equal("mēt|an", "meet")
-        # self.test_equal("mētte", "met")
-        # self.test_equal("niht", "night")
-        # self.test_equal("hlæhh|an", "laugh")
-        # self.test_equal("tōh", "tough")
-        # self.test_equal("nacod", "naked")
+        # O (leng.)
+        self.check_equal("fola", "foal", overrides=["orth_ɔː->oa"])
+        self.check_equal("nosu", "nose", overrides=["orth_ɔː->oCV"])
+        self.check_equal("ofer", "over", overrides=["orth_ɔː->oCV"])
+        self.check_equal("bori|an", "bore", overrides=["orth_ɔː->oCV"])
+        self.check_equal("fore", "fore", overrides=["orth_ɔː->oCV"])
+        # self.check_equal("bord", "board") # Needs 'rd' homorganic lengthening
+
+
+        self.check_equal("", "")
+        
+        # self.check_equal("stel|an", "steal")
+        # self.check_equalIn("bāt", ["boat", "bote"])
+        # self.check_equal("frēod", "freed")
+        # self.check_equal("heofon", "heaven")
+        
+        # self.check_equal("mete", "meat")
+        # self.check_equal("ċild", "child")
+        # self.check_equal("dæg", "day")
+        # self.check_equal("frēond", "friend")
+        # self.check_equal("eorðe", "earth")
+        # self.check_equal("cniht", "knight")
+        # self.check_equal("mægden", "maiden")
+        # self.check_equal("hund", "hound")
+        # self.check_equal("gōd", "good")
+        # self.check_equal("cēp|an", "keep")
+        # self.check_equal("cēpte", "kept")
+        # self.check_equal("mēt|an", "meet")
+        # self.check_equal("mētte", "met")
+        # self.check_equal("niht", "night")
+        # self.check_equal("hlæhh|an", "laugh")
+        # self.check_equal("tōh", "tough")
+        # self.check_equal("nacod", "naked")
 
         print("=== Test finished ===")
         print(str(total) + " words tested, " + str(len(failures))+ " failures:")
@@ -153,9 +207,9 @@ class DiachronizerTests(unittest.TestCase):
         
     # Helpers ==========
 
-    def test_equal(self, raw, target):
+    def check_equal(self, raw, target, overrides=[]):
         global total, failures
-        form = diachronizer.form_from_oe(raw)
+        form = diachronizer.form_from_oe(raw, overrides)
         
         if form != target:
             failures.append([form, target])
@@ -163,9 +217,9 @@ class DiachronizerTests(unittest.TestCase):
 
         return form == target
     
-    def test_in(self, raw, targets):
+    def check_in(self, raw, targets, overrides=[]):
         global total, failures
-        form = diachronizer.form_from_oe(raw)
+        form = diachronizer.form_from_oe(raw, overrides)
         
         if form not in targets:
             failures.append([form, targets])

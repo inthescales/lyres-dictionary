@@ -3,11 +3,12 @@ from src.diachronizer.engine.syllable import SyllableData
 import sys
 
 class RigState:
-    def __init__(self, phonemes, index):
+    def __init__(self, phonemes, index, overrides=[]):
         self.prev = None
         self.next = None
         self.prev_value = None
         self.next_value = None
+        self.overrides = overrides
 
         if type(index) == int:
             self.current = phonemes[index]

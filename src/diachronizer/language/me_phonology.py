@@ -4,7 +4,7 @@ from src.diachronizer.engine.phoneme import Phoneme
 from src.diachronizer.engine.transform_rig import RigState, Rig
 from src.diachronizer.engine.helpers import often, even, occ
 
-def from_oe_phonemes(oe_phonemes):
+def from_oe_phonemes(oe_phonemes, overrides=[]):
     phonemes = oe_phonemes
 
     rig = Rig(phonemes)
@@ -66,8 +66,8 @@ def from_oe_phonemes(oe_phonemes):
                 or (len(state.following) > 0 and state.following[0].value == "ʃ")): # 'sċ' may count as a cluster (ex. 'flǣsċ')
                 next_two_joined = "".join([x.value for x in state.following[:2]])
 
-                # other lengthening clusters: mb, ld
-                lengthening_clusters = ["nd", "rd", "rl", "rn", "rs"] # rs+vowel?
+                # other lengthening clusters: mb, ld, rn, rd
+                lengthening_clusters = ["nd", "rl", "rs"] # rs+vowel?
                 if next_two_joined in lengthening_clusters \
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
                     return None
@@ -163,17 +163,19 @@ def from_oe_phonemes(oe_phonemes):
             and not state.current.value == "ə" and not state.current.is_diphthong() \
             and state.syllable_data.following_syllable_count == 1:
             if state.current.value in ["i", "y"]:
-                return [Phoneme("eː", state.current.stressed)]
+                if "OSL_iy_true" in overrides \
+                    or (occ() and not "OSL_iy_false" in overrides):
+                    return [Phoneme("eː", state.current.stressed)]
+            elif state.current.value == "u" and occ():
+                if "OSL_u_true" in overrides \
+                    or (occ() and not "OSL_u_false" in overrides):
+                    return [Phoneme("oː", state.current.stressed)]
             elif state.current.value in ["e", "eo"]:
                 return [Phoneme("ɛː", state.current.stressed)]
             elif state.current.value == "o":
                 return [Phoneme("ɔː", state.current.stressed)]
-            elif state.current.value == "u" and occ():
-                return [Phoneme("oː", state.current.stressed)]
             else:
                 return [state.current.get_lengthened()]
-        else:
-            return None
 
     def trisyllabic_laxing(state):
         if state.current.is_vowel() and state.syllable_data.following_syllable_count > 1:
@@ -222,6 +224,7 @@ def from_oe_phonemes(oe_phonemes):
                 and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
                 and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()) \
                 and not (state.capture[0].is_plosive() and state.capture[1].is_plosive()) \
+                and not (state.joined in ["rl"]) \
                 and not (state.capture[1].value == "j"):
                 return [state.capture[0], Phoneme("ə"), state.capture[1]]
     
