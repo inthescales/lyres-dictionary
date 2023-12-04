@@ -69,13 +69,14 @@ class RigState:
         return False
 
 class Rig:
-    def __init__(self, phonemes):
+    def __init__(self, phonemes, overrides):
         self.phonemes = phonemes
+        self.overrides = overrides
 
     def run_change(self, change, name=None, verbose=False, separator="\n"):
         new_phonemes = []
         for i in range(0, len(self.phonemes)):
-            state = RigState(self.phonemes, i)
+            state = RigState(self.phonemes, i, overrides)
             added_phonemes = change(state)
             if added_phonemes:
                 new_phonemes.append(added_phonemes)

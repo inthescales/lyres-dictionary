@@ -7,7 +7,7 @@ from src.diachronizer.engine.helpers import often, even, occ
 def from_oe_phonemes(oe_phonemes, overrides=[]):
     phonemes = oe_phonemes
 
-    rig = Rig(phonemes)
+    rig = Rig(phonemes, overrides)
     form = ""
 
     def harden_g(state):
@@ -27,7 +27,12 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
 
     def stressed_vowel_changes(state):
         if state.current.stressed:
-            if state.current.value in ["æ", "ea", "a"]:
+            if state.prev and state.prev.value == "w" \
+                and not (len(state.preceding) > 1 and state.preceding[-2].value == "s") \
+                and state.next and state.next.value == "r" \
+                and state.current.value in ["e", "eo", "o", "y"]:
+                return [Phoneme("u", template=state.current)]
+            elif state.current.value in ["æ", "ea", "a"]:
                 return [Phoneme("a", template=state.current)]
             elif state.current.value in ["æː", "eːa"]:
                 return [Phoneme("ɛː", template=state.current)]
@@ -38,23 +43,27 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
             elif state.current.value == "eːo":
                 return [Phoneme("eː", template=state.current)]
             elif state.current.value == "y":
-                if often():
+                y_override = ("y->i" in overrides) or ("y->e" in overrides) or ("y->u" in overrides)
+                print(str(y_override))
+                if (not y_override and often()) or "y->i" in overrides:
                     # Anglian dialect
                     return [Phoneme("i", template=state.current)]
-                elif often():
+                elif (not y_override and often()) or "y->e" in overrides:
                     # Kentish dialect
                     return [Phoneme("e", template=state.current)]
-                else:
+                elif True or "y->u" in overrides:
                     # West Saxon dialect
                     return [Phoneme("u", template=state.current)]
             elif state.current.value == "yː":
-                if often():
+                y_override = ("y->i" in overrides) or ("y->e" in overrides) or ("y->u" in overrides)
+                print(str(y_override))
+                if (not y_override and often()) or "y->i" in overrides:
                     # Anglian dialect
                     return [Phoneme("iː", template=state.current)]
-                elif often():
+                elif (not y_override and often()) or "y->e" in overrides:
                     # Kentish dialect
                     return [Phoneme("eː", template=state.current)]
-                else:
+                elif True or "y->u" in overrides:
                     # West Saxon dialect
                     return [Phoneme("uː", template=state.current)]
 
@@ -165,8 +174,9 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
             if state.current.value in ["i", "y"]:
                 if "OSL_iy_true" in overrides \
                     or (occ() and not "OSL_iy_false" in overrides):
+                    print("HERE EY")
                     return [Phoneme("eː", state.current.stressed)]
-            elif state.current.value == "u" and occ():
+            elif state.current.value == "u":
                 if "OSL_u_true" in overrides \
                     or (occ() and not "OSL_u_false" in overrides):
                     return [Phoneme("oː", state.current.stressed)]
@@ -202,6 +212,12 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     # ə → ∅ / _# 
     def loss_of_final_unstressed_vowel(state):
         if state.current.value == "ə" and state.next == None:
+            return []
+        
+        # Experimental - remove some other 'ə's
+        if state.current.value == "ə" \
+            and state.prev and state.prev.value == "r" \
+            and len(state.following) >= 2 and "".join([x.value for x in state.following[:2]]) == "ld":
             return []
 
     def distinguish_voiced_fricatives(state):
@@ -247,10 +263,10 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", verbose, separator)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", verbose, separator)
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", verbose, separator)
+    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", verbose, separator)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", verbose, separator)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", verbose, separator)
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", verbose, separator)
-    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", verbose, separator)
     rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", verbose, separator)
 
     return rig.phonemes

@@ -7,9 +7,14 @@ failures = []
 
 class DiachronizerTests(unittest.TestCase):
     # def setUp(self)
-    
+
+    # def testFormFromOE(self):
+    #     self.check_equal("fæþm", "fathom")
+    #     print(str(total) + " words tested, " + str(len(failures))+ " failures:")
+    #     for failure in failures:
+    #         print(str(failure[0]) + " != " + str(failure[1]))
+
     def testFormFromOE(self):
-        
         # a
         self.check_equal("mann", "man")
         self.check_equal("lamb", "lamb")
@@ -91,7 +96,7 @@ class DiachronizerTests(unittest.TestCase):
         # self.check_equal("teoru", "tar") # Unsure why vowel is as though short
         self.check_equal("steorra", "star", overrides=["orth_e+r->a"])
         self.check_equal("werra", "war", overrides=["orth_e+r->a"])
-        self.check_equal("werbl|en", "warble", overrides=["orth_e+r->a"])
+        # self.check_equal("werbl|en", "warble", overrides=["orth_e+r->a"]) # Not sure if this is OE? Wiki had "AN 'werbler'". Anglo-norman?
         
         # e+ -> er
         self.check_equal("sterne", "stern", overrides=["orth_e+r->e"])
@@ -173,6 +178,37 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("bori|an", "bore", overrides=["orth_ɔː->oCV"])
         self.check_equal("fore", "fore", overrides=["orth_ɔː->oCV"])
         # self.check_equal("bord", "board") # Needs 'rd' homorganic lengthening
+
+        # U
+        self.check_equal("bucc", "buck")
+        self.check_equal("lufi|an", "love", overrides=["OSL_u_false"])
+        self.check_equal("uppe", "up")
+        # self.check_equal("bufan", "above") # Will require prefixes
+        # self.check_equal("myċel", "much") # Inexplicable lost final syllable
+        # self.check_equal("cyċġel", "cudgel", overrides=["y->u"]) # Not sure about -el ending (cf 'evil')
+        self.check_equal("clyċċ|an", "clutch", overrides=["y->u"])
+        self.check_equal("sċytel", "shuttle", overrides=["y->u"])
+        # self.check_equal("dūst", "dust") # Unsure about short vowel. PCS before 'st'?
+        self.check_equal("tūsc", "tusk")
+        # self.check_equal("rūst", "rust") # Unsure about short vowel. PCS before 'st'?
+        self.check_equal("full", "full")
+        self.check_equal("bula", "bull")
+        self.check_equal("bysċ", "bush", overrides=["y->u"])
+        self.check_equal("spurn|an", "spurn")
+        # self.check_equal("ċyriċe", "church", overrides=["y->u"]) # Can't explain lost second vowel
+        # self.check_equal("byrþen", "burden", overrides=["y->u"]) # d/θ alternation
+        self.check_equal("hyrdel", "hurdle", overrides=["y->u"])
+        self.check_equal("word", "word")
+        self.check_equal("werc", "work")
+        self.check_equal("werold", "world")
+        self.check_equal("wyrm", "worm", overrides=["y->u"])
+        self.check_equal("wersa", "worse")
+        self.check_equal("weorþ", "worth")
+        
+        # U (leng.)
+        # self.check_equal("guma", "gome", overrides=["OSL_u_true"]) # Not sure about this one
+        self.check_equal("duru", "door", overrides=["OSL_u_true"])
+        self.check_equal("wudu", "wood", overrides=["OSL_u_true"])
 
 
         self.check_equal("", "")

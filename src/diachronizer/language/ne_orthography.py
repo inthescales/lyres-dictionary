@@ -139,8 +139,13 @@ def from_me_phonemes(phonemes, overrides=[]):
                 insert_lengthening_e = True
         elif phone.value == "oː":
             result += "oo"
-        elif phone.value == "u" and next1 and next1.value == "r":
+        elif phone.value == "u" and prev and prev.value == "w" and next1 and next1.value == "r":
             result += "o"
+        elif phone.value == "u" and next1 and next1.value == "r":
+            result += "u"
+        elif phone.value == "u" and next1 and next1.value == "v":
+            result += "o"
+            insert_lengthening_e = True
         elif phone.value == "u":
             result += "u"
         elif phone.value == "uː":
@@ -169,11 +174,15 @@ def from_me_phonemes(phonemes, overrides=[]):
                 or (prev and prev.is_vowel() and prev.is_long()) \
                 or (prev and prev.is_consonant()):
                 result += "l"
-            elif not next1 and prev and prev.value == "ə" and prev2 and prev2.is_consonant():
+            elif not next1 and prev and prev.value == "ə" \
+                and prev2 and prev2.is_consonant() \
+                and not prev2.value in ["dʒ"]:
                 if last_stressed_vowel and last_stressed_vowel.is_long():
                     result += "l"
                 else:
                     result = result[:-1] + ["le"]
+            elif prev.is_vowel() and not prev.stressed:
+                result += "l"
             else:
                 result += "ll"
         elif phone.value == "s":
@@ -186,6 +195,16 @@ def from_me_phonemes(phonemes, overrides=[]):
             else:
                 if prev and prev.is_vowel() and prev.is_short():
                     result += "ss"
+                elif prev and prev.value == "r":
+                    result += "se"
+                else:
+                    result += "s"
+        elif phone.value == "z":
+            if prev and prev.is_vowel() and prev.is_short():
+                result += "zz"
+            else:
+                if not next1 and prev and prev.value == "r":
+                    result += "se"
                 else:
                     result += "s"
         elif phone.value in ["θ", "ð"]:
@@ -216,10 +235,12 @@ def from_me_phonemes(phonemes, overrides=[]):
             else:
                 result += "ch"
         elif phone.value == "dʒ":
-            if next1 != None:
+            if prev == None:
                 result += "j"
             else:
-                result += "dge"
+                result += "dg"
+                if next1 == None:
+                    result += "e"
         elif phone.value == "w":
             if prev and prev.value == "x" and not prev2:
                 result = "wh" 
@@ -237,8 +258,10 @@ def from_me_phonemes(phonemes, overrides=[]):
         if phone.is_consonant() and insert_lengthening_e and (not next1 or not next1.is_vowel()):
             result += "e"
             insert_lengthening_e = False
-        elif phone.is_consonant() and prev and prev.is_vowel() and prev.is_short() and next1 and next1.is_vowel() and result[-1] != "h" \
-            and phone.value not in ["v", "j"]:
+        elif phone.is_consonant() and not phone.is_geminate() \
+            and prev and prev.is_vowel() and prev.is_short() \
+            and next1 and next1.is_vowel() \
+            and phone.value not in ["v", "j", "θ", "ð", "ʃ", "dʒ"]:
             # Double non-final consonant after short vowel
             if phone.value == "k":
                 result = result[:-1] + ["ck"]
