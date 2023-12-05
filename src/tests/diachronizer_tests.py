@@ -98,8 +98,8 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("werra", "war", overrides=["orth_e+r->a"])
         # self.check_equal("werbl|en", "warble", overrides=["orth_e+r->a"]) # Not sure if this is OE? Wiki had "AN 'werbler'". Anglo-norman?
         
-        # e+ -> er
-        self.check_equal("sterne", "stern", overrides=["orth_e+r->e"])
+        # e+r -> er
+        self.check_equal("styrne", "stern", overrides=["y->e", "orth_e+r->e"])
         self.check_equal("eorl", "earl")
         self.check_equal("eorþe", "earth")
         self.check_equal("leorni|an", "learn")
@@ -259,15 +259,59 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("hēr|an", "hear", overrides=["orth_ɛː->ea"])
         self.check_equal("fēr", "fear")
         self.check_equal("dēore", "dear")
-        self.check_equal("þēr", "there", overrides=["orth_ɛː->eCV"])10
+        self.check_equal("þēr", "there", overrides=["orth_ɛː->eCV"])
         self.check_equal("hwēr", "where", overrides=["orth_ɛː->eCV"])
         self.check_equal("bēor", "beer", overrides=["eːr->ɛːr_false"])
         self.check_equal("dēor", "deer", overrides=["eːr->ɛːr_false"])
         self.check_equal("stēr|an", "steer", overrides=["eːr->ɛːr_false"])
         # self.check_equal("bēr", "bier") # No known rule for 8['-ier'
 
+        # Ī / Ȳ
+        self.check_equal("rīd|an", "ride")
+        self.check_equal("tīma", "time")
+        self.check_equal("hwīt", "white")
+        self.check_equal("mīn", "mine")
+        self.check_equal("mȳs", "mice")
+        self.check_equal("brȳd", "bride")
+        self.check_equal("hȳd|an", "hide")
+        self.check_equal("find|an", "find")
+        self.check_equal("ċild", "child")
+        self.check_equal("climb|an", "climb")
+        self.check_equal("mynd", "mind")
+        self.check_equal("fȳr", "fire")
+        self.check_equal("hȳri|an", "hire")
+        self.check_equal("wīr", "wire")
 
+        # Ō        
+        self.check_equal("mōna", "moon")
+        self.check_equal("sōna", "soon")
+        self.check_equal("fōd", "food")
+        # do
+        self.check_equal("ċēos|an", "choose", overrides=["eːo->oː"])
+        self.check_equal("sċēot|an", "shoot", overrides=["eːo->oː"])
+        self.check_equal("flōr", "floor")
+        self.check_equal("mōr", "moor")
+        self.check_equal("blōd", "blood")
+        # self.check_equal("mōdor", "mother") # Needs 'd'/'ð' alternation
+        # self.check_equal("glōfa", "glove") # Unsure why vowel is as if 'ɔː'
+        self.check_equal("gōd", "good")
+        self.check_equal("bōc", "book")
+        self.check_equal("lōci|an", "look")
+        self.check_equal("fōt", "foot")
 
+        # Ū
+        self.check_equal("mūs", "mouse")
+        self.check_equal("ūt", "out")
+        self.check_equal("hlūd", "loud")
+        # self.check_equal("ġefund|en", "found") # Needs prefix handling
+        self.check_equal("hund", "hound")
+        # self.check_equal("ġesund", "sound") # Needs prefix handling
+        self.check_equal("ūre", "our")
+        # self.check_equal("sċūr", "shower") # Produces 'scour', which is accurate to middle english. Unsure about modern spelling
+        self.check_equal("sūr", "sour")
+        # self.check_equal("būtan", "but") # Unsure why vowel is short
+        # self.check_equal("strūti|an", "strut") # Produces 'strout', which reflect middle english 'strouten', but not modern english 'strut'
+        
         
 
         self.check_equal("", "")

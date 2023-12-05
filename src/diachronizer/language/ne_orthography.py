@@ -198,6 +198,10 @@ def from_me_phonemes(phonemes, overrides=[]):
                     result += "ss"
                 elif prev and prev.value == "r":
                     result += "se"
+                elif prev and prev.value == "iː":
+                    result += "c"
+                elif prev and prev.is_vowel() and prev.is_long() and not insert_lengthening_e:
+                    result += "se"
                 else:
                     result += "s"
         elif phone.value == "z":
@@ -256,7 +260,9 @@ def from_me_phonemes(phonemes, overrides=[]):
         else:
             result += phone.value
 
+        # Various word-end adjustments
         if phone.is_consonant() and insert_lengthening_e and (not next1 or not next1.is_vowel()):
+            # Insert lengthening 'e'
             result += "e"
             insert_lengthening_e = False
         elif phone.is_consonant() and not phone.is_geminate() \
@@ -268,7 +274,10 @@ def from_me_phonemes(phonemes, overrides=[]):
                 result = result[:-1] + ["ck"]
             else:
                 result += result[-1]
-
+        elif not next1 and phone.value in ["v", "z"] and result[-1] != "e":
+            # Makes sure certain voiced fricatives don't end a word
+            result += "e"
+        
         if phone.is_vowel() and phone.stressed:
             last_stressed_vowel = phone
         
