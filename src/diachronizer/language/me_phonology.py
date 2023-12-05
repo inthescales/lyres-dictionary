@@ -32,6 +32,9 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                 and state.next and state.next.value == "r" \
                 and state.current.value in ["e", "eo", "o", "y"]:
                 return [Phoneme("u", template=state.current)]
+            elif state.current.value in ["eː", "eːo"] and state.next and state.next.value == "r" \
+                and ("eːr->ɛːr_true" in overrides or (often() and not "eːr->ɛːr_false" in overrides)):
+                return [Phoneme("ɛː", template=state.current)]
             elif state.current.value in ["æ", "ea", "a"]:
                 return [Phoneme("a", template=state.current)]
             elif state.current.value in ["æː", "eːa"]:
@@ -76,7 +79,7 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                 next_two_joined = "".join([x.value for x in state.following[:2]])
 
                 # other lengthening clusters: mb, ld, rn, rd
-                lengthening_clusters = ["nd", "rl", "rs"] # rs+vowel?
+                lengthening_clusters = ["nd", "rl", "rs", "ld"] # rs+vowel?
                 if next_two_joined in lengthening_clusters \
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
                     return None

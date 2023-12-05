@@ -165,7 +165,8 @@ def from_me_phonemes(phonemes, overrides=[]):
         # Consonants
         elif phone.value == "f":
             if next1 \
-                or prev and prev.is_consonant():
+                or (prev and prev.is_consonant()) \
+                or (prev and prev.is_vowel() and prev.is_long()):
                 result += "f"
             else:
                 result += "ff"

@@ -88,7 +88,7 @@ class DiachronizerTests(unittest.TestCase):
         # self.check_equal("lǣssa", "less") # Occasional pre-cluster shortening
         self.check_equal("frēond", "friend")
         # self.check_equal("þēofþ", "theft") # ??? Possible 'þ#' -> 't#' change
-        self.check_equal("hēold", "held")
+        # self.check_equal("hēold", "held") # Depends on 'ld' pre-cluster shortening not applying
         
         # e+r -> ar
         self.check_equal("heorte", "heart")
@@ -103,7 +103,7 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("eorl", "earl")
         self.check_equal("eorþe", "earth")
         self.check_equal("leorni|an", "learn")
-        self.check_equal("hērde", "heard")
+        # self.check_equal("hērde", "heard") # Depends on 'rd' not being pre-cluster shortened
         
         # e (leng.)
         self.check_equal("spec|an", "speak")
@@ -194,6 +194,7 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("full", "full")
         self.check_equal("bula", "bull")
         self.check_equal("bysċ", "bush", overrides=["y->u"])
+
         self.check_equal("spurn|an", "spurn")
         # self.check_equal("ċyriċe", "church", overrides=["y->u"]) # Can't explain lost second vowel
         # self.check_equal("byrþen", "burden", overrides=["y->u"]) # d/θ alternation
@@ -209,7 +210,65 @@ class DiachronizerTests(unittest.TestCase):
         # self.check_equal("guma", "gome", overrides=["OSL_u_true"]) # Not sure about this one
         self.check_equal("duru", "door", overrides=["OSL_u_true"])
         self.check_equal("wudu", "wood", overrides=["OSL_u_true"])
+        
+        # Ā
+        self.check_equal("āc", "oak")
+        # self.check_equal("hāl", "whole") # W added to disambiguate from hole
+        # self.check_equal("camb", "comb") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
+        # self.check_equal("ald", "old") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
+        # self.check_equal("hald|an", "hold") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
+        self.check_in("ār", ["oar", "1re"])
+        self.check_equal("māra", "more", overrides=["orth_ɔː->oCV"])
+        self.check_equal("bār", "boar")
+        self.check_equal("sār", "sore", overrides=["orth_ɔː->oCV"])
 
+        # Ǣ
+        self.check_equal("hǣl|an", "heal")
+        self.check_equal("hǣtu", "heat")
+        self.check_equal("hwǣte", "wheat")
+        self.check_equal("bēat|an", "beat")
+        self.check_equal("lēaf", "leaf")
+        self.check_equal("ċēap", "cheap")
+        self.check_equal("rǣr|an", "rear")
+        self.check_equal("ēare", "ear", overrides=["orth_ɛː->ea"])
+        self.check_equal("sēar", "sere", overrides=["orth_ɛː->eCV"])
+        self.check_equal("sēari|an", "sear", overrides=["orth_ɛː->ea"])        
+        self.check_equal("grēat", "great")
+        self.check_equal("ǣr", "ere", overrides=["orth_ɛː->eCV"])
+        self.check_equal("brǣþ", "breath")
+        self.check_equal("swǣt|an", "sweat")
+        self.check_equal("sprǣd|an", "spread")
+        self.check_equal("dēad", "dead")
+        self.check_equal("dēaþ", "death")
+        self.check_equal("þrēat", "threat")
+        # self.check_equal("rēad", "red") # Unsure why vowel is shortm
+        self.check_equal("dēaf", "deaf")
+        self.check_equal("fēd|an", "feed")
+        self.check_equal("grēdiġ", "greedy")
+        # me
+        self.check_equal("fēt", "feet")
+        self.check_equal("dēd", "deed")
+        # self.check_equal("nēdl", "needle") # Unsure why pre-cluster shortening isn't applied
+        self.check_equal("dēop", "deep")
+        self.check_equal("fēond", "fiend")
+        # self.check_equal("betwēonum", "between") # Will need prefix handling
+        # be
+        self.check_equal("feld", "field") # Depends on 'ld' pre-cluster shortening
+        self.check_equal("ġeld|an", "yield")
+        self.check_equal("hēr", "here", overrides=["orth_ɛː->eCV"])
+        self.check_equal("hēr|an", "hear", overrides=["orth_ɛː->ea"])
+        self.check_equal("fēr", "fear")
+        self.check_equal("dēore", "dear")
+        self.check_equal("þēr", "there", overrides=["orth_ɛː->eCV"])10
+        self.check_equal("hwēr", "where", overrides=["orth_ɛː->eCV"])
+        self.check_equal("bēor", "beer", overrides=["eːr->ɛːr_false"])
+        self.check_equal("dēor", "deer", overrides=["eːr->ɛːr_false"])
+        self.check_equal("stēr|an", "steer", overrides=["eːr->ɛːr_false"])
+        # self.check_equal("bēr", "bier") # No known rule for 8['-ier'
+
+
+
+        
 
         self.check_equal("", "")
         
