@@ -312,7 +312,20 @@ class DiachronizerTests(unittest.TestCase):
         # self.check_equal("būtan", "but") # Unsure why vowel is short
         # self.check_equal("strūti|an", "strut") # Produces 'strout', which reflect middle english 'strouten', but not modern english 'strut'
         
-        
+        # Diphthongs
+        self.check_equal("dæġ", "day")        
+        self.check_equal("mæġ", "may")
+        self.check_equal("mæġden", "maiden")
+        self.check_equal("næġl", "nail")
+        self.check_equal("fæġer", "fair")
+        self.check_equal("clǣġ", "clay")
+        self.check_equal("grǣġ", "gray") # Regular rules produce spelling 'gray'
+        self.check_equal("weġ", "way")
+        self.check_equal("pleġ|an", "play")
+        self.check_equal("reġn", "rain")
+        self.check_equal("leġer", "layer", overrides=["aiV->ay"])
+        self.check_equal("leġde", "laid")
+        self.check_equal("hēġ", "hay")
 
         self.check_equal("", "")
         

@@ -55,6 +55,12 @@ def from_me_phonemes(phonemes, overrides=[]):
         elif phone.value == "ai":
             if not next1:
                 result += "ay"
+            elif next1 and next1.is_vowel():
+                if (even() and not "aiV->ay" in overrides) or "aiV->ai" in overrides:
+                    result += "ai"
+                    skip_next = True
+                else:
+                    result += "ay"
             else:
                 result += "ai"
         elif phone.value == "au":
@@ -182,7 +188,7 @@ def from_me_phonemes(phonemes, overrides=[]):
                     result += "l"
                 else:
                     result = result[:-1] + ["le"]
-            elif prev.is_vowel() and not prev.stressed:
+            elif prev.is_vowel() and (not prev.stressed or prev.is_diphthong()):
                 result += "l"
             else:
                 result += "ll"

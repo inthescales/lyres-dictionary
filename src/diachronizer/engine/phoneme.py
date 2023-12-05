@@ -71,7 +71,7 @@ class Phoneme:
         return self.value in plosives
     
     def is_short(self):
-        return not "ː" in self.value
+        return not "ː" in self.value and not self.is_diphthong()
 
     def is_long(self):
         return "ː" in self.value

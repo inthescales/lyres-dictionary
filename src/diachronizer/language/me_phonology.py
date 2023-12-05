@@ -132,7 +132,7 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
         vowel_after = state.next and state.next.is_vowel()
         word_end = state.next == None
 
-        if state.joined in ["aj", "aːj", "ɛj"] \
+        if state.joined in ["aj", "aːj", "ɛj", "ɛːj", "ej"] \
             or (state.joined == "eːj" and word_end):
             return [Phoneme("ai", template=state.capture[0])]
         elif (state.capture[0].value == "eːj" and vowel_after) \
