@@ -213,12 +213,16 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
     elif graph == "f":
         return Phoneme("f", False, inflectional)
     elif graph == "g":
-        if next_g and next_g[0] in front_vowels:
-            return Phoneme("j", False, inflectional)
-        if prev_g and prev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
-            return Phoneme("j", False, inflectional)
-        else:
-            return Phoneme("ɣ", False, inflectional)
+        # Removing this in favor of consistent interpretations:
+        
+        # if next_g and next_g[0] in front_vowels:
+        #     return Phoneme("j", False, inflectional)
+        # if prev_g and prev_g[-1] in front_vowels and not (next_g and next_g[0] in back_vowels):
+        #     return Phoneme("j", False, inflectional)
+        # else:
+        #     return Phoneme("ɣ", False, inflectional) 
+
+        return Phoneme("ɣ", False, inflectional)
     elif graph == "gg":
         return Phoneme("ɣɣ", False, inflectional)
     elif graph == "ġ":

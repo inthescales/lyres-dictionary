@@ -117,13 +117,13 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     def diphthong_formation_3(state):
         vowel_after = state.capture[2].is_vowel()
 
-        if state.joined == "eːj" and vowel_after:
+        if state.joined[:3] == "eːj" and vowel_after:
             return [Phoneme("iː", template=state.capture[0])]
-        elif state.joined == "au" and vowel_after:
+        elif state.joined[:3] == "au" and vowel_after:
             return [Phoneme("au", template=state.capture[0])]
-        if state.joined in ["aːu", "ou", "oːu"] and vowel_after:
+        elif state.joined[:3] in ["aːu", "ou", "oːu"] and vowel_after:
             return [Phoneme("ɔu", template=state.capture[0])]
-        if state.joined in ["uu", "uːu"] and vowel_after:
+        elif state.joined[:3] in ["uu", "uːu"] and vowel_after:
             return [Phoneme("uː", template=state.capture[0])]
 
     # Formation of diphthongs involving two phonemes
@@ -223,9 +223,15 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
             return []
         
         # Experimental - remove some other 'ə's
+
+        # ərld
         if state.current.value == "ə" \
             and state.prev and state.prev.value == "r" \
             and len(state.following) >= 2 and "".join([x.value for x in state.following[:2]]) == "ld":
+            return []
+        
+        if state.current.value == "ə" \
+            and state.prev and state.prev.value in ["iː"]:
             return []
 
     def distinguish_voiced_fricatives(state):

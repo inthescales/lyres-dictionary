@@ -1,3 +1,4 @@
+import random
 from src.diachronizer.engine.helpers import often, even, occ
 
 def from_me_phonemes(phonemes, overrides=[]):
@@ -122,10 +123,15 @@ def from_me_phonemes(phonemes, overrides=[]):
                 result += "i"
                 insert_lengthening_e = True
             else:
-                if prev2 and prev2 and prev2.is_consonant() and prev.is_consonant():
+                if prev2 and prev2 and prev.is_consonant() and prev2.is_consonant():
                     result += "y"
                 else:
-                    result += random.choice(["ie", "uy"])
+                    if "iː#->ie#" in overrides:
+                        result += "ie"
+                    elif "iː#->ye#" in overrides:
+                        result += "ye"
+                    else:
+                        result += random.choice(["ie", "ye"])
         elif phone.value == "eː" and next1 and next2 and next1.value + next2.value in ["nd", "ld"]:
             result += "ie"
         elif phone.value == "eː":

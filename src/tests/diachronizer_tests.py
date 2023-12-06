@@ -313,11 +313,13 @@ class DiachronizerTests(unittest.TestCase):
         # self.check_equal("strūti|an", "strut") # Produces 'strout', which reflect middle english 'strouten', but not modern english 'strut'
         
         # Diphthongs
+        
+        # AI
         self.check_equal("dæġ", "day")        
         self.check_equal("mæġ", "may")
         self.check_equal("mæġden", "maiden")
         self.check_equal("næġl", "nail")
-        self.check_equal("fæġer", "fair")
+        self.check_equal("fæġer", "fair", overrides=["aiV->ai"])
         self.check_equal("clǣġ", "clay")
         self.check_equal("grǣġ", "gray") # Regular rules produce spelling 'gray'
         self.check_equal("weġ", "way")
@@ -326,6 +328,18 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("leġer", "layer", overrides=["aiV->ay"])
         self.check_equal("leġde", "laid")
         self.check_equal("hēġ", "hay")
+
+        # Ī
+        # self.check_equal("ēage", "eye") # Possibly idiosincratic. Same question about the palatalization of the 'g' as the below 
+        self.check_equal("lēġ|an", "lie") # Sources show the modern word as originating from 'lēogan'. 'lēġan' is a later form. Not able to generate the modern form from the original due to the non-palatal 'g', but the intermediary form works.
+        self.check_equal("flēġe", "fly") # Sources show the modern word is originating from 'flēoge'. This form is an assumed intermediate stage based on the above. I don't know when the 'g' became palatalized
+        self.check_equal("tiġel", "tile")
+        self.check_equal("liġe", "lie", overrides=["iː#->ie#"])
+        self.check_equal("hīġi|an", "hie", overrides=["iː#->ie#"])
+        self.check_equal("ryġe", "rye", overrides=["iː#->ye#"])
+        self.check_equal("byġe", "buy", overrides=["y->u"])
+        self.check_equal("drȳġe", "dry")
+
 
         self.check_equal("", "")
         
