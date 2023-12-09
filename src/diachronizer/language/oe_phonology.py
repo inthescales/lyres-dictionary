@@ -63,7 +63,7 @@ def get_graphs(word):
     current_node = None
 
     for i in range(0, len(word)):
-        char = word[i]
+        char = word[i].lower()
 
         if current_node != None:
             if char in current_node.children:

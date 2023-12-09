@@ -67,12 +67,26 @@ def from_me_phonemes(phonemes, overrides=[]):
         elif phone.value == "au":
             result += "aw"
         elif phone.value in ["ɛu", "iu"]:
-            if next1:
+            if "ɛ/iu->ew" in overrides:
+                result += "ew"
+            elif "ɛ/iu->ue":
+                result += "ue"
+            elif next1:
                 result += random.choice(["ew", "ue", "u"])
             else:
                 result += random.choice(["ew", "ue"])
+            
+            if next1 and next1.value == "ə":
+                skip_next = True
         elif phone.value == "ɔu":
-            result += "ow"
+            if next1 and next1.is_consonant() and next1.value != "n":
+                # Added based on pairs such as 'sāwol'->'soul'/'flogen'->'flown'
+                result += "ou"
+            else:
+                result += "ow"
+            
+            if next1 and next1.value == "ə":
+                skip_next = True
 
         # Monophthongs
         elif phone.value == "a":
@@ -163,6 +177,8 @@ def from_me_phonemes(phonemes, overrides=[]):
         elif phone.value == "uː":
             if next1:
                 result += "ou"
+            else:
+                result += "ow"
         elif phone.value == "ə":
             if not next2:
                 if next1.value in ["m", "w"]:
@@ -217,7 +233,7 @@ def from_me_phonemes(phonemes, overrides=[]):
                 else:
                     result += "s"
         elif phone.value == "z":
-            if prev and prev.is_vowel() and prev.is_short():
+            if prev and prev.is_vowel() and prev.is_short() and not (next1 and next1.is_consonant()):
                 result += "zz"
             else:
                 if not next1 and prev and prev.value == "r":
@@ -225,7 +241,11 @@ def from_me_phonemes(phonemes, overrides=[]):
                 else:
                     result += "s"
         elif phone.value in ["θ", "ð"]:
-            result += "th"
+            if prev and prev.value == "x":
+                # Added to handle cases like 'drought', on the belief that no cases of '-oughth' exist
+                result += "t"
+            else:
+                result += "th"
         elif phone.value in ["x", "xx"]:
             if prev == None:
                 result += "h"

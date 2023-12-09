@@ -331,7 +331,7 @@ class DiachronizerTests(unittest.TestCase):
 
         # Ī
         # self.check_equal("ēage", "eye") # Possibly idiosincratic. Same question about the palatalization of the 'g' as the below 
-        self.check_equal("lēġ|an", "lie") # Sources show the modern word as originating from 'lēogan'. 'lēġan' is a later form. Not able to generate the modern form from the original due to the non-palatal 'g', but the intermediary form works.
+        self.check_equal("lēġ|an", "lie", overrides=["iː#->ie#"]) # Sources show the modern word as originating from 'lēogan'. 'lēġan' is a later form. Not able to generate the modern form from the original due to the non-palatal 'g', but the intermediary form works.
         self.check_equal("flēġe", "fly") # Sources show the modern word is originating from 'flēoge'. This form is an assumed intermediate stage based on the above. I don't know when the 'g' became palatalized
         self.check_equal("tiġel", "tile")
         self.check_equal("liġe", "lie", overrides=["iː#->ie#"])
@@ -339,9 +339,66 @@ class DiachronizerTests(unittest.TestCase):
         self.check_equal("ryġe", "rye", overrides=["iː#->ye#"])
         self.check_equal("byġe", "buy", overrides=["y->u"])
         self.check_equal("drȳġe", "dry")
+        
+        # AU
+        self.check_equal("clawu", "claw")
+        self.check_equal("lagu", "law")
+        self.check_equal("drag|an", "draw")
 
+        # ɛu
+        self.check_equal("mǣw", "mew", overrides=["ɛ/iu->ew"])
+        self.check_equal("lǣwede", "lewd", overrides=["ɛ/iu->ew"])
+        self.check_equal("sċrēawa", "shrew", overrides=["ɛ/iu->ew"])
+        self.check_equal("dēaw", "dew", overrides=["ɛ/iu->ew"])
+        self.check_equal("ċēow|an", "chew", overrides=["ɛ/iu->ew"])
+        self.check_equal("hrēow|an", "rue", overrides=["ɛ/iu->ue"])
+        self.check_equal("trēwe", "true", overrides=["ɛ/iu->ue"]) # Source had the west saxon 'trīewe'. This is my guess at an Anglian form
+        # self.check_equal("Tiwesdæġ", "Tuesday") # Needs compound handling
 
-        self.check_equal("", "")
+        # ɔu
+        self.check_equal("cnāw|an", "know")
+        self.check_equal("crāwa", "crow")
+        self.check_equal("snāw", "snow")
+        self.check_equal("sāwol", "soul")
+        # self.check_equal("āg|an", "owe")# Idiosyncratic?
+        self.check_equal("grōw|an", "grow")
+        self.check_equal("blōwen", "blown")
+        self.check_equal("boga", "bow")
+        self.check_equal("flogen", "flown")
+
+        
+        # Ū
+        # self.check_equal("fugol", "fowl") # Current process produces 'foul'. Need more examples to understand this
+        # self.check_equal("drugaþ", "drought")  # Idiosyncratic. Normal rules would produce 'drout'
+
+        self.check_equal("būg|an", "bow")
+
+        # auh
+        self.check_equal("slæhtor", "slaughter")
+        self.check_equal("hlæhtor", "laughter")
+
+        # ɛih
+        self.check_equal("streht", "straight")
+
+        # i:h
+        self.check_equal("hēh", "high")
+        self.check_equal("þēh", "thigh")
+        self.check_equal("nēh", "nigh")
+        self.check_equal("riht", "right")
+        self.check_equal("flyht", "flight")
+        self.check_equal("līht", "light")
+
+        # ɔuh
+        self.check_equal("dāg", "dough")
+        self.check_equal("trog", "trough")
+        
+        # uːh
+        self.check_equal("bōg", "bough")
+        self.check_equal("plōg", "plough")
+
+        # self.check_equal("ġenōg", "enough") # Probably needs prefix handling
+        self.check_equal("tōh", "tough")
+        self.check_equal("ruh", "rough")
         
         # self.check_equal("stel|an", "steal")
         # self.check_equalIn("bāt", ["boat", "bote"])

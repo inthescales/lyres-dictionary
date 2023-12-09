@@ -11,7 +11,7 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     form = ""
 
     def harden_g(state):
-        if (state.current.value == "ɣ" and state.syllable_data.index == 0) \
+        if (state.current.value == "ɣ" and not state.prev) \
             or (state.current.value == "ɣ" and state.prev and state.prev.value == "n"):
             return [Phoneme("g", template=state.current)]
         elif state.current.value == "ɣɣ":
@@ -50,7 +50,6 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                     return [Phoneme("oː", template=state.current)]
             elif state.current.value == "y":
                 y_override = ("y->i" in overrides) or ("y->e" in overrides) or ("y->u" in overrides)
-                print(str(y_override))
                 if (not y_override and often()) or "y->i" in overrides:
                     # Anglian dialect
                     return [Phoneme("i", template=state.current)]
@@ -62,7 +61,6 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                     return [Phoneme("u", template=state.current)]
             elif state.current.value == "yː":
                 y_override = ("y->i" in overrides) or ("y->e" in overrides) or ("y->u" in overrides)
-                print(str(y_override))
                 if (not y_override and often()) or "y->i" in overrides:
                     # Anglian dialect
                     return [Phoneme("iː", template=state.current)]
@@ -109,21 +107,26 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                 return [Phoneme("ə", template=state.current)]
 
     def vocalization_of_post_vocalic_g(state):
-        if state.current.value == "ɣ" and state.prev.is_vowel() and state.next.is_vowel():
+        if state.current.value == "ɣ" and state.prev and state.prev.is_vowel() and state.next:
             return [Phoneme("u", template=state.current, history=["vocalized-g"])]
+        elif state.current.value == "ɣ" and not state.next:
+            return [Phoneme("x", template=state.current)]
+        elif state.current.value == "w" and state.prev and state.prev.is_vowel():
+            return [Phoneme("u", template=state.current)]
 
     # Formation of diphthongs involving three phonemes
     # For technical reasons, separated from those involving two
     def diphthong_formation_3(state):
+        two_joined = "".join([p.value for p in state.capture[:2]])
         vowel_after = state.capture[2].is_vowel()
-
-        if state.joined[:3] == "eːj" and vowel_after:
+        
+        if two_joined == "eːj" and vowel_after:
             return [Phoneme("iː", template=state.capture[0])]
-        elif state.joined[:3] == "au" and vowel_after:
+        elif two_joined == "au" and vowel_after:
             return [Phoneme("au", template=state.capture[0])]
-        elif state.joined[:3] in ["aːu", "ou", "oːu"] and vowel_after:
+        elif two_joined in ["ɔːu", "ou", "oːu"] and vowel_after:
             return [Phoneme("ɔu", template=state.capture[0])]
-        elif state.joined[:3] in ["uu", "uːu"] and vowel_after:
+        elif two_joined in ["uu", "uːu"] and vowel_after:
             return [Phoneme("uː", template=state.capture[0])]
 
     # Formation of diphthongs involving two phonemes
@@ -140,12 +143,18 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
             return [Phoneme("iː", template=state.capture[0])]
         elif state.joined == "au":
             return [Phoneme("au", template=state.capture[0])]
-        elif state.joined in ["aːu", "eːau", "eu", "eou"]:
+        elif state.joined in ["ɛːu", "eu", "eou"]:
             return [Phoneme("ɛu", template=state.capture[0])]
+        elif state.joined in ["ɔːu", "ou", "oːu"]:
+            return [Phoneme("ɔu", template=state.capture[0])]
         elif state.joined in ["eːu", "eːou", "iu", "iːu", "yu", "yːu"]:
             return [Phoneme("iu", template=state.capture[0])]
-        elif state.joined in ["aːu", "ou", "oːu"]:
-            return [Phoneme("ɔu", template=state.capture[0])]
+        elif (state.joined in ["oːx", "oːx", "ux", "uːx"] and not vowel_after) \
+            or state.joined in ["ux", "uːx"]:
+            return [Phoneme("uː", template=state.capture[0]), Phoneme("x", template=state.capture[0])]
+        elif (state.joined in ["ɔːx", "ox"] and not vowel_after) \
+            or state.joined in ["ɔːx", "ox"]:
+            return [Phoneme("ɔu", template=state.capture[0]), Phoneme("x", template=state.capture[0])]
 
     # Breaking
     # Inserts /i/ or /u/ between vowels and a following /x/ (or sometimes /g/)
@@ -178,11 +187,11 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     def open_syllable_lengthening(state):
         if state.current.is_vowel() and state.syllable_data.is_open \
             and not state.current.value == "ə" and not state.current.is_diphthong() \
-            and state.syllable_data.following_syllable_count == 1:
+            and state.syllable_data.following_syllable_count == 1 \
+            and not (state.next and state.next.value == "w"):
             if state.current.value in ["i", "y"]:
                 if "OSL_iy_true" in overrides \
-                    or (occ() and not "OSL_iy_false" in overrides):
-                    print("HERE EY")
+                    or (occ() and not "OSL_iy_false" in overrides): 
                     return [Phoneme("eː", state.current.stressed)]
             elif state.current.value == "u":
                 if "OSL_u_true" in overrides \
@@ -258,7 +267,7 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                 and not (state.capture[1].value == "j"):
                 return [state.capture[0], Phoneme("ə"), state.capture[1]]
     
-    verbose = True
+    verbose = False
     separator = "\n"
     if verbose:
         print("".join(p.value for p in rig.phonemes) + separator)
@@ -270,9 +279,9 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", verbose, separator)
     rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", verbose, separator)
     rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", verbose, separator)
+    rig.run_capture(g_to_w, 1, "G to w", verbose, separator)
     rig.run_capture(diphthong_formation_3, 3, "Diphthong formation 1", verbose, separator)
     rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", verbose, separator)
-    rig.run_capture(g_to_w, 1, "G to w", verbose, separator)
     rig.run_capture(breaking, 2, "Breaking", verbose, separator)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", verbose, separator)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", verbose, separator)
