@@ -257,7 +257,9 @@ def from_me_phonemes(phonemes, overrides=[]):
             elif next1 and next1.value == "w":
                     result += "qu"
                     skip_next = True
-            elif not prev and not (next1 and next1.value == "n") and not (next1 and next1.value in ["e", "i"]):
+            elif not prev \
+                and not (next1 and next1.value == "n") \
+                and not (next1 and next1.value in ["e", "i", "eː", "iː"]):
                 result += "c"
             else:
                 result += "k"

@@ -246,7 +246,8 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     def distinguish_voiced_fricatives(state):
         if state.current.is_consonant() and state.current.is_fricative() \
             and (state.prev and (state.prev.is_vowel() or state.prev.is_voiced())) \
-            and (state.next and (state.next.is_vowel() or state.next.is_voiced())):
+            and (state.next and (state.next.is_vowel() or state.next.is_voiced())) \
+            and not state.current.value in ["x"]:
             return [state.current.get_voiced()]
 
     # Insert a schwa between inconvenient final consonant clusters
