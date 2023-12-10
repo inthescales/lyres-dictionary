@@ -35,6 +35,9 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
             elif state.current.value in ["eː", "eːo"] and state.next and state.next.value == "r" \
                 and ("eːr->ɛːr_true" in overrides or (often() and not "eːr->ɛːr_false" in overrides)):
                 return [Phoneme("ɛː", template=state.current)]
+            elif state.current.value in ["eː", "eːo"] and state.next and state.next.value == "k" \
+                and ("eːc->ic_true" in overrides or (occ() and not "eːc->ic_false" in overrides)):
+                return [Phoneme("i", template=state.current)]
             elif state.current.value in ["æ", "ea", "a"]:
                 return [Phoneme("a", template=state.current)]
             elif state.current.value in ["æː", "eːa"]:
@@ -268,7 +271,13 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
                 and not (state.capture[1].value == "j"):
                 return [state.capture[0], Phoneme("ə"), state.capture[1]]
     
-    verbose = False
+    def d_ð_alternation(state):
+        if (occ() or "dər->ðər" in overrides) and state.joined == "dər":
+            return [Phoneme("ð", state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
+        elif (occ() or "ðər->dər" in overrides) and state.joined == "ðər":
+            return [Phoneme("d" , state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
+    
+    verbose = True
     separator = "\n"
     if verbose:
         print("".join(p.value for p in rig.phonemes) + separator)
@@ -292,5 +301,6 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
     rig.run_capture(drop_initial_h, 2, "Drop initial h", verbose, separator)
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", verbose, separator)
     rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", verbose, separator)
+    rig.run_capture(d_ð_alternation, 3, "d/ð alternation", verbose, separator)
 
     return rig.phonemes
