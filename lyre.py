@@ -11,6 +11,7 @@ from src.analysis import Analyst
 
 import src.composer as composer
 import src.validator as validator
+import diachronizer as diachronizer
 
 morphothec = None
 
@@ -60,6 +61,16 @@ def test_with_keys(keys):
     print(entry_for_keys(keys))
     print("")
 
+def test_descent(form, language):
+    print("")
+    print(form + "\n")
+    if language == "oe":
+        print(diachronizer.form_from_oe(form, verbose=True))
+    else:
+        print("error: unrecognized language '" + language + "'")
+    
+    print("")
+
 def analyze():
 
     if needs_setup():
@@ -92,7 +103,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:", ["test", "publish", "analyze", "count=", "keys="])
+        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:d:", ["test", "publish", "analyze", "count=", "keys="])
     except getopt.GetoptError:
         print('lyre.py requires a mode parameter: -t/--test, -p/--publish, or -a/--analyze')
         sys.exit(2)
@@ -116,6 +127,9 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             count = int(arg)
         elif opt in ["-k", "--keys"]:
             keys = map(lambda key: key.strip(), arg.split(","))
+        elif opt in ["-d", "--descent"]:
+            descent_form = arg
+            descent_lang = "oe"
     
     # Assign defaults
     if mode == None:
@@ -141,6 +155,8 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)
+        if descent_form and descent_lang:
+            test_descent(descent_form, descent_lang)
         else:
             test_with_count(count)
             

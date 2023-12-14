@@ -82,7 +82,7 @@ class Rig:
                 new_phonemes.append(added_phonemes)
 
         if name and verbose:
-            print(name + ": " + "".join([p.value for p in new_phonemes]) + separator)
+            print(name + ": /" + "".join([p.value for p in new_phonemes]) + "/" + separator)
 
         self.phonemes = new_phonemes
 
@@ -110,7 +110,7 @@ class Rig:
             new_phonemes += self.phonemes[treated:]
 
         if name and verbose and new_phonemes != self.phonemes:
-            print("".join([p.value for p in new_phonemes]) + " — " + name + separator)
+            print("/" + "".join([p.value for p in new_phonemes]) + "/" + " — " + name + separator)
 
         self.phonemes = new_phonemes
 

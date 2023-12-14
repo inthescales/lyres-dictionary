@@ -7,9 +7,9 @@ import src.diachronizer.language.ne_orthography as ne_orthography
 import src.diachronizer.table as table
 import src.helpers as helpers
 
-def form_from_oe(oe_form, overrides):
+def form_from_oe(oe_form, overrides=[], verbose=False):
     oe_phonemes = oe_phonology.from_oe_written(oe_form)
-    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, overrides)
+    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, overrides, verbose)
     modern_form = ne_orthography.from_me_phonemes(me_phonemes, overrides)
 
     return modern_form

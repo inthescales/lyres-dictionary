@@ -233,13 +233,10 @@ def from_me_phonemes(phonemes, overrides=[]):
                 else:
                     result += "s"
         elif phone.value == "z":
-            if prev and prev.is_vowel() and prev.is_short() and not (next1 and next1.is_consonant()):
-                result += "zz"
+            if not next1 and prev and prev.value == "r":
+                result += "se"
             else:
-                if not next1 and prev and prev.value == "r":
-                    result += "se"
-                else:
-                    result += "s"
+                result += "s"
         elif phone.value in ["θ", "ð"]:
             if prev and prev.value == "x":
                 # Added to handle cases like 'drought', on the belief that no cases of '-oughth' exist
@@ -255,14 +252,16 @@ def from_me_phonemes(phonemes, overrides=[]):
             if not next1 and prev and prev.is_vowel() and prev.is_short():
                 result += "ck"
             elif next1 and next1.value == "w":
-                    result += "qu"
-                    skip_next = True
+                result += "qu"
+                skip_next = True
             elif not prev \
                 and not (next1 and next1.value == "n") \
                 and not (next1 and next1.value in ["e", "i", "eː", "iː"]):
                 result += "c"
             else:
                 result += "k"
+        elif phone.value == "kw":
+            result += "qu"
         elif phone.value == "ks":
             result += "x"
             skip_next = True

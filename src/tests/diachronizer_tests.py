@@ -168,8 +168,8 @@ class DiachronizerTests(unittest.TestCase):
         # check("ċīcen", "chicken") # Test produces wrong result as written, do to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
         # check("lȳtel", "little") # Test produces wrong result as written, do to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
         check("sēoc", "sick", overrides=["eːc->ic_true"])
-        check("wēoce", "wick", overrides=["eːc->ic_true"])
-        check("ēc", "ick", overrides=["eːc->ic_true"])
+        check("wēoce", "wick", overrides=["eːc->ic_true"]) # occ #eoc
+        check("ēc", "ick", overrides=["eːc->ic_true"]) # occ ēc
         check("gyrd|an", "gird")
         check("fyrst", "first")
         check("styri|an", "stir", overrides=["OSL_iy_false"])

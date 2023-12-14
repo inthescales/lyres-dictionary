@@ -4,7 +4,7 @@ from src.diachronizer.engine.phoneme import Phoneme
 from src.diachronizer.engine.transform_rig import RigState, Rig
 from src.diachronizer.engine.helpers import often, even, occ
 
-def from_oe_phonemes(oe_phonemes, overrides=[]):
+def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
     phonemes = oe_phonemes
 
     rig = Rig(phonemes, overrides)
@@ -277,10 +277,9 @@ def from_oe_phonemes(oe_phonemes, overrides=[]):
         elif (occ() or "ðər->dər" in overrides) and state.joined == "ðər":
             return [Phoneme("d" , state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
     
-    verbose = True
     separator = "\n"
     if verbose:
-        print("".join(p.value for p in rig.phonemes) + separator)
+        print("/" + "".join(p.value for p in rig.phonemes) + "/" + separator)
 
     rig.run_capture(harden_g, 1, "Harden g's", verbose, separator)
     rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", verbose, separator)
