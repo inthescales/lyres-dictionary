@@ -1,6 +1,7 @@
 import unittest
 
 import diachronizer as diachronizer
+from src.diachronizer.engine.helpers import Config
 
 total = 0
 failures = []
@@ -34,7 +35,8 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            form = diachronizer.form_from_oe(raw, overrides)
+            config = Config(locked=True, overrides=overrides)
+            form = diachronizer.form_from_oe(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -55,7 +57,7 @@ class DiachronizerTests(unittest.TestCase):
         check("fǣtt", "fat")
         check("læst|an", "last")
         # check("blēddre", "bladder")
-        check("blǣddre", "bladder")
+        check("blǣddre", "bladder", overrides=[["DThA:dər->ðər", False]])
         # check("brēmbel", "bramble")
         check("brǣmbel", "bramble")
         check("swan", "swan")
@@ -110,20 +112,20 @@ class DiachronizerTests(unittest.TestCase):
         # check("clǣnsi|an", "cleanse") # Occasional pre-cluster shortening
         # check("flǣsċ", "flesh") # Occasional pre-cluster shortening
         # check("lǣssa", "less") # Occasional pre-cluster shortening
-        check("frēond", "friend")
+        check("frēond", "friend", overrides=[["SVC:eːo->eː/oː", "eː"]])
         # check("þēofþ", "theft") # ??? Possible 'þ#' -> 't#' change
         # check("hēold", "held") # Depends on 'ld' pre-cluster shortening not applying
         
         # e+r -> ar
         check("heorte", "heart")
-        check("berc|an", "bark", overrides=["orth_e+r->a"])
+        check("berc|an", "bark", overrides=[["Orth:e+r->e/a/ea", "a"]])
         # check("teoru", "tar") # Unsure why vowel is as though short
-        check("steorra", "star", overrides=["orth_e+r->a"])
-        check("werra", "war", overrides=["orth_e+r->a"])
-        # check("werbl|en", "warble", overrides=["orth_e+r->a"]) # Not sure if this is OE? Wiki had "AN 'werbler'". Anglo-norman?
+        check("steorra", "star", overrides=[["Orth:e+r->e/a/ea", "a"]])
+        check("werra", "war", overrides=[["Orth:e+r->e/a/ea", "a"]])
+        # check("werbl|en", "warble", overrides=[["Orth:e+r->e/a/ea", "a"]]) # Not sure if this is OE? Wiki had "AN 'werbler'". Anglo-norman?
         
         # e+r -> er
-        check("styrne", "stern", overrides=["y->e", "orth_e+r->e"])
+        check("styrne", "stern", overrides=[["SVC:y->i/e/u", "e"], ["Orth:e+r->e/a/ea", "e"]])
         check("eorl", "earl")
         check("eorþe", "earth")
         check("leorni|an", "learn")
@@ -131,21 +133,21 @@ class DiachronizerTests(unittest.TestCase):
         
         # e (leng.)
         check("spec|an", "speak")
-        check("mete", "meat", overrides=["orth_ɛː->ea"])
+        check("mete", "meat", overrides=[["Orth:ɛː->ea/eCV", "ea"]])
         check("beofor", "beaver")
-        check("meot|an", "mete", overrides=["orth_ɛː->eCV"])
+        check("meot|an", "mete", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("eot|an", "eat")
         check("meodu", "mead")
-        check("efel", "evil", overrides=["orth_ɛː->eCV"])
+        check("efel", "evil", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("spere", "spear")
-        check("mere", "mere", overrides=["orth_ɛː->eCV"])
+        check("mere", "mere", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("brec|an", "break")
         check("beor|an", "bear")
         check("pere", "pear")
         check("sweri|an", "swear")
         check("leþer", "leather")
         check("stede", "stead")
-        # check("weder", "weather") # No handling for 'd' -> 'th' yet
+        check("weder", "weather", overrides=[["DThA:ðər->dər", True]])
         check("heofon", "heaven")
         check("hefiġ", "heavy")
 
@@ -153,7 +155,7 @@ class DiachronizerTests(unittest.TestCase):
         # check("writen", "written") # Might participles be irregularly formed? That is, re-formed in modern morphology by addition of -en
         check("sitt|an", "sit")
         check("fisċ", "fish")
-        check("lifer", "liver", overrides=["OSL_iy_false"])
+        check("lifer", "liver")
         check("bryċġ", "bridge")
         check("cyss|an", "kiss")
         # check("dyde", "did")
@@ -167,23 +169,23 @@ class DiachronizerTests(unittest.TestCase):
         check("fȳst", "fist")
         # check("ċīcen", "chicken") # Test produces wrong result as written, do to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
         # check("lȳtel", "little") # Test produces wrong result as written, do to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
-        check("sēoc", "sick", overrides=["eːc->ic_true"])
-        check("wēoce", "wick", overrides=["eːc->ic_true"]) # occ #eoc
-        check("ēc", "ick", overrides=["eːc->ic_true"]) # occ ēc
+        check("sēoc", "sick", overrides=[["SVC:eːc->ic", True]])
+        check("wēoce", "wick", overrides=[["SVC:eːc->ic", True]])
+        check("ēc", "ick", overrides=[["SVC:eːc->ic", True]])
         check("gyrd|an", "gird")
         check("fyrst", "first")
-        check("styri|an", "stir", overrides=["OSL_iy_false"])
+        check("styri|an", "stir")
         
         # i (leng.)
-        check("wicu", "week", overrides=["OSL_iy_true"])
-        check("pili|an", "peel", overrides=["OSL_iy_true"])
-        # check("bitela", "beetle", overrides=["OSL_iy_true"]) # "By normal evolution it would be *bittle, but it seems to have been influenced by beetle (n.2)." - etymonline"
+        check("wicu", "week", overrides=[["OSL:iy", True]])
+        check("pili|an", "peel", overrides=[["OSL:iy", True]])
+        # check("bitela", "beetle", overrides=[["OSL:iy", True]]) # "By normal evolution it would be *bittle, but it seems to have been influenced by beetle (n.2)." - etymonline"
 
         # O
         check("god", "god")
         # check("beġeondan", "beyond") # Will require prefix handling
         # check("gōdspell", "gospel") # May require compound handling. Can't explain dropped 'd'
-        check("fōddor", "fodder")
+        check("fōddor", "fodder", overrides=[["DThA:dər->ðər", False]])
         check("fōstri|an", "foster")
         check("moþþe", "moth")
         check("cros", "cross")
@@ -196,11 +198,11 @@ class DiachronizerTests(unittest.TestCase):
         check("storm", "storm")
         
         # O (leng.)
-        check("fola", "foal", overrides=["orth_ɔː->oa"])
-        check("nosu", "nose", overrides=["orth_ɔː->oCV"])
-        check("ofer", "over", overrides=["orth_ɔː->oCV"])
-        check("bori|an", "bore", overrides=["orth_ɔː->oCV"])
-        check("fore", "fore", overrides=["orth_ɔː->oCV"])
+        check("fola", "foal", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
+        check("nosu", "nose", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
+        check("ofer", "over", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
+        check("bori|an", "bore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
+        check("fore", "fore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         # check("bord", "board") # Needs 'rd' homorganic lengthening
 
         # U
@@ -209,31 +211,31 @@ class DiachronizerTests(unittest.TestCase):
         check("uppe", "up")
         # check("bufan", "above") # Will require prefixes
         # check("myċel", "much") # Inexplicable lost final syllable
-        # check("cyċġel", "cudgel", overrides=["y->u"]) # Not sure about -el ending (cf 'evil')
-        check("clyċċ|an", "clutch", overrides=["y->u"])
-        check("sċytel", "shuttle", overrides=["y->u"])
+        # check("cyċġel", "cudgel", overrides=[["SVC:y->i/e/u", "u"]]) # Not sure about -el ending (cf 'evil')
+        check("clyċċ|an", "clutch", overrides=[["SVC:y->i/e/u", "u"]])
+        check("sċytel", "shuttle", overrides=[["SVC:y->i/e/u", "u"]])
         # check("dūst", "dust") # Unsure about short vowel. PCS before 'st'?
         check("tūsc", "tusk")
         # check("rūst", "rust") # Unsure about short vowel. PCS before 'st'?
         check("full", "full")
         check("bula", "bull")
-        check("bysċ", "bush", overrides=["y->u"])
+        check("bysċ", "bush", overrides=[["SVC:y->i/e/u", "u"]])
 
         check("spurn|an", "spurn")
-        # check("ċyriċe", "church", overrides=["y->u"]) # Can't explain lost second vowel
-        # check("byrþen", "burden", overrides=["y->u"]) # d/θ alternation
-        check("hyrdel", "hurdle", overrides=["y->u"])
+        # check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]]) # Can't explain lost second vowel
+        # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation
+        check("hyrdel", "hurdle", overrides=[["SVC:y->i/e/u", "u"]])
         check("word", "word")
         check("werc", "work")
         check("werold", "world")
-        check("wyrm", "worm", overrides=["y->u"])
+        check("wyrm", "worm", overrides=[["SVC:y->i/e/u", "u"]])
         check("wersa", "worse")
         check("weorþ", "worth")
         
         # U (leng.)
         # check("guma", "gome", overrides=["OSL_u_true"]) # Not sure about this one
-        check("duru", "door", overrides=["OSL_u_true"])
-        check("wudu", "wood", overrides=["OSL_u_true"])
+        check("duru", "door", overrides=[["OSL:u", True]])
+        check("wudu", "wood", overrides=[["OSL:u", True]])
         
         # Ā
         check("āc", "oak")
@@ -241,10 +243,10 @@ class DiachronizerTests(unittest.TestCase):
         # check("camb", "comb") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
         # check("ald", "old") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
         # check("hald|an", "hold") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
-        self.check_in("ār", ["oar", "1re"])
-        check("māra", "more", overrides=["orth_ɔː->oCV"])
+        self.check_in("ār", ["oar", "ore"], Config(True, []))
+        check("māra", "more", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("bār", "boar")
-        check("sār", "sore", overrides=["orth_ɔː->oCV"])
+        check("sār", "sore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
 
         # Ǣ
         check("hǣl|an", "heal")
@@ -254,11 +256,11 @@ class DiachronizerTests(unittest.TestCase):
         check("lēaf", "leaf")
         check("ċēap", "cheap")
         check("rǣr|an", "rear")
-        check("ēare", "ear", overrides=["orth_ɛː->ea"])
-        check("sēar", "sere", overrides=["orth_ɛː->eCV"])
-        check("sēari|an", "sear", overrides=["orth_ɛː->ea"])        
+        check("ēare", "ear", overrides=[["Orth:ɛː->ea/eCV", "ea"]])
+        check("sēar", "sere", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("sēari|an", "sear", overrides=[["Orth:ɛː->ea/eCV", "ea"]])        
         check("grēat", "great")
-        check("ǣr", "ere", overrides=["orth_ɛː->eCV"])
+        check("ǣr", "ere", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("brǣþ", "breath")
         check("swǣt|an", "sweat")
         check("sprǣd|an", "spread")
@@ -279,15 +281,15 @@ class DiachronizerTests(unittest.TestCase):
         # be
         check("feld", "field") # Depends on 'ld' pre-cluster shortening
         check("ġeld|an", "yield")
-        check("hēr", "here", overrides=["orth_ɛː->eCV"])
-        check("hēr|an", "hear", overrides=["orth_ɛː->ea"])
+        check("hēr", "here", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("hēr|an", "hear", overrides=[["Orth:ɛː->ea/eCV", "ea"]])
         check("fēr", "fear")
         check("dēore", "dear")
-        check("þēr", "there", overrides=["orth_ɛː->eCV"])
-        check("hwēr", "where", overrides=["orth_ɛː->eCV"])
-        check("bēor", "beer", overrides=["eːr->ɛːr_false"])
-        check("dēor", "deer", overrides=["eːr->ɛːr_false"])
-        check("stēr|an", "steer", overrides=["eːr->ɛːr_false"])
+        check("þēr", "there", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("hwēr", "where", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("bēor", "beer", overrides=[["SVC:eːr->ɛːr", False]])
+        check("dēor", "deer", overrides=[["SVC:eːr->ɛːr", False]])
+        check("stēr|an", "steer", overrides=[["SVC:eːr->ɛːr", False]])
         # check("bēr", "bier") # No known rule for 8['-ier'
 
         # Ī / Ȳ
@@ -311,12 +313,12 @@ class DiachronizerTests(unittest.TestCase):
         check("sōna", "soon")
         check("fōd", "food")
         # do
-        check("ċēos|an", "choose", overrides=["eːo->oː"])
-        check("sċēot|an", "shoot", overrides=["eːo->oː"])
+        check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
+        check("sċēot|an", "shoot", overrides=[["SVC:eːo->eː/oː", "oː"]])
         check("flōr", "floor")
         check("mōr", "moor")
         check("blōd", "blood")
-        # check("mōdor", "mother") # Needs 'd'/'ð' alternation
+        # check("mōdor", "mother", overrides=[["DThA:ðər->dər", True]]) # Can't explain short vowel
         # check("glōfa", "glove") # Unsure why vowel is as if 'ɔː'
         check("gōd", "good")
         check("bōc", "book")
@@ -349,19 +351,19 @@ class DiachronizerTests(unittest.TestCase):
         check("weġ", "way")
         check("pleġ|an", "play")
         check("reġn", "rain")
-        check("leġer", "layer", overrides=["aiV->ay"])
+        check("leġer", "layer", overrides=[["Orth:aiV->ai/ay", "ay"]])
         check("leġde", "laid")
         check("hēġ", "hay")
 
         # Ī
         # check("ēage", "eye") # Possibly idiosincratic. Same question about the palatalization of the 'g' as the below 
-        check("lēġ|an", "lie", overrides=["iː#->ie#"]) # Sources show the modern word as originating from 'lēogan'. 'lēġan' is a later form. Not able to generate the modern form from the original due to the non-palatal 'g', but the intermediary form works.
+        check("lēġ|an", "lie", overrides=[["Orth:iː#->ie/ye", "ie"]]) # Sources show the modern word as originating from 'lēogan'. 'lēġan' is a later form. Not able to generate the modern form from the original due to the non-palatal 'g', but the intermediary form works.
         check("flēġe", "fly") # Sources show the modern word is originating from 'flēoge'. This form is an assumed intermediate stage based on the above. I don't know when the 'g' became palatalized
         check("tiġel", "tile")
-        check("liġe", "lie", overrides=["iː#->ie#"])
-        check("hīġi|an", "hie", overrides=["iː#->ie#"])
-        check("ryġe", "rye", overrides=["iː#->ye#"])
-        check("byġe", "buy", overrides=["y->u"])
+        check("liġe", "lie", overrides=[["Orth:iː#->ie/ye", "ie"]])
+        check("hīġi|an", "hie", overrides=[["Orth:iː#->ie/ye", "ie"]])
+        check("ryġe", "rye", overrides=[["Orth:iː#->ie/ye", "ye"]])
+        check("byġe", "buy", overrides=[["SVC:y->i/e/u", "u"]])
         check("drȳġe", "dry")
         
         # AU
@@ -370,13 +372,13 @@ class DiachronizerTests(unittest.TestCase):
         check("drag|an", "draw")
 
         # ɛu
-        check("mǣw", "mew", overrides=["ɛ/iu->ew"])
-        check("lǣwede", "lewd", overrides=["ɛ/iu->ew"])
-        check("sċrēawa", "shrew", overrides=["ɛ/iu->ew"])
-        check("dēaw", "dew", overrides=["ɛ/iu->ew"])
-        check("ċēow|an", "chew", overrides=["ɛ/iu->ew"])
-        check("hrēow|an", "rue", overrides=["ɛ/iu->ue"])
-        check("trēwe", "true", overrides=["ɛ/iu->ue"]) # Source had the west saxon 'trīewe'. This is my guess at an Anglian form
+        check("mǣw", "mew", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("lǣwede", "lewd", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("sċrēawa", "shrew", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("dēaw", "dew", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("ċēow|an", "chew", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("hrēow|an", "rue", overrides=[["Orth:ɛ/iu->ew/ue", "ue"]])
+        check("trēwe", "true", overrides=[["Orth:ɛ/iu->ew/ue", "ue"]]) # Source had the west saxon 'trīewe'. This is my guess at an Anglian form
         # check("Tiwesdæġ", "Tuesday") # Needs compound handling
 
         # ɔu
@@ -432,13 +434,14 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            form = diachronizer.form_from_oe(raw, overrides)
+            config = Config(locked=True, overrides=overrides)
+            form = diachronizer.form_from_oe(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
         
         check("stel|an", "steal")
-        check("bāt", "boat", overrides=["orth_ɔː->oa"])
+        check("bāt", "boat", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
         check("frēod", "freed")
         check("heofon", "heaven")
         
@@ -464,13 +467,13 @@ class DiachronizerTests(unittest.TestCase):
     
     # Helpers ==========
 
-    def check_equal(self, raw, target, overrides=[]):
-        form = diachronizer.form_from_oe(raw, overrides)
+    def check_equal(self, raw, target, config):
+        form = diachronizer.form_from_oe(raw, config)
         return form == target
     
-    def check_in(self, raw, targets, overrides=[]):
+    def check_in(self, raw, targets, config):
         global total, failures
-        form = diachronizer.form_from_oe(raw, overrides)
+        form = diachronizer.form_from_oe(raw, config)
         
         if form not in targets:
             failures.append([form, targets])

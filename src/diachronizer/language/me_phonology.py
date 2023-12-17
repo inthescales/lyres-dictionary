@@ -2,12 +2,12 @@ import random
 
 from src.diachronizer.engine.phoneme import Phoneme
 from src.diachronizer.engine.transform_rig import RigState, Rig
-from src.diachronizer.engine.helpers import often, even, occ
+from src.diachronizer.engine.helpers import often, even, occ, hinge
 
-def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
+def from_oe_phonemes(oe_phonemes, config, verbose=False):
     phonemes = oe_phonemes
 
-    rig = Rig(phonemes, overrides)
+    rig = Rig(phonemes)
     form = ""
 
     def harden_g(state):
@@ -33,10 +33,10 @@ def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
                 and state.current.value in ["e", "eo", "o", "y"]:
                 return [Phoneme("u", template=state.current)]
             elif state.current.value in ["eː", "eːo"] and state.next and state.next.value == "r" \
-                and ("eːr->ɛːr_true" in overrides or (often() and not "eːr->ɛːr_false" in overrides)):
+                and often("SVC:eːr->ɛːr", config):
                 return [Phoneme("ɛː", template=state.current)]
             elif state.current.value in ["eː", "eːo"] and state.next and state.next.value == "k" \
-                and ("eːc->ic_true" in overrides or (occ() and not "eːc->ic_false" in overrides)):
+                and occ("SVC:eːc->ic", config):
                 return [Phoneme("i", template=state.current)]
             elif state.current.value in ["æ", "ea", "a"]:
                 return [Phoneme("a", template=state.current)]
@@ -47,30 +47,31 @@ def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
             elif state.current.value == "eo":
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
-                if (often() and not "eːo->oː" in overrides) or "eːo->eː" in overrides:
+                result = often("SVC:eːo->eː/oː", config)
+                if result == "eː":
                     return [Phoneme("eː", template=state.current)]
-                else:
+                elif result == "oː":
                     return [Phoneme("oː", template=state.current)]
             elif state.current.value == "y":
-                y_override = ("y->i" in overrides) or ("y->e" in overrides) or ("y->u" in overrides)
-                if (not y_override and often()) or "y->i" in overrides:
+                result = hinge("SVC:y->i/e/u", [0.5, 0.3], config)
+                if result == "i":
                     # Anglian dialect
                     return [Phoneme("i", template=state.current)]
-                elif (not y_override and often()) or "y->e" in overrides:
+                elif result == "e":
                     # Kentish dialect
                     return [Phoneme("e", template=state.current)]
-                elif True or "y->u" in overrides:
+                elif result == "u":
                     # West Saxon dialect
                     return [Phoneme("u", template=state.current)]
             elif state.current.value == "yː":
-                y_override = ("y->i" in overrides) or ("y->e" in overrides) or ("y->u" in overrides)
-                if (not y_override and often()) or "y->i" in overrides:
+                result = hinge("SVC:y->i/e/u", [0.5, 0.3], config)
+                if result == "i":
                     # Anglian dialect
                     return [Phoneme("iː", template=state.current)]
-                elif (not y_override and often()) or "y->e" in overrides:
+                elif result == "e":
                     # Kentish dialect
                     return [Phoneme("eː", template=state.current)]
-                elif True or "y->u" in overrides:
+                elif result == "u":
                     # West Saxon dialect
                     return [Phoneme("uː", template=state.current)]
 
@@ -84,7 +85,7 @@ def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
 
                 # other lengthening clusters: mb, ld, rn, rd
                 lengthening_clusters = ["nd", "rl", "rs", "ld"] # rs+vowel?
-                if (occ() and not "PCS_rn_false" in overrides) or "PCS_rn_true" in overrides:
+                if occ("PCS:rn", config):
                     lengthening_clusters += ["rn"]
                 if next_two_joined in lengthening_clusters \
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
@@ -92,7 +93,7 @@ def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
 
                 if state.current.value == "ɔː":
                     return [Phoneme("a", template=state.current)]
-                elif often() and state.current.value == "ɛː":
+                elif state.current.value == "ɛː" and often("PCS:ɛː->a", config):
                     return [Phoneme("a", template=state.current)]
                 else:
                     return [state.current.get_shortened()]
@@ -193,12 +194,10 @@ def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
             and state.syllable_data.following_syllable_count == 1 \
             and not (state.next and state.next.value == "w"):
             if state.current.value in ["i", "y"]:
-                if "OSL_iy_true" in overrides \
-                    or (occ() and not "OSL_iy_false" in overrides): 
+                if occ("OSL:iy", config):
                     return [Phoneme("eː", state.current.stressed)]
             elif state.current.value == "u":
-                if "OSL_u_true" in overrides \
-                    or (occ() and not "OSL_u_false" in overrides):
+                if occ("OSL:u", config):
                     return [Phoneme("oː", state.current.stressed)]
             elif state.current.value in ["e", "eo"]:
                 return [Phoneme("ɛː", state.current.stressed)]
@@ -272,9 +271,9 @@ def from_oe_phonemes(oe_phonemes, overrides=[], verbose=False):
                 return [state.capture[0], Phoneme("ə"), state.capture[1]]
     
     def d_ð_alternation(state):
-        if (occ() or "dər->ðər" in overrides) and state.joined == "dər":
+        if state.joined == "dər" and often("DThA:dər->ðər", config):
             return [Phoneme("ð", state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
-        elif (occ() or "ðər->dər" in overrides) and state.joined == "ðər":
+        elif state.joined == "ðər" and occ("DThA:ðər->dər", config):
             return [Phoneme("d" , state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
     
     separator = "\n"

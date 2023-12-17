@@ -65,7 +65,8 @@ def test_descent(form, language):
     print("")
     print(form + "\n")
     if language == "oe":
-        print(diachronizer.form_from_oe(form, verbose=True))
+        config = Config(locked=False, overrides=[])
+        print(diachronizer.form_from_oe(form, config, verbose=True))
     else:
         print("error: unrecognized language '" + language + "'")
     

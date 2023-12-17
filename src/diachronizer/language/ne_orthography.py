@@ -1,7 +1,7 @@
 import random
-from src.diachronizer.engine.helpers import often, even, occ
+from src.diachronizer.engine.helpers import often, even, occ, hinge
 
-def from_me_phonemes(phonemes, overrides=[]):
+def from_me_phonemes(phonemes, config):
     result = []
     insert_lengthening_e = False
     skip_next = 0
@@ -57,19 +57,21 @@ def from_me_phonemes(phonemes, overrides=[]):
             if not next1:
                 result += "ay"
             elif next1 and next1.is_vowel():
-                if (even() and not "aiV->ay" in overrides) or "aiV->ai" in overrides:
+                choice = even("Orth:aiV->ai/ay", config)
+                if choice == "ai":
                     result += "ai"
                     skip_next = True
-                else:
+                elif choice == "ay":
                     result += "ay"
             else:
                 result += "ai"
         elif phone.value == "au":
             result += "aw"
         elif phone.value in ["ɛu", "iu"]:
-            if "ɛ/iu->ew" in overrides:
+            override = next((x[1] for x in config.overrides if x[0] == "Orth:ɛ/iu->ew/ue"), None)
+            if override == "ew":
                 result += "ew"
-            elif "ɛ/iu->ue":
+            elif override == "ue":
                 result += "ue"
             elif next1:
                 result += random.choice(["ew", "ue", "u"])
@@ -99,33 +101,21 @@ def from_me_phonemes(phonemes, overrides=[]):
             if next1 and next1.value == "r":
                 # These cases seem ambiguous. 
                 # "ea" may be more common when descending from "eo" spelling?
-                if "orth_e+r->ea" in overrides:
+                roll = hinge("Orth:e+r->e/a/ea", [0.5, 0.3], config)
+                if roll == "ea":
                     result += "ea"
-                    overrides.remove("orth_e+r->ea")
-                elif "orth_e+r->a" in overrides:
+                elif roll == "a":
                     result += "a"
-                    overrides.remove("orth_e+r->a")
-                elif "orth_e+r->e" in overrides:
+                elif roll == "e":
                     result += "e"
-                    overrides.remove("orth_e+r->e")
-                else:
-                    if often():
-                        result += "ea"
-                    elif often():
-                        result += "a"
-                    else:
-                        result += "e"
+
             else:
                 result += "e"
         elif phone.value == "ɛː":
-            if "orth_ɛː->ea" in overrides:
+            roll = often("Orth:ɛː->ea/eCV", config)
+            if roll == "ea":
                 result += "ea"
-            elif "orth_ɛː->eCV" in overrides:
-                result += "e"
-                insert_lengthening_e = True
-            elif often():
-                result += "ea"
-            else:
+            elif roll == "eCV":
                 result += "e"
                 insert_lengthening_e = True
         elif phone.value == "i":
@@ -140,12 +130,7 @@ def from_me_phonemes(phonemes, overrides=[]):
                 if prev2 and prev2 and prev.is_consonant() and prev2.is_consonant():
                     result += "y"
                 else:
-                    if "iː#->ie#" in overrides:
-                        result += "ie"
-                    elif "iː#->ye#" in overrides:
-                        result += "ye"
-                    else:
-                        result += random.choice(["ie", "ye"])
+                    result += even("Orth:iː#->ie/ye", config)
         elif phone.value == "eː" and next1 and next2 and next1.value + next2.value in ["nd", "ld"]:
             result += "ie"
         elif phone.value == "eː":
@@ -153,14 +138,10 @@ def from_me_phonemes(phonemes, overrides=[]):
         elif phone.value == "o":
             result += "o"
         elif phone.value == "ɔː":
-            if "orth_ɔː->oa" in overrides:
+            roll = often("Orth:ɔː->oa/oCV", config)
+            if roll == "oa":
                 result += "oa"
-            elif "orth_ɔː->oCV" in overrides:
-                result += "o"
-                insert_lengthening_e = True
-            elif often():
-                result += "oa"
-            else:
+            elif roll == "oCV":
                 result += "o"
                 insert_lengthening_e = True
         elif phone.value == "oː":
