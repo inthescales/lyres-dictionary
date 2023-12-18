@@ -83,10 +83,12 @@ def from_oe_phonemes(oe_phonemes, config):
                 or (len(state.following) > 0 and state.following[0].value == "ʃ")): # 'sċ' may count as a cluster (ex. 'flǣsċ')
                 next_two_joined = "".join([x.value for x in state.following[:2]])
 
-                # other lengthening clusters: mb, ld, rn, rd
+                # other lengthening clusters: mb, ld
                 lengthening_clusters = ["nd", "rl", "rs", "ld"] # rs+vowel?
-                if occ("PCS:rn", config):
+                if not occ("PCS:rn", config):
                     lengthening_clusters += ["rn"]
+                if not occ("PCS:rd", config):
+                    lengthening_clusters += ["rd"]
                 if next_two_joined in lengthening_clusters \
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
                     return None

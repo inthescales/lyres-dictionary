@@ -12,6 +12,7 @@ from src.analysis import Analyst
 import src.composer as composer
 import src.validator as validator
 import diachronizer as diachronizer
+from src.diachronizer.engine.helpers import Config
 
 morphothec = None
 

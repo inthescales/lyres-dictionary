@@ -121,7 +121,7 @@ class DiachronizerTests(unittest.TestCase):
         check("berc|an", "bark", overrides=[["Orth:e+r->e/a/ea", "a"]])
         # check("teoru", "tar") # Unsure why vowel is as though short
         check("steorra", "star", overrides=[["Orth:e+r->e/a/ea", "a"]])
-        check("werra", "war", overrides=[["Orth:e+r->e/a/ea", "a"]])
+        # check("werra", "war", overrides=[["Orth:e+r->e/a/ea", "a"]]) # Anglo-Norman
         # check("werbl|en", "warble", overrides=[["Orth:e+r->e/a/ea", "a"]]) # Not sure if this is OE? Wiki had "AN 'werbler'". Anglo-norman?
         
         # e+r -> er
@@ -129,7 +129,7 @@ class DiachronizerTests(unittest.TestCase):
         check("eorl", "earl")
         check("eorþe", "earth")
         check("leorni|an", "learn")
-        # check("hērde", "heard") # Depends on 'rd' not being pre-cluster shortened
+        check("hērde", "heard", overrides=[["PCS:rd", False]])
         
         # e (leng.)
         check("spec|an", "speak")
@@ -158,7 +158,7 @@ class DiachronizerTests(unittest.TestCase):
         check("lifer", "liver")
         check("bryċġ", "bridge")
         check("cyss|an", "kiss")
-        # check("dyde", "did")
+        check("dyde", "did")
         check("synn", "sin")
         check("gyld|an", "gild")
         # check("bysiġ", "busy", overrides=["OSL_iy_false"]) # Not sure how to handle z/s spelling
@@ -167,8 +167,8 @@ class DiachronizerTests(unittest.TestCase):
         check("wȳsċ|an", "wish")
         check("cȳþþu", "kith")
         check("fȳst", "fist")
-        # check("ċīcen", "chicken") # Test produces wrong result as written, do to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
-        # check("lȳtel", "little") # Test produces wrong result as written, do to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
+        # check("ċīcen", "chicken") # Test produces wrong result as written, due to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
+        # check("lȳtel", "little") # Test produces wrong result as written, due to the 'occ ī+CV' mentioned in the wiki. Sources are inconsistent with respect to vowel length, though
         check("sēoc", "sick", overrides=[["SVC:eːc->ic", True]])
         check("wēoce", "wick", overrides=[["SVC:eːc->ic", True]])
         check("ēc", "ick", overrides=[["SVC:eːc->ic", True]])
@@ -203,11 +203,11 @@ class DiachronizerTests(unittest.TestCase):
         check("ofer", "over", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("bori|an", "bore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("fore", "fore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
-        # check("bord", "board") # Needs 'rd' homorganic lengthening
+        # check("bord", "board", overrides=[["PCS:rd", False], ["Orth:ɔː->oa/oCV", "oa"]]) # This is listed as a case of open-syllable lengthening. However come due to homorganic lengthening, the vowel is currently not changing as expected. Should the same stressed vowel changes apply in homorganic lengthening as well?
 
         # U
         check("bucc", "buck")
-        check("lufi|an", "love", overrides=["OSL_u_false"])
+        check("lufi|an", "love")
         check("uppe", "up")
         # check("bufan", "above") # Will require prefixes
         # check("myċel", "much") # Inexplicable lost final syllable
@@ -233,7 +233,7 @@ class DiachronizerTests(unittest.TestCase):
         check("weorþ", "worth")
         
         # U (leng.)
-        # check("guma", "gome", overrides=["OSL_u_true"]) # Not sure about this one
+        # check("guma", "gome", overrides=[["OSL:u", True]]) # Not sure about this one
         check("duru", "door", overrides=[["OSL:u", True]])
         check("wudu", "wood", overrides=[["OSL:u", True]])
         
@@ -346,7 +346,7 @@ class DiachronizerTests(unittest.TestCase):
         check("mæġ", "may")
         check("mæġden", "maiden")
         check("næġl", "nail")
-        check("fæġer", "fair", overrides=["aiV->ai"])
+        check("fæġer", "fair")
         check("clǣġ", "clay")
         check("grǣġ", "gray") # Regular rules produce spelling 'gray'
         check("weġ", "way")
