@@ -1,9 +1,11 @@
 import random
 
 class Config:
-    def __init__(self, locked, overrides):
+    def __init__(self, locked, overrides, verbose, separator="\n"):
         self.locked = locked
         self.overrides = overrides
+        self.verbose = verbose
+        self.separator = separator
 
 def often(id, config):
     return hinge(id, 0.75, config) 

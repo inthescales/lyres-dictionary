@@ -35,7 +35,7 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            config = Config(locked=True, overrides=overrides)
+            config = Config(verbose=False, locked=True, overrides=overrides)
             form = diachronizer.form_from_oe(raw, config)
             total += 1
             if not form == target:
@@ -103,9 +103,9 @@ class DiachronizerTests(unittest.TestCase):
         check("streċċ|an", "stretch")#{}
         # check("seofon", "seven") # Unsure why vowel is short
         # check("myriġ", "merry") # Confusion about form dot space. May want to condense 'iġ' endings
-        # check("byrġ|an", "bury") # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
-        # check("lyft", "left") # Not based on Anglian dialect. Apparently Kentish
-        # check("cnyll", "knell") # Not based on Anglian dialect. Apparently Kentish
+        check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]]) # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
+        check("lyft", "left", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
+        check("cnyll", "knell", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cēpte", "kept")
         check("mētte", "met")
         # check("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven'
@@ -243,7 +243,8 @@ class DiachronizerTests(unittest.TestCase):
         # check("camb", "comb") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
         # check("ald", "old") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
         # check("hald|an", "hold") # Not sure about pre-cluster shortening. Also need to consider spelling of 'ɔː' before these clusters
-        self.check_in("ār", ["oar", "ore"], Config(True, []))
+        check("ār", "oar", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
+        check("ār", "ore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("māra", "more", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("bār", "boar")
         check("sār", "sore", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
@@ -434,7 +435,7 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            config = Config(locked=True, overrides=overrides)
+            config = Config(verbose=False, locked=True, overrides=overrides)
             form = diachronizer.form_from_oe(raw, config)
             total += 1
             if not form == target:

@@ -4,7 +4,7 @@ from src.diachronizer.engine.phoneme import Phoneme
 from src.diachronizer.engine.transform_rig import RigState, Rig
 from src.diachronizer.engine.helpers import often, even, occ, hinge
 
-def from_oe_phonemes(oe_phonemes, config, verbose=False):
+def from_oe_phonemes(oe_phonemes, config):
     phonemes = oe_phonemes
 
     rig = Rig(phonemes)
@@ -276,29 +276,28 @@ def from_oe_phonemes(oe_phonemes, config, verbose=False):
         elif state.joined == "ðər" and occ("DThA:ðər->dər", config):
             return [Phoneme("d" , state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
     
-    separator = "\n"
-    if verbose:
-        print("/" + "".join(p.value for p in rig.phonemes) + "/" + separator)
+    if config.verbose:
+        print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
-    rig.run_capture(harden_g, 1, "Harden g's", verbose, separator)
-    rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", verbose, separator)
-    rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", verbose, separator)
-    rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", verbose, separator)
-    rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", verbose, separator)
-    rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", verbose, separator)
-    rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", verbose, separator)
-    rig.run_capture(g_to_w, 1, "G to w", verbose, separator)
-    rig.run_capture(diphthong_formation_3, 3, "Diphthong formation 1", verbose, separator)
-    rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", verbose, separator)
-    rig.run_capture(breaking, 2, "Breaking", verbose, separator)
-    rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", verbose, separator)
-    rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", verbose, separator)
-    rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", verbose, separator)
-    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", verbose, separator)
-    rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", verbose, separator)
-    rig.run_capture(drop_initial_h, 2, "Drop initial h", verbose, separator)
-    rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", verbose, separator)
-    rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", verbose, separator)
-    rig.run_capture(d_ð_alternation, 3, "d/ð alternation", verbose, separator)
+    rig.run_capture(harden_g, 1, "Harden g's", config)
+    rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", config)
+    rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", config)
+    rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", config)
+    rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
+    rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", config)
+    rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", config)
+    rig.run_capture(g_to_w, 1, "G to w", config)
+    rig.run_capture(diphthong_formation_3, 3, "Diphthong formation 1", config)
+    rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", config)
+    rig.run_capture(breaking, 2, "Breaking", config)
+    rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
+    rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
+    rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
+    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
+    rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)
+    rig.run_capture(drop_initial_h, 2, "Drop initial h", config)
+    rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
+    rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
+    rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
 
     return rig.phonemes

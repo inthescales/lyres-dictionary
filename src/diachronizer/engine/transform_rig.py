@@ -71,7 +71,7 @@ class Rig:
     def __init__(self, phonemes):
         self.phonemes = phonemes
 
-    def run_change(self, change, name=None, verbose=False, separator="\n"):
+    def run_change(self, change, name, config):
         new_phonemes = []
         for i in range(0, len(self.phonemes)):
             state = RigState(self.phonemes, i)
@@ -79,12 +79,12 @@ class Rig:
             if added_phonemes:
                 new_phonemes.append(added_phonemes)
 
-        if name and verbose:
-            print(name + ": /" + "".join([p.value for p in new_phonemes]) + "/" + separator)
+        if name and config.verbose:
+            print(name + ": /" + "".join([p.value for p in new_phonemes]) + "/" + config.separator)
 
         self.phonemes = new_phonemes
 
-    def run_capture(self, change, capture_size, name=None, verbose=False, separator="\n"):
+    def run_capture(self, change, capture_size, name, config):
         if capture_size > len(self.phonemes):
             return
 
@@ -107,8 +107,8 @@ class Rig:
         if treated < len(self.phonemes):
             new_phonemes += self.phonemes[treated:]
 
-        if name and verbose and new_phonemes != self.phonemes:
-            print("/" + "".join([p.value for p in new_phonemes]) + "/" + " — " + name + separator)
+        if name and config.verbose and new_phonemes != self.phonemes:
+            print("/" + "".join([p.value for p in new_phonemes]) + "/" + " — " + name + config.separator)
 
         self.phonemes = new_phonemes
 
