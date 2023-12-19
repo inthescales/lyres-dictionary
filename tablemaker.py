@@ -1,22 +1,14 @@
 import getopt
 import sys
 
-import src.diachronizer.language.oe_phonology as oe_phonology
-import src.diachronizer.language.me_phonology as me_phonology
-import src.diachronizer.language.ne_orthography as ne_orthography
-import src.diachronizer.table as table
-import src.helpers as helpers
-
-def form_from_oe(oe_form, config=[]):
-    oe_phonemes = oe_phonology.from_oe_written(oe_form)
-    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
-    modern_form = ne_orthography.from_me_phonemes(me_phonemes, config)
-
-    return modern_form
+import src.diachronizer.diachronizer as diachronizer
+import src.diachronizer.engine.helpers as helpers
+from src.diachronizer.engine.helpers import Config
+import src.tablemaker.table as table
 
 # Table Drawing =================================
 
-def make_table(input):
+def make_table_oe(input):
     inputs = [
         "stel|an",
         "bāt",
@@ -47,19 +39,21 @@ def make_table(input):
         "nacod"
     ]
 
+    config = Config(locked=True)
+
     oe_phonemes = []
     for input in inputs:
-        phonemes = oe_phonology.from_oe_written(input)
+        phonemes = diachronizer.oe_orth_to_oe_phone(input, config)
         oe_phonemes.append(phonemes)
 
     me_phonemes = []
     for oe in oe_phonemes:
-        phonemes = me_phonology.from_oe_phonemes(oe)
+        phonemes = diachronizer.oe_phone_to_me_phone(oe, config)
         me_phonemes.append(phonemes)
 
     modern_forms = []
     for me in me_phonemes:
-        spelling = ne_orthography.from_me_phonemes(me)
+        spelling = diachronizer.me_phone_to_ne_orth(me, config)
         modern_forms.append(spelling)
 
     oe_output = ["/" + "".join([x.value for x in word]) + "/" for word in oe_phonemes]
@@ -95,5 +89,5 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         if opt in ["-w", "--word"]:
             input = arg
 
-    make_table(input)
+    make_table_oe(input)
     # test()
