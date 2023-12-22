@@ -30,16 +30,15 @@ def series_root_suffix(roots, suffixes, morphothec):
         for j, suffix in enumerate(suffixes):
             word = Word(morphothec)
             word.set_keys([root, suffix])
-            series.elements[i].append(composer.get_form(word))
-            
             root_morph, suffix_morph = word.morphs[0], word.morphs[1]
+
+            valid = True
             if "requires" in suffix_morph.morph:
                 env = Environment(None, root_morph, None, None)
                 valid = suffix_morph.meets_requirements(env, filter_frequency=False)
-                series.is_valid[i].append(valid)
-            else:
-                series.is_valid[i].append(True)
-
+            
+            series.elements[i].append(composer.get_form(word))
+            series.is_valid[i].append(valid)
             series.is_rare[i].append(suffix_morph.has_tag("rare"))
     
     return series
@@ -57,18 +56,17 @@ def series_verb(root, prefixes, suffixes, morphothec):
         for j, suffix in enumerate(suffixes):
             word = Word(morphothec)
             word.set_keys([prefix, root, suffix])
-            series.elements[i].append(composer.get_form(word))
-
             prefix_morph, root_morph, suffix_morph = word.morphs[0], word.morphs[1], word.morphs[2]
+
+            valid = True
             if "requires" in suffix_morph.morph or "requires" in prefix_morph.morph:
                 suffix_env = Environment(prefix_morph, root_morph, None, None)
                 prefix_env = Environment(None, None, root_morph, suffix_morph)
-                valid = suffix_morph.meets_requirements(suffix_env, filter_frequency=False)
-                valid = valid and prefix_morph.meets_requirements(prefix_env, filter_frequency=False)
-                series.is_valid[i].append(valid)
-            else:
-                series.is_valid[i].append(True)
+                valid = suffix_morph.meets_requirements(suffix_env, filter_frequency=False) \
+                    and prefix_morph.meets_requirements(prefix_env, filter_frequency=False)
 
+            series.elements[i].append(composer.get_form(word))
+            series.is_valid[i].append(valid)
             series.is_rare[i].append(prefix_morph.has_tag("rare") or suffix_morph.has_tag("rare"))
                 
     return series
@@ -86,16 +84,16 @@ def series_prefix_verb(prefixes, verbs, morphothec):
         for j, verb in enumerate(verbs):
             word = Word(morphothec)
             word.set_keys([prefix, verb])
-            series.elements[i].append(composer.get_form(word))
-
             prefix_morph, verb_morph = word.morphs[0], word.morphs[1]
+
+            valid = True
             if "requires" in prefix_morph.morph:
                 env = Environment(None, None, verb_morph, None)
-                series.is_valid[i].append(prefix_morph.meets_requirements(env, filter_frequency=False))
-            else:
-                series.is_valid[i].append(True)
+                valid = prefix_morph.meets_requirements(env, filter_frequency=False)
 
-            series.is_rare[i].append(suffix_morph.has_tag("rare"))
+            series.elements[i].append(composer.get_form(word))
+            series.is_valid[i].append(valid)
+            series.is_rare[i].append(prefix_morph.has_tag("rare") or verb_morph.has_tag("rare"))
     
     return series
 
@@ -112,18 +110,17 @@ def series_noun_circumfix(prefixes, roots, suffix, morphothec):
         for j, root in enumerate(roots):
             word = Word(morphothec)
             word.set_keys([prefix, root, suffix])
-            series.elements[i].append(composer.get_form(word))
-            
             prefix_morph, root_morph, suffix_morph = word.morphs[0], word.morphs[1], word.morphs[2]
+            
+            valid = True
             if "requires" in suffix_morph.morph or "requires" in prefix_morph.morph:
                 suffix_env = Environment(prefix_morph, root_morph, None, None)
                 prefix_env = Environment(None, None, root_morph, suffix_morph)
-                valid = suffix_morph.meets_requirements(suffix_env, filter_frequency=False)
-                valid = valid and prefix_morph.meets_requirements(prefix_env, filter_frequency=False)
-                series.is_valid[i].append(valid)
-            else:
-                series.is_valid[i].append(True)
+                valid = suffix_morph.meets_requirements(suffix_env, filter_frequency=False) \
+                    or prefix_morph.meets_requirements(prefix_env, filter_frequency=False)
 
+            series.elements[i].append(composer.get_form(word))
+            series.is_valid[i].append(valid)
             series.is_rare[i].append(prefix_morph.has_tag("rare") or suffix_morph.has_tag("rare"))
     
     return series
@@ -172,22 +169,22 @@ def getHTML(series):
     return output
 
 def combine():
-    test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
-                                    morphothec.filter_appends_to("noun", "latin"),
-                                    morphothec)
+    # test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
+    #                                 morphothec.filter_appends_to("noun", "latin"),
+    #                                 morphothec)
 
-    #test_series = series_verb("tarassein", 
+    # test_series = series_verb("tarassein", 
     #                          morphothec.filter_prepends_to("verb", "greek", { "has-type": "prep" }),
     #                          morphothec.filter_appends_to("verb", language="greek"),
     #                          morphothec)
 
-    # test_series = series_prefix_verb(morphothec.filter_type("prep", "latin"),
-    #                                  morphothec.filter_type("verb"),
+    # test_series = series_prefix_verb(morphothec.filter_prepends_to("verb", "latin", { "has-type": "prep" }),
+    #                                  morphothec.filter_type("verb", "latin"),
     #                                  morphothec)
 
-    #test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
-    #                                    morphothec.filter_type("noun", "greek"),
-    #                                    "-ic",
-    #                                    morphothec)
+    test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
+                                       morphothec.filter_type("noun", "greek"),
+                                       "-ic",
+                                       morphothec)
 
     return getHTML(test_series)
