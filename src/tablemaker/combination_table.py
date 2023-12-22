@@ -171,23 +171,23 @@ def getHTML(series):
     
     return output
 
-test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
-                                 morphothec.filter_appends_to("noun", "latin"),
-                                 morphothec)
+def combine():
+    test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
+                                    morphothec.filter_appends_to("noun", "latin"),
+                                    morphothec)
 
-#test_series = series_verb("tarassein", 
-#                          morphothec.filter_prepends_to("verb", "greek", { "has-type": "prep" }),
-#                          morphothec.filter_appends_to("verb", language="greek"),
-#                          morphothec)
+    #test_series = series_verb("tarassein", 
+    #                          morphothec.filter_prepends_to("verb", "greek", { "has-type": "prep" }),
+    #                          morphothec.filter_appends_to("verb", language="greek"),
+    #                          morphothec)
 
-# test_series = series_prefix_verb(morphothec.filter_type("prep", "latin"),
-#                                  morphothec.filter_type("verb"),
-#                                  morphothec)
+    # test_series = series_prefix_verb(morphothec.filter_type("prep", "latin"),
+    #                                  morphothec.filter_type("verb"),
+    #                                  morphothec)
 
-#test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
-#                                    morphothec.filter_type("noun", "greek"),
-#                                    "-ic",
-#                                    morphothec)
+    #test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
+    #                                    morphothec.filter_type("noun", "greek"),
+    #                                    "-ic",
+    #                                    morphothec)
 
-
-print(getHTML(test_series))
+    return getHTML(test_series)

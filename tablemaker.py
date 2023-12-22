@@ -3,6 +3,7 @@ import sys
 
 import src.tablemaker.table as table
 import src.tablemaker.evolution_table as evolution_table
+import src.tablemaker.combination_table as combination_table
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
@@ -27,7 +28,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "el:", ["evolution", "list="])
+        opts, params = getopt.getopt(sys.argv[1:], "el:c", ["evolution", "list=", "combination"])
     except getopt.GetoptError:
         error_unrecognized_args()
         sys.exit(2)
@@ -36,6 +37,8 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     for opt, arg in opts:
         if opt in ["-e", "--evolution"]:
             mode = "evolution"
+        elif opt in ["-c", "--combination"]:
+            mode = "combination"
         elif opt in ["-l", "--list"]:
             list_path = arg
 
@@ -53,6 +56,9 @@ if __name__ == '__main__' and len(sys.argv) > 0:
 
         table = evolution_table.make_table_oe_ne(words)
 
+        print(table)
+    elif mode == "combination":
+        table = combination_table.combine()
         print(table)
     else:
         error_no_mode()
