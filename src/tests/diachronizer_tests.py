@@ -1,6 +1,6 @@
 import unittest
 
-import diachronizer as diachronizer
+import src.diachronizer.diachronizer as diachronizer
 from src.diachronizer.engine.helpers import Config
 
 total = 0
@@ -36,7 +36,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.form_from_oe(raw, config)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -112,7 +112,7 @@ class DiachronizerTests(unittest.TestCase):
         # check("clǣnsi|an", "cleanse") # Occasional pre-cluster shortening
         # check("flǣsċ", "flesh") # Occasional pre-cluster shortening
         # check("lǣssa", "less") # Occasional pre-cluster shortening
-        check("frēond", "friend", overrides=[["SVC:eːo->eː/oː", "eː"]])
+        check("frēond", "friend")
         # check("þēofþ", "theft") # ??? Possible 'þ#' -> 't#' change
         # check("hēold", "held") # Depends on 'ld' pre-cluster shortening not applying
         
@@ -223,7 +223,7 @@ class DiachronizerTests(unittest.TestCase):
 
         check("spurn|an", "spurn")
         # check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]]) # Can't explain lost second vowel
-        # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation
+        # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation without 'd'
         check("hyrdel", "hurdle", overrides=[["SVC:y->i/e/u", "u"]])
         check("word", "word")
         check("werc", "work")
@@ -233,7 +233,7 @@ class DiachronizerTests(unittest.TestCase):
         check("weorþ", "worth")
         
         # U (leng.)
-        # check("guma", "gome", overrides=[["OSL:u", True]]) # Not sure about this one
+        # check("guma", "gome", overrides=[["OSL:u", True]) # Not sure about this one
         check("duru", "door", overrides=[["OSL:u", True]])
         check("wudu", "wood", overrides=[["OSL:u", True]])
         
@@ -268,7 +268,7 @@ class DiachronizerTests(unittest.TestCase):
         check("dēad", "dead")
         check("dēaþ", "death")
         check("þrēat", "threat")
-        # check("rēad", "red") # Unsure why vowel is shortm
+        # check("rēad", "red") # Unsure why vowel is short
         check("dēaf", "deaf")
         check("fēd|an", "feed")
         check("grēdiġ", "greedy")
@@ -436,7 +436,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.form_from_oe(raw, config)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])

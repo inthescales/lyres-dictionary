@@ -5,7 +5,7 @@ import src.tablemaker.table as table
 from src.diachronizer.engine.helpers import Config
 
 def make_table_oe_ne(inputs):
-    config = Config(locked=True)
+    config = Config(locked=False)
 
     oe_phonemes = []
     for input in inputs:

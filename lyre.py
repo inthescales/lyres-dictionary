@@ -11,7 +11,7 @@ from src.analysis import Analyst
 
 import src.composer as composer
 import src.validator as validator
-import diachronizer as diachronizer
+import src.diachronizer.diachronizer as diachronizer
 from src.diachronizer.engine.helpers import Config
 
 morphothec = None
@@ -67,7 +67,7 @@ def test_descent(form, language):
     print(form + "\n")
     if language == "oe":
         config = Config(verbose=True, locked=False, overrides=[])
-        print(diachronizer.form_from_oe(form, config))
+        print(diachronizer.oe_form_to_ne_form(form, config))
     else:
         print("error: unrecognized language '" + language + "'")
     

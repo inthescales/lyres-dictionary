@@ -4,39 +4,10 @@ import sys
 import src.tablemaker.table as table
 import src.tablemaker.evolution_table as evolution_table
 
-list_root = "assets/word_lists/"
-oe_inputs = [
-        "stel|an",
-        "bāt",
-        "cȳð|an",
-        "frēod",
-        "heofon",
-        "mete",
-        "ċild",
-        "dæg",
-        "frēond",
-        "nama",
-        "eorðe",
-        "cniht",
-        "mægden",
-        "hund",
-        "bryċġ",
-        "gāst",
-        "gōd",
-        "cēp|an",
-        "cēpte",
-        "mæt|an",
-        "mētte",
-        "niht",
-        "hlæhh|an",
-        "tōh",
-        "mann",
-        "lamb",
-        "nacod"
-    ]
-
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
+    
+    list_root = "assets/word_lists/"
     
     mode = None
     list_path = None
