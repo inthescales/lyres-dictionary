@@ -58,7 +58,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
 
         print(table)
     elif mode == "combination":
-        table = combination_table.combine()
+        table = combination_table.make_table()
         print(table)
     else:
         error_no_mode()

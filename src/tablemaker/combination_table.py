@@ -126,6 +126,7 @@ def series_noun_circumfix(prefixes, roots, suffix, morphothec):
     return series
 
 def getHTML(series):
+    # TODO: combine this with table.py
     
     tdstyle = "border: 1px solid black; padding: 8px;"
     def cell(header, valid, rare, contents):
@@ -168,7 +169,9 @@ def getHTML(series):
     
     return output
 
-def combine():
+def make_table():
+    # Hard coded logic until I think of a good way to argument-ize this
+
     # test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
     #                                 morphothec.filter_appends_to("noun", "latin"),
     #                                 morphothec)
@@ -182,9 +185,9 @@ def combine():
     #                                  morphothec.filter_type("verb", "latin"),
     #                                  morphothec)
 
-    test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
-                                       morphothec.filter_type("noun", "greek"),
-                                       "-ic",
-                                       morphothec)
+    # test_series = series_noun_circumfix(morphothec.filter_prepends_to("noun", "greek"),
+    #                                    morphothec.filter_type("noun", "greek"),
+    #                                    "-ic",
+    #                                    morphothec)
 
     return getHTML(test_series)
