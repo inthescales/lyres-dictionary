@@ -1,0 +1,102 @@
+[
+    {
+        "key": "-dom",
+        "form-canon": "dom",
+        "form-raw": "dōm",
+        "type": "derive",
+        "derive-from": ["adj", "noun"],
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "the quality of being %@",
+        "origin": "old-english"
+    },
+    {
+        "key": "-ere",
+        "form-canon": "er",
+        "form-raw": "ere",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "one who %3sg",
+        "origin": "old-english"
+    },
+    {
+        "key": "-estre",
+        "form-canon": "ster",
+        "form-raw": "estre",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "one who %3sg",
+        "origin": "old-english",
+        "notes": "gloss is modern. Original usage was feminine only"
+    },
+    {
+        "key": "-had",
+        "form-canon": "hood",
+        "form-raw": "hād",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the state or condition of being %sg",
+        "origin": "old-english"
+    },
+    {
+        "key": "-ig",
+        "form-canon": "y",
+        "form-raw": "iġ",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "having the quality of %@",
+        "origin": "old-english"
+    },
+    {
+        "key": "-lic",
+        "form-canon": "ly",
+        "form-raw": "liċ",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "pertaining to %pl",
+        "origin": "old-english"
+    },
+    {
+        "key": "-nes",
+        "form-canon": "ness",
+        "form-raw": "nes",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the quality of being %@",
+        "origin": "old-english"
+    },
+    {
+        "key": "-scipe",
+        "form-canon": "ship",
+        "form-raw": "scipe",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the quality of being %@",
+        "origin": "old-english"
+    },
+    {
+        "key": "-ung",
+        "form-canon": "ing",
+        "form-raw": "ung",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the act of %part",
+        "origin": "old-english"
+    }    
+]
