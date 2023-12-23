@@ -66,6 +66,9 @@ class Morph:
 
     def is_suffix(self):
         return self.morph["type"] == "derive"
+    
+    def is_affix(self):
+        return self.is_prefix() or self.is_suffix()
 
     def final_ok(self):
         has_form = "form-final" in self.morph or "form" in self.morph

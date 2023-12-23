@@ -10,6 +10,8 @@ valid_properties = [
     "form",
     "form-final",
     "form-stem",
+    "form-raw",                 # Original form, before historical changes
+    "form-canon",               # Actual form in modern English (as opposed to plausible alternatives)
     "form-stem-present",        # Present participle stem for Latin verbs
     "form-stem-perfect",        # Perfect participle stem for Latin verbs
     "form-stem-assim",          # Stem for assimilating prefixes
@@ -141,6 +143,13 @@ def validate_morph(morph):
             elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
                 record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
                 return False
+        elif morph["origin"] == "old-english":
+            if not ("form-raw" in morph or "form-stem" in morph):
+                record_error(" - noun must have 'form-raw' or 'form-stem'")
+                return False
+            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
+                record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
+                return False
 
     elif morph_type == "adj" or derive_type == "adj":
         if morph["origin"] == "latin":
@@ -153,6 +162,10 @@ def validate_morph(morph):
         elif morph["origin"] == "greek":
             if not "form-stem" in morph:
                 record_error(" - adjective must have 'form-stem'")
+                return False
+        elif morph["origin"] == "old-english":
+            if not ("form-raw" in morph or "form-stem" in morph):
+                record_error(" - noun must have 'form-raw' or 'form-stem'")
                 return False
 
     elif morph_type == "verb" or derive_type == "verb":
@@ -167,6 +180,11 @@ def validate_morph(morph):
 
             if morph["conjugation"] not in [0, 1, 2, 3, 4]:
                 record_error(" - invalid conjugation '" + str(morph["conjugation"]) + "'")
+                return False
+            
+        if morph["origin"] == "old-english":
+            if not ("form-raw" in morph or "form-stem" in morph):
+                record_error(" - noun must have 'form-raw' or 'form-stem'")
                 return False
 
     elif morph_type == "prefix":

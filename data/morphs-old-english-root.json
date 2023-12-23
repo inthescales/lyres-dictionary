@@ -1,0 +1,35 @@
+[
+    {
+        "key": "fæġer",
+        "form-raw": "fæġer",
+        "form-canon": "fair",
+        "type": "adj",
+        "gloss": "beautiful",
+        "origin": "old-english"
+    }, {
+        "key": "heofon",
+        "form-raw": "heofon",
+        "form-canon": "heaven",
+        "type": "noun",
+        "gloss": "heaven",
+        "tags": ["mass", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "sōð",
+        "form-raw": "sōð",
+        "form-canon": "sooth",
+        "type": "noun",
+        "gloss": "truth",
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    },
+    {
+        "key": "stelan",
+        "form-raw": "stel|an",
+        "form-canon": "steal",
+        "type": "verb",
+        "gloss": "steal",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }
+]

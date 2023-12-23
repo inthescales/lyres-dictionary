@@ -290,6 +290,9 @@ def get_joining_vowel(language, first, second, form, addition):
             return "o"
         else:
             return ""
+    
+    elif language == "old-english":
+        return ""
 
     Logger.error("Invalid language, or language '" + language + "' failed to pick a joining vowel")
     return ""

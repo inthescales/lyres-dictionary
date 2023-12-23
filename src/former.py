@@ -1,6 +1,8 @@
 import random
 
 from src.logging import Logger
+from src.diachronizer import diachronizer
+from src.diachronizer.engine.config import Config
 
 def form(morph, env):
     form = ""
@@ -17,9 +19,16 @@ def form(morph, env):
     else:
         last_morph = None
 
+    # Rules including sound evolution
+    # Affixes always use canonical forms, if present
+    if "form-raw" in morph_dict \
+        and not ("form-stem" in morph_dict and morph.is_affix()):
+        if morph_dict["origin"] == "old-english":
+            config = Config(locked=True)
+            form = diachronizer.oe_form_to_ne_form(morph_dict["form-raw"], config)
 
     # Get the proper form of the morph
-    if env.next != None:
+    elif env.next != None:
 
         # Follow special assimilation rules if there are any
         if "form-assimilation" in morph_dict:
@@ -66,7 +75,6 @@ def form(morph, env):
                     form = morph_dict["form-stem-assim"] + 'n'
             else:
                 form = case
-
 
         # Default rules
         else:

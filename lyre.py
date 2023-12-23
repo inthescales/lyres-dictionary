@@ -157,7 +157,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)
-        if evolution_form and evolution_lang:
+        elif evolution_form and evolution_lang:
             test_evolution(evolution_form, evolution_lang)
         else:
             test_with_count(count)
