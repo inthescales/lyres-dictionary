@@ -172,9 +172,9 @@ def getHTML(series):
 def make_table():
     # Hard coded logic until I think of a good way to argument-ize this
 
-    # test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
-    #                                 morphothec.filter_appends_to("noun", "latin"),
-    #                                 morphothec)
+    test_series = series_root_suffix(["manus"], #morphothec.filter_type("noun", "latin"),
+                                    morphothec.filter_appends_to("noun", "latin"),
+                                    morphothec)
 
     # test_series = series_verb("tarassein", 
     #                          morphothec.filter_prepends_to("verb", "greek", { "has-type": "prep" }),

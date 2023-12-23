@@ -1,8 +1,7 @@
 import src.diachronizer.diachronizer as diachronizer
-import src.diachronizer.engine.helpers as helpers
 import src.tablemaker.table as table
 
-from src.diachronizer.engine.helpers import Config
+from src.diachronizer.engine.config import Config
 
 def make_table_oe_ne(inputs):
     config = Config(locked=False)

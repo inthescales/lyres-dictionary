@@ -116,7 +116,7 @@ def get_phonemes(graphs):
 
         if graphs[i] == ".":
             continue
-
+        
         if graphs[i] in (consonants + geminates):
             if stress_count == 2:
                 stress_count = 0
@@ -153,7 +153,7 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
     elif graph == "b":
         return Phoneme("b", False, inflectional)
     elif graph == "bb":
-        return Phoneme("bː", False, inflectional)
+        return Phoneme("bb", False, inflectional)
     elif graph == "c":
         # need to handle intervening ns
         # if next_g and next_g[0] in front_vowels:

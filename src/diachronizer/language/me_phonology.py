@@ -2,7 +2,7 @@ import random
 
 from src.diachronizer.engine.phoneme import Phoneme
 from src.diachronizer.engine.transform_rig import RigState, Rig
-from src.diachronizer.engine.helpers import often, even, occ, hinge
+from src.diachronizer.engine.hinges import often, even, occ, hinge
 
 def from_oe_phonemes(oe_phonemes, config):
     phonemes = oe_phonemes
@@ -18,8 +18,11 @@ def from_oe_phonemes(oe_phonemes, config):
             return [Phoneme("gg", template=state.current)]
 
     def homorganic_lengthening(state):
+        # Note: the 'old' exception is my own addition, based on the case of 'gold'
+
         if state.capture[0].is_vowel() \
             and (state.joined[1:3] in ["ld", "mb", "nd", "rd"] or state.joined[1:3] in ["ng", "rl", "rn"]) \
+            and not (state.joined[1:3] == "ld" and state.capture[0].value == "o") \
             and not (len(state.following) > 0 and state.following[0].is_consonant()):
             # and not state.syllable_data.following_syllable_count > 1:
             

@@ -1,7 +1,7 @@
 import unittest
 
 import src.diachronizer.diachronizer as diachronizer
-from src.diachronizer.engine.helpers import Config
+from src.diachronizer.engine.config import Config
 
 total = 0
 failures = []
@@ -17,6 +17,14 @@ class DiachronizerTests(unittest.TestCase):
         wiki_vowels_total, wiki_vowels_failures = self._test_wiki_vowels()        
         total += wiki_vowels_total
         failures += wiki_vowels_failures
+
+        affix_total, affix_failures = self._test_affixes()
+        total +=  affix_total
+        failures += affix_failures
+
+        compound_total, compound_failures = self._test_compounds()
+        total +=  compound_total
+        failures += compound_failures
         
         misc_total, misc_failures = self._test_misc()
         total +=  misc_total
@@ -334,7 +342,7 @@ class DiachronizerTests(unittest.TestCase):
         check("hund", "hound")
         # check("ġesund", "sound") # Needs prefix handling
         check("ūre", "our")
-        # check("sċūr", "shower") # Produces 'scour', which is accurate to middle english. Unsure about modern spelling
+        # check("sċūr", "shower") # Produces 'shour', which is accurate to middle english. Unsure about modern spelling
         check("sūr", "sour")
         # check("būtan", "but") # Unsure why vowel is short
         # check("strūti|an", "strut") # Produces 'strout', which reflect middle english 'strouten', but not modern english 'strut'
@@ -428,7 +436,55 @@ class DiachronizerTests(unittest.TestCase):
         check("ruh", "rough")
         
         return [total, failures]
+
+    def _test_affixes(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        check("", "")
+
+        return [total, failures]
         
+    def _test_compounds(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        check("ǣfen-tīd", "eventide", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("ealdor-mann", "alderman", overrides=[["DThA:dər->ðər", False]])
+        check("gold-smið", "goldsmith")
+        check("sǣ-mann", "seaman")
+        check("sunn-bēam", "sunbeam")
+        check("beru-scinn", "bearskin")
+        
+        # Difficult cases
+        # check("god-spel", "gospel") # Needs special handling for 'd-s' compound joining, maybe
+        # check("god-sibb", "gossip") # Can't explain 'b' -> 'p'
+        # check("gos-hafoc", "goshawk") # Can't explain 'hafoc' -> 'hawk'
+        # check("hand-ġeweorc", "handiwork") # Needs prefix handling, and an exception case
+        # Handiwork as above
+        # check("nēah-ġebur", "neighbor") # Not sure how to make this work
+        # check("twī-feald", "twofold") # Can't explain the 'o' in 'two'
+        # check("gat-hyrde", "goatherd", overrides=[["SVC:y->i/e/u", "e"]]) # The development of 'goat' is confusing
+        # check("gar-leac", "garlic") # Can't explain final '-ic' spelling
+
+        return [total, failures]
+    
     def _test_misc(self):
         total = 0
         failures = []
