@@ -62,7 +62,7 @@ def test_with_keys(keys):
     print(entry_for_keys(keys))
     print("")
 
-def test_descent(form, language):
+def test_evolution(form, language):
     print("")
     print(form + "\n")
     if language == "oe":
@@ -105,7 +105,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:d:", ["test", "publish", "analyze", "count=", "keys="])
+        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:e:", ["test", "publish", "analyze", "count=", "keys="])
     except getopt.GetoptError:
         print('lyre.py requires a mode parameter: -t/--test, -p/--publish, or -a/--analyze')
         sys.exit(2)
@@ -129,9 +129,9 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             count = int(arg)
         elif opt in ["-k", "--keys"]:
             keys = map(lambda key: key.strip(), arg.split(","))
-        elif opt in ["-d", "--descent"]:
-            descent_form = arg
-            descent_lang = "oe"
+        elif opt in ["-e", "--evolution"]:
+            evolution_form = arg
+            evolution_lang = "oe"
     
     # Assign defaults
     if mode == None:
@@ -157,8 +157,8 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)
-        if descent_form and descent_lang:
-            test_descent(descent_form, descent_lang)
+        if evolution_form and evolution_lang:
+            test_evolution(evolution_form, evolution_lang)
         else:
             test_with_count(count)
             
