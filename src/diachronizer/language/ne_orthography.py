@@ -119,7 +119,10 @@ def from_me_phonemes(phonemes, config):
                 result += "e"
                 insert_lengthening_e = True
         elif phone.value == "i":
-            result += "i"
+            if next1:
+                result += "i"
+            else:
+                result += "y"
         elif phone.value == "iː" and next1 and next1.is_consonant() and next2 and next2.is_consonant():
             result += "i"
         elif phone.value == "iː":
@@ -127,7 +130,9 @@ def from_me_phonemes(phonemes, config):
                 result += "i"
                 insert_lengthening_e = True
             else:
-                if prev2 and prev2 and prev.is_consonant() and prev2.is_consonant():
+                if (prev and prev2 and prev.is_consonant() and prev2.is_consonant()) \
+                    or (prev and prev.is_consonant() and prev.is_geminate()) \
+                    or (not phone.stressed):
                     result += "y"
                 else:
                     result += even("Orth:iː#->ie/ye", config)
