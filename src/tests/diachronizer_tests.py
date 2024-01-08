@@ -3,7 +3,6 @@ import unittest
 import src.diachronizer.diachronizer as diachronizer
 
 from src.diachronizer.engine.config import Config
-from src.diachronizer.engine.environment import Environment
 
 total = 0
 failures = []
@@ -45,9 +44,8 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            environment = Environment()
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, environment, config)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -446,9 +444,8 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            environment = Environment()
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, environment, config)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -463,9 +460,8 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            environment = Environment()
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, environment, config)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -496,9 +492,8 @@ class DiachronizerTests(unittest.TestCase):
         def check(raw, target, overrides=[]):
             nonlocal total, failures
 
-            environment = Environment()
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, environment, config)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -507,7 +502,7 @@ class DiachronizerTests(unittest.TestCase):
         check("bāt", "boat", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
         check("frēod", "freed")
         check("heofon", "heaven")
-        
+        check("brōþor", "brother")        
         check("mete", "meat")
         check("ċild", "child")
         check("dæġ", "day")

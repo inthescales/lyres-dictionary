@@ -17,7 +17,7 @@ class EvolutionAffixTests(unittest.TestCase):
         self.assertForm(["wind", "-iġ"], "windy")
         
         # -liċ
-        # self.assertForm(["brōþor", "-liċ"], "brotherly") # Need rule for regular shortening of ō in middle english before -ðer / -der
+        self.assertForm(["brōþor", "-liċ"], "brotherly")
         self.assertForm(["brȳd", "-liċ"], "bridely")
         self.assertForm(["frēond", "-liċ"], "friendly")
         self.assertForm(["heofon", "-liċ"], "heavenly")

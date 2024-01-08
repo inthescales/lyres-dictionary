@@ -281,6 +281,12 @@ def from_oe_phonemes(oe_phonemes, config):
         elif state.joined == "ðər" and occ("DThA:ðər->dər", config):
             return [Phoneme("d" , state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
     
+    def shorten_o_before_dðer(state):
+        if state.current.value == "oː" \
+            and len(state.following) >= 3 \
+            and "".join(x.value for x in state.following[:3]) in ["dər", "ðər"]:
+            return [Phoneme("o" , state.capture[0])]
+
     if config.verbose:
         print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
@@ -304,5 +310,6 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
     rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
+    rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
 
     return rig.phonemes
