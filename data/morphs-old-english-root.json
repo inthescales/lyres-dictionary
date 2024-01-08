@@ -1,10 +1,34 @@
 [
     {
+        "key": "brōþor",
+        "form-raw": "brōþor",
+        "form-canon": "brother",
+        "type": "noun",
+        "gloss": "brother",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "brȳd",
+        "form-raw": "brȳd",
+        "form-canon": "bride",
+        "type": "noun",
+        "gloss": "bride",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
         "key": "fæġer",
         "form-raw": "fæġer",
         "form-canon": "fair",
         "type": "adj",
         "gloss": "beautiful",
+        "origin": "old-english"
+    }, {
+        "key": "frēond",
+        "form-raw": "frēond",
+        "form-canon": "friend",
+        "type": "noun",
+        "gloss": "friend",
+        "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "heofon",
@@ -22,14 +46,21 @@
         "gloss": "truth",
         "tags": ["mass", "abstract"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "stelan",
         "form-raw": "stel|an",
         "form-canon": "steal",
         "type": "verb",
         "gloss": "steal",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "wind",
+        "form-raw": "wind",
+        "form-canon": "wind",
+        "type": "verb",
+        "gloss": "wind",
+        "tags": ["mass", "concrete"],
         "origin": "old-english"
     }
 ]
