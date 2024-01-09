@@ -14,6 +14,7 @@ class EvolutionAffixTests(unittest.TestCase):
     def testOldEnglishEvolutionWithAffixes(self):
         
         # -iġ
+        self.assertForm(["clǣġ", "-iġ"], "clayey")
         self.assertForm(["wind", "-iġ"], "windy")
         
         # -liċ

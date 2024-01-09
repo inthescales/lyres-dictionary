@@ -58,6 +58,14 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "having the quality of %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "y"
+                }
+            },
+            "form-final": "ey"
+        }],
         "origin": "old-english"
     },
     {

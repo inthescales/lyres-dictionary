@@ -111,13 +111,13 @@ class DiachronizerTests(unittest.TestCase):
         check("betera", "better")
         check("streċċ|an", "stretch")#{}
         # check("seofon", "seven") # Unsure why vowel is short
-        # check("myriġ", "merry") # Confusion about form dot space. May want to condense 'iġ' endings
+        # check("myriġ", "merry") # Confusion about form. May want to condense 'iġ' endings
         check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]]) # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
         check("lyft", "left", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cnyll", "knell", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cēpte", "kept")
         check("mētte", "met")
-        # check("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven'
+        # check("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven' (had an idea, find note)
         # check("clǣnsi|an", "cleanse") # Occasional pre-cluster shortening
         # check("flǣsċ", "flesh") # Occasional pre-cluster shortening
         # check("lǣssa", "less") # Occasional pre-cluster shortening
@@ -498,28 +498,36 @@ class DiachronizerTests(unittest.TestCase):
             if not form == target:
                 failures.append([form, target])
         
-        check("stel|an", "steal")
         check("bāt", "boat", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
-        check("frēod", "freed")
-        check("heofon", "heaven")
-        check("brōþor", "brother")        
-        check("mete", "meat")
-        check("ċild", "child")
-        check("dæġ", "day")
-        check("frēond", "friend")
-        check("eorðe", "earth")
-        check("cniht", "knight")
-        check("mæġden", "maiden")
-        check("hund", "hound")
-        check("gōd", "good")
         check("cēp|an", "keep")
         check("cēpte", "kept")
+        check("ċild", "child")
+        check("cniht", "knight")
+        check("dæġ", "day")
+        check("eorðe", "earth")
+        check("frēod", "freed")
+        check("frēond", "friend")
+        check("gōd", "good")
+        check("heofon", "heaven")
+        check("hlæhh|an", "laugh")
+        check("hund", "hound")
+        check("mæġden", "maiden")
+        check("mete", "meat")
         check("mēt|an", "meet")
         check("mētte", "met")
         check("niht", "night")
-        check("hlæhh|an", "laugh")
-        check("tōh", "tough")
         check("nacod", "naked")
+        check("stel|an", "steal")
+        check("tōh", "tough")
+
+        # -ō[d/ð]er -> -o[d/ð]er
+        check("brōþor", "brother")
+
+        # Non-affix -iġ forms
+        check("bisiġ", "busy")
+        check("ċeariġ", "chary")
+        check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
+        check("hefiġ", "heavy")
     
         return [total, failures]
     

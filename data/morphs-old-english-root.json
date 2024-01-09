@@ -16,6 +16,14 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "clǣġ",
+        "form-raw": "clǣġ",
+        "form-canon": "clay",
+        "type": "noun",
+        "gloss": "clay",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
         "key": "fæġer",
         "form-raw": "fæġer",
         "form-canon": "fair",
