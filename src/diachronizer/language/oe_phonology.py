@@ -236,9 +236,15 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
     elif graph == "ī":
         return Phoneme("iː", stressed, inflectional)
     elif graph == "ie":
-        return Phoneme("iy", stressed, inflectional)
+        # 'iy' would be correct for West Saxon, but I assume related Anglian forms
+        # to be more likely ancestor forms here
+        return Phoneme("e", stressed, inflectional)
+        # return Phoneme("iy", stressed, inflectional)
     elif graph == "īe":
-        return Phoneme("iːy", stressed, inflectional)
+        # 'iːy' would be correct for West Saxon, but I assume related Anglian forms
+        # to be more likely ancestor forms here
+        return Phoneme("eː", stressed, inflectional)
+        # return Phoneme("iːy", stressed, inflectional)
     elif graph == "io":
         return Phoneme("io", stressed, inflectional)
     elif graph == "īo":

@@ -508,6 +508,7 @@ class DiachronizerTests(unittest.TestCase):
         check("frēod", "freed")
         check("frēond", "friend")
         check("gōd", "good")
+        check("īs", "ice")
         check("heofon", "heaven")
         check("hlæhh|an", "laugh")
         check("hund", "hound")
@@ -524,8 +525,11 @@ class DiachronizerTests(unittest.TestCase):
         check("brōþor", "brother")
 
         # Non-affix -iġ forms
-        check("bisiġ", "busy")
+        check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
         check("ċeariġ", "chary")
+        check("dohtiġ", "doughty")
+        check("drēoriġ", "dreary")
+        check("dysiġ", "dizzy")
         check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("hefiġ", "heavy")
     

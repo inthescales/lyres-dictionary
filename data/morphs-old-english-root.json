@@ -1,5 +1,13 @@
 [
     {
+        "key": "ǣr",
+        "form-raw": "ǣr",
+        "form-canon": "ere",
+        "type": "adj",
+        "gloss": "before",
+        "origin": "old-english",
+        "notes": "Difficult to gloss. More properly an adverb"
+    }, {
         "key": "brōþor",
         "form-raw": "brōþor",
         "form-canon": "brother",
@@ -24,11 +32,143 @@
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
+        "key": "clif",
+        "form-raw": "clif",
+        "form-canon": "cliff",
+        "type": "noun",
+        "gloss": "cliff",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "cræfte",
+        "form-raw": "cræfte",
+        "form-canon": "craft",
+        "type": "noun",
+        "gloss": "[skill], [ability]",
+        "tags": ["mass", "abstract"],
+        "origin": "old-english",
+        "notes": "OE also has meaning of 'strength'"
+    }, {
+        "key": "cwic",
+        "form-raw": "cwic",
+        "form-canon": "quick",
+        "type": "adj",
+        "gloss": "rapid",
+        "origin": "old-english",
+        "notes": "Original meaning 'living'"
+    }, {
+        "key": "cȳme",
+        "form-raw": "cȳme",
+        "form-canon": "come",
+        "type": "adj",
+        "gloss": "[fine], [beautiful]",
+        "origin": "old-english"
+    }, {
+        "key": "dæġ",
+        "form-raw": "dæġ",
+        "form-canon": "day",
+        "type": "noun",
+        "gloss": "day",
+        "tags": ["count", "abstract", "bounded"],
+        "origin": "old-english"
+    }, {
+        "key": "dēad",
+        "form-raw": "dēad",
+        "form-canon": "dead",
+        "type": "adj",
+        "gloss": "no longer alive",
+        "origin": "old-english"
+    }, {
+        "key": "dēaþ",
+        "form-raw": "dēaþ",
+        "form-canon": "death",
+        "type": "noun",
+        "gloss": "death",
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Could also be mass"
+    }, {
+        "key": "dēawe",
+        "form-raw": "dēawe",
+        "form-canon": "dew",
+        "type": "noun",
+        "gloss": "dew",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "dīere",
+        "form-raw": "dīere",
+        "form-canon": "dear",
+        "type": "adj",
+        "gloss": "[valuable], [beloved]",
+        "origin": "old-english"
+    }, {
+        "key": "dohtiġ",
+        "form-raw": "dohtiġ",
+        "form-canon": "doughty",
+        "type": "adj",
+        "gloss": "[brave], [determined]",
+        "origin": "old-english"
+    }, {
+        "key": "dysiġ",
+        "form-raw": "dysiġ",
+        "form-canon": "dizzy",
+        "type": "adj",
+        "gloss": "dizzy",
+        "origin": "old-english"
+    }, {
+        "key": "eorþe",
+        "form-raw": "eorþe",
+        "form-canon": "earth",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["mass", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "eorþe-singleton",
+        "form-raw": "eorþe",
+        "form-canon": "earth",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
         "key": "fæġer",
         "form-raw": "fæġer",
         "form-canon": "fair",
         "type": "adj",
         "gloss": "beautiful",
+        "origin": "old-english"
+    }, {
+        "key": "fām",
+        "form-raw": "fām",
+        "form-canon": "foam",
+        "type": "noun",
+        "gloss": "foam",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "fen",
+        "form-raw": "fen",
+        "form-canon": "fen",
+        "type": "noun",
+        "gloss": "marsh",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "flǣsċ",
+        "form-raw": "flǣsċ",
+        "form-canon": "flesh",
+        "type": "noun",
+        "gloss": "flesh",
+        "tags": ["mass", "concrete", "living", "bodypart"],
+        "origin": "old-english"
+    }, {
+        "key": "frēo",
+        "form-raw": "frēo",
+        "form-canon": "free",
+        "type": "adj",
+        "gloss": "free",
         "origin": "old-english"
     }, {
         "key": "frēond",
@@ -39,6 +179,29 @@
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "frost",
+        "form-raw": "frost",
+        "form-canon": "frost",
+        "type": "noun",
+        "gloss": "frost",
+        "tags": ["mass", "concrete"],
+        "origin": "old-english",
+        "notes": "alternates: forst"
+    }, {
+        "key": "fūl",
+        "form-raw": "fūl",
+        "form-canon": "foul",
+        "type": "adj",
+        "gloss": "foul",
+        "origin": "old-english"
+    }, {
+        "key": "full",
+        "form-raw": "full",
+        "form-canon": "full",
+        "type": "adj",
+        "gloss": "full",
+        "origin": "old-english"
+    }, {
         "key": "heofon",
         "form-raw": "heofon",
         "form-canon": "heaven",
@@ -47,12 +210,68 @@
         "tags": ["mass", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "īs",
+        "form-raw": "īs",
+        "form-canon": "ice",
+        "type": "noun",
+        "gloss": "ice",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "liþ",
+        "form-raw": "liþ",
+        "type": "noun",
+        "gloss": "limb",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "old-english",
+        "notes": "Appears in 'lithy'"
+    }, {
+        "key": "lufu",
+        "form-raw": "lufu",
+        "form-canon": "love",
+        "type": "noun",
+        "gloss": "love",
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "miht",
+        "form-raw": "miht",
+        "form-canon": "might",
+        "type": "noun",
+        "gloss": "power",
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "sōð",
         "form-raw": "sōð",
         "form-canon": "sooth",
         "type": "noun",
         "gloss": "truth",
         "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "stān",
+        "form-raw": "stān",
+        "form-canon": "stone",
+        "type": "verb",
+        "gloss": "stone",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "stān-count",
+        "form-raw": "stān",
+        "form-canon": "stone",
+        "type": "verb",
+        "gloss": "stone",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "swīn",
+        "form-raw": "swīn",
+        "form-canon": "swine",
+        "type": "verb",
+        "gloss": "pig",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "stelan",
@@ -69,6 +288,13 @@
         "type": "verb",
         "gloss": "wind",
         "tags": ["mass", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "wīd",
+        "form-raw": "wīd",
+        "form-canon": "wide",
+        "type": "adj",
+        "gloss": "wide",
         "origin": "old-english"
     }
 ]

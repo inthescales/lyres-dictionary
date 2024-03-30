@@ -194,6 +194,7 @@ def from_me_phonemes(phonemes, config):
                 and not prev2.value in ["dʒ"]:
                 if last_stressed_vowel and last_stressed_vowel.is_long():
                     result += "l"
+                    # TODO: Handle the case of 'idle'
                 else:
                     result = result[:-1] + ["le"]
             elif prev.is_vowel() and (not prev.stressed or prev.is_diphthong()):
@@ -221,8 +222,12 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "z":
             if not next1 and prev and prev.value == "r":
                 result += "se"
-            else:
+            elif prev and prev.is_vowel() and (prev.is_long() or prev.value == "u"):
+                # 'u' condition added to handle 'busy' / 'dizzy'
+                # Need more cases to establish a pattern more clearly
                 result += "s"
+            else:
+                result += "z"
         elif phone.value in ["θ", "ð"]:
             if prev and prev.value == "x":
                 # Added to handle cases like 'drought', on the belief that no cases of '-oughth' exist
@@ -291,7 +296,7 @@ def from_me_phonemes(phonemes, config):
             # Double non-final consonant after short vowel
             if phone.value == "k":
                 result = result[:-1] + ["ck"]
-            else:
+            elif not (phone.value == "z" and len(result) and result[-1] == "s"):
                 result += result[-1]
         elif not next1 and phone.value in ["v", "z"] and result[-1] != "e":
             # Makes sure certain voiced fricatives don't end a word

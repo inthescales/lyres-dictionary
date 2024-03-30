@@ -30,7 +30,7 @@ def get_part_tag(word):
 def get_form(word):
     form = ""
     morph = None
-
+    
     for index, morph in enumerate(word.morphs):
 
         env = word.environment_for_index(index)

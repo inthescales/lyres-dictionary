@@ -44,7 +44,7 @@ valid_tags = [
     "singleton",                # Noun countability - singleton, e.g. "The Earth"
     "uncountable",              # Noun countability - generically uncountable, will never use articles
     "concrete",                 # Noun actuality - a concrete object in the world
-    "abstract",                 # Noun actuality - something no physically in the world
+    "abstract",                 # Noun actuality - something not physically in the world
     "bounded",                  # Noun actuality - optionally for abstracts, does it have a bounded aspect (e.g. a length of time)
     "living",                   # Noun semantics - a living being
     "animal",                   # Noun semantics - an animal
