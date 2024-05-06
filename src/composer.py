@@ -49,57 +49,7 @@ def get_form(word):
             else:
                 next_morph = None
 
-            # Add joining vowel if needed
-            if last_morph != None:
-                joining_vowel = get_joining_vowel(word.get_origin(), last_morph, morph, form, addition)
-                if joining_vowel != None and form[-1] != joining_vowel:
-                    form += joining_vowel
-
-            # Spelling changes during joins
-            if len(form) > 0:
-                # e.g.: glaci + ify -> glacify
-                if addition[0] == form[-1] and helpers.is_vowel(addition[0]):
-
-                    letter = addition[0]
-
-                    if (not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix" and not last_morph.get_type() == "number"):
-                        addition = addition[1:]
-                    elif letter in ["a", "i", "u"]:
-                        addition = "-" + addition
-
-                # Stem change
-                elif morph.has_tag("stem-change") and form[-1] == "i":
-                    addition = "e" + addition
-
-                # Stem raise
-                elif morph.has_tag("stem-raise") and form[-1] == "e":
-                    form = form[:-1]
-                    addition = "i" + addition
-
-                # Drop first (sub + emere -> sumere)
-                elif morph.has_tag("drop-first"):
-                    addition = addition[1:]
-
-                elif form[-1] == "/":
-                    form = form[:-1]
-                    addition = addition[1:]
-
-            form += addition
-
-    # Language-specific phonotactics
-    if word.get_origin() == "greek":
-        form = form.replace("cs", "x")
-        form = form.replace("gs", "x")
-        form = form.replace("ks", "x")
-        form = form.replace("cm", "gm")
-        form = form.replace("km", "gm")
-        form = form.replace("pm", "mm")
-
-        if form.endswith("tia") and form[-4] not in ["n", "r", "s", "u"]:
-            form = form[:-3] + "sia"
-
-        if form.endswith("ty") and form[-3] not in ["n", "r", "s", "u"]:
-            form = form[:-2] + "sy"
+            form = get_joined_form(word.get_origin(), last_morph, morph, form, addition)
 
     return form
     
@@ -234,6 +184,74 @@ def get_definition(word):
             return inflected
     else:
         return definition
+
+def get_joined_form(language, last_morph, morph, original, proposed):
+    form = original
+    addition = proposed
+
+    if len(form) == 0:
+        return addition
+
+    # Add joining vowel if needed
+    if last_morph != None:
+        joining_vowel = get_joining_vowel(language, last_morph, morph, form, addition)
+        if joining_vowel != None and form[-1] != joining_vowel:
+            form += joining_vowel
+
+    # e.g.: glaci + ify -> glacify
+    if language in ["latin", "greek"] and addition[0] == form[-1] and helpers.is_vowel(addition[0]):
+
+        letter = addition[0]
+
+        if (not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix" and not last_morph.get_type() == "number"):
+            addition = addition[1:]
+        elif letter in ["a", "i", "u"]:
+            addition = "-" + addition
+
+    # Stem change
+    if morph.has_tag("stem-change") and form[-1] == "i":
+        addition = "e" + addition
+
+    # Stem raise
+    elif morph.has_tag("stem-raise") and form[-1] == "e":
+        form = form[:-1]
+        addition = "i" + addition
+
+    # Drop first (sub + emere -> sumere)
+    elif morph.has_tag("drop-first"):
+        addition = addition[1:]
+
+    elif form[-1] == "/":
+        form = form[:-1]
+        addition = addition[1:]
+
+    # Language-specific phonotactics
+    if language == "greek":
+        if form[-1] in ["c", "g", "k"] and addition[0] == "s":
+            form = form[:-1]
+            addition = "x" + addition[1:]
+
+        if form[-1] in ["c", "k"] and addition[0] == "m":
+            form = form[:-1] + "g"
+            addition = addition
+        
+        if form[-1] == "p" and addition[0] == "m":
+            form = form[:-1] + "m"
+        
+        if form[-1] == "t" and addition in ["ia", "y"] and form[-4] not in ["n", "r", "s", "u"]:
+            form = form[:-1] + "s"
+    
+    if language == "old-english":
+        if morph.morph["key"] == "-iġ":
+            if helpers.is_consonant(form[-1]) and form[-1] != "y" and helpers.is_vowel(form[-2]) and not helpers.is_vowel(form[-3]):
+                form = form + form[-1]
+            elif form[-1] == "e" and helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3]):
+                form = form[:-1]
+        elif morph.morph["key"] == "-liċ":
+            if form[-1] == "y":
+                form = form[:-1] + "i"
+    
+    return form + addition
 
 def get_joining_vowel(language, first, second, form, addition):
 
