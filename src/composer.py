@@ -38,7 +38,6 @@ def get_form(word):
 
         # Handle joining rules
         if len(addition) > 0:
-
             if index > 0:
                 last_morph = word.morphs[index-1]
             else:
@@ -242,7 +241,7 @@ def get_joined_form(language, last_morph, morph, original, proposed):
             form = form[:-1] + "s"
     
     if language == "old-english":
-        if morph.morph["key"] == "-iġ":
+        if morph.is_suffix() and helpers.is_vowel(addition[0], True):
             if helpers.is_consonant(form[-1]) and form[-1] != "y" and helpers.is_vowel(form[-2]) and not helpers.is_vowel(form[-3]):
                 form = form + form[-1]
             elif form[-1] == "e" and helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3]):
