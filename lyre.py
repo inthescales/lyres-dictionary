@@ -98,6 +98,9 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     count = None
     keys = None
     
+    evolution_form = None
+    evolution_lang = None
+
     # Error cases
     def error_mode_conflict():
         print("> Error: cannot both publish and test at the same time")
@@ -112,7 +115,6 @@ if __name__ == '__main__' and len(sys.argv) > 0:
 
     # Process args
     for opt, arg in opts:
-        
         if opt in ["-t", "--test"]:
             if mode != None:
                 error_mode_conflict()
