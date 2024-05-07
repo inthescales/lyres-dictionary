@@ -25,7 +25,12 @@ def form(morph, env):
         and not ("form-stem" in morph_dict and morph.is_affix()):
         if morph_dict["origin"] == "old-english":
             config = Config(locked=True)
-            form = diachronizer.oe_form_to_ne_form(morph_dict["form-raw"], config)
+            if type(morph_dict["form-raw"]) == list:
+                raw_form = random.choice(morph_dict["form-raw"])
+            else:
+                raw_form = morph_dict["form-raw"]
+            
+            form = diachronizer.oe_form_to_ne_form(raw_form, config)
 
     # Get the proper form of the morph
     elif env.next != None:

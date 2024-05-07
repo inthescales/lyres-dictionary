@@ -13,6 +13,9 @@ class EvolutionAffixTests(unittest.TestCase):
     # Tests that Old English form evolution with affixes works correctly
     def testOldEnglishEvolutionWithAffixes(self):
         
+        # -dom
+        self.assertForm(["cyng", "-dom"], "kingdom")
+
         # -iġ
         self.assertForm(["clǣġ", "-iġ"], "clayey")
         self.assertForm(["clif", "-iġ"], "cliffy")
@@ -48,13 +51,23 @@ class EvolutionAffixTests(unittest.TestCase):
         self.assertForm(["lufu", "-liċ"], "lovely")
         self.assertForm(["swīn", "-liċ"], "swinely")
         self.assertForm(["wīd", "-liċ"], "widely")
-
-        self.assertForm(["cræfte", "-iġ", "-liċ"], "craftily")
         
         # -nes
-        self.assertForm(["frēond", "-liċ", "-nes"], "friendliness")
         self.assertForm(["cwic", "-nes"], "quickness")
+        self.assertForm(["hlūd", "-nes"], "loudness")
+        self.assertForm(["lyttel", "-nes"], "littleness")
+        # self.assertForm(["open", "-nes"], "openness") # Needs overrides, but also I'm not sure if "oapen" is plausible
+        self.assertForm(["tōh", "-nes"], "toughness")
+        self.assertForm(["wilde", "-nes"], "wildness")
 
+        # -sċipe
+        self.assertForm(["frēond", "-sċipe"], "friendship")
+
+        # Combinations of two suffixes
+
+        self.assertForm(["cræfte", "-iġ", "-liċ"], "craftily")
+        self.assertForm(["īs", "-iġ", "-nes"], "iciness")
+        self.assertForm(["frēond", "-liċ", "-nes"], "friendliness")
         
 
 # Helpers ==========

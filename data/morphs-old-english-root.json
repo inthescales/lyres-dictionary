@@ -8,6 +8,14 @@
         "origin": "old-english",
         "notes": "Difficult to gloss. More properly an adverb"
     }, {
+        "key": "bryht",
+        "form-raw": "bryht",
+        "form-canon": "bright",
+        "type": "adj",
+        "gloss": ["bright", "bright, clear"],
+        "origin": "old-english",
+        "notes": "alt forms 'beorht', 'byrht'"
+    }, {
         "key": "brōþor",
         "form-raw": "brōþor",
         "form-canon": "brother",
@@ -63,6 +71,15 @@
         "type": "adj",
         "gloss": "[fine], [beautiful]",
         "origin": "old-english"
+    }, {
+        "key": "cyng",
+        "form-raw": "cyng",
+        "form-canon": "king",
+        "type": "noun",
+        "gloss": "king",
+        "tags": ["count", "concrete", "living", "person", "ruler"],
+        "origin": "old-english",
+        "notes": "Alternate form cyning perhaps more standard"
     }, {
         "key": "dæġ",
         "form-raw": "dæġ",
@@ -156,6 +173,14 @@
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
+        "key": "fersċ",
+        "form-raw": "form",
+        "form-canon": "fresh",
+        "type": "adj",
+        "gloss": "fresh",
+        "origin": "old-english",
+        "notes": "er -> re metathesis occurred by middle english. original gloss 'without salt'"
+    }, {
         "key": "flǣsċ",
         "form-raw": "flǣsċ",
         "form-canon": "flesh",
@@ -202,12 +227,44 @@
         "gloss": "full",
         "origin": "old-english"
     }, {
+        "key": "hāl",
+        "form-raw": "hāl",
+        "form-canon": "whole",
+        "type": "adj",
+        "gloss": "whole",
+        "origin": "old-english",
+        "notes": "'w' added to disambiguate from 'hole'"
+    }, {
         "key": "heofon",
         "form-raw": "heofon",
         "form-canon": "heaven",
         "type": "noun",
         "gloss": "heaven",
         "tags": ["mass", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "hlūd",
+        "form-raw": "hlūd",
+        "form-canon": "loud",
+        "type": "adj",
+        "gloss": "loud",
+        "origin": "old-english",
+        "notes": "Original meaning also included 'famous'"
+    }, {
+        "key": "hund",
+        "form-raw": "hund",
+        "form-canon": "hound",
+        "type": "noun",
+        "gloss": "dog",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "hwelp",
+        "form-raw": "hwelp",
+        "form-canon": "whelp",
+        "type": "noun",
+        "gloss": "puppy",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "īs",
@@ -217,6 +274,14 @@
         "gloss": "ice",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
+    }, {
+        "key": "læt",
+        "form-raw": "læt",
+        "form-canon": "late",
+        "type": "adj",
+        "gloss": "late",
+        "origin": "old-english",
+        "notes": "Not sure how the 'a' becomes lengthened"
     }, {
         "key": "liþ",
         "form-raw": "liþ",
@@ -234,12 +299,34 @@
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "lyttel",
+        "form-raw": "lyttel",
+        "form-canon": "little",
+        "type": "adj",
+        "gloss": "little",
+        "origin": "old-english",
+        "notes": "more standard form was 'lȳtel"
+    }, {
         "key": "miht",
         "form-raw": "miht",
         "form-canon": "might",
         "type": "noun",
         "gloss": "power",
         "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "milde",
+        "form-raw": "milde",
+        "form-canon": "mild",
+        "type": "adj",
+        "gloss": "mild",
+        "origin": "old-english"
+    }, {
+        "key": "open",
+        "form-raw": "open",
+        "form-canon": "open",
+        "type": "adj",
+        "gloss": "open",
         "origin": "old-english"
     }, {
         "key": "sōð",
@@ -269,7 +356,7 @@
         "key": "swīn",
         "form-raw": "swīn",
         "form-canon": "swine",
-        "type": "verb",
+        "type": "noun",
         "gloss": "pig",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
@@ -280,6 +367,13 @@
         "type": "verb",
         "gloss": "steal",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "tōh",
+        "form-raw": "tōh",
+        "form-canon": "tough",
+        "type": "adj",
+        "gloss": "tough",
         "origin": "old-english"
     }, {
         "key": "wind",
@@ -296,5 +390,30 @@
         "type": "adj",
         "gloss": "wide",
         "origin": "old-english"
+    }, {
+        "key": "wilde",
+        "form-raw": "wilde",
+        "form-canon": "wild",
+        "type": "adj",
+        "gloss": "wild",
+        "origin": "old-english"
+    }, {
+        "key": "wyrd",
+        "form-raw": "wyrd",
+        "form-canon": "weird",
+        "type": "verb",
+        "gloss": "fate",
+        "tags": ["mass", "abstract"],
+        "origin": "old-english",
+        "notes": "didn't become adjective until early modern english"
+    }, {
+        "key": "wyrm",
+        "form-raw": "wyrm",
+        "form-canon": "worm",
+        "type": "noun",
+        "gloss": "worm",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english",
+        "notes": "Original meaning 'snake, dragon'"
     }
 ]
