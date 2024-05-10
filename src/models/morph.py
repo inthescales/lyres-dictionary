@@ -71,7 +71,7 @@ class Morph:
         return self.is_prefix() or self.is_suffix()
 
     def final_ok(self):
-        has_form = "form-final" in self.morph or "form" in self.morph
+        has_form = "form-final" in self.morph or "form" in self.morph or "form-raw" in self.morph
         return not self.has_tag("non-final") and has_form
         
     def suffixes(self):

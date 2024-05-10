@@ -32,6 +32,8 @@ def from_me_phonemes(phonemes, config):
         if i < len(phonemes) - 3:
             next3 = phonemes[i + 3]
 
+        is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
+
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
 
@@ -124,6 +126,7 @@ def from_me_phonemes(phonemes, config):
             else:
                 result += "y"
         elif phone.value == "iː" and next1 and next1.is_consonant() and next2 and next2.is_consonant():
+            # TODO: Handle the case of 'weird'
             result += "i"
         elif phone.value == "iː":
             if next1:
@@ -143,10 +146,14 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "o":
             result += "o"
         elif phone.value == "ɔː":
-            roll = often("Orth:ɔː->oa/oCV", config)
-            if roll == "oa":
-                result += "oa"
-            elif roll == "oCV":
+            if not is_vowel_open:
+                roll = often("Orth:ɔː->oa/oCV", config)
+                if roll == "oa":
+                    result += "oa"
+                elif roll == "oCV":
+                    result += "o"
+                    insert_lengthening_e = True
+            else:
                 result += "o"
                 insert_lengthening_e = True
         elif phone.value == "oː":

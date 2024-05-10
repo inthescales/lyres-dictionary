@@ -7,7 +7,7 @@
         "derive-from": ["adj", "noun"],
         "derive-to": "adj",
         "suffixes": [],
-        "gloss": "the quality of being %@",
+        "gloss": "the quality of being %sg",
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     },
@@ -21,6 +21,14 @@
         "suffixes": [],
         "gloss": "one who %3sg",
         "tags": ["uncountable", "concrete"],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "e"
+                }
+            },
+            "form-final": "r"
+        }],
         "origin": "old-english"
     },
     {
@@ -37,7 +45,7 @@
         "notes": "gloss is modern. Original usage was feminine only"
     },
     {
-        "key": "-had",
+        "key": "-hād",
         "form-stem": "hood",
         "form-raw": "hād",
         "type": "derive",
@@ -57,7 +65,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": ["-nes"],
-        "gloss": "having the quality of %@",
+        "gloss": "having the quality of %sg",
         "exception": [{
             "case": {
                 "follows": {
@@ -88,7 +96,7 @@
         "derive-from": "adj",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "the quality of being %@",
+        "gloss": "the quality of being %sg",
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     },
@@ -100,7 +108,7 @@
         "derive-from": "adj",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "the quality of being %@",
+        "gloss": "the quality of being %sg",
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     },
@@ -113,7 +121,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "the act of %part",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "no-gen"],
         "origin": "old-english"
-    }    
+    } 
 ]

@@ -524,6 +524,9 @@ class DiachronizerTests(unittest.TestCase):
         # -ō[d/ð]er -> -o[d/ð]er
         check("brōþor", "brother")
 
+        # final '-e' for words ending in voiced fricatives
+        check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
+
         # Non-affix -iġ forms
         check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
         check("ċeariġ", "chary")

@@ -10,14 +10,17 @@ from src.morphothec import Morphothec
 
 def seed_word(word, morphothec):
     bag = [
-        ("latin", morphothec.root_count_for_language("latin")),
-        ("greek", morphothec.root_count_for_language("greek"))
+        # ("latin", morphothec.root_count_for_language("latin")),
+        # ("greek", morphothec.root_count_for_language("greek")),
+        ("old-english", morphothec.root_count_for_language("old-english"))
     ]
     choice = helpers.choose_bag(bag)
     if choice == "latin":
         word.morphs = [get_latin_root(morphothec)]
-    if choice == "greek":
+    elif choice == "greek":
         word.morphs = [get_greek_root(morphothec)]
+    elif choice == "old-english":
+        word.morphs = [get_old_english_root(morphothec)]
 
 def get_latin_root(morphothec):
 
@@ -44,7 +47,20 @@ def get_greek_root(morphothec):
     key = random.choice(morphothec.filter_type(type_, "greek"))
     morph = Morph(key, morphothec)
     return morph
-        
+
+def get_old_english_root(morphothec):
+
+    bag = [
+        ("noun", 3),
+        ("adj", 3),
+        ("verb", 3)
+    ]
+
+    type_ = helpers.choose_bag(bag)
+    key = random.choice(morphothec.filter_type(type_, "old-english"))
+    morph = Morph(key, morphothec)
+    return morph
+ 
 def transform_word(word, morphothec):
 
     language = word.get_origin()
@@ -77,24 +93,24 @@ def transform_word(word, morphothec):
         else:
             bag.append(("add_suffix", 100))
     
-    if word.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not has_prep and not has_prefix:
-        if last_morph.has_tag("always-prep"):
-            override = True
-            choice = "add_prep_prefix"
-        else:
-            if language == "greek" and not first_morph.has_tag("motion"):
-                bag.append(("add_prep_prefix", 10))
-            else:
-                bag.append(("add_prep_prefix", 33))
+    # if word.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not has_prep and not has_prefix:
+    #     if last_morph.has_tag("always-prep"):
+    #         override = True
+    #         choice = "add_prep_prefix"
+    #     else:
+    #         if language == "greek" and not first_morph.has_tag("motion"):
+    #             bag.append(("add_prep_prefix", 10))
+    #         else:
+    #             bag.append(("add_prep_prefix", 33))
     
-    if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() == "prefix":
-        bag.append(("add_prefix", 10))
+    # if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() == "prefix":
+    #     bag.append(("add_prefix", 10))
 
-    if word.size() == 1 and current_type == "noun":
-        bag.append(("relational", 10))
+    # if word.size() == 1 and current_type == "noun":
+    #     bag.append(("relational", 10))
 
-    if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
-        bag.append(("numerical", 5))
+    # if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
+    #     bag.append(("numerical", 5))
         
     # If there is no override, choose, or return if no choices ------
     if not override: 

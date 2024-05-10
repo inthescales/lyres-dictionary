@@ -54,14 +54,27 @@ class EvolutionAffixTests(unittest.TestCase):
         
         # -nes
         self.assertForm(["cwic", "-nes"], "quickness")
+        self.assertForm(["dohtiġ", "-nes"], "doughtiness")
+        self.assertForm(["ġelīc", "-nes"], "likeness")
+        self.assertForm(["frēo", "-nes"], "freeness")
         self.assertForm(["hlūd", "-nes"], "loudness")
         self.assertForm(["lyttel", "-nes"], "littleness")
-        # self.assertForm(["open", "-nes"], "openness") # Needs overrides, but also I'm not sure if "oapen" is plausible
+        self.assertForm(["open", "-nes"], "openness")
         self.assertForm(["tōh", "-nes"], "toughness")
+        self.assertForm(["þynne", "-nes"], "thinness")
         self.assertForm(["wilde", "-nes"], "wildness")
 
         # -sċipe
         self.assertForm(["frēond", "-sċipe"], "friendship")
+        self.assertForm(["heard", "-sċipe"], "hardship")
+
+        # -ere
+        self.assertForm(["pleġan", "-ere"], "player")
+
+        # -estre
+
+        # -hād
+        self.assertForm(["ċild", "-hād"], "childhood")
 
         # Combinations of two suffixes
 
