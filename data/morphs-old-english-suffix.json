@@ -77,6 +77,18 @@
         "origin": "old-english"
     },
     {
+        "key": "-isċ",
+        "form-stem": "ish",
+        "form-final": "ish",
+        "form-raw": "isċ",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "of or relating to %pl",
+        "origin": "old-english"
+    },
+    {
         "key": "-liċ",
         "form-stem": "li",
         "form-final": "ly",

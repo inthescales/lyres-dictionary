@@ -24,13 +24,15 @@ class EvolutionAffixTests(unittest.TestCase):
         self.assertForm(["fām", "-iġ"], "foamy")
         self.assertForm(["fen", "-iġ"], "fenny")
         self.assertForm(["frost", "-iġ"], "frosty")
-        self.assertForm(["full", "-iġ"], "fully")
         self.assertForm(["īs", "-iġ"], "icy")
         self.assertForm(["liþ", "-iġ"], "lithy")
         self.assertForm(["miht", "-iġ"], "mighty")
         # self.assertForm(["stān", "-iġ"], "stony") # Needs override support
         self.assertForm(["wind", "-iġ"], "windy")
         
+        # -isċ
+        self.assertForm(["ċild", "-isċ"], "childish")
+
         # -liċ
         self.assertForm(["ǣr", "-liċ"], "early")
         self.assertForm(["brōþor", "-liċ"], "brotherly")
@@ -38,7 +40,6 @@ class EvolutionAffixTests(unittest.TestCase):
         # self.assertForm(["cȳme", "-liċ"], "comely") # Form may be irregular, patterned after "come"
         self.assertForm(["cræfte", "-liċ"], "craftly")
         self.assertForm(["cwic", "-liċ"], "quickly")
-        self.assertForm(["dæġ", "-liċ"], "daily")
         self.assertForm(["dēad", "-liċ"], "deadly")
         self.assertForm(["dēaþ", "-liċ"], "deathly")
         self.assertForm(["dīere", "-liċ"], "dearly")
@@ -54,7 +55,6 @@ class EvolutionAffixTests(unittest.TestCase):
         
         # -nes
         self.assertForm(["cwic", "-nes"], "quickness")
-        self.assertForm(["dohtiġ", "-nes"], "doughtiness")
         self.assertForm(["ġelīc", "-nes"], "likeness")
         self.assertForm(["frēo", "-nes"], "freeness")
         self.assertForm(["hlūd", "-nes"], "loudness")
@@ -82,6 +82,17 @@ class EvolutionAffixTests(unittest.TestCase):
         self.assertForm(["īs", "-iġ", "-nes"], "iciness")
         self.assertForm(["frēond", "-liċ", "-nes"], "friendliness")
         
+        # Spelling changes ---
+
+        # Change final y to i before consonant
+        self.assertForm(["dæġ", "-liċ"], "daily")
+        self.assertForm(["dohtiġ", "-nes"], "doughtiness")
+
+        # Drop silent e in favor of vowel
+
+        # Eliminate triple consonants
+        self.assertForm(["full", "-liċ"], "fully")
+
 
 # Helpers ==========
     

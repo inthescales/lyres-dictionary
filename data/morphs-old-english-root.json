@@ -1,5 +1,13 @@
 [
     {
+        "key": "æppel",
+        "form-raw": "æppel",
+        "form-canon": "apple",
+        "type": "noun",
+        "gloss": "apple",
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
+        "origin": "old-english"
+    }, {
         "key": "ǣr",
         "form-raw": "ǣr",
         "form-canon": "ere",
@@ -7,6 +15,14 @@
         "gloss": "before",
         "origin": "old-english",
         "notes": "Difficult to gloss. More properly an adverb"
+    }, {
+        "key": "bān",
+        "form-raw": "bān",
+        "form-canon": "bone",
+        "type": "noun",
+        "gloss": "bone",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "old-english"
     }, {
         "key": "bryht",
         "form-raw": "bryht",
@@ -112,7 +128,7 @@
         "form-canon": "day",
         "type": "noun",
         "gloss": "day",
-        "tags": ["count", "abstract", "bounded"],
+        "tags": ["count", "abstract", "bounded", "time"],
         "origin": "old-english"
     }, {
         "key": "dēad",
@@ -348,6 +364,14 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
+        "key": "hūs",
+        "form-raw": "hūs",
+        "form-canon": "house",
+        "type": "noun",
+        "gloss": "house",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
         "key": "hwelp",
         "form-raw": "hwelp",
         "form-canon": "whelp",
@@ -536,6 +560,15 @@
         "type": "adj",
         "gloss": "tough",
         "origin": "old-english"
+    }, {
+        "key": "þēow",
+        "form-raw": "þēow",
+        "form-canon": "thew",
+        "type": "noun",
+        "gloss": "bodily force",
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Original meaning 'customs' or 'good qualities'"
     }, {
         "key": "þynne",
         "form-raw": "þynne",

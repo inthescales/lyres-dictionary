@@ -242,7 +242,8 @@ def get_joined_form(language, last_morph, morph, original, proposed):
     
     if language == "old-english":
         if morph.is_suffix() and helpers.is_vowel(addition[0], True):
-            if helpers.is_consonant(form[-1]) and form[-1] != "y" and helpers.is_vowel(form[-2]) and not helpers.is_vowel(form[-3]):
+            if helpers.is_consonant(form[-1]) and form[-1] != "y" and helpers.is_vowel(form[-2]) and not helpers.is_vowel(form[-3]) \
+                and form[-1] != "x":
                 # If word ends in a consonant following a short vowel, and suffix begins with vowel, double the final consonant
                 form = form + form[-1]
             elif form[-1] == "e" and helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3]):
@@ -250,8 +251,13 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                 form = form[:-1]
         elif morph.is_suffix() and helpers.is_consonant(addition[0]):
             if form[-1] == "y":
+                # If word ends in a vowel y, and suffix begins with a consonant, change the y to i
                 form = form[:-1] + "i"
-    
+            elif form[-2] == form[-1] and form[-1] == addition[0]:
+                # Eliminate triple consonants
+                # Possible alternative: use a dash, as in 'burgess-ship'
+                form = form[:-1]
+
     return form + addition
 
 def get_joining_vowel(language, first, second, form, addition):
