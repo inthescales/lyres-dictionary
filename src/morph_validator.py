@@ -83,6 +83,7 @@ valid_tags = [
     "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
     "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Generation - does not count towards maximum morph count
+    "speculative",              # Generation - the morph is not attested in modern English
     "rare",                     # Generation - occurs less often in generation
     "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix
     "non-final",                # Generation - cannot be the final morph in the word"

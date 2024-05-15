@@ -1,0 +1,37 @@
+[
+    {
+        "key": "mis-MnE",
+        "form-stem": "mis",
+        "type": "prefix",
+        "prefix-on": "verb",
+        "gloss": "%@ incorrectly",
+        "origin": "modern-english"
+    }, {
+        "key": "over-",
+        "form-stem": "over",
+        "type": "prefix",
+        "prefix-on": "verb",
+        "gloss": "%@ excessively",
+        "origin": "modern-english"
+    }, {
+        "key": "re-MnE",
+        "form-stem": "re",
+        "type": "prefix",
+        "prefix-on": "verb",
+        "gloss": "%@ again",
+        "origin": "modern-english"
+    }, {
+        "key": "self-",
+        "form-stem": "self-",
+        "type": "prefix",
+        "prefix-on": "verb",
+        "gloss": "%@ oneself",
+        "requires": {
+            "precedes": {
+                "has-tag": "transitive"
+            }
+        },
+        "tags": ["object-specifier"],
+        "origin": "modern-english"
+    }
+]

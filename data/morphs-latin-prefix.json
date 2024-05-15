@@ -436,22 +436,6 @@
         "origin": "latin"
     },
     {
-        "key": "mis-",
-        "form-stem": "mis",
-        "type": "prefix",
-        "prefix-on": "verb",
-        "gloss": "%@ incorrectly",
-        "origin": "latin"
-    },
-    {
-        "key": "re-again",
-        "form-stem": "re",
-        "type": "prefix",
-        "prefix-on": "verb",
-        "gloss": "%@ again",
-        "origin": "latin"
-    },
-    {
         "key": "uni-",
         "form-stem": "uni",
         "type": "number",
