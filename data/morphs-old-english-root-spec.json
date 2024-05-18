@@ -1,5 +1,14 @@
 [
     {
+        "key": "ātr",
+        "form-raw": "ātr",
+        "form-canon": "atter",
+        "type": "noun",
+        "gloss": "[poison], [venom]",
+        "tags": ["mass", "concrete", "liquid", "secretion"],
+        "origin": "old-english",
+        "notes": "alternate meanings 'gall, bitterness', 'corrupt matter, pus'"
+    }, {
         "key": "feax",
         "form-raw": "feax",
         "type": "noun",

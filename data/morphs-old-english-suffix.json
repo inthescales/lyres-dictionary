@@ -4,11 +4,45 @@
         "form-stem": "dom",
         "form-raw": "dom",
         "type": "derive",
-        "derive-from": ["adj", "noun"],
-        "derive-to": "adj",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the state or condition of being %sg",
+        "tags": ["mass", "abstract"],
+        "requires": {
+            "follows": {
+                "has-tag": "person"
+            }
+        },
+        "origin": "old-english"
+    },
+    {
+        "key": "-dom-adj",
+        "form-stem": "dom",
+        "form-raw": "dom",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
         "suffixes": [],
         "gloss": "the quality of being %sg",
+        "tags": ["mass", "abstract", "rare"],
+        "origin": "old-english"
+    },
+    {
+        "key": "-dom-rule",
+        "form-stem": "dom",
+        "form-raw": "dom",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the domain ruled by %sg",
         "tags": ["mass", "abstract"],
+        "requires": {
+            "follows": {
+                "has-tag": "ruler"
+            }
+        },
         "origin": "old-english"
     },
     {
@@ -54,7 +88,13 @@
         "suffixes": [],
         "gloss": "the state or condition of being %sg",
         "tags": ["mass", "abstract"],
-        "origin": "old-english"
+        "requires": {
+            "follows": {
+                "has-tag": "person"
+            }
+        },
+        "origin": "old-english",
+        "notes": "Occasionally applied to non-person nouns or adjectives in MnE, but near-universally people in OE"
     },
     {
         "key": "-iġ",
@@ -85,7 +125,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": ["-nes"],
-        "gloss": "of or relating to %pl",
+        "gloss": "like or resembling %sg",
         "origin": "old-english"
     },
     {
@@ -98,6 +138,16 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "pertaining to %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "living"
+                    }
+                },
+                "gloss": "pertaining or suitable to %pl"
+            }
+        ],
         "origin": "old-english"
     },
     {
@@ -113,16 +163,29 @@
         "origin": "old-english"
     },
     {
-        "key": "-sċipe",
+        "key": "-sċipe-adj",
         "form-stem": "ship",
         "form-raw": "sċipe",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "the quality of being %sg",
-        "tags": ["mass", "abstract"],
+        "gloss": "the quality of being %@",
+        "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
+    },
+    {
+        "key": "-sċipe",
+        "form-stem": "ship",
+        "form-raw": "sċipe",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the state or condition of being %sg",
+        "tags": ["mass", "abstract", "rare"],
+        "origin": "old-english",
+        "notes": "This usage was common in OE, but is very rare in MnE"
     },
     {
         "key": "-ung",

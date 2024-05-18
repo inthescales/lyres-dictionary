@@ -50,6 +50,7 @@ valid_tags = [
     "animal",                   # Noun semantics - an animal
     "plant",                    # Noun semantics - a plant
     "person",                   # Noun semantics - a kind of person
+    "role",                     # Noun semantics - a role that a person takes on (as opposed to inborn identity)
     "ruler",                    # Noun semantics - a person who rules over a place or thing
     "bodypart",                 # Noun semantics - member or organ of a living being, animal or plant
     "bodypart-plant",           # Noun semantics - a member belonging only to a plant, like a leaf or stem

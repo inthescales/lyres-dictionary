@@ -63,5 +63,21 @@
         ],
         "origin": "old-english",
         "notes": "The same as the '-ed-having' morph. Are both needed?"
+    }, {
+        "key": "-en-material",
+        "form-stem": "en",
+        "form-raw": "en",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "made from %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "material"
+            }
+        },
+        "origin": "old-english",
+        "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
     }
 ]

@@ -665,7 +665,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["per-", "emere", "-ory"], "peremptory")
         
         # prefix + verb
-        self.assertForm(["re-again", "cruda", "-esce"], "recrudesce")
+        self.assertForm(["re-MnE", "cruda", "-esce"], "recrudesce")
         
         # two suffixes
         self.assertForm(["com-", "fidere", "-nce", "-al"], "confidential")
@@ -690,7 +690,7 @@ class FormTests(unittest.TestCase):
         self.assertForm(["in-", "corpus", "-ate"], "incorporate")
         self.assertForm(["in-", "persona", "-ate"], "impersonate")
         self.assertForm(["in-", "semen", "-ate"], "inseminate")
-        self.assertForm(["re-again", "in-", "caro", "-ate", "-ion"], "reincarnation")
+        self.assertForm(["re-MnE", "in-", "caro", "-ate", "-ion"], "reincarnation")
         self.assertForm(["inter-", "columna", "-al"], "intercolumnar")
         self.assertForm(["inter-", "crus", "-al"], "intercrural")
         self.assertForm(["inter-", "dens", "-al"], "interdental")

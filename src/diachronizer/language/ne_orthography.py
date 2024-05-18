@@ -229,7 +229,8 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "z":
             if not next1 and prev and prev.value == "r":
                 result += "se"
-            elif prev and prev.is_vowel() and (prev.is_long() or prev.value == "u"):
+            elif prev and prev.is_vowel() and ((prev.is_long() and not prev.value == "aː") or prev.value == "u"):
+                # 'aː' condition added to handle 'hazel' (fits with daze too)
                 # 'u' condition added to handle 'busy' / 'dizzy'
                 # Need more cases to establish a pattern more clearly
                 result += "s"

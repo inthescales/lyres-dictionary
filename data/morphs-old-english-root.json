@@ -152,7 +152,7 @@
         "form-canon": "dew",
         "type": "noun",
         "gloss": "dew",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "old-english"
     }, {
         "key": "dēman",
@@ -197,7 +197,7 @@
         "form-canon": "earth",
         "type": "noun",
         "gloss": "earth",
-        "tags": ["mass", "concrete", "terrain"],
+        "tags": ["mass", "concrete", "terrain", "material"],
         "origin": "old-english"
     }, {
         "key": "eorþe-singleton",
@@ -206,6 +206,14 @@
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "fæder",
+        "form-raw": "fæder",
+        "form-canon": "father",
+        "type": "noun",
+        "gloss": "father",
+        "tags": ["count", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
         "key": "fæġer",
@@ -302,7 +310,7 @@
         "origin": "old-english"
     }, {
         "key": "ġesċeap",
-        "form-raw": "ġesċeap",
+        "form-raw": "sċeap",
         "form-canon": "shape",
         "type": "noun",
         "gloss": "shape",
@@ -313,8 +321,25 @@
         "form-raw": "wyrc|an",
         "form-canon": "work",
         "type": "verb",
-        "gloss": "make",
-        "tags": ["transitive"],
+        "gloss": "work",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'make' (transitive)"
+    }, {
+        "key": "glæs",
+        "form-raw": "glæs",
+        "form-canon": "glass",
+        "type": "noun",
+        "gloss": "glass",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "hæsel",
+        "form-raw": "hæsel",
+        "form-canon": "hazel",
+        "type": "noun",
+        "gloss": "hazel",
+        "tags": ["mass", "concrete", "living", "plant"],
         "origin": "old-english"
     }, {
         "key": "hāl",
@@ -629,7 +654,7 @@
         "form-raw": "wǣpen",
         "form-canon": "weapon",
         "type": "noun",
-        "gloss": "weapons",
+        "gloss": "weapon",
         "tags": ["count", "concrete", "tool"],
         "origin": "old-english",
         "notes": "Alternate form 'wǣpnæ'. Alternate sense 'penis'"
@@ -640,15 +665,6 @@
         "type": "adj",
         "gloss": "wise",
         "origin": "old-english"
-    }, {
-        "key": "wīsdōm",
-        "form-raw": "wīsdōm",
-        "form-canon": "wisdom",
-        "type": "noun",
-        "gloss": "wisdom",
-        "tags": ["mass", "abstract"],
-        "origin": "old-english",
-        "notes": "Separated from 'wīs' due to irregular form, possibly inherited from earlier germanic"
     }, {
         "key": "witt",
         "form-raw": "witt",
