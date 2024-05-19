@@ -4,6 +4,11 @@ import src.helpers as helpers
 def inflect(string, mode):
     words = string.split(" ")    
     for i, word in enumerate(words):
+        add_comma = False
+        if word[-1] == ",":
+            word = word[:-1]
+            add_comma = True
+
         if word[0] == "[" and word[-1] == "]":
             words[i] = word[1:-1]
         elif len(words) > 1:
@@ -29,6 +34,9 @@ def inflect(string, mode):
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
         elif mode == "singleton":
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
+        
+        if add_comma:
+            words[i] += ","
     
     return " ".join(words)
 

@@ -8,6 +8,13 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "singleton"
+                }
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -74,9 +81,24 @@
         "gloss": "made from %pl",
         "requires": {
             "follows": {
-                "has-tag": "material"
+                "has-any-tags": ["material", "tree"]
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": ["e", "r"]
+                }
+            },
+            "form-final": "n"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "tree"
+                }
+            },
+            "gloss": "made from the wood of the %!sg"
+        }],
         "origin": "old-english",
         "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
     }

@@ -70,6 +70,7 @@ valid_tags = [
     "shape",                    # Noun semantics - a shape
     "quality",                  # Noun semantics - an abstract quality
     "time",                     # Noun semantics - a period of time
+    "tree",                     # Noun semantics - a kind of tree
     "number",                   # Noun semantics - a number (used as a noun)
     "superlative",              # Adjective morphology - a superlative
     "character",                # Adjective semantics - descriptor of a person's character

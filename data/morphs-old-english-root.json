@@ -326,6 +326,14 @@
         "origin": "old-english",
         "notes": "Alternate meaning 'make' (transitive)"
     }, {
+        "key": "gold",
+        "form-raw": "gold",
+        "form-canon": "gold",
+        "type": "noun",
+        "gloss": "gold",
+        "tags": ["mass", "concrete", "metal", "material"],
+        "origin": "old-english"
+    }, {
         "key": "glæs",
         "form-raw": "glæs",
         "form-canon": "glass",
@@ -397,6 +405,15 @@
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "hwǣte",
+        "form-raw": "hwǣte",
+        "form-canon": "wheat",
+        "type": "noun",
+        "gloss": "wheat",
+        "tags": ["mass", "concrete", "living", "plant", "material"],
+        "origin": "old-english"
+    },
+    {
         "key": "hwelp",
         "form-raw": "hwelp",
         "form-canon": "whelp",
@@ -436,11 +453,27 @@
         "origin": "old-english",
         "notes": "Not sure how the 'a' becomes lengthened"
     }, {
+        "key": "lēad",
+        "form-raw": "lēad",
+        "form-canon": "lead",
+        "type": "noun",
+        "gloss": "lead",
+        "tags": ["mass", "concrete", "metal", "material"],
+        "origin": "old-english"
+    }, {
         "key": "ġelīc",
         "form-raw": "līc",
         "form-canon": "like",
         "type": "adj",
         "gloss": "like, similar",
+        "origin": "old-english"
+    }, {
+        "key": "lind",
+        "form-raw": "lind",
+        "form-canon": "lind",
+        "type": "noun",
+        "gloss": "linden [tree]",
+        "tags": ["count", "concrete", "plant", "tree"],
         "origin": "old-english"
     }, {
         "key": "liþ",
@@ -500,6 +533,15 @@
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
+        "key": "milc",
+        "form-raw": "milc",
+        "form-canon": "milk",
+        "type": "noun",
+        "gloss": "milk",
+        "tags": ["mass", "concrete", "fluid", "liquid"],
+        "origin": "old-english",
+        "notes": "Form 'milc' is Anglian. West-saxon had 'meolc' / 'meoluc'"
+    }, {
         "key": "milde",
         "form-raw": "milde",
         "form-canon": "mild",
@@ -523,6 +565,15 @@
         "gloss": "open",
         "origin": "old-english"
     }, {
+        "key": "pæl",
+        "form-raw": "pæl",
+        "form-canon": "pall",
+        "type": "noun",
+        "gloss": "fine [cloth]",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english",
+        "notes": "Survives in 'pallbearer'"
+    }, {
         "key": "pleġan",
         "form-raw": "pleġ|an",
         "form-canon": "play",
@@ -531,6 +582,23 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "rose",
+        "form-raw": "rose",
+        "form-canon": "rose",
+        "type": "noun",
+        "gloss": "rose",
+        "tags": ["count", "concrete", "plant"],
+        "origin": "old-english"
+    }, {
+        "key": "hrysċ",
+        "form-raw": "hrysċ",
+        "form-canon": "rush",
+        "type": "noun",
+        "gloss": "rush",
+        "tags": ["count", "concrete", "plant"],
+        "origin": "old-english",
+        "notes": "Form attested in late OE, but forms like 'risċ' seem to be more common in recorded sources."
+    }, {
         "key": "sċiepan",
         "form-raw": "sċiep|an",
         "form-canon": "shape",
@@ -538,6 +606,15 @@
         "gloss": "shape",
         "tags": ["transitive"],
         "origin": "old-english"
+    }, {
+        "key": "seolc",
+        "form-raw": "seolc",
+        "form-canon": "silk",
+        "type": "noun",
+        "gloss": "silk",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english",
+        "notes": "Would expect 'selk'. 'silc' appears in ME."
     }, {
         "key": "sōð",
         "form-raw": "sōð",
@@ -579,11 +656,27 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
+        "key": "tin",
+        "form-raw": "tin",
+        "form-canon": "tin",
+        "type": "noun",
+        "gloss": "tin",
+        "tags": ["mass", "concrete", "metal", "material"],
+        "origin": "old-english"
+    }, {
         "key": "tōh",
         "form-raw": "tōh",
         "form-canon": "tough",
         "type": "adj",
         "gloss": "tough",
+        "origin": "old-english"
+    }, {
+        "key": "trēo",
+        "form-raw": "trēo",
+        "form-canon": "tree",
+        "type": "noun",
+        "gloss": "tree",
+        "tags": ["count", "concrete", "plant", "material"],
         "origin": "old-english"
     }, {
         "key": "þēow",
@@ -632,6 +725,14 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
+        "key": "wul",
+        "form-raw": "wul",
+        "form-canon": "wool",
+        "type": "noun",
+        "gloss": "wool",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    },{
         "key": "wyrd",
         "form-raw": "wyrd",
         "form-canon": "weird",
@@ -658,6 +759,14 @@
         "tags": ["count", "concrete", "tool"],
         "origin": "old-english",
         "notes": "Alternate form 'wǣpnæ'. Alternate sense 'penis'"
+    }, {
+        "key": "wæx",
+        "form-raw": "wæx",
+        "form-canon": "wax",
+        "type": "noun",
+        "gloss": "wax",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
     }, {
         "key": "wīs",
         "form-raw": "wīs",
