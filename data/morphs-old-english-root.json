@@ -497,7 +497,7 @@
         "form-canon": "might",
         "type": "noun",
         "gloss": "strength",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "milde",
@@ -544,7 +544,7 @@
         "form-canon": "sooth",
         "type": "noun",
         "gloss": "truth",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "stān",
@@ -591,7 +591,7 @@
         "form-canon": "thew",
         "type": "noun",
         "gloss": "bodily force",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "quality"],
         "origin": "old-english",
         "notes": "Original meaning 'customs' or 'good qualities'"
     }, {
@@ -671,7 +671,7 @@
         "form-canon": "wit",
         "type": "noun",
         "gloss": "intellect",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     } 
 ]

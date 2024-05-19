@@ -105,7 +105,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": ["-nes"],
-        "gloss": "having the quality of %sg",
+        "gloss": "having the qualities of %sg",
         "exception": [{
             "case": {
                 "follows": {
@@ -113,6 +113,13 @@
                 }
             },
             "form-final": "ey"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "quality"
+                }
+            },
+            "gloss": "having the quality of %sg"
         }],
         "origin": "old-english"
     },

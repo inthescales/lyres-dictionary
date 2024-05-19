@@ -52,10 +52,10 @@ valid_tags = [
     "person",                   # Noun semantics - a kind of person
     "role",                     # Noun semantics - a role that a person takes on (as opposed to inborn identity)
     "ruler",                    # Noun semantics - a person who rules over a place or thing
-    "bodypart",                 # Noun semantics - member or organ of a living being, animal or plant
+    "bodypart",                 # Noun semantics - a member or organ of a living being, animal or plant
     "bodypart-plant",           # Noun semantics - a member belonging only to a plant, like a leaf or stem
-    "bodypart-single",          # Noun semantics - a bodypart that someone has only one of
-    "secretion",                # Noun semantics - a bodily secretion
+    "bodypart-single",          # Noun semantics - a bodypart that a being has only one of, like heart or head
+    "secretion",                # Noun semantics - a bodily secretion, or mental creation
     "tool",                     # Noun semantics - a tool
     "weapon",                   # Noun semantics - a weapon
     "material",                 # Noun semantics - a material things can be made out of
@@ -68,6 +68,7 @@ valid_tags = [
     "grouping",                 # Noun semantics - a group or collection of things
     "color",                    # Noun semantics - a color
     "shape",                    # Noun semantics - a shape
+    "quality",                  # Noun semantics - an abstract quality
     "time",                     # Noun semantics - a period of time
     "number",                   # Noun semantics - a number (used as a noun)
     "superlative",              # Adjective morphology - a superlative
