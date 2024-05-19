@@ -106,8 +106,11 @@ def transform_word(word, morphothec):
     #             bag.append(("add_prep_prefix", 33))
     
     if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() == "prefix":
-        bag.append(("add_prefix", 5))
-        bag.append(("add_modern_prefix", 1))
+        if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
+            bag.append(("add_prefix", 5))
+
+        if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
+            bag.append(("add_modern_prefix", 1))
 
     # if word.size() == 1 and current_type == "noun":
     #     bag.append(("relational", 10))

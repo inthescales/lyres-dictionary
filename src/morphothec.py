@@ -119,6 +119,9 @@ class Morphothec:
         return selected
 
     def filter_prepends_to(self, base_type, language, morph_filter=None):
+        if not base_type in self.languages[language].morphs_before:
+            return []
+
         if morph_filter is None:
             return self.languages[language].morphs_before[base_type]
         
@@ -130,6 +133,9 @@ class Morphothec:
         return selected
 
     def filter_appends_to(self, base_type, language, morph_filter=None):
+        if not base_type in self.languages[language].morphs_from:
+            return []
+
         if morph_filter is None:
             return self.languages[language].morphs_from[base_type]
         
