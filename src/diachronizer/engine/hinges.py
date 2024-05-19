@@ -1,4 +1,4 @@
-import random
+from random import Random
 
 def often(id, config):
     return hinge(id, 0.75, config) 
@@ -29,6 +29,8 @@ def hinge(id, odds, config):
         "Orth:iː#->ie/ye": ["ie", "ye"],
         "Orth:ɔː->oa/oCV": ["oa", "oCV"]
     }
+
+    random = Random(config.seed)
 
     if not id in points:
         print("error: override id '" + str(id) + "' not recognized")

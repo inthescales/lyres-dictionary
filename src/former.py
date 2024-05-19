@@ -1,4 +1,4 @@
-import random
+from random import Random
 
 from src.logging import Logger
 from src.diachronizer import diachronizer
@@ -24,8 +24,9 @@ def form(morph, env):
     if "form-raw" in morph_dict \
         and not ("form-stem" in morph_dict and morph.is_affix()):
         if morph_dict["origin"] == "old-english":
-            config = Config(locked=True)
+            config = Config(locked=True, seed=morph.seed)
             if type(morph_dict["form-raw"]) == list:
+                random = Random(morph.seed)
                 raw_form = random.choice(morph_dict["form-raw"])
             else:
                 raw_form = morph_dict["form-raw"]
@@ -115,6 +116,7 @@ def form(morph, env):
                 form = morph_dict["form-stem"]
     
     if isinstance(form, list):
+        random = Random(morph.seed)
         form = random.choice(form)
     
     return form

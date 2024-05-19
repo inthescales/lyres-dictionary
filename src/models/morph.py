@@ -1,3 +1,5 @@
+import random
+
 import src.former as former
 
 from src.expressions import evaluate_expression
@@ -10,6 +12,7 @@ class Morph:
         self.morphothec = morphothec
         self.base = morphothec.morph_for_key[key]
         self.morph = self.base.copy()
+        self.seed = random.randint(0, 100)
         
     def __eq__(self, other):
         if other is None:

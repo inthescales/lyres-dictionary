@@ -1,7 +1,9 @@
-import random
+from random import Random
+
 from src.diachronizer.engine.hinges import often, even, occ, hinge
 
 def from_me_phonemes(phonemes, config):
+    random = Random(config.seed)
     result = []
     insert_lengthening_e = False
     skip_next = 0

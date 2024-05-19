@@ -241,7 +241,6 @@ def get_joined_form(language, last_morph, morph, original, proposed):
             form = form[:-1] + "s"
     
     if language == "old-english":
-        print(form + ", " + addition)
         if morph.is_suffix() and helpers.is_vowel(addition[0], True):
             if helpers.is_consonant(form[-1]) and form[-1] != "y" and helpers.is_vowel(form[-2]) and not helpers.is_vowel(form[-3]) \
                 and form[-1] not in ["w", "x"] \
