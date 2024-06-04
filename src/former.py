@@ -24,14 +24,21 @@ def form(morph, env):
     if "form-raw" in morph_dict \
         and not ("form-stem" in morph_dict and morph.is_affix()):
         if morph_dict["origin"] == "old-english":
-            config = Config(locked=True, seed=morph.seed)
             if type(morph_dict["form-raw"]) == list:
                 random = Random(morph.seed)
                 raw_form = random.choice(morph_dict["form-raw"])
             else:
                 raw_form = morph_dict["form-raw"]
+
+            def process(form):
+               config = Config(locked=True, seed=morph.seed)
+               return diachronizer.oe_form_to_ne_form(form, config) 
             
-            form = diachronizer.oe_form_to_ne_form(raw_form, config)
+            if not "-" in raw_form:
+                form = process(raw_form)
+            else:
+                split_form = raw_form.split("-")
+                form = "".join([process(f) for f in split_form])
 
     # Get the proper form of the morph
     elif env.next != None:

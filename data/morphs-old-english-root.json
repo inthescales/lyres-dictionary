@@ -433,6 +433,13 @@
         "tags": ["mass", "concrete", "metal", "material"],
         "origin": "old-english"
     }, {
+        "key": "gāl",
+        "form-raw": "gāl",
+        "form-canon": "gole",
+        "type": "adj",
+        "gloss": "lascivious",
+        "origin": "old-english"
+    }, {
         "key": "glæs",
         "form-raw": "glæs",
         "form-canon": "glass",
@@ -801,6 +808,14 @@
         "origin": "old-english",
         "notes": "Would expect 'selk'. 'silc' appears in ME."
     }, {
+        "key": "seolfor",
+        "form-raw": "seolfor",
+        "form-canon": "silver",
+        "type": "noun",
+        "gloss": "silver",
+        "tags": ["mass", "concrete", "material", "metal"],
+        "origin": "old-english"
+    }, {
         "key": "sōð",
         "form-raw": "sōð",
         "form-canon": "sooth",
@@ -872,6 +887,15 @@
         "tags": ["count", "abstract", "quality"],
         "origin": "old-english",
         "notes": "Original meaning 'customs' or 'good qualities'"
+    }, {
+        "key": "þolian",
+        "form-raw": "þoli|an",
+        "form-canon": "thole",
+        "type": "verb",
+        "gloss": "endure",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Archaic / northern dialect"
     }, {
         "key": "þrawan",
         "form-raw": "þraw|an",

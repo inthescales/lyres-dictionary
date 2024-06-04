@@ -117,7 +117,6 @@ def from_me_phonemes(phonemes, config):
                 result += "e"
         elif phone.value == "ɛː":
             roll = often("Orth:ɛː->ea/eCV", config)
-            print(roll)
             if roll == "ea":
                 result += "ea"
             elif roll == "eCV":
