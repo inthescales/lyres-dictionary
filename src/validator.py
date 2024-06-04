@@ -15,9 +15,9 @@ def validate_length(entry):
 
 def validate_decent(entry):
     patterns = [
-        ".*nig+[aeiou]r",
-        ".*nig+[ae][h\W$]+",
-        ".*tard"
+        r".*nig+[aeiou]r",
+        r".*nig+[ae][h\W$]+",
+        r".*tard"
     ]
     for pattern in patterns:
         regex = re.compile(pattern)

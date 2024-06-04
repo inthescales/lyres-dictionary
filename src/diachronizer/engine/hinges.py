@@ -9,7 +9,12 @@ def even(id, config):
 def occ(id, config):
     return hinge(id, 0.25, config)
 
+# TODO: consider making this object a member of config
+random = None
+
 def hinge(id, odds, config):
+    global random
+
     points = {
         "SVC:eːr->ɛːr": [True, False],
         "SVC:eːc->ic": [True, False],
@@ -30,7 +35,8 @@ def hinge(id, odds, config):
         "Orth:ɔː->oa/oCV": ["oa", "oCV"]
     }
 
-    random = Random(config.seed)
+    if not random:
+        random = Random(config.seed)
 
     if not id in points:
         print("error: override id '" + str(id) + "' not recognized")

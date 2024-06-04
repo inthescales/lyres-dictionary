@@ -993,5 +993,13 @@
         "gloss": "[worth], [value]",
         "tags": ["mass", "abstract"],
         "origin": "old-english"
+    }, {
+        "key": "weþer",
+        "form-raw": "weþer",
+        "form-canon": "wether",
+        "type": "noun",
+        "gloss": "castrated [ram]",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
     }
 ]
