@@ -329,6 +329,15 @@
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
+        "key": "feoh",
+        "form-raw": "feoh",
+        "form-canon": "fee",
+        "type": "noun",
+        "gloss": "fee",
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Original meaning 'money'. Form influenced by Anglo-French 'fee'"
+    }, {
         "key": "fēond",
         "form-raw": "fēond",
         "form-canon": "fiend",
@@ -362,6 +371,14 @@
         "tags": ["mass", "concrete", "living", "bodypart"],
         "origin": "old-english"
     }, {
+        "key": "framian",
+        "form-raw": "frami|an",
+        "type": "verb",
+        "gloss": "[profit], [avail]",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Influenced 'frame', in combination with 'fremman'"
+    }, {
         "key": "frēo",
         "form-raw": "frēo",
         "form-canon": "free",
@@ -376,6 +393,14 @@
         "gloss": "friend",
         "tags": ["count", "concrete"],
         "origin": "old-english"
+    }, {
+        "key": "fremman",
+        "form-raw": "fremm|an",
+        "type": "verb",
+        "gloss": "construct",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Influenced 'frame', in combination with 'framian'"
     }, {
         "key": "frost",
         "form-raw": "frost",
@@ -408,22 +433,13 @@
         "gloss": "full",
         "origin": "old-english"
     }, {
-        "key": "ġesċeap",
-        "form-raw": "ġe|sċeap",
-        "form-canon": "shape",
+        "key": "glōf",
+        "form-raw": "glōf",
+        "form-canon": "glove",
         "type": "noun",
-        "gloss": "shape",
-        "tags": ["count", "abstract", "shape"],
+        "gloss": "glove",
+        "tags": ["count", "concrete"],
         "origin": "old-english"
-    }, {
-        "key": "ġewyrcan",
-        "form-raw": "ġe|wyrc|an",
-        "form-canon": "work",
-        "type": "verb",
-        "gloss": "work",
-        "tags": ["intransitive"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'make' (transitive)"
     }, {
         "key": "god",
         "form-raw": "god",
@@ -454,6 +470,14 @@
         "form-canon": "gole",
         "type": "adj",
         "gloss": "lascivious",
+        "origin": "old-english"
+    }, {
+        "key": "ġeornian",
+        "form-raw": "ġeorni|an",
+        "form-canon": "yearn",
+        "type": "verb",
+        "gloss": "yearn",
+        "tags": ["intransitive"],
         "origin": "old-english"
     }, {
         "key": "glæs",
@@ -695,9 +719,10 @@
         "form-raw": "mǣn|an",
         "form-canon": "mean",
         "type": "verb",
-        "gloss": "indicate",
-        "tags": ["transitive"],
-        "origin": "old-english"
+        "gloss": "refer",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "TODO: idk what to do with this one"
     }, {
         "key": "mǣne",
         "form-raw": "mǣne",
@@ -806,6 +831,14 @@
         "tags": ["count", "concrete", "plant"],
         "origin": "old-english",
         "notes": "Form attested in late OE, but forms like 'risċ' seem to be more common in recorded sources."
+    }, {
+        "key": "ġesċeap",
+        "form-raw": "ġe|sċeap",
+        "form-canon": "shape",
+        "type": "noun",
+        "gloss": "shape",
+        "tags": ["count", "abstract", "shape"],
+        "origin": "old-english"
     }, {
         "key": "sċiepan",
         "form-raw": "sċiep|an",
@@ -975,7 +1008,16 @@
         "gloss": "wool",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
-    },{
+    }, {
+        "key": "ġewyrcan",
+        "form-raw": "ġe|wyrc|an",
+        "form-canon": "work",
+        "type": "verb",
+        "gloss": "work",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'make' (transitive)"
+    }, {
         "key": "wyrd",
         "form-raw": "wyrd",
         "form-canon": "weird",

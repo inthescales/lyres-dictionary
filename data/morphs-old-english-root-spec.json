@@ -1,14 +1,5 @@
 [
     {
-        "key": "ātr",
-        "form-raw": "ātr",
-        "form-canon": "atter",
-        "type": "noun",
-        "gloss": "[poison], [venom]",
-        "tags": ["mass", "concrete", "liquid", "secretion"],
-        "origin": "old-english",
-        "notes": "alternate meanings 'gall, bitterness', 'corrupt matter, pus'"
-    }, {
         "key": "berġan",
         "form-raw": "berġ|an",
         "type": "verb",
@@ -24,31 +15,18 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
-        "key": "feax",
-        "form-raw": "feax",
-        "form-canon": "fax",
-        "type": "noun",
-        "gloss": "hair",
-        "tags": ["mass", "concrete", "bodypart", "speculative"],
+        "key": "fram",
+        "form-raw": "fram",
+        "type": "adj",
+        "gloss": "[vigorous] or [bold]",
+        "origin": "old-english",
+        "notes": "Various meanings. This gloss captures the general thrust."
+    }, {
+        "key": "ġeorn",
+        "form-raw": "ġeorn",
+        "type": "adj",
+        "gloss": "eager",
         "origin": "old-english"
-    }, {
-        "key": "holen",
-        "form-raw": "holen",
-        "form-canon": "hollin",
-        "type": "noun",
-        "gloss": "holly",
-        "tags": ["mass", "concrete", "living", "plant"],
-        "origin": "old-english",
-        "notes": "Alternate OE form 'holeġn', ME 'holm', 'holly'"
-    }, {
-        "key": "īsen",
-        "form-raw": "īsen",
-        "form-canon": "isen",
-        "type": "noun",
-        "gloss": "iron",
-        "tags": ["mass", "concrete", "metal", "material"],
-        "origin": "old-english",
-        "notes": "More standard form of 'īren', which led to modern form of 'iron'"
     }, {
         "key": "weorþan",
         "form-raw": "weorþ|an",

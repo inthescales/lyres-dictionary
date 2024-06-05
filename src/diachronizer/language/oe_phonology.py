@@ -62,7 +62,7 @@ def from_oe_written(word):
 def preprocess(word):
     # For now remove all "ġe" prefixes
     # TODO: allow these to mutate to a/i/e in some cases, as in 'afford', 'handiwork', 'enough'
-    if word.startswith("ġe"):
+    if word.startswith("ġe|"):
         word = word[3:]
 
     return word

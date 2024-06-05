@@ -89,8 +89,8 @@ class Phoneme:
     # Transformations
 
     def get_voiced(self):
-        unvoiced = ["p", "t", "k", "x", "tʃ", "f", "s", "θ"]
-        voiced = ["b", "d", "g", "ɣ", "dʒ", "v", "z", "ð"]
+        unvoiced = ["p", "t", "k", "x", "tʃ", "f", "s", "θ", "ʃ"]
+        voiced = ["b", "d", "g", "ɣ", "dʒ", "v", "z", "ð", "ʒ"]
 
         index = unvoiced.index(self.value[0])
         if not self.is_geminate():
