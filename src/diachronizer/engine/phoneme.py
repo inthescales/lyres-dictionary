@@ -60,7 +60,7 @@ class Phoneme:
         return self.value in plosives
 
     def is_fricative(self):
-        return self.value in ["x", "f", "s", "θ", "ɣ", "v", "z", "ð"]
+        return self.value in ["x", "f", "s", "ʃ", "θ", "ɣ", "v", "z", "ð"]
 
     def is_nasal(self):
         plosives = ["n", "m"]
