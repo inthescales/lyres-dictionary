@@ -90,6 +90,14 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "byrġan",
+        "form-raw": "byrġ|an",
+        "form-canon": "bury",
+        "type": "verb",
+        "gloss": "bury",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "ċeariġ",
         "form-raw": "ċeariġ",
         "form-canon": "chary",
@@ -251,6 +259,14 @@
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "drincan",
+        "form-raw": "drinc|an",
+        "form-canon": "drink",
+        "type": "verb",
+        "gloss": "drink",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "dysiġ",
         "form-raw": "dysiġ",
         "form-canon": "dizzy",
@@ -393,7 +409,7 @@
         "origin": "old-english"
     }, {
         "key": "ġesċeap",
-        "form-raw": "sċeap",
+        "form-raw": "ġe|sċeap",
         "form-canon": "shape",
         "type": "noun",
         "gloss": "shape",
@@ -401,7 +417,7 @@
         "origin": "old-english"
     }, {
         "key": "ġewyrcan",
-        "form-raw": "wyrc|an",
+        "form-raw": "ġe|wyrc|an",
         "form-canon": "work",
         "type": "verb",
         "gloss": "work",
@@ -629,7 +645,7 @@
         "origin": "old-english"
     }, {
         "key": "ġelīc",
-        "form-raw": "līc",
+        "form-raw": "ġe|līc",
         "form-canon": "like",
         "type": "adj",
         "gloss": "like, similar",
@@ -927,6 +943,15 @@
         "type": "adj",
         "gloss": "wide",
         "origin": "old-english"
+    }, {
+        "key": "wīf",
+        "form-raw": "wīf",
+        "form-canon": "wife",
+        "type": "noun",
+        "gloss": "wife",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Original meaning 'woman'"
     }, {
         "key": "wilde",
         "form-raw": "wilde",

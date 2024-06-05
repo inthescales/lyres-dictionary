@@ -9,6 +9,14 @@
         "origin": "old-english",
         "notes": "alternate meanings 'gall, bitterness', 'corrupt matter, pus'"
     }, {
+        "key": "berġan",
+        "form-raw": "berġ|an",
+        "type": "verb",
+        "gloss": "taste",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian. WS 'bierġan' / 'byrġan'. Alternate meaning 'partake of'"
+    }, {
         "key": "fear",
         "form-raw": "fear",
         "type": "noun",
