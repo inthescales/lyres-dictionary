@@ -1,0 +1,247 @@
+[
+    {
+        "key": "-culture",
+        "form-final": "culture",
+        "form-stem": "cultur",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 1,
+        "suffixes": ["-al", "-ist"],
+        "gloss": "the cultivation of %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["animal", "person"]
+                }
+            },
+            "gloss": "the rearing of %pl"
+        }],
+        "tags": ["mass", "abstract"],
+        "origin": "latin",
+        "notes": "Consider expanding in line with 'menticulture'"
+    },
+    {
+        "key": "-cide",
+        "form-final": "cide",
+        "form-stem": "cid",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 0,
+        "suffixes": ["-al", "-ous", "-ism"],
+        "gloss": "the act of killing %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["-al", "-ous", "-ism"]
+                    }
+                },
+                "gloss": "killing %pl"
+            }
+        ],
+        "tags": ["uncountable"],
+        "origin": "latin",
+        "notes": "Could add speculative variant for non-living roots with meaning 'cut', as in 'lapicida' ('stonecutter')"
+    },
+    {
+        "key": "-form",
+        "form-final": "form",
+        "form-stem": "form",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "declension": 3,
+        "suffixes": ["-ity", "-al", "-ous"],
+        "gloss": "having the shape of %sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "count" },
+                    { "has-any-tags": ["concrete", "shape"] }
+                ]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "person"
+                    }
+                },
+                "gloss": "having the appearance of %sg"
+            }
+        ],
+        "origin": "latin"
+    },
+    {
+        "key": "-fer",
+        "form-final": "fer",
+        "form-stem": "fer",
+        "form-joiner-present": "e",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 0,
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce", "-ize"],
+        "gloss": "[bear] %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin"
+    },
+
+    {
+        "key": "-ify",
+        "form-stem-present": "ific",
+        "form-stem-perfect": "ificat",
+        "form-final": "ify",
+        "type": "derive",
+        "derive-from": ["noun", "adj"],
+        "derive-to": "verb",
+        "conjugation": 1,
+        "gloss-noun": "[make] %sg",
+        "gloss-adj": "[make] %@",
+        "gloss-relative": "[make] %@",
+        "exception": [
+            { 
+                "case": {
+                    "precedes": {
+                        "has-key": "-or"
+                    }
+                },
+                "form-stem": ["ifact", "ificat"]
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-ble"
+                    }
+                },
+                "form-stem": "ific",
+                "form-joiner-present": "a"
+            }
+        ],
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
+    },
+    {
+        "key": "-ger",
+        "form-final": "ger",
+        "form-stem": "ger",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce"],
+        "conjugation": 3,
+        "gloss": "[bring] %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
+                }
+            },
+            "form-stem": "gere"
+        },
+        {
+            "case": {
+                "precedes": {
+                    "has-key": ["-ous", "-nt", "-nt-noun", "-nce", "-nd"]
+                }
+            },
+            "gloss": "[bear] %pl"
+        }],
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin",
+        "notes": "add exceptions for 'ous'"
+    },
+    {
+        "key": "-pote-drink",
+        "form-final": "pote",
+        "form-stem": "pot",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 0,
+        "suffixes": [],
+        "gloss": "one who drinks %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
+        "tags": ["uncountable", "concrete", "living"],
+        "origin": "latin"
+    },
+    {
+        "key": "-pote-power",
+        "form-stem": "pot",
+        "form-final": "pote",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 3,
+        "suffixes": ["-nt", "-nce"],
+        "gloss": "[have] command over %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": "[be] skilled in the use of %pl"
+            }
+        ],
+        "tags": ["non-final", "rare"],
+        "origin": "latin"
+    },
+    {
+        "key": "-vor-",
+        "form-final": "vor",
+        "form-stem": "vor",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "conjugation": 0,
+        "suffixes": ["-e-agent", "-ous", "-ia", "-ity"],
+        "gloss": "[eat] %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["fluid", "liquid"]
+                    }
+                },
+                "gloss": "[consume] %pl"
+            }
+        ],
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin"
+    }
+]
