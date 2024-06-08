@@ -16,6 +16,9 @@ class EvolutionAffixTests(unittest.TestCase):
         # -dom
         self.assertForm(["cyng", "-dom"], "kingdom")
 
+        # -ere
+        self.assertForm(["lufian", "-ere"], "lover")
+
         # -iġ
         self.assertForm(["clǣġ", "-iġ"], "clayey")
         self.assertForm(["clif", "-iġ"], "cliffy")

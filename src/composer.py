@@ -237,7 +237,7 @@ def get_joined_form(language, last_morph, morph, original, proposed):
         if form[-1] == "p" and addition[0] == "m":
             form = form[:-1] + "m"
         
-        if form[-1] == "t" and addition in ["ia", "y"] and form[-4] not in ["n", "r", "s", "u"]:
+        if form[-1] == "t" and addition in ["ia", "y"] and form[-2] not in ["n", "r", "s", "u"]:
             form = form[:-1] + "s"
     
     if language == "old-english":
@@ -314,6 +314,10 @@ def get_joining_vowel(language, first, second, form, addition):
         # Prefixes never need joining vowels
         if first.is_prefix():
             return None
+
+        # Override joining vowels are always used
+        if "form-joiner" in first.morph:
+            return first.morph["form-joiner"]
 
         if not helpers.is_vowel(addition[0], y_is_vowel=True):
             return "o"

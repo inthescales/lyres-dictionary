@@ -166,7 +166,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-type": "number"
+                    "has-type": "noun"
                 }
             },
             "gloss": "self"
@@ -359,6 +359,14 @@
         "origin": "greek"
     },
     {
+        "key": "cthon",
+        "form-stem": "cthon",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "greek"
+    },
+    {
         "key": "cynos",
         "form-stem": "cyn",
         "type": "noun",
@@ -477,6 +485,14 @@
         "type": "noun",
         "gloss": "youth",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "greek"
+    },
+    {
+        "key": "eremos",
+        "form-stem": "erem",
+        "type": "noun",
+        "gloss": "[desert] or waste [land]",
+        "tags": ["count", "concrete", "terrain"],
         "origin": "greek"
     },
     {
@@ -1442,7 +1458,7 @@
         "form-stem": "potam",
         "type": "noun",
         "gloss": "river",
-        "tags": ["count", "concrete", "terrain"],
+        "tags": ["count", "concrete", "terrain", "fluid", "liquid"],
         "origin": "greek"
     },
     {
@@ -1538,6 +1554,14 @@
         "type": "noun",
         "gloss": "sky",
         "tags": ["singleton", "concrete"],
+        "origin": "greek"
+    },
+    {
+        "key": "rhodon",
+        "form-stem": "rhod",
+        "type": "noun",
+        "gloss": "rose",
+        "tags": ["count", "concrete", "living", "plant"],
         "origin": "greek"
     },
     {
@@ -1705,7 +1729,7 @@
         "form-stem": "thalass",
         "type": "noun",
         "gloss": "sea",
-        "tags": ["singleton", "concrete", "fluid", "liquid"],
+        "tags": ["singleton", "concrete", "terrain", "fluid", "liquid"],
         "origin": "greek"
     },
     {
@@ -1819,6 +1843,129 @@
         "type": "noun",
         "gloss": "animal",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+        {
+        "key": "mono",
+        "form-stem": "mon",
+        "type": "noun",
+        "gloss": "one",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "di",
+        "form-stem": "di",
+        "type": "noun",
+        "gloss": "two",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "tri-greek",
+        "form-stem": "tri",
+        "type": "noun",
+        "gloss": "three",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "tetra",
+        "form-stem": "tetr",
+        "form-joiner": "a",
+        "type": "noun",
+        "gloss": "four",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "penta",
+        "form-stem": "pent",
+        "form-joiner": "a",
+        "type": "noun",
+        "gloss": "five",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "hexa",
+        "form-stem": "hex",
+        "form-joiner": "a",
+        "type": "noun",
+        "gloss": "six",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "hepta",
+        "form-stem": "hept",
+        "form-joiner": "a",
+        "type": "noun",
+        "gloss": "seven",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "octo",
+        "form-stem": "oct",
+        "type": "noun",
+        "gloss": "eight",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "ennea",
+        "form-stem": "ennea",
+        "type": "noun",
+        "gloss": "nine",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "deca",
+        "form-stem": "dec",
+        "form-joiner": "a",
+        "type": "noun",
+        "gloss": "ten",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "hecato",
+        "form-stem": "hecat",
+        "type": "noun",
+        "gloss": "one-hundred",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "chili",
+        "form-stem": "chili",
+        "type": "noun",
+        "gloss": "one-thousand",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "greek"
+    },
+    {
+        "key": "myria",
+        "form-stem": "myri",
+        "form-joiner": "a",
+        "type": "noun",
+        "gloss": "ten-thousand",
+        "suffixes": ["-ad", "-arch-"],
+        "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
     }
 ]

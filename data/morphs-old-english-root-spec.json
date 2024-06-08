@@ -28,6 +28,13 @@
         "gloss": "eager",
         "origin": "old-english"
     }, {
+        "key": "midl",
+        "form-raw": "midl",
+        "type": "noun",
+        "gloss": "[bit] or [curb] of a bridle",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
         "key": "weorþan",
         "form-raw": "weorþ|an",
         "type": "verb",

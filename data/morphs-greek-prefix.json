@@ -275,7 +275,7 @@
         "origin": "greek"
     },
     {
-        "key": "tri-greek",
+        "key": "tri-greek-  ",
         "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
@@ -380,10 +380,9 @@
             "case": {
                 "precedes": {
                     "has-prefix": ["a"]
-                },
-                "form-stem": "dec"
+                }
             },
-            "form-stem": "enne"
+            "form-stem": "dec"
         }],
         "origin": "greek"
     },
@@ -410,7 +409,7 @@
         "origin": "greek"
     },
     {
-        "key": "myria",
+        "key": "myria-",
         "form-stem": "myria",
         "type": "number",
         "gloss": "ten-thousand %!pl",

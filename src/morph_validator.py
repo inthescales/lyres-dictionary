@@ -56,6 +56,7 @@ valid_tags = [
     "bodypart-plant",           # Noun semantics - a member belonging only to a plant, like a leaf or stem
     "bodypart-single",          # Noun semantics - a bodypart that a being has only one of, like heart or head
     "secretion",                # Noun semantics - a bodily secretion, or mental creation
+    "garment",                  # Noun semantics - a garment, or anything that is worn on the body
     "tool",                     # Noun semantics - a tool
     "weapon",                   # Noun semantics - a weapon
     "material",                 # Noun semantics - a material things can be made out of

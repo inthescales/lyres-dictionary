@@ -66,6 +66,14 @@
         "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
     }, {
+        "key": "brīdel",
+        "form-raw": "brīdel",
+        "form-canon": "bridle",
+        "type": "noun",
+        "gloss": "bridle",
+        "tags": ["count", "concrete", "garment"],
+        "origin": "old-english"
+    }, {
         "key": "bryht",
         "form-raw": "bryht",
         "form-canon": "bright",
@@ -438,7 +446,7 @@
         "form-canon": "glove",
         "type": "noun",
         "gloss": "glove",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "garment"],
         "origin": "old-english"
     }, {
         "key": "god",

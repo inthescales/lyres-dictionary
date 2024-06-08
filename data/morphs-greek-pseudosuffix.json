@@ -1,0 +1,292 @@
+[
+    {
+        "key": "-arch-",
+        "form-final": "arch",
+        "form-stem": "arch",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-agent", "-ic-character", "-y-passthrough"],
+        "gloss": "rule by %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent-agent"
+                    }
+                },
+                "gloss": "[rule] or [oversee] %pl"
+            }
+        ],
+        "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-clast",
+        "form-final": "clast",
+        "form-stem": "clast",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-agent", "-y-def", "-ic"],
+        "gloss": "[breaking] of %pl",
+        "requires": {
+            "follows": {
+                "not": { "has-any-tags": ["fluid", "living"] }
+            }  
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent-agent"
+                    }
+                },
+                "gloss": "[break] %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-crat",
+        "form-final": "crat",
+        "form-stem": "crat",
+        "type": "derive",
+        "derive-from": ["noun", "adj"],
+        "derive-to": "noun",
+        "suffixes": ["greek-silent", "-ic", "-y-passthrough"],
+        "gloss-adj": "[rule] by the %@",
+        "gloss-noun": "[rule] by %pl",
+        "requires": {
+            "follows": {
+                "or": [
+                    {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "person" }
+                        ]
+                    },
+                    {
+                        "and": [
+                            { "has-type": "adj" },
+                            { "has-tag": "character" }
+                        ]
+                    }
+                ]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent"
+                    }
+                },
+                "gloss-adj": "[member] of the ruling %@",
+                "gloss-noun": "[member] of the ruling %pl"
+            },
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-y-passthrough"
+                    }
+                },
+                "form-stem": "crac"
+            }
+        ],
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-gen",
+        "form-stem": "gen",
+        "form-final": "gen",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-agent", "-ic-part"],
+        "gloss": "[produce] %pl",
+        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-agog",
+        "form-final": "agog",
+        "form-stem": "agog",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["greek-e-agent", "-ic-def", "-y-def"],
+        "gloss": "[leading] of %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-e-agent"
+                    }
+                },
+                "gloss": "[lead] %pl",
+                "form-stem": "agogu"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-graph-",
+        "form-final": "graph",
+        "form-stem": "graph",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["-er-agent", "-ic-def", "-y-def"],
+        "gloss": "[description] of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-er-agent"
+                    }
+                },
+                "gloss": "[describe] %pl"
+            }
+        ],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-lat-",
+        "form-final": "lat",
+        "form-stem": "latr",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-agent", "-y-def"],
+        "gloss": "the worship of %pl",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent-agent"
+                    }
+                },
+                "form-stem": "later",
+                "gloss": "one who worships %pl"
+            }
+        ],
+        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-log-",
+        "form-final": "log",
+        "form-stem": "log",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["greek-ist", "-ic-def", "-y-def"],
+        "gloss": "the study of %pl",
+        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-man-",
+        "form-final": "man",
+        "form-stem": "man",
+        "type": "derive",
+        "derive-from": ["noun"],
+        "derive-to": "noun",
+        "suffixes": ["-ia-def", "-ic-def", "-iac-haver"],
+        "gloss-noun": "[obsession] or excessive [desire] for %pl",
+        "gloss-verb": "excessive [desire] %inf",
+        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek",
+        "notes": "Removing verb from derive-from until joining vowels are changed"
+    },
+    {
+        "key": "-mant-",
+        "form-final": "mant",
+        "form-stem": "manc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-er-practitioner", "-ic-def", "-y-def"],
+        "gloss": "[divination] by means of %pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "-ic-def"
+                }
+            },
+            "form-stem": "mant"
+        }],
+        "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-metr-",
+        "form-final": "meter",
+        "form-stem": "metr",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-agent", "-ic-def", "-y-def"],
+        "gloss": "the measurement of %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent-agent"
+                    }
+                },
+                "form-stem": "meter",
+                "gloss": "one who measures %pl"
+            }
+        ],
+        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-morph",
+        "form-stem": "morph",
+        "form-final": "morph",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-haver", "-ic-having"],
+        "gloss": "the shape of %sg",
+        "requires": {
+            "follows": {
+                "or": [
+                    { "has-all-tags": ["count", "concrete"] },
+                    { "has-tag": "shape" }
+                ]
+            }
+        },
+        "tags": ["uncountable", "concrete", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    },
+    {
+        "key": "-nom-",
+        "form-final": "nom",
+        "form-stem": "nom",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "suffixes": ["greek-ist", "-ic-def", "-y-def"],
+        "gloss": "the study of %pl",
+        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    }
+]
