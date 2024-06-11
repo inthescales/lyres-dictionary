@@ -7,5 +7,22 @@
         "gloss": "mercury",
         "tags": ["mass", "concrete", "fluid", "liquid", "metal"],
         "origin": "old-english"
+    },
+    {
+        "key": "middan-ġeard",
+        "form-raw": "middan-ġeard",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "fluid", "terrain", "speculative"],
+        "origin": "old-english"
+    },
+    {
+        "key": "gār-līc",
+        "form-raw": "gār-līc",
+        "form-canon": "garlic",
+        "type": "noun",
+        "gloss": "garlic",
+        "tags": ["mass", "concrete", "living", "plant"],
+        "origin": "old-english"
     }
 ]

@@ -53,7 +53,7 @@ class DiachronizerTests(unittest.TestCase):
         # a
         check("mann", "man")
         check("lamb", "lamb")
-        check("sang", "sang")
+        check("sang", "sang", overrides=[["HL:ang", False]])
         check("sacc", "sack")
         check("assa", "ass")
         check("fæþm", "fathom")

@@ -1,105 +1,31 @@
 [
     {
-        "key": "-ed-having",
-        "form-stem": "ed",
-        "form-raw": "ed",
+        "key": "-lāc",
+        "form-stem": "lock",
+        "form-raw": "lāc",
         "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": ["-nes"],
-        "gloss": "having %pl",
-        "requires": {
-            "follows": {
-                "not": {
-                    "has-tag": "singleton"
-                }
-            }
-        },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "bodypart-single"
-                    }
-                },
-                "gloss": "having %sg"
-            },
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": "e"
-                    }
-                },
-                "form-final": "d",
-                "form-stem": "d"
-            }
-        ],
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the process of %part",
+        "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
-        "key": "-ed-bodypart",
-        "form-stem": "ed",
-        "form-raw": "ed",
+        "key": "-mangere",
+        "form-stem": "monger",
+        "form-raw": "mangere",
         "type": "derive",
         "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": ["-nes"],
-        "gloss": "having %pl",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "one who sells %pl",
         "requires": {
             "follows": {
-                "has-tag": "bodypart"
+                "has-tag": "concrete"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "bodypart-single"
-                    }
-                },
-                "gloss": "having %sg"
-            },
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": "e"
-                    }
-                },
-                "form-final": "d",
-                "form-stem": "d"
-            }
-        ],
+        "tags": ["count", "concrete", "living", "person", "rare"],
         "origin": "old-english",
-        "notes": "The same as the '-ed-having' morph. Are both needed?"
-    }, {
-        "key": "-en-material",
-        "form-stem": "en",
-        "form-raw": "en",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": ["-nes"],
-        "gloss": "made from %pl",
-        "requires": {
-            "follows": {
-                "has-any-tags": ["material", "tree"]
-            }
-        },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-suffix": ["e", "r"]
-                }
-            },
-            "form-final": "n"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "tree"
-                }
-            },
-            "gloss": "made from the wood of the %!sg"
-        }],
-        "origin": "old-english",
-        "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
+        "notes": "TODO: allow for abstracts that represent mental states, with exception to gloss as 'one who provokes...', e.g. 'fearmonger', or events e.g. 'warmonger'"
     }
 ]

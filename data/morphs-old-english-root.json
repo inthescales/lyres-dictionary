@@ -346,6 +346,14 @@
         "origin": "old-english",
         "notes": "Original meaning 'money'. Form influenced by Anglo-French 'fee'"
     }, {
+        "key": "feohtan",
+        "form-raw": "feoht|an",
+        "form-canon": "fight",
+        "type": "verb",
+        "gloss": "fight",
+        "tags": ["transitive"],
+        "origin": "old-english"
+     }, {
         "key": "fēond",
         "form-raw": "fēond",
         "form-canon": "fiend",
@@ -740,6 +748,13 @@
         "origin": "old-english",
         "notes": "alternate meaning 'low, common'"
     }, {
+        "key": "mangian",
+        "form-raw": "mangi|an",
+        "type": "verb",
+        "gloss": "trade",
+        "tags": ["transitive"],
+        "origin": "old-english"
+     }, {
         "key": "mann",
         "form-raw": "mann",
         "form-canon": "man",
@@ -749,6 +764,14 @@
         "origin": "old-english",
         "notes": "Original sense was 'person'"
     }, {
+        "key": "meare",
+        "form-raw": "meare",
+        "type": "noun",
+        "gloss": "mare",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english",
+        "notes": "Alternate forms mīre, mȳre, mere. History of usage as feminine unclear to me."
+     }, {
         "key": "miht",
         "form-raw": "miht",
         "form-canon": "might",
@@ -954,8 +977,8 @@
         "origin": "old-english",
         "notes": "Archaic / northern dialect"
     }, {
-        "key": "þrawan",
-        "form-raw": "þraw|an",
+        "key": "þrāwan",
+        "form-raw": "þrāw|an",
         "form-canon": "throw",
         "type": "verb",
         "gloss": "throw",
@@ -1085,6 +1108,15 @@
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
+        "key": "weddian",
+        "form-raw": "wedd|an",
+        "form-canon": "wed",
+        "type": "verb",
+        "gloss": "marry",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'pledge, promise'"
+     }, {
         "key": "weorþ",
         "form-raw": "weorþ",
         "form-canon": "worth",

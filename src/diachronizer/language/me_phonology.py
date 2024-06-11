@@ -18,14 +18,19 @@ def from_oe_phonemes(oe_phonemes, config):
             return [Phoneme("gg", template=state.current)]
 
     def homorganic_lengthening(state):
-        # Note: the 'old' exception is my own addition, based on the case of 'gold'
+        # Note: the 'old' exception is my own addition, based on the case of 'gold'. TODO: Find a better way to handle this
+        # Note: the 'ang' exception is mine, based on observations of 'long', 'strong', 'monger' vs 'sing', 'sting', 'ring'
+        cluster = "".join([x.value for x in state.capture[1:]])
 
-        if state.capture[0].is_vowel() \
-            and (state.joined[1:3] in ["ld", "mb", "nd", "rd"] or state.joined[1:3] in ["ng", "rl", "rn"]) \
-            and not (state.joined[1:3] == "ld" and state.capture[0].value == "o") \
+        if state.capture[0].is_vowel() and not state.capture[0].is_diphthong() \
+            and (cluster in ["ld", "mb", "nd", "rd", "ng", "rl", "rn"]) \
+            and not (cluster == "ld" and state.capture[0].value == "o") \
+            and not (cluster == "ng" and state.capture[0].value != "a") \
+            and not (state.joined == "ang" and not often("HL:ang", config)) \
             and not (len(state.following) > 0 and state.following[0].is_consonant()):
             # and not state.syllable_data.following_syllable_count > 1:
             
+    
             return [state.capture[0].get_lengthened(), state.capture[1], state.capture[2]]
 
     def stressed_vowel_changes(state):
@@ -48,6 +53,7 @@ def from_oe_phonemes(oe_phonemes, config):
             elif state.current.value == "aː":
                 return [Phoneme("ɔː", template=state.current)]
             elif state.current.value == "eo":
+                # TODO: Handle 'ġeong'-> 'young'
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
                 result = often("SVC:eːo->eː/oː", config)
@@ -79,6 +85,7 @@ def from_oe_phonemes(oe_phonemes, config):
                     return [Phoneme("uː", template=state.current)]
 
     def pre_cluster_shortening(state):
+        # TODO: don't do this in antepenultimate syllable, as in 'aldormann'
         if state.current.is_vowel() and state.current.is_long() \
             and state.next and state.next.is_consonant() \
             and (state.next.is_geminate() \
@@ -86,13 +93,14 @@ def from_oe_phonemes(oe_phonemes, config):
                 or (len(state.following) > 0 and state.following[0].value == "ʃ")): # 'sċ' may count as a cluster (ex. 'flǣsċ')
                 next_two_joined = "".join([x.value for x in state.following[:2]])
 
-                # other lengthening clusters: mb, ld
-                lengthening_clusters = ["nd", "rl", "rs", "ld"] # rs+vowel?
+                # Homorganic lengthing clusters usually exempted
+                # Other such clusters: mb, ld
+                exempted_clusters = ["nd", "rl", "rs", "ld", "ng"] # rs+vowel?
                 if not occ("PCS:rn", config):
-                    lengthening_clusters += ["rn"]
+                    exempted_clusters += ["rn"]
                 if not occ("PCS:rd", config):
-                    lengthening_clusters += ["rd"]
-                if next_two_joined in lengthening_clusters \
+                    exempted_clusters += ["rd"]
+                if next_two_joined in exempted_clusters \
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
                     return None
 

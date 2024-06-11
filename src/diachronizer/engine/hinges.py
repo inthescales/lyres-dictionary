@@ -16,6 +16,7 @@ def hinge(id, odds, config):
     global random
 
     points = {
+        "HL:ang": [True, False],
         "SVC:eːr->ɛːr": [True, False],
         "SVC:eːc->ic": [True, False],
         "SVC:eːo->eː/oː": ["eː", "oː"],

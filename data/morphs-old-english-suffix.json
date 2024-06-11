@@ -46,6 +46,109 @@
         "origin": "old-english"
     },
     {
+        "key": "-ed-having",
+        "form-stem": "ed",
+        "form-raw": "ed",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "singleton"
+                }
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    }
+                },
+                "gloss": "having %sg"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "e"
+                    }
+                },
+                "form-final": "d",
+                "form-stem": "d"
+            }
+        ],
+        "origin": "old-english"
+    }, {
+        "key": "-ed-bodypart",
+        "form-stem": "ed",
+        "form-raw": "ed",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "bodypart"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    }
+                },
+                "gloss": "having %sg"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "e"
+                    }
+                },
+                "form-final": "d",
+                "form-stem": "d"
+            }
+        ],
+        "origin": "old-english",
+        "notes": "The same as the '-ed-having' morph. Are both needed?"
+    }, {
+        "key": "-en-material",
+        "form-stem": "en",
+        "form-raw": "en",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "made from %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["material", "tree"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": ["e", "r"]
+                }
+            },
+            "form-final": "n"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "tree"
+                }
+            },
+            "gloss": "made from the wood of the %!sg"
+        }],
+        "origin": "old-english",
+        "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
+    },
+    {
         "key": "-ere",
         "form-stem": "er",
         "form-raw": "ere",
@@ -74,7 +177,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["uncountable", "concrete"],
+        "tags": ["uncountable", "concrete", "rare"],
         "origin": "old-english",
         "notes": "gloss is modern. Original usage was feminine only"
     },

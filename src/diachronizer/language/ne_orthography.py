@@ -35,6 +35,7 @@ def from_me_phonemes(phonemes, config):
             next3 = phonemes[i + 3]
 
         is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
+        precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'
 
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
@@ -112,7 +113,6 @@ def from_me_phonemes(phonemes, config):
                     result += "a"
                 elif roll == "e":
                     result += "e"
-
             else:
                 result += "e"
         elif phone.value == "ɛː":
@@ -148,16 +148,24 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "o":
             result += "o"
         elif phone.value == "ɔː":
-            if not is_vowel_open:
+            if precedes_lengthening_cluster:
+                # Homorganic lengthening clusters don't take digraphs (usually)
+                result += "o"
+            elif is_vowel_open:
+                # Open syllables don't need a digraph or an inserted vowel
+                result += "o"
+            elif next1 != None and next2 == None and next1.is_consonant() and next1.is_voiced() and next1.is_fricative():
+                # Words ending in voiced fricatives must have silent e
+                result += "o"
+                insert_lengthening_e = True
+            else:
                 roll = often("Orth:ɔː->oa/oCV", config)
                 if roll == "oa":
                     result += "oa"
                 elif roll == "oCV":
                     result += "o"
                     insert_lengthening_e = True
-            else:
-                result += "o"
-                insert_lengthening_e = True
+
         elif phone.value == "oː":
             result += "oo"
         elif phone.value == "u" and prev and prev.value == "w" and next1 and next1.value == "r":

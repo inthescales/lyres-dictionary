@@ -17,6 +17,14 @@
         "tags": ["mass", "concrete", "bodypart", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "fōn",
+        "form-raw": "fōn",
+        "form-canon": "fang",
+        "type": "verb",
+        "gloss": "[sieze] or [capture]",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "ġearu",
         "form-raw": "ġearu",
         "form-canon": "yare",
@@ -47,7 +55,7 @@
         "form-canon": "lofe",
         "type": "noun",
         "gloss": "[praise], [glory]",
-        "tags": ["count", "concrete", "living", "bodypart"],
+        "tags": ["mass", "abstract"],
         "origin": "old-english",
         "notes": "Glossed meaning is from OE. In dialects, meaning is 'offer', 'price'"
     }, {
@@ -66,5 +74,22 @@
         "gloss": "praise",
         "tags": ["transitive"],
         "origin": "old-english"
+    }, {
+        "key": "smyrels",
+        "form-raw": "smyrels",
+        "form-canon": "smerl",
+        "type": "noun",
+        "gloss": "ointment",
+        "tags": ["mass", "concrete", "fluid", "liquid"],
+        "origin": "old-english"
+    }, {
+        "key": "wænge",
+        "form-raw": "wænge",
+        "form-canon": "wang",
+        "type": "noun",
+        "gloss": "cheek",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "old-english",
+        "notes": "Alternate forms 'wange', 'wonge', 'wenge'"
     }
 ]
