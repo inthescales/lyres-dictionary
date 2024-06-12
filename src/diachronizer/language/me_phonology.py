@@ -22,14 +22,18 @@ def from_oe_phonemes(oe_phonemes, config):
         # Note: the 'ang' exception is mine, based on observations of 'long', 'strong', 'monger' vs 'sing', 'sting', 'ring'
         cluster = "".join([x.value for x in state.capture[1:]])
 
+        # and not (cluster == "ng" and state.capture[0].value != "a") \
+
         if state.capture[0].is_vowel() and not state.capture[0].is_diphthong() \
             and (cluster in ["ld", "mb", "nd", "rd", "ng", "rl", "rn"]) \
             and not (cluster == "ld" and state.capture[0].value == "o") \
-            and not (cluster == "ng" and state.capture[0].value != "a") \
             and not (state.joined == "ang" and not often("HL:ang", config)) \
             and not (len(state.following) > 0 and state.following[0].is_consonant()):
             # and not state.syllable_data.following_syllable_count > 1:
-            
+    
+            if state.capture[0].value == "o":
+                # My own addition, to handle "board", "hoard"
+                return [Phoneme("ɔː", template=state.capture[0]), state.capture[1], state.capture[2]]
     
             return [state.capture[0].get_lengthened(), state.capture[1], state.capture[2]]
 
@@ -90,12 +94,12 @@ def from_oe_phonemes(oe_phonemes, config):
             and state.next and state.next.is_consonant() \
             and (state.next.is_geminate() \
                 or (len(state.following) > 1 and state.following[1].is_consonant()) \
-                or (len(state.following) > 0 and state.following[0].value == "ʃ")): # 'sċ' may count as a cluster (ex. 'flǣsċ')
+                or (len(state.following) > 0 and state.following[0].value == "ʃ")): # 'sċ' counts as a cluster (ex. 'flǣsċ')
                 next_two_joined = "".join([x.value for x in state.following[:2]])
 
                 # Homorganic lengthing clusters usually exempted
                 # Other such clusters: mb, ld
-                exempted_clusters = ["nd", "rl", "rs", "ld", "ng"] # rs+vowel?
+                exempted_clusters = ["nd", "rl", "rs", "ld"] # rs+vowel?
                 if not occ("PCS:rn", config):
                     exempted_clusters += ["rn"]
                 if not occ("PCS:rd", config):
@@ -105,7 +109,7 @@ def from_oe_phonemes(oe_phonemes, config):
                     return None
 
                 if state.current.value == "ɔː":
-                    return [Phoneme("a", template=state.current)]
+                    return [Phoneme("ɔ", template=state.current)]
                 elif state.current.value == "ɛː" and often("PCS:ɛː->a", config):
                     return [Phoneme("a", template=state.current)]
                 else:

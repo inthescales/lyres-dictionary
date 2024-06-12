@@ -1,5 +1,13 @@
 [
     {
+        "key": "ǣġ-wyrt",
+        "form-raw": "ǣġ-wyrt",
+        "form-canon": "eggwort",
+        "type": "noun",
+        "gloss": "dandelion",
+        "tags": ["count", "concrete", "living", "plant", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "cwic-seolfor",
         "form-raw": "cwic-seolfor",
         "form-canon": "quicksilver",

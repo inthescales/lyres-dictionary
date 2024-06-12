@@ -115,6 +115,8 @@ def from_me_phonemes(phonemes, config):
                     result += "e"
             else:
                 result += "e"
+        elif phone.value == "ɛ":
+            result += "e"
         elif phone.value == "ɛː":
             roll = often("Orth:ɛː->ea/eCV", config)
             if roll == "ea":
@@ -146,6 +148,8 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "eː":
             result += "ee"
         elif phone.value == "o":
+            result += "o"
+        elif phone.value == "ɔ":
             result += "o"
         elif phone.value == "ɔː":
             if precedes_lengthening_cluster:
