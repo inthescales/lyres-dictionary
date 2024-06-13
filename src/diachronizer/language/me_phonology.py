@@ -27,7 +27,7 @@ def from_oe_phonemes(oe_phonemes, config):
         if state.capture[0].is_vowel() and not state.capture[0].is_diphthong() \
             and (cluster in ["ld", "mb", "nd", "rd", "ng", "rl", "rn"]) \
             and not (cluster == "ld" and state.capture[0].value == "o") \
-            and not (state.joined == "ang" and not often("HL:ang", config)) \
+            and not (state.joined == "ang" and not often("HL:ng", config)) \
             and not (len(state.following) > 0 and state.following[0].is_consonant()):
             # and not state.syllable_data.following_syllable_count > 1:
     
@@ -36,6 +36,13 @@ def from_oe_phonemes(oe_phonemes, config):
                 return [Phoneme("ɔː", template=state.capture[0]), state.capture[1], state.capture[2]]
     
             return [state.capture[0].get_lengthened(), state.capture[1], state.capture[2]]
+
+    def pre_three_cluster_shortening(state):
+        # TODO: don't do this in antepenultimate syllable, as in 'aldormann'
+        if state.current.is_vowel() and state.current.is_long() \
+            and len(state.following) >= 3 and all(phoneme.is_consonant() for phoneme in state.following[:3]):
+
+            return [state.current.get_shortened()]
 
     def stressed_vowel_changes(state):
         if state.current.stressed:
@@ -108,9 +115,7 @@ def from_oe_phonemes(oe_phonemes, config):
                     or (next_two_joined == "st" and (len(state.following) == 2 or state.following[2].is_vowel())):
                     return None
 
-                if state.current.value == "ɔː":
-                    return [Phoneme("ɔ", template=state.current)]
-                elif state.current.value == "ɛː" and often("PCS:ɛː->a", config):
+                if state.current.value == "ɛː" and often("PCS:ɛː->a", config):
                     return [Phoneme("a", template=state.current)]
                 else:
                     return [state.current.get_shortened()]
@@ -275,8 +280,9 @@ def from_oe_phonemes(oe_phonemes, config):
     #
     # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
     def final_consonant_cluster_breaking(state):
+                        # and len(state.following) == 0 \
             if all(phone.is_consonant() for phone in state.capture) \
-                and len(state.following) == 0 \
+                and state.syllable_data.prev_vowel != None \
                 and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
                 and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
                 and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
@@ -304,6 +310,7 @@ def from_oe_phonemes(oe_phonemes, config):
 
     rig.run_capture(harden_g, 1, "Harden g's", config)
     rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", config)
+    rig.run_capture(pre_three_cluster_shortening, 1, "Pre-cluster shortening", config)
     rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", config)
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", config)
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
@@ -315,12 +322,17 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(breaking, 2, "Breaking", config)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
+
+    rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
+
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
     rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", config)
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
-    rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
+
+    # rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
+
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
     rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
 

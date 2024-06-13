@@ -6,6 +6,8 @@ def from_me_phonemes(phonemes, config):
     random = Random(config.seed)
     result = []
     insert_lengthening_e = False
+    would_have_inserted_lengthening_e = False
+
     skip_next = 0
 
     last_stressed_vowel = None
@@ -39,6 +41,7 @@ def from_me_phonemes(phonemes, config):
 
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
+            would_have_inserted_lengthening_e = True
 
         # Diphthongs
         if phone.value == "uː" and "vocalized-g" in phone.history:
@@ -156,8 +159,9 @@ def from_me_phonemes(phonemes, config):
                 # Homorganic lengthening clusters don't take digraphs (usually)
                 result += "o"
             elif is_vowel_open:
-                # Open syllables don't need a digraph or an inserted vowel
+                # Open syllables don't need a digraph or an inserted vowel (but add one for schwa resolution)
                 result += "o"
+                insert_lengthening_e = True
             elif next1 != None and next2 == None and next1.is_consonant() and next1.is_voiced() and next1.is_fricative():
                 # Words ending in voiced fricatives must have silent e
                 result += "o"
@@ -188,9 +192,12 @@ def from_me_phonemes(phonemes, config):
                 result += "ow"
         elif phone.value == "ə":
             if not next2:
-                if next1.value in ["m", "w"]:
+                if next1.value in ["m", "n", "w"] \
+                    and prev and prev.value != "v" \
+                    and not would_have_inserted_lengthening_e \
+                    and often("Orth:ə->o", config):
                     result += "o"
-                elif next1.value in ["l"]:
+                elif next1.value in ["k", "l"]:
                     result += "i"
                 else:
                     result += "e"
@@ -248,8 +255,11 @@ def from_me_phonemes(phonemes, config):
                 # 'u' condition added to handle 'busy' / 'dizzy'
                 # Need more cases to establish a pattern more clearly
                 result += "s"
-            else:
+            elif next1 and next2 and "".join([p.value for p in [next1, next2]]) == "əj":
+                # Handles cases like 'dizzy'
                 result += "z"
+            else:
+                result += "s"
         elif phone.value in ["θ", "ð"]:
             if prev and prev.value == "x":
                 # Added to handle cases like 'drought', on the belief that no cases of '-oughth' exist
@@ -267,9 +277,11 @@ def from_me_phonemes(phonemes, config):
             elif next1 and next1.value == "w":
                 result += "qu"
                 skip_next = True
-            elif not prev \
-                and not (next1 and next1.value == "n") \
-                and not (next1 and next1.value in ["e", "i", "eː", "iː"]):
+            elif (not prev or prev.is_vowel()) \
+                and next1 \
+                and next1.value != "n" \
+                and not next1.value in ["e", "i", "eː", "iː"] \
+                and not insert_lengthening_e:
                 result += "c"
             else:
                 result += "k"
@@ -326,5 +338,7 @@ def from_me_phonemes(phonemes, config):
         
         if phone.is_vowel() and phone.stressed:
             last_stressed_vowel = phone
+
+        would_have_inserted_lengthening_e = False
         
     return "".join(result)

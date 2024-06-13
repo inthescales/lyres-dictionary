@@ -16,7 +16,7 @@ def hinge(id, odds, config):
     global random
 
     points = {
-        "HL:ang": [True, False],
+        "HL:ng": [True, False],
         "SVC:eːr->ɛːr": [True, False],
         "SVC:eːc->ic": [True, False],
         "SVC:eːo->eː/oː": ["eː", "oː"],
@@ -33,7 +33,8 @@ def hinge(id, odds, config):
         "Orth:e+r->e/a/ea": ["ea", "e", "a"],
         "Orth:ɛː->ea/eCV": ["ea", "eCV"],
         "Orth:iː#->ie/ye": ["ie", "ye"],
-        "Orth:ɔː->oa/oCV": ["oa", "oCV"]
+        "Orth:ɔː->oa/oCV": ["oa", "oCV"],
+        "Orth:ə->o": [True, False]
     }
 
     if not random:
