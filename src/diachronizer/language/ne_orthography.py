@@ -43,7 +43,8 @@ def from_me_phonemes(phonemes, config):
             insert_lengthening_e = False
             would_have_inserted_lengthening_e = True
 
-        # Diphthongs
+        # Diphthongs ----------------------------
+
         if phone.value == "uː" and "vocalized-g" in phone.history:
             result += random.choose("ow", "ough")
         elif next1 and phone.value + next1.value == "aux":
@@ -98,7 +99,8 @@ def from_me_phonemes(phonemes, config):
             if next1 and next1.value == "ə":
                 skip_next = True
 
-        # Monophthongs
+        # Monophthongs --------------------------
+
         elif phone.value == "a":
             result += "a"
         elif phone.value == "aː":
@@ -197,7 +199,12 @@ def from_me_phonemes(phonemes, config):
                     and not would_have_inserted_lengthening_e \
                     and often("Orth:ə->o", config):
                     result += "o"
-                elif next1.value in ["k", "l"]:
+                elif next1.value == "k":
+                    result += "i"
+                elif next1.value == "l" \
+                    and prev and prev.value == "v" \
+                    and prev2 and (prev2.value in ["ɛː", "eː"] or prev2.is_consonant()):
+                    # Vowel check by analogy with 'evil', 'devil', 'anvil', 'chervil'
                     result += "i"
                 else:
                     result += "e"
@@ -219,12 +226,8 @@ def from_me_phonemes(phonemes, config):
                 result += "l"
             elif not next1 and prev and prev.value == "ə" \
                 and prev2 and prev2.is_consonant() \
-                and not prev2.value in ["dʒ"]:
-                if last_stressed_vowel and last_stressed_vowel.is_long():
-                    result += "l"
-                    # TODO: Handle the case of 'idle'
-                else:
-                    result = result[:-1] + ["le"]
+                and not prev2.value in ["dʒ", "v"]:
+                result = result[:-1] + ["le"]
             elif prev.is_vowel() and (not prev.stressed or prev.is_diphthong()):
                 result += "l"
             else:

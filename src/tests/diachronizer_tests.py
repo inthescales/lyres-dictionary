@@ -547,6 +547,7 @@ class DiachronizerTests(unittest.TestCase):
         check("mangere", "monger")
 
         # ...but there are a couple exceptions
+        check("angul", "angle", overrides=[["HL:ng", False]])
         check("gang", "gang", overrides=[["HL:ng", False]])
         check("sang", "sang", overrides=[["HL:ng", False]])
 
@@ -570,16 +571,17 @@ class DiachronizerTests(unittest.TestCase):
             if not form == target:
                 failures.append([form, target])
         
-        # In most cases, /ə/ is spelled with an 'e'
+        # In most cases, /ə/ is spelled with an 'e' ------------------
         check("feþer", "feather")
 
-        # Words with a final nasal use 'o' in most cases
+        # Words with a final nasal use 'o' in most cases -------------
         check("bēacn", "beacon")
         check("becn|an", "beckon")
+        check("glædene", "gladdon")
         check("wǣpn", "weapon")
 
         check("besmā", "besom")
-        check("bosm", "bosom") # Should be 'bōsm', but that produces a long vowel and I can't find a reason. Good enough for this test.
+        check("bosm", "bosom") # Attested form is 'bōsm', but that produces a long vowel instead. Hacked version for test
         check("fæþm", "fathom")
 
         # ...but it seems a preceding 'v' changes it
@@ -589,8 +591,30 @@ class DiachronizerTests(unittest.TestCase):
         check("open", "open")
 
         # ...and there are a few other exceptions
-        check("glædene", "gladdon", overrides=[["Orth:ə->o", True]])
         check("mæġden", "maiden", overrides=[["Orth:ə->o", False]])
+
+        # Words with a final 'w' also use 'o' -----------------------
+        check("wealwi|an", "wallow")
+        check("swealwe", "swallow")
+        check("earge", "arrow") # Word comes from oblique form — 'e' here is a hypothetical affix
+        check("fealge", "fallow") # Word comes from oblique form — 'e' here is a hypothetical affix
+
+        # Words with a final 'l' usually end in 'le' ----------------
+        check("ancleo", "ankle")
+        check("æppel", "apple")
+        check("īdel", "idle")
+
+        # After 'v', they often use 'el'
+        check("gafol", "gavel")
+        check("tæfl", "tavel")
+        check("nafol", "navel")
+        check("rifeli|an", "rivel")
+
+        # But in some cases they use 'i' instead
+        check("yfel", "evil", overrides=[["SVC:y->i/e/u", "e"], ["Orth:ɛː->ea/eCV", "eCV"]])
+        check("anfeal", "anvil") # Historical form was 'anfealt'. 't' was lost by the period of ME, this is an imagined OE antecedent
+        check("deofol", "devil", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("wifel", "weevil", overrides=[["OSL:iy", True]])
 
         return [total, failures]
 

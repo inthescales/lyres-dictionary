@@ -274,24 +274,24 @@ def from_oe_phonemes(oe_phonemes, config):
             and not state.current.value in ["x"]:
             return [state.current.get_voiced()]
 
-    # Insert a schwa between inconvenient final consonant clusters
+    # Insert a schwa between inconvenient consonant clusters, excepting word initially
     # Not referenced in my sources, but added here to handle cases like
     # 'hræfn' -> 'raven', 'fæþm' -> 'fathom', 'swealwe' -> 'swallow', etc.
     #
     # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
     def final_consonant_cluster_breaking(state):
-                        # and len(state.following) == 0 \
-            if all(phone.is_consonant() for phone in state.capture) \
-                and state.syllable_data.prev_vowel != None \
-                and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
-                and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
-                and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
-                and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
-                and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()) \
-                and not (state.capture[0].is_plosive() and state.capture[1].is_plosive()) \
-                and not (state.joined in ["rl"]) \
-                and not (state.capture[1].value == "j"):
-                return [state.capture[0], Phoneme("ə"), state.capture[1]]
+        if all(phone.is_consonant() for phone in state.capture) \
+            and state.syllable_data.prev_vowel != None \
+            and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_nasal() and state.capture[1].is_fricative()) \
+            and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
+            and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
+            and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_plosive() and state.capture[1].is_plosive()) \
+            and not (state.joined in ["rl", "ks"]) \
+            and not (state.capture[1].value == "j"):
+            return [state.capture[0], Phoneme("ə"), state.capture[1]]
     
     def d_ð_alternation(state):
         if state.joined == "dər" and often("DThA:dər->ðər", config):
@@ -322,17 +322,12 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(breaking, 2, "Breaking", config)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
-
     rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
-
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
     rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", config)
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
-
-    # rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
-
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
     rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
 
