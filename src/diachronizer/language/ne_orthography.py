@@ -197,7 +197,7 @@ def from_me_phonemes(phonemes, config):
                 if next1.value in ["m", "n", "w"] \
                     and prev and prev.value != "v" \
                     and not would_have_inserted_lengthening_e \
-                    and often("Orth:ə->o", config):
+                    and (next1.value not in ["n"] or often("Orth:ə->o", config)):
                     result += "o"
                 elif next1.value == "k":
                     result += "i"

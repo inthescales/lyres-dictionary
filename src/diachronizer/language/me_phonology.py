@@ -132,13 +132,27 @@ def from_oe_phonemes(oe_phonemes, config):
             else:
                 return [Phoneme("ə", template=state.current)]
 
+    # 'ɣ' and 'w' (both deriving from 'g' phoneme) become 'u' following vowels
     def vocalization_of_post_vocalic_g(state):
-        if state.current.value == "ɣ" and state.prev and state.prev.is_vowel() and state.next:
-            return [Phoneme("u", template=state.current, history=["vocalized-g"])]
-        elif state.current.value == "ɣ" and not state.next:
-            return [Phoneme("x", template=state.current)]
-        elif state.current.value == "w" and state.prev and state.prev.is_vowel():
-            return [Phoneme("u", template=state.current)]
+        if state.prev and state.prev.is_vowel():
+            if state.current.value == "ɣ":
+                if state.next:
+                    return [Phoneme("u", template=state.current, history=["vocalized-g"])]
+                else:
+                    return [Phoneme("x", template=state.current)]
+            elif state.current.value == "w":
+                return [Phoneme("u", template=state.current)]
+
+    # ɣ → w / C_V
+    # ɣ → w / C_# (sometimes)
+    # ɣ → x / C_# (other times)
+    def change_of_post_consonantal_g(state):
+        if state.current.value == "ɣ" and state.prev and state.prev.is_consonant():
+            if state.next and state.next.is_vowel():
+                return [Phoneme("w", template=state.current)]
+            else:
+                value = often("G:-Cg->w/x", config)
+                return [Phoneme(value, template=state.current)]
 
     # Formation of diphthongs involving three phonemes
     # For technical reasons, separated from those involving two
@@ -201,13 +215,6 @@ def from_oe_phonemes(oe_phonemes, config):
         elif test_string in ["ux", "uːx"] \
             or (test_string in ["oːx", "oːu", "uu", "uːu"] and word_end):
             return [Phoneme("ɔu", template=state.capture[0]), Phoneme("x", template=state.capture[1])]
-
-    # ɣ → w / C_V 
-    def g_to_w(state):
-        if state.current.value == "ɣ" \
-            and state.prev and state.prev.is_consonant() \
-            and state.next and state.next.is_vowel():
-            return [Phoneme("w", template=state.current)]
 
     # Open syllable lengthening
     def open_syllable_lengthening(state):
@@ -316,7 +323,7 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
     rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", config)
     rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", config)
-    rig.run_capture(g_to_w, 1, "G to w", config)
+    rig.run_capture(change_of_post_consonantal_g, 1, "Change of post-consonantal ɣ", config)
     rig.run_capture(diphthong_formation_3, 3, "Diphthong formation 1", config)
     rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", config)
     rig.run_capture(breaking, 2, "Breaking", config)

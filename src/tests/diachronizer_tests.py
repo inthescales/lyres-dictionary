@@ -585,7 +585,9 @@ class DiachronizerTests(unittest.TestCase):
         check("fæþm", "fathom")
 
         # ...but it seems a preceding 'v' changes it
+        check("hæfen", "haven")
         check("hræfn", "raven")
+        check("ofen", "oven")
 
         # ... I think we want to leave it if there's a non-digraphic long vowel in the preceding syllable
         check("open", "open")
@@ -596,8 +598,8 @@ class DiachronizerTests(unittest.TestCase):
         # Words with a final 'w' also use 'o' -----------------------
         check("wealwi|an", "wallow")
         check("swealwe", "swallow")
-        check("earge", "arrow") # Word comes from oblique form — 'e' here is a hypothetical affix
-        check("fealge", "fallow") # Word comes from oblique form — 'e' here is a hypothetical affix
+        check("earg", "arrow")
+        check("fealg", "fallow")
 
         # Words with a final 'l' usually end in 'le' ----------------
         check("ancleo", "ankle")
