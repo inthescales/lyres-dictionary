@@ -329,9 +329,9 @@ def from_oe_phonemes(oe_phonemes, config):
     
     def d_ð_alternation(state):
         if state.joined == "dər" and often("DThA:dər->ðər", config):
-            return [Phoneme("ð", state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
-        elif state.joined == "ðər" and occ("DThA:ðər->dər", config):
-            return [Phoneme("d" , state.capture[0]), Phoneme("ə" , state.capture[1]), Phoneme("r" , state.capture[2])]
+            return [Phoneme("ð", state.capture[0]), state.capture[1], state.capture[2]]
+        elif state.joined in ["ðər", "ðən"] and occ("DThA:ðe->de", config):
+            return [Phoneme("d" , state.capture[0]), state.capture[1], state.capture[2]]
     
     def shorten_o_before_dðer(state):
         if state.current.value == "oː" \

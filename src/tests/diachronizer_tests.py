@@ -19,8 +19,9 @@ class DiachronizerTests(unittest.TestCase):
             self._test_wiki_vowels,
             self._test_affixes,
             self._test_compounds,
-            self._test_der_ther_alternation,
-            # self._test_unstressed_vowel_syncope,
+            self._test_der_to_ther,
+            self._test_th_to_d,
+            self._test_unstressed_vowel_syncope,
             self._test_homorganic_lengthening,
             self._test_unstressed_vowel_spelling,
             self._test_consonant_cluster_breaking,
@@ -513,7 +514,7 @@ class DiachronizerTests(unittest.TestCase):
         return [total, failures]
 
     # Tests for alternation of -der / -ðer, and associated vowel changes
-    def _test_der_ther_alternation(self):
+    def _test_der_to_ther(self):
         total = 0
         failures = []
         def check(raw, target, overrides=[]):
@@ -526,20 +527,33 @@ class DiachronizerTests(unittest.TestCase):
                 failures.append([form, target])
 
         # d -> ð
-        check("brōþor", "brother")
         check("fæder", "father")
-        check("mōdor", "mother")
         check("weder", "weather")
 
-        # ð -> d
-        # check("morþor", "murder") # Vowel may be idiosyncratic borrowing from AN 'murdre'
-        # Need to make this work outside of -rden
-        # check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðər->dər", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending ALSO need to fix th->d
-        # check("spiþre", "spider")
-
-        # Vowel shortening
-        check("brōþor", "brother")
+        # d -> ð  with vowel shortening
         check("mōdor", "mother")
+
+        # Vowel shortening, with no change
+        check("brōþor", "brother")
+
+        return [total, failures]
+
+    def _test_th_to_d(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # ð -> d
+        # check("morþor", "murder") # Vowel likely an idiosyncratic borrowing from AN 'murdre'
+        check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
+        check("spīþra", "spider", overrides=[["DThA:ðe->de", True]])
 
         return [total, failures]
 
@@ -595,6 +609,7 @@ class DiachronizerTests(unittest.TestCase):
 
         return [total, failures]
 
+    # Tests that consonant clusters are, and are not, broken up with a ə when they should be
     def _test_consonant_cluster_breaking(self):
         total = 0
         failures = []
@@ -674,11 +689,9 @@ class DiachronizerTests(unittest.TestCase):
 
         # Cj
 
-        
-
         return [total, failures]
 
-    # Tests that consonant clusters are, and are not, broken up with a ə when they should be
+    # Tests for the spelling of unstressed vowels
     def _test_unstressed_vowel_spelling(self):
         total = 0
         failures = []

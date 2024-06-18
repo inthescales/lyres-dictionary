@@ -15,28 +15,30 @@ random = None
 def hinge(id, odds, config):
     global random
 
+    # Format: [[options], default]
+    # First option should represent a change occurring, when applicable
     points = {
-        "HL:ng": [True, False],
-        "SVC:eːr->ɛːr": [True, False],
-        "SVC:eːc->ic": [True, False],
-        "SVC:eːo->eː/oː": ["eː", "oː"],
-        "SVC:y->i/e/u": ["i", "e", "u"],
-        "PCS:rd": [True, False],
-        "PCS:rn": [True, False],
-        "PCS:ɛː->a": [True, False],
-        "OSL:iy": [False, True],
-        "OSL:u": [False, True],
-        "DThA:dər->ðər": [True, False],
-        "DThA:ðər->dər": [False, True],
-        "G:-Cg->w/x": ["w", "x"],
-        "medial_ə_syncope": [True, False],
-        "Orth:aiV->ai/ay": ["ai", "ay"],
-        "Orth:ɛ/iu->ew/ue": ["ew", "ue"],
-        "Orth:e+r->e/a/ea": ["ea", "e", "a"],
-        "Orth:ɛː->ea/eCV": ["ea", "eCV"],
-        "Orth:iː#->ie/ye": ["ie", "ye"],
-        "Orth:ɔː->oa/oCV": ["oa", "oCV"],
-        "Orth:ə->o": [True, False]
+        "HL:ng": [[True, False], True],
+        "SVC:eːr->ɛːr": [[True, False], True],
+        "SVC:eːc->ic": [[True, False], True],
+        "SVC:eːo->eː/oː": [["eː", "oː"], "eː"],
+        "SVC:y->i/e/u": [["i", "e", "u"], "i"],
+        "PCS:rd": [[True, False], True],
+        "PCS:rn": [[True, False], True],
+        "PCS:ɛː->a": [[True, False], True],
+        "OSL:iy": [[True, False], False],
+        "OSL:u": [[True, False], False],
+        "DThA:dər->ðər": [[True, False], True],
+        "DThA:ðe->de": [[True, False], False],
+        "G:-Cg->w/x": [["w", "x"], "w"],
+        "medial_ə_syncope": [[True, False], True],
+        "Orth:aiV->ai/ay": [["ai", "ay"], "ai"],
+        "Orth:ɛ/iu->ew/ue": [["ew", "ue"], "ew"],
+        "Orth:e+r->e/a/ea": [["ea", "e", "a"], "ea"],
+        "Orth:ɛː->ea/eCV": [["ea", "eCV"], "ea"],
+        "Orth:iː#->ie/ye": [["ie", "ye"], "ie"],
+        "Orth:ɔː->oa/oCV": [["oa", "oCV"], "oa"],
+        "Orth:ə->o": [[True, False], True]
     }
 
     if not random:
@@ -49,23 +51,25 @@ def hinge(id, odds, config):
     if override:
         return override[1]
     
+    options = points[id][0]
+    default = points[id][1]
+
     if config.locked:
-        return points[id][0]
+        return default
     
     if type(odds) == float:
         if random.uniform(0.0, 1.0) < odds:
-            return points[id][0]
+            return options[0]
         else:
-            return points[id][1]
+            return options[1]
     elif type(odds) == list:
-        choices = points[id]
-        if len(odds) == len(choices):
+        if len(odds) == len(options):
             print("error: list odds has incorrect length")
         else:
             for i in range(0, len(odds)):
                 if random.uniform(0.0, 1.0) < odds[i]:
-                    return choices[i]
+                    return options[i]
             
-            return choices[-1]
+            return options[-1]
     else:
         print("error: odds type '" + type(odds) + "' not supported")
