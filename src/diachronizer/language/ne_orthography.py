@@ -46,7 +46,7 @@ def from_me_phonemes(phonemes, config):
         # Diphthongs ----------------------------
 
         if phone.value == "uː" and "vocalized-g" in phone.history:
-            result += random.choose("ow", "ough")
+            result += random.choice(["ow", "ough"])
         elif next1 and phone.value + next1.value == "aux":
             result += "augh"
             skip_next = True

@@ -19,6 +19,7 @@ class DiachronizerTests(unittest.TestCase):
             self._test_wiki_vowels,
             self._test_affixes,
             self._test_compounds,
+            self._test_der_ther_alternation,
             self._test_homorganic_lengthening,
             self._test_unstressed_vowel_spelling,
             self._test_misc
@@ -136,7 +137,7 @@ class DiachronizerTests(unittest.TestCase):
         
         # e (leng.)
         check("spec|an", "speak")
-        check("mete", "meat", overrides=[["Orth:ɛː->ea/eCV", "ea"]])
+        check("mete", "meat")
         check("beofor", "beaver")
         check("meot|an", "mete", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("eot|an", "eat")
@@ -226,7 +227,7 @@ class DiachronizerTests(unittest.TestCase):
 
         check("spurn|an", "spurn")
         # check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]]) # Can't explain loss of second vowel
-        # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation without 'r'
+        # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation without 'r' (see spider, afford)
         check("hyrdel", "hurdle", overrides=[["SVC:y->i/e/u", "u"]])
         check("word", "word")
         check("werc", "work")
@@ -322,7 +323,7 @@ class DiachronizerTests(unittest.TestCase):
         check("flōr", "floor")
         check("mōr", "moor")
         check("blōd", "blood")
-        check("mōdor", "mother", overrides=[["DThA:ðər->dər", True]]) # Can't explain short vowel
+        check("mōdor", "mother", overrides=[["DThA:ðər->dər", True]])
         # check("glōfa", "glove") # Unsure why vowel is as if 'ɔː'
         check("gōd", "good")
         check("bōc", "book")
@@ -342,7 +343,7 @@ class DiachronizerTests(unittest.TestCase):
         # check("būtan", "but") # Unsure why vowel is short
         # check("strūti|an", "strut") # Produces 'strout', which reflect middle english 'strout', but not modern english 'strut'
         
-        # Diphthongs
+        # Diphthongs --------------------------------
         
         # AI
         check("dæġ", "day")        
@@ -487,29 +488,13 @@ class DiachronizerTests(unittest.TestCase):
         
         check("bāt", "boat", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
         check("cēp|an", "keep")
-        check("cēpte", "kept")
-        check("ċild", "child")
         check("cniht", "knight")
-        check("dæġ", "day")
-        check("eorðe", "earth")
         check("frēod", "freed")
-        check("frēond", "friend")
-        check("gōd", "good")
         check("īs", "ice")
-        check("heofon", "heaven")
         check("hlæhh|an", "laugh")
-        check("hund", "hound")
-        check("mæġden", "maiden", overrides=[["Orth:ə->o", False]])
-        check("mete", "meat")
         check("mēt|an", "meet")
-        check("mētte", "met")
         check("niht", "night")
-        check("nacod", "naked")
         check("stel|an", "steal")
-        check("tōh", "tough")
-
-        # -ō[d/ð]er -> -o[d/ð]er
-        check("brōþor", "brother")
 
         # final '-e' for words ending in voiced fricatives
         check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
@@ -523,6 +508,37 @@ class DiachronizerTests(unittest.TestCase):
         check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("hefiġ", "heavy")
     
+        return [total, failures]
+
+    # Tests for alternation of -der / -ðer, and associated vowel changes
+    def _test_der_ther_alternation(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # d -> ð
+        check("brōþor", "brother")
+        check("fæder", "father")
+        check("mōdor", "mother")
+        check("weder", "weather")
+
+        # ð -> d
+        # check("morþor", "murder") # Vowel may be idiosyncratic borrowing from AN 'murdre'
+        # Need to make this work outside of -rden
+        # check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðər->dər", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending ALSO need to fix th->d
+        # check("spiþre", "spider")
+
+        # Vowel shortening
+        check("brōþor", "brother")
+        check("mōdor", "mother")
+
         return [total, failures]
 
     # Tests for homorganic lengthening, and related pre-cluster shortening and vowel changes
@@ -593,7 +609,8 @@ class DiachronizerTests(unittest.TestCase):
         check("open", "open")
 
         # ...and there are a few other exceptions
-        check("mæġden", "maiden", overrides=[["Orth:ə->o", False]])
+        # check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðər->dər", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending ALSO need to fix th->d
+        check("mæġden", "maiden", overrides=[["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
 
         # Words with a final 'w' also use 'o' -----------------------
         check("wealwi|an", "wallow")

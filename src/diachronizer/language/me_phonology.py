@@ -132,6 +132,18 @@ def from_oe_phonemes(oe_phonemes, config):
             else:
                 return [Phoneme("ə", template=state.current)]
 
+        # TODO: Consider de-geminating following geminates
+        # OED for 'after': The geminate ‑rr‑ in æfterra, which arises from the fusion of stem-final consonant ‑r 
+        # with the comparative ending ‑ra (see ‑er suffix3), is simplified after the reduction of secondary stress 
+        # on the medial syllable (æftera)
+        # May also explain 'almesse' -> 'alms'
+
+    # def syncope_of_unstressed_medial_vowel(state):
+        # OED entry on 'church': The β forms show syncope of the unstressed medial vowel after short initial syllable ending 
+        # in a liquid consonant, a sound change that occurs sporadically in Old English
+        # (see R. M. Hogg Gram. Old Eng. (1992) vol. I. §6.67 note 2).
+        # May also explain 'almesse' -> 'alms'
+
     # 'ɣ' and 'w' (both deriving from 'g' phoneme) become 'u' following vowels
     def vocalization_of_post_vocalic_g(state):
         if state.prev and state.prev.is_vowel():
@@ -151,6 +163,7 @@ def from_oe_phonemes(oe_phonemes, config):
             if state.next and state.next.is_vowel():
                 return [Phoneme("w", template=state.current)]
             else:
+                # TODO: Consider using history to allow forms in '-ough'? Rarer I think, but e.g. 'borough'
                 value = often("G:-Cg->w/x", config)
                 return [Phoneme(value, template=state.current)]
 
