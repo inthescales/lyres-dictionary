@@ -197,9 +197,15 @@ def from_me_phonemes(phonemes, config):
                 if next1.value in ["m", "n", "w"] \
                     and prev and prev.value != "v" \
                     and not would_have_inserted_lengthening_e \
-                    and (next1.value not in ["n"] or often("Orth:ə->o", config)):
+                    and ( \
+                        result[-1] == "c" # Never use 'e' following a 'c'
+                        or next1.value not in ["n"] # Only 'n' endings are subject to the hinge below
+                        or often("Orth:ə->o", config)
+                    ):
+                    # Words ending in 'm', 'n', or 'w' usually take 'o'
                     result += "o"
                 elif next1.value == "k":
+                    # As in 'garlic'. But need to consider '-ock' cases as well.
                     result += "i"
                 elif next1.value == "l" \
                     and prev and prev.value == "v" \
@@ -276,8 +282,10 @@ def from_me_phonemes(phonemes, config):
                 result += "gh"
         elif phone.value == "k":
             if not next1 and prev and prev.is_vowel() and prev.is_short():
+                # Doubled form after a short vowel
                 result += "ck"
             elif next1 and next1.value == "w":
+                # 'qu' when followed by a /w/
                 result += "qu"
                 skip_next = True
             elif (not prev or prev.is_vowel()) \
@@ -285,6 +293,7 @@ def from_me_phonemes(phonemes, config):
                 and next1.value != "n" \
                 and not next1.value in ["e", "i", "eː", "iː"] \
                 and not insert_lengthening_e:
+                # 'c' when not followed by a /e/ or /e/
                 result += "c"
             else:
                 result += "k"

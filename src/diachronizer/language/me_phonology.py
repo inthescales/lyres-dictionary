@@ -38,7 +38,6 @@ def from_oe_phonemes(oe_phonemes, config):
             return [state.capture[0].get_lengthened(), state.capture[1], state.capture[2]]
 
     def pre_three_cluster_shortening(state):
-        # TODO: don't do this in antepenultimate syllable, as in 'aldormann'
         if state.current.is_vowel() and state.current.is_long() \
             and len(state.following) >= 3 and all(phoneme.is_consonant() for phoneme in state.following[:3]):
 
@@ -263,6 +262,9 @@ def from_oe_phonemes(oe_phonemes, config):
                 return [state.current.get_lengthened()]
 
     def trisyllabic_laxing(state):
+        # TODO: See whether verbs should essentially have an extra syllable here
+        # Consider cases like 'beckon' vs 'beacon' – basically the same except one is a verb and has extra syllables at the end
+        # for inflections etc
         if state.current.is_vowel() and state.syllable_data.following_syllable_count > 1:
             return [state.current.get_shortened()]
 
@@ -343,28 +345,36 @@ def from_oe_phonemes(oe_phonemes, config):
         print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
     rig.run_capture(harden_g, 1, "Harden g's", config)
+
     rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", config)
     rig.run_capture(pre_three_cluster_shortening, 1, "Pre-cluster shortening", config)
+
     rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", config)
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", config)
     rig.run_capture(degemination_following_unstressed_vowel, 1, "Degemination following unstressed vowels", config)
     rig.run_capture(syncope_of_medial_unstressed_vowels, 1, "Syncope of unstressed medial vowels", config)
+
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
     rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", config)
     rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", config)
     rig.run_capture(change_of_post_consonantal_g, 1, "Change of post-consonantal ɣ", config)
+
     rig.run_capture(diphthong_formation_3, 3, "Diphthong formation 1", config)
     rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", config)
     rig.run_capture(breaking, 2, "Breaking", config)
+
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
     rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
+    
     rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", config)
-    rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
+    
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
     rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
+
+    rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
 
     return rig.phonemes

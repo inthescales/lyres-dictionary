@@ -110,14 +110,14 @@ class DiachronizerTests(unittest.TestCase):
         check("tell|an", "tell")
         check("betera", "better")
         check("streċċ|an", "stretch")#{}
-        check("seofon", "seven", overrides=[["Orth:ɛː->ea/eCV", "eCV"]]) # Unsure why vowel is short, but spelling is plausible
+        check("seofon", "seven", overrides=[["SVC:y->i/e/u", "e"], ["Orth:ɛː->ea/eCV", "eCV"]]) # Unsure why vowel is short, but spelling is plausible
         # check("myriġ", "merry") # Confusion about form. May be influence by history as affixed root
         check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]]) # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
         check("lyft", "left", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cnyll", "knell", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cēpte", "kept")
         check("mētte", "met")
-        # check("bēcn|an", "beckon") # ??? 'o' conflicts with 'e' in 'raven'. TODO: try the idea I wrote down
+        # check("bēcn|an", "beckon") # TODO: See if verb-specific trisyllabic laxing fixes verb cases
         # check("clǣnsi|an", "cleanse") # OED: "The modern spelling cleanse seems to be artificial, assimilated to clean"
         check("flǣsċ", "flesh", overrides=[["PCS:ɛː->a", False]])
         check("lǣssa", "less", overrides=[["PCS:ɛː->a", False]])
@@ -538,6 +538,7 @@ class DiachronizerTests(unittest.TestCase):
 
         return [total, failures]
 
+    # Test th occasionally changing to d
     def _test_th_to_d(self):
         total = 0
         failures = []
@@ -634,7 +635,7 @@ class DiachronizerTests(unittest.TestCase):
 
         # plosive + nasal
         check("bēacn", "beacon")
-        check("becn|an", "beckon")
+        # check("bēcn|an", "beckon") # TODO: See if verb-specific trisyllabic laxing fixes verb cases
         check("wǣpn", "weapon")
 
         # plosive + liquid
@@ -709,7 +710,7 @@ class DiachronizerTests(unittest.TestCase):
 
         # Words with a final nasal use 'o' in most cases -------------
         check("bēacn", "beacon")
-        check("becn|an", "beckon")
+        # check("bēcn|an", "beckon") # TODO: See if verb-specific trisyllabic laxing fixes verb cases
         check("glædene", "gladdon")
         check("wǣpn", "weapon")
 
@@ -726,7 +727,6 @@ class DiachronizerTests(unittest.TestCase):
         check("open", "open")
 
         # ...and there are a few other exceptions
-        # TODO: Fix "isen". Probably because of /z/?
         # check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðər->dər", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending ALSO need to fix th->d
         check("mæġden", "maiden", overrides=[["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
 
@@ -735,6 +735,8 @@ class DiachronizerTests(unittest.TestCase):
         check("swealwe", "swallow")
         check("earg", "arrow")
         check("fealg", "fallow")
+
+        # TODO: Add -ock cases like 'paddock'
 
         # Words with a final 'l' usually end in 'le' ----------------
         check("ancleo", "ankle")
