@@ -132,17 +132,31 @@ def from_oe_phonemes(oe_phonemes, config):
             else:
                 return [Phoneme("ə", template=state.current)]
 
-        # TODO: Consider de-geminating following geminates
+    def degemination_following_unstressed_vowel(state):
         # OED for 'after': The geminate ‑rr‑ in æfterra, which arises from the fusion of stem-final consonant ‑r 
         # with the comparative ending ‑ra (see ‑er suffix3), is simplified after the reduction of secondary stress 
         # on the medial syllable (æftera)
         # May also explain 'almesse' -> 'alms'
+        if state.current.is_geminate() \
+            and state.prev and state.prev.value == "ə":
+            return [state.current.get_geminate_reduced()]
 
-    # def syncope_of_unstressed_medial_vowel(state):
-        # OED entry on 'church': The β forms show syncope of the unstressed medial vowel after short initial syllable ending 
-        # in a liquid consonant, a sound change that occurs sporadically in Old English
-        # (see R. M. Hogg Gram. Old Eng. (1992) vol. I. §6.67 note 2).
-        # May also explain 'almesse' -> 'alms'
+    def syncope_of_medial_unstressed_vowels(state):
+        # Present in cases like 'ċiriċe' -> 'church'
+        # OED mentions this happening after liquids, but 'almesse' -> 'alms' makes me think nasals are included
+
+        # TODO: Figure out if we need "medial_ə_syncope" hinge
+        # If so, OED suggests it should be often before consant cluster, occasional as medial vowel ('church' vs 'world' entries)
+
+        if state.current.value == "ə" \
+            and state.syllable_data.prev_vowel and state.syllable_data.prev_vowel.is_short() \
+            and state.prev and (state.prev.is_liquid() or state.prev.is_nasal()) \
+            and (
+                (len(state.following) >= 2 and all(phone.is_consonant() for phone in state.following[0:2]))
+                or (state.next and state.next.is_geminate())
+                or state.syllable_data.following_syllable_count > 0
+            ):
+            return []
 
     # 'ɣ' and 'w' (both deriving from 'g' phoneme) become 'u' following vowels
     def vocalization_of_post_vocalic_g(state):
@@ -299,7 +313,7 @@ def from_oe_phonemes(oe_phonemes, config):
     # 'hræfn' -> 'raven', 'fæþm' -> 'fathom', 'swealwe' -> 'swallow', etc.
     #
     # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
-    def final_consonant_cluster_breaking(state):
+    def consonant_cluster_breaking(state):
         if all(phone.is_consonant() for phone in state.capture) \
             and state.syllable_data.prev_vowel != None \
             and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
@@ -333,6 +347,8 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(pre_three_cluster_shortening, 1, "Pre-cluster shortening", config)
     rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", config)
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", config)
+    rig.run_capture(degemination_following_unstressed_vowel, 1, "Degemination following unstressed vowels", config)
+    rig.run_capture(syncope_of_medial_unstressed_vowels, 1, "Syncope of unstressed medial vowels", config)
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
     rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", config)
     rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", config)
@@ -342,7 +358,7 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(breaking, 2, "Breaking", config)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
-    rig.run_capture(final_consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
+    rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
     rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)

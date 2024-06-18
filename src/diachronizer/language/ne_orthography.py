@@ -296,7 +296,7 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ʃ":
             result += "sh"
         elif phone.value == "tʃ":
-            if not next1:
+            if not next1 and prev and prev.is_vowel() and prev.is_short():
                 result += "tch"
             else:
                 result += "ch"
@@ -335,8 +335,11 @@ def from_me_phonemes(phonemes, config):
                 result = result[:-1] + ["ck"]
             elif not (phone.value == "z" and len(result) and result[-1] == "s"):
                 result += result[-1]
-        elif not next1 and phone.value in ["v", "z"] and result[-1] != "e":
-            # Makes sure certain voiced fricatives don't end a word
+        elif not next1 and result[-1] != "e" \
+            and (phone.value == "v" \
+            or (phone.value == "z" and not (prev and prev.is_nasal()))):
+            # Certain voiced fricatives ('v', 's' as /z/) shouldn't end a word
+            # One exception is nasal + /z/, as in 'alms'
             result += "e"
         
         if phone.is_vowel() and phone.stressed:

@@ -20,8 +20,10 @@ class DiachronizerTests(unittest.TestCase):
             self._test_affixes,
             self._test_compounds,
             self._test_der_ther_alternation,
+            # self._test_unstressed_vowel_syncope,
             self._test_homorganic_lengthening,
             self._test_unstressed_vowel_spelling,
+            self._test_consonant_cluster_breaking,
             self._test_misc
         ]
         
@@ -83,7 +85,7 @@ class DiachronizerTests(unittest.TestCase):
         check("smæl", "small")
         check("all", "all")
         check("walci|an", "walk")
-        # check("ælmesse", "alms") # Not sure how to make this work. Maybe misparsed as plural
+        check("ælmesse", "alms")
         check("palm", "palm")
         check("glæs", "glass")
         check("græs", "grass")
@@ -226,7 +228,7 @@ class DiachronizerTests(unittest.TestCase):
         check("bysċ", "bush", overrides=[["SVC:y->i/e/u", "u"]])
 
         check("spurn|an", "spurn")
-        # check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]]) # Can't explain loss of second vowel
+        check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]])
         # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation without 'r' (see spider, afford)
         check("hyrdel", "hurdle", overrides=[["SVC:y->i/e/u", "u"]])
         check("word", "word")
@@ -541,6 +543,25 @@ class DiachronizerTests(unittest.TestCase):
 
         return [total, failures]
 
+    # Tests for removal of unstressed vowels
+    def _test_unstressed_vowel_syncope(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        check("ælmesse", "alms")
+        check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]])
+        check("weorold", "world")
+
+        return [total, failures]
+
     # Tests for homorganic lengthening, and related pre-cluster shortening and vowel changes
     def _test_homorganic_lengthening(self):
         total = 0
@@ -574,7 +595,90 @@ class DiachronizerTests(unittest.TestCase):
 
         return [total, failures]
 
-    # Tests related to the vowel used to spell unstressed vowels (i.e. /ə/)
+    def _test_consonant_cluster_breaking(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = diachronizer.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # Breaking -----------
+
+        # fricative + nasal
+        check("besmā", "besom")
+        check("fæþm", "fathom")
+        check("hræfn", "raven")
+
+        # fricative + liquid
+        check("tæfl", "tavel")
+
+        # plosive + nasal
+        check("bēacn", "beacon")
+        check("becn|an", "beckon")
+        check("wǣpn", "weapon")
+
+        # plosive + liquid
+        check("ancleo", "ankle")
+        check("blǣddre", "bladder", overrides=[["DThA:dər->ðər", False]]) # List used different form
+        check("fōstri|an", "foster")
+
+        # semivowel + semivowel
+        check("swealwe", "swallow")
+        check("wealwi|an", "wallow")
+        check("earg", "arrow")
+        check("fealg", "fallow")
+
+        # Not breaking -------
+
+        # nasal + plosive
+        check("cyng", "king")
+        check("drinc|an", "drink")
+
+        # nasal + fricative
+        check("anfeal", "anvil") # Hypothetical form, noted below
+
+        # fricative + plosive
+        check("æsp", "asp")
+        check("cræfte", "craft")
+        check("frost", "frost")
+
+        # semivowel + fricative
+        check("eorþe", "earth")
+        check("wolf", "wolf")
+
+        # semivowel + nasal
+        check("ġeorni|an", "yearn")
+        check("wyrm", "worm")
+
+        # semivowel + plosive
+        check("ċild", "child")
+        check("heard", "hard")
+        check("hund", "hound")
+        check("hwelp", "whelp")
+        check("milc", "milk")
+        check("milde", "mild")
+
+        # semivowel + semivowel
+        check("sylfer", "silver", overrides=[["SVC:y->i/e/u", "i"]])
+
+        # plosive + plosive
+
+        # rl
+
+        # ks
+
+        # Cj
+
+        
+
+        return [total, failures]
+
+    # Tests that consonant clusters are, and are not, broken up with a ə when they should be
     def _test_unstressed_vowel_spelling(self):
         total = 0
         failures = []
@@ -586,7 +690,7 @@ class DiachronizerTests(unittest.TestCase):
             total += 1
             if not form == target:
                 failures.append([form, target])
-        
+
         # In most cases, /ə/ is spelled with an 'e' ------------------
         check("feþer", "feather")
 
@@ -609,6 +713,7 @@ class DiachronizerTests(unittest.TestCase):
         check("open", "open")
 
         # ...and there are a few other exceptions
+        # TODO: Fix "isen". Probably because of /z/?
         # check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðər->dər", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending ALSO need to fix th->d
         check("mæġden", "maiden", overrides=[["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
 

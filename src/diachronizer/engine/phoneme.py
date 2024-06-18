@@ -56,7 +56,7 @@ class Phoneme:
         return self.value in ["b", "d", "g", "ɣ", "m", "n", "l", "r", "w", "dʒ", "v", "z", "ð"]
 
     def is_plosive(self):
-        plosives = ["b", "c", "ċ", "dʒ", "d", "g", "k", "p", "t"]
+        plosives = ["b", "c", "ċ", "dʒ", "d", "g", "k", "p", "t", "tʃ"]
         return self.value in plosives
 
     def is_fricative(self):
@@ -64,6 +64,10 @@ class Phoneme:
 
     def is_nasal(self):
         plosives = ["n", "m"]
+        return self.value in plosives
+
+    def is_liquid(self):
+        plosives = ["l", "r"]
         return self.value in plosives
         
     def is_semivowel(self):

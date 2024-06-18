@@ -29,6 +29,7 @@ def hinge(id, odds, config):
         "DThA:dər->ðər": [True, False],
         "DThA:ðər->dər": [False, True],
         "G:-Cg->w/x": ["w", "x"],
+        "medial_ə_syncope": [True, False],
         "Orth:aiV->ai/ay": ["ai", "ay"],
         "Orth:ɛ/iu->ew/ue": ["ew", "ue"],
         "Orth:e+r->e/a/ea": ["ea", "e", "a"],
