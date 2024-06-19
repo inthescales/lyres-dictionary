@@ -16,9 +16,14 @@ def oe_form_to_ne_form(oe_form, config):
     modern_form = ""
 
     for element_form in elements:
-        oe_phonemes = oe_phonology.from_oe_written(element_form)
-        me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
-        form = ne_orthography.from_me_phonemes(me_phonemes, config)
+        prefix = oe_phonology.get_prefix(element_form)
+        if prefix != None:
+            form = prefix
+        else:
+            oe_phonemes = oe_phonology.from_oe_written(element_form)
+            me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
+            form = ne_orthography.from_me_phonemes(me_phonemes, config)
+        
         modern_form += form
 
     return modern_form

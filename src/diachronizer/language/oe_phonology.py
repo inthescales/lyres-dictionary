@@ -55,17 +55,22 @@ graph_trie = {
     "|": TrieNode("|")
 }
 def from_oe_written(word):
-    word = preprocess(word)
     graphs = get_graphs(word)
     return get_phonemes(graphs)
 
-def preprocess(word):
-    # For now remove all "ġe" prefixes
-    # TODO: allow these to mutate to a/i/e in some cases, as in 'afford', 'handiwork', 'enough'
-    if word.startswith("ġe|"):
-        word = word[3:]
+# Returns any prefix matching the given written form
+# Prefixes aren't subjected to the usual form evolution process, but have their own distinct forms
+# Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
+def get_prefix(form):
+    prefixes = {
+        "a": "a",
+        "be": "be",
+        "ġe": "", # TODO: Allow this to be rendered as /a/, /e/, or /i/ in some cases (as in 'afford', 'enough', 'handiwork')
+        "on": "a" # TODO: Maybe add a probability to this
+    }
 
-    return word
+    if form in prefixes:
+        return prefixes[form]
 
 def get_graphs(word):
     graphs = []

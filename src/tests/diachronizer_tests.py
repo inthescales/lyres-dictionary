@@ -117,7 +117,7 @@ class DiachronizerTests(unittest.TestCase):
         check("cnyll", "knell", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cēpte", "kept")
         check("mētte", "met")
-        # check("bēcn|an", "beckon") # TODO: See if verb-specific trisyllabic laxing fixes verb cases
+        # check("bēcn|an", "beckon") # TODO: Figure out conflict between trisyllabic laxing, pre-cluster shortening, and vowel insertion
         # check("clǣnsi|an", "cleanse") # OED: "The modern spelling cleanse seems to be artificial, assimilated to clean"
         check("flǣsċ", "flesh", overrides=[["PCS:ɛː->a", False]])
         check("lǣssa", "less", overrides=[["PCS:ɛː->a", False]])
@@ -635,7 +635,7 @@ class DiachronizerTests(unittest.TestCase):
 
         # plosive + nasal
         check("bēacn", "beacon")
-        # check("bēcn|an", "beckon") # TODO: See if verb-specific trisyllabic laxing fixes verb cases
+        # check("bēcn|an", "beckon") # TODO: Figure out conflict between trisyllabic laxing, pre-cluster shortening, and vowel insertion
         check("wǣpn", "weapon")
 
         # plosive + liquid
@@ -710,7 +710,7 @@ class DiachronizerTests(unittest.TestCase):
 
         # Words with a final nasal use 'o' in most cases -------------
         check("bēacn", "beacon")
-        # check("bēcn|an", "beckon") # TODO: See if verb-specific trisyllabic laxing fixes verb cases
+        # check("bēcn|an", "beckon") # TODO: Figure out conflict between trisyllabic laxing, pre-cluster shortening, and vowel insertion
         check("glædene", "gladdon")
         check("wǣpn", "weapon")
 

@@ -363,8 +363,8 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", config)
     rig.run_capture(breaking, 2, "Breaking", config)
 
-    rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
+    rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
     
