@@ -337,9 +337,9 @@ class DiachronizerTests(unittest.TestCase):
         check("mūs", "mouse")
         check("ūt", "out")
         check("hlūd", "loud")
-        check("ġe|fund|en", "found") # Needs prefix handling
+        check("ġe-fund|en", "found") # Needs prefix handling
         check("hund", "hound")
-        check("ġe|sund", "sound") # Needs prefix handling
+        check("ġe-sund", "sound") # Needs prefix handling
         check("ūre", "our")
         # check("sċūr", "shower") # Produces 'shour', which is accurate to middle english. Unsure about modern spelling
         check("sūr", "sour")
@@ -434,7 +434,7 @@ class DiachronizerTests(unittest.TestCase):
         check("bōg", "bough")
         check("plōg", "plough")
 
-        # check("ġe|nōg", "enough") # Needs possibility for prefix to take vowel form
+        # check("ġe-nōg", "enough") # Needs possibility for prefix to take vowel form
         check("tōh", "tough")
         check("ruh", "rough")
         

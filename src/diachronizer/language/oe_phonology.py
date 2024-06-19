@@ -59,8 +59,6 @@ def from_oe_written(word):
     return get_phonemes(graphs)
 
 # Returns any prefix matching the given written form
-# Prefixes aren't subjected to the usual form evolution process, but have their own distinct forms
-# Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
 def get_prefix(form):
     prefixes = {
         "a": "a",
