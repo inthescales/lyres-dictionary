@@ -1,3 +1,17 @@
 [
-    
+	{
+        "key": "for-",
+        "form-stem": "for",
+        "type": "prep",
+        "prefix-on": "verb",
+        "gloss": "%@ away",
+        "origin": "old-english"
+    }, {
+        "key": "wiþ-",
+        "form-stem": "with",
+        "type": "prep",
+        "prefix-on": "verb",
+        "gloss": "%@ against",
+        "origin": "old-english"
+    }
 ]

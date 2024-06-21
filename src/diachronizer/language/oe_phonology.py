@@ -62,6 +62,7 @@ def from_oe_written(word):
 def get_prefix(form):
     prefixes = {
         "a": "a",
+        "ā": "a",
         "be": "be",
         "ġe": "", # TODO: Allow this to be rendered as /a/, /e/, or /i/ in some cases (as in 'afford', 'enough', 'handiwork')
         "on": "a" # TODO: Maybe add a probability to this

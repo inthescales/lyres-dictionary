@@ -27,5 +27,53 @@
         "tags": ["count", "concrete", "living", "person", "rare"],
         "origin": "old-english",
         "notes": "TODO: allow for abstracts that represent mental states, with exception to gloss as 'one who provokes...', e.g. 'fearmonger', or events e.g. 'warmonger'"
+    }, {
+        "key": "-smiþ",
+        "form-stem": "smiþ",
+        "form-raw": "smith",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "someone who makes %pl",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["man-made", "metallic"]
+            }
+        },
+        "tags": ["uncountable", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "-tīd",
+        "form-stem": "tide",
+        "form-raw": "tīd",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the time of %@",
+        "requires": {
+            "follows": {
+                "has-tag": "time"
+            }
+        },
+        "tags": ["count", "abstract", "bounded"],
+        "origin": "old-english"
+    }, {
+        "key": "-wryhta",
+        "form-stem": "wright",
+        "form-raw": "wryhta",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "someone who makes %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "man-made"
+            }
+        },
+        "tags": ["uncountable", "concrete", "living", "person"],
+        "origin": "old-english"
     }
 ]

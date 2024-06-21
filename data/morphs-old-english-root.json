@@ -179,6 +179,14 @@
         "gloss": "[fine], [beautiful]",
         "origin": "old-english"
     }, {
+        "key": "cwacian",
+        "form-raw": "cwaci|an",
+        "form-canon": "quake",
+        "type": "verb",
+        "gloss": "[shake] or [quiver]",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "cwēn",
         "form-raw": "cwēn",
         "form-canon": "queen",
@@ -265,14 +273,6 @@
         "type": "noun",
         "gloss": "judgement",
         "tags": ["mass", "abstract"],
-        "origin": "old-english"
-    }, {
-        "key": "drincan",
-        "form-raw": "drinc|an",
-        "form-canon": "drink",
-        "type": "verb",
-        "gloss": "drink",
-        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "dysiġ",

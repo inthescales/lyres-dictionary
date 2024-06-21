@@ -248,7 +248,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                     and helpers.syllable_count(form) == 1:
                     # If word ends in a consonant following a short vowel, and suffix begins with vowel, double the final consonant
                     form = form + form[-1]
-                elif form[-1] == "e" and helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3]):
+                elif form[-1] == "e" \
+                    and ((helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3])) \
+                    or form[-2] == "l"):
                     # If word ends in a silent e, and suffix begins with a vowel, drop the e
                     form = form[:-1]
             elif helpers.is_consonant(addition[0]):
@@ -256,6 +258,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                     # Eliminate triple consonants
                     # Possible alternative: use a dash, as in 'burgess-ship'
                     form = form[:-1]
+                elif form[-2:-1] == addition[0:2] and addition[0:2] in ["sh", "ch", "th"]:
+                    # Break up repeated digraphs
+                    addition = "-" + addition
 
             if form[-1] == "y" and (helpers.is_consonant(addition[0]) or addition[0] == "e") \
                 and (helpers.is_consonant(form[-2]) or morph.morph["key"] == "-liċ"):

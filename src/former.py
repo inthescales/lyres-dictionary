@@ -140,10 +140,15 @@ def gloss(morph, env):
             return morph_dict["gloss-relative"]
     
     if "gloss" in morph_dict:
-        if morph_dict["type"] in ["noun", "verb"] and len(morph_dict["gloss"].split(" ")) == 1:
-            return "[" + morph_dict["gloss"] + "]"
+        if type(morph_dict["gloss"]) is list:
+            random = Random(morph.seed)
+            gloss = random.choice(morph_dict["gloss"])
         else:
-            return morph_dict["gloss"]
+            gloss = morph_dict["gloss"]
+        if morph_dict["type"] in ["noun", "verb"] and len(gloss.split(" ")) == 1:
+            return "[" + gloss + "]"
+        else:
+            return gloss
     else:
         
         if env.next:

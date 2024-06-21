@@ -57,6 +57,8 @@ valid_tags = [
     "bodypart-single",          # Noun semantics - a bodypart that a being has only one of, like heart or head
     "secretion",                # Noun semantics - a bodily secretion, or mental creation
     "garment",                  # Noun semantics - a garment, or anything that is worn on the body
+    "man-made",                 # Noun semantics - something made by humans
+    "metallic",                 # Noun semantics - an object made from metal
     "tool",                     # Noun semantics - a tool
     "weapon",                   # Noun semantics - a weapon
     "material",                 # Noun semantics - a material things can be made out of
@@ -75,6 +77,8 @@ valid_tags = [
     "number",                   # Noun semantics - a number (used as a noun)
     "superlative",              # Adjective morphology - a superlative
     "character",                # Adjective semantics - descriptor of a person's character
+    "a-prefix",                 # Verb lexical - can take the OE 'ā-' prefix without change in meaning
+    "ge-prefix",                # Verb lexical - can take the OE 'ġe-' prefix without change in meaning
     "transitive",               # Verb transitivity - transitive verb
     "intransitive",             # Verb transitivity - intransitive verb
     "no-prep",                  # Verb morphology - cannot take a prepositional prefix
@@ -87,6 +91,7 @@ valid_tags = [
     "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
     "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Generation - does not count towards maximum morph count
+    "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
     "speculative",              # Generation - the morph is not attested in modern English
     "rare",                     # Generation - occurs less often in generation
     "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix

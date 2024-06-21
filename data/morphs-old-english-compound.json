@@ -1,5 +1,12 @@
 [
     {
+        "key": "ǣ-fast",
+        "form-raw": "ǣ-fast",
+        "type": "adj",
+        "gloss": "[religious], [pious]",
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
         "key": "ǣġ-wyrt",
         "form-raw": "ǣġ-wyrt",
         "form-canon": "eggwort",
