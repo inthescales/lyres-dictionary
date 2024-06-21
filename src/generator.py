@@ -32,7 +32,7 @@ def generate_word(morphothec):
     transforms_done = 0
     while (transforms_done < transform_count and word.size() < maximum_size) \
         or not word.last_morph().final_ok():
-        transforms.transform_word(word, morphothec)
+        transforms.transform_word(word, morphothec, transform_count == 1)
         transforms_done += 1
     
     Logger.trace("generated morph: " + str(word.get_keys()))

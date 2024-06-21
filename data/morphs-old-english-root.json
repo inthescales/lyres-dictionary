@@ -5,7 +5,7 @@
         "form-canon": "apple",
         "type": "noun",
         "gloss": "apple",
-        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant", "food"],
         "origin": "old-english"
     }, {
         "key": "ǣr",
@@ -54,7 +54,7 @@
         "form-canon": "oat",
         "type": "noun",
         "gloss": "oats",
-        "tags": ["mass", "concrete", "living", "plant", "material"],
+        "tags": ["mass", "concrete", "living", "plant", "food"],
         "origin": "old-english",
         "notes": "Alternate form 'ǣte'"
     },{
@@ -112,6 +112,7 @@
         "type": "adj",
         "gloss": "[cautious] or [circumspect]",
         "origin": "old-english",
+        "tags": ["obscure"],
         "notes": "Alternate meaning 'sorrowful'"
     }, {
         "key": "ċild",
@@ -390,10 +391,10 @@
         "key": "framian",
         "form-raw": "frami|an",
         "type": "verb",
-        "gloss": "[profit], [avail]",
+        "gloss": "[set] in a frame or border",
         "tags": ["intransitive"],
         "origin": "old-english",
-        "notes": "Influenced 'frame', in combination with 'fremman'"
+        "notes": "Influenced 'frame', in combination with 'fremman'. Alternate meaning 'profit, avail'"
     }, {
         "key": "frēo",
         "form-raw": "frēo",
@@ -414,7 +415,7 @@
         "form-raw": "fremm|an",
         "type": "verb",
         "gloss": "construct",
-        "tags": ["transitive"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Influenced 'frame', in combination with 'framian'"
     }, {
@@ -454,7 +455,7 @@
         "form-canon": "glove",
         "type": "noun",
         "gloss": "glove",
-        "tags": ["count", "concrete", "garment"],
+        "tags": ["count", "concrete", "man-made", "garment"],
         "origin": "old-english"
     }, {
         "key": "god",
@@ -486,6 +487,7 @@
         "form-canon": "gole",
         "type": "adj",
         "gloss": "lascivious",
+        "tags": ["obscure"],
         "origin": "old-english"
     }, {
         "key": "ġeornian",
@@ -623,7 +625,7 @@
         "form-canon": "wheat",
         "type": "noun",
         "gloss": "wheat",
-        "tags": ["mass", "concrete", "living", "plant", "material"],
+        "tags": ["mass", "concrete", "living", "plant", "food"],
         "origin": "old-english"
     },
     {
@@ -703,7 +705,7 @@
         "form-raw": "liþ",
         "type": "noun",
         "gloss": "limb",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english",
         "notes": "Appears in 'lithy'"
     }, {
@@ -752,7 +754,7 @@
         "form-raw": "mangi|an",
         "type": "verb",
         "gloss": "trade",
-        "tags": ["transitive"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
      }, {
         "key": "mann",
@@ -785,7 +787,7 @@
         "form-canon": "milk",
         "type": "noun",
         "gloss": "milk",
-        "tags": ["mass", "concrete", "fluid", "liquid"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "food"],
         "origin": "old-english",
         "notes": "Form 'milc' is Anglian. West-saxon had 'meolc' / 'meoluc'"
     }, {
@@ -817,7 +819,7 @@
         "form-canon": "pall",
         "type": "noun",
         "gloss": "fine [cloth]",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "material", "obscure"],
         "origin": "old-english",
         "notes": "Survives in 'pallbearer'"
     }, {
@@ -888,14 +890,14 @@
         "origin": "old-english",
         "notes": "Would expect 'selk'. 'silc' appears in ME."
     }, {
-        "key": "seolfor",
-        "form-raw": "seolfor",
+        "key": "sylver",
+        "form-raw": "sylvur",
         "form-canon": "silver",
         "type": "noun",
         "gloss": "silver",
         "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english",
-        "notes": "'seolvor' WS. Mercian had 'sylver'"
+        "notes": "WS form 'seolvor'"
     }, {
         "key": "sōð",
         "form-raw": "sōð",
@@ -974,9 +976,8 @@
         "form-canon": "thole",
         "type": "verb",
         "gloss": "endure",
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Archaic / northern dialect"
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "þrāwan",
         "form-raw": "þrāw|an",
@@ -1131,7 +1132,7 @@
         "form-canon": "wether",
         "type": "noun",
         "gloss": "castrated [ram]",
-        "tags": ["count", "concrete", "living", "animal"],
+        "tags": ["count", "concrete", "living", "animal", "obscure"],
         "origin": "old-english"
     }
 ]

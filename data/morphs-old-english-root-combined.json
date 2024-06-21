@@ -312,16 +312,16 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "cyþan",
-        "form-raw": "cyþ|an",
+        "key": "cȳþan",
+        "form-raw": "cȳþ|an",
         "form-canon": "kithe",
         "type": "verb",
         "gloss": "[announce], [make] known",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "ācyþan",
-        "form-raw": "ā-cyþ|an",
+        "key": "ācȳþan",
+        "form-raw": "ā-cȳþ|an",
         "type": "verb",
         "gloss": "[announce], [make] known",
         "tags": ["transitive", "speculative"],
@@ -353,7 +353,7 @@
         "notes": "Alternate form 'drǣfan'"
     }, {
         "key": "ā-drīfan",
-        "form-raw": "ādrīf|an",
+        "form-raw": "ā-drīf|an",
         "type": "verb",
         "gloss": "[drive] out, [expel]",
         "tags": ["transitive", "speculative"],

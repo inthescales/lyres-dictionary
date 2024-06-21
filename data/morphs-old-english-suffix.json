@@ -127,7 +127,7 @@
         "gloss": "made from %pl",
         "requires": {
             "follows": {
-                "has-any-tags": ["material", "tree"]
+                "has-any-tags": ["food", "material", "tree"]
             }
         },
         "exception": [{

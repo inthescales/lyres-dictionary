@@ -291,7 +291,7 @@ def from_me_phonemes(phonemes, config):
             elif (not prev or prev.is_vowel()) \
                 and next1 \
                 and next1.value != "n" \
-                and not next1.value in ["e", "i", "eː", "iː"] \
+                and not next1.value in ["ɛ", "e", "i", "ɛː", "eː", "iː"] \
                 and not insert_lengthening_e:
                 # 'c' when not followed by a /e/ or /e/
                 result += "c"

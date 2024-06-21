@@ -167,22 +167,23 @@ def get_definition(word):
     while len(prefix_stack) > 0:
         definition = pop_prefix(word.last_morph(), definition)
 
-    # Verbs not otherwise resolved become infinitives
-    if morph.get_type() == "verb":
-        return "to " + inflection.inflect(definition, "inf")
-    elif morph.get_type() == "noun":
-        inflected = inflection.inflect(definition, "sg")
+    # Make modifications to outermost gloss
+    if not morph.has_tag("fixed-gloss"):
+        if morph.get_type() == "verb":
+            return "to " + inflection.inflect(definition, "inf")
+        elif morph.get_type() == "noun":
+            inflected = inflection.inflect(definition, "sg")
 
-        if morph.has_tag("count"):
-            return "a " +  inflected
-        elif morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-            return inflected
-        elif morph.has_tag("singleton"):
-            return "the " + inflected
-        else:
-            return inflected
-    else:
-        return definition
+            if morph.has_tag("count"):
+                return "a " +  inflected
+            elif morph.has_tag("mass") or morph.has_tag("uncountable"):
+                return inflected
+            elif morph.has_tag("singleton"):
+                return "the " + inflected
+            else:
+                return inflected
+
+    return definition
 
 def get_joined_form(language, last_morph, morph, original, proposed):
     form = original
@@ -243,7 +244,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
     if language == "old-english":
         if morph.is_suffix():
             if helpers.is_vowel(addition[0], True):
-                if helpers.is_consonant(form[-1]) and form[-1] != "y" and helpers.is_vowel(form[-2]) and not helpers.is_vowel(form[-3]) \
+                if len(form) >= 2 \
+                and helpers.is_consonant(form[-1]) and form[-1] != "y" \
+                and helpers.is_vowel(form[-2]) and not (len(form) >= 3 and helpers.is_vowel(form[-3])) \
                     and form[-1] not in ["w", "x"] \
                     and helpers.syllable_count(form) == 1:
                     # If word ends in a consonant following a short vowel, and suffix begins with vowel, double the final consonant

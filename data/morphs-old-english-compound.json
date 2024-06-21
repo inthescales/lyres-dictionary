@@ -15,13 +15,14 @@
         "tags": ["count", "concrete", "living", "plant", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "cwic-seolfor",
-        "form-raw": "cwic-seolfor",
+        "key": "cwic-sylfur",
+        "form-raw": "cwic-sylfur",
         "form-canon": "quicksilver",
         "type": "noun",
         "gloss": "mercury",
         "tags": ["mass", "concrete", "fluid", "liquid", "metal"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Alternate form 'seolfor'"
     },
     {
         "key": "middan-ġeard",

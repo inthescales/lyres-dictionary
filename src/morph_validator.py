@@ -62,6 +62,7 @@ valid_tags = [
     "tool",                     # Noun semantics - a tool
     "weapon",                   # Noun semantics - a weapon
     "material",                 # Noun semantics - a material things can be made out of
+    "food",                     # Noun semantics - a food or ingredient of food
     "metal",                    # Noun semantics - a metal
     "fluid",                    # Noun semantics - a fluid, like a liquid or gas
     "liquid",                   # Noun semantics - a liquid
@@ -91,12 +92,13 @@ valid_tags = [
     "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
     "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Generation - does not count towards maximum morph count
-    "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
-    "speculative",              # Generation - the morph is not attested in modern English
     "rare",                     # Generation - occurs less often in generation
     "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix
-    "non-final",                # Generation - cannot be the final morph in the word"
+    "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
+    "speculative",              # Generation - the morph is not attested in modern English
+    "non-final",                # Generation - cannot be the final morph in the word
     "suffix-only",              # Generation - adding a suffix is the only valid transformation following this morph
+    "fixed-gloss"               # Generation - the gloss of this morph is fixed - no additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds
 ]
 
 def validate_morph(morph):
