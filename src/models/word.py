@@ -46,6 +46,11 @@ class Word:
         else:
             return None
 
+    def root_morph(self):
+        for morph in self.morphs:
+            if morph.get_type() not in ["prep", "prefix", "derive"]:
+                return morph
+
     # Returns the environment of a potential prefix.
     def prefix_environment(self):
         return self.environment_for_index(-1)

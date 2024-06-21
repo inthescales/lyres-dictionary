@@ -11,10 +11,21 @@ def generate_word(morphothec):
     word = Word(morphothec)
     transforms.seed_word(word, morphothec)
 
-    bag = [
-        (1, 5) #,
-        # (2, 3)
-    ]
+    if word.root_morph().has_tag("speculative"):
+        bag = [
+            (0, 3) ,
+            (1, 1)
+        ]
+    elif word.root_morph().has_tag("obscure"):
+        bag = [
+            (0, 2) ,
+            (1, 1)
+        ]
+    else:
+        bag = [
+            (1, 5) #,
+            # (2, 3)
+        ]
     transform_count = helpers.choose_bag(bag)
     maximum_size = 3
     
