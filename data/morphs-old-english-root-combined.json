@@ -52,6 +52,15 @@
         "tags": ["count", "abstract", "bounded", "time"],
         "origin": "old-english"
     }, {
+        "key": "ātr",
+        "form-raw": "ātr",
+        "form-canon": "atter",
+        "type": "noun",
+        "gloss": "[poison], [venom]",
+        "tags": ["mass", "concrete", "liquid", "secretion", "obscure"],
+        "origin": "old-english",
+        "notes": "alternate meanings 'gall, bitterness', 'corrupt matter, pus'"
+    }, {
         "key": "belgan",
         "form-raw": "belg|an",
         "form-canon": "bellow",
@@ -86,6 +95,14 @@
         "tags": ["intransitive", "obscure"],
         "origin": "old-english",
         "notes": "Original meaning 'offer, give' and 'proclaim, announce'"
+    }, {
+        "key": "berġan",
+        "form-raw": "berġ|an",
+        "type": "verb",
+        "gloss": "taste",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian. WS 'bierġan' / 'byrġan'. Alternate meaning 'partake of'"
     }, {
         "key": "biddan",
         "form-raw": "bidd|an",
@@ -422,5 +439,192 @@
         "gloss": "eternal",
         "origin": "old-english",
         "notes": "Alt. form 'ǣċe"
-    }
+    }, {
+        "key": "weorþan",
+        "form-raw": "weorþ|an",
+        "type": "verb",
+        "gloss": "become",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'happen'"
+    },  {
+        "key": "fang",
+        "form-raw": "fang",
+        "type": "noun",
+        "gloss": "[plunder] or [spoils]",
+        "tags": ["mass", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "fear",
+        "form-raw": "fear",
+        "type": "noun",
+        "gloss": "[bull] or [ox]",
+        "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "feax",
+        "form-raw": "feax",
+        "form-canon": "fax",
+        "type": "noun",
+        "gloss": "hair",
+        "tags": ["mass", "concrete", "bodypart", "speculative", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "fōn",
+        "form-raw": "fōn",
+        "form-canon": "fang",
+        "type": "verb",
+        "gloss": "[sieze] or [capture]",
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "fram",
+        "form-raw": "fram",
+        "type": "adj",
+        "gloss": "[vigorous] or [bold]",
+        "origin": "old-english",
+        "tags": ["speculative"],
+        "notes": "Various meanings. This gloss captures the general thrust."
+    }, {
+        "key": "fyhtan",
+        "form-raw": "fyht|an",
+        "type": "verb",
+        "gloss": "moisten",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+     },{
+        "key": "hǣmed",
+        "form-raw": "hǣmed",
+        "type": "adj",
+        "gloss": "married",
+        "tags": ["speculative"],
+        "origin": "old-english",
+        "notes": "As adj. observed chiefly in compounds, e.g. 'hǣmedwīf', 'hǣmedscip'"
+    }, {
+        "key": "hǣman",
+        "form-raw": "hǣm|an",
+        "type": "verb",
+        "gloss": "[have] sex with",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'to cohabitate'. Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
+    }, {
+        "key": "ġearu",
+        "form-raw": "ġearu",
+        "form-canon": "yare",
+        "type": "adj",
+        "gloss": "ready",
+        "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "ġeorn",
+        "form-raw": "ġeorn",
+        "type": "adj",
+        "gloss": "eager",
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "heoru",
+        "form-raw": "heoru",
+        "type": "noun",
+        "gloss": "sword",
+        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "holen",
+        "form-raw": "holen",
+        "form-canon": "hollin",
+        "type": "noun",
+        "gloss": "holly",
+        "tags": ["mass", "concrete", "living", "plant", "obscure"],
+        "origin": "old-english",
+        "notes": "Alternate OE form 'holeġn', ME 'holm', 'holly'"
+    }, {
+        "key": "hrūse",
+        "form-raw": "hrūse",
+        "type": "noun",
+        "gloss": "ground",
+        "tags": ["singleton", "concrete", "terrain", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "īsen",
+        "form-raw": "īsen",
+        "form-canon": "isen",
+        "type": "noun",
+        "gloss": "iron",
+        "tags": ["mass", "concrete", "metal", "material", "obscure"],
+        "origin": "old-english",
+        "notes": "More standard form of 'īren', which led to modern form of 'iron'"
+    }, {
+        "key": "lāc",
+        "form-raw": "lāc",
+        "type": "noun",
+        "gloss": ["[play] or [sport]", "[battle] or [strife]", "gift"],
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "lof",
+        "form-raw": "lof",
+        "form-canon": "lofe",
+        "type": "noun",
+        "gloss": "[praise], [glory]",
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english",
+        "notes": "Glossed meaning is from OE. In dialects, meaning is 'offer', 'price'"
+    }, {
+        "key": "lōf",
+        "form-raw": "lōf",
+        "form-canon": "loof",
+        "type": "noun",
+        "gloss": "[palm] of the hand",
+        "tags": ["count", "concrete", "living", "bodypart", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "lofian",
+        "form-raw": "lofi|an",
+        "form-canon": "lofe",
+        "type": "verb",
+        "gloss": "praise",
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "mearh",
+        "form-raw": "mearh",
+        "type": "noun",
+        "gloss": "horse",
+        "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "midl",
+        "form-raw": "midl",
+        "type": "noun",
+        "gloss": "[bit] or [curb] (of a bridle)",
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "smyrels",
+        "form-raw": "smyrels",
+        "form-canon": "smerl",
+        "type": "noun",
+        "gloss": "ointment",
+        "tags": ["mass", "concrete", "fluid", "liquid", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "wænge",
+        "form-raw": "wænge",
+        "form-canon": "wang",
+        "type": "noun",
+        "gloss": "cheek",
+        "tags": ["count", "concrete", "bodypart", "obscure"],
+        "origin": "old-english",
+        "notes": "Alternate forms 'wange', 'wonge', 'wenge'"
+    }, {
+        "key": "wylfen",
+        "form-raw": ["wylfen", "wylf"],
+        "type": "noun",
+        "gloss": "she-wolf",
+        "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english",
+        "notes": "Alternate form 'wylf'"
+     }
 ]

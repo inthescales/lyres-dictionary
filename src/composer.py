@@ -258,7 +258,7 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                     # Eliminate triple consonants
                     # Possible alternative: use a dash, as in 'burgess-ship'
                     form = form[:-1]
-                elif form[-2:-1] == addition[0:2] and addition[0:2] in ["sh", "ch", "th"]:
+                elif len(form) >= 2 and len(addition) >=2 and form[-2:-1] == addition[0:2] and addition[0:2] in ["sh", "ch", "th"]:
                     # Break up repeated digraphs
                     addition = "-" + addition
 
