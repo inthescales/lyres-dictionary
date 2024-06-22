@@ -307,7 +307,15 @@
         "gloss": "small %@",
         "requires": {
             "follows": {
-                "has-tag": "count"
+                "and": [
+                    { "has-tag": "count" },
+                    { "not": {
+                        "and": [
+                            { "has-declension": 3 },
+                            { "has-suffix": ["or", "ur", "er"]}
+                        ]
+                    }}
+                ]
             }
         },
         "exception": [
@@ -315,9 +323,9 @@
                 "case": {
                     "follows": {
                         "or": [
-                            { "has-declension": ["1", "2"] },
+                            { "has-declension": [1, 2] },
                             { "and": [
-                                { "has-declension": ["3", "4", "5"] },
+                                { "has-declension": [3, 4, 5] },
                                 { "has-suffix": ["c", "g"] }
                             ]}
                         ]
@@ -330,7 +338,7 @@
                 "case": {
                     "follows": {
                         "and": [
-                            { "has-declension": ["3", "4", "5"] },
+                            { "has-declension": [3, 4, 5] },
                             { "not": { "has-suffix": ["c", "g"] } }
                         ]
                     }
