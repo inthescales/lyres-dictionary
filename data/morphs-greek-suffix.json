@@ -41,6 +41,24 @@
         "tags": ["count", "abstract"],
         "origin": "greek"
     },
+{
+        "key": "-isk",
+        "form-final": "isk",
+        "form-stem": "isk",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 3,
+        "gloss": "small [%!sg]",
+        "requires": {
+            "follows": {
+                "has-tag": "count"
+            }
+        },
+        "tags": ["count", "rare"],
+        "origin": "greek",
+        "notes": "TODO: Consider adding passthrough concreteness"
+    },
     {
         "key": "-ite-dweller",
         "form-final": "ite",

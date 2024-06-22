@@ -291,6 +291,23 @@
         "origin": "old-english"
     },
     {
+        "key": "-oc",
+        "form-stem": "ock",
+        "form-raw": "oc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "small [%!sg]",
+        "requires": {
+            "follows": {
+                "has-tag": "count"
+            }
+        },
+        "tags": ["count"],
+        "origin": "old-english",
+        "notes": "TODO: Consider adding passthrough concreteness"
+    },
+    {
         "key": "-sċipe-adj",
         "form-stem": "ship",
         "form-raw": "sċipe",
