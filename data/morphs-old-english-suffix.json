@@ -297,7 +297,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "small [%!sg]",
+        "gloss": "small %@",
         "requires": {
             "follows": {
                 "has-tag": "count"

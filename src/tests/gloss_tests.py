@@ -93,8 +93,10 @@ class GlossTests(unittest.TestCase):
         self.assertGloss(["lumen", "-ate-tool", "-ion"], "the act of lighting up")
         
     def testGlossDescriptives(self):
-        self.assertGloss(["avis", "-cule"], "a small bird")
-        self.assertGloss(["avis", "-cule", "-al"], "pertaining to small birds")
+        self.assertGloss(["avis", "-ule"], "a small bird")
+        self.assertGloss(["avis", "-ule", "-al"], "pertaining to small birds")
+        self.assertGloss(["matrona", "-ule"], "a small married woman")
+        self.assertGloss(["matrona", "-ule", "-al"], "pertaining to small married women")
 
     def testGlossPunctuation(self):
         self.assertGloss(["nuntiare", "-or"], "one who announces, makes known")

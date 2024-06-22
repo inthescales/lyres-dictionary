@@ -49,7 +49,7 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "declension": 3,
-        "gloss": "small [%!sg]",
+        "gloss": "small %@",
         "requires": {
             "follows": {
                 "has-tag": "count"

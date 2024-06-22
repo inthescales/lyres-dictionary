@@ -297,15 +297,14 @@
         },
         "origin": "latin"
     }, {
-        "key": "-cule",
-        "form-final": "cule",
-        "form-stem": "cul",
+        "key": "-ule",
+        "form-final": "ule",
+        "form-stem": "ul",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
         "declension": 3,
-        "suffixes": ["-al", "-ous"],
-        "gloss": "small [%!sg]",
+        "gloss": "small %@",
         "requires": {
             "follows": {
                 "has-tag": "count"
@@ -315,16 +314,34 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["c", "g"]
+                        "or": [
+                            { "has-declension": ["1", "2"] },
+                            { "and": [
+                                { "has-declension": ["3", "4", "5"] },
+                                { "has-suffix": ["c", "g"] }
+                            ]}
+                        ]
                     }
                 },
                 "form-final": "ule",
                 "form-stem": "ul"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-declension": ["3", "4", "5"] },
+                            { "not": { "has-suffix": ["c", "g"] } }
+                        ]
+                    }
+                },
+                "form-final": ["cule", "cle"],
+                "form-stem": ["cul", "cle"]
             }
         ],
         "tags": ["count"],
         "origin": "latin",
-        "notes": "TODO: Consider adding passthrough concreteness"
+        "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule'"
     },
     {
         "key": "-esce",

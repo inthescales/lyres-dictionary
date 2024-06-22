@@ -29,6 +29,15 @@
         "origin": "latin"
     },
     {
+        "key": "matrona",
+        "form-stem": "matrona",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "married [woman]",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
         "key": "tempus",
         "form-stem": "tempor",
         "type": "noun",
@@ -258,16 +267,15 @@
         "tags": ["transitive", "no-gen"],
         "origin": "latin"
     },
-    {
-        "key": "-cule",
-        "form-final": "cule",
-        "form-stem": "cul",
+{
+        "key": "-ule",
+        "form-final": "ule",
+        "form-stem": "ul",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
         "declension": 3,
-        "suffixes": ["-al", "-ous"],
-        "gloss": "small [%!sg]",
+        "gloss": "small %@",
         "requires": {
             "follows": {
                 "has-tag": "count"
@@ -277,11 +285,29 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["c", "g"]
+                        "or": [
+                            { "has-declension": ["1", "2"] },
+                            { "and": [
+                                { "has-declension": ["3", "4", "5"] },
+                                { "has-suffix": ["c", "g"] }
+                            ]}
+                        ]
                     }
                 },
                 "form-final": "ule",
                 "form-stem": "ul"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-declension": ["3", "4", "5"] },
+                            { "not": { "has-suffix": ["c", "g"] } }
+                        ]
+                    }
+                },
+                "form-final": "cule",
+                "form-stem": "cul"
             }
         ],
         "tags": ["count"],
