@@ -75,10 +75,14 @@ def get_definition(word):
         else:
             words = part.split(" ")
             for (index, word) in enumerate(words):
+                bracketed = False
+                if word[0] == "[" and word[-1] == "]" and word[1] == "%":
+                    # Substitution points may be bracketed – preserve existing brackets
+                    bracketed = True
+                    word = word[1:-1]
+
                 if word == "%@":
                     words[index] = definition
-                if word == "[%@]":
-                    words[index] = "[" + definition + "]"
                 elif word == "%part":
                     words[index] = inflection.inflect(definition, "part")
                 elif word == "%ppart":
@@ -138,6 +142,9 @@ def get_definition(word):
                         words[index] = head + property_value + tail
                     else:
                         Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
+
+                if bracketed:
+                    words[index] = "[" + words[index] + "]"
 
 
             definition = " ".join(words)

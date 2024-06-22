@@ -92,6 +92,10 @@ class GlossTests(unittest.TestCase):
         self.assertGloss(["falx", "-ate-tool", "-ion"], "the act of reaping")
         self.assertGloss(["lumen", "-ate-tool", "-ion"], "the act of lighting up")
         
+    def testGlossDescriptives(self):
+        self.assertGloss(["avis", "-cule"], "a small bird")
+        self.assertGloss(["avis", "-cule", "-al"], "pertaining to small birds")
+
         
     # Helpers ===============================
     

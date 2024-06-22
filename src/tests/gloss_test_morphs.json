@@ -248,6 +248,35 @@
         "origin": "latin"
     },
     {
+        "key": "-cule",
+        "form-final": "cule",
+        "form-stem": "cul",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 3,
+        "suffixes": ["-al", "-ous"],
+        "gloss": "small [%!sg]",
+        "requires": {
+            "follows": {
+                "has-tag": "count"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": ["c", "g"]
+                    }
+                },
+                "form-final": "ule",
+                "form-stem": "ul"
+            }
+        ],
+        "tags": ["count"],
+        "origin": "latin"
+    },
+    {
         "key": "ad-",
         "form-stem": "ad",
         "form-stem-assim": "a",
