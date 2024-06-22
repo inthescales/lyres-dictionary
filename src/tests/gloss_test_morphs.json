@@ -66,6 +66,17 @@
         "origin": "latin"
     },
     {
+        "key": "nuntiare",
+        "form-stem-present": "nuntia",
+        "form-stem-perfect": "nuntiat",
+        "form-final": "nounce",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "[announce], [make] known",
+        "tags": ["transitive"],
+        "origin": "latin"
+    },
+    {
         "key": "vehere",
         "form-stem-present": "vehe",
         "form-stem-perfect": "vect",

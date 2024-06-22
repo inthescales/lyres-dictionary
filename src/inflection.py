@@ -4,12 +4,17 @@ import src.helpers as helpers
 def inflect(string, mode):
     words = string.split(" ")    
     for i, word in enumerate(words):
-        add_comma = False
-        if word[-1] == ",":
-            word = word[:-1]
-            add_comma = True
+        final_punctuation = None
 
-        if word[0] == "[" and word[-1] == "]":
+        if word[0] == "[" \
+            and (
+                word[-1] == "]"
+                or (word[-1] in [",", ";"] and word[-2] == "]")
+            ):
+            if word[-1] != "]":
+                final_punctuation = word[-1]
+                word = word[0:-1]
+
             words[i] = word[1:-1]
         elif len(words) > 1:
             continue
@@ -25,7 +30,8 @@ def inflect(string, mode):
         elif mode == "3sg":
             words[i] = lemminflect.getInflection(words[i], tag='VBZ')[0]
         elif mode == "inf":
-            continue
+            # do nothing
+            pass
         elif mode == "sg":
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
         elif mode == "pl":
@@ -35,8 +41,8 @@ def inflect(string, mode):
         elif mode == "singleton":
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
         
-        if add_comma:
-            words[i] += ","
+        if final_punctuation:
+            words[i] += final_punctuation
     
     return " ".join(words)
 

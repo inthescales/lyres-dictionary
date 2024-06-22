@@ -96,6 +96,8 @@ class GlossTests(unittest.TestCase):
         self.assertGloss(["avis", "-cule"], "a small bird")
         self.assertGloss(["avis", "-cule", "-al"], "pertaining to small birds")
 
+    def testGlossPunctuation(self):
+        self.assertGloss(["nuntiare", "-or"], "one who announces, makes known")
         
     # Helpers ===============================
     
