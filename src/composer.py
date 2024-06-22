@@ -174,6 +174,7 @@ def get_definition(word):
     while len(prefix_stack) > 0:
         definition = pop_prefix(word.last_morph(), definition)
 
+
     # Make modifications to outermost gloss
     if not morph.has_tag("fixed-gloss"):
         if morph.get_type() == "verb":

@@ -595,6 +595,11 @@
         "declension": 12,
         "suffixes": [],
         "gloss": "%ppart",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
         "exception": [{
             "case": {
                 "follows": {
@@ -618,6 +623,11 @@
         "declension": 1,
         "suffixes": [],
         "gloss": "[someone] or [something] that is %ppart",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
         "exception": [{
             "case": {
                 "follows": {
