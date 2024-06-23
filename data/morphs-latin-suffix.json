@@ -338,7 +338,7 @@
     {
         "key": "-cule",
         "form-final": ["cule", "cle"],
-        "form-stem": ["cul", "cl"],
+        "form-stem": "cul",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -380,7 +380,7 @@
                     }
                 },
                 "form-final": ["icule", "icle", "ule", "le"],
-                "form-stem": ["icul", "icl", "ul", "le"],
+                "form-stem": ["icul", "ul"],
                 "tags": ["count", "no-head-joiner"],
                 "notes": "Remove redundant 'c-'"
             }, {
@@ -404,7 +404,7 @@
                     }
                 },
                 "form-final": ["/ule", "/le"],
-                "form-stem": ["/ul", "/le"],
+                "form-stem": ["/ul"],
                 "tags": ["count", "no-head-joiner"],
                 "notes": "Avoiding cases like 'judicicule, which feels off though I'm not sure if it's historical"
             }, {
@@ -436,7 +436,7 @@
                     }
                 },
                 "form-final": ["ecule", "ecle"],
-                "form-stem": ["ecul", "ecl"],
+                "form-stem": ["ecul"],
                 "notes": "Not using 5th declensions currently, but they did have this form"
             }
         ],
