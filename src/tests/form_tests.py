@@ -737,7 +737,10 @@ class FormTests(unittest.TestCase):
 
         # -cule, 4th declension
         self.assertFormIn(["acus", "-cule"], ["acicule", "acicle"])
-        self.assertFormIn(["cornus", "-cule"], ["cornicule", "cornicle"])        
+        self.assertFormIn(["cornus", "-cule"], ["cornicule", "cornicle"])
+
+        # -cule, 5th declension
+        self.assertFormIn(["dies", "-cule"], ["diecule", "diecle"])
     
     # Tests confirming that exception cases work as expected.
     def testFormException(self):
