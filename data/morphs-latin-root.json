@@ -808,6 +808,24 @@
         "origin": "latin"
     },
     {
+        "key": "calx-pebble",
+        "form-stem": "calc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": ["pebble", "game [piece]"],
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "calx-limestone",
+        "form-stem": "calc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "limestone",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    },
+    {
         "key": "camera",
         "form-stem": "camer",
         "type": "noun",
@@ -4198,6 +4216,15 @@
         "origin": "latin"
     },
     {
+        "key": "magus",
+        "form-stem": "mag",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "magician",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    },
+    {
         "key": "maior",
         "form-stem": "major",
         "type": "adj",
@@ -4592,7 +4619,7 @@
     },
     {
         "key": "moles",
-        "form-stem": "mol",
+        "form-stem": "mole",
         "type": "noun",
         "declension": 3,
         "gloss": "mass",
@@ -7832,6 +7859,15 @@
         "declension": 3,
         "gloss": "highest [point]",
         "tags": ["singleton", "concrete"],
+        "origin": "latin"
+    },
+    {
+        "key": "vesica",
+        "form-stem": "vesic",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "bladder",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     },
     {

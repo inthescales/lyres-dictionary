@@ -712,6 +712,30 @@ class FormTests(unittest.TestCase):
         self.assertForm(["tri-", "angulus", "-al"], "triangular")
         self.assertForm(["tri-", "latus", "-al"], "trilateral")
         self.assertForm(["quadri-", "latus", "-al"], "quadrilateral")
+
+        # diminutives
+
+        # -ule
+        self.assertForm(["forma", "-ule"], "formule") #*
+        self.assertForm(["frons", "-ule"], "frondule")
+        self.assertForm(["ovum", "-ule"], "ovule")
+        self.assertForm(["ovum", "-ary", "-ule"], "ovariole")
+        self.assertFormIn(["vesica", "-ule"], ["vesicule", "vesicle"])
+
+        # -cule, 1st / 2nd declension
+        # TODO: Find some actual cases of these (supposedly there are some)
+        self.assertFormIn(["forma", "-cule"], ["formicule", "formicle"]) #*
+
+        # -cule, 3rd declension
+        self.assertForm(["calx-pebble", "-cule"], "calcule")
+        self.assertFormIn(["clavis", "-cule"], ["clavicule", "clavicle"])
+        self.assertFormIn(["moles", "-cule"], ["molecule", "molecle"])
+        self.assertFormIn(["pars", "-cule"], ["particule", "particle"])
+        self.assertForm(["rex", "-cule"], "regule")
+
+        # -cule, 4th declension
+        self.assertFormIn(["acus", "-cule"], ["acicule", "acicle"])
+        self.assertFormIn(["cornus", "-cule"], ["cornicule", "cornicle"])        
     
     # Tests confirming that exception cases work as expected.
     def testFormException(self):

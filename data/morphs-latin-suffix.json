@@ -307,49 +307,142 @@
         "gloss": "small %@",
         "requires": {
             "follows": {
-                "and": [
-                    { "has-tag": "count" },
-                    { "not": {
-                        "and": [
-                            { "has-declension": 3 },
-                            { "has-suffix": ["or", "ur", "er"]}
-                        ]
-                    }}
-                ]
+                "has-declension": [1, 2]
             }
         },
         "exception": [
             {
                 "case": {
                     "follows": {
-                        "or": [
-                            { "has-declension": [1, 2] },
-                            { "and": [
-                                { "has-declension": [3, 4, 5] },
-                                { "has-suffix": ["c", "g"] }
-                            ]}
-                        ]
+                        "has-suffix": ["c"]
                     }
                 },
-                "form-final": "ule",
-                "form-stem": "ul"
+                "form-final": ["ule", "le"],
+                "form-stem": ["ul", "l"],
+                "tags": ["count", "no-head-joiner"]
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": ["a", "e", "i", "o", "u"]
+                    }
+                },
+                "form-final": "ole",
+                "form-stem": "ol"
+            }
+        ],
+        "tags": ["count"],
+        "origin": "latin",
+        "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule'. TODO: Preserve gendered endings -a/-us-um"
+    },
+    {
+        "key": "-cule",
+        "form-final": ["cule", "cle"],
+        "form-stem": ["cul", "cl"],
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 3,
+        "gloss": "small %@",
+        "requires": {
+            "follows": {
+                "not": {
+                    "or": [
+                        { "has-declension": 5 },
+                        { "and": [
+                            { "has-declension": [1, 2] },
+                            { "has-suffix": ["ic", "a", "e", "i", "o", "u"] }
+                        ]},
+                        { "and": [
+                            { "has-declension": 3 },
+                            { "has-suffix": "r" }
+                        ]}
+                    ]
+                }
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-declension": [1, 2]
+                    }
+                },
+                "tags": ["count", "rare"]
             },
             {
                 "case": {
                     "follows": {
                         "and": [
-                            { "has-declension": [3, 4, 5] },
-                            { "not": { "has-suffix": ["c", "g"] } }
+                            { "has-declension": 3 },
+                            { "has-suffix": ["c"] }
                         ]
                     }
                 },
-                "form-final": ["cule", "cle"],
-                "form-stem": ["cul", "cle"]
+                "form-final": ["ule", "le"],
+                "form-stem": ["ul", "le"],
+                "tags": ["count", "no-head-joiner"],
+                "notes": "Remove redundant 'c-'"
+            }, {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-declension": 3 },
+                            { "has-suffix": ["e"] }
+                        ]
+                    }
+                },
+                "tags": ["count", "no-head-joiner"],
+                "notes": "Let '-e' in root stand, as in 'molecule' or 'nubecule' (from '-ēs' endings)"
+            }, {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-declension": 3 },
+                            { "has-suffix": ["ci"] }
+                        ]
+                    }
+                },
+                "form-final": ["/ule", "/le"],
+                "form-stem": ["/ul", "/le"],
+                "tags": ["count", "no-head-joiner"],
+                "notes": "Avoiding cases like 'judicicule, which feels off though I'm not sure if it's historical"
+            }, {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-declension": 3 },
+                            { "has-suffix": ["g", "lc", "rc", "nc"] }
+                        ]
+                    }
+                },
+                "form-final": "ule",
+                "form-stem": "ul"
+            }, {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-declension": 3 },
+                            { "has-suffix": ["l", "n", "s", "ar", "er", "or", "ur", "ir", "e"] }
+                        ]
+                    }
+                },
+                "tags": ["count", "no-head-joiner"],
+                "notes": "'Vr' requirement avoids cases like 'patrcule'"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-declension": 5
+                    }
+                },
+                "form-final": ["ecule", "ecle"],
+                "form-stem": ["ecul", "ecl"],
+                "notes": "Not using 5th declensions currently, but they did have this form"
             }
         ],
         "tags": ["count"],
         "origin": "latin",
-        "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule'"
+        "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule' (currently filtering out those ending in 'r'). TODO: Preserve gendered endings -a/-us-um. TODO: Handle i-joiners even when not strictly needed, as in 'funicular'"
     },
     {
         "key": "-esce",

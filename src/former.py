@@ -24,6 +24,9 @@ def form(morph, env):
     if "form-raw" in morph_dict \
         and not ("form-stem" in morph_dict and morph.is_affix()):
         if morph_dict["origin"] == "old-english":
+            # if "form-canon" in morph_dict:
+            #     return morph_dict["form-canon"]
+
             if type(morph_dict["form-raw"]) == list:
                 random = Random(morph.seed)
                 raw_form = random.choice(morph_dict["form-raw"])

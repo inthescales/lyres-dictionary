@@ -229,7 +229,7 @@ def get_joined_form(language, last_morph, morph, original, proposed):
     elif morph.has_tag("drop-first"):
         addition = addition[1:]
 
-    elif form[-1] == "/":
+    elif form[-1] == "/" or addition[0] == "/":
         form = form[:-1]
         addition = addition[1:]
 
