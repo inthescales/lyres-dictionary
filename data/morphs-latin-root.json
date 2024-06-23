@@ -2185,6 +2185,15 @@
         "origin": "latin"
     },
     {
+        "key": "fascis",
+        "form-stem": "fasc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "bundle",
+        "tags": ["count", "concrete", "grouping"],
+        "origin": "latin"
+    },
+    {
         "key": "fata",
         "form-stem": "fat",
         "type": "noun",

@@ -307,7 +307,7 @@
         "gloss": "small %@",
         "requires": {
             "follows": {
-                "has-declension": [1, 2]
+                "has-declension": [1, 2, 3]
             }
         },
         "exception": [
@@ -379,8 +379,8 @@
                         ]
                     }
                 },
-                "form-final": ["ule", "le"],
-                "form-stem": ["ul", "le"],
+                "form-final": ["icule", "icle", "ule", "le"],
+                "form-stem": ["icul", "icl", "ul", "le"],
                 "tags": ["count", "no-head-joiner"],
                 "notes": "Remove redundant 'c-'"
             }, {
@@ -442,7 +442,7 @@
         ],
         "tags": ["count"],
         "origin": "latin",
-        "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule' (currently filtering out those ending in 'r'). TODO: Preserve gendered endings -a/-us-um. TODO: Handle i-joiners even when not strictly needed, as in 'funicular'"
+        "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule' (currently filtering out those ending in 'r'). TODO: Preserve gendered endings -a/-us-um. TODO: Handle i-joiners even when not strictly needed, as in 'funicular'. TODO: Generally get better data for different stem types so this all can be more precise."
     },
     {
         "key": "-esce",

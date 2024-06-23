@@ -727,8 +727,10 @@ class FormTests(unittest.TestCase):
         self.assertFormIn(["forma", "-cule"], ["formicule", "formicle"]) #*
 
         # -cule, 3rd declension
-        self.assertForm(["calx-pebble", "-cule"], "calcule")
+        self.assertFormIn(["calx-pebble", "-cule"], ["calcule", "calcicule", "calcicle"])
         self.assertFormIn(["clavis", "-cule"], ["clavicule", "clavicle"])
+        self.assertFormIn(["fascis", "-cule"], ["fascle", "fascule", "fascicule", "fascicle"])
+        self.assertFormIn(["judex", "-cule"], ["judicule", "judicle"]) #*
         self.assertFormIn(["moles", "-cule"], ["molecule", "molecle"])
         self.assertFormIn(["pars", "-cule"], ["particule", "particle"])
         self.assertForm(["rex", "-cule"], "regule")
