@@ -423,7 +423,7 @@
                     "follows": {
                         "and": [
                             { "has-declension": 3 },
-                            { "has-suffix": ["l", "n", "s", "ar", "er", "or", "ur", "ir", "e"] }
+                            { "has-suffix": ["l", "n", "s", "Vr", "e"] }
                         ]
                     }
                 },

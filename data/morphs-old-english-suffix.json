@@ -293,6 +293,7 @@
     {
         "key": "-oc",
         "form-stem": "ock",
+        "form-final": "ock",
         "form-raw": "oc",
         "type": "derive",
         "derive-from": "noun",
@@ -300,12 +301,27 @@
         "gloss": "small %@",
         "requires": {
             "follows": {
-                "has-tag": "count"
+                "and": [
+                    { "has-tag": "count" },
+                    { "not": { "has-suffix-template": ["VVC", "VVCC", "VVCCC", "Vfe"] }}
+                ]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix-template": "VCe"
+                    }
+                },
+                "form-stem": "/ock",
+                "form-final": "/ock",
+                "notes": "Faking vowel-shortening here (as in 'whinnock', 'gammock'). Requirement on 'Vfe' avoides needing to voice fricative."
+            }
+        ],
         "tags": ["count"],
         "origin": "old-english",
-        "notes": "Many more attestations from ME, but apparently in OE as well. TODO: Consider adding passthrough concreteness"
+        "notes": "Many more attestations from ME, but apparently in OE as well. TODO: Consider adding passthrough concreteness."
     },
     {
         "key": "-sċipe-adj",

@@ -69,6 +69,12 @@ class EvolutionAffixTests(unittest.TestCase):
         self.assertForm(["þynne", "-nes"], "thinness")
         self.assertForm(["wilde", "-nes"], "wildness")
 
+        # -oc
+        self.assertForm(["bit", "-oc"], "bittock")
+        self.assertForm(["fȳst", "-oc"], "fistock")
+        self.assertForm(["hyll", "-oc"], "hillock")
+        self.assertForm(["wreċċ", "-oc"], "wretchock")
+
         # -sċipe
         self.assertForm(["frēond", "-sċipe"], "friendship")
         self.assertForm(["heard", "-sċipe"], "hardship")

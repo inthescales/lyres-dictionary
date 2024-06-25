@@ -253,9 +253,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
         if morph.is_suffix():
             if helpers.is_vowel(addition[0], True):
                 if len(form) >= 2 \
-                and helpers.is_consonant(form[-1]) and form[-1] != "y" \
+                and helpers.is_consonant(form[-1], False) \
                 and helpers.is_vowel(form[-2]) and not (len(form) >= 3 and helpers.is_vowel(form[-3])) \
-                    and form[-1] not in ["w", "x"] \
+                    and form[-1] not in ["w", "x", "y"] \
                     and helpers.syllable_count(form) == 1:
                     # If word ends in a consonant following a short vowel, and suffix begins with vowel, double the final consonant
                     form = form + form[-1]
