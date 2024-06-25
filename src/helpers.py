@@ -38,8 +38,11 @@ def is_vowel(letter, y_is_vowel=False):
     else:
         return letter in ["a", "i", "e", "o", "u", "y"]
 
-def is_consonant(letter):
-    return not is_vowel(letter)
+def is_consonant(letter, y_is_consonant=True):
+    return not is_vowel(letter, not y_is_consonant)
+
+def y_is_vowel_heuristic(prev_char):
+    return prev_char != None and is_consonant(prev_char, True)
 
 def l_in_last_two(word):
     state = 0

@@ -62,6 +62,8 @@ def evaluate_expression(expression, referent):
         return evaluate_prefix(value, referent["form"])
     elif key == "has-suffix":
         return evaluate_suffix(value, referent["form"])
+    elif key == "has-suffix-template":
+        return evaluate_suffix_template(value, referent["form"])
     elif key == "has-conjugation":
         return evaluate_conjugation(value, referent["conjugation"])
     elif key == "has-declension":
@@ -151,6 +153,54 @@ def evaluate_suffix(suffix, form):
     
     else:
         Logger.error("bad value for has-suffix:")
+        Logger.error(" - " + str(suffix))
+        sys.exit(1)
+
+# Template format:
+# - lowercase letters match that letter
+# - V matches all vowels
+# - C matches all consonants
+#   - A heuristic determines whether 'y' counts as C or V
+def evaluate_suffix_template(template, form):
+    def matches(char, template, prev):
+        if char == template:
+            return True
+
+        y_is_consonant = not helpers.y_is_vowel_heuristic(prev)
+        if helpers.is_consonant(char, y_is_consonant) and template == "C":
+            return True
+        elif helpers.is_vowel(char, not y_is_consonant) and template == "V":
+            return True
+
+        return False
+
+    templates = None
+    if isinstance(template, list):
+        templates = template
+    elif isinstance(template, str):
+        templates = [template]
+
+    if templates != None:
+        for template in templates:
+            if len(form) < len(template):
+                continue
+
+            for i in range(0, len(template)):
+                if i + 1 < len(template):
+                    prev = template[-(i+2)]
+                else:
+                    prev = None
+
+                if not matches(form[-i-1], template[-i-1], prev):
+                    break
+
+                if i == len(template) - 1:
+                    return True
+
+        return False
+    
+    else:
+        Logger.error("bad value for has-suffix-template:")
         Logger.error(" - " + str(suffix))
         sys.exit(1)
         

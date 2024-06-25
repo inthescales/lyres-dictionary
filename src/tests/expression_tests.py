@@ -14,6 +14,8 @@ test_morphs = {
     "arktos": { "key": "arktos", "form-stem": "arct", "type": "noun", "gloss": "bear", "tags": ["count", "concrete", "living", "animal"], "origin": "greek", "form": "arct", "form-final": False },
     "enigma": { "key": "enigma", "form-stem": "enigmat", "type": "noun", "gloss": "riddle", "tags": ["count", "abstract"], "origin": "greek", "form": "enigmat", "form-final": False },
     "ic":     { "key": "ic", "form-final": "ic", "form-stem": "ic", "type": "derive", "derive-from": "noun", "derive-to": "adj", "suffixes": [], "gloss": "pertaining to %pl", "tags": ["form-final"], "origin": "greek", "form": "ic", "form-final": True }
+
+    # "-cule":  { "key": "-cule", "form-final": "cule", "form-stem": "cul", "type": "derive", "derive-from": "noun", "derive-to": "noun", "gloss": "small %@", "tags": ["count"], "origin": "latin" }
 }
 
 
@@ -79,6 +81,17 @@ class ExpressionTests(unittest.TestCase):
         self.assertFalse(evaluate_expression({'has-suffix': "y"}, test_morphs["ic"]))
         self.assertTrue(evaluate_expression({'has-suffix': ["c", "y"]}, test_morphs["ic"]))
         self.assertTrue(evaluate_expression({'has-suffix': "ic"}, test_morphs["ic"]))
+
+        self.assertTrue(evaluate_expression({'has-suffix-template': "min"}, test_morphs["volumen"]))
+        self.assertFalse(evaluate_expression({'has-suffix-template': "man"}, test_morphs["volumen"]))
+        self.assertTrue(evaluate_expression({'has-suffix-template': ["man", "min"]}, test_morphs["volumen"]))
+        self.assertFalse(evaluate_expression({'has-suffix-template': ["man", "mon"]}, test_morphs["volumen"]))
+
+        self.assertTrue(evaluate_expression({'has-suffix-template': "mVn"}, test_morphs["volumen"]))
+        self.assertTrue(evaluate_expression({'has-suffix-template': "CiC"}, test_morphs["volumen"]))
+        self.assertTrue(evaluate_expression({'has-suffix-template': ["CVC", "min"]}, test_morphs["volumen"]))
+        self.assertFalse(evaluate_expression({'has-suffix-template': ["VCV", "mon"]}, test_morphs["volumen"]))
+        self.assertFalse(evaluate_expression({'has-suffix-template': ["CoC", "mon"]}, test_morphs["volumen"]))
 
         self.assertTrue(evaluate_expression({'even-syllables': True }, test_morphs["lumen"]))
         self.assertFalse(evaluate_expression({'even-syllables': False }, test_morphs["lumen"]))
