@@ -5,6 +5,7 @@ from src.tests.gloss_tests import GlossTests
 from src.tests.expression_tests import ExpressionTests
 from src.tests.diachronizer_tests import DiachronizerTests
 from src.tests.diachronizer_affix_tests import EvolutionAffixTests
+from src.tests.helper_tests import HelperTests
 
 suite = unittest.TestSuite()
 loader = unittest.defaultTestLoader
@@ -15,6 +16,7 @@ suite.addTest(loader.loadTestsFromTestCase(GlossTests))
 suite.addTest(loader.loadTestsFromTestCase(ExpressionTests))
 suite.addTest(loader.loadTestsFromTestCase(DiachronizerTests))
 suite.addTest(loader.loadTestsFromTestCase(EvolutionAffixTests))
+suite.addTest(loader.loadTestsFromTestCase(HelperTests))
 
 # Run tests
 runner = unittest.TextTestRunner()

@@ -5,7 +5,6 @@ from logging import Logger
 # Bag probability
 
 def choose_bag(bag):
-
     total = 0
 
     for item in bag:
@@ -44,6 +43,21 @@ def is_consonant(letter, y_is_consonant=True):
 def y_is_vowel_heuristic(prev_char):
     return prev_char != None and is_consonant(prev_char, True)
 
+# Returns the estimated number of syllables in the word
+# Based purely on vowel/consonant clusters — doesn't take silent 'e's into account
+def syllable_count(word):
+    count = 0
+    in_vowels = False
+    prev = None
+    for char in word:
+        if is_vowel(char) and (prev is None or not is_vowel(prev)) and not in_vowels:
+            in_vowels = True
+            count += 1
+        elif is_consonant(char):
+            in_vowels = False
+        prev = char
+    return count
+
 def l_in_last_two(word):
     state = 0
     prev = None
@@ -58,19 +72,6 @@ def l_in_last_two(word):
             return False
         prev = char
     return False
-
-def syllable_count(word):
-    count = 0
-    in_vowels = False
-    prev = None
-    for char in word:
-        if is_vowel(char) and (prev is None or not is_vowel(prev)) and not in_vowels:
-            in_vowels = True
-            count += 1
-        elif is_consonant(char):
-            in_vowels = False
-        prev = char
-    return count
 
 def indefinite_article_for(word):
     if is_vowel(word[0]):
