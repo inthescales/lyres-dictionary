@@ -47,7 +47,8 @@
     }, {
         "key": "ǣfen",
         "form-raw": "ǣfen",
-        "type": "adj",
+        "form-canon": "even",
+        "type": "noun",
         "gloss": "evening",
         "tags": ["count", "abstract", "bounded", "time"],
         "origin": "old-english"
@@ -126,6 +127,14 @@
         "type": "verb",
         "gloss": "wait",
         "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "bit",
+        "form-raw": "bit",
+        "form-canon": "bit",
+        "type": "adj",
+        "gloss": "small [quantity] of something",
+        "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
         "key": "bysiġan",
@@ -207,6 +216,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "būr",
+        "form-raw": "būr",
+        "form-canon": "bower",
+        "type": "noun",
+        "gloss": "[dwelling] or enclosed [place]",
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
         "key": "cēgan",
         "form-raw": "cēg|an",
         "type": "verb",
@@ -243,6 +260,13 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Alternate meaning 'man'"
+    }, {
+        "key": "crumb",
+        "form-raw": "crumb",
+        "type": "adj",
+        "gloss": "crooked",
+        "tags": ["speculative"],
+        "origin": "old-english"
     }, {
         "key": "cweċċan",
         "form-raw": "cweċċ|an",
@@ -433,6 +457,13 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "dun",
+        "form-raw": "dun",
+        "type": "adj",
+        "gloss": "grayish-brown",
+        "tags": ["color"],
+        "origin": "old-english"
+    }, {
         "key": "ēċe",
         "form-raw": "ēċe",
         "type": "adj",
@@ -440,14 +471,6 @@
         "origin": "old-english",
         "notes": "Alt. form 'ǣċe"
     }, {
-        "key": "weorþan",
-        "form-raw": "weorþ|an",
-        "type": "verb",
-        "gloss": "become",
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'happen'"
-    },  {
         "key": "fang",
         "form-raw": "fang",
         "type": "noun",
@@ -468,6 +491,14 @@
         "type": "noun",
         "gloss": "hair",
         "tags": ["mass", "concrete", "bodypart", "speculative", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "fisċ",
+        "form-raw": "fisċ",
+        "form-canon": "fish",
+        "type": "noun",
+        "gloss": "fish",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "fōn",
@@ -493,6 +524,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
      },{
+        "key": "fȳst",
+        "form-raw": "fȳst",
+        "form-canon": "fist",
+        "type": "noun",
+        "gloss": "fist",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "old-english"
+    }, {
         "key": "hǣmed",
         "form-raw": "hǣmed",
         "type": "adj",
@@ -508,6 +547,21 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Alternate meaning 'to cohabitate'. Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
+    }, {
+        "key": "hætt",
+        "form-raw": "hætt",
+        "form-canon": "hat",
+        "type": "noun",
+        "gloss": "hat",
+        "tags": ["count", "abstract", "man-made", "garment"],
+        "origin": "old-english"
+    }, {
+        "key": "hyll",
+        "form-raw": "hyll",
+        "type": "noun",
+        "gloss": "hill",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
     }, {
         "key": "ġearu",
         "form-raw": "ġearu",
@@ -602,12 +656,44 @@
         "tags": ["count", "concrete", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "myln",
+        "form-raw": "myln",
+        "form-canon": "mill",
+        "type": "noun",
+        "gloss": "mil",
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english",
+        "notes": "Alternate form 'mylen'. TODO: Handle loss of /n/ after /l/ (as in 'kiln')"
+    }, {
+        "key": "pott",
+        "form-raw": "pott",
+        "form-canon": "pot",
+        "type": "noun",
+        "gloss": "pot",
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "rud",
+        "form-raw": "rud",
+        "form-canon": "rud",
+        "type": "adj",
+        "gloss": "red",
+        "tags": ["color", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "smyrels",
         "form-raw": "smyrels",
         "form-canon": "smerl",
         "type": "noun",
         "gloss": "ointment",
         "tags": ["mass", "concrete", "fluid", "liquid", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "sūr",
+        "form-raw": "sūr",
+        "form-canon": "sour",
+        "type": "adj",
+        "gloss": "sour",
         "origin": "old-english"
     }, {
         "key": "wænge",
@@ -618,6 +704,45 @@
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english",
         "notes": "Alternate forms 'wange', 'wonge', 'wenge'"
+    }, {
+        "key": "wearr",
+        "form-raw": "wearr",
+        "type": "noun",
+        "gloss": ["callus", "[knot] of a tree"],
+        "tags": ["count", "concrete", "bodypart", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "weorþan",
+        "form-raw": "weorþ|an",
+        "type": "verb",
+        "gloss": "become",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'happen'"
+    }, {
+        "key": "wræc",
+        "form-raw": "wræc",
+        "form-canon": "wrack",
+        "type": "noun",
+        "gloss": ["[state] of exile", "[persecution] or [punishment]", "[misery] or [torment]"],
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "wracu",
+        "form-raw": "wracu",
+        "form-raw": "wrake",
+        "type": "noun",
+        "gloss": "revenge",
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "wreċċ",
+        "form-raw": "wreċċ",
+        "form-canon": "wretch",
+        "type": "noun",
+        "gloss": ["miserable [person]", "exile"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
     }, {
         "key": "wylfen",
         "form-raw": ["wylfen", "wylf"],

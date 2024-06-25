@@ -189,7 +189,12 @@ def from_me_phonemes(phonemes, config):
             result += "u"
         elif phone.value == "uː":
             if next1:
-                result += "ou"
+                if next1.value == "r":
+                    # 'bower', 'shower' vs 'our', 'sour'
+                    choice = even("Orth:uːr->ou/owe", config)
+                    result += choice
+                else:
+                    result += "ou"
             else:
                 result += "ow"
         elif phone.value == "ə":

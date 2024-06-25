@@ -341,7 +341,7 @@ class DiachronizerTests(unittest.TestCase):
         check("hund", "hound")
         check("ġe-sund", "sound") # Needs prefix handling
         check("ūre", "our")
-        # check("sċūr", "shower") # Produces 'shour', which is accurate to middle english. Unsure about modern spelling
+        check("sċūr", "shower", overrides=[["Orth:uːr->ou/owe", "owe"]])
         check("sūr", "sour")
         # check("būtan", "but") # Unsure why vowel is short
         # check("strūti|an", "strut") # Produces 'strout', which reflect middle english 'strout', but not modern english 'strut'
@@ -498,6 +498,8 @@ class DiachronizerTests(unittest.TestCase):
         check("mēt|an", "meet")
         check("niht", "night")
         check("stel|an", "steal")
+
+        # 
 
         # final '-e' for words ending in voiced fricatives
         check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
