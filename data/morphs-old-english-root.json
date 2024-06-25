@@ -372,14 +372,6 @@
         "origin": "old-english",
         "notes": "er -> re metathesis occurred by middle english. original gloss 'without salt'"
     }, {
-        "key": "fisċ",
-        "form-raw": "fisċ",
-        "form-canon": "fish",
-        "type": "noun",
-        "gloss": "fish",
-        "tags": ["count", "concrete", "living", "animal"],
-        "origin": "old-english"
-    }, {
         "key": "flǣsċ",
         "form-raw": "flǣsċ",
         "form-canon": "flesh",
