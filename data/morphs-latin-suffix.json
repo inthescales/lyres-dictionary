@@ -307,7 +307,10 @@
         "gloss": "small %@",
         "requires": {
             "follows": {
-                "has-declension": [1, 2, 3]
+                "and": [
+                    { "has-tag": "count" },
+                    { "has-declension": [1, 2, 3] }
+                ]
             }
         },
         "exception": [
@@ -334,8 +337,7 @@
         "tags": ["count"],
         "origin": "latin",
         "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule'. TODO: Preserve gendered endings -a/-us-um"
-    },
-    {
+    }, {
         "key": "-cule",
         "form-final": ["cule", "cle"],
         "form-stem": "cul",
@@ -346,19 +348,22 @@
         "gloss": "small %@",
         "requires": {
             "follows": {
-                "not": {
-                    "or": [
-                        { "has-declension": 5 },
-                        { "and": [
-                            { "has-declension": [1, 2] },
-                            { "has-suffix": ["ic", "a", "e", "i", "o", "u"] }
-                        ]},
-                        { "and": [
-                            { "has-declension": 3 },
-                            { "has-suffix": "r" }
-                        ]}
-                    ]
-                }
+                "and": [
+                    { "has-tag": "count" },
+                    {"not": {
+                        "or": [
+                            { "has-declension": 5 },
+                            { "and": [
+                                { "has-declension": [1, 2] },
+                                { "has-suffix": ["ic", "a", "e", "i", "o", "u"] }
+                            ]},
+                            { "and": [
+                                { "has-declension": 3 },
+                                { "has-suffix": "r" }
+                            ]}
+                        ]
+                    }}
+                ]
             }
         },
         "exception": [
@@ -443,8 +448,7 @@
         "tags": ["count"],
         "origin": "latin",
         "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule' (currently filtering out those ending in 'r'). TODO: Preserve gendered endings -a/-us-um. TODO: Handle i-joiners even when not strictly needed, as in 'funicular'. TODO: Generally get better data for different stem types so this all can be more precise."
-    },
-    {
+    }, {
         "key": "-esce",
         "form-stem": "esc",
         "form-joiner-present": "e",

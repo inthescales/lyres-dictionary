@@ -73,6 +73,7 @@ valid_tags = [
     "color",                    # Noun semantics - a color
     "shape",                    # Noun semantics - a shape
     "quality",                  # Noun semantics - an abstract quality
+    "state",                    # Noun semantics - a mental, physical, or emotional state
     "time",                     # Noun semantics - a period of time
     "tree",                     # Noun semantics - a kind of tree
     "number",                   # Noun semantics - a number (used as a noun)

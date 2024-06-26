@@ -714,7 +714,7 @@
         "form-canon": "love",
         "type": "noun",
         "gloss": "love",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "state"],
         "origin": "old-english"
     }, {
         "key": "lyttel",
@@ -882,8 +882,8 @@
         "origin": "old-english",
         "notes": "Would expect 'selk'. 'silc' appears in ME."
     }, {
-        "key": "sylver",
-        "form-raw": "sylvur",
+        "key": "sylfer",
+        "form-raw": "sylfur",
         "form-canon": "silver",
         "type": "noun",
         "gloss": "silver",

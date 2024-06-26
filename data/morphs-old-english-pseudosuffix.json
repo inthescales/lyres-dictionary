@@ -1,5 +1,15 @@
 [
     {
+        "key": "-ful",
+        "form-stem": "ful",
+        "form-raw": "ful",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "full of %pl",
+        "origin": "old-english"
+    }, {
         "key": "-lāc",
         "form-stem": "lock",
         "form-raw": "lāc",
@@ -29,8 +39,8 @@
         "notes": "TODO: allow for abstracts that represent mental states, with exception to gloss as 'one who provokes...', e.g. 'fearmonger', or events e.g. 'warmonger'"
     }, {
         "key": "-smiþ",
-        "form-stem": "smiþ",
-        "form-raw": "smith",
+        "form-stem": "smith",
+        "form-raw": "smiþ",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",

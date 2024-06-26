@@ -317,9 +317,17 @@
                 "form-stem": "/ock",
                 "form-final": "/ock",
                 "notes": "Faking vowel-shortening here (as in 'whinnock', 'gammock'). Requirement on 'Vfe' avoides needing to voice fricative."
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "rules"
+                    }
+                },
+                "gloss": ["small %@", "petty %@"]
             }
         ],
-        "tags": ["count"],
+        "tags": ["count", "rare"],
         "origin": "old-english",
         "notes": "Many more attestations from ME, but apparently in OE as well. TODO: Consider adding passthrough concreteness."
     },
@@ -347,17 +355,86 @@
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english",
         "notes": "This usage was common in OE, but is very rare in MnE"
-    },
-    {
-        "key": "-ung",
-        "form-stem": "ing",
-        "form-raw": "ung",  
+    }, {
+        "key": "-sum",
+        "form-stem": "some",
+        "form-raw": "sum",
         "type": "derive",
-        "derive-from": "verb",
-        "derive-to": "noun",
-        "suffixes": [],
-        "gloss": "the act of %part",
-        "tags": ["mass", "abstract", "no-gen"],
+        "derive-from": ["adj", "noun", "verb"],
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "having %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "adj"
+                    }
+                },
+                "gloss": ["%@", "considerably %@"]
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "verb"
+                    }
+                },
+                "gloss": "tending %inf"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "concrete" }
+                        ]
+                    }
+                },
+                "gloss": "having %pl"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "abstract" }
+                        ]
+                    }
+                },
+                "gloss": "having or characterized by %pl"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "abstract" },
+                            { "has-tag": "state" }
+                        ]
+                    }
+                },
+                "gloss": "causing or inspiring %pl"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "verb" },
+                            { "has-tag": "transitive" }
+                        ]
+                    }
+                },
+                "gloss": ["tending %inf", "easy %inf"]
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "number"
+                    }
+                },
+                "gloss": "a group of %@"
+            }
+        ],
         "origin": "old-english"
-    } 
+    }
 ]

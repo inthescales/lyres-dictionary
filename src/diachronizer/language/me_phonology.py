@@ -341,6 +341,14 @@ def from_oe_phonemes(oe_phonemes, config):
             and "".join(x.value for x in state.following[:3]) in ["dər", "ðər"]:
             return [Phoneme("o" , state.capture[0])]
 
+    def misc_assimilation(state):
+        if state.joined == "ln":
+            # Cases like 'miln' -> 'mill', and the pronunciation of 'kiln'
+            return [Phoneme("l", template=state.capture[0])]
+        elif state.joined == "ds":
+            # Cases like 'god-sibb' -> 'gossip', 'gōdspel' -> 'gospel'
+            return [Phoneme("s", template=state.capture[0])]
+
     if config.verbose:
         print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
@@ -363,6 +371,8 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", config)
     rig.run_capture(breaking, 2, "Breaking", config)
 
+    rig.run_capture(misc_assimilation, 2, "Miscellaneous assimilation", config)
+    
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
     rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)

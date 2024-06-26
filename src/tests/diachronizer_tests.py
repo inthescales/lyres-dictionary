@@ -512,6 +512,11 @@ class DiachronizerTests(unittest.TestCase):
         check("dysiġ", "dizzy")
         check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("hefiġ", "heavy")
+
+        # Misc assimilations
+        check("myln", "mill")
+        # check("godsib", "gossip") # Probably need some kind of stress-preservation in compounds
+        # check("gōdspel", "gospel") # Probably need some different compounding here
     
         return [total, failures]
 

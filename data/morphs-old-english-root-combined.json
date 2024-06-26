@@ -28,14 +28,7 @@
         "form-canon": "addle",
         "type": "noun",
         "gloss": "[disease], [sickness]",
-        "tags": ["count", "abstract"],
-        "origin": "old-english"
-    }, {
-        "key": "ǣdre-quick",
-        "form-raw": "ǣdre",
-        "type": "adj",
-        "gloss": "[quick] or [instant]",
-        "tags": ["speculative"],
+        "tags": ["count", "abstract", "state"],
         "origin": "old-english"
     }, {
         "key": "ǣdre-vein",
@@ -255,7 +248,7 @@
         "key": "ċeorl",
         "form-raw": "ċeorl",
         "form-canon": "churl",
-        "type": "adj",
+        "type": "noun",
         "gloss": "low-class [person]",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
@@ -553,7 +546,7 @@
         "form-canon": "hat",
         "type": "noun",
         "gloss": "hat",
-        "tags": ["count", "abstract", "man-made", "garment"],
+        "tags": ["count", "concrete", "man-made", "garment"],
         "origin": "old-english"
     }, {
         "key": "hyll",
@@ -561,6 +554,13 @@
         "type": "noun",
         "gloss": "hill",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "gār",
+        "form-raw": "gār",
+        "type": "noun",
+        "gloss": "spear",
+        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
         "origin": "old-english"
     }, {
         "key": "ġearu",
@@ -660,7 +660,7 @@
         "form-raw": "myln",
         "form-canon": "mill",
         "type": "noun",
-        "gloss": "mil",
+        "gloss": "mill",
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english",
         "notes": "Alternate form 'mylen'. TODO: Handle loss of /n/ after /l/ (as in 'kiln')"
@@ -670,7 +670,7 @@
         "form-canon": "pot",
         "type": "noun",
         "gloss": "pot",
-        "tags": ["count", "abstract", "man-made"],
+        "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
         "key": "rud",
