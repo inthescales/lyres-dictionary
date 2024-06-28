@@ -5,9 +5,8 @@ from src.diachronizer import diachronizer
 from src.diachronizer.engine.config import Config
 
 class Former_Config():
-    def __init__(self, include_alt_forms=False, include_alt_glosses=False, canon_lock=True):
+    def __init__(self, include_alt_forms=False, canon_lock=True):
         self.include_alt_forms = include_alt_forms
-        self.include_alt_glosses = include_alt_glosses
         self.canon_lock = canon_lock
 
 def form(morph, env, config=Former_Config()):

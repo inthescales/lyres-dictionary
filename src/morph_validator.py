@@ -11,7 +11,7 @@ valid_properties = [
     "form-final",
     "form-stem",
     "form-raw",                 # Original form, before historical changes
-    "form-raw-alt",             # Nonstandard raw form (e.g. infrequent or dialectal)
+    "form-raw-alt",             # Nonstandard raw forms (e.g. rare or dialectal)
     "form-canon",               # Actual form in modern English (as opposed to plausible alternatives)
     "form-stem-present",        # Present participle stem for Latin verbs
     "form-stem-perfect",        # Perfect participle stem for Latin verbs

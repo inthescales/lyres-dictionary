@@ -128,7 +128,7 @@ def transform_word(word, morphothec, is_single):
         and not root_morph.has_tag("speculative") \
         and not root_morph.has_tag("obscure"):
             env = word.environment_for_index(0)
-            config = former.Former_Config(True, False, False)
+            config = former.Former_Config(True, False)
             form = former.form(root_morph, env, config)
             form_canon = root_morph.morph["form-canon"]
             if form != form_canon:
