@@ -2,6 +2,7 @@ import os
 import json
 
 import src.expressions as expressions  
+import src.morph_adjuster as adjuster
 import src.morph_validator as validator
 
 from src.logging import Logger
@@ -88,6 +89,8 @@ class Morphothec:
                     if not validator.validate_morph(morph):
                         errors += 1
                         continue
+
+                    morph = adjuster.adjust_morph(morph)
                     
                     # Check for key collisions
                     if morph["key"] in self.morph_for_key:

@@ -279,6 +279,70 @@
         "origin": "old-english"
     },
     {
+        "key": "-ling-adj",
+        "form-stem": "ling",
+        "form-final": "ling",
+        "form-raw": "ling",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "gloss": "one who is %@",
+        "tags": ["uncountable", "person", "rare"],
+        "origin": "old-english"
+    },
+    {
+        "key": "-ling-noun",
+        "form-stem": "ling",
+        "form-final": "ling",
+        "form-raw": "ling",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "small %@",
+        "tags": ["count", "living"],
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "animal"
+                    }
+                },
+                "gloss": "young %@"
+            },
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "ruler"
+                    }
+                },
+                "gloss": "small or petty %@"
+            }
+        ],
+        "origin": "old-english"
+    },
+    {
+        "key": "-ling-verb",
+        "form-stem": "ling",
+        "form-final": "ling",
+        "form-raw": "ling",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "noun",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
+        "gloss": "one who is %ppart",
+        "tags": ["uncountable", "person", "rare"],
+        "origin": "old-english"
+    },
+    {
         "key": "-nes",
         "form-stem": "ness",
         "form-raw": "nes",
@@ -340,7 +404,7 @@
         "derive-from": ["noun", "verb"],
         "derive-to": "noun",
         "gloss": "the state or condition of being %sg",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "rare"],
         "requires": {
             "follows": {
                 "or": [

@@ -169,9 +169,9 @@
         "form-raw": "cwic",
         "form-canon": "quick",
         "type": "adj",
-        "gloss": "rapid",
-        "origin": "old-english",
-        "notes": "Original meaning 'living'"
+        "gloss": "fast",
+        "gloss-alt": "living",
+        "origin": "old-english"
     }, {
         "key": "cȳme",
         "form-raw": "cȳme",
@@ -343,9 +343,10 @@
         "form-canon": "fee",
         "type": "noun",
         "gloss": "fee",
+        "gloss-alt": "money",
         "tags": ["count", "abstract"],
         "origin": "old-english",
-        "notes": "Original meaning 'money'. Form influenced by Anglo-French 'fee'"
+        "notes": "Form influenced by Anglo-French 'fee'"
     }, {
         "key": "feohtan",
         "form-raw": "feoht|an",
@@ -1083,9 +1084,10 @@
         "form-canon": "warp",
         "type": "verb",
         "gloss": "warp",
+        "gloss-alt": "throw",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "Strong verb: weorpan, wearp, wurpon, worpen. Original meaning 'throw'"
+        "notes": "Strong verb: weorpan, wearp, wurpon, worpen."
     }, {
         "key": "wīs",
         "form-raw": "wīs",

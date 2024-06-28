@@ -335,6 +335,15 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "cynn",
+        "form-raw": "cynn",
+        "form-canon": "kin",
+        "type": "noun",
+        "gloss": "family",
+        "tags": ["mass", "abstract", "living", "person"],
+        "origin": "old-english",
+        "notes": "Alt. meanings I don't feel like including right now"
+    }, {
         "key": "cȳþan",
         "form-raw": "cȳþ|an",
         "form-canon": "kithe",
@@ -375,7 +384,7 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "ā-drīfan",
+        "key": "ādrīfan",
         "form-raw": "ā-drīf|an",
         "form-raw-alt": ["ādrǣf|an"],
         "type": "verb",
@@ -435,6 +444,30 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "drohtnian",
+        "form-raw": "drohtni|an",
+        "form-raw-alt": ["drohti|an"],
+        "type": "verb",
+        "gloss": ["live", "inhabit", "[conduct] onself"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "dugan",
+        "form-raw": "dug|an",
+        "form-canon": "dow",
+        "type": "verb",
+        "gloss": "[be] of use or [have] value",
+        "gloss-alt": ["[thrive], [prosper]", "[be] fit or strong", "[be] fit for a purpose", "[be] able to do something"],
+        "tags": ["intransitive", "stative", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "dun",
+        "form-raw": "dun",
+        "type": "adj",
+        "gloss": "grayish-brown",
+        "tags": ["color"],
+        "origin": "old-english"
+    }, {
         "key": "dwæsċan",
         "form-raw": "dwæsċ|an",
         "type": "verb",
@@ -451,16 +484,10 @@
     }, {
         "key": "ebbian",
         "form-raw": "ebbi|an",
+        "form-canon": "ebb",
         "type": "verb",
         "gloss": "ebb",
-        "tags": ["transitive"],
-        "origin": "old-english"
-    }, {
-        "key": "dun",
-        "form-raw": "dun",
-        "type": "adj",
-        "gloss": "grayish-brown",
-        "tags": ["color"],
+        "tags": ["intransitive"],
         "origin": "old-english"
     }, {
         "key": "ēċe",
@@ -492,6 +519,21 @@
         "tags": ["mass", "concrete", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "faran",
+        "form-raw": "far|an",
+        "form-canon": "fare",
+        "type": "verb",
+        "gloss": "travel",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "āfaran",
+        "form-raw": "ā-far|an",
+        "type": "verb",
+        "gloss": "depart",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "fear",
         "form-raw": "fear",
         "type": "noun",
@@ -513,6 +555,14 @@
         "type": "noun",
         "gloss": "fish",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "folgian",
+        "form-raw": "folg|an",
+        "form-canon": "follow",
+        "type": "verb",
+        "gloss": "follow",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "fōn",
@@ -568,6 +618,14 @@
         "type": "noun",
         "gloss": "hat",
         "tags": ["count", "concrete", "man-made", "garment"],
+        "origin": "old-english"
+    }, {
+        "key": "huntian",
+        "form-raw": "hunti|an",
+        "form-canon": "follow",
+        "type": "verb",
+        "gloss": "hunt",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "hyll",
@@ -761,6 +819,31 @@
         "gloss": "sour",
         "origin": "old-english"
     }, {
+        "key": "todiġe",
+        "form-raw": "todiġe",
+        "form-canon": "toad",
+        "type": "noun",
+        "gloss": "toad",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "þearf",
+        "form-raw": "þearf",
+        "form-canon": "tharf",
+        "type": "adj",
+        "gloss": "unleavened",
+        "origin": "old-english",
+        "tags": ["obscure"],
+        "notes": "Other meanings in dialect"
+    }, {
+        "key": "þorn",
+        "form-raw": "þorn",
+        "form-canon": "thorn",
+        "type": "noun",
+        "gloss": "thorn",
+        "tags": ["count", "concrete", "living", "plant", "bodypart", "bodypart-plant"],
+        "origin": "old-english"
+    }, {
         "key": "wænge",
         "form-raw": "wænge",
         "form-raw-alt": ["wange", "wonge", "wenge"],
@@ -784,6 +867,15 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Alternate meaning 'happen'"
+    }, {
+        "key": "wiþer",
+        "form-raw": "wiþer",
+        "form-canon": "wither",
+        "type": "adj",
+        "gloss": ["hostile", "opposed", "adverse", "contrary"],
+        "origin": "old-english",
+        "tags": ["obscure"],
+        "notes": "Other meanings in dialect"
     }, {
         "key": "wræc",
         "form-raw": "wræc",

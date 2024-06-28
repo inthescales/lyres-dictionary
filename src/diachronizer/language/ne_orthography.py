@@ -82,10 +82,14 @@ def from_me_phonemes(phonemes, config):
                 result += "ew"
             elif override == "ue":
                 result += "ue"
-            elif next1:
-                result += random.choice(["ew", "ue", "u"])
             else:
-                result += random.choice(["ew", "ue"])
+                choices = ["ue"]
+                if next1:
+                    choices += ["u"]
+                if result[-1] != "c":
+                    choices += ["ew"]
+
+                result += random.choice(choices)
             
             if next1 and next1.value == "ə":
                 skip_next = True

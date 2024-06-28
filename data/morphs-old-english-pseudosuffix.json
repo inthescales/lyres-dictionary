@@ -21,6 +21,16 @@
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
+        "key": "-lēas",
+        "form-stem": "less",
+        "form-raw": "lēas",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "without %pl",
+        "origin": "old-english"
+    }, {
         "key": "-mangere",
         "form-stem": "monger",
         "form-raw": "mangere",
@@ -69,6 +79,16 @@
         },
         "tags": ["count", "abstract", "bounded"],
         "origin": "old-english"
+    }, {
+        "key": "-wis",
+        "form-stem": "wise",
+        "form-raw": "wis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": ["in the manner of %sg", "with regard to %pl"],
+        "origin": "old-english",
+        "notes": "Properly ME, but categorizing as OE for now"
     }, {
         "key": "-wryhta",
         "form-stem": "wright",
