@@ -332,6 +332,36 @@
         "notes": "Many more attestations from ME, but apparently in OE as well. TODO: Consider adding passthrough concreteness."
     },
     {
+        "key": "-red",
+        "form-stem": "red",
+        "form-final": "red",
+        "form-raw": "rǣden",
+        "type": "derive",
+        "derive-from": ["noun", "verb"],
+        "derive-to": "noun",
+        "gloss": "the state or condition of being %sg",
+        "tags": ["mass", "abstract"],
+        "requires": {
+            "follows": {
+                "or": [
+                    { "has-type": "verb" },
+                    { "has-tag": "person" }
+                ]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-type": "verb"
+                    }
+                },
+                "gloss": "the state or condition of %part"
+            }
+        ],
+        "origin": "old-english"
+    },
+    {
         "key": "-sċipe-adj",
         "form-stem": "ship",
         "form-raw": "sċipe",

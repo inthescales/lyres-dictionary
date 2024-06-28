@@ -253,6 +253,14 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "cnotta",
+        "form-raw": "cnotta",
+        "form-canon": "knot",
+        "type": "noun",
+        "gloss": "knot",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
         "key": "crumb",
         "form-raw": "crumb",
         "type": "adj",
@@ -323,7 +331,7 @@
         "key": "ācweþan",
         "form-raw": "ā-cweþ|an",
         "type": "verb",
-        "gloss": ["[speak], [utter]", "[renounce], [banish]", "[reply], [answer]"],
+        "gloss": ["[speak], [utter]", "[renounce] or [banish]", "[reply], [answer]"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -460,6 +468,21 @@
         "form-raw-alt": ["ǣċe"],
         "type": "adj",
         "gloss": "eternal",
+        "origin": "old-english"
+    }, {
+        "key": "fāh",
+        "form-raw": "fāh",
+        "type": "adj",
+        "gloss": ["[guilty] or [criminal]", "hostile"],
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġefāh",
+        "form-raw": "ġefāh",
+        "form-canon": "foe",
+        "type": "noun",
+        "gloss": "enemy",
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
         "key": "fang",
@@ -648,6 +671,20 @@
         "tags": ["count", "concrete", "living", "animal", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "mǣtan",
+        "form-raw": "mǣt|an",
+        "type": "verb",
+        "gloss": ["dream", "[appear] in a dream"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "mētan",
+        "form-raw": "mēt|an",
+        "type": "verb",
+        "gloss": "[draw] or [paint]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "midl",
         "form-raw": "midl",
         "type": "noun",
@@ -670,6 +707,35 @@
         "type": "noun",
         "gloss": "pot",
         "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "rǣd",
+        "form-raw": "rǣd",
+        "form-raw-alt": "rēd",
+        "form-canon": "rede",
+        "type": "noun",
+        "gloss": ["[advice], [counsel]", "help"],
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english",
+        "notes": "Chosen form is WS, but matches canon form. 'rēd' is Anglian."
+    }, {
+        "key": "rǣd-count",
+        "form-raw": "rǣd",
+        "form-raw-alt": "rēd",
+        "form-canon": "rede",
+        "type": "noun",
+        "gloss": ["decision", "plan"],
+        "tags": ["count", "abstract", "obscure", "rare"],
+        "origin": "old-english",
+        "notes": "Separated from 'rǣd' due to countability difference."
+    }, {
+        "key": "rǣdan",
+        "form-raw": "rǣd|an",
+        "form-canon": "rede",
+        "type": "verb",
+        "gloss": "[advise] or [give] counsel",
+        "gloss-alt": ["[govern] or [protect]", "[discuss] or [deliberate]", "[interpret] or [explain]"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "rud",

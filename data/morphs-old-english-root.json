@@ -360,9 +360,9 @@
         "form-canon": "fiend",
         "type": "noun",
         "gloss": "wicked [person]",
+        "gloss-alt": "enemy",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english",
-        "notes": "original sense 'enemy'"
+        "origin": "old-english"
     }, {
         "key": "fersċ",
         "form-raw": "fersċ",
@@ -400,7 +400,7 @@
         "form-canon": "friend",
         "type": "noun",
         "gloss": "friend",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
         "key": "fremman",
