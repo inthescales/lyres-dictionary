@@ -11,6 +11,7 @@ valid_properties = [
     "form-final",
     "form-stem",
     "form-raw",                 # Original form, before historical changes
+    "form-raw-alt",             # Nonstandard raw form (e.g. infrequent or dialectal)
     "form-canon",               # Actual form in modern English (as opposed to plausible alternatives)
     "form-stem-present",        # Present participle stem for Latin verbs
     "form-stem-perfect",        # Perfect participle stem for Latin verbs
@@ -21,6 +22,7 @@ valid_properties = [
     "conjugation",
     "declension",
     "gloss",
+    "gloss-alt",                # Nonstandard glosses (e.g. historical)
     "gloss-final",              # Gloss used when this is the last morph
     "gloss-link",               # Gloss used when not the last morph
     "gloss-relative",           # Verb:   Alternate gloss used with prepositional prefix

@@ -97,15 +97,15 @@ def transform_word(word, morphothec, is_single):
         else:
             bag.append(("add_suffix", 100))
         
-    # if word.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not has_prep and not has_prefix:
-    #     if last_morph.has_tag("always-prep"):
-    #         override = True
-    #         choice = "add_prep_prefix"
-    #     else:
-    #         if language == "greek" and not first_morph.has_tag("motion"):
-    #             bag.append(("add_prep_prefix", 10))
-    #         else:
-    #             bag.append(("add_prep_prefix", 33))
+    if word.size() == 1 and current_type == "verb" and not last_morph.has_tag("no-prep") and not has_prep and not has_prefix:
+        if last_morph.has_tag("always-prep"):
+            override = True
+            choice = "add_prep_prefix"
+        else:
+            if language == "greek" and not first_morph.has_tag("motion"):
+                bag.append(("add_prep_prefix", 10))
+            else:
+                bag.append(("add_prep_prefix", 33))
     
     if word.size() >= 1 and current_type == "verb" and not first_morph.get_type() == "prefix":
         if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
@@ -120,16 +120,32 @@ def transform_word(word, morphothec, is_single):
     # if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
     #     bag.append(("numerical", 5))
 
-    # Show an alternate form for common words
+    # See if an alternate form is available
+    # TODO: Find a way to generate all possible alt. forms rather than relying on rolling one
+    alternate_form = None
     if is_single \
         and "form-canon" in root_morph.morph \
         and not root_morph.has_tag("speculative") \
         and not root_morph.has_tag("obscure"):
             env = word.environment_for_index(0)
-            form = former.form(root_morph, env)
+            config = former.Former_Config(True, False, False)
+            form = former.form(root_morph, env, config)
             form_canon = root_morph.morph["form-canon"]
             if form != form_canon:
-                bag.append(("alternate_form", 10))
+                alternate_form = form
+
+    # Show an alternate form for common words
+    if alternate_form != None:
+        bag.append(("alternate_form", 10))
+
+    # Show alternate gloss
+    if "gloss-alt" in root_morph.morph:
+        bag.append(("alternate_gloss", 10))
+
+    # Show alternate form and gloss
+    if alternate_form != None \
+        and "gloss-alt" in root_morph.morph:
+        bag.append(("alternate_form_and_gloss", 30))
         
     # If there is no override, choose, or return False if no choices ------
     if not override: 
@@ -225,16 +241,34 @@ def transform_word(word, morphothec, is_single):
             word.add_affixes(num_morph, end_morph)
 
     # Alternate form
-    elif choice == "alternate_form":
-        if form != form_canon:
-            root_morph.morph["key"] += "-adhoc:alt"
-            root_morph.morph["gloss"] = "alternate form of '" + form_canon + "'"
-            del root_morph.morph["form-raw"]
-            del root_morph.morph["form-canon"]
-            root_morph.morph["form-final"] = form
-            if "tags" in root_morph.morph:
-                root_morph.morph["tags"] += ["fixed-gloss"]
-            else:
-                root_morph.morph["tags"] = ["fixed-gloss"]
+    elif choice == "alternate_form" and alternate_form != None:
+        root_morph.morph["key"] += "-adhoc:alt"
+        root_morph.morph["gloss"] = "alternate form of '" + form_canon + "'"
+        del root_morph.morph["form-raw"]
+        del root_morph.morph["form-canon"]
+        root_morph.morph["form-final"] = alternate_form
+        if "tags" in root_morph.morph:
+            root_morph.morph["tags"] += ["fixed-gloss"]
+        else:
+            root_morph.morph["tags"] = ["fixed-gloss"]
+
+    # Alternate gloss
+    elif choice == "alternate_gloss":
+        root_morph.morph["key"] += "-adhoc:alt"
+        if isinstance(root_morph.morph["gloss-alt"], list):
+            root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss-alt"])
+        elif isinstance(root_morph.morph["gloss-alt"], str):
+            root_morph.morph["gloss"] = root_morph.morph["gloss-alt"]
+
+    # Alternate form and gloss
+    elif choice == "alternate_form_and_gloss" and alternate_form != None:
+        root_morph.morph["key"] += "-adhoc:alt"
+        if isinstance(root_morph.morph["gloss-alt"], list):
+            root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss-alt"])
+        elif isinstance(root_morph.morph["gloss-alt"], str):
+            root_morph.morph["gloss"] = root_morph.morph["gloss-alt"]
+        del root_morph.morph["form-raw"]
+        del root_morph.morph["form-canon"]
+        root_morph.morph["form-final"] = alternate_form
 
     return True

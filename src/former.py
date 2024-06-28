@@ -4,7 +4,13 @@ from src.logging import Logger
 from src.diachronizer import diachronizer
 from src.diachronizer.engine.config import Config
 
-def form(morph, env):
+class Former_Config():
+    def __init__(self, include_alt_forms=False, include_alt_glosses=False, canon_lock=True):
+        self.include_alt_forms = include_alt_forms
+        self.include_alt_glosses = include_alt_glosses
+        self.canon_lock = canon_lock
+
+def form(morph, env, config=Former_Config()):
     form = ""
 
     morph_dict = morph.morph
@@ -24,19 +30,25 @@ def form(morph, env):
     if "form-raw" in morph_dict \
         and not ("form-stem" in morph_dict and morph.is_affix()):
         if morph_dict["origin"] == "old-english":
-            # if "form-canon" in morph_dict:
-            #     return morph_dict["form-canon"]
+            if "form-canon" in morph_dict and config.canon_lock:
+                return morph_dict["form-canon"]
 
+            forms = []
             if type(morph_dict["form-raw"]) == list:
-                random = Random(morph.seed)
-                raw_form = random.choice(morph_dict["form-raw"])
+                forms = morph_dict["form-raw"]
             else:
-                raw_form = morph_dict["form-raw"]
+                forms = [morph_dict["form-raw"]]
+
+            if config.include_alt_forms and "form-raw-alt" in morph_dict:
+                forms += morph_dict["form-raw-alt"]
 
             def process(form):
                config = Config(locked=True, seed=morph.seed)
                return diachronizer.oe_form_to_ne_form(form, config) 
             
+            random = Random(morph.seed)
+            raw_form = random.choice(forms)
+
             if not "-" in raw_form:
                 form = process(raw_form)
             else:

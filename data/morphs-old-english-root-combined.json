@@ -50,28 +50,26 @@
         "form-raw": "ātr",
         "form-canon": "atter",
         "type": "noun",
-        "gloss": "[poison], [venom]",
+        "gloss": ["[poison], [venom]", "corrupt [matter] or [pus]"],
+        "gloss-alt": "[gall], [bitterness]",
         "tags": ["mass", "concrete", "liquid", "secretion", "obscure"],
-        "origin": "old-english",
-        "notes": "alternate meanings 'gall, bitterness', 'corrupt matter, pus'"
+        "origin": "old-english"
     }, {
         "key": "belgan",
         "form-raw": "belg|an",
         "form-canon": "bellow",
         "type": "verb",
         "gloss": "bellow",
+        "gloss-alt": "[swell] with anger",
         "tags": ["intransitive"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'swell with anger'"
+        "origin": "old-english"
     }, {
         "key": "ābelgan",
         "form-raw": "ā-belg|an",
-        "form-canon": "bellow",
         "type": "verb",
-        "gloss": "bellow",
+        "gloss": ["bellow", "[swell] with anger"],
         "tags": ["intransitive"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'swell with anger'"
+        "origin": "old-english"
     }, {
         "key": "bellan",
         "form-raw": "bell|an",
@@ -92,11 +90,12 @@
     }, {
         "key": "berġan",
         "form-raw": "berġ|an",
+        "form-raw-alt": ["bierġ|an", "byrġ|an"],
         "type": "verb",
-        "gloss": "taste",
+        "gloss": ["taste", "[partake] of"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Chosen form is Anglian. WS 'bierġan' / 'byrġan'. Alternate meaning 'partake of'"
+        "notes": "Chosen form is Anglian, alternates WS"
     }, {
         "key": "biddan",
         "form-raw": "bidd|an",
@@ -132,20 +131,20 @@
     }, {
         "key": "bysiġan",
         "form-raw": "bysiġ|an",
+        "form-raw-alt": ["bisgi|an"],
         "form-canon": "busy",
         "type": "verb",
         "gloss": "[occupy] or [engage]",
         "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Alternate form 'bisgian'"
+        "origin": "old-english"
     }, {
         "key": "ābysiġan",
         "form-raw": "ā-bysiġ|an",
+        "form-raw-alt": ["ā-bisgi|an"],
         "type": "verb",
         "gloss": "[occupy] or [engage]",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Alternate form 'bisgian'"
+        "origin": "old-english"
     }, {
         "key": "blinnan",
         "form-raw": "blinn|an",
@@ -182,18 +181,18 @@
         "form-canon": "braid",
         "type": "verb",
         "gloss": "braid",
+        "gloss-alt": ["[move] back and forth", "[draw] a weapon", "drag", "bend"],
         "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Alternate meanings 'move back and forth', 'draw a weapon', 'drag', 'bend'"
+        "origin": "old-english"
     }, {
         "key": "ābreġdan",
         "form-raw": "ā-breġd|an",
         "form-canon": "braid",
         "type": "verb",
         "gloss": "braid",
+        "gloss-alt": ["[move] back and forth", "[draw] a weapon", "drag", "bend"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Alternate meanings 'move back and forth', 'draw a weapon', 'drag', 'bend'"
+        "origin": "old-english"
     }, {
         "key": "brēoþan",
         "form-raw": "brēoþ|an",
@@ -250,9 +249,9 @@
         "form-canon": "churl",
         "type": "noun",
         "gloss": "low-class [person]",
+        "gloss-alt": "man",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'man'"
+        "origin": "old-english"
     }, {
         "key": "crumb",
         "form-raw": "crumb",
@@ -281,17 +280,16 @@
         "type": "verb",
         "gloss": "faint",
         "tags": ["intransitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Alternate original meaning 'die'"
+        "origin": "old-english"
     }, {
         "key": "cwellan",
         "form-raw": "cwell|an",
         "form-canon": "quell",
         "type": "verb",
         "gloss": "[subdue] or [silence]",
+        "gloss-alt": "[kill] or [destroy]",
         "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Original meaning kill or destroy"
+        "origin": "old-english"
     }, {
         "key": "ācwellan",
         "form-raw": "ā-cwell|an",
@@ -346,45 +344,45 @@
     }, {
         "key": "dilegian",
         "form-raw": "dileg|an",
+        "form-raw-alt": ["diligi|an"],
         "type": "verb",
         "gloss": "[blot] out or [destroy]",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Alt. form 'diligian'"
+        "origin": "old-english"
     }, {
         "key": "ādilegian",
         "form-raw": "ā-dileg|an",
+        "form-raw-alt": ["ā-diligi|an"],
         "type": "verb",
         "gloss": "[blot] out or [destroy]",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Alt. form 'ādiligian'"
+        "origin": "old-english"
     }, {
         "key": "drīfan",
         "form-raw": "drīf|an",
+        "form-raw-alt": ["drǣf|an"],
         "form-canon": "drive",
         "type": "verb",
         "gloss": "[drive] out, [expel]",
         "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Alternate form 'drǣfan'"
+        "origin": "old-english"
     }, {
         "key": "ā-drīfan",
         "form-raw": "ā-drīf|an",
+        "form-raw-alt": ["ādrǣf|an"],
         "type": "verb",
         "gloss": "[drive] out, [expel]",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Alternate form 'ādrǣfan'"
+        "origin": "old-english"
     }, {
         "key": "drenċan",
         "form-raw": "drenċ|an",
         "form-canon": "drench",
         "type": "verb",
         "gloss": "soak",
+        "gloss-alt": "[give] someone a drink",
         "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'give someone a drink'"
+        "origin": "old-english"
     }, {
         "key": "ādrenċan",
         "form-raw": "ā-drenċ|an",
@@ -459,10 +457,10 @@
     }, {
         "key": "ēċe",
         "form-raw": "ēċe",
+        "form-raw-alt": ["ǣċe"],
         "type": "adj",
         "gloss": "eternal",
-        "origin": "old-english",
-        "notes": "Alt. form 'ǣċe"
+        "origin": "old-english"
     }, {
         "key": "fang",
         "form-raw": "fang",
@@ -536,10 +534,10 @@
         "key": "hǣman",
         "form-raw": "hǣm|an",
         "type": "verb",
-        "gloss": "[have] sex with",
+        "gloss": ["[have] sex with", "[cohabitate] with"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Alternate meaning 'to cohabitate'. Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
+        "notes": "Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
     }, {
         "key": "hætt",
         "form-raw": "hætt",
@@ -587,12 +585,13 @@
     }, {
         "key": "holen",
         "form-raw": "holen",
+        "form-raw-alt": ["holeġn"],
         "form-canon": "hollin",
         "type": "noun",
         "gloss": "holly",
         "tags": ["mass", "concrete", "living", "plant", "obscure"],
         "origin": "old-english",
-        "notes": "Alternate OE form 'holeġn', ME 'holm', 'holly'"
+        "notes": "ME forms 'holm', 'holly'"
     }, {
         "key": "hrūse",
         "form-raw": "hrūse",
@@ -658,12 +657,12 @@
     }, {
         "key": "myln",
         "form-raw": "myln",
+        "form-raw-alt": ["mylen"],
         "form-canon": "mill",
         "type": "noun",
         "gloss": "mill",
         "tags": ["count", "concrete", "man-made"],
-        "origin": "old-english",
-        "notes": "Alternate form 'mylen'. TODO: Handle loss of /n/ after /l/ (as in 'kiln')"
+        "origin": "old-english"
     }, {
         "key": "pott",
         "form-raw": "pott",
@@ -698,12 +697,12 @@
     }, {
         "key": "wænge",
         "form-raw": "wænge",
+        "form-raw-alt": ["wange", "wonge", "wenge"],
         "form-canon": "wang",
         "type": "noun",
         "gloss": "cheek",
         "tags": ["count", "concrete", "bodypart", "obscure"],
-        "origin": "old-english",
-        "notes": "Alternate forms 'wange', 'wonge', 'wenge'"
+        "origin": "old-english"
     }, {
         "key": "wearr",
         "form-raw": "wearr",
@@ -730,7 +729,7 @@
     }, {
         "key": "wracu",
         "form-raw": "wracu",
-        "form-raw": "wrake",
+        "form-canon": "wrake",
         "type": "noun",
         "gloss": "revenge",
         "tags": ["mass", "abstract", "obscure"],
@@ -749,7 +748,6 @@
         "type": "noun",
         "gloss": "she-wolf",
         "tags": ["count", "concrete", "living", "animal", "speculative"],
-        "origin": "old-english",
-        "notes": "Alternate form 'wylf'"
+        "origin": "old-english"
      }
 ]
