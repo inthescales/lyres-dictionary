@@ -39,7 +39,10 @@ def form(morph, env, config=Former_Config()):
                 forms = [morph_dict["form-raw"]]
 
             if config.include_alt_forms and "form-raw-alt" in morph_dict:
-                forms += morph_dict["form-raw-alt"]
+                if isinstance(morph_dict["form-raw-alt"], list):
+                    forms += morph_dict["form-raw-alt"]
+                else:
+                    forms += [morph_dict["form-raw-alt"]]
 
             def process(form):
                config = Config(locked=True, seed=morph.seed)

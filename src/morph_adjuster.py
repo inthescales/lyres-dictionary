@@ -20,4 +20,8 @@ def adjust_morph(morph):
             if not "rare" in morph["tags"]:
                 morph["tags"] += ["rare"]
 
+        # Add 'rare' tag to homophonic words
+        if "tags" in morph and "homophonic" in morph["tags"]:
+            morph["tags"] += ["rare"]
+
     return morph

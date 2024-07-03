@@ -8,14 +8,6 @@
         "tags": ["count", "concrete", "bodypart", "bodypart-plant", "food"],
         "origin": "old-english"
     }, {
-        "key": "ǣr",
-        "form-raw": "ǣr",
-        "form-canon": "ere",
-        "type": "adj",
-        "gloss": "before",
-        "origin": "old-english",
-        "notes": "Difficult to gloss. More properly an adverb"
-    }, {
         "key": "æsċ",
         "form-raw": "æsċ",
         "form-canon": "ash",
