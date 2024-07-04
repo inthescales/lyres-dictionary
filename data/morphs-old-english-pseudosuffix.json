@@ -7,7 +7,17 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": ["-nes"],
-        "gloss": "full of %pl",
+        "gloss": "having many %pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "mass"
+                    }
+                },
+                "gloss": "having much %pl"
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "-lāc",
@@ -96,7 +106,6 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "someone who makes %pl",
         "requires": {
             "follows": {
@@ -104,6 +113,24 @@
             }
         },
         "tags": ["uncountable", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "-wærc",
+        "form-stem": "wark",
+        "form-raw": "wærc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "pain in one's %!sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "bodypart" },
+                    { "not": { "has-tag": "bodypart-plant" }}
+                ]
+            }
+        },
+        "tags": ["count", "abstract"],
         "origin": "old-english"
     }
 ]

@@ -193,7 +193,12 @@ def from_me_phonemes(phonemes, config):
             result += "u"
         elif phone.value == "uː":
             if next1:
-                if next1.value == "r":
+                if next1.value == "n":
+                    # 'town', 'down' 'brown' vs 'roun'
+                    # Note that some archaic past participle forms may use 'owe': 'untowen', 'ygrowen', 'thowen'
+                    choice = often("Orth:uːn->ow/ou", config)
+                    result += choice
+                elif next1.value == "r":
                     # 'bower', 'shower' vs 'our', 'sour'
                     choice = even("Orth:uːr->ou/owe", config)
                     result += choice

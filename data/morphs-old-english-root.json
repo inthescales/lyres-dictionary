@@ -193,7 +193,7 @@
         "form-canon": "quean",
         "type": "noun",
         "gloss": "[woman] (derogatory)",
-        "tags": ["count", "concrete", "living", "person", "no-gen"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Original sense of 'woman' generally"
     }, {
@@ -297,21 +297,6 @@
         "type": "noun",
         "gloss": "father",
         "tags": ["count", "concrete", "living", "person", "role"],
-        "origin": "old-english"
-    }, {
-        "key": "fǣġe",
-        "form-raw": "fǣġe",
-        "form-canon": "fey",
-        "type": "adj",
-        "gloss": "[strange] or [otherworldly]",
-        "origin": "old-english",
-        "notes": "Alternate modern form 'fay'. Alternate meaning 'doomed to die'"
-    }, {
-        "key": "fæġer",
-        "form-raw": "fæġer",
-        "form-canon": "fair",
-        "type": "adj",
-        "gloss": "beautiful",
         "origin": "old-english"
     }, {
         "key": "fām",

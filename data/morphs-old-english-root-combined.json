@@ -49,8 +49,8 @@
         "key": "āfor",
         "form-raw": "āfor",
         "type": "adj",
-        "gloss": ["bitter", "fierce", "homophonic"],
-        "tags": ["speculative"],
+        "gloss": ["bitter", "fierce"],
+        "tags": ["speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "āgan",
@@ -84,6 +84,13 @@
         "tags": ["mass", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "amber",
+        "form-raw": "amber",
+        "type": "noun",
+        "gloss": "measure",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "ængel",
         "form-raw": "ængel",
         "form-raw-alt": "engel",
@@ -104,22 +111,22 @@
     }, {
         "key": "ār-glory",
         "form-raw": "ār",
-        "type": "adj",
+        "type": "noun",
         "gloss": ["[honor], [glory]", "grace"],
-        "tags": ["speculative", "homophonic"],
+        "tags": ["mass", "abstract", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ār-ore",
         "form-raw": "ār",
         "form-canon": "ore",
-        "type": "adj",
+        "type": "noun",
         "gloss": "ore",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
         "key": "ār-metal",
         "form-raw": "ār",
-        "type": "adj",
+        "type": "noun",
         "gloss": ["bronze", "brass", "copper"],
         "tags": ["mass", "concrete", "metal", "speculative", "homophonic"],
         "origin": "old-english"
@@ -127,16 +134,16 @@
         "key": "ār-oar",
         "form-raw": "ār",
         "form-canon": "oar",
-        "type": "adj",
+        "type": "noun",
         "gloss": "oar",
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "ār-messenger",
         "form-raw": "ār",
-        "type": "adj",
+        "type": "noun",
         "gloss": ["[messenger] or [herald]", "angel", "missionary"],
-        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "tags": ["count", "concrete", "living", "person", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ǣr",
@@ -189,7 +196,7 @@
         "form-raw": "ǣs",
         "type": "noun",
         "gloss": ["prey", "carrion"],
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ǣsċ",
@@ -292,7 +299,7 @@
         "key": "bit",
         "form-raw": "bit",
         "form-canon": "bit",
-        "type": "adj",
+        "type": "noun",
         "gloss": "small [quantity] of something",
         "tags": ["count", "abstract"],
         "origin": "old-english"
@@ -374,6 +381,16 @@
         "type": "verb",
         "gloss": ["[decay] or [waste] away", "[fail], [come] to naught"],
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "burg",
+        "form-raw": "burg",
+        "form-raw-alt": "burh",
+        "form-canon": "burgh",
+        "type": "noun",
+        "gloss": "[city] or [town]",
+        "gloss-alt": "fortress",
+        "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
         "key": "būr",
@@ -636,6 +653,14 @@
         "tags": ["color"],
         "origin": "old-english"
     }, {
+        "key": "dūn",
+        "form-raw": "dūn",
+        "form-canon": "down",
+        "type": "noun",
+        "gloss": "hill",
+        "tags": ["count", "concrete", "terrain", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "dwæsċan",
         "form-raw": "dwæsċ|an",
         "type": "verb",
@@ -648,6 +673,24 @@
         "type": "verb",
         "gloss": "extinguish",
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "dweorg",
+        "form-raw": "dweorg",
+        "form-raw-alt": ["drweorh", "dwerg", "dwearg"],
+        "form-canon": "dwarf",
+        "type": "verb",
+        "gloss": "dwarf",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "I can't find any actual source for 'dwearg', but it matches Tolkien's 'dwarrow' so I'm keeping it, fuck it"
+    }, {
+        "key": "eald",
+        "form-raw": "eald",
+        "form-raw-alt": "ald",
+        "form-canon": "old",
+        "type": "adj",
+        "gloss": "old",
         "origin": "old-english"
     }, {
         "key": "earm",
@@ -673,6 +716,22 @@
         "form-raw-alt": ["ǣċe"],
         "type": "adj",
         "gloss": "eternal",
+        "origin": "old-english"
+    }, {
+        "key": "fǣġe",
+        "form-raw": "fǣġe",
+        "form-canon": "fey",
+        "type": "adj",
+        "gloss": "[strange] or [otherworldly]",
+        "gloss-alt": "doomed to die",
+        "origin": "old-english",
+        "notes": "Alternate modern form 'fay'."
+    }, {
+        "key": "fæġer",
+        "form-raw": "fæġer",
+        "form-canon": "fair",
+        "type": "adj",
+        "gloss": "beautiful",
         "origin": "old-english"
     }, {
         "key": "fāh",
@@ -762,7 +821,8 @@
         "form-canon": "fell",
         "form-raw-alt": ["fæll|an", "fyll|an"],
         "type": "verb",
-        "gloss": "[cut] down or [kill]",
+        "gloss": "[cut] down",
+        "gloss-alt": "kill",
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "'fiellan' accords with modern form. 'fællan' is Anglian"
@@ -846,7 +906,6 @@
     }, {
         "key": "ā-fyrhtan",
         "form-raw": "ā-fyrht|an",
-        "form-canon": "fright",
         "type": "verb",
         "gloss": "frighten",
         "tags": ["transitive"],
@@ -870,7 +929,7 @@
         "key": "fyrhþe",
         "form-raw": "fyrhþe",
         "type": "noun",
-        "gloss": "[wood], [woodland]",
+        "gloss": ["[woodland] area", "game [preserve]"],
         "tags": ["count", "concrete", "living", "terrain", "speculative"],
         "origin": "old-english",
         "notes": "Relationship with OE/ME 'frith' uncertain"
@@ -904,6 +963,15 @@
         "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
     }, {
+        "key": "hæfen",
+        "form-raw": "hæfen",
+        "form-canon": "haven",
+        "type": "noun",
+        "gloss": "[place] of safety",
+        "gloss-alt": "harbor",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+     }, {
         "key": "hǣmed",
         "form-raw": "hǣmed",
         "type": "adj",
@@ -926,6 +994,15 @@
         "type": "noun",
         "gloss": "hat",
         "tags": ["count", "concrete", "man-made", "garment"],
+        "origin": "old-english"
+    }, {
+        "key": "hōh",
+        "form-raw": "hōh",
+        "form-raw-alt": ["hō", "hōg"],
+        "form-canon": "hough",
+        "type": "noun",
+        "gloss": "heel",
+        "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
         "key": "holt",
@@ -976,7 +1053,7 @@
         "key": "ġeotan",
         "form-raw": "ġeot|an",
         "type": "verb",
-        "gloss": ["pour", "[shed] (blood, tears, etc)", "[cast] metal"],
+        "gloss": ["pour", "[shed] (blood, tears, etc.)", "[cast] metal"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -994,11 +1071,96 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "ġiefan",
+        "form-raw": "ġief|an",
+        "type": "verb",
+        "gloss": "give",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-ġiefan",
+        "form-raw": "ā-ġief|an",
+        "type": "verb",
+        "gloss": "deliver",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġield",
+        "form-raw": "ġield",
+        "form-raw-alt": "ġeld",
+        "form-canon": "yield",
+        "type": "noun",
+        "gloss": "product",
+        "gloss-alt": "payment",
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "ġieldan",
+        "form-raw": "ġield|an",
+        "form-raw-alt": ["ġeld|an", "ġyld|an"],
+        "form-canon": "yield",
+        "type": "verb",
+        "gloss": ["[give] or [give] up", "produce"],
+        "gloss-alt": "pay",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "guma",
+        "form-raw": "guma",
+        "type": "noun",
+        "gloss": "man",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Became 'groom' but leaving separate for now"
+    }, {
+        "key": "gyltan",
+        "form-raw": "gylt|an",
+        "type": "verb",
+        "gloss": "commit (as a sin)",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "āgyltan",
+        "form-raw": "ā-gylt|an",
+        "type": "verb",
+        "gloss": "commit (as a sin)",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "hēawan",
+        "form-raw": "hēaw|an",
+        "form-canon": "hew",
+        "type": "verb",
+        "gloss": "[cut] down",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "āhēawan",
+        "form-raw": "ā-hēaw|an",
+        "type": "verb",
+        "gloss": "[cut] down",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hebban",
+        "form-raw": "hebb|an",
+        "type": "verb",
+        "gloss": "[lift] up",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "āhebban",
+        "form-raw": "ā-hebb|an",
+        "type": "verb",
+        "gloss": "[lift] up",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "heoru",
         "form-raw": "heoru",
         "type": "noun",
         "gloss": "sword",
-        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
+        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "holen",
@@ -1011,11 +1173,39 @@
         "origin": "old-english",
         "notes": "ME forms 'holm', 'holly'"
     }, {
+        "key": "hreddan",
+        "form-raw": "hredd|an",
+        "type": "verb",
+        "gloss": "rescue",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hrēosan",
+        "form-raw": "hrēos|an",
+        "type": "verb",
+        "gloss": "[fall] down, [collapse]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "āhrēosan",
+        "form-raw": "ā-hrēos|an",
+        "type": "verb",
+        "gloss": "[fall] down, [collapse]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "hrūse",
         "form-raw": "hrūse",
         "type": "noun",
         "gloss": "ground",
-        "tags": ["singleton", "concrete", "terrain", "speculative"],
+        "tags": ["singleton", "concrete", "terrain", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "āhwǣtan",
+        "form-raw": "ā-hwǣt|an",
+        "type": "verb",
+        "gloss": "[expel] or [banish]",
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "īsen",
@@ -1024,14 +1214,109 @@
         "type": "noun",
         "gloss": "iron",
         "tags": ["mass", "concrete", "metal", "material", "obscure"],
-        "origin": "old-english",
-        "notes": "More standard form of 'īren', which led to modern form of 'iron'"
+        "origin": "old-english"
     }, {
         "key": "lāc",
         "form-raw": "lāc",
         "type": "noun",
-        "gloss": ["[play] or [sport]", "[battle] or [strife]", "gift"],
+        "gloss": ["[play] or [sport]", "[battle] or [strife]", "gifts"],
         "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "lǣċe",
+        "form-raw": "lǣċe",
+        "form-canon": "leech",
+        "type": "noun",
+        "gloss": "doctor",
+        "tags": ["mass", "concrete", "living", "person", "role"],
+        "origin": "old-english"
+    }, {
+        "key": "lācni|an",
+        "form-raw": "lācni|an",
+        "type": "verb",
+        "gloss": "[give] medical treatment",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "lǣdan",
+        "form-raw": "lǣd|an",
+        "type": "verb",
+        "gloss": "lead",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ālǣdan",
+        "form-raw": "ā-lǣd|an",
+        "type": "verb",
+        "gloss": "lead",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "lāþ",
+        "form-raw": "lāþ",
+        "form-canon": "loath",
+        "type": "adj",
+        "gloss": "[unwilling] or [disinclined]",
+        "gloss-alt": "hated",
+        "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "leċġan",
+        "form-raw": "leċġ|an",
+        "form-canon": "lay",
+        "type": "verb",
+        "gloss": "[put] down",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "āleċġan",
+        "form-raw": "ā-leċġ|an",
+        "form-canon": "lay",
+        "type": "verb",
+        "gloss": "[put] down",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "lēof",
+        "form-raw": "lēof",
+        "form-raw-alt": "leaf",
+        "form-canon": "lief",
+        "type": "adj",
+        "gloss": "dear",
+        "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "lēogan",
+        "form-raw": "lēog|an",
+        "form-canon": "lie",
+        "type": "verb",
+        "gloss": "lie",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ālēogan",
+        "form-raw": "ā-lēog|an",
+        "type": "verb",
+        "gloss": "deny",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "lēsan",
+        "form-raw": "lēs|an",
+        "form-raw-alt": ["līes|an", "līsan", "lȳsan"],
+        "form-canon": "lease",
+        "type": "verb",
+        "gloss": "[grant] use of",
+        "gloss-alt": ["[set] free", "release"],
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ālēsan",
+        "form-raw": "ālīes|an",
+        "form-canon": "lease",
+        "type": "verb",
+        "gloss": ["[set] free", "release"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "lof",
@@ -1048,7 +1333,7 @@
         "form-canon": "loof",
         "type": "noun",
         "gloss": "[palm] of the hand",
-        "tags": ["count", "concrete", "living", "bodypart", "obscure"],
+        "tags": ["singleton", "concrete", "living", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lofian",
@@ -1057,6 +1342,40 @@
         "type": "verb",
         "gloss": "praise",
         "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "līefan",
+        "form-raw": "līef|an",
+        "form-raw-alt": ["lēf|an", "līf|an", "lȳf|an"],
+        "form-canon": "leave",
+        "type": "verb",
+        "gloss": "allow",
+        "gloss-alt": "trust",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "lȳfan",
+        "form-raw": "ā-lȳf|an",
+        "type": "verb",
+        "gloss": "permit",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "mæċġ",
+        "form-raw": "mæċġ",
+        "form-raw-alt": "meċġ",
+        "type": "noun",
+        "gloss": "man",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "māþm",
+        "form-raw": "māþm",
+        "form-raw-alt": "māþum",
+        "form-canon": "mathom",
+        "type": "noun",
+        "gloss": ["precious [object]", "treasure"],
+        "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "mearh",
@@ -1094,6 +1413,36 @@
         "type": "noun",
         "gloss": "mill",
         "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "merran",
+        "form-raw": "mierr|an",
+        "form-canon": "mar",
+        "type": "verb",
+        "gloss": "[ruin] or [damage]",
+        "gloss-alt": ["hinder", "waste"],
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "āmerran",
+        "form-raw": "ā-merr|an",
+        "type": "verb",
+        "gloss": ["hinder", "disturb"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "mirran",
+        "form-raw": "mirr|an",
+        "type": "verb",
+        "gloss": ["hinder", "disturb"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "āmyrran",
+        "form-raw": "ā-myrr|an",
+        "type": "verb",
+        "gloss": ["wound", "maim", "hinder"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "pott",
@@ -1141,6 +1490,23 @@
         "tags": ["color", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "rūn",
+        "form-raw": "rūn",
+        "form-canon": "roun",
+        "type": "noun",
+        "gloss": ["[secret] or [mystery]", "written [text]"],
+        "tags": ["count", "concrete", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "sċanca",
+        "form-raw": "sċanca",
+        "form-raw-alt": ["sċeanca", "sċeonca"],
+        "form-canon": "shank",
+        "type": "noun",
+        "gloss": "leg",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "old-english"
+    }, {
         "key": "smyrels",
         "form-raw": "smyrels",
         "form-canon": "smerl",
@@ -1149,11 +1515,27 @@
         "tags": ["mass", "concrete", "fluid", "liquid", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "stōw",
+        "form-raw": "stōw",
+        "form-canon": "stow",
+        "type": "noun",
+        "gloss": "place",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+     }, {
         "key": "sūr",
         "form-raw": "sūr",
         "form-canon": "sour",
         "type": "adj",
         "gloss": "sour",
+        "origin": "old-english"
+    }, {
+        "key": "tæfl",
+        "form-raw": "tæfl",
+        "form-canon": "tavel",
+        "type": "noun",
+        "gloss": ["board [game]", "board game [piece]", "game [board]"],
+        "tags": ["count", "concrete", "man-made", "obscure"],
         "origin": "old-english"
     }, {
         "key": "todiġe",
@@ -1162,6 +1544,14 @@
         "type": "noun",
         "gloss": "toad",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "tūn",
+        "form-raw": "tūn",
+        "form-canon": "town",
+        "type": "noun",
+        "gloss": "town",
+        "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
         "key": "þearf",
@@ -1190,6 +1580,14 @@
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "wærc",
+        "form-raw": "wærc",
+        "form-canon": "wark",
+        "type": "noun",
+        "gloss": "[pain], [ache]",
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "weald",
         "form-raw": "weald",
         "form-canon": "wald",
@@ -1203,7 +1601,7 @@
         "form-raw": "wearr",
         "type": "noun",
         "gloss": ["callus", "[knot] of a tree"],
-        "tags": ["count", "concrete", "bodypart", "speculative"],
+        "tags": ["count", "concrete", "bodypart", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "weorþan",
@@ -1213,6 +1611,22 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Alternate meaning 'happen'"
+    }, {
+        "key": "wer",
+        "form-raw": "wer",
+        "type": "noun",
+        "gloss": "man",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "wiht",
+        "form-raw": "wiht",
+        "form-raw-alt": ["wyht", "wuht", "uht"],
+        "form-canon": "burgh",
+        "type": "noun",
+        "gloss": "living [being]",
+        "tags": ["count", "concrete", "living"],
+        "origin": "old-english"
     }, {
         "key": "wiþer",
         "form-raw": "wiþer",
@@ -1251,8 +1665,8 @@
         "form-raw": "wudu",
         "form-canon": "wood",
         "type": "noun",
-        "gloss": "[wood], [woodland]",
-        "tags": ["count", "concrete", "living", "material"],
+        "gloss": "wood",
+        "tags": ["mass", "concrete", "living", "material"],
         "origin": "old-english"
     }, {
         "key": "wudu-terrain",
@@ -1269,5 +1683,14 @@
         "gloss": "she-wolf",
         "tags": ["count", "concrete", "living", "animal", "speculative"],
         "origin": "old-english"
-     }
+     }, {
+        "key": "wyrt",
+        "form-raw": "wyrt",
+        "form-raw-alt": ["wert", "wirt"],
+        "form-canon": "wort",
+        "type": "noun",
+        "gloss": "plant",
+        "tags": ["count", "concrete", "living", "plant"],
+        "origin": "old-english"
+    }
 ]
