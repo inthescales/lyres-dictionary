@@ -91,6 +91,8 @@ class Morphothec:
                         continue
 
                     morph = adjuster.adjust_morph(morph)
+                    if morph == None:
+                        continue
                     
                     # Check for key collisions
                     if morph["key"] in self.morph_for_key:

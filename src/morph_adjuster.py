@@ -11,14 +11,15 @@ def adjust_morph(morph):
             and "-" in morph["form-raw"] \
             and any([oe_phonology.get_prefix(form) for form in morph["form-raw"].split("-")]) \
             and (not "tags" in morph or not "no-prep" in morph["tags"]):
-            if "tags" in morph:
-                morph["tags"] += ["no-prep"]
-            else:
-                morph["tags"] = ["no-prep"]
 
-            # Make these rare too, for now
-            if not "rare" in morph["tags"]:
-                morph["tags"] += ["rare"]
+            # For now, I don't actually want to see these
+            # TODO: Try again when we have more morphs to balance these out
+            return None
+
+            # if "tags" in morph:
+            #     morph["tags"] += ["no-prep"]
+            # else:
+            #     morph["tags"] = ["no-prep"]
 
         # Add 'rare' tag to homophonic words
         if "tags" in morph and "homophonic" in morph["tags"]:
