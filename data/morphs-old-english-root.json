@@ -16,6 +16,14 @@
         "tags": ["count", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
+        "key": "āc",
+        "form-raw": "āc",
+        "form-canon": "oak",
+        "type": "noun",
+        "gloss": "oak [tree]",
+        "tags": ["count", "concrete", "living", "plant", "tree"],
+        "origin": "old-english"
+    }, {
         "key": "ād",
         "form-raw": "ād",
         "type": "noun",
@@ -111,6 +119,14 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "æppel",
+        "form-raw": "æppel",
+        "form-canon": "apple",
+        "type": "noun",
+        "gloss": "apple",
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant", "food"],
+        "origin": "old-english"
+    }, {
         "key": "ār-glory",
         "form-raw": "ār",
         "type": "noun",
@@ -201,6 +217,14 @@
         "tags": ["mass", "concrete", "homophonic"],
         "origin": "old-english"
     }, {
+        "key": "æsċ",
+        "form-raw": "æsċ",
+        "form-canon": "ash",
+        "type": "noun",
+        "gloss": "ash [tree]",
+        "tags": ["count", "concrete", "living", "plant", "tree"],
+        "origin": "old-english"
+    }, {
         "key": "ǣsċ",
         "form-raw": "ǣsċ",
         "type": "noun",
@@ -208,12 +232,38 @@
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "homophonic"],
         "origin": "old-english"
     }, {
+        "key": "æsċe",
+        "form-raw": "æsċe",
+        "form-canon": "ash",
+        "type": "noun",
+        "gloss": "ash",
+        "tags": ["mass", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "æsp",
+        "form-raw": "æspe",
+        "form-canon": "asp",
+        "type": "noun",
+        "gloss": "asp [tree]",
+        "tags": ["count", "concrete", "living", "tree"],
+        "origin": "old-english",
+        "notes": "Alternate form 'æps'"
+    }, {
         "key": "æstel",
         "form-raw": "æstel",
         "type": "noun",
         "gloss": "bookmark",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english"
+    }, {
+        "key": "āte",
+        "form-raw": "āte",
+        "form-canon": "oat",
+        "type": "noun",
+        "gloss": "oats",
+        "tags": ["mass", "concrete", "living", "plant", "food"],
+        "origin": "old-english",
+        "notes": "Alternate form 'ǣte'"
     }, {
         "key": "ātr",
         "form-raw": "ātr",
@@ -230,6 +280,14 @@
         "gloss": "noble",
         "gloss-alt": ["glourious"],
         "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bān",
+        "form-raw": "bān",
+        "form-canon": "bone",
+        "type": "noun",
+        "gloss": "bone",
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "belgan",
@@ -304,6 +362,46 @@
         "type": "noun",
         "gloss": "small [quantity] of something",
         "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "brīdel",
+        "form-raw": "brīdel",
+        "form-canon": "bridle",
+        "type": "noun",
+        "gloss": "bridle",
+        "tags": ["count", "concrete", "garment"],
+        "origin": "old-english"
+    }, {
+        "key": "brōþor",
+        "form-raw": "brōþor",
+        "form-canon": "brother",
+        "type": "noun",
+        "gloss": "brother",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "brȳd",
+        "form-raw": "brȳd",
+        "form-canon": "bride",
+        "type": "noun",
+        "gloss": "bride",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "bryht",
+        "form-raw": "bryht",
+        "form-canon": "bright",
+        "type": "adj",
+        "gloss": "bright",
+        "origin": "old-english",
+        "notes": "alt forms 'beorht', 'byrht'"
+    }, {
+        "key": "byrġan",
+        "form-raw": "byrġ|an",
+        "form-canon": "bury",
+        "type": "verb",
+        "gloss": "bury",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "bysiġan",
@@ -403,6 +501,15 @@
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
+        "key": "ċeariġ",
+        "form-raw": "ċeariġ",
+        "form-canon": "chary",
+        "type": "adj",
+        "gloss": "[cautious] or [circumspect]",
+        "gloss-alt": "sorrowful",
+        "origin": "old-english",
+        "tags": ["obscure"]
+    }, {
         "key": "cēgan",
         "form-raw": "cēg|an",
         "type": "verb",
@@ -440,12 +547,62 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "ċild",
+        "form-raw": "ċild",
+        "form-canon": "child",
+        "type": "noun",
+        "gloss": "child",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "clǣġ",
+        "form-raw": "clǣġ",
+        "form-canon": "clay",
+        "type": "noun",
+        "gloss": "clay",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "clif",
+        "form-raw": "clif",
+        "form-canon": "cliff",
+        "type": "noun",
+        "gloss": "cliff",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "clot",
+        "form-raw": "clot",
+        "form-canon": "clot",
+        "type": "noun",
+        "gloss": "[lump] or accumulated [mass]",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "clūd",
+        "form-raw": "clūd",
+        "form-canon": "cloud",
+        "type": "noun",
+        "gloss": "cloud",
+        "tags": ["count", "concrete"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'rock, hill', or general sense of 'accumulated mass'"
+    }, {
         "key": "cnotta",
         "form-raw": "cnotta",
         "form-canon": "knot",
         "type": "noun",
         "gloss": "knot",
         "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "cræfte",
+        "form-raw": "cræfte",
+        "form-canon": "craft",
+        "type": "noun",
+        "gloss": "[skill], [ability]",
+        "gloss-alt": "strength",
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "crumb",
@@ -522,6 +679,56 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "cwacian",
+        "form-raw": "cwaci|an",
+        "form-canon": "quake",
+        "type": "verb",
+        "gloss": "[shake] or [quiver]",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "cwēn",
+        "form-raw": "cwēn",
+        "form-canon": "queen",
+        "type": "noun",
+        "gloss": "queen",
+        "tags": ["count", "concrete", "living", "person", "ruler"],
+        "origin": "old-english"
+    }, {
+        "key": "cwene",
+        "form-raw": "cwene",
+        "form-canon": "quean",
+        "type": "noun",
+        "gloss": "[woman] (derogatory)",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Original sense of 'woman' generally"
+    }, {
+        "key": "cwic",
+        "form-raw": "cwic",
+        "form-canon": "quick",
+        "type": "adj",
+        "gloss": "fast",
+        "gloss-alt": "living",
+        "origin": "old-english"
+    }, {
+        "key": "cȳme",
+        "form-raw": "cȳme",
+        "type": "adj",
+        "gloss": "[fine], [beautiful]",
+        "tags": ["obscure"],
+        "origin": "old-english",
+        "notes": "Appears as 'come' in 'comely'"
+    }, {
+        "key": "cyng",
+        "form-raw": "cyng",
+        "form-raw-alt": "cyning",
+        "form-canon": "king",
+        "type": "noun",
+        "gloss": "king",
+        "tags": ["count", "concrete", "living", "person", "ruler"],
+        "origin": "old-english"
+    }, {
         "key": "cynn",
         "form-raw": "cynn",
         "form-canon": "kin",
@@ -546,6 +753,53 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "dæġ",
+        "form-raw": "dæġ",
+        "form-canon": "day",
+        "type": "noun",
+        "gloss": "day",
+        "tags": ["count", "abstract", "bounded", "time"],
+        "origin": "old-english"
+    }, {
+        "key": "dēad",
+        "form-raw": "dēad",
+        "form-canon": "dead",
+        "type": "adj",
+        "gloss": "dead",
+        "origin": "old-english"
+    }, {
+        "key": "dēaþ",
+        "form-raw": "dēaþ",
+        "form-canon": "death",
+        "type": "noun",
+        "gloss": "death",
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Could also be mass"
+    }, {
+        "key": "dēawe",
+        "form-raw": "dēawe",
+        "form-canon": "dew",
+        "type": "noun",
+        "gloss": "dew",
+        "tags": ["mass", "concrete", "fluid", "liquid"],
+        "origin": "old-english"
+    }, {
+        "key": "dēman",
+        "form-raw": "dēm|an",
+        "form-canon": "deem",
+        "type": "verb",
+        "gloss": "judge",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "dīere",
+        "form-raw": "dīere",
+        "form-canon": "dear",
+        "type": "adj",
+        "gloss": "[valuable], [beloved]",
+        "origin": "old-english"
+    }, {
         "key": "dilegian",
         "form-raw": "dileg|an",
         "form-raw-alt": ["diligi|an"],
@@ -560,6 +814,21 @@
         "type": "verb",
         "gloss": "[blot] out or [destroy]",
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "dohtiġ",
+        "form-raw": "dohtiġ",
+        "form-canon": "doughty",
+        "type": "adj",
+        "gloss": "[brave], [determined]",
+        "origin": "old-english"
+    }, {
+        "key": "dōm",
+        "form-raw": "dōm",
+        "form-canon": "doom",
+        "type": "noun",
+        "gloss": "judgement",
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "drīfan",
@@ -681,11 +950,18 @@
         "form-raw": "dweorg",
         "form-raw-alt": ["drweorh", "dwerg", "dwearg"],
         "form-canon": "dwarf",
-        "type": "verb",
+        "type": "noun",
         "gloss": "dwarf",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "I can't find any actual source for 'dwearg', but it matches Tolkien's 'dwarrow' so I'm keeping it, fuck it"
+    }, {
+        "key": "dysiġ",
+        "form-raw": "dysiġ",
+        "form-canon": "dizzy",
+        "type": "adj",
+        "gloss": "dizzy",
+        "origin": "old-english"
     }, {
         "key": "eald",
         "form-raw": "eald",
@@ -720,6 +996,30 @@
         "gloss": "eternal",
         "origin": "old-english"
     }, {
+        "key": "eorþe",
+        "form-raw": "eorþe",
+        "form-canon": "earth",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["mass", "concrete", "terrain", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "eorþe-singleton",
+        "form-raw": "eorþe",
+        "form-canon": "earth",
+        "type": "noun",
+        "gloss": "earth",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "fæder",
+        "form-raw": "fæder",
+        "form-canon": "father",
+        "type": "noun",
+        "gloss": "father",
+        "tags": ["count", "concrete", "living", "person", "role"],
+        "origin": "old-english"
+    }, {
         "key": "fǣġe",
         "form-raw": "fǣġe",
         "form-canon": "fey",
@@ -749,6 +1049,14 @@
         "type": "noun",
         "gloss": "enemy",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "fām",
+        "form-raw": "fām",
+        "form-canon": "foam",
+        "type": "noun",
+        "gloss": "foam",
+        "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
         "key": "fang",
@@ -818,6 +1126,50 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "fen",
+        "form-raw": "fen",
+        "form-canon": "fen",
+        "type": "noun",
+        "gloss": "marsh",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "feoh",
+        "form-raw": "feoh",
+        "form-canon": "fee",
+        "type": "noun",
+        "gloss": "fee",
+        "gloss-alt": "money",
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Form influenced by Anglo-French 'fee'"
+    }, {
+        "key": "feohtan",
+        "form-raw": "feoht|an",
+        "form-canon": "fight",
+        "type": "verb",
+        "gloss": "fight",
+        "tags": ["transitive"],
+        "origin": "old-english"
+     }, {
+        "key": "fēond",
+        "form-raw": "fēond",
+        "form-canon": "fiend",
+        "type": "noun",
+        "gloss": "wicked [person]",
+        "gloss-alt": "enemy",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "fersċ",
+        "form-raw": "fersċ",
+        "form-canon": "fresh",
+        "type": "adj",
+        "gloss": "fresh",
+        "gloss-alt": "without salt",
+        "origin": "old-english",
+        "notes": "er -> re metathesis occurred by middle english"
+    }, {
         "key": "fiellan",
         "form-raw": "fiell|an",
         "form-canon": "fell",
@@ -835,6 +1187,14 @@
         "type": "noun",
         "gloss": "fish",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "flǣsċ",
+        "form-raw": "flǣsċ",
+        "form-canon": "flesh",
+        "type": "noun",
+        "gloss": "flesh",
+        "tags": ["mass", "concrete", "living", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "flīeman",
@@ -883,6 +1243,45 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "fram",
+        "form-raw": "fram",
+        "type": "adj",
+        "gloss": "[vigorous] or [bold]",
+        "origin": "old-english",
+        "tags": ["speculative"],
+        "notes": "Various meanings. This gloss captures the general thrust."
+    }, {
+        "key": "framian",
+        "form-raw": "frami|an",
+        "type": "verb",
+        "gloss": "[set] in a frame or border",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Influenced 'frame', in combination with 'fremman'. Alternate meaning 'profit, avail'"
+    }, {
+        "key": "frēo",
+        "form-raw": "frēo",
+        "form-canon": "free",
+        "type": "adj",
+        "gloss": "free",
+        "origin": "old-english"
+    }, {
+        "key": "frēond",
+        "form-raw": "frēond",
+        "form-canon": "friend",
+        "type": "noun",
+        "gloss": "friend",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "fremman",
+        "form-raw": "fremm|an",
+        "type": "verb",
+        "gloss": "construct",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Influenced 'frame', in combination with 'framian'. OED has this as 'freme', TODO: see notes there"
+    }, {
         "key": "frost",
         "form-raw": "frost",
         "form-raw-alt": "forst",
@@ -892,19 +1291,33 @@
         "tags": ["mass", "concrete"],
         "origin": "old-english"
     }, {
-        "key": "fram",
-        "form-raw": "fram",
-        "type": "adj",
-        "gloss": "[vigorous] or [bold]",
-        "origin": "old-english",
-        "tags": ["speculative"],
-        "notes": "Various meanings. This gloss captures the general thrust."
-    }, {
         "key": "friþ",
         "form-raw": "friþ",
         "type": "noun",
         "gloss": "peace",
         "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "fugol",
+        "form-raw": "fugol",
+        "form-canon": "fowl",
+        "type": "noun",
+        "gloss": "bird",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "fūl",
+        "form-raw": "fūl",
+        "form-canon": "foul",
+        "type": "adj",
+        "gloss": "foul",
+        "origin": "old-english"
+    }, {
+        "key": "full",
+        "form-raw": "full",
+        "form-canon": "full",
+        "type": "adj",
+        "gloss": "full",
         "origin": "old-english"
     }, {
         "key": "fyrhtan",
@@ -1137,6 +1550,14 @@
         "gloss": "[commit] (as a sin)",
         "tags": ["transitive"],
         "origin": "old-english"
+    }, {
+        "key": "hāl",
+        "form-raw": "hāl",
+        "form-canon": "whole",
+        "type": "adj",
+        "gloss": ["whole", "healthy"],
+        "origin": "old-english",
+        "notes": "'w' added to disambiguate from 'hole'"
     }, {
         "key": "hēawan",
         "form-raw": "hēaw|an",

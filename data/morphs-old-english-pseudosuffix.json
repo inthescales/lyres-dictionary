@@ -20,6 +20,21 @@
         ],
         "origin": "old-english"
     }, {
+        "key": "-kyn",
+        "form-stem": "kind",
+        "form-raw": "kyn",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "%pl as a class",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["animal", "person"]
+            }
+        },
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "-lāc",
         "form-stem": "lock",
         "form-raw": "lāc",
