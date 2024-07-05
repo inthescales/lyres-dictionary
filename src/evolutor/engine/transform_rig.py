@@ -1,4 +1,4 @@
-from src.diachronizer.engine.syllable import SyllableData
+from src.evolutor.engine.syllable import SyllableData
 
 import sys
 

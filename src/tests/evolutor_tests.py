@@ -1,13 +1,13 @@
 import unittest
 
-import src.diachronizer.diachronizer as diachronizer
+import src.evolutor.evolutor as evolutor
 
-from src.diachronizer.engine.config import Config
+from src.evolutor.engine.config import Config
 
 total = 0
 failures = []
 
-class DiachronizerTests(unittest.TestCase):
+class EvolutorTests(unittest.TestCase):
     # def setUp(self)
 
 
@@ -47,7 +47,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -447,7 +447,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -463,7 +463,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -484,7 +484,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -528,7 +528,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -553,7 +553,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -573,7 +573,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -592,7 +592,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -625,7 +625,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -707,7 +707,7 @@ class DiachronizerTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = diachronizer.oe_form_to_ne_form(raw, config)
+            form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
@@ -767,12 +767,12 @@ class DiachronizerTests(unittest.TestCase):
     # Helpers ==========
 
     def check_equal(self, raw, target, config):
-        form = diachronizer.form_from_oe(raw, config)
+        form = evolutor.form_from_oe(raw, config)
         return form == target
     
     def check_in(self, raw, targets, config):
         global total, failures
-        form = diachronizer.form_from_oe(raw, config)
+        form = evolutor.form_from_oe(raw, config)
         
         if form not in targets:
             failures.append([form, targets])
@@ -781,13 +781,13 @@ class DiachronizerTests(unittest.TestCase):
         return form in targets
 
     def assertForm(self, raw, target):
-        form = diachronizer.form_from_oe(raw)
+        form = evolutor.form_from_oe(raw)
         self.assertEqual(form, target)
 
     def assertFormIn(self, raw, targets):
-        form = diachronizer.form_from_oe(raw)
+        form = evolutor.form_from_oe(raw)
         self.assertEqual(form, targets)
         
     def assertFormNot(self, raw, non_target):
-        form = diachronizer.form_from_oe(raw)
+        form = evolutor.form_from_oe(raw)
         self.assertEqual(form, non_target)

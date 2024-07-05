@@ -4,7 +4,7 @@ from src.morphothec import Morphothec
 from src.generator import word_for_keys
 import src.composer as composer
 
-class EvolutionAffixTests(unittest.TestCase):
+class EvolutorAffixTests(unittest.TestCase):
     def setUp(self):
         self.morphothec = Morphothec("data/")
 

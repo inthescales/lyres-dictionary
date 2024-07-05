@@ -1,4 +1,4 @@
-from src.diachronizer.engine.phoneme import Phoneme
+from src.evolutor.engine.phoneme import Phoneme
 
 consonants = ["b", "c", "ċ", "cg", "ċġ", "d", "ð", "f", "g", "ġ", "h", "k", "l", "m", "n", "p", "cw", "r", "s", "sċ", "t", "th", "þ", "uu", "w", "ƿ", "x", "z"]
 geminates = [x + x for x in consonants if (len(x) == 1)]

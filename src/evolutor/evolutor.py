@@ -1,6 +1,6 @@
-import src.diachronizer.language.oe_phonology as oe_phonology
-import src.diachronizer.language.me_phonology as me_phonology
-import src.diachronizer.language.ne_orthography as ne_orthography
+import src.evolutor.language.oe_phonology as oe_phonology
+import src.evolutor.language.me_phonology as me_phonology
+import src.evolutor.language.ne_orthography as ne_orthography
 
 def oe_orth_to_oe_phone(oe_form, config):
     return oe_phonology.from_oe_written(oe_form)

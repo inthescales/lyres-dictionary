@@ -1,24 +1,24 @@
-import src.diachronizer.diachronizer as diachronizer
+import src.evolutor.evolutor as evolutor
 import src.tablemaker.table as table
 
-from src.diachronizer.engine.config import Config
+from src.evolutor.engine.config import Config
 
 def make_table_oe_ne(inputs):
     config = Config(locked=False)
 
     oe_phonemes = []
     for input in inputs:
-        phonemes = diachronizer.oe_orth_to_oe_phone(input, config)
+        phonemes = evolutor.oe_orth_to_oe_phone(input, config)
         oe_phonemes.append(phonemes)
 
     me_phonemes = []
     for oe in oe_phonemes:
-        phonemes = diachronizer.oe_phone_to_me_phone(oe, config)
+        phonemes = evolutor.oe_phone_to_me_phone(oe, config)
         me_phonemes.append(phonemes)
 
     modern_forms = []
     for me in me_phonemes:
-        spelling = diachronizer.me_phone_to_ne_orth(me, config)
+        spelling = evolutor.me_phone_to_ne_orth(me, config)
         modern_forms.append(spelling)
 
     oe_forms = [form.replace("|", "") for form in inputs]

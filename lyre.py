@@ -11,8 +11,8 @@ from src.analysis import Analyst
 
 import src.composer as composer
 import src.validator as validator
-import src.diachronizer.diachronizer as diachronizer
-from src.diachronizer.engine.config import Config
+import src.evolutor.evolutor as evolutor
+from src.evolutor.engine.config import Config
 
 morphothec = None
 
@@ -67,7 +67,7 @@ def test_evolution(form, language):
     print(form + "\n")
     if language == "oe":
         config = Config(verbose=True, locked=False, overrides=[])
-        print(diachronizer.oe_form_to_ne_form(form, config))
+        print(evolutor.oe_form_to_ne_form(form, config))
     else:
         print("error: unrecognized language '" + language + "'")
     

@@ -1,4 +1,4 @@
-import src.diachronizer.language.oe_phonology as oe_phonology
+import src.evolutor.language.oe_phonology as oe_phonology
 
 # Makes automatic adjustments to morphs while importing data
 def adjust_morph(morph):

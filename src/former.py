@@ -1,8 +1,8 @@
 from random import Random
 
 from src.logging import Logger
-from src.diachronizer import diachronizer
-from src.diachronizer.engine.config import Config
+from src.evolutor import evolutor
+from src.evolutor.engine.config import Config
 
 class Former_Config():
     def __init__(self, include_alt_forms=False, canon_lock=True):
@@ -46,7 +46,7 @@ def form(morph, env, config=Former_Config()):
 
             def process(form):
                config = Config(locked=True, seed=morph.seed)
-               return diachronizer.oe_form_to_ne_form(form, config) 
+               return evolutor.oe_form_to_ne_form(form, config) 
             
             random = Random(morph.seed)
             raw_form = random.choice(forms)
