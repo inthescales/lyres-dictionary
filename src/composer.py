@@ -27,14 +27,17 @@ def get_part_tag(word):
 
     return "(" + abbrev + ")"
 
-def get_form(word):
+def get_form(word, former_config=None):
     form = ""
     morph = None
     
     for index, morph in enumerate(word.morphs):
 
         env = word.environment_for_index(index)
-        addition = former.form(morph, env)
+        if former_config != None:
+            addition = former.form(morph, env, former_config)
+        else:
+            addition = former.form(morph, env)
 
         # Handle joining rules
         if len(addition) > 0:

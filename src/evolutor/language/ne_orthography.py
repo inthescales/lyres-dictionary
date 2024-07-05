@@ -193,8 +193,9 @@ def from_me_phonemes(phonemes, config):
             result += "u"
         elif phone.value == "uː":
             if next1:
-                if next1.value == "n":
+                if next1.value == "n" and not next2:
                     # 'town', 'down' 'brown' vs 'roun'
+                    # Doesn't apply to words with following consonant clusters, such as 'hound' and 'round'
                     # Note that some archaic past participle forms may use 'owe': 'untowen', 'ygrowen', 'thowen'
                     choice = often("Orth:uːn->ow/ou", config)
                     result += choice

@@ -1,6 +1,7 @@
 import unittest
 
 from src.morphothec import Morphothec
+from src.former import Former_Config
 from src.generator import word_for_keys
 import src.composer as composer
 
@@ -42,7 +43,6 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["ǣr", "-liċ"], "early")
         self.assertForm(["brōþor", "-liċ"], "brotherly")
         self.assertForm(["brȳd", "-liċ"], "bridely")
-        # self.assertForm(["cȳme", "-liċ"], "comely") # Form may be irregular, patterned after "come"
         self.assertForm(["cræfte", "-liċ"], "craftly")
         self.assertForm(["cwic", "-liċ"], "quickly")
         self.assertForm(["dēad", "-liċ"], "deadly")
@@ -109,7 +109,8 @@ class EvolutorAffixTests(unittest.TestCase):
     
     def assertForm(self, keys, form):
         word = word_for_keys(keys, self.morphothec)
-        composed = composer.get_form(word)
+        former_config = Former_Config(False, False)
+        composed = composer.get_form(word, former_config)
         # self.assertEqual(composed, form)
         if form != composed:
             print(form + " != " + composed)
