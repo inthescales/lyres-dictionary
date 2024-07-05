@@ -1,11 +1,11 @@
 import random
 
-import src.helpers as helpers
-import src.transforms as transforms
+import src.generation.transforms as transforms
+import src.utils.helpers as helpers
 
 from src.models.word import Word
-from src.morphothec import Morphothec
-from src.logging import Logger
+from src.morphs.morphothec import Morphothec
+from src.utils.logging import Logger
 
 def generate_word(morphothec):
     word = Word(morphothec)

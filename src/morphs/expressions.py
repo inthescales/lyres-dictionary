@@ -1,7 +1,8 @@
 import sys
-import src.helpers as helpers
 
-from src.logging import Logger
+import src.utils.helpers as helpers
+
+from src.utils.logging import Logger
 
 def evaluate_expression(expression, referent):
     if len(expression.keys()) != 1:

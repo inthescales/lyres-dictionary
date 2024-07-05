@@ -1,7 +1,7 @@
 import re
 import sys
 
-from src.logging import Logger
+from src.utils.logging import Logger
 
 def validate(entry):
     return validate_length(entry) and validate_decent(entry)

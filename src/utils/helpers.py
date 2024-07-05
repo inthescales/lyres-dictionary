@@ -1,6 +1,6 @@
 import random
 
-from logging import Logger
+from src.utils.logging import Logger
 
 # Bag probability
 

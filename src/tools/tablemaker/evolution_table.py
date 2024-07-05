@@ -1,5 +1,5 @@
 import src.evolutor.evolutor as evolutor
-import src.tablemaker.table as table
+import src.tools.tablemaker.table as table
 
 from src.evolutor.engine.config import Config
 

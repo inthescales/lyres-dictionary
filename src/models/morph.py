@@ -1,10 +1,10 @@
 import random
 
-import src.former as former
+import src.generation.former as former
 
-from src.expressions import evaluate_expression
-from src.morphothec import Morphothec
-from src.requirements import meets_requirements
+from src.morphs.expressions import evaluate_expression
+from src.morphs.morphothec import Morphothec
+from src.morphs.requirements import meets_requirements
 
 class Morph:
     

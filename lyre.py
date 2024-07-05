@@ -4,15 +4,15 @@ import sys
 
 import botbuddy
 
-from src.morphothec import Morphothec
-from src.generator import generate_word, word_for_keys
-from src.logging import Logger
-from src.analysis import Analyst
-
-import src.composer as composer
-import src.validator as validator
+import src.generation.composer as composer
 import src.evolutor.evolutor as evolutor
+import src.utils.validator as validator
+
 from src.evolutor.engine.config import Config
+from src.morphs.morphothec import Morphothec
+from src.generation.generator import generate_word, word_for_keys
+from src.tools.analysis import Analyst
+from src.utils.logging import Logger
 
 morphothec = None
 

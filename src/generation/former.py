@@ -1,8 +1,8 @@
 from random import Random
 
-from src.logging import Logger
 from src.evolutor import evolutor
 from src.evolutor.engine.config import Config
+from src.utils.logging import Logger
 
 class Former_Config():
     def __init__(self, include_alt_forms=False, canon_lock=True):

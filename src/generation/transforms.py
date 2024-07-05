@@ -1,13 +1,14 @@
 import random
 
-import src.helpers as helpers
 import src.models
 
-import src.former as former
+import src.generation.former as former
+import src.utils.helpers as helpers
+
 from src.models.word import Word
 from src.models.morph import Morph
-from src.logging import Logger
-from src.morphothec import Morphothec
+from src.morphs.morphothec import Morphothec
+from src.utils.logging import Logger
 
 def seed_word(word, morphothec):
     bag = [

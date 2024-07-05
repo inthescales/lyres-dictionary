@@ -1,4 +1,4 @@
-from src.logging import Logger
+from src.utils.logging import Logger
 
 valid_properties = [
     "key",

@@ -4,8 +4,8 @@ from src.models.morph import Morph
 from src.models.word import Word
 from src.models.environment import Environment
 
-import src.composer as composer
-from src.morphothec import Morphothec
+import src.generation.composer as composer
+from src.morphs.morphothec import Morphothec
 
 morphothec = Morphothec("data/")
 

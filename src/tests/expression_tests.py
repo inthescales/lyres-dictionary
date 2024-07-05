@@ -1,6 +1,6 @@
 import unittest
 
-from src.expressions import evaluate_expression
+from src.morphs.expressions import evaluate_expression
 
 test_morphs = {
     "nuntiare": { "key": "nuntiare", "form-stem-present": "nuntia", "form-stem-perfect": "nunciat", "form-final": "nounce", "type": "verb", "conjugation": 1, "gloss": "report", "tags": ["transitive"], "origin": "latin", "form": "nuntiat", "form-final": False },

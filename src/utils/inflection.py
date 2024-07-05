@@ -1,5 +1,6 @@
 import lemminflect
-import src.helpers as helpers
+
+import src.utils.helpers as helpers
 
 def inflect(string, mode):
     words = string.split(" ")    

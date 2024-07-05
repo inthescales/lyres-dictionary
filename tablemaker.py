@@ -1,9 +1,9 @@
 import getopt
 import sys
 
-import src.tablemaker.table as table
-import src.tablemaker.evolution_table as evolution_table
-import src.tablemaker.combination_table as combination_table
+import src.tools.tablemaker.table as table
+import src.tools.tablemaker.evolution_table as evolution_table
+import src.tools.tablemaker.combination_table as combination_table
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:

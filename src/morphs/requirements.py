@@ -1,7 +1,7 @@
 import random
 
-from src.expressions import evaluate_expression
-from src.logging import Logger
+from src.morphs.expressions import evaluate_expression
+from src.utils.logging import Logger
 
 # Check whether a morph meets the requirements to be added in a given location
 def meets_requirements(morph, env, filter_frequency=True):

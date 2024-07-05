@@ -1,8 +1,8 @@
 import unittest
 
-from src.morphothec import Morphothec
-from src.generator import word_for_keys
-import src.composer as composer
+from src.morphs.morphothec import Morphothec
+from src.generation.generator import word_for_keys
+import src.generation.composer as composer
 
 class FormTests(unittest.TestCase):
     def setUp(self):

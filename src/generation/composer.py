@@ -1,7 +1,7 @@
 import src.models
-import src.inflection as inflection
-import src.former as former
-import src.helpers as helpers
+import src.generation.former as former
+import src.utils.helpers as helpers
+import src.utils.inflection as inflection
 
 def entry(word):
     composed = get_form(word)

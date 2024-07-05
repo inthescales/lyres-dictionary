@@ -1,5 +1,5 @@
-from src.expressions import evaluate_expression
-from src.morphothec import Morphothec
+from src.morphs.expressions import evaluate_expression
+from src.morphs.morphothec import Morphothec
 from src.models.environment import Environment
 from src.models.morph import Morph
 
