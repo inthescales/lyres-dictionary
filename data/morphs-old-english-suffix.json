@@ -257,6 +257,33 @@
         "origin": "old-english"
     },
     {
+        "key": "-kin",
+        "form-stem": "kin",
+        "form-final": "kin",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "small %@",
+        "requires": {
+            "follows": {
+                "has-tag": "count"
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "rules"
+                    }
+                },
+                "gloss": ["small %@", "petty %@"]
+            }
+        ],
+        "tags": ["count", "rare"],
+        "origin": "old-english",
+        "notes": "TODO: Allow -ikin form in some cases. TODO: Allow as affectionate for family, or positive adjectives. TODO: Allow color compounds on pattern of 'greenkin'. TODO: Properly ME"
+    },
+    {
         "key": "-liċ",
         "form-stem": "li",
         "form-final": "ly",
