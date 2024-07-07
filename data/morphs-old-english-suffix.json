@@ -169,6 +169,65 @@
         "origin": "old-english"
     },
     {
+        "key": "-ery",
+        "form-stem": "ery",
+        "form-final": "ery",
+        "type": "derive",
+        "derive-from": ["noun", "verb"],
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "a place for %pl",
+        "tags": ["uncountable", "mass"],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "or": [
+                        { "has-suffix": "e" },
+                        { "has-suffix": ["nd", "ld"] }
+                    ]
+                }
+            },
+            "form-final": "ry"
+        }, {
+            "case": {
+                "follows": {
+                    "has-suffix": "er"
+                }
+            },
+            "form-final": "y"
+        }, {
+            "case": {
+                "follows": {
+                    "and": [
+                        { "has-type": "noun" },
+                        { "has-tag": "person"}
+                    ]
+                }
+            },
+            "gloss": ["the practice or activity of %s", "acting as %sg"]
+        }, {
+            "case": {
+                "follows": {
+                    "and": [
+                        { "has-type": "noun" },
+                        { "has-tag": "man-made"}
+                    ]
+                }
+            },
+            "gloss": "[place] where %pl are made",
+            "tags": ["count", "concrete", "terrain"]
+        }, {
+            "case": {
+                "follows": {
+                    "has-type": "verb"
+                }
+            },
+            "gloss": ["the act or practice of %part", "a place where %part occurs"]
+        }],
+        "origin": "old-english",
+        "notes": "Properly ME. TODO: When added to a tame animal, a place where they are raised. TODO: When adding to any animal, acting like that animal"
+    },
+    {
         "key": "-estre",
         "form-stem": "ster",
         "form-raw": "estre",

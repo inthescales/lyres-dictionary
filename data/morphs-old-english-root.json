@@ -39,11 +39,18 @@
         "tags": ["count", "abstract", "state"],
         "origin": "old-english"
     }, {
+        "key": "ǣdre-channel",
+        "form-raw": "ǣdre",
+        "type": "noun",
+        "gloss": "[river] or [channel]",
+        "tags": ["count", "concrete", "terrain", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "ǣdre-vein",
         "form-raw": "ǣdre",
         "type": "noun",
-        "gloss": ["blood [vessel]", "[river] or [channel]"],
-        "tags": ["count", "concrete", "speculative", "bodypart"],
+        "gloss": "blood [vessel]",
+        "tags": ["count", "concrete", "bodypart", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ǣfen",
