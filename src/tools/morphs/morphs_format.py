@@ -1,18 +1,12 @@
 import json
 import sys
 
+from morphs_files import morphs_from
+
 indent_spaces = 4
 
 def spaces(depth):
     return " " * depth * indent_spaces
-
-def merge(files):
-    raw_morphs = []
-    for file in files:
-        with open("data/" + file) as morph_data:
-            raw_morphs += json.load(morph_data)
-
-    return raw_morphs
 
 def sort(morphs):
     return sorted(morphs, key=lambda m: m["key"])
@@ -99,7 +93,7 @@ def format(obj, indent=0, tag_stack=[]):
     elif isinstance(obj, int):
         formatted += str(obj)
 
-    return formatted + "\n"
+    return formatted
 
 def unformatted(obj):
     dump = json.dumps(obj)
@@ -160,8 +154,14 @@ def should_format(element, key, tag_stack):
 
     return True
 
-file_list = sys.argv[1:]
-merged = merge(file_list)
-# asorted = sort(merged)
-formatted = format(merged)
-print(formatted)
+# Prints the sorted and formatted contents of a single specified file
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("ERROR: morph format must take one file argument")
+        sys.exit(0)
+
+    file = sys.argv[1]
+    morphs = morphs_from(file)
+    formatted = format(morphs)
+
+    print(formatted)

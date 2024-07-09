@@ -91,7 +91,6 @@ def analyze():
     analyst.print_results(log=True)
 
 # Process command line input
-
 if __name__ == '__main__' and len(sys.argv) > 0:
     
     mode = None
