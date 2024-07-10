@@ -1158,7 +1158,7 @@
         "gloss": "fight",
         "tags": ["transitive"],
         "origin": "old-english"
-     }, {
+    }, {
         "key": "fēond",
         "form-raw": "fēond",
         "form-canon": "fiend",
@@ -1348,7 +1348,7 @@
         "gloss": "moisten",
         "tags": ["transitive", "speculative", "homophonic"],
         "origin": "old-english"
-     }, {
+    }, {
         "key": "fyllan",
         "form-raw": "fyll|an",
         "form-raw-alt": "fill|an",
@@ -1402,7 +1402,7 @@
         "gloss-alt": "harbor",
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
-     }, {
+    }, {
         "key": "hǣmed",
         "form-raw": "hǣmed",
         "type": "adj",
@@ -1969,7 +1969,7 @@
         "gloss": "place",
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
-     }, {
+    }, {
         "key": "sūr",
         "form-raw": "sūr",
         "form-canon": "sour",
@@ -2130,7 +2130,7 @@
         "gloss": "she-wolf",
         "tags": ["count", "concrete", "living", "animal", "speculative"],
         "origin": "old-english"
-     }, {
+    }, {
         "key": "wyrt",
         "form-raw": "wyrt",
         "form-raw-alt": ["wert", "wirt"],

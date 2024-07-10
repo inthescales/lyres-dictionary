@@ -97,7 +97,7 @@ def format(obj, indent=0, tag_stack=[]):
     return formatted
 
 def unformatted(obj):
-    dump = json.dumps(obj)
+    dump = json.dumps(obj, ensure_ascii=False)
     dump = dump.replace("{", "{ ")
     dump = dump.replace("}", " }")
     return dump

@@ -169,8 +169,7 @@
         "gloss": "wheat",
         "tags": ["mass", "concrete", "living", "plant", "food"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "hwelp",
         "form-raw": "hwelp",
         "form-canon": "whelp",
@@ -201,8 +200,7 @@
         "gloss": "ice",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
-    }, 
-    {
+    }, {
         "key": "īren",
         "form-raw": "īren",
         "form-canon": "iron",
@@ -298,7 +296,7 @@
         "gloss": "trade",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
-     }, {
+    }, {
         "key": "mann",
         "form-raw": "mann",
         "form-canon": "man",
@@ -315,7 +313,7 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english",
         "notes": "Alternate forms mīre, mȳre, mere. History of usage as feminine unclear to me."
-     }, {
+    }, {
         "key": "miht",
         "form-raw": "miht",
         "form-canon": "might",
@@ -661,7 +659,7 @@
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "Alternate meaning 'pledge, promise'"
-     }, {
+    }, {
         "key": "weorþ",
         "form-raw": "weorþ",
         "form-canon": "worth",

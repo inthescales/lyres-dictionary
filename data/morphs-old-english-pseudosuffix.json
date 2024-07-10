@@ -8,16 +8,14 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "having many %pl",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "mass"
-                    }
-                },
-                "gloss": "having much %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "mass"
+                }
+            },
+            "gloss": "having much %pl"
+        }],
         "origin": "old-english"
     }, {
         "key": "-kyn",
@@ -141,7 +139,7 @@
             "follows": {
                 "and": [
                     { "has-tag": "bodypart" },
-                    { "not": { "has-tag": "bodypart-plant" }}
+                    { "not": { "has-tag": "bodypart-plant" } }
                 ]
             }
         },

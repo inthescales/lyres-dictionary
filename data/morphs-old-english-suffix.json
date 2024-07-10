@@ -15,8 +15,7 @@
             }
         },
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-dom-adj",
         "form-stem": "dom",
         "form-raw": "dom",
@@ -27,8 +26,7 @@
         "gloss": "the quality of being %sg",
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-dom-rule",
         "form-stem": "dom",
         "form-raw": "dom",
@@ -44,8 +42,7 @@
             }
         },
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-ed-having",
         "form-stem": "ed",
         "form-raw": "ed",
@@ -56,9 +53,7 @@
         "gloss": "having %pl",
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "singleton"
-                }
+                "not": { "has-tag": "singleton" }
             }
         },
         "exception": [
@@ -69,8 +64,7 @@
                     }
                 },
                 "gloss": "having %sg"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-suffix": "e"
@@ -103,8 +97,7 @@
                     }
                 },
                 "gloss": "having %sg"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-suffix": "e"
@@ -130,25 +123,26 @@
                 "has-any-tags": ["food", "material", "tree"]
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-suffix": ["e", "r"]
-                }
-            },
-            "form-final": "n"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "tree"
-                }
-            },
-            "gloss": "made from the wood of the %!sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": ["e", "r"]
+                    }
+                },
+                "form-final": "n"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "tree"
+                    }
+                },
+                "gloss": "made from the wood of the %!sg"
+            }
+        ],
         "origin": "old-english",
         "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
-    },
-    {
+    }, {
         "key": "-ere",
         "form-stem": "er",
         "form-raw": "ere",
@@ -167,8 +161,7 @@
             "form-final": "r"
         }],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-ery",
         "form-stem": "ery",
         "form-final": "ery",
@@ -178,56 +171,57 @@
         "suffixes": [],
         "gloss": "a place for %pl",
         "tags": ["uncountable", "mass"],
-        "exception": [{
-            "case": {
-                "follows": {
-                    "or": [
-                        { "has-suffix": "e" },
-                        { "has-suffix": ["nd", "ld"] }
-                    ]
-                }
-            },
-            "form-final": "ry"
-        }, {
-            "case": {
-                "follows": {
-                    "has-suffix": "er"
-                }
-            },
-            "form-final": "y"
-        }, {
-            "case": {
-                "follows": {
-                    "and": [
-                        { "has-type": "noun" },
-                        { "has-tag": "person"}
-                    ]
-                }
-            },
-            "gloss": ["the practice or activity of %s", "acting as %sg"]
-        }, {
-            "case": {
-                "follows": {
-                    "and": [
-                        { "has-type": "noun" },
-                        { "has-tag": "man-made"}
-                    ]
-                }
-            },
-            "gloss": "[place] where %pl are made",
-            "tags": ["count", "concrete", "terrain"]
-        }, {
-            "case": {
-                "follows": {
-                    "has-type": "verb"
-                }
-            },
-            "gloss": ["the act or practice of %part", "a place where %part occurs"]
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "or": [
+                            { "has-suffix": "e" },
+                            { "has-suffix": ["nd", "ld"] }
+                        ]
+                    }
+                },
+                "form-final": "ry"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-suffix": "er"
+                    }
+                },
+                "form-final": "y"
+            }, {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "person" }
+                        ]
+                    }
+                },
+                "gloss": ["the practice or activity of %s", "acting as %sg"]
+            }, {
+                "case": {
+                    "follows": {
+                        "and": [
+                            { "has-type": "noun" },
+                            { "has-tag": "man-made" }
+                        ]
+                    }
+                },
+                "gloss": "[place] where %pl are made",
+                "tags": ["count", "concrete", "terrain"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-type": "verb"
+                    }
+                },
+                "gloss": ["the act or practice of %part", "a place where %part occurs"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Properly ME. TODO: When added to a tame animal, a place where they are raised. TODO: When adding to any animal, acting like that animal"
-    },
-    {
+    }, {
         "key": "-estre",
         "form-stem": "ster",
         "form-raw": "estre",
@@ -239,8 +233,7 @@
         "tags": ["uncountable", "concrete", "rare"],
         "origin": "old-english",
         "notes": "gloss is modern. Original usage was feminine only"
-    },
-    {
+    }, {
         "key": "-hād",
         "form-stem": "hood",
         "form-raw": "hād",
@@ -257,8 +250,7 @@
         },
         "origin": "old-english",
         "notes": "Occasionally applied to non-person nouns or adjectives in MnE, but near-universally people in OE"
-    },
-    {
+    }, {
         "key": "-hede",
         "form-stem": "head",
         "form-raw": "hede",
@@ -275,8 +267,7 @@
         },
         "origin": "old-english",
         "notes": "ME variation of -hād. TODO: change origin when ME is added"
-    },
-    {
+    }, {
         "key": "-iġ",
         "form-stem": "i",
         "form-final": "y",
@@ -286,24 +277,25 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "having the qualities of %sg",
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-suffix": "y"
-                }
-            },
-            "form-final": "ey"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "quality"
-                }
-            },
-            "gloss": "having the quality of %sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix": "y"
+                    }
+                },
+                "form-final": "ey"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "quality"
+                    }
+                },
+                "gloss": "having the quality of %sg"
+            }
+        ],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-isċ",
         "form-stem": "ish",
         "form-final": "ish",
@@ -314,8 +306,7 @@
         "suffixes": ["-nes"],
         "gloss": "like or resembling %sg",
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-kin",
         "form-stem": "kin",
         "form-final": "kin",
@@ -328,21 +319,18 @@
                 "has-tag": "count"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "rules"
-                    }
-                },
-                "gloss": ["small %@", "petty %@"]
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "rules"
+                }
+            },
+            "gloss": ["small %@", "petty %@"]
+        }],
         "tags": ["count", "rare"],
         "origin": "old-english",
         "notes": "TODO: Allow -ikin form in some cases. TODO: Allow as affectionate for family, or positive adjectives. TODO: Allow color compounds on pattern of 'greenkin'. TODO: Properly ME"
-    },
-    {
+    }, {
         "key": "-liċ",
         "form-stem": "li",
         "form-final": "ly",
@@ -352,19 +340,16 @@
         "derive-to": "adj",
         "suffixes": [],
         "gloss": "pertaining to %pl",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "living"
-                    }
-                },
-                "gloss": "pertaining or suitable to %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "living"
+                }
+            },
+            "gloss": "pertaining or suitable to %pl"
+        }],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-liċe",
         "form-stem": "like",
         "form-final": "like",
@@ -374,8 +359,7 @@
         "derive-to": "adj",
         "gloss": "like or resembling %sg",
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-ling-adj",
         "form-stem": "ling",
         "form-final": "ling",
@@ -386,8 +370,7 @@
         "gloss": "one who is %@",
         "tags": ["uncountable", "person", "rare"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-ling-noun",
         "form-stem": "ling",
         "form-final": "ling",
@@ -410,8 +393,7 @@
                     }
                 },
                 "gloss": "young %@"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-tag": "ruler"
@@ -421,8 +403,7 @@
             }
         ],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-ling-verb",
         "form-stem": "ling",
         "form-final": "ling",
@@ -438,8 +419,7 @@
         "gloss": "one who is %ppart",
         "tags": ["uncountable", "person", "rare"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-nes",
         "form-stem": "ness",
         "form-raw": "nes",
@@ -450,8 +430,7 @@
         "gloss": "the quality of being %sg",
         "tags": ["mass", "abstract"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-oc",
         "form-stem": "ock",
         "form-final": "ock",
@@ -464,7 +443,7 @@
             "follows": {
                 "and": [
                     { "has-tag": "count" },
-                    { "not": { "has-suffix-template": ["VVC", "VVCC", "VVCCC", "Vfe"] }}
+                    { "not": { "has-suffix-template": ["VVC", "VVCC", "VVCCC", "Vfe"] } }
                 ]
             }
         },
@@ -478,8 +457,7 @@
                 "form-stem": "/ock",
                 "form-final": "/ock",
                 "notes": "Faking vowel-shortening here (as in 'whinnock', 'gammock'). Requirement on 'Vfe' avoides needing to voice fricative."
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-tag": "rules"
@@ -491,8 +469,7 @@
         "tags": ["count", "rare"],
         "origin": "old-english",
         "notes": "Many more attestations from ME, but apparently in OE as well. TODO: Consider adding passthrough concreteness."
-    },
-    {
+    }, {
         "key": "-red",
         "form-stem": "red",
         "form-final": "red",
@@ -510,19 +487,16 @@
                 ]
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-type": "verb"
-                    }
-                },
-                "gloss": "the state or condition of %part"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-type": "verb"
+                }
+            },
+            "gloss": "the state or condition of %part"
+        }],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-sċipe-adj",
         "form-stem": "ship",
         "form-raw": "sċipe",
@@ -533,8 +507,7 @@
         "gloss": "the quality of being %@",
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
-    },
-    {
+    }, {
         "key": "-sċipe",
         "form-stem": "ship",
         "form-raw": "sċipe",
@@ -563,16 +536,14 @@
                     }
                 },
                 "gloss": ["%@", "considerably %@"]
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-type": "verb"
                     }
                 },
                 "gloss": "tending %inf"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "and": [
@@ -582,8 +553,7 @@
                     }
                 },
                 "gloss": "having %pl"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "and": [
@@ -593,8 +563,7 @@
                     }
                 },
                 "gloss": "having or characterized by %pl"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "and": [
@@ -605,8 +574,7 @@
                     }
                 },
                 "gloss": "causing or inspiring %pl"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "and": [
@@ -616,8 +584,7 @@
                     }
                 },
                 "gloss": ["tending %inf", "easy %inf"]
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-type": "number"
