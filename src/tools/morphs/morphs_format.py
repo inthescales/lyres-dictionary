@@ -157,30 +157,43 @@ def should_format(element, key, tag_stack):
 
 # Prints the sorted and formatted contents of a single specified file
 if __name__ == '__main__':
+    # Read args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "r", ["replace"])
+        opts, params = getopt.getopt(sys.argv[1:], "rs", ["replace", "sort"])
     except getopt.GetoptError:
         print('getopt error')
         sys.exit(2)
 
     replace = False
-    file = None
+    should_sort = False
+    files = []
 
     # Process args
     for opt, arg in opts:
         if opt in ["-r", "--replace"]:
             replace = True
+        elif opt in ["-s", "--sort"]:
+            should_sort = True
 
-    if len(params) == 1:
-        file = params[0]
-    else:
-        print("ERROR: morph format must take one file argument")
+    if len(params) > 1 and not replace:
+        print("ERROR: morph format can only take one file argument for stdout")
         sys.exit(0)
 
-    morphs = file_tool.get_morphs_from(file)
-    formatted = format(morphs)
+    files = params
 
-    if replace:
-        file_tool.write_formatted_to(formatted, file)
-    else:
-        print(formatted)
+    for file in files:
+        # Read in morphs
+        morphs = file_tool.get_morphs_from(file)
+
+        # Sort if requested
+        if should_sort:
+            morphs = sort(morphs)
+
+        # Format morphs
+        formatted = format(morphs)
+
+        # Output
+        if replace:
+            file_tool.write_formatted_to(formatted, file)
+        else:
+            print(formatted)
