@@ -25,8 +25,7 @@
         "tags": ["mass", "abstract"],
         "origin": "latin",
         "notes": "Consider expanding in line with 'menticulture'"
-    },
-    {
+    }, {
         "key": "-cide",
         "form-final": "cide",
         "form-stem": "cid",
@@ -41,21 +40,18 @@
                 "has-tag": "living"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": ["-al", "-ous", "-ism"]
-                    }
-                },
-                "gloss": "killing %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": ["-al", "-ous", "-ism"]
+                }
+            },
+            "gloss": "killing %pl"
+        }],
         "tags": ["uncountable"],
         "origin": "latin",
         "notes": "Could add speculative variant for non-living roots with meaning 'cut', as in 'lapicida' ('stonecutter')"
-    },
-    {
+    }, {
         "key": "-form",
         "form-final": "form",
         "form-stem": "form",
@@ -73,19 +69,16 @@
                 ]
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "person"
-                    }
-                },
-                "gloss": "having the appearance of %sg"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "person"
+                }
+            },
+            "gloss": "having the appearance of %sg"
+        }],
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "-fer",
         "form-final": "fer",
         "form-stem": "fer",
@@ -103,9 +96,7 @@
         },
         "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin"
-    },
-
-    {
+    }, {
         "key": "-ify",
         "form-stem-present": "ific",
         "form-stem-perfect": "ificat",
@@ -118,15 +109,14 @@
         "gloss-adj": "[make] %@",
         "gloss-relative": "[make] %@",
         "exception": [
-            { 
+            {
                 "case": {
                     "precedes": {
                         "has-key": "-or"
                     }
                 },
                 "form-stem": ["ifact", "ificat"]
-            },
-            {
+            }, {
                 "case": {
                     "precedes": {
                         "has-key": "-ble"
@@ -139,8 +129,7 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
-    },
-    {
+    }, {
         "key": "-ger",
         "form-final": "ger",
         "form-stem": "ger",
@@ -155,27 +144,27 @@
                 "has-tag": "concrete"
             }
         },
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
-                }
-            },
-            "form-stem": "gere"
-        },
-        {
-            "case": {
-                "precedes": {
-                    "has-key": ["-ous", "-nt", "-nt-noun", "-nce", "-nd"]
-                }
-            },
-            "gloss": "[bear] %pl"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": ["-nt", "-nt-noun", "-nce", "-nd"]
+                    }
+                },
+                "form-stem": "gere"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-key": ["-ous", "-nt", "-nt-noun", "-nce", "-nd"]
+                    }
+                },
+                "gloss": "[bear] %pl"
+            }
+        ],
         "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin",
         "notes": "add exceptions for 'ous'"
-    },
-    {
+    }, {
         "key": "-pote-drink",
         "form-final": "pote",
         "form-stem": "pot",
@@ -192,8 +181,7 @@
         },
         "tags": ["uncountable", "concrete", "living"],
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "-pote-power",
         "form-stem": "pot",
         "form-final": "pote",
@@ -203,20 +191,17 @@
         "conjugation": 3,
         "suffixes": ["-nt", "-nce"],
         "gloss": "[have] command over %pl",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "tool"
-                    }
-                },
-                "gloss": "[be] skilled in the use of %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "tool"
+                }
+            },
+            "gloss": "[be] skilled in the use of %pl"
+        }],
         "tags": ["non-final", "rare"],
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "-vor-",
         "form-final": "vor",
         "form-stem": "vor",
@@ -231,16 +216,14 @@
                 "has-tag": "concrete"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-any-tags": ["fluid", "liquid"]
-                    }
-                },
-                "gloss": "[consume] %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["fluid", "liquid"]
+                }
+            },
+            "gloss": "[consume] %pl"
+        }],
         "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin"
     }

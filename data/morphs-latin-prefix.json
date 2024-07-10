@@ -15,12 +15,11 @@
         },
         "requires": {
             "precedes": {
-                "not": { "has-tag": "joining"}
+                "not": { "has-tag": "joining" }
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "ad-",
         "form-stem": "ad",
         "form-stem-assim": "a",
@@ -36,13 +35,12 @@
         },
         "requires": {
             "precedes": {
-                "not": { "has-tag": "dividing"}
+                "not": { "has-tag": "dividing" }
             }
         },
         "origin": "latin",
         "notes": "need 'aspire' - cut before 'sp'"
-    },
-    {
+    }, {
         "key": "circum-",
         "form-stem": "circum",
         "type": "prep",
@@ -58,8 +56,7 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "cis-",
         "form-stem": "cis",
         "type": "prep",
@@ -72,8 +69,7 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "com-",
         "form-stem": "com",
         "form-stem-assim": "co",
@@ -82,18 +78,17 @@
         "gloss-verb": "%@ together",
         "gloss-noun": "together with %sg",
         "form-assimilation": {
-           "form-stem-assim": ["a", "e", "h", "i", "o"],
-           "double": ["l", "r"],
-           "nasal": ["*"]
+            "form-stem-assim": ["a", "e", "h", "i", "o"],
+            "double": ["l", "r"],
+            "nasal": ["*"]
         },
         "requires": {
             "precedes": {
-                "not": { "has-tag": "dividing"}
+                "not": { "has-tag": "dividing" }
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "com-intensive",
         "form-stem": "com",
         "form-stem-assim": "co",
@@ -101,13 +96,12 @@
         "prefix-on": "verb",
         "gloss-verb": "wholly %@",
         "form-assimilation": {
-           "form-stem-assim": ["a", "e", "i", "u", "o", "h"],
-           "double": ["l", "r"],
-           "nasal": ["*"]
+            "form-stem-assim": ["a", "e", "i", "u", "o", "h"],
+            "double": ["l", "r"],
+            "nasal": ["*"]
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "de-",
         "form-stem": "de",
         "type": "prep",
@@ -116,12 +110,11 @@
         "gloss-noun": "down from %sg",
         "requires": {
             "precedes": {
-                "not": { "has-tag": "joining"}
+                "not": { "has-tag": "joining" }
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "dis-",
         "form-stem": "dis",
         "form-stem-assim": "di",
@@ -136,13 +129,12 @@
         },
         "requires": {
             "precedes": {
-                "not": { "has-tag": "joining"}
+                "not": { "has-tag": "joining" }
             }
         },
         "origin": "latin",
         "notes": "Assimilation concerns: digress vs disgregate? The common digress and digest make me lean that way."
-    },
-    {
+    }, {
         "key": "in-",
         "form-stem": "in",
         "form-stem-assim": "i",
@@ -163,13 +155,12 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "ex-",
         "form-stem": "ex",
         "form-stem-assim": "e",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "prefix-on": "verb",
         "gloss-verb": "%@ out from",
         "gloss-noun": "out of %sg",
         "form-assimilation": {
@@ -180,26 +171,12 @@
         },
         "requires": {
             "precedes": {
-                "not": { "has-tag": "joining"}
-            }
-        },
-        "requires": {
-            "precedes": {
-                "or": [
-                    {
-                        "and": [
-                            { "has-type": "verb" },
-                            { "not": { "has-tag": "joining" }}
-                        ]
-                    },
-                    { "has-any-tags": ["concrete", "bounded"] }
-                ]
+                "not": { "has-tag": "joining" }
             }
         },
         "origin": "latin",
         "notes": "execute vs exsanguinate"
-    },
-    {
+    }, {
         "key": "infra-",
         "form-stem": "infra",
         "type": "prep",
@@ -214,19 +191,16 @@
                 ]
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-type": "verb"
-                    }
-                },
-                "tags": ["rare"]
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-type": "verb"
+                }
+            },
+            "tags": ["rare"]
+        }],
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "inter-",
         "form-stem": "inter",
         "type": "prep",
@@ -243,8 +217,7 @@
         },
         "origin": "latin",
         "notes": "intelligent and other derivates seems to be a unique case of assimilation, which I will not represent here."
-    },
-    {
+    }, {
         "key": "intra-",
         "form-stem": "intra",
         "type": "prep",
@@ -257,8 +230,7 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "ob-",
         "form-stem": "ob",
         "form-stem-assim": "o",
@@ -273,8 +245,7 @@
         },
         "origin": "latin",
         "notes": "need spelling change for ostentatious. Can find 'obc' but only in later French or scientific words (maybe add as a separate suffix). 'obf' appears, as in obfuscate, but seems rarer. Also see 'oflete' for multi-char-prefix variation. 'g' seems to go both ways."
-    },
-    {
+    }, {
         "key": "per-",
         "form-stem": "per",
         "type": "prep",
@@ -282,8 +253,7 @@
         "gloss-verb": "%@ through",
         "gloss-noun": "through %sg",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "preter-",
         "form-stem": "preter",
         "type": "prep",
@@ -291,8 +261,7 @@
         "gloss-verb": "%@ beyond",
         "gloss-noun": "beyond %sg",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "pre-",
         "form-stem": "pre",
         "type": "prep",
@@ -305,8 +274,7 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "pro-",
         "form-stem": "pro",
         "type": "prep",
@@ -314,27 +282,23 @@
         "gloss-verb": "%@ forward",
         "gloss-noun": "before %sg",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "retro-",
         "form-stem": "retro",
         "type": "prep",
         "prefix-on": "verb",
         "gloss-verb": "%@ retrospectively",
         "gloss-noun": "behind %sg",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-tag": "motion"
-                    }
-                },
-                "gloss": "%@ backward"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-tag": "motion"
+                }
+            },
+            "gloss": "%@ backward"
+        }],
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "re-",
         "form-stem": "re",
         "type": "prep",
@@ -342,8 +306,7 @@
         "gloss-verb": "%@ back",
         "origin": "latin",
         "notes": "In early latin, became 'red-' before a vowel."
-    },
-    {
+    }, {
         "key": "se-",
         "form-stem": "se",
         "type": "prep",
@@ -355,8 +318,7 @@
             "sed": ["a", "e", "i", "o", "u"]
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "sub-",
         "form-stem": "sub",
         "form-stem-assim": "su",
@@ -378,8 +340,7 @@
         },
         "origin": "latin",
         "notes": "need 'sus' for cases like sustain, susceptible, but occurrence is a bit arbitrary. Should be 'su' before 'sp' (suspect). 'subp*' could happen in later joinings (ex. medical)"
-    },
-    {
+    }, {
         "key": "super-",
         "form-stem": "super",
         "type": "prep",
@@ -395,8 +356,7 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "supra-",
         "form-stem": "supra",
         "type": "prep",
@@ -409,8 +369,7 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "trans-",
         "form-stem": "trans",
         "type": "prep",
@@ -426,121 +385,104 @@
             }
         },
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "contra-",
         "form-stem": "contra",
         "type": "prefix",
         "prefix-on": "verb",
         "gloss": "%@ against",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "uni-",
         "form-stem": "uni",
         "type": "number",
         "gloss": "one %!sg",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "bi-",
         "form-stem": "bi",
         "type": "number",
         "gloss": "two %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "tri-",
         "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "quadri-",
         "form-stem": "quadri",
         "type": "number",
         "gloss": "four %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "quinti-",
         "form-stem": "quinti",
         "type": "number",
         "gloss": "five %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "sexi-",
         "form-stem": "sexi",
         "type": "number",
         "gloss": "six %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "septi-",
         "form-stem": "septi",
         "type": "number",
         "gloss": "seven %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "octi-",
         "form-stem": "octi",
         "type": "number",
         "gloss": "eight %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "noni-",
         "form-stem": "noni",
         "type": "number",
         "gloss": "nine %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "deci-",
         "form-stem": "deci",
         "type": "number",
         "gloss": "ten %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "undeci-",
         "form-stem": "undeci",
         "type": "number",
         "gloss": "eleven %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "duodeci-",
         "form-stem": "duodeci",
         "type": "number",
         "gloss": "twelve %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "centi-",
         "form-stem": "centi",
         "type": "number",
         "gloss": "one-hundred %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "milli-",
         "form-stem": "milli",
         "type": "number",
         "gloss": "one-thousand %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "multi-",
         "form-stem": "multi",
         "type": "number",
         "gloss": "many %!pl",
         "origin": "latin"
-    },
-    {
+    }, {
         "key": "omni-",
         "form-stem": "omni",
         "type": "number",

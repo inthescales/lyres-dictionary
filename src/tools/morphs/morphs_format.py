@@ -142,7 +142,7 @@ def should_format(element, key, tag_stack):
             key.startswith("form-") \
             and not key == "form-assimilation" \
         ) \
-        or key.startswith("gloss-"):
+        or (key == "gloss" or key.startswith("gloss-")):
             return False
 
     # Elements within morph specifiers, except those listed in and/or statements

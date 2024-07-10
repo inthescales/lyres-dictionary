@@ -12,9 +12,9 @@ from src.utils.logging import Logger
 
 def seed_word(word, morphothec):
     bag = [
-        # ("latin", morphothec.root_count_for_language("latin")),
+        ("latin", morphothec.root_count_for_language("latin")),
         # ("greek", morphothec.root_count_for_language("greek")),
-        ("old-english", morphothec.root_count_for_language("old-english"))
+        # ("old-english", morphothec.root_count_for_language("old-english"))
     ]
     choice = helpers.choose_bag(bag)
     if choice == "latin":
@@ -82,8 +82,8 @@ def transform_word(word, morphothec, is_single):
     elif language == "greek":
         relational_suffixes = ["-ic", "-y-relative", "-ize/greek"]
         numerical_suffixes = ["-ic-number", "-y-number"]
-    elif language == "old-english":
-        numerical_suffixes = ["-ed-having"]
+    # elif language == "old-english":
+        # numerical_suffixes = ["-ed-having"]
 
     choice = None
     override = False
@@ -115,11 +115,11 @@ def transform_word(word, morphothec, is_single):
         if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
             bag.append(("add_modern_prefix", 1))
 
-    # if word.size() == 1 and current_type == "noun":
-    #     bag.append(("relational", 10))
+    if len(relational_suffixes) > 0 and word.size() == 1 and current_type == "noun":
+        bag.append(("relational", 10))
 
-    # if word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
-    #     bag.append(("numerical", 5))
+    if len(numerical_suffixes) > 0 and word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
+        bag.append(("numerical", 5))
 
     # See if an alternate form is available
     # TODO: Find a way to generate all possible alt. forms rather than relying on rolling one
