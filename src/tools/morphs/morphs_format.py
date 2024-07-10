@@ -155,7 +155,7 @@ def should_format(element, key, tag_stack):
 
     return True
 
-# Prints the sorted and formatted contents of a single specified file
+# Formats contents of specified files
 if __name__ == '__main__':
     # Read args
     try:
