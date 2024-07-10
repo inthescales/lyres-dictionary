@@ -82,8 +82,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "en-",
         "form-stem": "en",
         "form-stem-assim": "e",
@@ -100,8 +99,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "epi-",
         "form-stem": "epi",
         "form-stem-assim": "ep",
@@ -119,8 +117,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hyper-",
         "form-stem": "hyper",
         "type": "prep",
@@ -132,20 +129,17 @@
                 "has-any-tags": ["motion", "concrete"]
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-tag": "bodypart"
-                    }
-                },
-                "tags": []
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-tag": "bodypart"
+                }
+            },
+            "tags": []
+        }],
         "tags": ["rare"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hypo-",
         "form-stem": "hypo",
         "type": "prep",
@@ -157,20 +151,17 @@
                 "has-any-tags": ["motion", "concrete"]
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-tag": "bodypart"
-                    }
-                },
-                "tags": []
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-tag": "bodypart"
+                }
+            },
+            "tags": []
+        }],
         "tags": ["rare"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "meta-",
         "form-stem": "meta",
         "form-stem-assim": "met",
@@ -191,8 +182,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "peri-",
         "form-stem": "peri",
         "type": "prep",
@@ -205,8 +195,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pro-/greek",
         "form-stem": "pro",
         "type": "prep",
@@ -218,8 +207,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "syn-",
         "form-stem": "syn",
         "form-stem-assim": "sy",
@@ -236,8 +224,7 @@
             }
         },
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "a-",
         "form-stem": "a",
         "type": "number",
@@ -251,8 +238,7 @@
             "form-stem": "an"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mono-",
         "form-stem": "mono",
         "type": "number",
@@ -266,22 +252,19 @@
             "form-stem": "mon"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "di-",
         "form-stem": "di",
         "type": "number",
         "gloss": "two %!pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tri-greek-  ",
         "form-stem": "tri",
         "type": "number",
         "gloss": "three %!pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tetra-",
         "form-stem": "tetra",
         "type": "number",
@@ -295,8 +278,7 @@
             "form-stem": "tetr"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "penta-",
         "form-stem": "penta",
         "type": "number",
@@ -310,8 +292,7 @@
             "form-stem": "pent"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hexa-",
         "form-stem": "hexa",
         "type": "number",
@@ -325,8 +306,7 @@
             "form-stem": "hex"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hepta-",
         "form-stem": "hepta",
         "type": "number",
@@ -340,8 +320,7 @@
             "form-stem": "hept"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "octo-",
         "form-stem": "octo",
         "type": "number",
@@ -355,8 +334,7 @@
             "form-stem": "oct"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ennea-",
         "form-stem": "ennea",
         "type": "number",
@@ -370,8 +348,7 @@
             "form-stem": "enne"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "deca-",
         "form-stem": "deca",
         "type": "number",
@@ -385,8 +362,7 @@
             "form-stem": "dec"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hecato-",
         "form-stem": "hecato",
         "type": "number",
@@ -400,15 +376,13 @@
             "form-stem": "hecat"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "chili-",
         "form-stem": "chili",
         "type": "number",
         "gloss": "one-thousand %!pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "myria-",
         "form-stem": "myria",
         "type": "number",
@@ -422,8 +396,7 @@
             "form-stem": "myri"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "oligo-",
         "form-stem": "oligo",
         "type": "number",
@@ -437,15 +410,13 @@
             "form-stem": "olig"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "poly-",
         "form-stem": "poly",
         "type": "number",
         "gloss": "many %!pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pan-/number",
         "form-stem": "pan",
         "form-stem-assim": "pa",
@@ -455,22 +426,19 @@
         "type": "number",
         "gloss": "all %pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hyper-/number",
         "form-stem": "hyper",
         "type": "number",
         "gloss": "excessive %pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hypo-/number",
         "form-stem": "hypo",
         "type": "number",
         "gloss": "insufficient %pl",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "a-/verb",
         "form-stem": "a",
         "type": "prefix",
@@ -493,8 +461,7 @@
             "form-stem": "an"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "auto-",
         "form-stem": "auto",
         "form-stem-assim": "aut",
@@ -515,8 +482,7 @@
         },
         "tags": ["object-specifier"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pan-",
         "form-stem": "pan",
         "form-stem-assim": "pa",

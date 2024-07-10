@@ -1,5 +1,5 @@
-import random
 import getopt
+import random
 import sys
 
 import botbuddy

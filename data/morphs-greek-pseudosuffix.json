@@ -8,20 +8,17 @@
         "derive-to": "noun",
         "suffixes": ["greek-silent-agent", "-ic-character", "-y-passthrough"],
         "gloss": "rule by %pl",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-silent-agent"
-                    }
-                },
-                "gloss": "[rule] or [oversee] %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-silent-agent"
+                }
+            },
+            "gloss": "[rule] or [oversee] %pl"
+        }],
         "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-clast",
         "form-final": "clast",
         "form-stem": "clast",
@@ -33,22 +30,19 @@
         "requires": {
             "follows": {
                 "not": { "has-any-tags": ["fluid", "living"] }
-            }  
-        },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-silent-agent"
-                    }
-                },
-                "gloss": "[break] %pl"
             }
-        ],
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-silent-agent"
+                }
+            },
+            "gloss": "[break] %pl"
+        }],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-crat",
         "form-final": "crat",
         "form-stem": "crat",
@@ -61,18 +55,14 @@
         "requires": {
             "follows": {
                 "or": [
-                    {
-                        "and": [
-                            { "has-type": "noun" },
-                            { "has-tag": "person" }
-                        ]
-                    },
-                    {
-                        "and": [
-                            { "has-type": "adj" },
-                            { "has-tag": "character" }
-                        ]
-                    }
+                    { "and": [
+                        { "has-type": "noun" },
+                        { "has-tag": "person" }
+                    ]},
+                    { "and": [
+                        { "has-type": "adj" },
+                        { "has-tag": "character" }
+                    ]}
                 ]
             }
         },
@@ -85,8 +75,7 @@
                 },
                 "gloss-adj": "[member] of the ruling %@",
                 "gloss-noun": "[member] of the ruling %pl"
-            },
-            {
+            }, {
                 "case": {
                     "precedes": {
                         "has-key": "-y-passthrough"
@@ -97,8 +86,7 @@
         ],
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-gen",
         "form-stem": "gen",
         "form-final": "gen",
@@ -109,8 +97,7 @@
         "gloss": "[produce] %pl",
         "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-agog",
         "form-final": "agog",
         "form-stem": "agog",
@@ -124,21 +111,18 @@
                 "has-tag": "living"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-e-agent"
-                    }
-                },
-                "gloss": "[lead] %pl",
-                "form-stem": "agogu"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-e-agent"
+                }
+            },
+            "gloss": "[lead] %pl",
+            "form-stem": "agogu"
+        }],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-graph-",
         "form-final": "graph",
         "form-stem": "graph",
@@ -147,20 +131,17 @@
         "derive-to": "verb",
         "suffixes": ["-er-agent", "-ic-def", "-y-def"],
         "gloss": "[description] of %pl",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "-er-agent"
-                    }
-                },
-                "gloss": "[describe] %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "-er-agent"
+                }
+            },
+            "gloss": "[describe] %pl"
+        }],
         "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-lat-",
         "form-final": "lat",
         "form-stem": "latr",
@@ -169,21 +150,18 @@
         "derive-to": "noun",
         "suffixes": ["greek-silent-agent", "-y-def"],
         "gloss": "the worship of %pl",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-silent-agent"
-                    }
-                },
-                "form-stem": "later",
-                "gloss": "one who worships %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-silent-agent"
+                }
+            },
+            "form-stem": "later",
+            "gloss": "one who worships %pl"
+        }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-log-",
         "form-final": "log",
         "form-stem": "log",
@@ -194,8 +172,7 @@
         "gloss": "the study of %pl",
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-man-",
         "form-final": "man",
         "form-stem": "man",
@@ -208,8 +185,7 @@
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek",
         "notes": "Removing verb from derive-from until joining vowels are changed"
-    },
-    {
+    }, {
         "key": "-mant-",
         "form-final": "mant",
         "form-stem": "manc",
@@ -228,8 +204,7 @@
         }],
         "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-metr-",
         "form-final": "meter",
         "form-stem": "metr",
@@ -243,21 +218,18 @@
                 "has-tag": "concrete"
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-silent-agent"
-                    }
-                },
-                "form-stem": "meter",
-                "gloss": "one who measures %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-silent-agent"
+                }
+            },
+            "form-stem": "meter",
+            "gloss": "one who measures %pl"
+        }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-morph",
         "form-stem": "morph",
         "form-final": "morph",
@@ -276,8 +248,7 @@
         },
         "tags": ["uncountable", "concrete", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-nom-",
         "form-final": "nom",
         "form-stem": "nom",

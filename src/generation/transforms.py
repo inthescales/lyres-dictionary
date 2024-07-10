@@ -12,8 +12,8 @@ from src.utils.logging import Logger
 
 def seed_word(word, morphothec):
     bag = [
-        ("latin", morphothec.root_count_for_language("latin")),
-        # ("greek", morphothec.root_count_for_language("greek")),
+        # ("latin", morphothec.root_count_for_language("latin")),
+        ("greek", morphothec.root_count_for_language("greek")),
         # ("old-english", morphothec.root_count_for_language("old-english"))
     ]
     choice = helpers.choose_bag(bag)

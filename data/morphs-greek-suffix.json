@@ -1,5 +1,5 @@
 [
-        {
+    {
         "key": "-ad",
         "form-final": "ad",
         "form-stem": "ad",
@@ -15,8 +15,7 @@
         },
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    }, 
-    {
+    }, {
         "key": "-osis",
         "form-stem": "ot",
         "form-final": "osis",
@@ -40,8 +39,7 @@
         }],
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-{
+    }, {
         "key": "-isk",
         "form-final": "isk",
         "form-stem": "isk",
@@ -58,8 +56,7 @@
         "tags": ["count", "rare"],
         "origin": "greek",
         "notes": "TODO: Consider adding passthrough concreteness"
-    },
-    {
+    }, {
         "key": "-ite-dweller",
         "form-final": "ite",
         "form-stem": "it",
@@ -84,8 +81,7 @@
         "tags": ["uncountable", "concrete", "living"],
         "origin": "greek",
         "notes": "TODO: cases like 'dwells on a desert' sound wrong. Maybe use semantic tokens to indicate which preposition to use."
-    },
-    {
+    }, {
         "key": "-itis",
         "form-stem": "it",
         "form-final": "itis",
@@ -109,8 +105,7 @@
         }],
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-phag-",
         "form-final": "phag",
         "form-stem": "phag",
@@ -137,8 +132,7 @@
         }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-phil-",
         "form-final": "phil",
         "form-stem": "phil",
@@ -155,8 +149,7 @@
         },
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-phob-",
         "form-final": "phob",
         "form-stem": "phob",
@@ -168,8 +161,7 @@
         "gloss-noun": "[fear] of %pl",
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-phor-",
         "form-final": "phor",
         "form-stem": "phor",
@@ -178,20 +170,17 @@
         "derive-to": "noun",
         "suffixes": ["greek-e-agent", "-ic-part", "-ia-def"],
         "gloss": "the bearing of %pl",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": ["greek-e-agent", "-ic-part"]
-                    }
-                },
-                "gloss": "[bear] %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": ["greek-e-agent", "-ic-part"]
+                }
+            },
+            "gloss": "[bear] %pl"
+        }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-plast",
         "form-final": "plast",
         "form-stem": "plast",
@@ -200,20 +189,17 @@
         "derive-to": "noun",
         "suffixes": ["greek-silent-agent", "-y-def", "-ic"],
         "gloss": "the forming of %pl",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "greek-silent-agent"
-                    }
-                },
-                "gloss": "one who forms %pl"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-silent-agent"
+                }
+            },
+            "gloss": "one who forms %pl"
+        }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-pot-",
         "form-final": "pot",
         "form-stem": "pot",
@@ -237,8 +223,7 @@
         }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-rrhea",
         "form-final": "rrhea",
         "form-stem": "rrhe",
@@ -254,8 +239,7 @@
         },
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-scop-",
         "form-final": "scop",
         "form-stem": "scop",
@@ -272,8 +256,7 @@
         },
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-thec",
         "form-stem": "thec",
         "form-final": "thec",
@@ -289,8 +272,7 @@
         },
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-techn-",
         "form-final": "techn",
         "form-stem": "techn",
@@ -301,8 +283,7 @@
         "gloss": "the art that works with %pl",
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-iatr-",
         "form-final": "iatr",
         "form-stem": "iatr",
@@ -318,8 +299,7 @@
         },
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-ic",
         "form-final": "ic",
         "form-stem": "ic",
@@ -329,21 +309,18 @@
         "suffixes": [],
         "gloss-noun": "pertaining to %pl",
         "gloss-relative": "%@",
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": "i"
-                    }
-                },
-                "form-stem": "iac",
-                "form-final": "iac"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "i"
+                }
+            },
+            "form-stem": "iac",
+            "form-final": "iac"
+        }],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
-    },
-    {
+    }, {
         "key": "-ic-character",
         "form-final": "ic",
         "form-stem": "ic",
@@ -355,8 +332,7 @@
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
-    },
-    {
+    }, {
         "key": "-ic-def",
         "form-final": "ic",
         "form-stem": "ic",
@@ -368,8 +344,7 @@
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
-    },
-    {
+    }, {
         "key": "-ic-verb",
         "form-final": "ic",
         "form-stem": "ic",
@@ -381,8 +356,7 @@
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
-    },
-    {
+    }, {
         "key": "-ic-part",
         "form-final": "ic",
         "form-stem": "ic",
@@ -394,8 +368,7 @@
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
-    },
-    {
+    }, {
         "key": "-ic-having",
         "form-final": "ic",
         "form-stem": "ic",
@@ -407,8 +380,7 @@
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
-    },
-    {
+    }, {
         "key": "-ic-number",
         "form-final": "ic",
         "form-stem": "ic",
@@ -419,8 +391,7 @@
         "gloss": "having %@",
         "tags": ["mass", "abstract", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-ician",
         "form-final": "ician",
         "form-stem": "ician",
@@ -431,8 +402,7 @@
         "gloss": "one who practices %sg",
         "tags": ["uncountable", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-tic/verb",
         "form-final": "tic",
         "form-stem": "tic",
@@ -443,8 +413,7 @@
         "gloss": "relating to %part",
         "tags": ["no-head-joiner"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "greek-ist",
         "form-stem": "ist",
         "form-final": "ist",
@@ -455,8 +424,7 @@
         "gloss": "one engaged in %sg",
         "tags": ["uncountable", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-oid",
         "form-stem": "oid",
         "form-final": "oid",
@@ -472,8 +440,7 @@
         },
         "tags": ["uncountable", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-ma",
         "form-stem": "mat",
         "form-final": "m",
@@ -490,32 +457,28 @@
                     }
                 },
                 "form-final": "ma"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-suffix": ["e", "i"]
                     }
                 },
                 "form-final": ["ma", "me"]
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-suffix": ["a"]
                     }
                 },
                 "form-final": "me"
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-suffix": "as"
                     }
                 },
                 "form-final": ["ma", "m"]
-            },
-            {
+            }, {
                 "case": {
                     "follows": {
                         "has-tag": "intransitive"
@@ -526,8 +489,7 @@
         ],
         "tags": ["uncountable", "concrete", "no-head-joiner", "object-specifier"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-t",
         "form-stem": "t",
         "form-final": "t",
@@ -538,28 +500,26 @@
         "gloss": "one who %3sg",
         "exception": [
             {
-            "case": {
-                "follows": {
-                    "has-suffix": ["a", "e", "i", "o", "u", "y"]
-                }
-            },
-            "form-stem": "t",
-            "form-final": "te"
-            },
-            {
-            "case": {
-                "follows": {
-                    "has-suffix": "t"
-                }
-            },
-            "form-stem": "",
-            "form-final": ""
-        }
+                "case": {
+                    "follows": {
+                        "has-suffix": ["a", "e", "i", "o", "u", "y"]
+                    }
+                },
+                "form-stem": "t",
+                "form-final": "te"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-suffix": "t"
+                    }
+                },
+                "form-stem": "",
+                "form-final": ""
+            }
         ],
         "tags": ["uncountable", "concrete", "living", "person", "no-head-joiner"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-sis",
         "form-stem": "s",
         "form-final": "sis",
@@ -578,8 +538,7 @@
         }],
         "tags": ["uncountable", "concrete", "living", "person", "no-head-joiner"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-tery",
         "form-stem": "teri",
         "form-final": "tery",
@@ -590,8 +549,7 @@
         "gloss": "[place] for %part",
         "tags": ["count", "concrete", "rare", "no-head-joiner"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-ize/greek",
         "form-stem": "iz",
         "form-final": "ize",
@@ -603,8 +561,7 @@
         "gloss-relative": "cause to be %@",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-ize/greek/adj",
         "form-stem": "as",
         "form-final": "ize",
@@ -614,8 +571,7 @@
         "gloss": "[be] %@",
         "tags": ["intransitive", "non-final"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-er-practitioner",
         "form-stem": "er",
         "form-final": "er",
@@ -626,8 +582,7 @@
         "gloss": "one who practices %sg",
         "tags": ["uncountable", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "greek-silent",
         "form-final": "",
         "form-stem": "",
@@ -638,8 +593,7 @@
         "gloss": "%@",
         "tags": ["uncountable", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "greek-silent-agent",
         "form-final": "",
         "form-stem": "",
@@ -650,8 +604,7 @@
         "gloss": "one who %3sg",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "greek-silent-haver",
         "form-final": "",
         "form-stem": "",
@@ -662,8 +615,7 @@
         "gloss": "one who has %!sg",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "greek-e-agent",
         "form-final": "e",
         "form-stem": "",
@@ -674,8 +626,7 @@
         "gloss": "one who %3sg",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-er-agent",
         "form-final": "er",
         "form-stem": "",
@@ -686,8 +637,7 @@
         "gloss": "one who %3sg",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-e-haver",
         "form-final": "e",
         "form-stem": "",
@@ -698,8 +648,7 @@
         "gloss": "one who has %sg",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-e-instrument",
         "form-final": "e",
         "form-stem": "",
@@ -710,8 +659,7 @@
         "gloss": "instrument for the %@",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-ia-def",
         "form-final": "ia",
         "form-stem": "i",
@@ -722,8 +670,7 @@
         "gloss": "the %@",
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-y-relative",
         "form-final": ["y", "ia"],
         "form-stem": "i",
@@ -742,8 +689,7 @@
         }],
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-y-number",
         "form-final": ["y", "ia"],
         "form-stem": "i",
@@ -762,8 +708,7 @@
         }],
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-iac-haver",
         "form-final": "iac",
         "form-stem": "iac",
@@ -774,8 +719,7 @@
         "gloss": "one who has %sg",
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-y-def",
         "form-final": "y",
         "form-stem": "i",
@@ -786,8 +730,7 @@
         "gloss": "%sg",
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-y-passthrough",
         "form-final": "y",
         "form-stem": "i",
@@ -798,8 +741,7 @@
         "gloss": "%@",
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "-y/verb",
         "form-stem": "si",
         "form-final": ["sy", "sia"],
@@ -813,17 +755,15 @@
                 "not": { "has-suffix": ["is", "i"] }
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-suffix": "s"
-                    }
-                },
-                "form-stem": "i",
-                "form-final": ["y", "ia"]
-            }  
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "s"
+                }
+            },
+            "form-stem": "i",
+            "form-final": ["y", "ia"]
+        }],
         "tags": ["uncountable", "abstract", "no-head-joiner"],
         "origin": "greek"
     }

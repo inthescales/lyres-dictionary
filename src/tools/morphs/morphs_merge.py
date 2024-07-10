@@ -1,13 +1,12 @@
 import sys
 
+import src.tools.morphs.morphs_files as file_tool
 import src.tools.morphs.morphs_format as format
-
-from src.tools.morphs.morphs_files import morphs_from
 
 def morphs_from_all(files):
     raw_morphs = []
     for file in files:
-        raw_morphs += morphs_from(file)
+        raw_morphs += file_tool.get_morphs_from(file)
 
     return raw_morphs
 

@@ -5,160 +5,140 @@
         "type": "adj",
         "gloss": "high",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "agatha",
         "form-stem": "agath",
         "type": "adj",
         "gloss": "good",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "agonizesthai",
         "form-stem": "agonis",
         "type": "verb",
         "gloss": "struggle",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "algein",
         "form-stem": "alge",
         "type": "verb",
         "gloss": "[feel] pain",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "algos",
         "form-stem": "alg",
         "type": "noun",
         "gloss": "pain",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "arkhein",
         "form-stem": "arche",
         "type": "verb",
         "gloss": "rule",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "arthron",
         "form-stem": "arthr",
         "type": "noun",
         "gloss": "joint",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "asthanesthai",
         "form-stem": "aesthe",
         "type": "verb",
         "gloss": "perceive",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "aleuron",
         "form-stem": "aleur",
         "type": "noun",
         "gloss": "flour",
         "tags": ["mass", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "aner",
         "form-stem": "andr",
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "angelos",
         "form-stem": "angel",
         "type": "noun",
         "gloss": "angel",
         "tags": ["count", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "arista",
         "form-stem": "arist",
         "type": "adj",
         "gloss": "best",
         "tags": ["superlative", "character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "arithmos",
         "form-stem": "arithm",
         "type": "noun",
         "gloss": "number",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "arktos",
         "form-stem": "arct",
         "type": "noun",
         "gloss": "bear",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "athlein",
         "form-stem": "athle",
         "type": "verb",
         "gloss": "compete",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "athlon",
         "form-stem": "athl",
         "type": "noun",
         "gloss": "contest",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "atmos",
         "form-stem": "atm",
         "type": "noun",
         "gloss": "vapor",
         "tags": ["mass", "concrete", "fluid", "gas"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "astros",
         "form-stem": "astr",
         "type": "noun",
         "gloss": "star",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "anthropos",
         "form-stem": "anthrop",
         "type": "noun",
         "gloss": "human",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "arachne",
         "form-stem": "arachn",
         "type": "noun",
         "gloss": "spider",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "autos",
         "form-stem": "aut",
         "type": "noun",
@@ -173,16 +153,14 @@
         }],
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "bainein",
         "form-stem": "ba",
         "type": "verb",
         "gloss": "go",
         "tags": ["intransitive", "motion", "always-prep"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ballein",
         "form-stem": "balle",
         "type": "verb",
@@ -190,263 +168,230 @@
         "gloss-relative": "throw",
         "tags": ["transitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ballizein",
         "form-stem": "ballis",
         "type": "verb",
         "gloss": "throw",
         "tags": ["transitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "biblion",
         "form-stem": "bibli",
         "type": "noun",
         "gloss": "book",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "bios",
         "form-stem": "bi",
         "type": "noun",
         "gloss": "life",
         "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "botane",
         "form-stem": "botan",
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "bryon",
         "form-stem": "bry",
         "type": "noun",
         "gloss": "moss",
         "tags": ["mass", "concrete", "living", "plant"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "calla",
         "form-stem": "calli",
         "type": "adj",
         "gloss": "beautiful",
         "tags": ["character", "no-tail-joiner"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cardia",
         "form-stem": "cardi",
         "type": "noun",
         "gloss": "heart",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cephale",
         "form-stem": "cephal",
         "type": "noun",
         "gloss": "head",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "keros",
         "form-stem": "cer",
         "type": "noun",
         "gloss": "wax",
         "tags": ["mass", "concrete", "material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cetos",
         "form-stem": "cet",
         "type": "noun",
         "gloss": "whale",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "chartes",
         "form-stem": "chart",
         "type": "noun",
         "gloss": "paper",
         "tags": ["mass", "concrete", "material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cheir",
         "form-stem": "chir",
         "type": "noun",
         "gloss": "hand",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "chroma",
         "form-stem": ["chrom", "chromat"],
         "type": "noun",
         "gloss": "color",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "chronos",
         "form-stem": "chron",
         "type": "noun",
         "gloss": "time",
         "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "clasta",
         "form-stem": "clast",
         "type": "adj",
         "gloss": "broken",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "copros",
         "form-stem": "copr",
         "type": "noun",
         "gloss": "feces",
         "tags": ["mass", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cosmos",
         "form-stem": "cosm",
         "type": "noun",
         "gloss": "universe",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cranion",
         "form-stem": "crani",
         "type": "noun",
         "gloss": "skull",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "crya-adj",
         "form-stem": "cry",
         "type": "adj",
         "gloss": "cold",
         "tags": ["material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "crya-noun",
         "form-stem": "cry",
         "type": "noun",
         "gloss": "cold",
         "tags": ["singleton", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "crystallos",
         "form-stem": "crystall",
         "type": "noun",
         "gloss": "crystal",
         "tags": ["count", "concrete", "material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cthon",
         "form-stem": "cthon",
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "terrain"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "cynos",
         "form-stem": "cyn",
         "type": "noun",
         "gloss": "dog",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "dactylos",
         "form-stem": "dactyl",
         "type": "noun",
         "gloss": "finger",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "daemon",
         "form-stem": "daemon",
         "type": "noun",
         "gloss": "spirit",
         "tags": ["count", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "demos",
         "form-stem": "dem",
         "type": "noun",
         "gloss": "people",
         "tags": ["singleton", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "dendron",
         "form-stem": "dendr",
         "type": "noun",
         "gloss": "tree",
         "tags": ["count", "concrete", "living", "plant"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "derma",
         "form-stem": "dermat",
         "type": "noun",
         "gloss": "skin",
         "tags": ["mass", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "diabolos",
         "form-stem": "diabol",
         "type": "noun",
         "gloss": "devil",
         "tags": ["count", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "didaskein",
         "form-stem": "didac",
         "type": "verb",
         "gloss": "teach",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "dogma",
         "form-stem": "dogmat",
         "type": "noun",
         "gloss": "belief",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "dokein",
         "form-stem": "doc",
         "type": "verb",
         "gloss": "believe",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "dyein",
         "form-stem": "dy",
         "type": "verb",
@@ -454,183 +399,160 @@
         "gloss-relative": "put",
         "tags": ["transitive", "motion", "always-prep"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "dynasthai",
         "form-stem": "dynas",
         "type": "verb",
         "gloss": "[be] powerful",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "enigma",
         "form-stem": "enigmat",
         "type": "noun",
         "gloss": "riddle",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "entomos",
         "form-stem": "entom",
         "type": "noun",
         "gloss": "insect",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ephebe",
         "form-stem": "epheb",
         "type": "noun",
         "gloss": "youth",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "eremos",
         "form-stem": "erem",
         "type": "noun",
         "gloss": "[desert] or waste [land]",
         "tags": ["count", "concrete", "terrain"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ergon",
         "form-stem": "erg",
         "type": "noun",
         "gloss": "work",
         "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "eros",
         "form-stem": "erot",
         "type": "noun",
         "gloss": "sex",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "eschata",
         "form-stem": "eschat",
         "type": "adj",
         "gloss": "last",
         "tags": ["superlative"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ethos",
         "form-stem": "eth",
         "type": "noun",
         "gloss": "custom",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gala",
         "form-stem": "galact",
         "type": "noun",
         "gloss": "milk",
         "tags": ["mass", "concrete", "liquid", "fluid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gastros",
         "form-stem": "gastr",
         "type": "noun",
         "gloss": "stomach",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ge",
         "form-stem": "ge",
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "terrain"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gerontos",
         "form-stem": "geront",
         "type": "noun",
         "gloss": "elder",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gigantos",
         "form-stem": "gigant",
         "type": "noun",
         "gloss": "giant",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gignesthai",
         "form-stem": "gene",
         "type": "verb",
         "gloss": "[be] born",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gignoskein",
         "form-stem": "gnos",
         "type": "verb",
         "gloss": "know",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "glossa",
         "form-stem": "gloss",
         "type": "noun",
         "gloss": "tongue",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gonos",
         "form-stem": "gon",
         "type": "noun",
         "gloss": "angle",
         "tags": ["count", "abstract", "shape"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gramma",
         "form-stem": "grammat",
         "type": "noun",
         "gloss": "writing",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "graphein",
         "form-stem": "graphe",
         "type": "verb",
         "gloss": "write",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gymna",
         "form-stem": "gymn",
         "type": "adj",
         "gloss": "naked",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gymnazein",
         "form-stem": "gymnas",
         "type": "verb",
         "gloss": "train",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "gyne",
         "form-stem": "gynec",
         "type": "noun",
@@ -638,238 +560,208 @@
         "tags": ["count", "concrete", "living"],
         "origin": "greek",
         "notes": "gyn- in modern coinages only"
-    },
-    {
+    }, {
         "key": "iatros",
         "form-stem": "iatr",
         "type": "noun",
         "gloss": "doctor",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "iconos",
         "form-stem": "icon",
         "type": "noun",
         "gloss": "image",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "istanai",
         "form-stem": "sta",
         "type": "verb",
         "gloss": "place",
         "tags": ["transitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "haema",
         "form-stem": "hem",
         "type": "noun",
         "gloss": "blood",
         "tags": ["mass", "concrete", "liquid", "fluid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hagia-adj",
         "form-stem": "hagi",
         "type": "adj",
         "gloss": "holy",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hagia-saint",
         "form-stem": "hagi",
         "type": "noun",
         "gloss": "saint",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hals",
         "form-stem": "hal",
         "type": "noun",
         "gloss": "salt",
         "tags": ["mass", "concrete", "material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hedone",
         "form-stem": "hedon",
         "type": "noun",
         "gloss": "pleasure",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hedron",
         "form-stem": "hedr",
         "type": "noun",
         "gloss": "face",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "helios",
         "form-stem": "heli",
         "type": "noun",
         "gloss": "sun",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "helios-singleton",
         "form-stem": "heli",
         "type": "noun",
         "gloss": "sun",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "heros",
         "form-stem": "hero",
         "type": "noun",
         "gloss": "hero",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hexis",
         "form-stem": "hect",
         "type": "noun",
         "gloss": "habit",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hiera",
         "form-stem": "hier",
         "type": "adj",
         "gloss": "sacred",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hippos",
         "form-stem": "hipp",
         "type": "noun",
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hora",
         "form-stem": "hor",
         "type": "noun",
         "gloss": "hour",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hyalos",
         "form-stem": "hyal",
         "type": "noun",
         "gloss": "glass",
         "tags": ["mass", "concrete", "material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hydor",
         "form-stem": "hydr",
         "type": "noun",
         "gloss": "water",
         "tags": ["mass", "concrete", "liquid", "fluid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hygeine",
         "form-stem": "hygien",
         "type": "noun",
         "gloss": "health",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hypnos",
         "form-stem": "hypn",
         "type": "noun",
         "gloss": "sleep",
         "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ichthys",
         "form-stem": "ichthy",
         "type": "noun",
         "gloss": "fish",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "idia",
         "form-stem": "idi",
         "type": "adj",
         "gloss": "one's own",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "kaka",
         "form-stem": "cac",
         "type": "adj",
         "gloss": "bad",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "kakista",
         "form-stem": "kakist",
         "type": "adj",
         "gloss": "worst",
         "tags": ["superlative", "character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "klinein",
         "form-stem": "cli",
         "type": "verb",
         "gloss": "lean",
         "tags": ["intransitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "krata",
         "form-stem": "crat",
         "type": "adj",
         "gloss": "strong",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "kratos",
         "form-stem": "crat",
         "type": "noun",
         "gloss": "strength",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "krinein",
         "form-stem": "cri",
         "type": "verb",
         "gloss": "judge",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "krypta",
         "form-stem": "crypt",
         "type": "adj",
         "gloss": "hidden",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "analegein",
         "form-stem": "analec",
         "type": "verb",
@@ -877,383 +769,335 @@
         "gloss-relative": "gather",
         "tags": ["transitive", "no-prep"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "eklegein",
         "form-stem": "eclec",
         "type": "verb",
         "gloss": "select",
         "tags": ["transitive", "no-prep"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "lexis",
         "form-stem": "lex",
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "lithos",
         "form-stem": "lith",
         "type": "noun",
         "gloss": "stone",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "logos",
         "form-stem": "log",
         "type": "noun",
         "gloss": "word",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "lyein",
         "form-stem": "ly",
         "type": "verb",
         "gloss": "loosen",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "makra",
         "form-stem": "macr",
         "type": "adj",
         "gloss": "large",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mantanein",
         "form-stem": "math",
         "type": "noun",
         "gloss": "learning",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mastos",
         "form-stem": "mast",
         "type": "noun",
         "gloss": "breast",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mathein",
         "form-stem": "mathe",
         "type": "verb",
         "gloss": "learn",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mechane",
         "form-stem": "mechan",
         "type": "noun",
         "gloss": "machine",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mega",
         "form-stem": ["megal", "megal", "meg"],
         "type": "adj",
         "gloss": "large",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "melissa",
         "form-stem": "meliss",
         "type": "noun",
         "gloss": "bee",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "melos",
         "form-stem": "mel",
         "type": "noun",
         "gloss": "song",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "meteora",
         "form-stem": "meteor",
         "type": "noun",
         "gloss": "celestial [phenomenon]",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "metron",
         "form-stem": "metr",
         "type": "noun",
         "gloss": "measure",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "meter",
         "form-stem": "metr",
         "type": "noun",
         "gloss": "mother",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mainein",
         "form-stem": "mias",
         "type": "verb",
         "gloss": "stain",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mikra",
         "form-stem": "micr",
         "type": "adj",
         "gloss": "small",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mimesthai",
         "form-stem": "mime",
         "type": "verb",
         "gloss": "imitate",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mnasthai",
         "form-stem": "mne",
         "type": "verb",
         "gloss": "remember",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "molybdos",
         "form-stem": "molybd",
         "type": "noun",
         "gloss": "lead",
         "tags": ["mass", "concrete", "material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "monazein",
         "form-stem": "monas",
         "type": "verb",
         "gloss": "[live] alone",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "morphe",
         "form-stem": "morph",
         "type": "noun",
         "gloss": "form",
         "tags": ["count", "abstract", "shape"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mycos",
         "form-stem": "myc",
         "type": "noun",
         "gloss": "fungus",
         "tags": ["mass", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "mythos",
         "form-stem": "myth",
         "type": "noun",
         "gloss": "story",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "necros",
         "form-stem": "necr",
         "type": "noun",
         "gloss": "dead",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "nea",
         "form-stem": "ne",
         "type": "adj",
         "gloss": "new",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "neuron",
         "form-stem": "neur",
         "type": "noun",
         "gloss": "nerve",
         "tags": ["count", "concrete", "living", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "noein",
         "form-stem": "noe",
         "type": "verb",
         "gloss": "understand",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "nomos",
         "form-stem": "nom",
         "type": "noun",
         "gloss": "law",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "nous",
         "form-stem": "noo",
         "type": "noun",
         "gloss": "mind",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "nyx",
         "form-stem": "nyct",
         "type": "noun",
         "gloss": "night",
         "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ode",
         "form-stem": "od",
         "type": "noun",
         "gloss": "song",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "odons",
         "form-stem": "odont",
         "type": "noun",
         "gloss": "tooth",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "oneiros",
         "form-stem": "oneir",
         "type": "noun",
         "gloss": "dream",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "onoma",
         "form-stem": ["onom", "onomat"],
         "type": "noun",
         "gloss": "name",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "orgiazein",
         "form-stem": "orgias",
         "type": "verb",
         "gloss": "[celebrate] orgies",
         "tags": ["intransitive", "rare"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ortha",
         "form-stem": "orth",
         "type": "adj",
         "gloss": "straight",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pais",
         "form-stem": "ped",
         "type": "noun",
         "gloss": "child",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "palea",
         "form-stem": "pale",
         "type": "adj",
         "gloss": "old",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "paskhein",
         "form-stem": "pathe",
         "type": "verb",
         "gloss": "feel",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "passein",
         "form-stem": "pas",
         "type": "verb",
         "gloss": "sprinkle",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pater/greek",
         "form-stem": "patr",
         "type": "noun",
         "gloss": "father",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pathos",
         "form-stem": "path",
         "type": "noun",
         "gloss": "disease",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pegnunai",
         "form-stem": "pec",
         "type": "verb",
         "gloss": "[make] solid",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "peripatein",
         "form-stem": "peripate",
         "type": "verb",
         "gloss": "[walk] about",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phallos",
         "form-stem": "phall",
         "type": "noun",
         "gloss": "penis",
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phanai",
         "form-stem": "pha",
         "type": "verb",
@@ -1261,168 +1105,147 @@
         "tags": ["transitive"],
         "origin": "greek",
         "notes": "consider 'phe' as alternate form, as in 'pheme'"
-    },
-    {
+    }, {
         "key": "phainein",
         "form-stem": "pha",
         "type": "verb",
         "gloss": "show",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phantazein",
         "form-stem": "phantas",
         "type": "verb",
         "gloss": "imagine",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pharmakon",
         "form-stem": "pharmac",
         "type": "noun",
         "gloss": "medicine",
         "tags": ["mass", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pheme",
         "form-stem": "phem",
         "type": "noun",
         "gloss": "voice",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pherein",
         "form-stem": "phore",
         "type": "verb",
         "gloss": "carry",
         "tags": ["transitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "philia",
         "form-stem": "phil",
         "type": "noun",
         "gloss": "love",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phonein",
         "form-stem": "phone",
         "type": "verb",
         "gloss": "speak",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phonos",
         "form-stem": "phon",
         "type": "noun",
         "gloss": "sound",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "photos",
         "form-stem": "phot",
         "type": "noun",
         "gloss": "light",
         "tags": ["mass", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phrazein",
         "form-stem": "phra",
         "type": "verb",
         "gloss": "tell",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phren",
         "form-stem": "phren",
         "type": "noun",
         "gloss": "mind",
         "tags": ["count", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phrontizein",
         "form-stem": "phrontis",
         "type": "verb",
         "gloss": "[think] deeply",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "phyton",
         "form-stem": "phyt",
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living", "plant"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "planan",
         "form-stem": "plane",
         "type": "verb",
         "gloss": "wander",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "plastein",
         "form-stem": "plaste",
         "type": "verb",
         "gloss": "[shape] or [form]",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "plutos",
         "form-stem": "plut",
         "type": "noun",
         "gloss": "wealth",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pneuma",
         "form-stem": "pneum",
         "type": "noun",
         "gloss": "air",
         "tags": ["mass", "concrete", "gas", "fluid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "poein",
         "form-stem": "poe",
         "type": "verb",
         "gloss": "create",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "polemos",
         "form-stem": "polem",
         "type": "noun",
         "gloss": "war",
         "tags": ["mass", "abstract", "bounded"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "polemizein",
         "form-stem": "polemis",
         "type": "verb",
         "gloss": "[wage] war",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "polis",
         "form-stem": "pol",
         "type": "noun",
@@ -1437,8 +1260,7 @@
         }],
         "tags": ["count", "concrete", "terrain"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "poly",
         "form-stem": "poly",
         "type": "adj",
@@ -1452,335 +1274,293 @@
             "form-stem": "poly/"
         }],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "potamos",
         "form-stem": "potam",
         "type": "noun",
         "gloss": "river",
         "tags": ["count", "concrete", "terrain", "fluid", "liquid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pous",
         "form-stem": "pod",
         "type": "noun",
         "gloss": "foot",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "prattein",
         "form-stem": "prac",
         "type": "verb",
         "gloss": "do",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pseuda",
         "form-stem": "pseud",
         "type": "adj",
         "gloss": "false",
         "tags": ["character"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "psyche",
         "form-stem": "psych",
         "type": "noun",
         "gloss": "mind",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pteron",
         "form-stem": "pter",
         "type": "noun",
         "gloss": "wing",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "pyr",
         "form-stem": "pyr",
         "type": "noun",
         "gloss": "fire",
         "tags": ["mass", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "oliga",
         "form-stem": "olig",
         "type": "adj",
         "gloss": "few",
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ophis",
         "form-stem": "ophi",
         "type": "noun",
         "gloss": "snake",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ops",
         "form-stem": "opt",
         "type": "noun",
         "gloss": "eye",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ornis",
         "form-stem": "ornith",
         "type": "noun",
         "gloss": "bird",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "osteon",
         "form-stem": "oste",
         "type": "noun",
         "gloss": "bone",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ouranos",
         "form-stem": "uran",
         "type": "noun",
         "gloss": "sky",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "rhodon",
         "form-stem": "rhod",
         "type": "noun",
         "gloss": "rose",
         "tags": ["count", "concrete", "living", "plant"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "sapra",
         "form-stem": "sapr",
         "type": "adj",
         "gloss": "putrid",
         "tags": ["material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "sarx",
         "form-stem": "sarc",
         "type": "noun",
         "gloss": "flesh",
         "tags": ["mass", "concrete", "bodypart"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "schema",
         "form-stem": "schemat",
         "type": "noun",
         "gloss": "[form] or [appearance]",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "schizein",
         "form-stem": "schis",
         "type": "verb",
         "gloss": "split",
         "tags": ["transitive", "dividing"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "selene",
         "form-stem": "selen",
         "type": "noun",
         "gloss": "moon",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "selene-singleton",
         "form-stem": "selen",
         "type": "noun",
         "gloss": "moon",
         "tags": ["singleton", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "sema",
         "form-stem": "sem",
         "type": "noun",
         "gloss": "sign",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "semainein",
         "form-stem": "seman",
         "type": "verb",
         "gloss": "signify",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "sepein",
         "form-stem": "sep",
         "type": "verb",
         "gloss": "rot",
         "tags": ["intransitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "soma",
         "form-stem": "somat",
         "type": "noun",
         "gloss": "body",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "soteria",
         "form-stem": "soteri",
         "type": "noun",
         "gloss": "salvation",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "spelaion",
         "form-stem": "spele",
         "type": "noun",
         "gloss": "cave",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "strophein",
         "form-stem": "strophe",
         "type": "verb",
         "gloss": "turn",
         "tags": ["intransitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "stylos",
         "form-stem": "styl",
         "type": "noun",
         "gloss": "column",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tachya",
         "form-stem": "tachy",
         "type": "adj",
         "gloss": "fast",
         "tags": ["character", "no-tail-joiner"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tarassein",
         "form-stem": "tarac",
         "type": "verb",
         "gloss": "disturb",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tassein",
         "form-stem": "tac",
         "type": "verb",
         "gloss": "arrange",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "techne",
         "form-stem": "techn",
         "type": "noun",
         "gloss": "skill",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "teleoun",
         "form-stem": "teleio",
         "type": "verb",
         "gloss": "complete",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "telos",
         "form-stem": "tel",
         "type": "noun",
         "gloss": "purpose",
         "tags": ["count", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "thalassos",
         "form-stem": "thalass",
         "type": "noun",
         "gloss": "sea",
         "tags": ["singleton", "concrete", "terrain", "fluid", "liquid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "thanatos",
         "form-stem": "thanat",
         "type": "noun",
         "gloss": "death",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "theasthai",
         "form-stem": "thea",
         "type": "verb",
         "gloss": "view",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "theorein",
         "form-stem": "theor",
         "type": "verb",
         "gloss": "contemplate",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "theos",
         "form-stem": "the",
         "type": "noun",
         "gloss": "god",
         "tags": ["count", "concrete", "living"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "therma-adj",
         "form-stem": "therm",
         "type": "adj",
         "gloss": "hot",
         "tags": ["material"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "therma-noun",
         "form-stem": "therm",
         "type": "noun",
         "gloss": "heat",
         "tags": ["mass", "abstract"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tithenai",
         "form-stem": "the",
         "type": "verb",
@@ -1788,64 +1568,56 @@
         "gloss-relative": "put",
         "tags": ["transitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "topos",
         "form-stem": "top",
         "type": "noun",
         "gloss": "place",
         "tags": ["count", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "toxon/arrow",
         "form-stem": "tox",
         "type": "noun",
         "gloss": "arrow",
         "tags": ["count", "concrete", "tool", "weapon"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "toxon/poison",
         "form-stem": "tox",
         "type": "noun",
         "gloss": "poison",
         "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "trepein",
         "form-stem": "trep",
         "type": "verb",
         "gloss": "turn",
         "tags": ["transitive", "motion"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "trophe",
         "form-stem": "troph",
         "type": "noun",
         "gloss": "nourishment",
         "tags": ["mass", "concrete"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "trophein",
         "form-stem": "trophe",
         "type": "verb",
         "gloss": "nourish",
         "tags": ["transitive"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "zoon",
         "form-stem": "zoo",
         "type": "noun",
         "gloss": "animal",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "greek"
-    },
-        {
+    }, {
         "key": "mono",
         "form-stem": "mon",
         "type": "noun",
@@ -1853,8 +1625,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "di",
         "form-stem": "di",
         "type": "noun",
@@ -1862,8 +1633,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tri-greek",
         "form-stem": "tri",
         "type": "noun",
@@ -1871,8 +1641,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "tetra",
         "form-stem": "tetr",
         "form-joiner": "a",
@@ -1881,8 +1650,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "penta",
         "form-stem": "pent",
         "form-joiner": "a",
@@ -1891,8 +1659,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hexa",
         "form-stem": "hex",
         "form-joiner": "a",
@@ -1901,8 +1668,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hepta",
         "form-stem": "hept",
         "form-joiner": "a",
@@ -1911,8 +1677,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "octo",
         "form-stem": "oct",
         "type": "noun",
@@ -1920,8 +1685,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "ennea",
         "form-stem": "ennea",
         "type": "noun",
@@ -1929,8 +1693,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "deca",
         "form-stem": "dec",
         "form-joiner": "a",
@@ -1939,8 +1702,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "hecato",
         "form-stem": "hecat",
         "type": "noun",
@@ -1948,8 +1710,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "chili",
         "form-stem": "chili",
         "type": "noun",
@@ -1957,8 +1718,7 @@
         "suffixes": ["-ad", "-arch-"],
         "tags": ["uncountable", "abstract", "number"],
         "origin": "greek"
-    },
-    {
+    }, {
         "key": "myria",
         "form-stem": "myri",
         "form-joiner": "a",

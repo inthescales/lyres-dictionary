@@ -1,7 +1,8 @@
+import getopt
 import json
 import sys
 
-from morphs_files import morphs_from
+import morphs_files as file_tool
 
 indent_spaces = 4
 
@@ -156,12 +157,30 @@ def should_format(element, key, tag_stack):
 
 # Prints the sorted and formatted contents of a single specified file
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
+    try:
+        opts, params = getopt.getopt(sys.argv[1:], "r", ["replace"])
+    except getopt.GetoptError:
+        print('getopt error')
+        sys.exit(2)
+
+    replace = False
+    file = None
+
+    # Process args
+    for opt, arg in opts:
+        if opt in ["-r", "--replace"]:
+            replace = True
+
+    if len(params) == 1:
+        file = params[0]
+    else:
         print("ERROR: morph format must take one file argument")
         sys.exit(0)
 
-    file = sys.argv[1]
-    morphs = morphs_from(file)
+    morphs = file_tool.get_morphs_from(file)
     formatted = format(morphs)
 
-    print(formatted)
+    if replace:
+        file_tool.write_formatted_to(formatted, file)
+    else:
+        print(formatted)
