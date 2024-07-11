@@ -70,6 +70,10 @@ def override_inflection(string, mode):
         if mode == "pl":
             return "omens"
 
+    elif string == "ox":
+        if mode == "pl":
+            return "oxen"
+
     elif string == "people":
         if mode == "pl":
             return "peoples"

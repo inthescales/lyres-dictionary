@@ -2,6 +2,7 @@ import getopt
 import json
 import sys
 
+import alphabetical
 import morphs_files as file_tool
 
 indent_spaces = 4
@@ -10,7 +11,7 @@ def spaces(depth):
     return " " * depth * indent_spaces
 
 def sort(morphs):
-    return sorted(morphs, key=lambda m: m["key"])
+    return alphabetical.key_sorted(morphs)
 
 def format(obj, indent=0, tag_stack=[]):
     formatted = ""

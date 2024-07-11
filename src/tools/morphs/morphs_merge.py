@@ -1,7 +1,7 @@
 import sys
 
-import src.tools.morphs.morphs_files as file_tool
-import src.tools.morphs.morphs_format as format
+import morphs_files as file_tool
+import morphs_format as format
 
 def morphs_from_all(files):
     raw_morphs = []
