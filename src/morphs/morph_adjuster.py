@@ -14,6 +14,8 @@ def adjust_morph(morph):
 
             # For now, I don't actually want to see these
             # TODO: Try again when we have more morphs to balance these out
+            # NOTE: These are in the ignore directory now. Remembering to move them out
+            # if you want to try using them again.
             return None
 
             # if "tags" in morph:

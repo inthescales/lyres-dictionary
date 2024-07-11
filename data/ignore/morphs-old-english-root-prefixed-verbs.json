@@ -1,0 +1,335 @@
+[
+    {
+        "key": "ā-belgan",
+        "form-raw": "ā-belg|an",
+        "type": "verb",
+        "gloss": ["bellow", "[swell] with anger"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-bīdan",
+        "form-raw": "ā-bīd|an",
+        "form-canon": "abide",
+        "type": "verb",
+        "gloss": "wait",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-blinnan",
+        "form-raw": "ā-blinn|an",
+        "type": "verb",
+        "gloss": "[cease] or [abate]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-brecan",
+        "form-raw": "ā-brec|an",
+        "type": "verb",
+        "gloss": "[take] by storm, [capture]",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-breġdan",
+        "form-raw": "ā-breġd|an",
+        "form-canon": "braid",
+        "type": "verb",
+        "gloss": "braid",
+        "gloss-alt": ["[move] back and forth", "[draw] a weapon", "drag", "bend"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-brēoþan",
+        "form-raw": "ā-brēoþ|an",
+        "type": "verb",
+        "gloss": ["[decay] or [waste] away", "[fail], [come] to naught"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-bysiġan",
+        "form-raw": "ā-bysiġ|an",
+        "form-raw-alt": ["ā-bisgi|an"],
+        "type": "verb",
+        "gloss": "[occupy] or [engage]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cēgan",
+        "form-raw": "ā-cēg|an",
+        "type": "verb",
+        "gloss": ["call", "[call] upon, [invoke]"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cennan",
+        "form-raw": "ā-cenn|an",
+        "type": "verb",
+        "gloss": "[bear] a child or [beget]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cweċċan",
+        "form-raw": "ā-cweċċ|an",
+        "type": "verb",
+        "gloss": ["[shake], [swing], or [vibrate]", "[brandish] a weapon"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cwellan",
+        "form-raw": "ā-cwell|an",
+        "type": "verb",
+        "gloss": "[kill] or [destroy]",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cwenċan",
+        "form-raw": "ā-cwenċ|an",
+        "type": "verb",
+        "gloss": "extinguish",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cweþan",
+        "form-raw": "ā-cweþ|an",
+        "type": "verb",
+        "gloss": ["[speak], [utter]", "[renounce] or [banish]", "[reply], [answer]"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-cȳþan",
+        "form-raw": "ā-cȳþ|an",
+        "type": "verb",
+        "gloss": "[announce], [make] known",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-dilegian",
+        "form-raw": "ā-dileg|an",
+        "form-raw-alt": ["ā-diligi|an"],
+        "type": "verb",
+        "gloss": "[blot] out or [destroy]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-drenċan",
+        "form-raw": "ā-drenċ|an",
+        "type": "verb",
+        "gloss": "drown",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-dreogan",
+        "form-raw": "ā-dreog|an",
+        "type": "verb",
+        "gloss": ["[spend] or [pass] time", "practice"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-drīfan",
+        "form-raw": "ā-drīf|an",
+        "form-raw-alt": ["ādrǣf|an"],
+        "type": "verb",
+        "gloss": "[drive] out, [expel]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-drincan",
+        "form-raw": "ā-drinc|an",
+        "type": "verb",
+        "gloss": ["[be] drowned", "[sink] (of ships)"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-dwæsċan",
+        "form-raw": "ā-dwæsċ|an",
+        "type": "verb",
+        "gloss": "extinguish",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-faran",
+        "form-raw": "ā-far|an",
+        "type": "verb",
+        "gloss": "depart",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-gyltan",
+        "form-raw": "ā-gylt|an",
+        "type": "verb",
+        "gloss": "[commit] (as a sin)",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-hēawan",
+        "form-raw": "ā-hēaw|an",
+        "type": "verb",
+        "gloss": "[cut] down",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-hebban",
+        "form-raw": "ā-hebb|an",
+        "type": "verb",
+        "gloss": "[lift] up",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-hrēosan",
+        "form-raw": "ā-hrēos|an",
+        "type": "verb",
+        "gloss": "[fall] down, [collapse]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-hwǣtan",
+        "form-raw": "ā-hwǣt|an",
+        "type": "verb",
+        "gloss": "[expel] or [banish]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-lǣdan",
+        "form-raw": "ā-lǣd|an",
+        "type": "verb",
+        "gloss": "lead",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-leċġan",
+        "form-raw": "ā-leċġ|an",
+        "form-canon": "lay",
+        "type": "verb",
+        "gloss": "[put] down",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-lēogan",
+        "form-raw": "ā-lēog|an",
+        "type": "verb",
+        "gloss": "deny",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-lȳfan",
+        "form-raw": "ā-lȳf|an",
+        "type": "verb",
+        "gloss": "permit",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, { 
+        "key": "ā-merran",
+        "form-raw": "ā-merr|an",
+        "type": "verb",
+        "gloss": ["hinder", "disturb"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-myrran",
+        "form-raw": "ā-myrr|an",
+        "type": "verb",
+        "gloss": ["wound", "maim", "hinder"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-feallan",
+        "form-raw": "ā-feall|an",
+        "type": "verb",
+        "gloss": "collapse",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-fēdan",
+        "form-raw": "ā-fēd|an",
+        "type": "verb",
+        "gloss": "[sustain], [support]",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-flīeman",
+        "form-raw": "ā-flīem|an",
+        "form-raw-alt": "ā-flȳm|an",
+        "type": "verb",
+        "gloss": ["[put] to flight", "banish"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-flīgan",
+        "form-raw": "ā-flīg|an",
+        "type": "verb",
+        "gloss": ["[drive] out", "[put] to flight"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-fyrhtan",
+        "form-raw": "ā-fyrht|an",
+        "type": "verb",
+        "gloss": "frighten",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-fyrran",
+        "form-raw": "ā-fyrr|an",
+        "type": "verb",
+        "gloss": "[remove], [take] away",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-fyrsan",
+        "form-raw": "ā-fyrs|an",
+        "type": "verb",
+        "gloss": "[remove], [withdraw]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-fȳsan",
+        "form-raw": "ā-fȳs|an",
+        "type": "verb",
+        "gloss": "[drive] forward",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-ġeotan",
+        "form-raw": "ā-ġeot|an",
+        "type": "verb",
+        "gloss": ["[pour] out", "drain"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-ġetan",
+        "form-raw": "ā-ġet|an",
+        "type": "verb",
+        "gloss": "[kill] or [destroy]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ā-ġiefan",
+        "form-raw": "ā-ġief|an",
+        "type": "verb",
+        "gloss": "deliver",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġe-dreogan",
+        "form-raw": "ġe-dreog|an",
+        "type": "verb",
+        "gloss": ["[perform] a duty", "[suffer] or [undergo]"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġe-wyrcan",
+        "form-raw": "ġe-wyrc|an",
+        "form-canon": "work",
+        "type": "verb",
+        "gloss": "work",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'make' (transitive)"
+    }, {
+        "key": "ġe-ǣrnan",
+        "form-raw": "ġe-ǣrn|an",
+        "type": "verb",
+        "gloss": "[reach] by galloping",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }
+]
