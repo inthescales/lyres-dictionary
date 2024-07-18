@@ -33,6 +33,10 @@ failures = []
 # These tests stand as a record of what I was able to accomplish, and a reminder of the difficulties I encountered.
 # Maybe it will be possible to do something here in the future.
 
+# The second block of tests is now disabled as I've removed i-mutation handling from the evolution/generation code.
+# To make it work again, add an environment (if I haven't added one yet) to the evolution code, and invoke the code
+# in the i-mutation file as part of the generation process.
+
 # ==============================================================
 
 class IMutationTests(unittest.TestCase):
@@ -41,8 +45,8 @@ class IMutationTests(unittest.TestCase):
         failures = []
         
         test_set = [
-            self._test_oe_i_mutation,
-            self._test_diachronic_i_mutation
+            self._test_oe_i_mutation# ,
+            # self._test_diachronic_i_mutation # DISABLED, see above
         ]
         
         for test in test_set:
@@ -87,7 +91,7 @@ class IMutationTests(unittest.TestCase):
         def check_mne(raw, target, suffix=None, overrides=[]):
             nonlocal total, failures
 
-            config = Config(verbose=False, locked=True, i_mutation=True, overrides=overrides)
+            config = Config(verbose=False, locked=True, overrides=overrides)
             form = evolutor.oe_form_to_ne_form(raw, config)
             if suffix != None:
                 form += suffix

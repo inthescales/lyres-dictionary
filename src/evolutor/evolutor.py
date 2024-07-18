@@ -25,8 +25,6 @@ def oe_form_to_ne_form(oe_form, config):
             form = prefix
         else:
             oe_phonemes = oe_read.to_phonemes(element_form)
-            if config.i_mutation:
-                oe_phonemes = oe_phonology.get_i_mutated(oe_phonemes, config)
             me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
             form = ne_orthography.from_me_phonemes(me_phonemes, config)
         
