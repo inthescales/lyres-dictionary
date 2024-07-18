@@ -31,9 +31,11 @@ def form(morph, env, config=Former_Config()):
         should_i_mutate = env.next and env.next.has_tag("i-mutating")
 
         if morph_dict["origin"] == "old-english":
+            # If canon-locked and not i-mutating, use canon form
             if "form-canon" in morph_dict and config.canon_lock and not should_i_mutate:
                 return morph_dict["form-canon"]
 
+            # Decide which form to use
             forms = []
             if type(morph_dict["form-raw"]) == list:
                 forms = morph_dict["form-raw"]

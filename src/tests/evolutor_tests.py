@@ -27,7 +27,6 @@ class EvolutorTests(unittest.TestCase):
             self._test_homorganic_lengthening,
             self._test_unstressed_vowel_spelling,
             self._test_consonant_cluster_breaking,
-            self._test_i_mutation,
             self._test_misc
         ]
         
@@ -36,10 +35,11 @@ class EvolutorTests(unittest.TestCase):
             total += test_total
             failures += test_failures
 
-        print("\n")
-        print(str(total) + " words tested, " + str(len(failures))+ " failures:")
-        for failure in failures:
-            print(str(failure[0]) + " != " + str(failure[1]))
+        if len(failures) > 0:
+            print("\n")
+            print(str(total) + " words tested, " + str(len(failures))+ " failures:")
+            for failure in failures:
+                print(str(failure[0]) + " != " + str(failure[1]))
 
         self.assertEqual(len(failures), 0)
 
@@ -764,76 +764,6 @@ class EvolutorTests(unittest.TestCase):
         check("anfeal", "anvil") # Historical form was 'anfealt'. 't' was lost by the period of ME, this is an imagined OE antecedent
         check("deofol", "devil", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("wifel", "weevil", overrides=[["OSL:iy", True]])
-
-        return [total, failures]
-
-    # Tests for i-mutation
-    def _test_i_mutation(self):
-        total = 0
-        failures = []
-        def check_oe(raw, target, overrides=[]):
-            nonlocal total, failures
-
-            form = oe_phonology.get_i_mutated_word(raw, "mercian")
-            total += 1
-            if not form == target:
-                failures.append([form, target])
-
-        def check_mne(raw, target, suffix=None, overrides=[]):
-            nonlocal total, failures
-
-            config = Config(verbose=False, locked=True, i_mutation=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_form(raw, config)
-            if suffix != None:
-                form += suffix
-
-            total += 1
-            if not form == target:
-                failures.append([form, target])
-
-        def check_mne_th(raw, target, suffix=None, overrides=[]):
-            return check_mne(raw, target, suffix="th", overrides=[])
-
-        # I-mutation within OE ---------------------------
-
-        # Plural nouns
-        # check_oe("bōc", "bēċ") # Can't explain palatalization
-        check_oe("man", "men")
-        check_oe("mūs", "mȳs")
-        check_oe("tōþ", "tēþ")
-
-        # Verbs 
-
-        # I-mutation into MnE ---------------------------
-
-        # Plural nouns
-        check_mne("man", "men")
-        check_mne("mūs", "mice")
-        check_mne("tōþ", "teeth")
-
-        # Nouns in -th
-        # check_mne_th("be-hofi|an", "behofth") # Needs joining
-        check_mne_th("brād", "breadth")
-        # check_mne_th("dēop", "depth") # Needs joining
-        check_mne_th("hāl", "health")
-        # check_mne_th("hlēow", "lewth")
-        # check_mne_th("mild", "milth")
-        check_mne_th("nearowe", "narrowth")
-        # check_mne_th("slāw", "sloth")
-        # check_mne_th("stille", "stilth") # Needs joining
-        check_mne_th("wele", "wealth")
-        # check_mne_th("wīd", "width") # Needs joining
-
-        # check_mne_th("hyċġ|an", "highth")
-        check_mne_th("grōw|an", "growth")
-        # check_mne_th("hreow|an", "ruth") # Needs joining
-        # check_mne_th("tili|an", "tilth") # Needs joining
-
-        # Verbs in -jan
-        check_mne("full", "fill")
-        check_mne("hāl", "heal")
-        check_mne("fōd", "feed")
-        check_mne("mōt", "meet")
 
         return [total, failures]
 

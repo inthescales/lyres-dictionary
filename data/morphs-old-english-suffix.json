@@ -596,15 +596,16 @@
         "origin": "old-english"
     }, {
         "key": "-þ",
+        "form-final": "th",
         "form-stem": "th",
-        "form-raw": "th",
+        "form-raw": "þ",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "the quality of being %sg",
-        "tags": ["mass", "abstract", "i-mutating"],
+        "tags": ["mass", "abstract", "i-mutating", "no-gen"],
         "origin": "old-english",
-        "notes": "Continued to be used in ME period without i-mutation"
+        "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
     }
 ]

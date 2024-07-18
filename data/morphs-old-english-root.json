@@ -691,6 +691,13 @@
         "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "old-english"
     }, {
+        "key": "dēop",
+        "form-raw": "dēop",
+        "form-canon": "deep",
+        "type": "adj",
+        "gloss": "deep",
+        "origin": "old-english"
+    }, {
         "key": "dēman",
         "form-raw": "dēm|an",
         "form-canon": "deem",
