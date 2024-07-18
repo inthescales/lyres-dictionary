@@ -699,12 +699,14 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
-        "key": "dīere",
-        "form-raw": "dīere",
+        "key": "dēore",
+        "form-raw": "dēore",
+        "form-raw-alt": "dīere",
         "form-canon": "dear",
         "type": "adj",
         "gloss": "[valuable], [beloved]",
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Alternate form based on WS. Chosen form non-WS, as well as alternate within WS"
     }, {
         "key": "dilegian",
         "form-raw": "dileg|an",

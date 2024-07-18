@@ -47,7 +47,7 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["cwic", "-liċ"], "quickly")
         self.assertForm(["dēad", "-liċ"], "deadly")
         self.assertForm(["dēaþ", "-liċ"], "deathly")
-        self.assertForm(["dīere", "-liċ"], "dearly")
+        self.assertForm(["dēore", "-liċ"], "dearly")
         self.assertForm(["eorþe", "-liċ"], "earthly")
         # self.assertForm(["flǣsċ", "-liċ"], "fleshly") # Can't explain 'e' in 'flesh'
         self.assertForm(["frēo", "-liċ"], "freely")

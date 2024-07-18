@@ -1,3 +1,5 @@
+import src.evolutor.language.oe_read as oe_read
+import src.evolutor.language.oe_morphology as oe_morphology
 import src.evolutor.language.oe_phonology as oe_phonology
 import src.evolutor.language.me_phonology as me_phonology
 import src.evolutor.language.ne_orthography as ne_orthography
@@ -16,13 +18,15 @@ def oe_form_to_ne_form(oe_form, config):
     modern_form = ""
 
     for element_form in elements:
-        prefix = oe_phonology.get_prefix(element_form)
+        prefix = oe_morphology.get_prefix(element_form)
         if prefix != None:
             # Prefixes aren't subjected to the usual form evolution process, but have their own distinct forms
             # Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
             form = prefix
         else:
-            oe_phonemes = oe_phonology.from_oe_written(element_form)
+            oe_phonemes = oe_read.to_phonemes(element_form)
+            if config.i_mutation:
+                oe_phonemes = oe_phonology.get_i_mutated(oe_phonemes, config)
             me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
             form = ne_orthography.from_me_phonemes(me_phonemes, config)
         

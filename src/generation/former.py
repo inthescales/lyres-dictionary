@@ -28,8 +28,10 @@ def form(morph, env, config=Former_Config()):
     # Affixes always use canonical forms, if present
     if "form-raw" in morph_dict \
         and not ("form-stem" in morph_dict and morph.is_affix()):
+        should_i_mutate = env.next and env.next.has_tag("i-mutating")
+
         if morph_dict["origin"] == "old-english":
-            if "form-canon" in morph_dict and config.canon_lock:
+            if "form-canon" in morph_dict and config.canon_lock and not should_i_mutate:
                 return morph_dict["form-canon"]
 
             forms = []
@@ -45,8 +47,8 @@ def form(morph, env, config=Former_Config()):
                     forms += [morph_dict["form-raw-alt"]]
 
             def process(form):
-               config = Config(locked=True, seed=morph.seed)
-               return evolutor.oe_form_to_ne_form(form, config) 
+                config = Config(locked=True, i_mutation=should_i_mutate, seed=morph.seed)
+                return evolutor.oe_form_to_ne_form(form, config) 
             
             random = Random(morph.seed)
             raw_form = random.choice(forms)

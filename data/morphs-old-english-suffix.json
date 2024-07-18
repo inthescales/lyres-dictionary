@@ -594,5 +594,17 @@
             }
         ],
         "origin": "old-english"
+    }, {
+        "key": "-þ",
+        "form-stem": "th",
+        "form-raw": "th",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the quality of being %sg",
+        "tags": ["mass", "abstract", "i-mutating"],
+        "origin": "old-english",
+        "notes": "Continued to be used in ME period without i-mutation"
     }
 ]

@@ -1,4 +1,4 @@
-import src.evolutor.language.oe_phonology as oe_phonology
+import src.evolutor.language.oe_morphology as oe_morphology
 
 # Makes automatic adjustments to morphs while importing data
 def adjust_morph(morph):
@@ -9,7 +9,7 @@ def adjust_morph(morph):
         if morph["type"] == "verb" \
             and "form-raw" in morph \
             and "-" in morph["form-raw"] \
-            and any([oe_phonology.get_prefix(form) for form in morph["form-raw"].split("-")]) \
+            and any([oe_morphology.get_prefix(form) for form in morph["form-raw"].split("-")]) \
             and (not "tags" in morph or not "no-prep" in morph["tags"]):
 
             # For now, I don't actually want to see these

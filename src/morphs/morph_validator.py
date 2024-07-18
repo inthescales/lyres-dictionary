@@ -102,7 +102,8 @@ valid_tags = [
     "homophonic",               # Generation - the morphs processed form is a homophone (or nearly) with a common actual word
     "non-final",                # Generation - cannot be the final morph in the word
     "suffix-only",              # Generation - adding a suffix is the only valid transformation following this morph
-    "fixed-gloss"               # Generation - the gloss of this morph is fixed - no additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds
+    "fixed-gloss",              # Generation - the gloss of this morph is fixed - no additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds,
+    "i-mutating"                # OE morphophonology - causes i-mutation in the joined root
 ]
 
 def validate_morph(morph):

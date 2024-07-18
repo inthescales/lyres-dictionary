@@ -349,6 +349,8 @@ def from_oe_phonemes(oe_phonemes, config):
             # Cases like 'god-sibb' -> 'gossip', 'gōdspel' -> 'gospel'
             return [Phoneme("s", template=state.capture[0])]
 
+    # ===========================================================================================================
+
     if config.verbose:
         print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
