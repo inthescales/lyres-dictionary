@@ -213,9 +213,11 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional):
         # As above
         return Phoneme("yː", stressed, inflectional)
     elif graph == "io":
-        return Phoneme("io", stressed, inflectional)
+        # 'io' became 'eo' in later OE
+        return Phoneme("eo", stressed, inflectional)
     elif graph == "īo":
-        return Phoneme("iːo", stressed, inflectional)
+        # As above
+        return Phoneme("eːo", stressed, inflectional)
     elif graph == "k":
         return Phoneme("k", False, inflectional)
     elif graph == "kk":

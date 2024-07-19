@@ -54,15 +54,6 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
-        "key": "ǣnliċ",
-        "form-raw": "ængel",
-        "form-raw-alt": "engel",
-        "form-canon": "angel",
-        "type": "noun",
-        "gloss": "angel",
-        "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
-    }, {
         "key": "æppel",
         "form-raw": "æppel",
         "form-canon": "apple",
@@ -93,14 +84,6 @@
         "type": "verb",
         "gloss": "[negotiate] for",
         "tags": ["transitive"],
-        "origin": "old-english"
-    }, {
-        "key": "ǣrist",
-        "form-raw": "ǣrist",
-        "form-raw-alt": "ǣrest",
-        "type": "noun",
-        "gloss": "resurrection",
-        "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
         "key": "ǣrnan",
@@ -454,7 +437,8 @@
         "type": "verb",
         "gloss": "[occupy] or [engage]",
         "tags": ["transitive"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Bosworth has long vowels here"
     }, {
         "key": "ċeariġ",
         "form-raw": "ċeariġ",
@@ -717,7 +701,7 @@
     }, {
         "key": "dilegian",
         "form-raw": "dileg|an",
-        "form-raw-alt": ["diligi|an"],
+        "form-raw-alt": ["dilgi|an", "diligi|an"],
         "type": "verb",
         "gloss": "[blot] out or [destroy]",
         "tags": ["transitive", "speculative"],
@@ -828,16 +812,17 @@
         "origin": "old-english"
     }, {
         "key": "eald",
-        "form-raw": "eald",
-        "form-raw-alt": "ald",
+        "form-raw": "ald",
+        "form-raw-alt": "eald",
         "form-canon": "old",
         "type": "adj",
         "gloss": "old",
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian, alt. is WS"
     }, {
         "key": "earm",
-        "form-raw": "earm",
-        "form-raw-alt": "arm",
+        "form-raw": "arm",
+        "form-raw-alt": "earm",
         "form-canon": "arm",
         "type": "adj",
         "gloss": "poor",
@@ -1014,7 +999,7 @@
         "gloss-alt": "kill",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "'fiellan' accords with modern form. 'fællan' is Anglian"
+        "notes": "WS 'fiellan' accords best with modern form. 'fællan' is Anglian, 'fyllan' is LWS"
     }, {
         "key": "fisċ",
         "form-raw": "fisċ",
@@ -1149,7 +1134,7 @@
     }, {
         "key": "fyllan",
         "form-raw": "fyll|an",
-        "form-raw-alt": "fill|an",
+        "form-canon": "fill",
         "type": "verb",
         "gloss": "fill",
         "tags": ["transitive"],
@@ -1256,7 +1241,7 @@
     }, {
         "key": "ġield",
         "form-raw": "ġield",
-        "form-raw-alt": "ġeld",
+        "form-raw-alt": ["ġeld", "ġild", "ġyld"],
         "form-canon": "yield",
         "type": "noun",
         "gloss": "product",
@@ -1698,7 +1683,7 @@
     }, {
         "key": "lēof",
         "form-raw": "lēof",
-        "form-raw-alt": "leaf",
+        "form-raw-alt": ["leaf"],
         "form-canon": "lief",
         "type": "adj",
         "gloss": "dear",
@@ -1724,14 +1709,15 @@
         "origin": "old-english"
     }, {
         "key": "līefan",
-        "form-raw": "līef|an",
-        "form-raw-alt": ["lēf|an", "līf|an", "lȳf|an"],
+        "form-raw": "lēf|an",
+        "form-raw-alt": ["līef|an", "līf|an", "lȳf|an"],
         "form-canon": "leave",
         "type": "verb",
         "gloss": "allow",
         "gloss-alt": "trust",
         "tags": ["transitive"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "'lēfan' Anglian, 'līefan' is EWS, 'līfan' and 'lȳfan' LWS."
     }, {
         "key": "lind",
         "form-raw": "lind",
@@ -2357,8 +2343,8 @@
     }, {
         "key": "wiht",
         "form-raw": "wiht",
-        "form-raw-alt": ["wyht", "wuht", "uht"],
-        "form-canon": "burgh",
+        "form-raw-alt": ["wyht", "wuht"],
+        "form-canon": "wight",
         "type": "noun",
         "gloss": "living [being]",
         "tags": ["count", "concrete", "living"],
