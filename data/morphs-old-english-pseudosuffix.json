@@ -8,6 +8,11 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "having many %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["count", "mass"]
+            }
+        },
         "exception": [{
             "case": {
                 "follows": {

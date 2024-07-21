@@ -835,7 +835,8 @@
         "type": "verb",
         "gloss": ["[perform] a duty", "[suffer] or [undergo]"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Attested forms seem to have the form 'dree' or 'dry', while I get 'drue'. TODO: See if I can find out why"
     }, {
         "key": "drīfan",
         "form-raw": "drīf|an",
@@ -860,6 +861,13 @@
         "type": "verb",
         "gloss": ["live", "inhabit", "[conduct] onself"],
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "dryht",
+        "form-raw": "dryht",
+        "type": "verb",
+        "gloss": ["[army] or [troop]", "large [crowd]"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
         "key": "dugan",
@@ -918,6 +926,21 @@
         "gloss": "old",
         "origin": "old-english",
         "notes": "Chosen form is Anglian, alt. is WS"
+    }, {
+        "key": "earfoþe-adj",
+        "form-raw": "earfoþe",
+        "type": "adj",
+        "gloss": "difficult",
+        "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "earfoþe-noun",
+        "form-raw": "earfoþe",
+        "type": "noun",
+        "gloss": ["labor", "[hardship] or [suffering]"],
+        "gloss-alt": ["labor [pains]"],
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "earm",
         "form-raw": "arm",
@@ -1454,6 +1477,20 @@
         "type": "noun",
         "gloss": "gold",
         "tags": ["mass", "concrete", "metal", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "griþ-count",
+        "form-raw": "griþ",
+        "type": "noun",
+        "gloss": ["[guarantee] of safety", "[place] of safety"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "griþ-mass",
+        "form-raw": "griþ",
+        "type": "noun",
+        "gloss": ["protection", "mercy"],
+        "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "guma",
@@ -2281,6 +2318,15 @@
         "gloss-alt": ["establish", "promote"],
         "tags": ["intransitive"],
         "origin": "old-english"
+    }, {
+        "key": "regel",
+        "form-raw": ["regel", "reogol", "regl"],
+        "type": "noun",
+        "gloss": ["[code] of rules", "[code] of conduct"],
+        "gloss-alt": ["[rule] or [principle]"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english",
+        "notes": "Meaning as 'rule or principle' demoted to alternate for aesthetics"
     }, {
         "key": "rētan",
         "form-raw": "rēt|an",

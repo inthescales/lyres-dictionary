@@ -1,12 +1,5 @@
 [
     {
-        "key": "æl-fremed",
-        "form-raw": "æl-fremed",
-        "type": "adj",
-        "gloss": "exempt",
-        "tags": ["speculative"],
-        "origin": "old-english"
-    }, {
         "key": "ælf-sċīne",
         "form-raw": "ælf-sċīne",
         "type": "adj",
@@ -14,44 +7,31 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
-        "key": "ǣ-fast",
-        "form-raw": "ǣ-fast",
-        "type": "adj",
-        "gloss": "[religious], [pious]",
-        "tags": ["speculative"],
-        "origin": "old-english"
-    }, {
         "key": "ǣġ-wyrt",
         "form-raw": "ǣġ-wyrt",
-        "form-canon": "eggwort",
         "type": "noun",
         "gloss": "dandelion",
         "tags": ["count", "concrete", "living", "plant", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "ān-feald",
-        "form-raw": "ān-feald",
-        "type": "adj",
-        "gloss": "simple",
-        "tags": ["speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Consider pseudocanon form 'eggwort'"
     }, {
         "key": "candel-trēo",
         "form-raw": "candel-trēo",
         "form-canon": "candletree",
         "type": "noun",
-        "gloss": "candelabra",
+        "gloss": "candelabrum",
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "cwic-sylfur",
         "form-raw": "cwic-sylfur",
+        "form-raw-alt": ["cwic-seolfor"],
         "form-canon": "quicksilver",
         "type": "noun",
         "gloss": "mercury",
         "tags": ["mass", "concrete", "fluid", "liquid", "metal"],
         "origin": "old-english",
-        "notes": "Alternate form 'seolfor'"
+        "notes": "'sylfer' is Anglian form, 'seolfor' WS"
     },
     {
         "key": "middan-ġeard",
@@ -68,6 +48,22 @@
         "type": "noun",
         "gloss": "garlic",
         "tags": ["mass", "concrete", "living", "plant"],
+        "origin": "old-english"
+    },
+    {
+        "key": "reogol-sticca",
+        "form-raw": "reogol-sticca",
+        "type": "noun",
+        "gloss": "[ruler] or measuring [stick]",
+        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
+        "origin": "old-english"
+    },
+    {
+        "key": "tin-trega",
+        "form-raw": ["tin-trega", "tīn-trega"],
+        "type": "noun",
+        "gloss": "torture",
+        "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english"
     }
 ]
