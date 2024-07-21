@@ -1,5 +1,23 @@
 [
     {
+        "key": "be-",
+        "form-stem": "be",
+        "type": "prep",
+        "prefix-on": "verb",
+        "gloss": "thoroughly %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": {
+                        "has-tag": "motion"
+                    }
+                }
+            },
+            "gloss": "%@ all over"
+        }],
+        "origin": "old-english",
+        "notes": "TODO: use 'all over' for some transitive verbs as well, e.g. 'besmear'"
+    }, {
         "key": "for-",
         "form-stem": "for",
         "type": "prep",

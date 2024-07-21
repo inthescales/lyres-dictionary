@@ -171,6 +171,14 @@
         "suffixes": [],
         "gloss": "a place for %pl",
         "tags": ["uncountable", "mass"],
+        "requires": {
+            "follows": {
+                "or": [
+                    { "has-tag": "concrete" },
+                    { "has-type": "verb" }
+                ]
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -198,7 +206,7 @@
                         ]
                     }
                 },
-                "gloss": ["the practice or activity of %s", "acting as %sg"]
+                "gloss": ["the practices or activities of %sg", "acting as %sg"]
             }, {
                 "case": {
                     "follows": {
@@ -305,6 +313,11 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "like or resembling %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-kin",

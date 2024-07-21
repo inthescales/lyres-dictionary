@@ -54,6 +54,21 @@
         "gloss": "without %pl",
         "origin": "old-english"
     }, {
+        "key": "-man",
+        "form-stem": "man",
+        "form-raw": "man",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "one who fights with %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "weapon"
+            }
+        },
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
         "key": "-mangere",
         "form-stem": "monger",
         "form-raw": "mangere",
@@ -70,6 +85,21 @@
         "tags": ["count", "concrete", "living", "person", "rare"],
         "origin": "old-english",
         "notes": "TODO: allow for abstracts that represent mental states, with exception to gloss as 'one who provokes...', e.g. 'fearmonger', or events e.g. 'warmonger'"
+    }, {
+        "key": "-pleġe",
+        "form-stem": "play",
+        "form-raw": "pleġe",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "fighting with %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "weapon"
+            }
+        },
+        "tags": ["uncountable", "abstract"],
+        "origin": "old-english"
     }, {
         "key": "-smiþ",
         "form-stem": "smith",
@@ -100,7 +130,7 @@
                 "has-tag": "time"
             }
         },
-        "tags": ["count", "abstract", "bounded"],
+        "tags": ["uncountable", "abstract", "bounded"],
         "origin": "old-english"
     }, {
         "key": "-wis",
@@ -144,6 +174,20 @@
             }
         },
         "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-wurþ",
+        "form-stem": "worthy",
+        "form-raw": "wurþ",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "gloss": "worth %part",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
         "origin": "old-english"
     }
 ]

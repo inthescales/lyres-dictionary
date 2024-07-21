@@ -110,6 +110,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "ā-drædan",
+        "form-raw": "ā-dræd|an",
+        "type": "verb",
+        "gloss": "[be] afraid of",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Originally 'ondrædan', or 'and-rǣdan'"
+    }, {
         "key": "ā-drenċan",
         "form-raw": "ā-drenċ|an",
         "type": "verb",

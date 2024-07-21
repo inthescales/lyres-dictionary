@@ -74,6 +74,7 @@ def l_in_last_two(word):
     return False
 
 def indefinite_article_for(word):
+    word = word.replace("[", "").replace("]", "")
     if is_vowel(word[0]):
         return "an"
     else:

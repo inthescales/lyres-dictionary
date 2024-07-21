@@ -13,12 +13,12 @@ def generate_word(morphothec):
 
     if word.root_morph().has_tag("speculative"):
         bag = [
-            (0, 3) ,
+            (0, 4) ,
             (1, 1)
         ]
     elif word.root_morph().has_tag("obscure"):
         bag = [
-            (0, 2) ,
+            (0, 3) ,
             (1, 1)
         ]
     else:

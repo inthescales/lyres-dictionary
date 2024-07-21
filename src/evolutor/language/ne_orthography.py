@@ -86,7 +86,7 @@ def from_me_phonemes(phonemes, config):
                 choices = ["ue"]
                 if next1:
                     choices += ["u"]
-                if result[-1] != "c":
+                if len(result) == 0 or result[-1] != "c":
                     choices += ["ew"]
 
                 result += random.choice(choices)
@@ -138,7 +138,13 @@ def from_me_phonemes(phonemes, config):
                 result += "i"
             else:
                 result += "y"
-        elif phone.value == "iː" and next1 and next1.is_consonant() and next2 and next2.is_consonant():
+        elif phone.value == "iː" \
+            and next1 \
+            and ( \
+                (next1.is_consonant() and next2 and next2.is_consonant()) \
+                or next1.is_geminate() \
+                or next1.value in ["tʃ"]
+            ):
             # TODO: Handle the case of 'weird'
             result += "i"
         elif phone.value == "iː":
@@ -203,12 +209,20 @@ def from_me_phonemes(phonemes, config):
                     # 'bower', 'shower' vs 'our', 'sour'
                     choice = even("Orth:uːr->ou/owe", config)
                     result += choice
+                elif next1.value == "v" and not next2:
+                    # Avoid spellings like 'sċufan' -> 'shouve' — final /v/ compels lengthening 'e'
+                    result += "o"
+                    insert_lengthening_e = True
                 else:
                     result += "ou"
             else:
                 result += "ow"
         elif phone.value == "ə":
-            if not next2:
+            if next1.value == "x":
+                # Very few examples of this, but '-egh' feels wrong to me
+                # Also influenced by Crowley's handling of 'ambeht' -> 'ambight' I suppose
+                result += "i"
+            elif not next2:
                 if next1.value in ["m", "n", "w"] \
                     and prev and prev.value != "v" \
                     and not would_have_inserted_lengthening_e \

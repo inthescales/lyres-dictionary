@@ -186,7 +186,7 @@ def get_definition(word):
             inflected = inflection.inflect(definition, "sg")
 
             if morph.has_tag("count"):
-                return "a " +  inflected
+                return helpers.indefinite_article_for(inflected) + " " +  inflected
             elif morph.has_tag("mass") or morph.has_tag("uncountable"):
                 return inflected
             elif morph.has_tag("singleton"):

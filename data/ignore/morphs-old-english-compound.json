@@ -21,19 +21,19 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
-        "key": "ǣdre-quick",
-        "form-raw": "ǣdre",
-        "type": "adj",
-        "gloss": "[quick] or [instant]",
-        "tags": ["speculative"],
-        "origin": "old-english"
-    }, {
         "key": "ǣġ-wyrt",
         "form-raw": "ǣġ-wyrt",
         "form-canon": "eggwort",
         "type": "noun",
         "gloss": "dandelion",
         "tags": ["count", "concrete", "living", "plant", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ān-feald",
+        "form-raw": "ān-feald",
+        "type": "adj",
+        "gloss": "simple",
+        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "candel-trēo",
