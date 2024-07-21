@@ -274,9 +274,14 @@ def from_oe_phonemes(oe_phonemes, config):
             and not (state.syllable_data.prev_vowel and state.syllable_data.prev_vowel.stressed):
             return []
 
-    # Drop final n in inflectional ending
-    def drop_inflecional_n(state):
+    # Drop inflectional endings
+    def drop_inflecional_endings(state):
+        # Drop final 'n' in verb infinitives
         if state.current.value == "n" and state.next == None and state.current.inflectional:
+            return []
+
+        # Drop final vowels in verb endings if preceded by another vowel
+        if state.current.is_vowel() and state.prev and state.prev.is_vowel() and state.current.inflectional:
             return []
 
     # hn {wl,hl} hr → w l r 
@@ -365,7 +370,7 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(syncope_of_medial_unstressed_vowels, 1, "Syncope of unstressed medial vowels", config)
 
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
-    rig.run_capture(drop_inflecional_n, 1, "Drop inflectional n", config)
+    rig.run_capture(drop_inflecional_endings, 1, "Drop inflectional endings", config)
     rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", config)
     rig.run_capture(change_of_post_consonantal_g, 1, "Change of post-consonantal ɣ", config)
 

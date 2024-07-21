@@ -23,6 +23,7 @@ class EvolutorTests(unittest.TestCase):
             self._test_compounds,
             self._test_der_to_ther,
             self._test_th_to_d,
+            self._test_drop_inflectional_endings,
             self._test_unstressed_vowel_syncope,
             self._test_homorganic_lengthening,
             self._test_unstressed_vowel_spelling,
@@ -565,6 +566,27 @@ class EvolutorTests(unittest.TestCase):
         # check("morþor", "murder") # Vowel likely an idiosyncratic borrowing from AN 'murdre'
         check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
         check("spīþra", "spider", overrides=[["DThA:ðe->de", True]])
+
+        return [total, failures]
+
+    # Tests removal of inflectional endings
+    def _test_drop_inflectional_endings(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # Test the removal of final '-an'
+        check("sitt|an", "sit")
+
+        # Test that 'a' is still dropped when preceded by another vowel
+        check("smē|an", "smee")
 
         return [total, failures]
 
