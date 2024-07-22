@@ -78,6 +78,10 @@ def override_inflection(string, mode):
         if mode == "pl":
             return "peoples"
 
+    elif string == "sting":
+        if mode == "part":
+            return "stinging"
+
     elif string == "two":
         if mode == "pl":
             return "twos"

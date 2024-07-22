@@ -346,52 +346,81 @@ def from_oe_phonemes(oe_phonemes, config):
             and "".join(x.value for x in state.following[:3]) in ["dər", "ðər"]:
             return [Phoneme("o" , state.capture[0])]
 
+    # Forced metathesis between 'r' and neighboring vowels
+    # 'r' and a neighboring vowel often switch places within OE: e.g.: 'brid'/'bird', 'fyrht'/'fryht', 'byrht', 'bright'
+    # We see at least some cases of both (e.g. 'bird' vs 'bride'). However, in some cases we may want to force the
+    # change one way or the other to prevent unfelicitous modern forms, such as *'birght' instead of 'bright'.
+    def rV_metathesis(state):
+        if len(state.following) > 0 and state.capture[1].is_vowel() and state.capture[2].value == "r" and state.capture[3].value == "x":
+            return [state.capture[0], state.capture[2], state.capture[1], state.capture[3]]
+
+    # Miscellaneous assimilation cases
+    # These may need to be split up later if there are conflicts in timing
     def misc_assimilation(state):
         if state.joined == "ln":
             # Cases like 'miln' -> 'mill', and the pronunciation of 'kiln'
             return [Phoneme("l", template=state.capture[0])]
         elif state.joined == "ds":
             # Cases like 'god-sibb' -> 'gossip', 'gōdspel' -> 'gospel'
-            return [Phoneme("s", template=state.capture[0])]
+            if state.next and state.next.is_consonant():
+                return [Phoneme("s", template=state.capture[0])]
+            else:
+                return [Phoneme("ss", template=state.capture[0])]
+        elif state.joined in ["xθ", "xð"]:
+            # Only known case is 'fyrhþ' -> 'fryhþ' -> 'frith''
+            # Must occur before 'breaking'
+            return [state.capture[1]]
 
     # ===========================================================================================================
 
     if config.verbose:
         print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
+    # 'g' changes 1
     rig.run_capture(harden_g, 1, "Harden g's", config)
 
+    # Early vowel changes
     rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", config)
     rig.run_capture(pre_three_cluster_shortening, 1, "Pre-cluster shortening", config)
-
     rig.run_capture(stressed_vowel_changes, 1, "Stressed vowel changes", config)
     rig.run_capture(reduction_of_unstressed_vowels, 1, "Reduction of unstressed vowels", config)
+
+    # More particular vowel and vowel-adjacent changes
     rig.run_capture(degemination_following_unstressed_vowel, 1, "Degemination following unstressed vowels", config)
     rig.run_capture(syncope_of_medial_unstressed_vowels, 1, "Syncope of unstressed medial vowels", config)
 
+    # Loss of inflectional endings, et al
     rig.run_capture(final_unstressed_m_to_n, 1, "Final unstressed m to n", config)
     rig.run_capture(drop_inflecional_endings, 1, "Drop inflectional endings", config)
+
+    # 'g' changes 2
     rig.run_capture(vocalization_of_post_vocalic_g, 1, "Vocalization of post-vocalic ɣ", config)
     rig.run_capture(change_of_post_consonantal_g, 1, "Change of post-consonantal ɣ", config)
 
+    # Diphthongs
     rig.run_capture(diphthong_formation_3, 3, "Diphthong formation 1", config)
     rig.run_capture(diphthong_formation_2, 2, "Diphthong formation 2", config)
+    rig.run_capture(rV_metathesis, 4, "rV metathesis", config)
+    rig.run_capture(misc_assimilation, 2, "Miscellaneous assimilation", config) # Timing is key!
     rig.run_capture(breaking, 2, "Breaking", config)
 
-    rig.run_capture(misc_assimilation, 2, "Miscellaneous assimilation", config)
-    
+    # Late vowel changes
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
-    rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
+    rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config) # Timing is key!
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
     
+    # Later consonant changes
     rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", config)
     
+    # Assorted sound-specific changes
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
     rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
 
+
+    # Loss of final unstressed vowel
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
 
     return rig.phonemes

@@ -110,6 +110,36 @@
         "origin": "old-english",
         "notes": "The same as the '-ed-having' morph. Are both needed?"
     }, {
+        "key": "-en-adj-intransitive",
+        "form-stem": "en",
+        "form-raw": "en",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "verb",
+        "gloss": "[become] %@",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Became common only in ME, but has roots in OE and ON"
+    }, {
+        "key": "-en-adj-transitive",
+        "form-stem": "en",
+        "form-raw": "en",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "verb",
+        "gloss": "[make] %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "e"
+                }
+            },
+            "form-final": "n"
+        }],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Became common only in ME, but has roots in OE and ON"
+    }, {
         "key": "-en-material",
         "form-stem": "en",
         "form-raw": "en",
@@ -118,6 +148,14 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "made from %pl",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "e"
+                }
+            },
+            "form-final": "n"
+        }],
         "requires": {
             "follows": {
                 "has-any-tags": ["food", "material", "tree"]
@@ -620,5 +658,28 @@
         "tags": ["mass", "abstract", "i-mutating", "no-gen"],
         "origin": "old-english",
         "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
+    }, {
+        "key": "-0-tool",
+        "form-stem": "",
+        "form-raw": "",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "gloss": "[use] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "tool"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-property": "gloss-tool"
+                }
+            },
+            "gloss": "%(gloss-tool)"
+        }],
+        "origin": "old-english",
+        "notes": "Not properly a suffix of course, but putting it here for now"
     }
 ]

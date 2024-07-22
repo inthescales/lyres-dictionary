@@ -10,24 +10,21 @@ total = 0
 failures = []
 
 class EvolutorTests(unittest.TestCase):
-    # def setUp(self)
-
-
     def test_form_from_oe(self):
         total = 0
         failures = []
         
         test_set = [
             self._test_wiki_vowels,
-            self._test_affixes,
-            self._test_compounds,
+            self._test_homorganic_lengthening,
+            self._test_drop_inflectional_endings,
+            self._test_g,
             self._test_der_to_ther,
             self._test_th_to_d,
-            self._test_drop_inflectional_endings,
             self._test_unstressed_vowel_syncope,
-            self._test_homorganic_lengthening,
-            self._test_unstressed_vowel_spelling,
             self._test_consonant_cluster_breaking,
+            self._test_unstressed_vowel_spelling,
+            self._test_compounds,
             self._test_misc
         ]
         
@@ -408,11 +405,9 @@ class EvolutorTests(unittest.TestCase):
         check("boga", "bow")
         check("flogen", "flown")
 
-        
         # Ū
         # check("fugol", "fowl") # Current process produces 'foul'. Need more examples to understand this
-        # check("drugaþ", "drought")  # Idiosyncratic. Normal rules would produce 'drout'
-
+        # check("drugaþ", "drought")  # Idiosyncratic. Normal rules produce ME form 'drouth'
         check("būg|an", "bow")
 
         # auh
@@ -444,44 +439,8 @@ class EvolutorTests(unittest.TestCase):
         
         return [total, failures]
 
-    def _test_affixes(self):
-        total = 0
-        failures = []
-        def check(raw, target, overrides=[]):
-            nonlocal total, failures
-
-            config = Config(verbose=False, locked=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_form(raw, config)
-            total += 1
-            if not form == target:
-                failures.append([form, target])
-
-        check("", "")
-
-        return [total, failures]
-        
-    def _test_compounds(self):
-        total = 0
-        failures = []
-        def check(raw, target, overrides=[]):
-            nonlocal total, failures
-
-            config = Config(verbose=False, locked=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_form(raw, config)
-            total += 1
-            if not form == target:
-                failures.append([form, target])
-
-        check("ǣfen-tīd", "eventide", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
-        check("ealdor-mann", "alderman", overrides=[["DThA:dər->ðər", False]])
-        check("gold-smið", "goldsmith")
-        check("sǣ-mann", "seaman")
-        check("sunn-bēam", "sunbeam")
-        check("beru-scinn", "bearskin")
-
-        return [total, failures]
-    
-    def _test_misc(self):
+    # Tests for homorganic lengthening, and related pre-cluster shortening and vowel changes
+    def _test_homorganic_lengthening(self):
         total = 0
         failures = []
         def check(raw, target, overrides=[]):
@@ -493,35 +452,102 @@ class EvolutorTests(unittest.TestCase):
             if not form == target:
                 failures.append([form, target])
         
-        check("bāt", "boat", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
-        check("cēp|an", "keep")
-        check("cniht", "knight")
-        check("frēod", "freed")
-        check("īs", "ice")
-        check("hlæhh|an", "laugh")
-        check("mēt|an", "meet")
-        check("niht", "night")
-        check("stel|an", "steal")
+        # ng ---------------------
 
-        # 
+        # stressed a becomes o, in most cases
+        check("lang", "long")
+        check("strang", "strong")
+        check("wrang", "wrong")
+        check("mangere", "monger")
 
-        # final '-e' for words ending in voiced fricatives
-        check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
+        # ...but there are a couple exceptions
+        check("angul", "angle", overrides=[["HL:ng", False]])
+        check("gang", "gang", overrides=[["HL:ng", False]])
+        check("sang", "sang", overrides=[["HL:ng", False]])
 
-        # Non-affix -iġ forms
-        check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
-        check("ċeariġ", "chary")
-        check("dohtiġ", "doughty")
-        check("drēoriġ", "dreary")
-        check("dysiġ", "dizzy")
-        check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
-        check("hefiġ", "heavy")
+        # other vowels are unaffected
+        check("hring|an", "ring")
+        check("sing|an", "sing")
+        check("sting|an", "sting")
 
-        # Misc assimilations
-        check("myln", "mill")
-        # check("godsib", "gossip") # Probably need some kind of stress-preservation in compounds
-        # check("gōdspel", "gospel") # Probably need some different compounding here
-    
+        return [total, failures]
+
+    # Tests removal of inflectional endings
+    def _test_drop_inflectional_endings(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # Test the removal of final '-an'
+        check("sitt|an", "sit")
+
+        # Test that 'a' is still dropped when preceded by another vowel
+        check("smē|an", "smee")
+
+        return [total, failures]
+
+    # Tests the various destinies of the letter 'g'
+    def _test_g(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # Non-palatal /ɣ/ --------------------------------
+
+        # Harden to /g/ word-initially
+        check("gōd", "good")
+        # TODO: Look for an example of hard 'g' before 'e'/'i'
+
+        # Form 'ng' digraph following /n/
+        check("cyng", "king")
+        check("hring", "ring")
+
+        # After a consonant, vocalize to /u/
+        check("belg|an", "bellow")
+        check("burg", "burrow")
+        check("folg|an", "follow")
+
+        # Forms diphthongs between vowels...
+        check("boga", "bow")
+        check("haga", "haw")
+        check("sāwol", "soul")
+
+        # ...or word-finally after a vowel, rendered as 'gh'
+        check("bōg", "bough")
+        check("dāg", "dough")
+        check("trog", "trough")
+
+        # Sometimes seems to become a high front vowel instead?
+        # e.g.: 'flēogan' -> 'fly', 'drēogan' -> 'dree'
+        # TODO: Figure this out
+
+        # Palatal /j/ ------------------------------------
+
+        # Initially or finally, rendered as 'y'
+        check("clǣġ", "clay")
+        check("fǣġe", "fay")
+        check("ġeorn", "yearn")
+        check("pleġ|an", "play")
+        check("weġ", "way")
+
+        # Forms diphthongs between other sounds
+        check("breġd|an", "braid")
+        check("fæġer", "fair")
+
         return [total, failures]
 
     # Tests for alternation of -der / -ðer, and associated vowel changes
@@ -569,27 +595,6 @@ class EvolutorTests(unittest.TestCase):
 
         return [total, failures]
 
-    # Tests removal of inflectional endings
-    def _test_drop_inflectional_endings(self):
-        total = 0
-        failures = []
-        def check(raw, target, overrides=[]):
-            nonlocal total, failures
-
-            config = Config(verbose=False, locked=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_form(raw, config)
-            total += 1
-            if not form == target:
-                failures.append([form, target])
-
-        # Test the removal of final '-an'
-        check("sitt|an", "sit")
-
-        # Test that 'a' is still dropped when preceded by another vowel
-        check("smē|an", "smee")
-
-        return [total, failures]
-
     # Tests for removal of unstressed vowels
     def _test_unstressed_vowel_syncope(self):
         total = 0
@@ -606,39 +611,6 @@ class EvolutorTests(unittest.TestCase):
         check("ælmesse", "alms")
         check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]])
         check("weorold", "world")
-
-        return [total, failures]
-
-    # Tests for homorganic lengthening, and related pre-cluster shortening and vowel changes
-    def _test_homorganic_lengthening(self):
-        total = 0
-        failures = []
-        def check(raw, target, overrides=[]):
-            nonlocal total, failures
-
-            config = Config(verbose=False, locked=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_form(raw, config)
-            total += 1
-            if not form == target:
-                failures.append([form, target])
-        
-        # ng ---------------------
-
-        # stressed a becomes o, in most cases
-        check("lang", "long")
-        check("strang", "strong")
-        check("wrang", "wrong")
-        check("mangere", "monger")
-
-        # ...but there are a couple exceptions
-        check("angul", "angle", overrides=[["HL:ng", False]])
-        check("gang", "gang", overrides=[["HL:ng", False]])
-        check("sang", "sang", overrides=[["HL:ng", False]])
-
-        # other vowels are unaffected
-        check("hring|an", "ring")
-        check("sing|an", "sing")
-        check("sting|an", "sting")
 
         return [total, failures]
 
@@ -663,6 +635,7 @@ class EvolutorTests(unittest.TestCase):
         check("hræfn", "raven")
 
         # fricative + liquid
+        check("hæsl", "hasel") # ME spelling with 's'
         check("tæfl", "tavel")
 
         # plosive + nasal
@@ -768,8 +741,6 @@ class EvolutorTests(unittest.TestCase):
         check("earg", "arrow")
         check("fealg", "fallow")
 
-        # TODO: Add -ock cases like 'paddock'
-
         # Words with a final 'l' usually end in 'le' ----------------
         check("ancleo", "ankle")
         check("æppel", "apple")
@@ -787,6 +758,92 @@ class EvolutorTests(unittest.TestCase):
         check("deofol", "devil", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("wifel", "weevil", overrides=[["OSL:iy", True]])
 
+        return [total, failures]
+
+    def _test_compounds(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        check("ǣfen-tīd", "eventide", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("ealdor-mann", "alderman", overrides=[["DThA:dər->ðər", False]])
+        check("gold-smið", "goldsmith")
+        check("sǣ-mann", "seaman")
+        check("sunn-bēam", "sunbeam")
+        check("beru-scinn", "bearskin")
+
+        return [total, failures]
+
+    def _test_misc(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+        
+        check("bāt", "boat", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
+        check("cēp|an", "keep")
+        check("cniht", "knight")
+        check("frēod", "freed")
+        check("īs", "ice")
+        check("hlæhh|an", "laugh")
+        check("mēt|an", "meet")
+        check("niht", "night")
+        check("stel|an", "steal")
+
+        # final '-e' for words ending in voiced fricatives
+        check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
+        check("sēoþ|an", "seethe", overrides=[["SVC:eːo->eː/oː", "eː"]])
+
+        # Non-affix -iġ forms
+        check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
+        check("ċeariġ", "chary")
+        check("dohtiġ", "doughty")
+        check("drēoriġ", "dreary")
+        check("dysiġ", "dizzy")
+        check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
+        check("hefiġ", "heavy")
+
+        # rV metathesis
+
+        # Always metathesize before /x/
+        check("byrht", "bright")
+        check("fyrht", "fright")
+
+        # Even if /x/ is later assimilated away
+        check("fyrhþ", "frith")
+
+        # But leave as written otherwise
+        check("brȳd", "bride")
+        check("bird", "bird")
+        check("frost", "frost")
+
+        # Misc assimilations
+
+        # ln -> l
+        check("myln", "mill")
+        check("eln", "ell")
+        check("kiln", "kill") # Matches traditional pronunciation, though not common spelling
+
+        # ds -> s
+        check("godsib", "gosseb") # Artificial form for testing 'ds' -> 'ss' assimilation
+        check("gōdspel", "gosple") # Artificial form for testing 'dsC' -> 's' assimilation
+
+        # hþ -> þ
+        check("fyrhþ", "frith")
+    
         return [total, failures]
 
     # Helpers ==========

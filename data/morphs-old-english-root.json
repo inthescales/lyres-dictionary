@@ -137,6 +137,7 @@
         "form-raw": "æstel",
         "type": "noun",
         "gloss": "bookmark",
+        "gloss-tool": "[mark] a place in a text",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english"
     }, {
@@ -215,6 +216,7 @@
         "form-raw-alt": "omber",
         "type": "noun",
         "gloss": "bucket",
+        "gloss-tool": "[carry] in a bucket",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "Alternate meaning 'measure', but not sure of usage"
@@ -279,6 +281,7 @@
         "form-canon": "oar",
         "type": "noun",
         "gloss": "oar",
+        "gloss-tool": "[row] with an oar",
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
@@ -459,7 +462,8 @@
         "form-canon": "bridle",
         "type": "noun",
         "gloss": "bridle",
-        "tags": ["count", "concrete", "man-made", "garment"],
+        "gloss-tool": "[fit] with a bridle",
+        "tags": ["count", "concrete", "man-made", "garment", "tool"],
         "origin": "old-english"
     }, {
         "key": "brōþor",
@@ -527,7 +531,8 @@
         "form-raw-alt": ["caliċ", "cæliċ", "ċeliċ", "ċelċ", "calċ"],
         "type": "noun",
         "gloss": ["chalice", "goblet"],
-        "tags": ["count", "concrete", "man-made", "speculative"],
+        "gloss-tool": ["[pour] into a chalice"],
+        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
     }, {
@@ -609,6 +614,7 @@
         "form-canon": "knife",
         "type": "noun",
         "gloss": "knife",
+        "gloss-tool": "[cut] with a knife",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
         "origin": "old-english"
     }, {
@@ -633,7 +639,7 @@
         "form-raw": "crumb",
         "type": "adj",
         "gloss": "crooked",
-        "tags": ["speculative"],
+        "tags": ["speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "cwacian",
@@ -1193,9 +1199,9 @@
         "type": "noun",
         "gloss": "flying [being]",
         "gloss-alt": "[machine] that flies",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "homophonic"],
         "origin": "old-english",
-        "notes": "alt glass is, of course, my inference"
+        "notes": "alt gloss is, of course, my inference. Inspired by Wiktionary's link to 'flyer' entry"
     }, {
         "key": "flyht",
         "form-raw": "flyht",
@@ -1232,17 +1238,25 @@
         "form-raw": "frami|an",
         "type": "verb",
         "gloss": "[set] in a frame or border",
+        "gloss-alt": ["construct", "[profit], [avail]", "[promote] or [advance]"],
         "tags": ["intransitive"],
         "origin": "old-english",
-        "notes": "Influenced 'frame', in combination with 'fremman'. Alternate meaning 'profit, avail'"
+        "notes": "Influenced 'frame', in combination with 'fremman'. Chosen gloss is based on modern 'frame'."
+    }, {
+        "key": "fremian",
+        "form-raw": "fremi|an",
+        "type": "verb",
+        "gloss": "[profit] or [benefit]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "fremman",
         "form-raw": "fremm|an",
         "type": "verb",
-        "gloss": "construct",
+        "gloss": "[perform] or [accomplish]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Influenced 'frame', in combination with 'framian'. OED has this as 'freme', TODO: see notes there"
+        "notes": "Influenced 'frame', in combination with 'framian'."
     }, {
         "key": "frēo",
         "form-raw": "frēo",
@@ -1257,6 +1271,13 @@
         "type": "noun",
         "gloss": "friend",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "fremu",
+        "form-raw": "fremu",
+        "type": "noun",
+        "gloss": ["[advantage] or [benefit]", "[kindness] or good [deeds]"],
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "friþ",
@@ -1348,6 +1369,7 @@
         "form-raw": "gār",
         "type": "noun",
         "gloss": "spear",
+        "gloss-tool": "[stab] with a spear",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
         "origin": "old-english"
     }, {
@@ -1646,6 +1668,7 @@
         "form-raw": "heoru",
         "type": "noun",
         "gloss": "sword",
+        "gloss-tool": "[cut] with a sword",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
@@ -2136,7 +2159,7 @@
         "form-canon": "mathom",
         "type": "noun",
         "gloss": ["precious [object]", "treasure"],
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
     }, {
         "key": "meare",
@@ -2174,8 +2197,9 @@
         "form-raw": "midl",
         "type": "noun",
         "gloss": "[bit] or [curb] (of a bridle)",
-        "tags": ["count", "concrete", "man-made", "speculative"],
-        "origin": "old-english"
+        "tags": ["count", "concrete", "man-made", "speculative", "no-gen"],
+        "origin": "old-english",
+        "notes": "no-gen because I'm not feeling it"
     }, {
         "key": "miht",
         "form-raw": "miht",
@@ -2300,7 +2324,7 @@
         "form-raw": "ræfn|an",
         "type": "verb",
         "gloss": "endure",
-        "tags": ["transitive", "speculative"],
+        "tags": ["transitive", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "rǣman",
@@ -2372,7 +2396,8 @@
         "form-canon": "rood",
         "type": "noun",
         "gloss": "crucifix",
-        "tags": ["count", "concrete"],
+        "gloss-tool": "[erect] a cross",
+        "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english",
         "notes": "Alternate meaning 'wooden beam or spar'"
     }, {
@@ -2458,7 +2483,7 @@
         "form-raw": "sċūf|an",
         "form-canon": "shove",
         "type": "verb",
-        "gloss": "shove",
+        "gloss": "push",
         "gloss-alt": ["[launch] (a ship)"],
         "tags": ["transitive", "motion"],
         "origin": "old-english"
@@ -2468,6 +2493,7 @@
         "form-raw-alt": ["sex", "syx"],
         "type": "noun",
         "gloss": "dagger",
+        "gloss-tool": "[cut] with a dagger",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
         "origin": "old-english"
     }, {
@@ -2633,6 +2659,7 @@
         "form-canon": "tavel",
         "type": "noun",
         "gloss": ["board [game]", "board game [piece]", "game [board]"],
+        "gloss-tool": "[play] a board game",
         "tags": ["count", "concrete", "man-made", "obscure"],
         "origin": "old-english"
     }, {

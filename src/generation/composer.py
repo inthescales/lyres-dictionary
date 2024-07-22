@@ -276,9 +276,15 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                     # Break up repeated digraphs
                     addition = "-" + addition
 
-            if form[-1] == "y" and (helpers.is_consonant(addition[0]) or addition[0] == "e") \
-                and (helpers.is_consonant(form[-2]) or morph.morph["key"] == "-liċ"):
+            if form[-1] == "y" \
+                and (helpers.is_consonant(addition[0]) or addition[0] == "e") \
+                and ( \
+                    helpers.is_consonant(form[-2]) \
+                    or morph.morph["key"] == "-liċ" \
+                ) \
+                and not addition == "en":
                 # If word ends in a vowel y, and suffix begins with a consonant or 'e'', change the y to i
+                # Exempt '-en' suffixes though
                 form = form[:-1] + "i"
 
     return form + addition
