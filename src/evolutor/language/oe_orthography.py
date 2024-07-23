@@ -7,4 +7,4 @@ back_vowels = ["u", "ū", "a", "ā", "o", "ō"]
 short_vowels = ["a", "e", "i", "o", "u", "y", "ea", "eo", "ie", "io", "oe"]
 long_vowels = ["ā", "ē", "ī", "ō", "ū", "ȳ", "ēa", "ēo", "īe", "īo", "ōe"]
 
-special_characters = ["'", "|", "."]
+special_characters = ["'", "|", "+", "."]

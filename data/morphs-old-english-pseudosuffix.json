@@ -106,6 +106,21 @@
         "tags": ["uncountable", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "-scin-adj",
+        "form-stem": "skin",
+        "form-raw": "scin",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "made from the hide of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "origin": "old-english",
+        "notes": "TODO: consider adding noun version: 'the hide of %sg'"
+    }, {
         "key": "-smiþ",
         "form-stem": "smith",
         "form-raw": "smiþ",

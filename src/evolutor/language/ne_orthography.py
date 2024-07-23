@@ -226,11 +226,7 @@ def from_me_phonemes(phonemes, config):
                 if next1.value in ["m", "n", "w"] \
                     and prev and prev.value != "v" \
                     and not would_have_inserted_lengthening_e \
-                    and ( \
-                        result[-1] == "c" # Never use 'e' following a 'c'
-                        or next1.value not in ["n"] # Only 'n' endings are subject to the hinge below
-                        or often("Orth:ə->o", config)
-                    ):
+                    and not phone.derivational:
                     # Words ending in 'm', 'n', or 'w' usually take 'o'
                     result += "o"
                 elif next1.value == "k":

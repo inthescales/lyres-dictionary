@@ -371,13 +371,13 @@
         "type": "noun",
         "gloss": ["large [fire]", "funeral [pyre]"],
         "gloss-alt": "bonfire",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
     }, {
         "key": "bær",
         "form-raw": "bær",
         "form-canon": "bare",
-        "type": "noun",
+        "type": "adj",
         "gloss": "naked",
         "origin": "old-english"
     }, {
@@ -394,7 +394,7 @@
         "form-canon": "bier",
         "type": "noun",
         "gloss": "bier",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
     }, {
         "key": "bān",
@@ -565,7 +565,8 @@
         "key": "byrnan",
         "form-raw": "byrn|an",
         "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
-        "type": "noun",
+        "form-canon": "burn",
+        "type": "verb",
         "gloss": "burn",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1498,7 +1499,7 @@
     }, {
         "key": "ġe-bǣran",
         "form-raw": "ġe-bǣr|an",
-        "type": "noun",
+        "type": "verb",
         "gloss": "[behave] or [conduct] (oneself)",
         "tags": ["intransitive", "no-gen"],
         "origin": "old-english",
@@ -1596,11 +1597,11 @@
         "form-raw": "guma",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "obscure"],
         "origin": "old-english",
-        "notes": "Became 'groom' but leaving separate for now"
+        "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
     }, {
-        "key": "gyden",
+        "key": "gyd+en",
         "form-raw": "gyden",
         "type": "noun",
         "gloss": "goddess",
@@ -2572,6 +2573,14 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "scinn",
+        "form-raw": "scinn",
+        "form-canon": "skin",
+        "type": "noun",
+        "gloss": "skin",
+        "tags": ["mass", "concrete", "living", "bodypart", "material"],
+        "origin": "old-english"
+    }, {
         "key": "sċūfan",
         "form-raw": "sċūf|an",
         "form-canon": "shove",
@@ -3437,7 +3446,7 @@
         "origin": "old-english",
         "notes": "TODO: Investigate this vowel change"
     }, {
-        "key": "wylfen",
+        "key": "wylf+en",
         "form-raw": ["wylfen", "wylf"],
         "type": "noun",
         "gloss": "she-wolf",
@@ -3470,7 +3479,7 @@
         "origin": "old-english",
         "notes": "TODO: currently I get 'wory'. Should this be changed somehow?"
     }, {
-        "key": "wyrġen",
+        "key": "wyrġ+en",
         "form-raw": ["wyrġen", "wierġen"],
         "type": "noun",
         "gloss": ["female [criminal]", "she-beast", "she-wolf"],

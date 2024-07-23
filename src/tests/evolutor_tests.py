@@ -232,7 +232,7 @@ class EvolutorTests(unittest.TestCase):
 
         check("spurn|an", "spurn")
         check("ċyriċe", "church", overrides=[["SVC:y->i/e/u", "u"]])
-        # check("byrþen", "burden", overrides=[["SVC:y->i/e/u", "u"]]) # d/θ alternation without 'r' (see spider, afford)
+        check("byrð+en", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True]])
         check("hyrdel", "hurdle", overrides=[["SVC:y->i/e/u", "u"]])
         check("word", "word")
         check("werc", "work")
@@ -353,7 +353,7 @@ class EvolutorTests(unittest.TestCase):
         # AI
         check("dæġ", "day")        
         check("mæġ", "may")
-        check("mæġden", "maiden", overrides=[["Orth:ə->o", False]])
+        check("mæġd+en", "maiden")
         check("næġl", "nail")
         check("fæġer", "fair")
         check("clǣġ", "clay")
@@ -591,7 +591,7 @@ class EvolutorTests(unittest.TestCase):
 
         # ð -> d
         # check("morþor", "murder") # Vowel likely an idiosyncratic borrowing from AN 'murdre'
-        check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
+        check("byrð+en", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True]])
         check("spīþra", "spider", overrides=[["DThA:ðe->de", True]])
 
         return [total, failures]
@@ -733,8 +733,8 @@ class EvolutorTests(unittest.TestCase):
         check("open", "open")
 
         # ...and there are a few other exceptions
-        # check("byrðen", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðər->dər", True], ["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending ALSO need to fix th->d
-        check("mæġden", "maiden", overrides=[["Orth:ə->o", False]]) # TODO: -en spelling probably caused by derivational ending
+        check("byrð+en", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True]])
+        check("mæġd+en", "maiden")
 
         # Words with a final 'w' also use 'o' -----------------------
         check("wealwi|an", "wallow")

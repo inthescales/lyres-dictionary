@@ -7,6 +7,13 @@
         "gloss": "%@ incorrectly",
         "origin": "modern-english"
     }, {
+        "key": "out-",
+        "form-stem": "out",
+        "type": "prefix",
+        "prefix-on": "verb",
+        "gloss": "surpass in %part",
+        "origin": "modern-english"
+    }, {
         "key": "over-",
         "form-stem": "over",
         "type": "prefix",

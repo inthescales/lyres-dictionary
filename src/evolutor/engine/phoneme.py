@@ -6,7 +6,7 @@ class Letter:
         return self.value == other.value
 
 class Phoneme:
-    def __init__(self, value, stressed=False, inflectional=False, template=None, history=None):
+    def __init__(self, value, stressed=False, inflectional=False, derivational=False, template=None, history=None):
         self.value = value
 
         if template:
@@ -19,9 +19,11 @@ class Phoneme:
         if template:
             self.stressed = template.stressed
             self.inflectional = template.inflectional
+            self.derivational = template.derivational
         else:
             self.stressed = stressed
             self.inflectional = inflectional
+            self.derivational = derivational
 
     def __eq__(self, other):
         return other \
