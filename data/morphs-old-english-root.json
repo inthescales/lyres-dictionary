@@ -211,15 +211,13 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "amber",
-        "form-raw": "amber",
-        "form-raw-alt": "omber",
+        "key": "ambeht-impersonal",
+        "form-raw": "ambeht",
+        "form-raw-alt": ["ambiht", "ambyht"],
         "type": "noun",
-        "gloss": "bucket",
-        "gloss-tool": "[carry] in a bucket",
-        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'measure', but not sure of usage"
+        "gloss": "[office] or [ministry]",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "ambeht-person",
         "form-raw": "ambiht",
@@ -230,13 +228,15 @@
         "origin": "old-english",
         "notes": "'ambeaht' is WS"
     }, {
-        "key": "ambeht-impersonal",
-        "form-raw": "ambeht",
-        "form-raw-alt": ["ambiht", "ambyht"],
+        "key": "amber",
+        "form-raw": "amber",
+        "form-raw-alt": "omber",
         "type": "noun",
-        "gloss": "[office] or [ministry]",
-        "tags": ["count", "abstract", "speculative"],
-        "origin": "old-english"
+        "gloss": "bucket",
+        "gloss-tool": "[carry] in a bucket",
+        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'measure', but not sure of usage"
     }, {
         "key": "anda-mass",
         "form-raw": "anda",
@@ -253,6 +253,20 @@
         "type": "noun",
         "gloss": "apple [tree]",
         "tags": ["count", "concrete", "living", "plant", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ārian",
+        "form-raw": "āri|an",
+        "type": "verb",
+        "gloss": ["pardon", "[show] mercy"],
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "arod",
+        "form-raw": "arod",
+        "type": "adj",
+        "gloss": ["daring", "quick", "prepared"],
+        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "ār-glory",
@@ -291,20 +305,6 @@
         "type": "noun",
         "gloss": "ore",
         "tags": ["mass", "concrete", "material"],
-        "origin": "old-english"
-    }, {
-        "key": "ārian",
-        "form-raw": "āri|an",
-        "type": "verb",
-        "gloss": ["pardon", "[show] mercy"],
-        "tags": ["transitive"],
-        "origin": "old-english"
-    }, {
-        "key": "arod",
-        "form-raw": "arod",
-        "type": "adj",
-        "gloss": ["daring", "quick", "prepared"],
-        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "āscian",
@@ -395,29 +395,6 @@
         "type": "noun",
         "gloss": "bier",
         "tags": ["count", "concrete"],
-        "origin": "old-english"
-    }, {
-        "key": "ġe-bǣran",
-        "form-raw": "ġe-bǣr|an",
-        "type": "noun",
-        "gloss": "[behave] or [conduct] (oneself)",
-        "tags": ["intransitive", "no-gen"],
-        "origin": "old-english",
-        "notes": "no-gen because I don't think I can use this kind of verb well"
-    }, {
-        "key": "ġe-bǣre",
-        "form-raw": "ġe-bǣre",
-        "type": "noun",
-        "gloss": ["[demeanor], [bearing]"],
-        "tags": ["count", "abstract", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "byrnan",
-        "form-raw": "byrn|an",
-        "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
-        "type": "noun",
-        "gloss": "burn",
-        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "bān",
@@ -582,6 +559,14 @@
         "form-canon": "bury",
         "type": "verb",
         "gloss": "bury",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "byrnan",
+        "form-raw": "byrn|an",
+        "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
+        "type": "noun",
+        "gloss": "burn",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
@@ -858,19 +843,19 @@
         "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "old-english"
     }, {
-        "key": "dēop",
-        "form-raw": "dēop",
-        "form-canon": "deep",
-        "type": "adj",
-        "gloss": "deep",
-        "origin": "old-english"
-    }, {
         "key": "dēman",
         "form-raw": "dēm|an",
         "form-canon": "deem",
         "type": "verb",
         "gloss": "judge",
         "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "dēop",
+        "form-raw": "dēop",
+        "form-canon": "deep",
+        "type": "adj",
+        "gloss": "deep",
         "origin": "old-english"
     }, {
         "key": "dēore",
@@ -1335,6 +1320,13 @@
         "origin": "old-english",
         "notes": "Influenced 'frame', in combination with 'framian'."
     }, {
+        "key": "fremu",
+        "form-raw": "fremu",
+        "type": "noun",
+        "gloss": ["[advantage] or [benefit]", "[kindness] or good [deeds]"],
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "frēo",
         "form-raw": "frēo",
         "form-canon": "free",
@@ -1348,13 +1340,6 @@
         "type": "noun",
         "gloss": "friend",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
-    }, {
-        "key": "fremu",
-        "form-raw": "fremu",
-        "type": "noun",
-        "gloss": ["[advantage] or [benefit]", "[kindness] or good [deeds]"],
-        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "friþ",
@@ -1509,6 +1494,21 @@
         "type": "adj",
         "gloss": "healthy",
         "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "ġe-bǣran",
+        "form-raw": "ġe-bǣr|an",
+        "type": "noun",
+        "gloss": "[behave] or [conduct] (oneself)",
+        "tags": ["intransitive", "no-gen"],
+        "origin": "old-english",
+        "notes": "no-gen because I don't think I can use this kind of verb well"
+    }, {
+        "key": "ġe-bǣre",
+        "form-raw": "ġe-bǣre",
+        "type": "noun",
+        "gloss": ["[demeanor], [bearing]"],
+        "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ġiefan",
@@ -2719,20 +2719,20 @@
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
-        "key": "stān-count",
-        "form-raw": "stān",
-        "form-canon": "stone",
-        "type": "noun",
-        "gloss": "stone",
-        "tags": ["count", "concrete"],
-        "origin": "old-english"
-    }, {
         "key": "standan",
         "form-raw": "stand|an",
         "form-canon": "stand",
         "type": "verb",
         "gloss": "stand",
         "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "stān-count",
+        "form-raw": "stān",
+        "form-canon": "stone",
+        "type": "noun",
+        "gloss": "stone",
+        "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "stelan",
@@ -2873,14 +2873,6 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "timbran",
-        "form-raw": "timbran|an",
-        "form-canon": "timber",
-        "type": "verb",
-        "gloss": "[build] (from wood)",
-        "tags": ["transitive"],
-        "origin": "old-english"
-    }, {
         "key": "timber-count",
         "form-raw": "timber",
         "form-canon": "timber",
@@ -2897,16 +2889,13 @@
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
-        "key": "tȳrian",
-        "form-raw": "tȳri|an",
-        "form-raw-alt": ["tēori|an"],
-        "form-canon": "tire",
+        "key": "timbran",
+        "form-raw": "timbran|an",
+        "form-canon": "timber",
         "type": "verb",
-        "gloss": "[become] tired",
-        "gloss-alt": ["faint", "fail", "cease"],
-        "tags": ["intransitive"],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity. Alt form may be more standard in OE"
+        "gloss": "[build] (from wood)",
+        "tags": ["transitive"],
+        "origin": "old-english"
     }, {
         "key": "tin",
         "form-raw": "tin",
@@ -2947,6 +2936,17 @@
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
+        "key": "tȳrian",
+        "form-raw": "tȳri|an",
+        "form-raw-alt": ["tēori|an"],
+        "form-canon": "tire",
+        "type": "verb",
+        "gloss": "[become] tired",
+        "gloss-alt": ["faint", "fail", "cease"],
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Needs bitransitivity. Alt form may be more standard in OE"
+    }, {
         "key": "þearf",
         "form-raw": "þearf",
         "form-canon": "tharf",
@@ -2955,14 +2955,6 @@
         "origin": "old-english",
         "tags": ["obscure"],
         "notes": "Other meanings in dialect"
-    }, {
-        "key": "þeġn-ruler",
-        "form-raw": "þeġn",
-        "form-canon": "thane",
-        "type": "noun",
-        "gloss": "lesser [lord]",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler", "obscure"],
-        "origin": "old-english"
     }, {
         "key": "þeġn",
         "form-raw": "þeġn",
@@ -2977,6 +2969,14 @@
         "type": "verb",
         "gloss": "serve",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "þeġn-ruler",
+        "form-raw": "þeġn",
+        "form-canon": "thane",
+        "type": "noun",
+        "gloss": "lesser [lord]",
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "obscure"],
         "origin": "old-english"
     }, {
         "key": "þencan",
@@ -3096,24 +3096,6 @@
         "origin": "old-english",
         "notes": "Two entries in Bosworth. Maybe merger of two etymons?"
     }, {
-        "key": "wacan",
-        "form-raw": "wac|an",
-        "form-canon": "wake",
-        "type": "verb",
-        "gloss": "[wake] up",
-        "gloss-alt": ["arise", "originate", "[be] born"],
-        "tags": ["intransitive"],
-        "origin": "old-english"
-    }, {
-        "key": "wacian",
-        "form-raw": "waci|an",
-        "form-canon": "wake",
-        "type": "verb",
-        "gloss": "[be] or [remain] awake",
-        "gloss-alt": ["[keep] watch"],
-        "tags": ["intransitive"],
-        "origin": "old-english"
-    }, {
         "key": "wænge",
         "form-raw": "wænge",
         "form-raw-alt": ["wange", "wonge", "wenge"],
@@ -3155,6 +3137,24 @@
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
+        "key": "wacan",
+        "form-raw": "wac|an",
+        "form-canon": "wake",
+        "type": "verb",
+        "gloss": "[wake] up",
+        "gloss-alt": ["arise", "originate", "[be] born"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "wacian",
+        "form-raw": "waci|an",
+        "form-canon": "wake",
+        "type": "verb",
+        "gloss": "[be] or [remain] awake",
+        "gloss-alt": ["[keep] watch"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "wald",
         "form-raw": "wald",
         "form-raw-alt": ["weald"],
@@ -3184,13 +3184,6 @@
         "form-raw": ["warg", "weg", "wearg", "wearh"],
         "type": "noun",
         "gloss": ["criminal", "monster", "wolf"],
-        "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
-    }, {
-        "key": "wyrġen",
-        "form-raw": ["wyrġen", "wierġen"],
-        "type": "noun",
-        "gloss": ["female [criminal]", "she-beast", "she-wolf"],
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
@@ -3342,18 +3335,17 @@
         "tags": ["obscure"],
         "notes": "Other meanings in dialect"
     }, {
-        "key": "wolf",
-        "form-raw": "wolf",
-        "form-canon": "wolf",
-        "type": "noun",
-        "gloss": "wolf",
-        "tags": ["count", "concrete", "living", "animal"],
-        "origin": "old-english"
-    }, {
         "key": "wlātian",
         "form-raw": "wlāti|an",
         "type": "verb",
         "gloss": "[gaze] or [observe]",
+        "tags": ["intransitive", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "wlītan",
+        "form-raw": "wlīt|an",
+        "type": "verb",
+        "gloss": "[look], [behold]",
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
@@ -3364,11 +3356,12 @@
         "tags": ["mass", "abstract", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
-        "key": "wlītan",
-        "form-raw": "wlīt|an",
-        "type": "verb",
-        "gloss": "[look], [behold]",
-        "tags": ["intransitive", "speculative", "homophonic"],
+        "key": "wolf",
+        "form-raw": "wolf",
+        "form-canon": "wolf",
+        "type": "noun",
+        "gloss": "wolf",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "wræc",
@@ -3410,16 +3403,6 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "wunian",
-        "form-raw": "wuni|an",
-        "form-canon": "wone",
-        "type": "verb",
-        "gloss": "[stay] or [dwell] in a place",
-        "gloss-alt": ["[be] in a certain condition", "[be] located somewhere", "[remain], [last]", "endure", "exist"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english",
-        "notes": "TODO: Investigate this vowel change"
-    }, {
         "key": "wudu-material",
         "form-raw": "wudu",
         "form-canon": "wood",
@@ -3443,6 +3426,16 @@
         "gloss": "wool",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
+    }, {
+        "key": "wunian",
+        "form-raw": "wuni|an",
+        "form-canon": "wone",
+        "type": "verb",
+        "gloss": "[stay] or [dwell] in a place",
+        "gloss-alt": ["[be] in a certain condition", "[be] located somewhere", "[remain], [last]", "endure", "exist"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "TODO: Investigate this vowel change"
     }, {
         "key": "wylfen",
         "form-raw": ["wylfen", "wylf"],
@@ -3476,6 +3469,13 @@
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "TODO: currently I get 'wory'. Should this be changed somehow?"
+    }, {
+        "key": "wyrġen",
+        "form-raw": ["wyrġen", "wierġen"],
+        "type": "noun",
+        "gloss": ["female [criminal]", "she-beast", "she-wolf"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
     }, {
         "key": "wyrm",
         "form-raw": "wyrm",
