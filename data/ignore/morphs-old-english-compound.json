@@ -17,10 +17,26 @@
     }, {
         "key": "āþ-briċe",
         "form-raw": "āþ-briċe",
-        "form-canon": "oath-breach",
+        "form-canon": "oathbreach",
         "type": "adj",
         "gloss": ["the [breaking] of promises", "perjury"],
         "tags": ["uncountable", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bæc-bord",
+        "form-raw": "bæc-bord",
+        "form-canon": "backboard",
+        "type": "adj",
+        "gloss": "starboard",
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bǣl-fȳr",
+        "form-raw": "bǣl-fȳr",
+        "form-canon": "balefire",
+        "type": "adj",
+        "gloss": "funeral [pyre]",
+        "tags": ["count", "concrete", "speculative"],
         "origin": "old-english"
     }, {
         "key": "candel-trēo",

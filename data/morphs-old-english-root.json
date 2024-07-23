@@ -365,6 +365,61 @@
         "gloss": "different",
         "origin": "old-english"
     }, {
+        "key": "bǣl",
+        "form-raw": "bǣl",
+        "form-canon": "bale",
+        "type": "noun",
+        "gloss": ["large [fire]", "funeral [pyre]"],
+        "gloss-alt": "bonfire",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "bær",
+        "form-raw": "bær",
+        "form-canon": "bare",
+        "type": "noun",
+        "gloss": "naked",
+        "origin": "old-english"
+    }, {
+        "key": "bǣr",
+        "form-raw": ["bǣr", "bēr"],
+        "type": "noun",
+        "gloss": ["stretcher", "litter"],
+        "gloss-tool": "[carry] on a stretcher",
+        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bǣr-bier",
+        "form-raw": ["bǣr", "bēr"],
+        "form-canon": "bier",
+        "type": "noun",
+        "gloss": "bier",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "ġe-bǣran",
+        "form-raw": "ġe-bǣr|an",
+        "type": "noun",
+        "gloss": "[behave] or [conduct] (oneself)",
+        "tags": ["intransitive", "no-gen"],
+        "origin": "old-english",
+        "notes": "no-gen because I don't think I can use this kind of verb well"
+    }, {
+        "key": "ġe-bǣre",
+        "form-raw": "ġe-bǣre",
+        "type": "noun",
+        "gloss": ["[demeanor], [bearing]"],
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "byrnan",
+        "form-raw": "byrn|an",
+        "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
+        "type": "noun",
+        "gloss": "burn",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "bān",
         "form-raw": "bān",
         "form-canon": "bone",
@@ -438,6 +493,13 @@
         "type": "verb",
         "gloss": "[cease] or [abate]",
         "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "breahtm",
+        "form-raw": ["breahtm", "bearhtm", "byrhtm", "brehtm", "beorhtm", "bryhtm", "beorht"],
+        "type": "noun",
+        "gloss": ["[noise], [clamor]", "tumult", "[music] and [revelry]"],
+        "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "brecan",
@@ -1882,6 +1944,13 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "iġil",
+        "form-raw": "iġil",
+        "type": "noun",
+        "gloss": "porcupine",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
         "key": "īren",
         "form-raw": "īren",
         "form-canon": "iron",
@@ -2562,6 +2631,26 @@
         "type": "verb",
         "gloss": "sit",
         "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "slæc",
+        "form-raw": "slæc",
+        "form-raw-alt": ["sleac", "slec"],
+        "form-canon": "slack",
+        "type": "verb",
+        "gloss": "slack",
+        "gloss-alt": ["[inactive] or [lazy]"],
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "'slec' appears Anglian, not sure about others"
+    }, {
+        "key": "sleċċan",
+        "form-raw": "sleċċ|an",
+        "form-raw-alt": ["slæċċ|an"],
+        "form-canon": "sletch",
+        "type": "verb",
+        "gloss": "[slacken] or [abate]",
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "smēaġan-intransitive",
