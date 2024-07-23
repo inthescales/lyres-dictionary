@@ -40,6 +40,7 @@ def from_me_phonemes(phonemes, config):
 
         is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
         precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "lð", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'. Adding 'lð' as an alternation for 'ld'.
+        precedes_blocking_digraph = phone.is_vowel() and next1 and next1.value in ["tʃ", "dʒ", "x"] # Some digraphs prevent silent-e vowel spellings
 
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
@@ -129,12 +130,15 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ɛ":
             result += "e"
         elif phone.value == "ɛː":
-            roll = often("Orth:ɛː->ea/eCV", config)
-            if roll == "ea":
+            if precedes_blocking_digraph:
                 result += "ea"
-            elif roll == "eCV":
-                result += "e"
-                insert_lengthening_e = True
+            else:
+                roll = often("Orth:ɛː->ea/eCV", config)
+                if roll == "ea":
+                    result += "ea"
+                elif roll == "eCV":
+                    result += "e"
+                    insert_lengthening_e = True
         elif phone.value == "i":
             if next1:
                 result += "i"
@@ -145,7 +149,7 @@ def from_me_phonemes(phonemes, config):
             and ( \
                 (next1.is_consonant() and next2 and next2.is_consonant()) \
                 or next1.is_geminate() \
-                or next1.value in ["tʃ"]
+                or precedes_blocking_digraph
             ):
             # TODO: Handle the case of 'weird'
             result += "i"
@@ -169,8 +173,8 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ɔ":
             result += "o"
         elif phone.value == "ɔː":
-            if precedes_lengthening_cluster:
-                # Homorganic lengthening clusters don't take digraphs (usually)
+            if precedes_lengthening_cluster or precedes_blocking_digraph:
+                # Consonant clusters don't take digraphs (usually)
                 result += "o"
             elif is_vowel_open:
                 # Open syllables don't need a digraph or an inserted vowel (but add one for schwa resolution)

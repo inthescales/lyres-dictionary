@@ -365,6 +365,16 @@
         "gloss": "different",
         "origin": "old-english"
     }, {
+        "key": "bēacn",
+        "form-raw": "bēacn",
+        "form-raw-alt": ["bēacen", "bīecen", "bēcen", "bēcon", "bēcun"],
+        "form-canon": "beacon",
+        "type": "noun",
+        "gloss": "signal",
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Forms in 'bē-' are Anglian. Modern form appears to be derived from WS form."
+    }, {
         "key": "bǣl",
         "form-raw": "bǣl",
         "form-canon": "bale",
@@ -477,6 +487,38 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Not sure how much this actually appears in OE. It's in Bright's, but not Bosworth. Adding it in any case for kicks."
+    }, {
+        "key": "bāt",
+        "form-raw": "bāt",
+        "form-canon": "boat",
+        "type": "noun",
+        "gloss": "boat",
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "baþian",
+        "form-raw": "baþi|an",
+        "form-canon": "bathe",
+        "type": "verb",
+        "gloss": "bathe",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "beadu",
+        "form-raw": ["beadu", "badu"],
+        "type": "noun",
+        "gloss": "battle",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bēag",
+        "form-raw": "bēag",
+        "form-raw-alt": ["bēah"],
+        "type": "noun",
+        "gloss": "ring",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "Alt. meaning of other circular pieces of jewelry. Armlet 'earmbēag', crown 'hēafodbēag', etc."
     }, {
         "key": "belgan",
         "form-raw": "belg|an",
@@ -709,7 +751,7 @@
         "form-canon": "churl",
         "type": "noun",
         "gloss": "low-class [person]",
-        "gloss-alt": "man",
+        "gloss-alt": ["man", "husband"],
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
@@ -2539,6 +2581,14 @@
         "type": "noun",
         "gloss": "number",
         "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "rinc",
+        "form-raw": "rinc",
+        "form-canon": "rink",
+        "type": "noun",
+        "gloss": ["man", "hero"],
+        "tags": ["count", "concrete", "living", "person", "obscure"],
         "origin": "old-english"
     }, {
         "key": "rinnan",
