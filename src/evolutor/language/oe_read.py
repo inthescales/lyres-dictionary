@@ -97,7 +97,7 @@ def get_phonemes(graphs):
     phonemes = []
     stress_count = 0 # 0: unstressed, 1: next vowel will be stressed, 2: vowel is stressed
     inflectional = False
-    derivational = False
+    derivational = None
 
     if count_syllables(graphs) == 1 or "'" not in graphs:
         stress_count = 1
@@ -109,12 +109,12 @@ def get_phonemes(graphs):
 
         if graphs[i] == "|":
             inflectional = True
-            derivational = False
+            derivational = None
             continue
 
         if graphs[i] == "+":
             inflectional = False
-            derivational = True
+            derivational = "".join(graphs[i+1:]).split("+")[0]
             continue
 
         if graphs[i] == ".":

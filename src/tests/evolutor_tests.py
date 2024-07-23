@@ -732,7 +732,8 @@ class EvolutorTests(unittest.TestCase):
         # ... I think we want to leave it if there's a non-digraphic long vowel in the preceding syllable
         check("open", "open")
 
-        # ...forms incorporating a derivational ending in 'en' should maintain that spelling
+        # ...forms incorporating a derivational ending with a vowel should maintain that spelling
+        check("bast+ard", "bastard")
         check("byrð+en", "burden", overrides=[["SVC:y->i/e/u", "u"], ["DThA:ðe->de", True]])
         check("mæġd+en", "maiden")
         check("fyx+en", "fixen", overrides=[["SVC:y->i/e/u", "i"]]) # Hypothetical midlands form

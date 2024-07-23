@@ -469,6 +469,15 @@
         "origin": "old-english",
         "notes": "MnE has 'bair' from Scots, as well as an obsolete 'barn'. Leaving without canon form to do what it wants"
     }, {
+        "key": "bastard",
+        "form-raw": "bast+ard",
+        "form-canon": "bastard",
+        "type": "noun",
+        "gloss": "bastard",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Not sure how much this actually appears in OE. It's in Bright's, but not Bosworth. Adding it in any case for kicks."
+    }, {
         "key": "belgan",
         "form-raw": "belg|an",
         "form-canon": "bellow",

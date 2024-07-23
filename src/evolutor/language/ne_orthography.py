@@ -1,5 +1,7 @@
 from random import Random
 
+import src.utils.helpers as helpers
+
 from src.evolutor.engine.hinges import often, even, occ, hinge
 
 def from_me_phonemes(phonemes, config):
@@ -218,15 +220,22 @@ def from_me_phonemes(phonemes, config):
             else:
                 result += "ow"
         elif phone.value == "ə":
-            if next1.value == "x":
+            if phone.derivational != None:
+                # Incorporated derivational endings keep their vowel
+                # e.g. -en ('maiden', 'vixen'), -ard ('bastard', 'wizard')
+                vowels = [char for char in phone.derivational if helpers.is_vowel(char, True)]
+                if len(vowels) > 0:
+                    result += vowels[0]
+                else:
+                    result += "e"
+            elif next1.value == "x":
                 # Very few examples of this, but '-egh' feels wrong to me
                 # Also influenced by Crowley's handling of 'ambeht' -> 'ambight' I suppose
                 result += "i"
             elif not next2:
                 if next1.value in ["m", "n", "w"] \
                     and prev and prev.value != "v" \
-                    and not would_have_inserted_lengthening_e \
-                    and not phone.derivational:
+                    and not would_have_inserted_lengthening_e:
                     # Words ending in 'm', 'n', or 'w' usually take 'o'
                     result += "o"
                 elif next1.value == "k":
