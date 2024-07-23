@@ -117,6 +117,14 @@
         "derive-from": "adj",
         "derive-to": "verb",
         "gloss": "[become] %@",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "e"
+                }
+            },
+            "form-final": "n"
+        }],
         "tags": ["intransitive"],
         "origin": "old-english",
         "notes": "Became common only in ME, but has roots in OE and ON"
@@ -546,6 +554,22 @@
             },
             "gloss": "the state or condition of %part"
         }],
+        "origin": "old-english"
+    }, {
+        "key": "-ric",
+        "form-stem": "ric",
+        "form-raw": "rīc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the domain ruled by %sg",
+        "tags": ["mass", "abstract"],
+        "requires": {
+            "follows": {
+                "has-tag": "ruler"
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-sċipe-adj",

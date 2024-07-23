@@ -119,6 +119,7 @@ class EvolutorTests(unittest.TestCase):
         check("cēpte", "kept")
         check("mētte", "met")
         # check("bēcn|an", "beckon") # TODO: Figure out conflict between trisyllabic laxing, pre-cluster shortening, and vowel insertion
+        # check("wæcn|an", "waken"") # TODO: Figure this out too. I suspect it might be assimilated to 'wake'?
         # check("clǣnsi|an", "cleanse") # OED: "The modern spelling cleanse seems to be artificial, assimilated to clean"
         check("flǣsċ", "flesh", overrides=[["PCS:ɛː->a", False]])
         check("lǣssa", "less", overrides=[["PCS:ɛː->a", False]])

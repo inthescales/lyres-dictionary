@@ -15,6 +15,14 @@
         "origin": "old-english",
         "notes": "Consider pseudocanon form 'eggwort'"
     }, {
+        "key": "āþ-briċe",
+        "form-raw": "āþ-briċe",
+        "form-canon": "oath-breach",
+        "type": "adj",
+        "gloss": ["the [breaking] of promises", "perjury"],
+        "tags": ["uncountable", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "candel-trēo",
         "form-raw": "candel-trēo",
         "form-canon": "candletree",

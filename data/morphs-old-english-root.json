@@ -154,7 +154,7 @@
         "form-canon": "abbot",
         "type": "noun",
         "gloss": "abbot",
-        "tags": ["count", "concrete", "living", "person", "role"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "abbudisse",
@@ -162,7 +162,7 @@
         "form-canon": "abbess",
         "type": "noun",
         "gloss": "abbess",
-        "tags": ["count", "concrete", "living", "person", "role"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "āc",
@@ -358,6 +358,13 @@
         "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "āþer",
+        "form-raw": "āþer",
+        "form-canon": "other",
+        "type": "adj",
+        "gloss": "different",
+        "origin": "old-english"
+    }, {
         "key": "bān",
         "form-raw": "bān",
         "form-canon": "bone",
@@ -525,6 +532,15 @@
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "Bosworth has long vowels here"
+    }, {
+        "key": "cald",
+        "form-raw": "cald",
+        "form-raw-alt": ["ċeald"],
+        "form-canon": "cold",
+        "type": "adj",
+        "gloss": "cold",
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian, and ancestor of modern form. 'ċeald' is southern form"
     }, {
         "key": "calic",
         "form-raw": "cælċ",
@@ -871,7 +887,7 @@
     }, {
         "key": "dryht",
         "form-raw": "dryht",
-        "type": "verb",
+        "type": "noun",
         "gloss": ["[army] or [troop]", "large [crowd]"],
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
@@ -1112,10 +1128,9 @@
         "form-canon": "fee",
         "type": "noun",
         "gloss": "fee",
-        "gloss-alt": "money",
         "tags": ["count", "abstract"],
         "origin": "old-english",
-        "notes": "Form influenced by Anglo-French 'fee'"
+        "notes": "Form influenced by Anglo-French 'fee'. Alt. meaning 'money', but needs countability distinction"
     }, {
         "key": "feohtan",
         "form-raw": "feoht|an",
@@ -1448,7 +1463,7 @@
         "type": "noun",
         "gloss": "product",
         "gloss-alt": "payment",
-        "tags": ["mass", "abstract", "obscure"],
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "ġieldan",
@@ -1857,6 +1872,15 @@
         "gloss": "vain, useless",
         "origin": "old-english",
         "notes": "OE sense 'empty', MnE sense 'inactive'"
+    }, {
+        "key": "īdlian",
+        "form-raw": "īdl|an",
+        "form-raw-alt": ["ȳdli|an"],
+        "form-canon": "idle",
+        "type": "verb",
+        "gloss": "[be] idle",
+        "tags": ["intransitive"],
+        "origin": "old-english"
     }, {
         "key": "īren",
         "form-raw": "īren",
@@ -2581,6 +2605,23 @@
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
+        "key": "spendan",
+        "form-raw": "spend|an",
+        "form-canon": "spend",
+        "type": "verb",
+        "gloss": "spend",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "springan",
+        "form-raw": "spring|an",
+        "form-canon": "spring",
+        "type": "verb",
+        "gloss": ["leap", "[burst] forth (as a fluid)"],
+        "gloss-alt": ["[grow] (as a plant)"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "stān",
         "form-raw": "stān",
         "form-canon": "stone",
@@ -2597,12 +2638,35 @@
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "standan",
+        "form-raw": "stand|an",
+        "form-canon": "stand",
+        "type": "verb",
+        "gloss": "stand",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "stelan",
         "form-raw": "stel|an",
         "form-canon": "steal",
         "type": "verb",
         "gloss": "steal",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "stellan",
+        "form-raw": "stell|an",
+        "form-canon": "stell",
+        "type": "verb",
+        "gloss": ["[put] in place", "[set] up or [mount]", "[show] or [portray]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "stīgan",
+        "form-raw": "stīg|an",
+        "type": "verb",
+        "gloss": ["climb", "ascend"],
+        "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "stingan",
@@ -2622,11 +2686,34 @@
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
+        "key": "streċċan",
+        "form-raw": "streċċ|an",
+        "form-canon": "stretch",
+        "type": "verb",
+        "gloss": "stretch",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "styrian",
+        "form-raw": "styr|an",
+        "form-canon": "stir",
+        "type": "verb",
+        "gloss": "move",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "sūr",
         "form-raw": "sūr",
         "form-canon": "sour",
         "type": "adj",
         "gloss": "sour",
+        "origin": "old-english"
+    }, {
+        "key": "swamian",
+        "form-raw": "swam|an",
+        "type": "verb",
+        "gloss": "[become] dark",
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "swarian",
@@ -2636,6 +2723,32 @@
         "tags": ["intransitive"],
         "origin": "old-english",
         "notes": "Form is not directly attested, but implied in OE 'andswarian' et al., and ME 'swaren'"
+    }, {
+        "key": "swebban-intransitive",
+        "form-raw": "sebb|an",
+        "form-canon": "sweb",
+        "type": "verb",
+        "gloss": "[swoon] or [faint]",
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "swebban-transitive",
+        "form-raw": "sebb|an",
+        "form-canon": "sweb",
+        "type": "verb",
+        "gloss": ["[put] or [lull] to sleep", "kill"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "swefn",
+        "form-raw": "swefn",
+        "form-canon": "sweven",
+        "type": "noun",
+        "gloss": "dream",
+        "gloss-alt": ["vision"],
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english",
+        "notes": "Alt. meaning 'sleep'"
     }, {
         "key": "swīn",
         "form-raw": "swīn",
@@ -2662,6 +2775,49 @@
         "gloss-tool": "[play] a board game",
         "tags": ["count", "concrete", "man-made", "obscure"],
         "origin": "old-english"
+    }, {
+        "key": "tēon",
+        "form-raw": "tē|on",
+        "form-canon": "tee",
+        "type": "verb",
+        "gloss": ["[pull] or [drag]", "[bring] or [lead]", "educate"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "timbran",
+        "form-raw": "timbran|an",
+        "form-canon": "timber",
+        "type": "verb",
+        "gloss": "[build] (from wood)",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "timber-count",
+        "form-raw": "timber",
+        "form-canon": "timber",
+        "type": "noun",
+        "gloss": "building",
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "timber-mass",
+        "form-raw": "timber",
+        "form-canon": "timber",
+        "type": "noun",
+        "gloss": ["[trees] or [wood]", "[wood] suitable for building"],
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "tȳrian",
+        "form-raw": "tȳri|an",
+        "form-raw-alt": ["tēori|an"],
+        "form-canon": "tire",
+        "type": "verb",
+        "gloss": "[become] tired",
+        "gloss-alt": ["faint", "fail", "cease"],
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Needs bitransitivity. Alt form may be more standard in OE"
     }, {
         "key": "tin",
         "form-raw": "tin",
@@ -2711,12 +2867,61 @@
         "tags": ["obscure"],
         "notes": "Other meanings in dialect"
     }, {
+        "key": "þeġn-ruler",
+        "form-raw": "þeġn",
+        "form-canon": "thane",
+        "type": "noun",
+        "gloss": "lesser [lord]",
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "þeġn",
+        "form-raw": "þeġn",
+        "type": "noun",
+        "gloss": ["servant", "officer", "official"],
+        "tags": ["count", "concrete", "living", "person", "role", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "þeġnian",
+        "form-raw": "þeġni|an",
+        "form-raw-alt": ["þēn|ian"],
+        "type": "verb",
+        "gloss": "serve",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "þencan",
+        "form-raw": "þenc|an",
+        "form-canon": "think",
+        "type": "verb",
+        "gloss": "think",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "þennan",
+        "form-raw": "þenn|an",
+        "form-raw-alt": ["þēn|ian"],
+        "type": "verb",
+        "gloss": ["[stretch] out or [extend]", "[bend] (a bow)", "[prostrate] oneself", "[exert] oneself"],
+        "gloss-alt": ["overthrow"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "þēod",
         "form-raw": "þēod",
         "type": "noun",
         "gloss": ["[nation] or [people]", "language"],
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
+    }, {
+        "key": "þēostrian",
+        "form-raw": "þēostri|an",
+        "form-raw-alt": ["þīestri|an", "þȳstri|an"],
+        "type": "verb",
+        "gloss": ["darken", "[become] dark"],
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Alternate listed meaning 'to dim the sight'"
     }, {
         "key": "þēow",
         "form-raw": "þēow",
@@ -2759,11 +2964,65 @@
         "origin": "old-english",
         "notes": "Original meaning 'twist, turn, writhe, curl'. Strong verb: þreow, past participle þrawen, geþrawen"
     }, {
+        "key": "þwēan",
+        "form-raw": "þwē|an",
+        "type": "verb",
+        "gloss": "wash",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "þynne",
         "form-raw": "þynne",
         "form-canon": "thin",
         "type": "adj",
         "gloss": "thin",
+        "origin": "old-english"
+    }, {
+        "key": "wæċċan",
+        "form-raw": "wæċċ|an",
+        "form-raw-alt": "weċċ|an",
+        "form-canon": "watch",
+        "type": "verb",
+        "gloss": "watch",
+        "gloss-alt": ["wake", "[remain] awake", "[stand] guard"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Needs some form of bitransitivity"
+    }, {
+        "key": "wæcnan",
+        "form-raw": "wæcn|an",
+        "form-canon": "waken",
+        "type": "verb",
+        "gloss": "[wake] up",
+        "gloss-alt": ["[come] into being"],
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "I speculate form is patterned after 'wake' (see 'wacan' and 'wacian')"
+    }, {
+        "key": "wǣgan",
+        "form-raw": "wǣg|an",
+        "type": "verb",
+        "gloss": ["deceive", "[harass] or [afflict]"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Two entries in Bosworth. Maybe merger of two etymons?"
+    }, {
+        "key": "wacan",
+        "form-raw": "wac|an",
+        "form-canon": "wake",
+        "type": "verb",
+        "gloss": "[wake] up",
+        "gloss-alt": ["arise", "originate", "[be] born"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "wacian",
+        "form-raw": "waci|an",
+        "form-canon": "wake",
+        "type": "verb",
+        "gloss": "[be] or [remain] awake",
+        "gloss-alt": ["[keep] watch"],
+        "tags": ["intransitive"],
         "origin": "old-english"
     }, {
         "key": "wænge",
@@ -2832,6 +3091,20 @@
         "origin": "old-english",
         "notes": "Canon forms 'weald' and 'wold' also exist"
     }, {
+        "key": "wearg",
+        "form-raw": ["warg", "weg", "wearg", "wearh"],
+        "type": "noun",
+        "gloss": ["criminal", "monster", "wolf"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "wyrġen",
+        "form-raw": ["wyrġen", "wierġen"],
+        "type": "noun",
+        "gloss": ["female [criminal]", "she-beast", "she-wolf"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
         "key": "wearr",
         "form-raw": "wearr",
         "type": "noun",
@@ -2848,12 +3121,39 @@
         "origin": "old-english",
         "notes": "Alternate meaning 'pledge, promise'"
     }, {
+        "key": "wegan",
+        "form-raw": "weg|an",
+        "form-canon": "weigh",
+        "type": "verb",
+        "gloss": "weight",
+        "gloss-alt": ["carry"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "TODO: I can't explain the spelling"
+    }, {
+        "key": "wēnan",
+        "form-raw": "wēn|an",
+        "type": "verb",
+        "gloss": "[hold] (of an opinion)",
+        "gloss-alt": ["[expect] or [hope]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "wendan",
+        "form-raw": "wend|an",
+        "form-canon": "wend",
+        "type": "verb",
+        "gloss": "[go] by indirect route",
+        "gloss-alt": ["turn", "change", "translate", "happen", "depart"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "weorpan",
         "form-raw": "weorp|an",
         "form-canon": "warp",
         "type": "verb",
         "gloss": "warp",
-        "gloss-alt": "throw",
+        "gloss-alt": ["throw"],
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "Strong verb: weorpan, wearp, wurpon, worpen."
@@ -3006,6 +3306,31 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "wreċċan",
+        "form-raw": "wreċċ|an",
+        "type": "verb",
+        "gloss": "[awaken] or [arouse]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "wrītan",
+        "form-raw": "wrīt|an",
+        "form-canon": "write",
+        "type": "verb",
+        "gloss": "write",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "wunian",
+        "form-raw": "wuni|an",
+        "form-canon": "wone",
+        "type": "verb",
+        "gloss": "[stay] or [dwell] in a place",
+        "gloss-alt": ["[be] in a certain condition", "[be] located somewhere", "[remain], [last]", "endure", "exist"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "TODO: Investigate this vowel change"
+    }, {
         "key": "wudu-material",
         "form-raw": "wudu",
         "form-canon": "wood",
@@ -3052,6 +3377,16 @@
         "gloss": "injure",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
+    }, {
+        "key": "wyrġan",
+        "form-raw": "wyrġ|an",
+        "form-canon": "worry",
+        "type": "verb",
+        "gloss": "worry",
+        "gloss-alt": ["strangle"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "TODO: currently I get 'wory'. Should this be changed somehow?"
     }, {
         "key": "wyrm",
         "form-raw": "wyrm",

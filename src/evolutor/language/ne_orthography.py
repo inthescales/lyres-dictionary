@@ -376,12 +376,12 @@ def from_me_phonemes(phonemes, config):
         elif not next1 and result[-1] != "e" \
             and ( \
                 phone.value == "v" \
-                or (phone.value == "ð" and not (prev and prev.is_consonant())) \
+                or (phone.value == "ð" and not (prev and prev.is_consonant() or prev.is_short())) \
                 or (phone.value == "z" and not (prev and prev.is_nasal())) \
             ):
             # Certain voiced fricatives ('v', 's' as /z/) shouldn't end a word
             # Exceptions:
-            # - consonant + /ð/, as in 'earth' (hope this doesn't cause problems later, but works for now)
+            # - consonant + /ð/, as in 'earth', short vowel + /ð/, as in 'arveth' (TODO: would it make sense to devoice the fricative?)
             # - nasal + /z/, as in 'alms'
             result += "e"
         
