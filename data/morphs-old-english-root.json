@@ -397,6 +397,42 @@
         "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "bǣtan",
+        "form-raw": "bǣtan",
+        "form-canon": "bridle",
+        "type": "noun",
+        "gloss": "bridle",
+        "gloss-tool": "[fit] with a bridle",
+        "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bæþ",
+        "form-raw": "bæþ",
+        "form-canon": "bath",
+        "type": "noun",
+        "gloss": "bath",
+        "tags": ["count", "concrete", "man-made", "terrain"],
+        "origin": "old-english",
+        "notes": "Alternate meaning 'immersion'"
+    }, {
+        "key": "bald",
+        "form-raw": "bald",
+        "form-raw-alt": ["beald"],
+        "form-canon": "bold",
+        "type": "adj",
+        "gloss": "brave",
+        "origin": "old-english",
+        "notes": "Chosen form appears to be Anglian"
+    }, {
+        "key": "baldor",
+        "form-raw": "baldor",
+        "form-raw-alt": ["bealdor"],
+        "type": "noun",
+        "gloss": ["lord", "prince"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative"],
+        "origin": "old-english",
+        "notes": "Chosen form appears to be Anglian"
+    }, {
         "key": "bān",
         "form-raw": "bān",
         "form-canon": "bone",
@@ -404,6 +440,34 @@
         "gloss": "bone",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
+    }, {
+        "key": "bana",
+        "form-raw": "bana",
+        "form-canon": "bane",
+        "type": "noun",
+        "gloss": ["harm", "poison", "[death] or [destruction]"],
+        "gloss-alt": ["murderer", "[cause] of death"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english",
+        "notes": "TODO: unpack these meanings for semantics like poison/liquid, murderer/person"
+    }, {
+        "key": "bannan",
+        "form-raw": "bann|an",
+        "form-canon": "ban",
+        "type": "verb",
+        "gloss": "[summon], [gather] together",
+        "gloss-alt": ["proclaim", "[call] out"],
+        "tags": ["transitive", "obscure", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "barn",
+        "form-raw": "barn",
+        "form-raw-alt": ["bearn"],
+        "type": "noun",
+        "gloss": "[child], [baby]",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "MnE has 'bair' from Scots, as well as an obsolete 'barn'. Leaving without canon form to do what it wants"
     }, {
         "key": "belgan",
         "form-raw": "belg|an",
@@ -472,6 +536,14 @@
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "brego",
+        "form-raw": "brego",
+        "form-raw-alt": ["bealdor"],
+        "type": "noun",
+        "gloss": ["lord", "prince", "ruler"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare"],
+        "origin": "old-english"
+    }, {        
         "key": "breahtm",
         "form-raw": ["breahtm", "bearhtm", "byrhtm", "brehtm", "beorhtm", "bryhtm", "beorht"],
         "type": "noun",
@@ -601,7 +673,7 @@
         "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
     }, {
         "key": "ċeariġ",
-        "form-raw": "ċeariġ",
+        "form-raw": "ċear+iġ",
         "form-canon": "chary",
         "type": "adj",
         "gloss": "[cautious] or [circumspect]",
@@ -877,7 +949,7 @@
         "origin": "old-english"
     }, {
         "key": "dohtiġ",
-        "form-raw": "dohtiġ",
+        "form-raw": "doht+iġ",
         "form-canon": "doughty",
         "type": "adj",
         "gloss": "[brave], [determined]",
@@ -982,7 +1054,7 @@
         "notes": "I can't find any actual source for 'dwearg', but it matches Tolkien's 'dwarrow' so I'm keeping it, fuck it"
     }, {
         "key": "dysiġ",
-        "form-raw": "dysiġ",
+        "form-raw": "dys+iġ",
         "form-canon": "dizzy",
         "type": "adj",
         "gloss": "dizzy",
@@ -2994,6 +3066,14 @@
         "type": "verb",
         "gloss": "think",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "þenġel",
+        "form-raw": "þenġel",
+        "form-raw-alt": ["fenġel"],
+        "type": "noun",
+        "gloss": ["lord", "prince"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare"],
         "origin": "old-english"
     }, {
         "key": "þennan",

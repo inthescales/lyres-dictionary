@@ -37,7 +37,7 @@ def from_me_phonemes(phonemes, config):
             next3 = phonemes[i + 3]
 
         is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
-        precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'
+        precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "lð", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'. Adding 'lð' as an alternation for 'ld'.
 
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
