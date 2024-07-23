@@ -268,7 +268,7 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                     # If word ends in a silent e, and suffix begins with a vowel, drop the e
                     form = form[:-1]
             elif helpers.is_consonant(addition[0]):
-                if form[-2] == form[-1] and form[-1] == addition[0]:
+                if len(form) >= 2 and form[-2] == form[-1] and form[-1] == addition[0]:
                     # Eliminate triple consonants
                     # Possible alternative: use a dash, as in 'burgess-ship'
                     form = form[:-1]

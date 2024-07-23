@@ -375,6 +375,17 @@
         "origin": "old-english",
         "notes": "Forms in 'bē-' are Anglian. Modern form appears to be derived from WS form."
     }, {
+        "key": "bēcnan",
+        "form-raw": "bēcn|an",
+        "form-raw-alt": ["bīecn|an", "bīcn|an", "bȳcn|an"],
+        "form-canon": "beckon",
+        "type": "verb",
+        "gloss": "beckon",
+        "gloss-alt": ["[show] or [indicate]"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Wiktionary indicates that modern form 'beckon' is via Anglian 'bēcnan', but I can't make it work"
+    }, {
         "key": "bǣl",
         "form-raw": "bǣl",
         "form-canon": "bale",
@@ -520,12 +531,86 @@
         "origin": "old-english",
         "notes": "Alt. meaning of other circular pieces of jewelry. Armlet 'earmbēag', crown 'hēafodbēag', etc."
     }, {
+        "key": "bealu",
+        "form-raw": "bealu",
+        "form-raw-alt": ["balu", "bealo"],
+        "form-canon": "bale",
+        "type": "noun",
+        "gloss": ["[harm] or [evil]"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "bēam",
+        "form-raw": "bēam",
+        "form-canon": "beam",
+        "type": "noun",
+        "gloss": ["beam", "tree"],
+        "tags": ["count", "concrete", "living", "plant", "material"],
+        "origin": "old-english",
+        "notes": "Alt. meaning 'gallows'"
+    }, {
+        "key": "bearm",
+        "form-raw": "bearm",
+        "form-canon": "barm",
+        "type": "noun",
+        "gloss": "[bosom], [lap]",
+        "tags": ["count", "concrete", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "bearo",
+        "form-raw": "bearo",
+        "type": "noun",
+        "gloss": "[forest] or [grove]",
+        "tags": ["count", "concrete", "terrain", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bēatan",
+        "form-raw": "bēat|an",
+        "form-canon": "beat",
+        "type": "verb",
+        "gloss": "beat",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "bed",
+        "form-raw": "bed",
+        "form-canon": "bed",
+        "type": "noun",
+        "gloss": "bed",
+        "gloss-tool": "[go] to bed",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english",
+        "notes": "TODO: Add second tool gloss for sexual sense"
+    }, {
+        "key": "ġe-bed",
+        "form-raw": ["ġe-bed", "ġe-bæd"],
+        "form-canon": "bede",
+        "type": "noun",
+        "gloss": ["prayer", "request"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "bēdan",
+        "form-raw": "bēd|an",
+        "type": "verb",
+        "gloss": "compel",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "In Bright, but not wiktionary or Bosworth. Who knows?"
+    }, {
+        "key": "bēhþ",
+        "form-raw": "bēhþ",
+        "type": "noun",
+        "gloss": ["[sign] of something", "[proof] of something"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "belgan",
         "form-raw": "belg|an",
         "form-canon": "bellow",
         "type": "verb",
         "gloss": "bellow",
-        "gloss-alt": "[swell] with anger",
+        "gloss-alt": ["[swell] with anger", "[be] angry"],
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
@@ -537,6 +622,31 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "bēn",
+        "form-raw": "bēn",
+        "form-canon": "bene",
+        "type": "noun",
+        "gloss": ["prayer", "request", "boon"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "benn",
+        "form-raw": "benn",
+        "type": "noun",
+        "gloss": "wound",
+        "tags": ["count", "concrete", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "benċ",
+        "form-raw": "benċ",
+        "form-canon": "bench",
+        "type": "noun",
+        "gloss": "bench",
+        "gloss-tool": "[put] on a bench",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english",
+        "notes": "Add tool gloss for 'sit on a bench'"
+    }, {
         "key": "bēodan",
         "form-raw": "bēod|an",
         "form-canon": "bede",
@@ -546,6 +656,67 @@
         "origin": "old-english",
         "notes": "Original meaning 'offer, give' and 'proclaim, announce'"
     }, {
+        "key": "ġe-bēor",
+        "form-raw": "ġe-bēor",
+        "type": "noun",
+        "gloss": ["drinking [companion]", "guest", "drinker"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "beorg",
+        "form-raw": "beorg",
+        "form-canon": "barrow",
+        "type": "noun",
+        "gloss": ["[hill] or [mountain]", "mound"],
+        "tags": ["count", "concrete", "terrain", "obscure"],
+        "origin": "old-english",
+        "notes": "Wiktionary indicates northern form 'bargh'"
+    }, {
+        "key": "beorgan",
+        "form-raw": "beorg|an",
+        "type": "verb",
+        "gloss": ["[protect], [defend]", "fortify", "[take] shelter", "[save], [deliver]", "spare"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "beorn",
+        "form-raw": "beorn",
+        "type": "noun",
+        "gloss": ["man", "hero"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "bēot",
+        "form-raw": "bēot",
+        "type": "noun",
+        "gloss": ["promise", "boast"],
+        "tags": ["count", "abstract", "man-made", "obscure"],
+        "origin": "old-english",
+        "notes": "Wiktionary indicates a modern descendent of the same form, but I'm suspicious"
+    }, {
+        "key": "bēotian",
+        "form-raw": "bēot|ian",
+        "type": "verb",
+        "gloss": ["vow", "promise", "boast", "threaten"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bera",
+        "form-raw": "bera",
+        "form-canon": "bear",
+        "type": "noun",
+        "gloss": "bear",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "beran",
+        "form-raw": "ber|an",
+        "form-canon": "bear",
+        "type": "verb",
+        "gloss": "bear",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "berġan",
         "form-raw": "berġ|an",
         "form-raw-alt": ["bierġ|an", "byrġ|an"],
@@ -554,6 +725,31 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Chosen form is Anglian, alternates WS"
+    }, {
+        "key": "berstan",
+        "form-raw": "berst|an",
+        "form-canon": "burst",
+        "type": "verb",
+        "gloss": "burst",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "be-smirwan",
+        "form-raw": "be-smirw|an",
+        "form-raw-alt": ["be-smyrw|an", "be-smierw|an"],
+        "form-canon": "besmear",
+        "type": "verb",
+        "gloss": "[smear] all over",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bētan",
+        "form-raw": "bēt|an",
+        "form-canon": "beet",
+        "type": "verb",
+        "gloss": ["improve", "atone", "[make] a fire"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "bīdan",
         "form-raw": "bīd|an",
@@ -571,12 +767,90 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "bifian",
+        "form-raw": "bifi|an",
+        "type": "verb",
+        "gloss": "[shake] or [tremble]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bil",
+        "form-raw": "bil",
+        "type": "noun",
+        "gloss": "sword",
+        "gloss-tool": "[fight] with a sword",
+        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
+        "origin": "old-english"
+    }, {
+        "key": "ġe-bind",
+        "form-raw": "ġe-bind",
+        "type": "noun",
+        "gloss": ["binding", "bundle"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Would like to add gloss 'that which is bound together into a whole' but not sure how to handle countability'"
+    }, {
+        "key": "bindan",
+        "form-raw": "bind|an",
+        "form-canon": "bind",
+        "type": "verb",
+        "gloss": "bind",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "biṡċop",
+        "form-raw": "biṡċop",
+        "form-canon": "bishop",
+        "type": "noun",
+        "gloss": "bishop",
+        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
+        "origin": "old-english"
+    }, {
+        "key": "bīsn",
+        "form-raw": "bīsn",
+        "form-raw-alt": ["bȳsn", "bīsen", "bȳsen"],
+        "type": "noun",
+        "gloss": "example",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "There is a northern form 'bizen', apparently influenced by ON as well. Leaving canonless for now."
+    }, {
+        "key": "bȳsnian",
+        "form-raw": "bīsnian",
+        "form-raw-alt": ["bȳsni|an", "bīseni|an"],
+        "type": "verb",
+        "gloss": "[set] an example",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "bismer",
+        "form-raw": ["bismer", "bi-smer"],
+        "type": "noun",
+        "gloss": "[mockery] and [scorn]",
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "I'm not clear on whether this should be treated as a prefix or not. Using both for now"
+    }, {
+        "key": "bismerian",
+        "form-raw": ["bismeri|an", "bi-smeri|an"],
+        "type": "verb",
+        "gloss": ["mock", "blaspheme", "defame"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "bit",
         "form-raw": "bit",
         "form-canon": "bit",
         "type": "noun",
         "gloss": "small [quantity] of something",
         "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "biter",
+        "form-raw": "biter",
+        "form-canon": "bitter",
+        "type": "adj",
+        "gloss": "bitter",
         "origin": "old-english"
     }, {
         "key": "blinnan",
@@ -653,11 +927,11 @@
     }, {
         "key": "bryht",
         "form-raw": "bryht",
+        "form-raw-alt": ["beorht", "byrht"],
         "form-canon": "bright",
         "type": "adj",
         "gloss": "bright",
-        "origin": "old-english",
-        "notes": "alt forms 'beorht', 'byrht'"
+        "origin": "old-english"
     }, {
         "key": "būr",
         "form-raw": "būr",
@@ -1882,6 +2156,23 @@
         "tags": ["intransitive", "motion"],
         "origin": "old-english"
     }, {
+        "key": "hlēow",
+        "form-raw": "hlēow",
+        "form-canon": "lew",
+        "type": "adj",
+        "gloss": "[warm] or [sunny]",
+        "tags": ["obscure"],
+        "origin": "old-english",
+        "notes": "Chiefly Northern in modern usage"
+    }, {
+        "key": "hlēowþ",
+        "form-raw": "hlēow+þ",
+        "form-canon": "lewth",
+        "type": "noun",
+        "gloss": "[shelter], [protection]",
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "hlūd",
         "form-raw": "hlūd",
         "form-canon": "loud",
@@ -2230,7 +2521,7 @@
     }, {
         "key": "lēsan",
         "form-raw": "lēs|an",
-        "form-raw-alt": ["līes|an", "līsan", "lȳsan"],
+        "form-raw-alt": ["līes|an", "līs|an", "lȳs|an"],
         "form-canon": "lease",
         "type": "verb",
         "gloss": "[grant] use of",
@@ -2748,6 +3039,15 @@
         "origin": "old-english",
         "notes": "Reconstructed root. 'āseolcan' is attested. Chosen form is my own projected Anglian form."
     }, {
+        "key": "setl",
+        "form-raw": ["setl", "seatl", "seatul", "sedl", "seld", "seotul", "seþl", "seþel", "sitl", "setel"],
+        "type": "noun",
+        "gloss": ["seat", "residence"],
+        "gloss-alt": ["throne"],
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "Might have used canon form 'settle', but I feel like that applies more to the verb form"
+    }, {
         "key": "settan",
         "form-raw": "sett|an",
         "form-canon": "set",
@@ -2773,11 +3073,20 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "siþ",
+        "form-raw": "siþ",
+        "form-canon": "sith",
+        "type": "noun",
+        "gloss": "journey",
+        "gloss-alt": ["[point] in time", "lifetime"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "slæc",
         "form-raw": "slæc",
         "form-raw-alt": ["sleac", "slec"],
         "form-canon": "slack",
-        "type": "verb",
+        "type": "adj",
         "gloss": "slack",
         "gloss-alt": ["[inactive] or [lazy]"],
         "tags": ["intransitive"],
@@ -2907,6 +3216,16 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "stōl",
+        "form-raw": "stōl",
+        "form-canon": "stool",
+        "type": "noun",
+        "gloss": "stool",
+        "gloss-alt": ["seat"],
+        "gloss-tool": "[sit] on a stool",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
         "key": "stōw",
         "form-raw": "stōw",
         "form-canon": "stow",
@@ -3005,6 +3324,16 @@
         "tags": ["count", "concrete", "man-made", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "telg",
+        "form-raw": "telg",
+        "form-canon": ["tælg"],
+        "type": "noun",
+        "gloss": ["dye", "ink"],
+        "gloss-tool": ["[color] with dye or ink"],
+        "tags": ["mass", "concrete", "man-made", "tool"],
+        "origin": "old-english",
+        "notes": "TODO: add extra tool meaning"
+    }, {
         "key": "tēon",
         "form-raw": "tē|on",
         "form-canon": "tee",
@@ -3065,7 +3394,7 @@
         "form-canon": "tree",
         "type": "noun",
         "gloss": "tree",
-        "tags": ["count", "concrete", "plant", "material"],
+        "tags": ["count", "concrete", "living", "plant", "material"],
         "origin": "old-english"
     }, {
         "key": "tūn",
@@ -3619,7 +3948,7 @@
         "notes": "TODO: currently I get 'wory'. Should this be changed somehow?"
     }, {
         "key": "wyrġ+en",
-        "form-raw": ["wyrġen", "wierġen"],
+        "form-raw": ["wyrġ+en", "wierġ+en"],
         "type": "noun",
         "gloss": ["female [criminal]", "she-beast", "she-wolf"],
         "tags": ["count", "concrete", "living", "person"],
