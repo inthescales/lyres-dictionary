@@ -326,7 +326,6 @@ def from_me_phonemes(phonemes, config):
             result += "qu"
         elif phone.value == "ks":
             result += "x"
-            skip_next = True
         elif phone.value == "ʃ":
             result += "sh"
         elif phone.value == "tʃ":
@@ -367,7 +366,8 @@ def from_me_phonemes(phonemes, config):
             # Double non-final consonant after short vowel
             if phone.value == "k":
                 result = result[:-1] + ["ck"]
-            elif not (phone.value == "z" and len(result) and result[-1] == "s"):
+            elif not (phone.value == "z" and len(result) and result[-1] == "s") \
+                and phone.value not in ["ks"]:
                 result += result[-1]
         elif not next1 and result[-1] != "e" \
             and ( \
