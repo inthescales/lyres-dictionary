@@ -18,8 +18,11 @@ morphothec = None
 
 def setup():
     global morphothec
-    
+
     morphothec = Morphothec("data/")
+    print("Latin: " + str(morphothec.root_count_for_language("latin")))
+    print("Greek: " + str(morphothec.root_count_for_language("greek")))
+    print("Old English: " + str(morphothec.root_count_for_language("old-english")))
 
 def needs_setup():
     return morphothec == None

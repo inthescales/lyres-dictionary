@@ -320,15 +320,9 @@ def from_oe_phonemes(oe_phonemes, config):
     # 'hræfn' -> 'raven', 'fæþm' -> 'fathom', 'swealwe' -> 'swallow', etc.
     #
     # Also handles word-final metathesis in cases like 'blēddre' -> 'bladder'
-    #
-    # Currently not doing this if there's another consonant after these two, on the thought
-    # that CCVC is probably more pronouncible than CVCC (though maybe it would be more rigorous
-    # to check for homorganic and break to keep those together)
-    #
-    # As a note, I made this three-consonant change because 'bismeri|an' produced 'bisemr', which is obviously bad.
     def consonant_cluster_breaking(state):
         if all(phone.is_consonant() for phone in state.capture) \
-            and state.syllable_data.following_syllable_count == 0 \
+            and state.syllable_data.prev_vowel != None \
             and not (state.next and state.next.is_consonant()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_fricative()) \
@@ -378,6 +372,14 @@ def from_oe_phonemes(oe_phonemes, config):
             # Must occur before 'breaking'
             return [state.capture[1]]
 
+    # Cases of reanalysis
+    # TODO: Consider plural reanalysis dropping other final 's's
+    # TODO: Add loss of initial 'n' as in 'nadder' -> 'adder', 'napron' -> 'apron'
+    def reanalysis(state):
+        if state.current.value == "s" and state.current.derivational == "els":
+            # Words with the 'els' suffix (e.g. 'smyrels', 'rǣdels') are interpreted as plurals and lose their 's'
+            return []
+
     # ===========================================================================================================
 
     if config.verbose:
@@ -415,17 +417,12 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(trisyllabic_laxing, 1, "Trisyllabic laxing", config)
     rig.run_capture(open_syllable_lengthening, 1, "Open syllable lengthening", config)
 
-    # I moved these earlier a little bit ago in order to let cluster breaking know whether there will be a following vowel
-    # Let's see if that causes any problems
-    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
-    rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
-
     # The timing of these seems to be sensitive, but I don't fully understand it
     rig.run_capture(consonant_cluster_breaking, 2, "Break inconvenient final consonant clusters", config)
     rig.run_capture(pre_cluster_shortening, 1, "Pre-cluster shortening", config)
     
     # Later consonant changes
-
+    rig.run_capture(distinguish_voiced_fricatives, 1, "Distinguish voiced fricatives", config)
     rig.run_capture(reduction_of_double_consonants, 1, "Reduction of double consonants", config)
     rig.run_capture(drop_initial_h, 2, "Drop initial h", config)
     
@@ -433,8 +430,10 @@ def from_oe_phonemes(oe_phonemes, config):
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
     rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
 
-
     # Loss of final unstressed vowel
+    rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
 
+    # Later sound changes
+    rig.run_capture(reanalysis, 1, "Reanalysis", config)
 
     return rig.phonemes

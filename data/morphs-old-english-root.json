@@ -526,10 +526,9 @@
         "form-raw": "bēag",
         "form-raw-alt": ["bēah"],
         "type": "noun",
-        "gloss": "ring",
+        "gloss": ["ring", "[piece] of jewelry"],
         "tags": ["count", "abstract", "speculative"],
-        "origin": "old-english",
-        "notes": "Alt. meaning of other circular pieces of jewelry. Armlet 'earmbēag', crown 'hēafodbēag', etc."
+        "origin": "old-english"
     }, {
         "key": "bealu",
         "form-raw": "bealu",
@@ -601,9 +600,10 @@
         "key": "bēhþ",
         "form-raw": "bēhþ",
         "type": "noun",
-        "gloss": ["[sign] of something", "[proof] of something"],
-        "tags": ["count", "abstract"],
-        "origin": "old-english"
+        "gloss": ["[signs] of something", "[proof] of something"],
+        "tags": ["uncountable", "abstract"],
+        "origin": "old-english",
+        "notes": "TODO: Fix up the countability"
     }, {
         "key": "belgan",
         "form-raw": "belg|an",
@@ -734,13 +734,14 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "be-smirwan",
-        "form-raw": "be-smirw|an",
-        "form-raw-alt": ["be-smyrw|an", "be-smierw|an"],
-        "form-canon": "besmear",
+        "key": "smerian",
+        "form-raw": "smeri|an",
+        "form-raw-alt": ["smiri|an", "smyri|an", "smerw|an", "smirw|an", "smierw|an"],
+        "form-canon": "smear",
         "type": "verb",
-        "gloss": "[smear] all over",
-        "tags": ["intransitive", "speculative"],
+        "gloss": "smear",
+        "gloss-alt": ["[scorn] or [deride]"],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "bētan",
@@ -823,20 +824,15 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "bismer",
-        "form-raw": ["bismer", "bi-smer"],
+        "key": "bī-spell",
+        "form-raw": "bi-spell",
+        "form-canon": "byspell",
         "type": "noun",
-        "gloss": "[mockery] and [scorn]",
-        "tags": ["mass", "abstract", "speculative"],
+        "gloss": ["parable", "example"],
+        "gloss-tool": "[give] a parable",
+        "tags": ["count", "abstract", "man-made", "tool", "obscure"],
         "origin": "old-english",
-        "notes": "I'm not clear on whether this should be treated as a prefix or not. Using both for now"
-    }, {
-        "key": "bismerian",
-        "form-raw": ["bismeri|an", "bi-smeri|an"],
-        "type": "verb",
-        "gloss": ["mock", "blaspheme", "defame"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "notes": "TODO: Add more tool glosses when possible"
     }, {
         "key": "bit",
         "form-raw": "bit",
@@ -863,17 +859,16 @@
     }, {
         "key": "brego",
         "form-raw": "brego",
-        "form-raw-alt": ["bealdor"],
         "type": "noun",
         "gloss": ["lord", "prince", "ruler"],
-        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare", "homophonic"],
         "origin": "old-english"
     }, {        
         "key": "breahtm",
         "form-raw": ["breahtm", "bearhtm", "byrhtm", "brehtm", "beorhtm", "bryhtm", "beorht"],
         "type": "noun",
         "gloss": ["[noise], [clamor]", "tumult", "[music] and [revelry]"],
-        "tags": ["count", "abstract", "speculative"],
+        "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "brecan",
@@ -992,7 +987,7 @@
         "form-raw-alt": ["caliċ", "cæliċ", "ċeliċ", "ċelċ", "calċ"],
         "type": "noun",
         "gloss": ["chalice", "goblet"],
-        "gloss-tool": ["[pour] into a chalice"],
+        "gloss-tool": "[pour] into a chalice",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
@@ -1999,7 +1994,7 @@
         "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
     }, {
         "key": "gyd+en",
-        "form-raw": "gyden",
+        "form-raw": "gyd+en",
         "type": "noun",
         "gloss": "goddess",
         "tags": ["count", "concrete", "living", "person", "speculative"],
@@ -2494,6 +2489,27 @@
         "tags": ["mass", "concrete", "metal", "material"],
         "origin": "old-english"
     }, {
+        "key": "lēas-adj",
+        "form-raw": "lēas",
+        "type": "adj",
+        "gloss": ["false", "fictional"],
+        "tags": ["speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "lēas-noun",
+        "form-raw": "lēas",
+        "type": "noun",
+        "gloss": "lie",
+        "tags": ["count", "abstract", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "lēasian",
+        "form-raw": "lēasi|an",
+        "type": "adj",
+        "gloss": ["[tell] lies, [falsify]"],
+        "tags": ["intransitive", "obscure", "homophonic"],
+        "origin": "old-english"
+    }, {
         "key": "leċġan",
         "form-raw": "leċġ|an",
         "form-canon": "lay",
@@ -2764,7 +2780,8 @@
         "form-canon": "mill",
         "type": "noun",
         "gloss": "mill",
-        "tags": ["count", "concrete", "man-made"],
+        "gloss-tool": "grind",
+        "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "open",
@@ -2827,6 +2844,16 @@
         "tags": ["count", "abstract", "obscure", "rare"],
         "origin": "old-english",
         "notes": "Separated from 'rǣd' due to countability difference."
+    }, {
+        "key": "rǣdels",
+        "form-raw": "rǣd+els",
+        "form-canon": "riddle",
+        "type": "noun",
+        "gloss": "riddle",
+        "gloss-tool": "[tell] riddles",
+        "tags": ["mass", "abstract", "man-made", "tool"],
+        "origin": "old-english",
+        "notes": "TODO: Add another tool gloss for something else. 'confuse or perplex' maybe"
     }, {
         "key": "ræfnan",
         "form-raw": "ræfn|an",
@@ -2939,6 +2966,14 @@
         "type": "noun",
         "gloss": ["[secret] or [mystery]", "written [text]"],
         "tags": ["count", "concrete", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "sār",
+        "form-raw": "sār",
+        "form-canon": "sore",
+        "type": "adj",
+        "gloss": "sore",
+        "gloss-alt": ["wound"],
         "origin": "old-english"
     }, {
         "key": "sċanca",
@@ -3128,12 +3163,14 @@
         "origin": "old-english"
     }, {
         "key": "smyrels",
-        "form-raw": "smyrels",
+        "form-raw": "smyr+els",
         "form-canon": "smerl",
         "type": "noun",
         "gloss": "ointment",
-        "tags": ["mass", "concrete", "fluid", "liquid", "obscure"],
-        "origin": "old-english"
+        "gloss-tool": "anoint",
+        "tags": ["mass", "concrete", "man-made", "tool", "fluid", "liquid", "obscure"],
+        "origin": "old-english",
+        "notes": "TODO: Add another tool gloss for 'smear with ointment'"
     }, {
         "key": "sōð",
         "form-raw": "sōð",
@@ -3141,6 +3178,26 @@
         "type": "noun",
         "gloss": "truth",
         "tags": ["mass", "abstract", "quality"],
+        "origin": "old-english"
+    }, {
+        "key": "spell",
+        "form-raw": "spell",
+        "form-raw-alt": ["spel"],
+        "form-canon": "spell",
+        "type": "noun",
+        "gloss": ["magic [spell]"],
+        "gloss-alt": ["news", "story", "argument"],
+        "gloss-tool": "[cast] a spell",
+        "tags": ["count", "abstract", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
+        "key": "spellian",
+        "form-raw": "spelli|an",
+        "form-canon": "spell",
+        "type": "verb",
+        "gloss": "spell",
+        "gloss-alt": ["[talk], [converse]", "[put] into words"],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "spendan",
@@ -3326,10 +3383,10 @@
     }, {
         "key": "telg",
         "form-raw": "telg",
-        "form-canon": ["tælg"],
+        "form-raw-alt": ["tælg"],
         "type": "noun",
         "gloss": ["dye", "ink"],
-        "gloss-tool": ["[color] with dye or ink"],
+        "gloss-tool": "[color] with dye or ink",
         "tags": ["mass", "concrete", "man-made", "tool"],
         "origin": "old-english",
         "notes": "TODO: add extra tool meaning"
@@ -3915,7 +3972,7 @@
         "notes": "TODO: Investigate this vowel change"
     }, {
         "key": "wylf+en",
-        "form-raw": ["wylfen", "wylf"],
+        "form-raw": ["wylf+en", "wylf"],
         "type": "noun",
         "gloss": "she-wolf",
         "tags": ["count", "concrete", "living", "animal", "speculative"],
