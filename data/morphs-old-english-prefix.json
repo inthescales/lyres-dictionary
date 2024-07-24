@@ -7,7 +7,7 @@
         "gloss": "thoroughly %@",
         "exception": [{
             "case": {
-                "follows": {
+                "precedes": {
                     "not": {
                         "has-tag": "motion"
                     }
@@ -23,13 +23,21 @@
         "type": "prep",
         "prefix-on": "verb",
         "gloss": "%@ away",
-        "origin": "old-english"
+        "requires": {
+            "precedes": {
+                "has-tag": "motion"
+            }
+        },
+        "origin": "old-english",
+        "notes": "Would like to expand usage more later"
     }, {
         "key": "wiþ-",
         "form-stem": "with",
         "type": "prep",
         "prefix-on": "verb",
         "gloss": "%@ against",
-        "origin": "old-english"
+        "tags": ["no-gen"],
+        "origin": "old-english",
+        "notes": "TODO: no-gen until I figure out how to use this better"
     }
 ]

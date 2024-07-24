@@ -932,7 +932,7 @@
         "form-raw": "būr",
         "form-canon": "bower",
         "type": "noun",
-        "gloss": "[dwelling] or enclosed [place]",
+        "gloss": "[chamber], enclosed [place]",
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
@@ -945,6 +945,16 @@
         "gloss-alt": "fortress",
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
+    }, {
+        "key": "burġels",
+        "form-raw": "burġ+els",
+        "form-raw-alt": ["berġ+els", "birġ+els"],
+        "type": "noun",
+        "gloss": ["burial [place]", "tomb"],
+        "gloss-tool": "cover",
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english",
+        "notes": "Historically, reanalyzed not only as singular but as derived from Latin '-al' suffix. Leaving without canon due to different sense."
     }, {
         "key": "byrġan",
         "form-raw": "byrġ|an",
@@ -2330,6 +2340,21 @@
         "gloss": "white",
         "origin": "old-english"
     }, {
+        "key": "hȳdan",
+        "form-raw": "hȳd|an",
+        "form-canon": "hide",
+        "type": "verb",
+        "gloss": "hide",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "hȳdels",
+        "form-raw": "hȳd+els",
+        "type": "noun",
+        "gloss": ["hiding [place]", "shelter"],
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
         "key": "hyll",
         "form-raw": "hyll",
         "type": "noun",
@@ -2399,7 +2424,7 @@
         "form-canon": "leech",
         "type": "noun",
         "gloss": "doctor",
-        "tags": ["mass", "concrete", "living", "person", "role"],
+        "tags": ["count", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
         "key": "lǣdan",
@@ -2725,6 +2750,14 @@
         "origin": "old-english",
         "notes": "no-gen because I'm not feeling it"
     }, {
+        "key": "mierċels",
+        "form-raw": "mierċ+els",
+        "form-raw-alt": ["merċ+els", "myrċ+els"],
+        "type": "noun",
+        "gloss": ["target", "[seal] or [signet]", "trophy"],
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "miht",
         "form-raw": "miht",
         "form-canon": "might",
@@ -2784,6 +2817,14 @@
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
+        "key": "myrrelse",
+        "form-raw": "myrr+else",
+        "form-raw-alt": ["mierr+else"],
+        "type": "noun",
+        "gloss": ["scandal", "offense", "hindrance"],
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "open",
         "form-raw": "open",
         "form-canon": "open",
@@ -2814,6 +2855,21 @@
         "type": "noun",
         "gloss": "pot",
         "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "prician",
+        "form-raw": "pric|an",
+        "form-canon": "prick",
+        "type": "verb",
+        "gloss": "pierce",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "pric+els",
+        "form-raw": "pric+els",
+        "type": "verb",
+        "gloss": "sharp [point]",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "rǣd",
@@ -2847,6 +2903,7 @@
     }, {
         "key": "rǣdels",
         "form-raw": "rǣd+els",
+        "form-raw-alt": ["rǣsele"],
         "form-canon": "riddle",
         "type": "noun",
         "gloss": "riddle",
@@ -2877,6 +2934,23 @@
         "gloss-alt": ["establish", "promote"],
         "tags": ["intransitive"],
         "origin": "old-english"
+    }, {
+        "key": "rēċels",
+        "form-raw": "rēċ+els",
+        "type": "noun",
+        "gloss": "incense",
+        "gloss-tool": "[perfume] with incense",
+        "tags": ["mass", "concrete", "man-made", "tool", "speculative"],
+        "origin": "old-english",
+        "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
+    }, {
+        "key": "rēċelsian",
+        "form-raw": "rēċ+elsi|an",
+        "type": "verb",
+        "gloss": ["[perfume] with incense", "[burn] incense"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english",
+        "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
     }, {
         "key": "regel",
         "form-raw": ["regel", "reogol", "regl"],
@@ -3622,6 +3696,14 @@
         "origin": "old-english",
         "notes": "I speculate form is patterned after 'wake' (see 'wacan' and 'wacian')"
     }, {
+        "key": "wǣfels",
+        "form-raw": "wǣf+els",
+        "type": "noun",
+        "gloss": ["covering", "cloak", "garment"],
+        "gloss-tool": "cover",
+        "tags": ["count", "concrete", "man-made", "garment", "tool"],
+        "origin": "old-english"
+    }, {
         "key": "wǣgan",
         "form-raw": "wǣg|an",
         "type": "verb",
@@ -3641,12 +3723,13 @@
     }, {
         "key": "wǣpen",
         "form-raw": "wǣpen",
+        "form-raw-alt": ["wǣpnæ"],
         "form-canon": "weapon",
         "type": "noun",
         "gloss": "weapon",
+        "gloss-tool": ["[attack] with a weapon"],
         "tags": ["count", "concrete", "tool"],
-        "origin": "old-english",
-        "notes": "Alternate form 'wǣpnæ'. Alternate sense 'penis'"
+        "origin": "old-english"
     }, {
         "key": "wǣpen-penis",
         "form-raw": "wǣpen",
@@ -3821,6 +3904,15 @@
         "origin": "old-english",
         "notes": "Original meaning 'woman'"
     }, {
+        "key": "wiġel",
+        "form-raw": ["wiġel", "wiġle"],
+        "type": "noun",
+        "gloss": "trickery",
+        "gloss-alt": ["sorcery", "divination"],
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "Unclear whether the two senses should be combined or separate. See OED's discussion at 'wile' vs 'wiel'"
+    }, {
         "key": "wiht",
         "form-raw": "wiht",
         "form-raw-alt": ["wyht", "wuht"],
@@ -3927,6 +4019,30 @@
         "type": "verb",
         "gloss": "[awaken] or [arouse]",
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "wrēon",
+        "form-raw": "wrīon",
+        "form-raw-alt": ["wrē|on"],
+        "type": "verb",
+        "gloss": ["cover", "clothe", "hide"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "wrīġels",
+        "form-raw": "wrīġ+els",
+        "type": "noun",
+        "gloss": "[veil] or [covering]",
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "wrīġian",
+        "form-raw": "wrīġi|an",
+        "form-canon": "wry",
+        "type": "verb",
+        "gloss": ["[turn] or [twist]"],
+        "gloss-alt": ["[endeavor], [venture]"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wrītan",

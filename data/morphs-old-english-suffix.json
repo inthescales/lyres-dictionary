@@ -703,6 +703,7 @@
             },
             "gloss": "%(gloss-tool)"
         }],
+        "tags": ["no-length"],
         "origin": "old-english",
         "notes": "Not properly a suffix of course, but putting it here for now"
     }

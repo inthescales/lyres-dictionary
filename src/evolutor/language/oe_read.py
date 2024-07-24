@@ -114,7 +114,7 @@ def get_phonemes(graphs):
 
         if graphs[i] == "+":
             inflectional = False
-            derivational = "".join(graphs[i+1:]).split("+")[0]
+            derivational = "".join(graphs[i+1:]).split("+")[0].split("|")[0]
             continue
 
         if graphs[i] == ".":

@@ -40,7 +40,7 @@ def from_me_phonemes(phonemes, config):
 
         is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
         precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "lð", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'. Adding 'lð' as an alternation for 'ld'.
-        precedes_blocking_digraph = phone.is_vowel() and next1 and next1.value in ["tʃ", "dʒ", "x"] # Some digraphs prevent silent-e vowel spellings
+        precedes_blocking_digraph = phone.is_vowel() and next1 and next1.value in ["tʃ", "dʒ", "x", "ks"] # Some digraphs prevent silent-e vowel spellings
 
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
@@ -270,7 +270,8 @@ def from_me_phonemes(phonemes, config):
                 result += "l"
             elif not next1 and prev and prev.value == "ə" \
                 and prev2 and prev2.is_consonant() \
-                and not prev2.value in ["dʒ", "v", "ð", "z", "j"]:
+                and not prev2.value in ["dʒ", "v", "ð", "z", "j"] \
+                and not (len(result) >= 3 and "".join(result[-3:-1]) == "rr"):
                 result = result[:-1] + ["le"]
             elif prev.is_vowel() and (not prev.stressed or prev.is_diphthong()):
                 result += "l"
@@ -380,7 +381,7 @@ def from_me_phonemes(phonemes, config):
             if phone.value == "k":
                 result = result[:-1] + ["ck"]
             elif not (phone.value == "z" and len(result) and result[-1] == "s") \
-                and phone.value not in ["ks"]:
+                and phone.value not in ["x", "ks", "dʒ", "tʃ"]:
                 result += result[-1]
         elif not next1 and result[-1] != "e" \
             and ( \
