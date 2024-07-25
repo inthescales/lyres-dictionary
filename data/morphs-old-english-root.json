@@ -77,6 +77,15 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
+        "key": "ærc",
+        "form-raw": "ærc",
+        "form-canon": "ark",
+        "type": "noun",
+        "gloss": "[box] or [cabinet]",
+        "gloss-tool": "[put] in a box",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
         "key": "ǣrende",
         "form-raw": "ǣrende",
         "form-canon": "errand",
@@ -744,6 +753,38 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "snearu",
+        "form-raw": "snearu",
+        "form-raw-alt": "snare",
+        "type": "noun",
+        "gloss": "trap",
+        "gloss-alt": ["[string] or [cord]"],
+        "gloss-tool": "[catch] in a trap",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
+        "key": "sneorcan",
+        "form-raw": "sneorcan",
+        "type": "verb",
+        "gloss": "shrivel",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "snēowan",
+        "form-raw": "snēowan",
+        "type": "verb",
+        "gloss": ["proceed", "[go] hastily"],
+        "tags": ["intransitive", "motion", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "snēr",
+        "form-raw": "snēr",
+        "type": "noun",
+        "gloss": "[string] of a musical instrument",
+        "gloss-tool": "[pluck] (of stringed instruments)",
+        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "bētan",
         "form-raw": "bēt|an",
         "form-canon": "beet",
@@ -1187,6 +1228,16 @@
         "tags": ["obscure"],
         "origin": "old-english",
         "notes": "Appears as 'come' in 'comely'"
+    }, {
+        "key": "cyline",
+        "form-raw": "cyline",
+        "form-raw-alt": ["cylene", "cyln"],
+        "form-canon": "kiln",
+        "type": "noun",
+        "gloss": "kiln",
+        "gloss-tool": "[bake] in a kiln",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
     }, {
         "key": "cyng",
         "form-raw": "cyng",
@@ -3429,6 +3480,15 @@
         "origin": "old-english",
         "notes": "Alt. meaning 'sleep'"
     }, {
+        "key": "swīcan",
+        "form-raw": "swīc|an",
+        "form-canon": "swike",
+        "type": "verb",
+        "gloss": ["deceive", "betray"],
+        "gloss-alt": ["wander"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "swīn",
         "form-raw": "swīn",
         "form-canon": "swine",
@@ -3711,6 +3771,16 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Two entries in Bosworth. Maybe merger of two etymons?"
+    }, {
+        "key": "wæġn",
+        "form-raw": "wæġn",
+        "form-raw-alt": ["wæġen", "wǣn"],
+        "form-canon": "wain",
+        "type": "noun",
+        "gloss": "wagon",
+        "gloss-tool": "[carry] in a vehicle",
+        "tags": ["count", "concrete", "man-made", "tool", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "wænge",
         "form-raw": "wænge",
@@ -4020,6 +4090,15 @@
         "gloss": "[awaken] or [arouse]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
+    }, {
+        "key": "wrēġan",
+        "form-raw": "wrēġ|an",
+        "form-canon": "wray",
+        "type": "verb",
+        "gloss": ["accuse", "[stir] up or [incite]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Various forms attested. My process gives 'wry' currently, which is one of the ones seen, but using 'wray' for variety."
     }, {
         "key": "wrēon",
         "form-raw": "wrīon",

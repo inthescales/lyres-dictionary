@@ -231,7 +231,7 @@
                     "follows": {
                         "or": [
                             { "has-suffix": "e" },
-                            { "has-suffix": ["nd", "ld"] }
+                            { "has-suffix": ["en", "ld", "nd"] }
                         ]
                     }
                 },
