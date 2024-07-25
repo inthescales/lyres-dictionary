@@ -12,3 +12,18 @@ def get_prefix(form):
 
     if form in prefixes:
         return prefixes[form]
+
+def get_derivational(form_tail):
+    suffixes = {
+        "ard": "ard",
+        "els": "els",
+        "else": "els",
+        "elsi": "els",
+        "en": "en",
+        "t": "þ",
+        "þ": "þ"
+    }
+
+    raw_value = "".join(form_tail).split("+")[0].split("|")[0]
+    if raw_value in suffixes:
+        return suffixes[raw_value]

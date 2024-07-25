@@ -376,7 +376,7 @@ def from_oe_phonemes(oe_phonemes, config):
     # TODO: Consider plural reanalysis dropping other final 's's
     # TODO: Add loss of initial 'n' as in 'nadder' -> 'adder', 'napron' -> 'apron'
     def reanalysis(state):
-        if state.current.value in ["s", "z"] and state.current.derivational in ["els", "else", "elsi"]:
+        if state.current.value in ["s", "z"] and state.current.derivational == "els":
             # Words with the 'els' suffix (e.g. 'smyrels', 'rǣdels') are interpreted as plurals and lose their 's'
             return []
 

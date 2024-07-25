@@ -270,7 +270,7 @@ def from_me_phonemes(phonemes, config):
                 result += "l"
             elif not next1 and prev and prev.value == "ə" \
                 and prev2 and prev2.is_consonant() \
-                and not prev2.value in ["dʒ", "v", "ð", "z", "j"] \
+                and not prev2.value in ["tʃ", "dʒ", "v", "ð", "z", "j"] \
                 and not (len(result) >= 3 and "".join(result[-3:-1]) == "rr"):
                 result = result[:-1] + ["le"]
             elif prev.is_vowel() and (not prev.stressed or prev.is_diphthong()):

@@ -1,5 +1,6 @@
 from src.evolutor.engine.phoneme import Phoneme
 
+import src.evolutor.language.oe_morphology as morphology
 import src.evolutor.language.oe_orthography as orth
 
 class TrieNode:
@@ -114,7 +115,7 @@ def get_phonemes(graphs):
 
         if graphs[i] == "+":
             inflectional = False
-            derivational = "".join(graphs[i+1:]).split("+")[0].split("|")[0]
+            derivational = morphology.get_derivational(graphs[i+1:])
             continue
 
         if graphs[i] == ".":
@@ -247,9 +248,11 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional, deriv
     elif graph == "ō":
         return Phoneme("oː", stressed, inflectional, derivational)
     elif graph == "oe":
-        return Phoneme("ø", stressed, inflectional, derivational)
+        # This digraph represented a /ø/, but was unrounded to /e/ in most dialects
+        return Phoneme("e", stressed, inflectional, derivational)
     elif graph == "ōe":
-        return Phoneme("øː", stressed, inflectional, derivational)
+        # This digraph represented a /øː/, but was unrounded to /e/ in most dialects
+        return Phoneme("eː", stressed, inflectional, derivational)
     elif graph == "p":
         return Phoneme("p", False, inflectional, derivational)
     elif graph == "pp":

@@ -857,7 +857,7 @@
         "notes": "There is a northern form 'bizen', apparently influenced by ON as well. Leaving canonless for now."
     }, {
         "key": "bȳsnian",
-        "form-raw": "bīsnian",
+        "form-raw": "bīsni|an",
         "form-raw-alt": ["bȳsni|an", "bīseni|an"],
         "type": "verb",
         "gloss": "[set] an example",
@@ -1064,6 +1064,13 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "ċeole",
+        "form-raw": "ċeole",
+        "type": "noun",
+        "gloss": ["throat", "jaw"],
+        "tags": ["count", "concrete", "living", "bodypart"],
+        "origin": "old-english"
+    }, {
         "key": "ċeorl",
         "form-raw": "ċeorl",
         "form-canon": "churl",
@@ -1226,6 +1233,15 @@
         "tags": ["obscure"],
         "origin": "old-english",
         "notes": "Appears as 'come' in 'comely'"
+    }, {
+        "key": "coeċel",
+        "form-raw": "coeċel",
+        "form-raw-alt": ["cyċel", "ciċel"],
+        "type": "noun",
+        "gloss": ["small [cake]", "morsel"],
+        "gloss-alt": ["establish", "promote"],
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
     }, {
         "key": "cyline",
         "form-raw": "cyline",
@@ -2475,7 +2491,7 @@
         "form-canon": "leech",
         "type": "noun",
         "gloss": "doctor",
-        "tags": ["count", "concrete", "living", "person", "role"],
+        "tags": ["count", "concrete", "living", "person", "role", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lǣdan",
@@ -3097,7 +3113,7 @@
         "form-raw": "sār",
         "form-canon": "sore",
         "type": "adj",
-        "gloss": "sore",
+        "gloss": "pained",
         "gloss-alt": ["wound"],
         "origin": "old-english"
     }, {
@@ -3857,6 +3873,13 @@
         "tags": ["count", "abstract", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "wancol",
+        "form-raw": "wancol",
+        "type": "adj",
+        "gloss": ["[weak] or [unreliable]"],
+        "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
         "key": "weald-woodland",
         "form-raw": "weald",
         "form-canon": "wald",
@@ -3906,6 +3929,14 @@
         "gloss-alt": ["[expect] or [hope]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
+    }, {
+        "key": "wenċel",
+        "form-raw": ["wenċel", "winċel"],
+        "type": "noun",
+        "gloss": ["child", "servant", "slave"],
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Ancestor of 'wench', but feels distinct enough I want to leave it separate"
     }, {
         "key": "wendan",
         "form-raw": "wend|an",
