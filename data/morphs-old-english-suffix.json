@@ -683,6 +683,33 @@
         "origin": "old-english",
         "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
     }, {
+        "key": "-0-animal",
+        "form-stem": "",
+        "form-raw": "",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "gloss": "[act] like %sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "animal" },
+                    { "has-property": "gloss-animal" }
+                ]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-property": "gloss-animal"
+                }
+            },
+            "gloss": "%(gloss-animal)"
+        }],
+        "tags": ["no-length"],
+        "origin": "old-english",
+        "notes": "Not properly a suffix of course, but putting it here for now"
+    }, {
         "key": "-0-tool",
         "form-stem": "",
         "form-raw": "",

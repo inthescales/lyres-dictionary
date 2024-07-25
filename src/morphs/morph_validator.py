@@ -32,6 +32,7 @@ valid_properties = [
     "gloss-verb",               # Gloss used when preposition or derive is attached to verb
     "gloss-state",              # Adjective gloss associated with a stative verb
     "gloss-tool",               # Verb gloss associated with a tool noun
+    "gloss-animal",             # Verb gloss associated with an animal noun
     "suffixes",                 # Valid suffixes that can follow this morph
     "tags",
     "requires",

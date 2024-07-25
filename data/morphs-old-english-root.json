@@ -330,6 +330,7 @@
         "form-canon": "ass",
         "type": "noun",
         "gloss": "donkey",
+        "gloss-animal": ["[act] foolish", "[be] stubborn"],
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
@@ -1594,6 +1595,7 @@
         "form-raw": "fear",
         "type": "noun",
         "gloss": "[bull] or [ox]",
+        "gloss-animal": ["[work] hard", "[be] slow-witted"],
         "tags": ["count", "concrete", "living", "animal", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
@@ -2346,6 +2348,7 @@
         "form-canon": "hound",
         "type": "noun",
         "gloss": "dog",
+        "gloss-animal": ["pursue"],
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
@@ -3490,6 +3493,7 @@
         "form-canon": "swine",
         "type": "noun",
         "gloss": "pig",
+        "gloss-animal": ["[eat] excessively"],
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
@@ -4206,9 +4210,9 @@
         "form-canon": "worm",
         "type": "noun",
         "gloss": "worm",
+        "gloss-alt": ["snake", "dragon"],
         "tags": ["count", "concrete", "living", "animal"],
-        "origin": "old-english",
-        "notes": "Original meaning 'snake, dragon'"
+        "origin": "old-english"
     }, {
         "key": "wyrt",
         "form-raw": "wyrt",
