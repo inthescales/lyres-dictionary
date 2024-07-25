@@ -304,7 +304,7 @@
         "form-canon": "oar",
         "type": "noun",
         "gloss": "oar",
-        "gloss-tool": "[row] with an oar",
+        "gloss-tool": "[row] a boat",
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
@@ -415,7 +415,7 @@
         "form-raw": ["bǣr", "bēr"],
         "type": "noun",
         "gloss": ["stretcher", "litter"],
-        "gloss-tool": "[carry] on a stretcher",
+        "gloss-tool": ["[carry] on a stretcher", "[carry] on a litter"],
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english"
     }, {
@@ -432,7 +432,7 @@
         "form-canon": "bridle",
         "type": "noun",
         "gloss": "bridle",
-        "gloss-tool": "[fit] with a bridle",
+        "gloss-tool": ["[fit] with a bridle", "restrain"],
         "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative"],
         "origin": "old-english"
     }, {
@@ -585,10 +585,9 @@
         "form-canon": "bed",
         "type": "noun",
         "gloss": "bed",
-        "gloss-tool": "[go] to bed",
+        "gloss-tool": ["[go] to bed", "[take] to bed"],
         "tags": ["count", "concrete", "man-made", "tool"],
-        "origin": "old-english",
-        "notes": "TODO: Add second tool gloss for sexual sense"
+        "origin": "old-english"
     }, {
         "key": "ġe-bed",
         "form-raw": ["ġe-bed", "ġe-bæd"],
@@ -651,10 +650,9 @@
         "form-canon": "bench",
         "type": "noun",
         "gloss": "bench",
-        "gloss-tool": "[put] on a bench",
+        "gloss-tool": ["[put] on a bench", "[sit] on a bench"],
         "tags": ["count", "concrete", "man-made", "tool"],
-        "origin": "old-english",
-        "notes": "Add tool gloss for 'sit on a bench'"
+        "origin": "old-english"
     }, {
         "key": "bēodan",
         "form-raw": "bēod|an",
@@ -870,10 +868,9 @@
         "form-canon": "byspell",
         "type": "noun",
         "gloss": ["parable", "example"],
-        "gloss-tool": "[give] a parable",
+        "gloss-tool": ["[give] a parable", "[speak] in parables", "[give] an example"],
         "tags": ["count", "abstract", "man-made", "tool", "obscure"],
-        "origin": "old-english",
-        "notes": "TODO: Add more tool glosses when possible"
+        "origin": "old-english"
     }, {
         "key": "bit",
         "form-raw": "bit",
@@ -941,7 +938,7 @@
         "form-canon": "bridle",
         "type": "noun",
         "gloss": "bridle",
-        "gloss-tool": "[fit] with a bridle",
+        "gloss-tool": ["[fit] with a bridle", "restrain"],
         "tags": ["count", "concrete", "man-made", "garment", "tool"],
         "origin": "old-english"
     }, {
@@ -992,7 +989,7 @@
         "form-raw-alt": ["berġ+els", "birġ+els"],
         "type": "noun",
         "gloss": ["burial [place]", "tomb"],
-        "gloss-tool": "cover",
+        "gloss-tool": "bury",
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english",
         "notes": "Historically, reanalyzed not only as singular but as derived from Latin '-al' suffix. Leaving without canon due to different sense."
@@ -1038,7 +1035,7 @@
         "form-raw-alt": ["caliċ", "cæliċ", "ċeliċ", "ċelċ", "calċ"],
         "type": "noun",
         "gloss": ["chalice", "goblet"],
-        "gloss-tool": "[pour] into a chalice",
+        "gloss-tool": "[drink] from a chalice",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
@@ -1885,7 +1882,7 @@
         "form-raw": "gār",
         "type": "noun",
         "gloss": "spear",
-        "gloss-tool": "[stab] with a spear",
+        "gloss-tool": "[stab], as with spear",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
         "origin": "old-english"
     }, {
@@ -2958,10 +2955,9 @@
         "form-canon": "riddle",
         "type": "noun",
         "gloss": "riddle",
-        "gloss-tool": "[tell] riddles",
+        "gloss-tool": ["[tell] riddles", "perplex"],
         "tags": ["mass", "abstract", "man-made", "tool"],
-        "origin": "old-english",
-        "notes": "TODO: Add another tool gloss for something else. 'confuse or perplex' maybe"
+        "origin": "old-english"
     }, {
         "key": "ræfnan",
         "form-raw": "ræfn|an",
@@ -3064,6 +3060,7 @@
         "form-canon": "rood",
         "type": "noun",
         "gloss": "crucifix",
+        "gloss-alt": ["[beam] or [spar]"],
         "gloss-tool": "[erect] a cross",
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english",
@@ -3177,7 +3174,7 @@
         "form-raw-alt": ["sex", "syx"],
         "type": "noun",
         "gloss": "dagger",
-        "gloss-tool": "[cut] with a dagger",
+        "gloss-tool": ["[cut] with a dagger", "stab"],
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
         "origin": "old-english"
     }, {
@@ -3292,10 +3289,9 @@
         "form-canon": "smerl",
         "type": "noun",
         "gloss": "ointment",
-        "gloss-tool": "anoint",
+        "gloss-tool": ["anoint", "[smear] with ointment"],
         "tags": ["mass", "concrete", "man-made", "tool", "fluid", "liquid", "obscure"],
-        "origin": "old-english",
-        "notes": "TODO: Add another tool gloss for 'smear with ointment'"
+        "origin": "old-english"
     }, {
         "key": "sōð",
         "form-raw": "sōð",
@@ -3312,7 +3308,7 @@
         "type": "noun",
         "gloss": ["magic [spell]"],
         "gloss-alt": ["news", "story", "argument"],
-        "gloss-tool": "[cast] a spell",
+        "gloss-tool": ["[cast] a spell", "[give] news"],
         "tags": ["count", "abstract", "man-made", "tool"],
         "origin": "old-english"
     }, {
@@ -3520,10 +3516,9 @@
         "form-raw-alt": ["tælg"],
         "type": "noun",
         "gloss": ["dye", "ink"],
-        "gloss-tool": "[color] with dye or ink",
+        "gloss-tool": ["[color] with dye", "[color] with ink"],
         "tags": ["mass", "concrete", "man-made", "tool"],
-        "origin": "old-english",
-        "notes": "TODO: add extra tool meaning"
+        "origin": "old-english"
     }, {
         "key": "tēon",
         "form-raw": "tē|on",
@@ -3760,7 +3755,7 @@
         "form-raw": "wǣf+els",
         "type": "noun",
         "gloss": ["covering", "cloak", "garment"],
-        "gloss-tool": "cover",
+        "gloss-tool": ["cover", "dress"],
         "tags": ["count", "concrete", "man-made", "garment", "tool"],
         "origin": "old-english"
     }, {

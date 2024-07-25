@@ -1,3 +1,5 @@
+from random import Random
+
 import src.models
 import src.generation.former as former
 import src.utils.helpers as helpers
@@ -136,15 +138,18 @@ def get_definition(word):
                     tail = word[close_index + 1:]
 
                     if ref_property in last_morph.morph:
-                        property_value = last_morph.morph[ref_property]
+                        # Choose one at random if list
+                        if isinstance(last_morph.morph[ref_property], list):
+                            random = Random(morph.seed)
+                            value = random.choice(last_morph.morph[ref_property])
+                        else:
+                            value = last_morph.morph[ref_property]
 
                         # If this is a kind of gloss, and is a single word, add brackets
-                        if ref_property.startswith("gloss") and not " " in property_value and morph.get_type() in ["noun", "verb"]:
-                            if isinstance(property_value, list):
-                                print(str(property_value) + " !!!!!!!!")
-                            property_value = "[" + property_value + "]"
+                        if ref_property.startswith("gloss") and not " " in value and morph.get_type() in ["noun", "verb"]:
+                            value = "[" + value + "]"
 
-                        words[index] = head + property_value + tail
+                        words[index] = head + value + tail
                     else:
                         Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
 
