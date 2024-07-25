@@ -82,8 +82,8 @@ def transform_word(word, morphothec, is_single):
     elif language == "greek":
         relational_suffixes = ["-ic", "-y-relative", "-ize/greek"]
         numerical_suffixes = ["-ic-number", "-y-number"]
-    # elif language == "old-english":
-        # numerical_suffixes = ["-ed-having"]
+    elif language == "old-english":
+        numerical_suffixes = ["-ed-having"]
 
     choice = None
     override = False

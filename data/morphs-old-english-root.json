@@ -98,9 +98,10 @@
         "key": "ǣrendian",
         "form-raw": "ǣrendi|an",
         "type": "verb",
-        "gloss": "[negotiate] for",
-        "tags": ["transitive"],
-        "origin": "old-english"
+        "gloss": "negotiate",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Wanted the gloss 'negotiate for' but the preposition makes it come out funny. Simplifying for now."
     }, {
         "key": "ǣrnan",
         "form-raw": "ǣrn|an",
