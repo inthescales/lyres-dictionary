@@ -277,7 +277,13 @@ def get_joined_form(language, last_morph, morph, original, proposed):
             elif helpers.is_consonant(addition[0]):
                 if len(form) >= 2 and form[-2] == form[-1] and form[-1] == addition[0]:
                     # Break up triple consonants
-                    form = form + "-"
+                    if morph.is_suffix():
+                        # For suffixes, just drop one letter, as in 'full' + 'ly' -> 'fully'
+                        # TODO: Consider also using a dash here in some cases, such as 'burgess-ship'
+                        form = form[:-1]
+                    else:
+                        # For other cases, insert a dash
+                        form = form + "-"
 
                 elif len(form) >= 2 and len(addition) >=2 and form[-2:-1] == addition[0:2] and addition[0:2] in ["sh", "ch", "th"]:
                     # Break up repeated digraphs
