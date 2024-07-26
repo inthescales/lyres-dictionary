@@ -225,7 +225,7 @@
                 }
             },
             "form-stem": "meter",
-            "gloss": "one who measures %pl"
+            "gloss": "[measure] %pl"
         }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"

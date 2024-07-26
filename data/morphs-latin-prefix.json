@@ -477,6 +477,12 @@
         "gloss": "one-thousand %!pl",
         "origin": "latin"
     }, {
+        "key": "pluri-",
+        "form-stem": "pluri",
+        "type": "number",
+        "gloss": "multiple %!pl",
+        "origin": "latin"
+    }, {
         "key": "multi-",
         "form-stem": "multi",
         "type": "number",

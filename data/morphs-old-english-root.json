@@ -538,7 +538,8 @@
         "form-raw-alt": ["bēah"],
         "type": "noun",
         "gloss": ["ring", "[piece] of jewelry"],
-        "tags": ["count", "abstract", "speculative"],
+        "gloss-tool": ["[put] on jewelry", "adorn"],
+        "tags": ["count", "abstract", "man-made", "tool", "speculative"],
         "origin": "old-english"
     }, {
         "key": "bealu",
@@ -944,6 +945,13 @@
         "tags": ["count", "concrete", "man-made", "garment", "tool"],
         "origin": "old-english"
     }, {
+        "key": "brim",
+        "form-raw": "brim",
+        "type": "noun",
+        "gloss": "sea",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
         "key": "brōþor",
         "form-raw": "brōþor",
         "form-canon": "brother",
@@ -1041,6 +1049,13 @@
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
+    }, {
+        "key": "carl",
+        "form-raw": "carl",
+        "type": "noun",
+        "gloss": "man",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
     }, {
         "key": "ċeariġ",
         "form-raw": "ċear+iġ",
