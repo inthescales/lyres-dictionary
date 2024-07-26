@@ -1383,13 +1383,12 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "dreogan",
-        "form-raw": "dreog|an",
+        "key": "drēogan",
+        "form-raw": "drēog|an",
         "type": "verb",
         "gloss": ["[perform] a duty", "[suffer] or [undergo]"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Attested forms seem to have the form 'dree' or 'dry', while I get 'drue'. TODO: See if I can find out why"
+        "origin": "old-english"
     }, {
         "key": "drīfan",
         "form-raw": "drīf|an",
@@ -1653,6 +1652,14 @@
         "type": "noun",
         "gloss": "marsh",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "fēoġan",
+        "form-raw": "fēoġ|an",
+        "form-raw-alt": ["fēoġean", "fē|on"],
+        "type": "verb",
+        "gloss": ["hate", "persecute"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "feoh",
@@ -3625,6 +3632,14 @@
         "type": "noun",
         "gloss": "town",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "twēogan",
+        "form-raw": "twēog|an",
+        "form-raw-alt": ["twēoni|an", "twē|on"],
+        "type": "verb",
+        "gloss": "doubt",
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "tȳrian",

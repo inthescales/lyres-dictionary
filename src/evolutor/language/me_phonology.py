@@ -66,8 +66,9 @@ def from_oe_phonemes(oe_phonemes, config):
                 # TODO: Handle 'ġeong'-> 'young'
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
-                if state.next and state.next.value == "ɣ":
-                    #  'ēog' seems to resolve as /iː/, as in 'lēogan' -> 'lie', 'flēogan' -> 'fly'
+                if state.next and state.next.value in ["ɣ", "j"]:
+                    # 'ēog' seems to resolve as /iː/, as in 'lēogan' -> 'lie', 'flēogan' -> 'fly'
+                    # On a more speculative basis, doing the same for 'ġ
                     return [Phoneme("iː", template=state.current, history=["eːog"])]
                 else:
                     result = often("SVC:eːo->eː/oː", config)
