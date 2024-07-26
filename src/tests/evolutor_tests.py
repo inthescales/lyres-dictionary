@@ -532,9 +532,10 @@ class EvolutorTests(unittest.TestCase):
         check("dāg", "dough")
         check("trog", "trough")
 
-        # Sometimes seems to become a high front vowel instead?
-        # e.g.: 'flēogan' -> 'fly', 'drēogan' -> 'dree'
-        # TODO: Figure this out
+        # ...but resolves into /iː/ when following 'ēo'
+        check("drēog|an", "dry") #* # Observed form is 'dree'. TODO: Look for a pattern here.
+        check("lēog|an", "lie")
+        check("flēog|an", "fly")
 
         # Palatal /j/ ------------------------------------
 

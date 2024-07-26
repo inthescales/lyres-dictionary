@@ -66,11 +66,15 @@ def from_oe_phonemes(oe_phonemes, config):
                 # TODO: Handle 'ġeong'-> 'young'
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
-                result = often("SVC:eːo->eː/oː", config)
-                if result == "eː":
-                    return [Phoneme("eː", template=state.current)]
-                elif result == "oː":
-                    return [Phoneme("oː", template=state.current)]
+                if state.next and state.next.value == "ɣ":
+                    #  'ēog' seems to resolve as /iː/, as in 'lēogan' -> 'lie', 'flēogan' -> 'fly'
+                    return [Phoneme("iː", template=state.current, history=["eːog"])]
+                else:
+                    result = often("SVC:eːo->eː/oː", config)
+                    if result == "eː":
+                        return [Phoneme("eː", template=state.current)]
+                    elif result == "oː":
+                        return [Phoneme("oː", template=state.current)]
             elif state.current.value == "y":
                 result = hinge("SVC:y->i/e/u", [0.5, 0.3], config)
                 if result == "i":
@@ -161,6 +165,9 @@ def from_oe_phonemes(oe_phonemes, config):
     def vocalization_of_post_vocalic_g(state):
         if state.prev and state.prev.is_vowel():
             if state.current.value == "ɣ":
+                if state.prev.value == "iː" and "eːog" in state.prev.history:
+                    # If we earlier resolved 'ēo' into 'iː', the 'ɣ' melds into that
+                    return []
                 if state.next:
                     return [Phoneme("u", template=state.current, history=["vocalized-g"])]
                 else:
