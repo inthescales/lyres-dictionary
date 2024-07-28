@@ -17,25 +17,44 @@ def from_oe_phonemes(oe_phonemes, config):
         elif state.current.value == "ɣɣ":
             return [Phoneme("gg", template=state.current)]
 
+    # Lengthening of vowels followed by certain homorganic consonant clusters
+    #
+    # Per Kruger(2020):
+    # https://benjamins.com/catalog/jhl.18028.kru
+    # Also cites Minkova & Stockwell (1992), Minkova (2014)
+    # - 'ld' always lengthens after back vowels 'a' and 'o'
+    # - 'ld' lengthens after front vowels 'e' and 'i' about 60% of the time
+    # - 'ld' lengthens after high back vowel 'u' in exactly one case 'sċuldor' -> 'shoulder' (I've ignored it here)
+    # - 'nd' always lengthens after high vowels 'i' and 'u'
+    # - 'nd' never lengthens after mid/low vowels 'a', 'e', 'o'
+    #
+    # My own observations:
+    # — 'ng' appears to lengthen frequently after 'a', as in 'long', 'strong', 'monger', but not always, as in 'sang'
+    # - 'ng' does not lengthen after other vowels that I've seen so far. Consider 'sing', 'sting', 'ring'
+    # - 'o' seems to lengthen into /ɔː/, as in 'board' and 'hoard'
+    #
+    # TODO: Get better information on the remaining clusters
     def homorganic_lengthening(state):
-        # Note: the 'old' exception is my own addition, based on the case of 'gold'. TODO: Find a better way to handle this
-        # Note: the 'ang' exception is mine, based on observations of 'long', 'strong', 'monger' vs 'sing', 'sting', 'ring'
+        vowel = state.capture[0].value
         cluster = "".join([x.value for x in state.capture[1:]])
 
-        # and not (cluster == "ng" and state.capture[0].value != "a") \
-
         if state.capture[0].is_vowel() and not state.capture[0].is_diphthong() \
-            and (cluster in ["ld", "mb", "nd", "rd", "ng", "rl", "rn"]) \
-            and not (cluster == "ld" and state.capture[0].value == "o") \
-            and not (state.joined == "ang" and not often("HL:ng", config)) \
+            and (
+                cluster in ["rd", "rl", "rn"]
+                or (cluster == "ld" and vowel in ["a", "o"])
+                or (cluster == "ld" and vowel in ["e", "i"] and hinge("HL:ld-front", 0.6, config))
+                or (cluster == "nd" and vowel in ["i", "u"])
+                or (cluster == "mb" and occ("HL:mb", config))
+                or (cluster == "ng" and vowel == "a" and often("HL:ng", config))
+            ) \
             and not (len(state.following) > 0 and state.following[0].is_consonant()):
-            # and not state.syllable_data.following_syllable_count > 1:
     
             if state.capture[0].value == "o":
-                # My own addition, to handle "board", "hoard"
-                return [Phoneme("ɔː", template=state.capture[0]), state.capture[1], state.capture[2]]
+                lengthened = "ɔː"
+            else:
+                lengthened = state.capture[0].get_lengthened().value
     
-            return [state.capture[0].get_lengthened(), state.capture[1], state.capture[2]]
+            return [Phoneme(lengthened, template=state.capture[0]), state.capture[1], state.capture[2]]
 
     def pre_three_cluster_shortening(state):
         if state.current.is_vowel() and state.current.is_long() \
@@ -110,7 +129,7 @@ def from_oe_phonemes(oe_phonemes, config):
 
                 # Homorganic lengthing clusters usually exempted
                 # Other such clusters: mb, ld
-                exempted_clusters = ["nd", "rl", "rs", "ld"] # rs+vowel?
+                exempted_clusters = ["ld", "nd", "rl", "rs"] # rs+vowel?
                 if not occ("PCS:rn", config):
                     exempted_clusters += ["rn"]
                 if not occ("PCS:rd", config):
@@ -277,6 +296,7 @@ def from_oe_phonemes(oe_phonemes, config):
             return [state.current.get_shortened()]
 
     # m → n / _# when unstressed
+    # TODO: Look for actual examples of this? I don't think I've seen any
     def final_unstressed_m_to_n(state):
         if state.current.value == "m" and state.next == None \
             and not (state.syllable_data.prev_vowel and state.syllable_data.prev_vowel.stressed):

@@ -56,7 +56,7 @@ class EvolutorTests(unittest.TestCase):
         
         # a
         check("mann", "man")
-        # check("lamb", "lamb") # Seems to be irregular - would expect 'lomb', analogous to 'camb' -> 'comb', due to homorganic lengthening
+        check("lamb", "lamb")
         check("sang", "sang", overrides=[["HL:ng", False]])
         check("sacc", "sack")
         check("assa", "ass")
@@ -250,7 +250,7 @@ class EvolutorTests(unittest.TestCase):
         # Ā
         check("āc", "oak")
         # check("hāl", "whole") # W added to disambiguate from hole
-        check("camb", "comb")
+        check("camb", "comb", overrides=[["HL:mb", True]])
         check("ald", "old")
         check("hald|an", "hold")
         check("ār", "oar", overrides=[["Orth:ɔː->oa/oCV", "oa"]])
@@ -453,7 +453,56 @@ class EvolutorTests(unittest.TestCase):
             total += 1
             if not form == target:
                 failures.append([form, target])
-        
+
+        # ld ---------------------
+
+        # 'ld' always lengthens following 'a' or 'o', though it's not reflected in spelling
+        check("ald", "old")
+        check("cald", "cold")
+        check("hald|an", "hold")
+        check("gold", "gold")
+
+        # ...and a bit more than half the time after 'i' or 'e'
+        check("ċild", "child")
+        check("mild", "mild")
+        check("feld", "field")
+        check("weld|an", "wield")
+
+        # ...but not always.
+        check("gyld|an", "gild", overrides=[["HL:ld-front", False]])
+        check("meld|an", "meld", overrides=[["HL:ld-front", False]])
+        check("seld", "seld", overrides=[["HL:ld-front", False]])
+
+        # nd ---------------------
+
+        # 'nd' always lengthens following 'i' or 'u'
+        check("bind|an", "bind")
+        check("blind", "blind")
+        check("grund", "ground")
+        check("hund", "hound")
+
+        # ...but not following other vowels
+        check("band", "band")
+        check("candel", "candle")
+        check("lond", "lond")
+        check("wend|an", "wend")
+        check("send|an", "send")
+
+        # mb ---------------------
+
+        # In most cases, 'mb' does not cause lengthening
+        check("brǣmbel", "bramble")
+        check("dumb", "dumb")
+        check("lamb", "lamb")
+        check("amber", "amber")
+        check("timber", "timber")
+        check("tumbi|an", "tumb") #* # Artificial form, but related to 'tumble', which also has a short vowel
+
+        # However, there are a few cases where it does seem to
+        check("camb", "comb", overrides=[["HL:mb", True]])
+        check("climb|an", "climb", overrides=[["HL:mb", True]])
+        check("womb", "womb", overrides=[["HL:mb", True]])
+
         # ng ---------------------
 
         # stressed a becomes o, in most cases
@@ -487,11 +536,14 @@ class EvolutorTests(unittest.TestCase):
             if not form == target:
                 failures.append([form, target])
 
-        # Test the removal of final '-an'
+        # A final '-an' is always removed
         check("sitt|an", "sit")
 
-        # Test that 'a' is still dropped when preceded by another vowel
+        # The '-an' is still dropped when preceded by another vowel
         check("smē|an", "smee")
+
+        # A few verb infinitives end with '-on' instead
+        check("þē|on", "thee")
 
         return [total, failures]
 
@@ -779,8 +831,8 @@ class EvolutorTests(unittest.TestCase):
 
         # Participle method 1 — direct descendent of OE participle
 
-        # check("bend|an", "weak", "bended") # Not sure why these vowels are short
-        # check("send|an", "weak", "sended") # Not sure why these vowels are short
+        check("bend|an", "weak", 1, "bended")
+        check("send|an", "weak", 1, "sended")
         check("stōwi|an", "weak", 1, "stowed", overrides=[[]])
         check("wrīt|an", 1, 1, "written")
         check("wrīþ|an", 1, 1, "writhen")

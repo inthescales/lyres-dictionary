@@ -240,13 +240,13 @@
     }, {
         "key": "amber",
         "form-raw": "amber",
-        "form-raw-alt": "omber",
+        "form-raw-alt": ["omber"],
         "type": "noun",
         "gloss": "bucket",
         "gloss-tool": "[carry] in a bucket",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
-        "notes": "Alternate meaning 'measure', but not sure of usage"
+        "notes": "Alternate meaning, a measure of volume for liquids (see OED)"
     }, {
         "key": "anda-mass",
         "form-raw": "anda",

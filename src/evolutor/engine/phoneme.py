@@ -49,7 +49,7 @@ class Phoneme:
         return False
 
     def is_back_vowel(self):
-        for char in ["u", "o", "ɔ"]:
+        for char in ["ɑ", "u", "o", "ɔ"]:
             if char in self.value:
                 return True
         return False

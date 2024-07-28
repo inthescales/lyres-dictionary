@@ -18,6 +18,8 @@ def hinge(id, odds, config):
     # Format: [[options], default]
     # First option should represent a change occurring, when applicable
     points = {
+        "HL:ld-front": [[True, False], True],
+        "HL:mb": [[True, False], False],
         "HL:ng": [[True, False], True],
         "SVC:eːr->ɛːr": [[True, False], True],
         "SVC:eːc->ic": [[True, False], True],
