@@ -24,6 +24,7 @@ class EvolutorTests(unittest.TestCase):
             self._test_unstressed_vowel_syncope,
             self._test_consonant_cluster_breaking,
             self._test_unstressed_vowel_spelling,
+            self._test_participles,
             self._test_compounds,
             self._test_misc
         ]
@@ -761,6 +762,78 @@ class EvolutorTests(unittest.TestCase):
         check("anfeal", "anvil") # Historical form was 'anfealt'. 't' was lost by the period of ME, this is an imagined OE antecedent
         check("deofol", "devil", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
         check("wifel", "weevil", overrides=[["OSL:iy", True]])
+
+        return [total, failures]
+
+    def _test_participles(self):
+        total = 0
+        failures = []
+        def check(raw, verb_class, method, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_participle(raw, verb_class, method, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # Participle method 1 — direct descendent of OE participle
+
+        # check("bend|an", "weak", "bended") # Not sure why these vowels are short
+        # check("send|an", "weak", "sended") # Not sure why these vowels are short
+        check("stōwi|an", "weak", 1, "stowed", overrides=[[]])
+        check("wrīt|an", 1, 1, "written")
+        check("wrīþ|an", 1, 1, "writhen")
+        check("bēod|an", 2, 1, "boden")
+        check("clēof|an", 2, 1, "cloven")
+        check("flēog|an", 2, 1, "flown")
+        check("drinc|an", 3, 1, "drunken")
+        check("help|an", 3, 1, "holpen")
+        check("weorp|an", 3, 1, "worpen")
+        check("ġield|an", 3, 1, "yolden")
+        check("brec|an", 4, 1, "broken")
+        check("stel|an", 4, 1, "stolen")
+        check("ber|an", 4, 1, "born")
+        # check("cum|an", 4, 1, "comen") # Idiosyncratic spelling?
+        check("cweþ|an", 5, 1, "queathen")
+        # check("ġief|an", 5, 1, "yiven") # Various ME forms?
+        # check("sprec|an", 5, 1, "spoken") # Irregular both in infinitive and participle forms
+        # check("sitt|an", 5, 1, "sitten") # Appears irregular
+        check("wasċ|an", 6, 1, "washen")
+        check("drag|an", 6, 1, "drawn")
+        check("sleġ|an", 6, 1, "slain")
+        check("grōw|an", 7, 1, "grown")
+        check("blāw|an", 7, 1, "blown")
+        check("cnāw|an", 7, 1, "known")
+
+        # Participle method 2 — descent from OE participle, without '-en' ending
+        check("grind|an", 3, 2, "ground")
+        check("wind|an", 3, 2, "wound")
+        check("feoht|an", 3, 2, "fought")
+        check("ġield|an", 3, 2, "yold")
+        # check("cum|an", 4, 2, "come") # Idiosyncratic spelling?
+        # check("sitt|an", 5, 2, "sit")
+
+        # Participle method 3 — modern form + '-ed'
+        # check("rēp|an", 1, 3, "reaped") # Can't explain 'ea' vowel in base
+        check("lēog|an", 2, 3, "lied")
+        check("sēoþ|an", 2, 3, "seethed")
+        # check("brūc|an", 2, 3, "brooked") # Can't explain 'oo' vowel in base
+        check("lūt|an", 2, 3, "louted")
+        check("cwel|an", 4, 3, "quealed")
+        check("nim|an", 4, 3, "nimmed")
+        check("stepp|an", 6, 3, "stepped")
+        check("wasċ|an", 6, 3, "washed")
+        check("hliehh|an", 6, 3, "laughed")
+        # check("hat|an", 7, 3, "hated") # Can't explain 'a' vowel in base
+        check("hleap|an", 7, 3, "leaped")
+
+        # Participle method 4 — modern form + '-ed' suffix, with assimilations
+        # check("hliehh|an", 6, "laught")
+        # check("hleap|an", 7, "leapt")
+
+        # Ahistorically treated as strong, or as a different class of strong
+        # check("hleap|an", 7, "lopen")
 
         return [total, failures]
 

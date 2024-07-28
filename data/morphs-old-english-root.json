@@ -904,7 +904,7 @@
         "gloss": ["lord", "prince", "ruler"],
         "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare", "homophonic"],
         "origin": "old-english"
-    }, {        
+    }, {
         "key": "breahtm",
         "form-raw": ["breahtm", "bearhtm", "byrhtm", "brehtm", "beorhtm", "bryhtm", "beorht"],
         "type": "noun",
@@ -958,6 +958,15 @@
         "type": "noun",
         "gloss": "brother",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "brūcan",
+        "form-raw": "brūc|an",
+        "form-canon": "brook",
+        "type": "verb",
+        "gloss": "[endure] or [tolerate]",
+        "gloss-alt": ["use", "[make] use of", "enjoy"],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "brȳd",
@@ -2792,6 +2801,36 @@
         "origin": "old-english",
         "notes": "Original sense was 'person'"
     }, {
+        "key": "mase-count",
+        "form-raw": "mase",
+        "form-raw-alt": ["mæs"],
+        "form-canon": "maze",
+        "type": "noun",
+        "gloss": ["maze", "delusion", "deception", "winding [movement]"],
+        "tags": ["count", "concrete"],
+        "origin": "old-english",
+        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
+    }, {
+        "key": "mase-state",
+        "form-raw": "mase",
+        "form-raw-alt": ["mæs"],
+        "form-canon": "maze",
+        "type": "noun",
+        "gloss": ["delusion", "confusion", "[state] of bewilderment"],
+        "tags": ["count", "concrete", "state"],
+        "origin": "old-english",
+        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
+    }, {
+        "key": "masian",
+        "form-raw": "masian",
+        "form-canon": "maze",
+        "type": "verb",
+        "gloss": ["amaze", "[confuse], [perplex]"],
+        "gloss-alt": ["[make] winding movements"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'. Alt. gloss is my own, based on the noun."
+    }, {
         "key": "māþm",
         "form-raw": "māþm",
         "form-raw-alt": "māþum",
@@ -3272,14 +3311,14 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
-        "key": "siþ",
-        "form-raw": "siþ",
-        "form-canon": "sith",
+        "key": "sīþ",
+        "form-raw": ["sīþ", "siþ'"],
         "type": "noun",
         "gloss": "journey",
         "gloss-alt": ["[point] in time", "lifetime"],
         "tags": ["count", "abstract", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Not sure about the vowel length here — Wiktionary has MnE 'sith' while OED has 'sithe'"
     }, {
         "key": "slæc",
         "form-raw": "slæc",
