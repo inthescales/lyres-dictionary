@@ -224,6 +224,7 @@
                 "has-tag": "concrete"
             }
         },
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-wurþ",
