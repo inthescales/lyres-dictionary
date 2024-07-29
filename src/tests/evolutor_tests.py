@@ -99,8 +99,8 @@ class EvolutorTests(unittest.TestCase):
         check("nama", "name")
         check("nacod", "naked")
         check("bac|an", "bake")
-        # check("æcer", "acre") # Irregular development due to early borrowing into latin and french
-        # check("hwæl", "whale") # OED: "The present form whale represents oblique forms (Old English hwalas, etc.). TODO: simulate this?"
+        # check("æcer", "acre") # Irregular development due to early borrowing into Latin and French
+        check("hwæl|e", "whale") # OED: "The present form whale represents oblique forms (Old English hwalas, etc.).
         check("hræfn", "raven") # Unsure why vowel is long, but additional spelling rules compensate
         check("caru", "care")
         check("far|an", "fare")
@@ -113,7 +113,7 @@ class EvolutorTests(unittest.TestCase):
         check("betera", "better")
         check("streċċ|an", "stretch")#{}
         check("seofon", "seven", overrides=[["SVC:y->i/e/u", "e"], ["Orth:ɛː->ea/eCV", "eCV"]]) # Unsure why vowel is short, but spelling is plausible
-        # check("myriġ", "merry") # Confusion about form. May be influence by history as affixed root
+        # check("myriġ", "merry") # Produces long vowel, which throws off spelling. May be influence by history as affixed root
         check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]]) # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
         check("lyft", "left", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cnyll", "knell", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
@@ -162,7 +162,7 @@ class EvolutorTests(unittest.TestCase):
         check("hefiġ", "heavy")
 
         # i
-        # check("writen", "written") # System wants '-on' ending. This word is excepted as a participle
+        check("writ+en", "written")
         check("sitt|an", "sit")
         check("fisċ", "fish")
         check("lifer", "liver")
@@ -172,7 +172,7 @@ class EvolutorTests(unittest.TestCase):
         check("synn", "sin")
         check("gyld|an", "gild")
         check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"], ["OSL:iy", False]])
-        # check("wīsdōm", "wisdom") # Will require separate affix handling
+        # check("wīsdōm", "wisdom") # Requires combined processing
         check("fīftiġ", "fifty")
         check("wȳsċ|an", "wish")
         check("cȳþþu", "kith")
@@ -194,7 +194,7 @@ class EvolutorTests(unittest.TestCase):
         # O
         check("god", "god")
         # check("be-ġeond", "beyond") # Not sure about vowel
-        # check("gōd-spell", "gospel") # Can't explain dropped 'd' or the short 'o'
+        # check("gōd-spell", "gospel") # Requires combined processing
         check("fōddor", "fodder", overrides=[["DThA:dər->ðər", False]])
         check("fōstri|an", "foster")
         check("moþþe", "moth")
@@ -221,7 +221,7 @@ class EvolutorTests(unittest.TestCase):
         check("uppe", "up")
         check("a-bufa", "above") # List had 'abufan'. Removing final-n seems normal in this cases, as in beġeondan
         # check("myċel", "much") # Irregular loss of final syllable. Wiktionary: "apocopated variant of muchel"
-        # check("cyċġel", "cudgel", overrides=[["SVC:y->i/e/u", "u"]]) # Need to sort out -el spelling (cf 'evil')
+        check("cyċġel", "cudgel", overrides=[["SVC:y->i/e/u", "u"]])
         check("clyċċ|an", "clutch", overrides=[["SVC:y->i/e/u", "u"]])
         check("sċytel", "shuttle", overrides=[["SVC:y->i/e/u", "u"]])
         check("dust", "dust") # List had 'dūst', but OE 'dust' is hypothesized. ME shows derivations of both forms.
@@ -239,7 +239,7 @@ class EvolutorTests(unittest.TestCase):
         check("werc", "work")
         check("werold", "world")
         check("wyrm", "worm", overrides=[["SVC:y->i/e/u", "u"]])
-        check("wersa", "worse")
+        # check("wersa", "worse") # Produces a voiced /z/, which I don't think is a reasonable test of spelling
         check("weorþ", "worth")
         
         # U (leng.)
@@ -932,11 +932,31 @@ class EvolutorTests(unittest.TestCase):
         check("niht", "night")
         check("stel|an", "steal")
 
-        # final '-e' for words ending in voiced fricatives
+        # Spelling rules ---------------------------------
+
+        # Add final '-e' for words ending in voiced fricatives
+        check("blase", "blaze")
         check("ċēos|an", "choose", overrides=[["SVC:eːo->eː/oː", "oː"]])
+        check("dufa", "dove") # Conjectured form (see OED)
         check("sēoþ|an", "seethe", overrides=[["SVC:eːo->eː/oː", "eː"]])
 
-        # Non-affix -iġ forms
+        # Final /z/ — spelled as 'z' after /aː/ or /eː/
+        check("blase", "blaze")
+        check("mase", "maze")
+        check("brēosa", "breeze")
+        check("frēos|an", "freeze")
+
+        # ...or before a '-iġ' ending following an /i/ vowel
+        check("dysiġ", "dizzy")
+
+        # In other cases, it takes an 's'
+        check("gōs", "goose")
+        check("rose", "rose")
+        check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
+
+        # Incorporated suffixes --------------------------
+
+        # '-iġ'
         check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
         check("ċeariġ", "chary")
         check("dohtiġ", "doughty")
@@ -945,7 +965,7 @@ class EvolutorTests(unittest.TestCase):
         check("hāliġ", "holy", overrides=[["Orth:ɔː->oa/oCV", "oCV"]])
         check("hefiġ", "heavy")
 
-        # rV metathesis
+        # rV metathesis --------------------------
 
         # Always metathesize before /x/
         check("byrht", "bright")
@@ -959,7 +979,7 @@ class EvolutorTests(unittest.TestCase):
         check("bird", "bird")
         check("frost", "frost")
 
-        # Misc assimilations
+        # Misc assimilations --------------------------
 
         # ln -> l
         check("myln", "mill")

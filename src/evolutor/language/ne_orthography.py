@@ -38,6 +38,7 @@ def from_me_phonemes(phonemes, config):
         if i < len(phonemes) - 3:
             next3 = phonemes[i + 3]
 
+        is_final = not next1
         is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
         precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "lð", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'. Adding 'lð' as an alternation for 'ld'.
         precedes_blocking_digraph = phone.is_vowel() and next1 and next1.value in ["tʃ", "dʒ", "x", "ks"] # Some digraphs prevent silent-e vowel spellings
@@ -66,7 +67,7 @@ def from_me_phonemes(phonemes, config):
             result += "ough"
             skip_next = True
         elif phone.value == "ai":
-            if not next1:
+            if is_final:
                 result += "ay"
             elif next1 and next1.is_vowel():
                 choice = even("Orth:aiV->ai/ay", config)
@@ -268,7 +269,7 @@ def from_me_phonemes(phonemes, config):
                 or (prev and prev.is_vowel() and prev.is_long()) \
                 or (prev and prev.is_consonant()):
                 result += "l"
-            elif not next1 and prev and prev.value == "ə" \
+            elif is_final and prev and prev.value == "ə" \
                 and prev2 and prev2.is_consonant() \
                 and not prev2.value in ["tʃ", "dʒ", "v", "ð", "z", "j"] \
                 and not (len(result) >= 3 and "".join(result[-3:-1]) == "rr"):
@@ -296,16 +297,15 @@ def from_me_phonemes(phonemes, config):
                 else:
                     result += "s"
         elif phone.value == "z":
-            if not next1 and prev and prev.value == "r":
-                result += "se"
-            elif prev and prev.is_vowel() and ((prev.is_long() and not prev.value == "aː") or prev.value == "u"):
-                # 'aː' condition added to handle 'hazel' (fits with daze too)
-                # 'u' condition added to handle 'busy' / 'dizzy'
-                # Need more cases to establish a pattern more clearly
-                result += "s"
-            elif next1 and next2 and "".join([p.value for p in [next1, next2]]) == "əj":
-                # Handles cases like 'dizzy'
+            if prev and prev.value in ["aː", "eː"]:
+                # /aː/ in 'maze', 'blaze', /eː/ as in 'freeze', 'breeze' (gadfly)
                 result += "z"
+            elif (next1 and next2 and "".join([p.value for p in [next1, next2]]) == "əj") \
+                and prev and prev.value == "i":
+                # /izəj/ check handles cases like 'dizzy'. cf. 'busy'
+                result += "z"
+            elif is_final and prev and prev.value == "r":
+                result += "se"
             else:
                 result += "s"
         elif phone.value in ["θ", "ð"]:
@@ -320,7 +320,7 @@ def from_me_phonemes(phonemes, config):
             else:
                 result += "gh"
         elif phone.value == "k":
-            if not next1 and prev and prev.is_vowel() and prev.is_short():
+            if is_final and prev and prev.is_vowel() and prev.is_short():
                 # Doubled form after a short vowel
                 result += "ck"
             elif next1 and next1.value == "w":
@@ -343,7 +343,7 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ʃ":
             result += "sh"
         elif phone.value == "tʃ":
-            if not next1 and prev and prev.is_vowel() and prev.is_short():
+            if is_final and prev and prev.is_vowel() and prev.is_short():
                 result += "tch"
             else:
                 result += "ch"
@@ -369,7 +369,7 @@ def from_me_phonemes(phonemes, config):
             result += phone.value
 
         # Various word-end adjustments
-        if phone.is_consonant() and insert_lengthening_e and (not next1 or not next1.is_vowel()):
+        if phone.is_consonant() and insert_lengthening_e and (is_final or next1.is_consonant()):
             # Insert lengthening 'e'
             result += "e"
             insert_lengthening_e = False
@@ -383,7 +383,7 @@ def from_me_phonemes(phonemes, config):
             elif not (phone.value == "z" and len(result) and result[-1] == "s") \
                 and phone.value not in ["x", "ks", "dʒ", "tʃ"]:
                 result += result[-1]
-        elif not next1 and result[-1] != "e" \
+        elif is_final and result[-1] != "e" \
             and ( \
                 phone.value == "v" \
                 or (phone.value == "ð" and not (prev and prev.is_consonant() or prev.is_short())) \

@@ -1268,6 +1268,14 @@
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
+        "key": "culufre",
+        "form-raw": "culufre",
+        "form-canon": "culver",
+        "type": "noun",
+        "gloss": "dove",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
         "key": "cyline",
         "form-raw": "cyline",
         "form-raw-alt": ["cylene", "cyln"],
@@ -1429,6 +1437,14 @@
         "type": "noun",
         "gloss": ["[army] or [troop]", "large [crowd]"],
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "dufa",
+        "form-raw": "dufa",
+        "form-canon": "dove",
+        "type": "noun",
+        "gloss": "dove",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "dugan",
