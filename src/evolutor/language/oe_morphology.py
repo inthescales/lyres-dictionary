@@ -23,6 +23,7 @@ def get_derivational(form_tail):
         "else": "els",
         "elsi": "els",
         "en": "en",
+        "iġ": "iġ",
         "t": "þ",
         "þ": "þ"
     }

@@ -52,6 +52,16 @@
         "tags": ["mass", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "ǣmerġe",
+        "form-raw": "ǣmerġe",
+        "form-raw-alt": ["ǣmyrġe"],
+        "form-canon": "ember",
+        "type": "noun",
+        "gloss": "ember",
+        "tags": ["count", "concrete"],
+        "origin": "old-english",
+        "notes": "Wiktionary: 'The b is intrusive and was added in English for ease of pronunciation when the vowel of the second syllable (y) disappeared.'"
+    }, {
         "key": "ængel",
         "form-raw": "ængel",
         "form-raw-alt": "engel",
@@ -195,7 +205,7 @@
         "form-canon": "addle",
         "type": "noun",
         "gloss": "[disease], [sickness]",
-        "tags": ["count", "abstract", "state"],
+        "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
         "key": "āfor",
@@ -262,7 +272,7 @@
         "form-raw-alt": ["apulder"],
         "type": "noun",
         "gloss": "apple [tree]",
-        "tags": ["count", "concrete", "living", "plant", "speculative"],
+        "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ārian",
@@ -1013,6 +1023,15 @@
         "origin": "old-english",
         "notes": "Historically, reanalyzed not only as singular but as derived from Latin '-al' suffix. Leaving without canon due to different sense."
     }, {
+        "key": "byldan",
+        "form-raw": "byld|an",
+        "form-raw-alt": ["bylt|an"],
+        "form-canon": "build",
+        "type": "verb",
+        "gloss": "build",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "byrġan",
         "form-raw": "byrġ|an",
         "form-canon": "bury",
@@ -1268,6 +1287,14 @@
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
+        "key": "cot",
+        "form-raw": ["cot", "cote"],
+        "form-canon": "cote",
+        "type": "noun",
+        "gloss": ["small [house]", "[cottage] or [hut]", "shed"],
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
         "key": "culufre",
         "form-raw": "culufre",
         "form-canon": "culver",
@@ -1487,6 +1514,13 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "I can't find any actual source for 'dwearg', but it matches Tolkien's 'dwarrow' so I'm keeping it, fuck it"
+    }, {
+        "key": "dwild",
+        "form-raw": "dwild",
+        "type": "noun",
+        "gloss": ["error", "heresy"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
     }, {
         "key": "dysiġ",
         "form-raw": "dys+iġ",
@@ -1713,6 +1747,14 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "fēsian",
+        "form-raw": "fēsi|an",
+        "form-canon": "feeze",
+        "type": "verb",
+        "gloss": ["frighten", "[frighten] away"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "fersċ",
         "form-raw": "fersċ",
         "form-canon": "fresh",
@@ -1724,8 +1766,8 @@
     }, {
         "key": "fiellan",
         "form-raw": "fiell|an",
-        "form-canon": "fell",
         "form-raw-alt": ["fæll|an", "fyll|an"],
+        "form-canon": "fell",
         "type": "verb",
         "gloss": "[cut] down",
         "gloss-alt": "kill",
@@ -1857,6 +1899,14 @@
         "type": "noun",
         "gloss": "friend",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "frēosan",
+        "form-raw": "frēos|an",
+        "form-canon": "freeze",
+        "type": "verb",
+        "gloss": "freeze",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "friþ",
@@ -2309,6 +2359,14 @@
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "hogu",
+        "form-raw": "hogu",
+        "form-canon": "how",
+        "type": "noun",
+        "gloss": ["sorrow", "anxiety", "trouble"],
+        "tags": ["count", "abstract", "state", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "holen",
         "form-raw": "holen",
         "form-raw-alt": ["holeġn"],
@@ -2341,6 +2399,13 @@
         "type": "noun",
         "gloss": "horn",
         "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "hors",
+        "form-raw": "hors",
+        "type": "noun",
+        "gloss": "horse",
+        "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "hrafn",
@@ -2817,6 +2882,14 @@
         "origin": "old-english",
         "notes": "Original sense was 'person'"
     }, {
+        "key": "mapulder",
+        "form-raw": "mapulder",
+        "form-raw-alt": ["mapuldre", "mapolder", "mapuldor"],
+        "type": "noun",
+        "gloss": "maple [tree]",
+        "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "mase-count",
         "form-raw": "mase",
         "form-raw-alt": ["mæs"],
@@ -3266,6 +3339,20 @@
         "tags": ["transitive", "motion"],
         "origin": "old-english"
     }, {
+        "key": "sċyld",
+        "form-raw": "sċyld",
+        "type": "noun",
+        "gloss": ["guilt", "debt"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "sċyldiġ",
+        "form-raw": "sċyld+iġ",
+        "type": "adj",
+        "gloss": ["guilty", "in debt"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "seax",
         "form-raw": "seax",
         "form-raw-alt": ["sex", "syx"],
@@ -3673,6 +3760,14 @@
         "gloss": "tough",
         "origin": "old-english"
     }, {
+        "key": "torht",
+        "form-raw": "torht",
+        "type": "adj",
+        "gloss": ["[bright], [shiny]", "[bright], [radiant]", "glorious", "resplendent"],
+        "tags": ["rare"],
+        "origin": "old-english",
+        "notes": "Chiefly poetic in OE"
+    }, {
         "key": "trēo",
         "form-raw": "trēo",
         "form-canon": "tree",
@@ -3959,6 +4054,15 @@
         "tags": ["count", "abstract", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "wamb",
+        "form-raw": "wamb",
+        "form-canon": "womb",
+        "type": "noun",
+        "gloss": "womb",
+        "gloss-alt": ["belly"],
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "old-english"
+    }, {
         "key": "wancol",
         "form-raw": "wancol",
         "type": "adj",
@@ -3974,6 +4078,16 @@
         "tags": ["count", "concrete", "living", "terrain", "obscure"],
         "origin": "old-english",
         "notes": "Canon forms 'weald' and 'wold' also exist"
+    }, {
+        "key": "waldan",
+        "form-raw": "wald|an",
+        "form-raw-alt": ["weald|an"],
+        "form-canon": "wald",
+        "type": "verb",
+        "gloss": ["govern", "inherit", "rule"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Chosen form is an Anglian form of my own inference. Seems to work out the same anyway"
     }, {
         "key": "wearg",
         "form-raw": ["warg", "weg", "wearg", "wearh"],
@@ -4007,6 +4121,17 @@
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "TODO: I can't explain the spelling"
+    }, {
+        "key": "weldan",
+        "form-raw": "weld|an",
+        "form-raw-alt": ["wield|an", "wild|an"],
+        "form-canon": "wield",
+        "type": "verb",
+        "gloss": "wield",
+        "gloss-alt": ["control", "[have] power over"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian"
     }, {
         "key": "wēnan",
         "form-raw": "wēn|an",
@@ -4270,6 +4395,13 @@
         "type": "noun",
         "gloss": "wool",
         "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "wuldor",
+        "form-raw": "wuldor",
+        "type": "noun",
+        "gloss": ["[glory], [splendor]", "[reverence] or [praise]", "worship"],
+        "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
         "key": "wunian",

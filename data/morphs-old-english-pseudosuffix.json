@@ -1,5 +1,21 @@
 [
     {
+        "key": "-cot",
+        "form-stem": "cote",
+        "form-raw": "cot",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "a shelter for %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english",
+        "notes": "TODO: Apply only to tame animals"
+    }, {
         "key": "-ful",
         "form-stem": "ful",
         "form-raw": "ful",
@@ -194,6 +210,20 @@
             }
         },
         "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-weard",
+        "form-stem": "ward",
+        "form-raw": "weard",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "toward %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "concrete"
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-wurþ",

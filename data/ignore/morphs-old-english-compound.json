@@ -58,6 +58,14 @@
         "notes": "'sylfer' is Anglian form, 'seolfor' WS"
     },
     {
+        "key": "frum-byrd-ling",
+        "form-raw": ["frum-byrd-ling", "frum-bierd-ling"],
+        "type": "noun",
+        "gloss": ["youth", "young [man]"],
+        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "origin": "old-english"
+    },
+    {
         "key": "middan-ġeard",
         "form-raw": "middan-ġeard",
         "type": "noun",
