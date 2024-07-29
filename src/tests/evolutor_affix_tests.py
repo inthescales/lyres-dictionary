@@ -100,7 +100,8 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["dohtiġ", "-nes"], "doughtiness")
 
         # Drop silent e in favor of vowel
-
+        self.assertForm(["rose", "-iġ"], "rosy")
+        
         # Eliminate triple consonants
         self.assertForm(["full", "-liċ"], "fully")
 

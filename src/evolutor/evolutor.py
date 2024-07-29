@@ -2,7 +2,7 @@ import src.evolutor.language.oe_read as oe_read
 import src.evolutor.language.oe_morphology as oe_morphology
 import src.evolutor.language.oe_phonology as oe_phonology
 import src.evolutor.language.me_phonology as me_phonology
-import src.evolutor.language.ne_orthography as ne_orthography
+import src.evolutor.language.mne_write as mne_write
 
 def oe_orth_to_oe_phone(oe_form, config):
     return oe_phonology.from_oe_written(oe_form)
@@ -50,7 +50,7 @@ def oe_form_to_ne_form(oe_form, config):
         else:
             oe_phonemes = oe_read.to_phonemes(element_form)
             me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
-            form = ne_orthography.from_me_phonemes(me_phonemes, config)
+            form = mne_write.from_me_phonemes(me_phonemes, config)
         
         modern_form += form
 
