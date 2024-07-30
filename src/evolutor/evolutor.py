@@ -3,6 +3,7 @@ import src.evolutor.language.oe_morphology as oe_morphology
 import src.evolutor.language.oe_phonology as oe_phonology
 import src.evolutor.language.me_phonology as me_phonology
 import src.evolutor.language.mne_write as mne_write
+import src.evolutor.language.mne_affixation as mne_affixation
 
 def oe_orth_to_oe_phone(oe_form, config):
     return oe_phonology.from_oe_written(oe_form)
@@ -26,7 +27,7 @@ def oe_form_to_ne_participle(oe_form, verb_class, method, config):
 
     if verb_class == "weak" or method in [3, 4]:
         if not participle_form.endswith("e"):
-            participle_form += "ed"
+            participle_form = mne_affixation.get_joined_form(participle_form, "ed")
         else:
             participle_form += "d"
 

@@ -49,7 +49,7 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["dēaþ", "-liċ"], "deathly")
         self.assertForm(["dēore", "-liċ"], "dearly")
         self.assertForm(["eorþe", "-liċ"], "earthly")
-        # self.assertForm(["flǣsċ", "-liċ"], "fleshly") # Can't explain 'e' in 'flesh'
+        # self.assertForm(["flǣsċ", "-liċ"], "fleshly") # Needs override support
         self.assertForm(["frēo", "-liċ"], "freely")
         self.assertForm(["frēond", "-liċ"], "friendly")
         self.assertForm(["fūl", "-liċ"], "foully")
@@ -93,11 +93,14 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["īs", "-iġ", "-nes"], "iciness")
         self.assertForm(["frēond", "-liċ", "-nes"], "friendliness")
         
-        # Spelling changes ---
+        # Spelling changes ------------------------------
 
         # Change final y to i before consonant
         self.assertForm(["dæġ", "-liċ"], "daily")
         self.assertForm(["dohtiġ", "-nes"], "doughtiness")
+
+        # ...but not always
+        self.assertForm(["drȳġe", "-nes"], "dryness")
 
         # Drop silent e in favor of vowel
         self.assertForm(["rose", "-iġ"], "rosy")

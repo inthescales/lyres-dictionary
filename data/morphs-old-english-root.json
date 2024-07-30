@@ -489,7 +489,7 @@
         "type": "noun",
         "gloss": ["harm", "poison", "[death] or [destruction]"],
         "gloss-alt": ["murderer", "[cause] of death"],
-        "tags": ["count", "abstract", "obscure"],
+        "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english",
         "notes": "TODO: unpack these meanings for semantics like poison/liquid, murderer/person"
     }, {
@@ -1459,6 +1459,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "drȳġe",
+        "form-raw": "drȳġe",
+        "form-raw-alt": ["drīġe"],
+        "form-canon": "dry",
+        "type": "adj",
+        "gloss": "dry",
+        "origin": "old-english"
+    }, {
         "key": "dryht",
         "form-raw": "dryht",
         "type": "noun",
@@ -1791,9 +1799,9 @@
         "tags": ["mass", "concrete", "living", "bodypart"],
         "origin": "old-english"
     }, {
-        "key": "fleogan",
-        "form-raw": "flēg|an",
-        "form-raw-alt": "flēog|an",
+        "key": "flēogan",
+        "form-raw": "flēog|an",
+        "form-raw-alt": ["flēg|an"],
         "type": "verb",
         "gloss": "fly",
         "tags": ["intransitive", "motion"],

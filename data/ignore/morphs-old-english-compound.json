@@ -67,11 +67,13 @@
     },
     {
         "key": "middan-ġeard",
-        "form-raw": "middan-ġeard",
+        "form-raw": "midd+an-eard",
+        "form-raw-alt": ["midd+an-ġeard", "mydd+an-ġeard"],
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "fluid", "terrain", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "'-an' is an inflectional suffix on the adjective 'midd', but I'm not sure what to do with it here."
     },
     {
         "key": "gār-lēac",

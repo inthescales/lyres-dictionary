@@ -45,15 +45,15 @@ def y_is_vowel_heuristic(prev_char):
 
 # Returns the estimated number of syllables in the word
 # Based purely on vowel/consonant clusters — doesn't take silent 'e's into account
-def syllable_count(word):
+def syllable_count(word, y_is_vowel=False):
     count = 0
     in_vowels = False
     prev = None
     for char in word:
-        if is_vowel(char) and (prev is None or not is_vowel(prev)) and not in_vowels:
+        if is_vowel(char, y_is_vowel) and (prev is None or not is_vowel(prev, y_is_vowel)) and not in_vowels:
             in_vowels = True
             count += 1
-        elif is_consonant(char):
+        elif is_consonant(char, not y_is_vowel):
             in_vowels = False
         prev = char
     return count

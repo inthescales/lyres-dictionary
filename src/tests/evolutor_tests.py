@@ -846,7 +846,6 @@ class EvolutorTests(unittest.TestCase):
         check("brec|an", 4, 1, "broken")
         check("stel|an", 4, 1, "stolen")
         check("ber|an", 4, 1, "born")
-        # check("cum|an", 4, 1, "comen") # Idiosyncratic spelling?
         check("cweþ|an", 5, 1, "queathen")
         # check("ġief|an", 5, 1, "yiven") # Various ME forms?
         # check("sprec|an", 5, 1, "spoken") # Irregular both in infinitive and participle forms
@@ -870,15 +869,14 @@ class EvolutorTests(unittest.TestCase):
         # check("rēp|an", 1, 3, "reaped") # Can't explain 'ea' vowel in base
         check("lēog|an", 2, 3, "lied")
         check("sēoþ|an", 2, 3, "seethed")
-        # check("brūc|an", 2, 3, "brooked") # Can't explain 'oo' vowel in base
         check("lūt|an", 2, 3, "louted")
         check("cwel|an", 4, 3, "quealed")
         check("nim|an", 4, 3, "nimmed")
         check("stepp|an", 6, 3, "stepped")
         check("wasċ|an", 6, 3, "washed")
-        check("hliehh|an", 6, 3, "laughed")
+        check("hlæhh|an", 6, 3, "laughed")
         # check("hat|an", 7, 3, "hated") # Can't explain 'a' vowel in base
-        check("hleap|an", 7, 3, "leaped")
+        check("hlēap|an", 7, 3, "leaped")
 
         # Participle method 4 — modern form + '-ed' suffix, with assimilations
         # check("hliehh|an", 6, "laught")

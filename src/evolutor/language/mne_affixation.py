@@ -31,16 +31,22 @@ def get_joined_form(form, addition):
             addition = "-" + addition
 
     if form[-1] == "y" \
-        and (helpers.is_consonant(addition[0])):
-        # If word ends in a vowel y, and suffix begins with a consonant or 'e'', change the y to i
+    	and helpers.is_consonant(addition[0]) \
+    	and not (helpers.syllable_count(form, True) == 1 and helpers.is_consonant(form[-2])):
+        # If word ends in 'y' and is being suffixed with a consonant, change the 'y' to 'i'
+        # Only do this if the word is *not* a one-syllable word ending in '-Cy'.
         # Ex. 'day' + 'ly' -> 'daily', 'doughty' + 'ness' -> 'doughtiness'
+        # Ex. of exceptions: 'dry' + 'ly' -> 'dryly', 'shy' + 'ness' -> 'shyness'
 
-        # NOTE: This is a phenomenon that mostly occurs to older constructions.
-        # For instance, it applies in 'day' + 'ly' -> 'daily', but a more ad-hoc usage like
-        # 'gray' + 'ly' -> 'graily' looks strage.
+        # NOTE: There is some inconsistency in this phenomenon, which appears to vary by time period.
+        # OED usages show a lack of this phenomenon in the Middle English period, with it picking up
+        # around the 1700's and continuing to the present.
         #
-        # I'm satisfied to use the earlier method for now when working from Old English, but in the
-        # future will likely want to exempt certain additional cases.
+        # There also seem to be a number of exceptions. We see 'daily' and 'gaily', but also 'grayly'
+        # and 'coyly'. This may result from avoidance of confusion as to what root is being modified,
+        # where 'graily' might seem to be derived from 'grail', or 'coily' from 'coil'.
+        # 
+        # TODO: If I ever add a common word list to this codebase, I could use it here too.
 
         form = form[:-1] + "i"
 
