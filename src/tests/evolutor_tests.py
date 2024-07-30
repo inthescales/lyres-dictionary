@@ -885,6 +885,11 @@ class EvolutorTests(unittest.TestCase):
         # Ahistorically treated as strong, or as a different class of strong
         # check("hleap|an", 7, "lopen")
 
+        # Participles for contracted verbs
+        check("tē|on", "weak", 1, "teed")
+        check("wrē|on", 1, 1, "wrine") #* Hypothetical form, taken from Anglish wiki
+        check("flē|on", 2, 1, "flown")
+
         return [total, failures]
 
     def _test_compounds(self):

@@ -1,5 +1,6 @@
 import src.evolutor.language.oe_orthography as orthography
 import src.utils.helpers as helpers
+from src.utils.logging import Logger
 
 # Returns any prefix matching the given written form
 def get_prefix(form):
@@ -42,11 +43,15 @@ def get_derivational(form_tail):
 # of consonant change is not present in modern English, where the observed participle
 # of this word is 'snithen'
 def get_pseudoparticiple(form, verb_class):
+    # If this is a contract form, call the separate function for that
+    if form.endswith("on"):
+        return get_pseudoparticiple_contracted(form, verb_class)
+
     # Remove inflectional ending, if any}
     form = form.split("|")[0]
 
     if verb_class == "weak":
-        # TODO: handle class 3 weak verbs (2 is close enough)
+        # TODO: handle class 3 weak verbs (should work for 2 as well)
         return form
     elif verb_class == 7:
         return form + "+en"
@@ -86,3 +91,19 @@ def get_pseudoparticiple(form, verb_class):
         print("VOWELS NOT FOUND IN VOWEL MAP! Have " + str(vowels) + " FOR CLASS " + str(verb_class))
 
     return form[0:cluster_indices[0]] + vowel_map[verb_class][vowels] + form[cluster_indices[1]:] + "+en"
+
+# Get a pseudoparticiple for a verb in a contracted form (e.g. 'lēon', 'þēon')
+def get_pseudoparticiple_contracted(form, verb_class):
+
+    if verb_class == "weak":
+        return form[0:-2]
+    else:
+        stem = form[0:-4]
+
+        if verb_class == 1:
+            # TODO: Handle cases where class 1 verbs are given class 2-style endings, as in 'tēon' -> 'togen'
+            return stem + "iġ+en"
+        elif verb_class == 2:
+            return stem + "og+en"
+        else:
+            Logger.error("ERROR: NO CONTRACTED VERB PARTICIPLE BEHAVIOR FOR CLASS " + str(verb_class) + ", requested for '" + form + "'")

@@ -213,7 +213,7 @@ def from_oe_phonemes(oe_phonemes, config):
         two_joined = "".join([p.value for p in state.capture[:2]])
         vowel_after = state.capture[2].is_vowel()
         
-        if two_joined == "eːj" and vowel_after:
+        if two_joined in ["eːj", "ij"] and vowel_after:
             return [Phoneme("iː", template=state.capture[0])]
         elif two_joined == "au" and vowel_after:
             return [Phoneme("au", template=state.capture[0])]
@@ -322,18 +322,6 @@ def from_oe_phonemes(oe_phonemes, config):
     # ə → ∅ / _# 
     def loss_of_final_unstressed_vowel(state):
         if state.current.value == "ə" and state.next == None:
-            return []
-        
-        # Experimental - remove some other 'ə's
-
-        # ərld
-        if state.current.value == "ə" \
-            and state.prev and state.prev.value == "r" \
-            and len(state.following) >= 2 and "".join([x.value for x in state.following[:2]]) == "ld":
-            return []
-        
-        if state.current.value == "ə" \
-            and state.prev and state.prev.value in ["iː"]:
             return []
 
     def distinguish_voiced_fricatives(state):

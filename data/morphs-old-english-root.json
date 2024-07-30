@@ -2129,6 +2129,13 @@
         "tags": ["count", "concrete", "man-made", "garment"],
         "origin": "old-english"
     }, {
+        "key": "gnīdan",
+        "form-raw": "gnīd|an",
+        "type": "verb",
+        "gloss": "rub",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "god",
         "form-raw": "god",
         "form-canon": "god",
