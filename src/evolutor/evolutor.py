@@ -49,10 +49,32 @@ def oe_form_to_ne_form(oe_form, config):
             # Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
             form = prefix
         else:
-            oe_phonemes = oe_read.to_phonemes(element_form)
-            me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
-            form = mne_write.from_me_phonemes(me_phonemes, config)
-        
+            irregular_form = get_irregular_form(oe_form, config)
+            if irregular_form != None:
+                form = irregular_form
+            else:
+                form = get_updated_form(element_form, config)
+
         modern_form += form
 
     return modern_form
+
+def get_updated_form(form, config):
+    oe_phonemes = oe_read.to_phonemes(form)
+    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
+    return mne_write.from_me_phonemes(me_phonemes, config)
+
+# For the given Old English form, return an alternate form that should have the
+# evolution process applied to it rather than the one supplied.
+def get_irregular_form(cited_form, config):
+    # Contracted class 7 strong verbs use irregular '-ang' form in MnE.
+    # e.g. 'hōn' -> 'hang', 'gōn' -> 'gang'
+    if cited_form[-3:] == "|ōn":
+        if config.verbose:
+            print("- Using contracted class 7 strong verb irregular form in '-ang'" + config.separator)
+        # HACK: This doesn't represent a historical form, but is devised such that phonetic evolution will
+        # always produce a modern form in '-ang'.
+        # TODO: Come up with something cleaner here. Maybe a context property for evolution to enforce this spelling.
+        return cited_form[:-3] + "æng"
+
+    return None

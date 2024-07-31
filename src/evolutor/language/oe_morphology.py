@@ -44,7 +44,7 @@ def get_derivational(form_tail):
 # of this word is 'snithen'
 def get_pseudoparticiple(form, verb_class):
     # If this is a contract form, call the separate function for that
-    if form.endswith("on"):
+    if form[-2:] in ["on", "ōn"]:
         return get_pseudoparticiple_contracted(form, verb_class)
 
     # Remove inflectional ending, if any}
@@ -94,16 +94,23 @@ def get_pseudoparticiple(form, verb_class):
 
 # Get a pseudoparticiple for a verb in a contracted form (e.g. 'lēon', 'þēon')
 def get_pseudoparticiple_contracted(form, verb_class):
-
     if verb_class == "weak":
         return form[0:-2]
     else:
-        stem = form[0:-4]
+        if form[-4:] == "ē|on":
+            stem = form[0:-4]
+        elif form[-2:] == "ōn":
+            stem = form[0:-3]
 
         if verb_class == 1:
             # TODO: Handle cases where class 1 verbs are given class 2-style endings, as in 'tēon' -> 'togen'
             return stem + "iġ+en"
         elif verb_class == 2:
             return stem + "og+en"
+        elif verb_class == 7:
+            # Also appeared as '-ongen' in OE
+            # HACK: '-æng' spelling is constructed, with intent of consistently giving '-ang' forms in MnE.
+            # TODO: Find a more elegant way to do this.
+            return stem + "æng+en"
         else:
             Logger.error("ERROR: NO CONTRACTED VERB PARTICIPLE BEHAVIOR FOR CLASS " + str(verb_class) + ", requested for '" + form + "'")

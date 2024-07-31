@@ -833,7 +833,7 @@ class EvolutorTests(unittest.TestCase):
 
         check("bend|an", "weak", 1, "bended")
         check("send|an", "weak", 1, "sended")
-        check("stōwi|an", "weak", 1, "stowed", overrides=[[]])
+        check("stōwi|an", "weak", 1, "stowed")
         check("wrīt|an", 1, 1, "written")
         check("wrīþ|an", 1, 1, "writhen")
         check("bēod|an", 2, 1, "boden")
@@ -876,6 +876,7 @@ class EvolutorTests(unittest.TestCase):
         check("wasċ|an", 6, 3, "washed")
         check("hlæhh|an", 6, 3, "laughed")
         # check("hat|an", 7, 3, "hated") # Can't explain 'a' vowel in base
+        check("gang|an", 7, 3, "ganged", overrides=[["HL:ng", False]])
         check("hlēap|an", 7, 3, "leaped")
 
         # Participle method 4 — modern form + '-ed' suffix, with assimilations
@@ -887,8 +888,10 @@ class EvolutorTests(unittest.TestCase):
 
         # Participles for contracted verbs
         check("tē|on", "weak", 1, "teed")
-        check("wrē|on", 1, 1, "wrine") #* Hypothetical form, taken from Anglish wiki
+        check("wrē|on", 1, 1, "wrine") #* Conjectured form, taken from Anglish wiki
         check("flē|on", 2, 1, "flown")
+        check("h|ōn", 7, 1, "hangen")
+        check("f|ōn", 7, 3, "fanged")
 
         return [total, failures]
 

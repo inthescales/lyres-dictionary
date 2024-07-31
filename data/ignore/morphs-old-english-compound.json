@@ -56,6 +56,14 @@
         "tags": ["mass", "concrete", "fluid", "liquid", "metal"],
         "origin": "old-english",
         "notes": "'sylfer' is Anglian form, 'seolfor' WS"
+    }, {
+        "key": "ende-rīm",
+        "form-raw": "ende-rīm",
+        "type": "noun",
+        "gloss": "final [number]",
+        "tags": ["singleton", "abstract"],
+        "origin": "old-english",
+        "notes": "Only one occurence in text but it's funny lol"
     },
     {
         "key": "frum-byrd-ling",

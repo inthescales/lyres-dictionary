@@ -174,7 +174,10 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ɔ":
             result += "o"
         elif phone.value == "ɔː":
-            if precedes_lengthening_cluster or precedes_blocking_digraph:
+            if is_final:
+                # Word-finally always spelled as 'o', as in 'go' and 'do'
+                result += "o"
+            elif precedes_lengthening_cluster or precedes_blocking_digraph:
                 # Consonant clusters don't take digraphs (usually)
                 result += "o"
             elif is_vowel_open:
