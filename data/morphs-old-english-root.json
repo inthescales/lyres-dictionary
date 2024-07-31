@@ -205,7 +205,7 @@
         "form-canon": "addle",
         "type": "noun",
         "gloss": "[disease], [sickness]",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "āfor",
@@ -244,7 +244,7 @@
         "form-raw-alt": ["ambeaht", "ambeht"],
         "type": "noun",
         "gloss": ["servant", "official", "soldier"],
-        "tags": ["count", "abstract", "speculative"],
+        "tags": ["count", "concrete", "speculative"],
         "origin": "old-english",
         "notes": "'ambeaht' is WS"
     }, {
@@ -264,7 +264,7 @@
         "type": "noun",
         "gloss": "[spite], [malice]",
         "gloss-alt": "injury",
-        "tags": ["mass", "abstract", "speculative"],
+        "tags": ["mass", "abstract", "state", "quality", "speculative"],
         "origin": "old-english"
     }, {
         "key": "apuldre",
@@ -293,7 +293,7 @@
         "form-raw": "ār",
         "type": "noun",
         "gloss": ["[honor], [glory]", "grace"],
-        "tags": ["mass", "abstract", "speculative", "homophonic"],
+        "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ār-messenger",
@@ -1188,7 +1188,7 @@
         "type": "noun",
         "gloss": "[skill], [ability]",
         "gloss-alt": "strength",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "crumb",
@@ -1379,6 +1379,14 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "dēon",
+        "form-raw": "dē|on",
+        "type": "verb",
+        "gloss": "suck",
+        "gloss-alt": ["suckle"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "dēop",
         "form-raw": "dēop",
         "form-canon": "deep",
@@ -1535,6 +1543,13 @@
         "form-canon": "dizzy",
         "type": "adj",
         "gloss": "dizzy",
+        "origin": "old-english"
+    }, {
+        "key": "ēad",
+        "form-raw": "ead",
+        "type": "noun",
+        "gloss": ["happiness", "prosperity"],
+        "tags": ["mass", "abstract", "quality", "speculative"],
         "origin": "old-english"
     }, {
         "key": "eald",
@@ -1808,6 +1823,14 @@
         "origin": "old-english",
         "notes": "Chosen form is, I believe, Anglian (shows smoothing)."
     }, {
+        "key": "flēon",
+        "form-raw": "flē|on",
+        "form-canon": "flee",
+        "type": "verb",
+        "gloss": "flee",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "flīeman",
         "form-raw": "flīem|an",
         "form-raw-alt": "flȳm|an",
@@ -2000,6 +2023,14 @@
         "type": "adj",
         "gloss": "lascivious",
         "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "gangan",
+        "form-raw": "gang|an",
+        "form-canon": "gang",
+        "type": "verb",
+        "gloss": "go",
+        "tags": ["intransitive", "motion", "obscure"],
         "origin": "old-english"
     }, {
         "key": "gār",
@@ -2400,6 +2431,14 @@
         "tags": ["count", "concrete", "living", "terrain", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "hōn",
+        "form-raw": "h|ōn",
+        "form-canon": "hang",
+        "type": "verb",
+        "gloss": "hang",
+        "tags": ["transitive", "motion"],
+        "origin": "old-english"
+    }, {
         "key": "horn",
         "form-raw": "horn",
         "form-canon": "horn",
@@ -2692,6 +2731,13 @@
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "ġelāþ",
+        "form-raw": "ġe-lāþ",
+        "type": "adj",
+        "gloss": "hostile",
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
         "key": "lāþ",
         "form-raw": "lāþ",
         "form-canon": "loath",
@@ -2707,6 +2753,13 @@
         "type": "noun",
         "gloss": "lead",
         "tags": ["mass", "concrete", "metal", "material"],
+        "origin": "old-english"
+    }, {
+        "key": "lēon",
+        "form-raw": "lē|on",
+        "type": "verb",
+        "gloss": ["[blame], [fault]", "reproach"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "lēas-adj",
@@ -2755,6 +2808,13 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "lēon-2",
+        "form-raw": "lē|on",
+        "type": "verb",
+        "gloss": ["loan", "lend"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "lēsan",
         "form-raw": "lēs|an",
         "form-raw-alt": ["līes|an", "līs|an", "lȳs|an"],
@@ -2799,6 +2859,13 @@
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english",
         "notes": "Appears in 'lithy'"
+    }, {
+        "key": "ġelīþan",
+        "form-raw": "ġe-līþ|an",
+        "type": "verb",
+        "gloss": ["[go], [move]", "sail", "[proceed] or [advance]", "[come] to land, [reach] port (of a sea vessel)"],
+        "tags": ["intransitive", "motion", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "lof",
         "form-raw": "lof",
@@ -3141,7 +3208,7 @@
         "type": "noun",
         "gloss": "riddle",
         "gloss-tool": ["[tell] riddles", "perplex"],
-        "tags": ["mass", "abstract", "man-made", "tool"],
+        "tags": ["count", "abstract", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "ræfnan",
@@ -3275,12 +3342,26 @@
         "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "rūnian",
+        "form-raw": "rūn|ian",
+        "form-canon": "roun",
+        "type": "verb",
+        "gloss": "whisper",
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "sǣl",
+        "form-raw": "sǣl",
+        "type": "noun",
+        "gloss": ["happiness", "prosperity"],
+        "tags": ["mass", "abstract", "quality", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "sār",
         "form-raw": "sār",
         "form-canon": "sore",
         "type": "adj",
         "gloss": "pained",
-        "gloss-alt": ["wound"],
         "origin": "old-english"
     }, {
         "key": "sċanca",
@@ -3725,6 +3806,13 @@
         "form-canon": "tee",
         "type": "verb",
         "gloss": ["[pull] or [drag]", "[bring] or [lead]", "educate"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "tēon-2",
+        "form-raw": "tē|on",
+        "type": "verb",
+        "gloss": "accuse",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -3882,6 +3970,14 @@
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "þēon",
+        "form-raw": "þē|on",
+        "form-canon": "thee",
+        "type": "verb",
+        "gloss": ["[flourish] and [prosper]", "thrive", "[be] successful"],
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "þēostrian",
         "form-raw": "þēostri|an",
         "form-raw-alt": ["þīestri|an", "þȳstri|an"],
@@ -3920,7 +4016,7 @@
         "form-raw": "þracu",
         "type": "noun",
         "gloss": "[power], [force]",
-        "tags": ["mass", "abstract", "speculative"],
+        "tags": ["mass", "abstract", "quality", "speculative"],
         "origin": "old-english"
     }, {
         "key": "þrāwan",
@@ -4188,7 +4284,7 @@
         "form-canon": "worth",
         "type": "noun",
         "gloss": "[worth], [value]",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "weorþan",
@@ -4306,7 +4402,8 @@
         "type": "noun",
         "gloss": ["[looks], [appearance]", "good [looks]"],
         "tags": ["mass", "abstract", "speculative", "homophonic"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "TODO: Break apart senses so I can give 'good looks' the quality tag"
     }, {
         "key": "wolf",
         "form-raw": "wolf",
@@ -4357,12 +4454,14 @@
         "notes": "Various forms attested. My process gives 'wry' currently, which is one of the ones seen, but using 'wray' for variety."
     }, {
         "key": "wrēon",
-        "form-raw": "wrīon",
-        "form-raw-alt": ["wrē|on"],
+        "form-raw": "wrē|on",
+        "form-raw-alt": ["wrī|on"],
+        "form-canon": "wry",
         "type": "verb",
         "gloss": ["cover", "clothe", "hide"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Reflexes 'wree' and 'wry' are seen. The two forms here produce them respectively, though predominance of 'wry' may be due to analogy with other words."
     }, {
         "key": "wrīġels",
         "form-raw": "wrīġ+els",

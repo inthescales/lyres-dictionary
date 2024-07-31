@@ -231,7 +231,7 @@
                     "follows": {
                         "or": [
                             { "has-suffix": "e" },
-                            { "has-suffix": ["en", "ld", "nd"] }
+                            { "has-suffix": ["el", "en", "ld", "nd"] }
                         ]
                     }
                 },
@@ -345,7 +345,7 @@
                         "has-tag": "quality"
                     }
                 },
-                "gloss": "having the quality of %sg"
+                "gloss": "having %sg"
             }
         ],
         "origin": "old-english"
