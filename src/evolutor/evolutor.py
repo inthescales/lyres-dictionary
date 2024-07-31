@@ -51,9 +51,9 @@ def oe_form_to_ne_form(oe_form, config):
         else:
             irregular_form = get_irregular_form(oe_form, config)
             if irregular_form != None:
-                form = irregular_form
-            else:
-                form = get_updated_form(element_form, config)
+                element_form = irregular_form
+
+            form = get_updated_form(element_form, config)
 
         modern_form += form
 
