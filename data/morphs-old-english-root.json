@@ -676,6 +676,14 @@
         "origin": "old-english",
         "notes": "Original meaning 'offer, give' and 'proclaim, announce'"
     }, {
+        "key": "bēor",
+        "form-raw": "bēor",
+        "form-canon": "beer",
+        "type": "noun",
+        "gloss": "beer",
+        "tags": ["mass", "concrete"],
+        "origin": "old-english"
+    }, {
         "key": "ġe-bēor",
         "form-raw": "ġe-bēor",
         "type": "noun",
@@ -762,6 +770,21 @@
         "gloss": "smear",
         "gloss-alt": ["[scorn] or [deride]"],
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "smēocan",
+        "form-raw": "smēoc|an",
+        "type": "verb",
+        "gloss": ["smoke", "[emit] smoke", "fumigate", "[scent] with incense"],
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Needs bitransitivity or sense"
+    }, {
+        "key": "smoca",
+        "form-raw": "smoca",
+        "type": "noun",
+        "gloss": "smoke",
+        "tags": ["mass", "concrete"],
         "origin": "old-english"
     }, {
         "key": "snearu",
@@ -1442,6 +1465,15 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "drēopan",
+        "form-raw": "drēop|an",
+        "form-canon": "dreep",
+        "type": "verb",
+        "gloss": "[fall] in drops, [drip]",
+        "gloss-alt": ["drop", "droop"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "drīfan",
         "form-raw": "drīf|an",
         "form-raw-alt": ["drǣf|an"],
@@ -1465,6 +1497,15 @@
         "type": "verb",
         "gloss": ["live", "inhabit", "[conduct] onself"],
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "dropian",
+        "form-raw": "droppi|an",
+        "form-raw-alt": ["dropi|an"],
+        "form-canon": "drop",
+        "type": "verb",
+        "gloss": "drop",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "drȳġe",
@@ -1538,6 +1579,14 @@
         "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "dwīnan",
+        "form-raw": "dwīn|an",
+        "form-canon": "dwine",
+        "type": "verb",
+        "gloss": ["[decline] or [fade]", "[waste] away"],
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "dysiġ",
         "form-raw": "dys+iġ",
         "form-canon": "dizzy",
@@ -1560,6 +1609,14 @@
         "gloss": "old",
         "origin": "old-english",
         "notes": "Chosen form is Anglian, alt. is WS"
+    }, {
+        "key": "ealu",
+        "form-raw": "ealu",
+        "form-canon": "ale",
+        "type": "noun",
+        "gloss": "ale",
+        "tags": ["mass", "concrete"],
+        "origin": "old-english"
     }, {
         "key": "earfoþe-adj",
         "form-raw": "earfoþe",
@@ -1846,6 +1903,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "flītan",
+        "form-raw": "flīt|an",
+        "form-canon": "flite",
+        "type": "verb",
+        "gloss": ["[strive] or [contend]", "quarrel", "debate", "scold", "complain"],
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "floga",
         "form-raw": "floga",
         "type": "noun",
@@ -1894,6 +1959,15 @@
         "tags": ["intransitive"],
         "origin": "old-english",
         "notes": "Influenced 'frame', in combination with 'fremman'. Chosen gloss is based on modern 'frame'."
+    }, {
+        "key": "freġnan",
+        "form-raw": "freġn|an",
+        "form-raw-alt": ["friġn|an", "frin|an"],
+        "type": "verb",
+        "gloss": ["ask", "inquire"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "OED shows more modern usages with both 'frain' and 'frayn' spellings."
     }, {
         "key": "fremian",
         "form-raw": "fremi|an",
@@ -2025,6 +2099,31 @@
         "tags": ["obscure"],
         "origin": "old-english"
     }, {
+        "key": "galan",
+        "form-raw": "gal|an",
+        "form-canon": "gale",
+        "type": "verb",
+        "gloss": ["sing", "[cry] or [scream]", "call", "enchant", "[cast] a spell"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "gamen-count",
+        "form-raw": "gamen",
+        "form-canon": "game",
+        "type": "noun",
+        "gloss": "game",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "gamen-mass",
+        "form-raw": "gamen",
+        "form-canon": "game",
+        "type": "noun",
+        "gloss": "sport",
+        "gloss-alt": ["[joy], [pleasure]", "mirth", "jest"],
+        "tags": ["mass", "concrete", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "gangan",
         "form-raw": "gang|an",
         "form-canon": "gang",
@@ -2079,12 +2178,13 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
-        "key": "ġeotan",
-        "form-raw": "ġeot|an",
+        "key": "ġēotan",
+        "form-raw": "ġēot|an",
         "type": "verb",
         "gloss": ["pour", "[shed] (blood, tears, etc.)", "[cast] metal"],
         "tags": ["transitive", "motion", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Shows up as 'yet' in some modern cases, though I get 'yeet'"
     }, {
         "key": "ġesċeap",
         "form-raw": "ġe-sċeap",
@@ -2144,6 +2244,14 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "glæd",
+        "form-raw": "glæd",
+        "form-canon": "glad",
+        "type": "adj",
+        "gloss": "glad",
+        "gloss-alt": ["bright"],
+        "origin": "old-english"
+    }, {
         "key": "glæs",
         "form-raw": "glæs",
         "form-canon": "glass",
@@ -2191,6 +2299,24 @@
         "tags": ["mass", "concrete", "metal", "material"],
         "origin": "old-english"
     }, {
+        "key": "grafan",
+        "form-raw": "graf|an",
+        "form-canon": "grave",
+        "type": "verb",
+        "gloss": ["dig", "[carve] or [cut]", "engrave", "[shape] by carving or chiseling", "[entomb], [bury]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "grimman",
+        "form-raw": "grimm|an",
+        "form-canon": "grim",
+        "type": "verb",
+        "gloss": ["[be] angry", "[look] fierce"],
+        "gloss-alt": ["rage", "roar", "clamor"],
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english",
+        "notes": "This morph is a bit of a mishmash — alt. glosses reflect OE root, while main gloss reflects MnE 'grim', which OED has as a borrowing from a Dutch cognate. Leaving it for evocativeness."
+    }, {
         "key": "griþ-count",
         "form-raw": "griþ",
         "type": "noun",
@@ -2207,9 +2333,11 @@
     }, {
         "key": "guma",
         "form-raw": "guma",
+        "form-canon": "groom",
         "type": "noun",
-        "gloss": "man",
-        "tags": ["count", "concrete", "living", "person", "obscure"],
+        "gloss": "groom",
+        "gloss-alt": ["man"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
     }, {
@@ -2338,6 +2466,14 @@
         "tags": ["transitive", "motion", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "helan",
+        "form-raw": ["hel|an"],
+        "type": "verb",
+        "gloss": ["[hide], [conceal]", "[keep] secret", "cover"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Usage in later times merged with OE root 'helian', with very similar meaning but different verb class"
+    }, {
         "key": "helle",
         "form-raw": "helle",
         "form-canon": "hell",
@@ -2360,6 +2496,14 @@
         "gloss": "sword",
         "gloss-tool": "[cut] with a sword",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "hladan",
+        "form-raw": "hlad|an",
+        "form-canon": "lade",
+        "type": "verb",
+        "gloss": ["[fill] or [load]", "[load] up", "[weigh] down or [burden]"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "hlēapan",
@@ -2517,6 +2661,14 @@
         "tags": ["singleton", "concrete", "terrain", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
+        "key": "hrūtan",
+        "form-raw": "hrūt|an",
+        "type": "verb",
+        "gloss": ["snore", "[snort], [grunt]", "grumble", "[roar] or [rumble]"],
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Seen with 'rout' and 'rowt' spellings"
+    }, {
         "key": "hrysċ",
         "form-raw": "hrysċ",
         "form-canon": "rush",
@@ -2525,6 +2677,15 @@
         "tags": ["count", "concrete", "plant"],
         "origin": "old-english",
         "notes": "Form attested in late OE, but forms like 'risċ' seem to be more common in recorded sources."
+    }, {
+        "key": "hulu",
+        "form-raw": "hulu",
+        "form-canon": "hull",
+        "type": "noun",
+        "gloss": "[husk] or [shell]",
+        "gloss-alt": ["covering", "chrysalis", "garment"],
+        "tags": ["count", "concrete", "garment"],
+        "origin": "old-english"
     }, {
         "key": "hund",
         "form-raw": "hund",
@@ -2594,6 +2755,13 @@
         "type": "noun",
         "gloss": "hill",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "hyllan",
+        "form-raw": ["hyll|an"],
+        "type": "verb",
+        "gloss": "cover",
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "īdel",
@@ -2815,6 +2983,24 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "lēosan",
+        "form-raw": "lēos|an",
+        "form-canon": "leese",
+        "type": "verb",
+        "gloss": "lose",
+        "gloss-alt": ["[bring] to ruin", "spoil", "fail"],
+        "tags": ["intransitive", "motion"],
+        "origin": "old-english",
+        "notes": "Participle 'lorn'! Need Verner's law support"
+    }, {
+        "key": "lesan",
+        "form-raw": "les|an",
+        "form-canon": "lease",
+        "type": "verb",
+        "gloss": ["gather", "collect", "select"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "lēsan",
         "form-raw": "lēs|an",
         "form-raw-alt": ["līes|an", "līs|an", "lȳs|an"],
@@ -2850,6 +3036,15 @@
         "type": "noun",
         "gloss": "linden [tree]",
         "tags": ["count", "concrete", "plant", "tree"],
+        "origin": "old-english"
+    }, {
+        "key": "linnan",
+        "form-raw": "linn|an",
+        "form-canon": "lin",
+        "type": "verb",
+        "gloss": "[stop] or [cease]",
+        "gloss-alt": ["lose", "surrender", "[lose] one's life"],
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "liþ",
@@ -2906,6 +3101,39 @@
         "type": "noun",
         "gloss": "love",
         "tags": ["mass", "abstract", "state"],
+        "origin": "old-english"
+    }, {
+        "key": "losian",
+        "form-raw": "losi|an",
+        "form-canon": "lose",
+        "type": "verb",
+        "gloss": "lose",
+        "gloss-alt": ["perish", "[bring] to ruin"],
+        "tags": ["intransitive", "motion"],
+        "origin": "old-english"
+    }, {
+        "key": "lūcan",
+        "form-raw": "lūc|an",
+        "form-canon": "louk",
+        "type": "verb",
+        "gloss": ["[pull] up weeds", "weed"],
+        "gloss-alt": ["[pull] up or out"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "lūcan-2",
+        "form-raw": "lūc|an",
+        "type": "verb",
+        "gloss": ["close", "conclude", "fasten", "lock"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "lūtan",
+        "form-raw": "lūt|an",
+        "form-canon": "lout",
+        "type": "verb",
+        "gloss": ["bow", "[bend] or [stoop]", "[make] obeisance"],
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lyttel",
@@ -3093,10 +3321,11 @@
         "form-raw": "mōd",
         "form-canon": "mood",
         "type": "noun",
-        "gloss": "[state] of mind",
-        "gloss-alt": ["[heart], [spirit]", "courage", "pride"],
-        "tags": ["count", "abstract"],
-        "origin": "old-english"
+        "gloss": "strong [feeling]",
+        "gloss-alt": ["[state] of mind", "[heart], [spirit]", "courage", "pride"],
+        "tags": ["count", "abstract", "state"],
+        "origin": "old-english",
+        "notes": "Gloss chosen based on modern usage, and for ease of compounding (e.g. 'moody' = 'affected by a strong feeling'"
     }, {
         "key": "mōt",
         "form-raw": "mōt",
@@ -3123,6 +3352,15 @@
         "type": "noun",
         "gloss": ["scandal", "offense", "hindrance"],
         "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "niman",
+        "form-raw": "nim|an",
+        "form-canon": "nim",
+        "type": "verb",
+        "gloss": "take",
+        "gloss-alt": ["[go] or [proceed]", "steal"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "open",
@@ -3426,6 +3664,15 @@
         "tags": ["mass", "concrete", "living", "bodypart", "material"],
         "origin": "old-english"
     }, {
+        "key": "sċrīfan",
+        "form-raw": "sċrīf|an",
+        "form-canon": "shrive",
+        "type": "verb",
+        "gloss": "absolve",
+        "gloss-alt": ["[impose] penance on"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "sċūfan",
         "form-raw": "sċūf|an",
         "form-canon": "shove",
@@ -3439,14 +3686,14 @@
         "form-raw": "sċyld",
         "type": "noun",
         "gloss": ["guilt", "debt"],
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "sċyldiġ",
         "form-raw": "sċyld+iġ",
         "type": "adj",
         "gloss": ["guilty", "in debt"],
-        "tags": ["count", "abstract"],
+        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "seax",
@@ -3510,6 +3757,32 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "sīcan",
+        "form-raw": "sīc|an",
+        "type": "adj",
+        "gloss": ["[sigh] or [groan]", "[long] for"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving without canon form."
+    }, {
+        "key": "sīon-intransitive",
+        "form-raw": "sī|on",
+        "form-raw-alt": ["sē|on"],
+        "form-canon": "sie",
+        "type": "adj",
+        "gloss": "[drip] or [drain] (of liquids)",
+        "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "sīon-transitive",
+        "form-raw": "sī|on",
+        "form-raw-alt": ["sē|on"],
+        "form-canon": "sie",
+        "type": "adj",
+        "gloss": ["strain (as with a strainer)", "[stain] by dripping liquid"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "sīþ",
         "form-raw": ["sīþ", "siþ'"],
         "type": "noun",
@@ -3538,6 +3811,50 @@
         "gloss": "[slacken] or [abate]",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
+    }, {
+        "key": "slīfan",
+        "form-raw": "slīf|an",
+        "form-canon": "slive",
+        "type": "verb",
+        "gloss": ["cut", "[cut] through", "[split] or [divide]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Gloss 'sharpen' from Scottish usage"
+    }, {
+        "key": "slītan",
+        "form-raw": "slīt|an",
+        "form-canon": "slite",
+        "type": "verb",
+        "gloss": ["tear", "[rend] (a garment)", "[split] or [divide]", "[wear] out"],
+        "gloss-alt": ["sharpen"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Gloss 'sharpen' from Scottish usage"
+    }, {
+        "key": "slīþan",
+        "form-raw": "slīþ|an",
+        "form-canon": "snithe",
+        "type": "ver b",
+        "gloss": "cut",
+        "gloss-alt": ["[kill] by cutting", "[make] an incision"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "swīfan-OE",
+        "form-raw": "swīf|an",
+        "type": "verb",
+        "gloss": ["[move] in a course", "sweep", "intervene"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "swīfan-ME",
+        "form-raw": "swīf|an",
+        "form-canon": "swive",
+        "type": "verb",
+        "gloss": "[copulate] with",
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Connection between ME+ sense of 'copulate with' appears a bit uncertain in OED, but leaving here in OE for now"
     }, {
         "key": "smēaġan-intransitive",
         "form-raw": "smēaġ|an",
@@ -3731,7 +4048,7 @@
         "notes": "Form is not directly attested, but implied in OE 'andswarian' et al., and ME 'swaren'"
     }, {
         "key": "swebban-intransitive",
-        "form-raw": "sebb|an",
+        "form-raw": "swebb|an",
         "form-canon": "sweb",
         "type": "verb",
         "gloss": "[swoon] or [faint]",
@@ -3756,6 +4073,13 @@
         "origin": "old-english",
         "notes": "Alt. meaning 'sleep'"
     }, {
+        "key": "sweltan",
+        "form-raw": "swelt|an",
+        "type": "verb",
+        "gloss": ["die", "faint", "[be] overcome (as with emotion, heat, etc.)"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "swīcan",
         "form-raw": "swīc|an",
         "form-canon": "swike",
@@ -3772,6 +4096,15 @@
         "gloss": "pig",
         "gloss-animal": ["[eat] excessively"],
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "swincan",
+        "form-raw": "swinc|an",
+        "form-canon": "swink",
+        "type": "verb",
+        "gloss": ["[work] hard", "[labor], [toil]"],
+        "gloss-alt": ["strive"],
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "sylfer",
@@ -4028,11 +4361,28 @@
         "origin": "old-english",
         "notes": "Original meaning 'twist, turn, writhe, curl'. Strong verb: þreow, past participle þrawen, geþrawen"
     }, {
+        "key": "þringan",
+        "form-raw": "þring|an",
+        "form-canon": "thring",
+        "type": "verb",
+        "gloss": ["[crowd] about", "[press] or [squeeze]", "push", "[force] one's way"],
+        "gloss-alt": ["constrict"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "þwēan",
         "form-raw": "þwē|an",
         "type": "verb",
         "gloss": "wash",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "þwītan",
+        "form-raw": "þwīt|an",
+        "form-canon": "thwite",
+        "type": "verb",
+        "gloss": ["whittle", "[pare] down"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "þynne",
@@ -4379,9 +4729,23 @@
         "form-canon": "wither",
         "type": "adj",
         "gloss": ["hostile", "opposed", "adverse", "contrary"],
-        "origin": "old-english",
         "tags": ["obscure"],
+        "origin": "old-english",
         "notes": "Other meanings in dialect"
+    }, {
+        "key": "wlanc-adj",
+        "form-raw": "wlanc",
+        "type": "adj",
+        "gloss": ["proud", "arrogant"],
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "wlanc-n",
+        "form-raw": "wlanc",
+        "type": "noun",
+        "gloss": "pride",
+        "tags": ["mass", "abstract", "state", "quality", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "wlātian",
         "form-raw": "wlāti|an",

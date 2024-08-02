@@ -288,7 +288,7 @@ class EvolutorTests(unittest.TestCase):
         # check("nēdl", "needle") # Irregular. Wiktionary: the final vowel is generalised from the Old English oblique cases. 
         check("dēop", "deep")
         check("fēond", "fiend")
-        check("be-twēonum", "between") # List had 'betwēonum'. Tweaked for the sake of test.
+        check("be-twēon|um", "between")
         # be
         check("feld", "field")
         check("ġeld|an", "yield")

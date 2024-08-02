@@ -300,7 +300,7 @@ def from_oe_phonemes(oe_phonemes, config):
     def final_unstressed_m_to_n(state):
         if state.current.value == "m" and state.next == None \
             and not (state.syllable_data.prev_vowel and state.syllable_data.prev_vowel.stressed):
-            return []
+            return [Phoneme("n", template=state.current)]
 
     # Drop inflectional endings
     def drop_inflecional_endings(state):

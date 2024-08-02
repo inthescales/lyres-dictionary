@@ -118,7 +118,7 @@ def transform_word(word, morphothec, is_single):
     if len(relational_suffixes) > 0 and word.size() == 1 and current_type == "noun":
         bag.append(("relational", 10))
 
-    if len(numerical_suffixes) > 0 and word.size() == 1 and current_type == "noun" and not last_morph.has_tag("singleton"):
+    if len(numerical_suffixes) > 0 and word.size() == 1 and current_type == "noun" and last_morph.has_tag("count"):
         bag.append(("numerical", 5))
 
     # See if an alternate form is available

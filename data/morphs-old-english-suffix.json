@@ -219,9 +219,12 @@
         "tags": ["uncountable", "mass"],
         "requires": {
             "follows": {
-                "or": [
-                    { "has-tag": "concrete" },
-                    { "has-type": "verb" }
+                "and": [
+                    { "or": [
+                        { "has-tag": "concrete" },
+                        { "has-type": "verb" }
+                    ] },
+                    { "not": { "has-tag": "bodypart "} }
                 ]
             }
         },
@@ -231,7 +234,7 @@
                     "follows": {
                         "or": [
                             { "has-suffix": "e" },
-                            { "has-suffix": ["el", "en", "ld", "nd"] }
+                            { "has-suffix": ["el", "en", "ld", "nd", "ow"] }
                         ]
                     }
                 },
@@ -346,6 +349,20 @@
                     }
                 },
                 "gloss": "having %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "state"
+                    }
+                },
+                "gloss": "affected by %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["plant", "bodypart-plant"]
+                    }
+                },
+                "gloss": "covered with %pl"
             }
         ],
         "origin": "old-english"
@@ -591,6 +608,11 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "the state or condition of being %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "person"
+            }
+        },
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english",
         "notes": "This usage was common in OE, but is very rare in MnE"

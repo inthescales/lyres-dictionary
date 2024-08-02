@@ -18,8 +18,8 @@ def generate_word(morphothec):
         ]
     elif word.root_morph().has_tag("obscure"):
         bag = [
-            (0, 3) ,
-            (1, 1)
+            (0, 2) ,
+            (1, 2)
         ]
     else:
         bag = [

@@ -42,6 +42,10 @@ def get_derivational(form_tail):
 # 'sniþan' -> '(ġe)sniden'. Rather, it would would produce 'sniþen', since that type
 # of consonant change is not present in modern English, where the observed participle
 # of this word is 'snithen'
+#
+# That said, Verner's law does apply in cases like 'forlese' -> 'forlorn', so I should
+# probably add handling from it at some point.
+# TODO: Support Verner's law sound changes in past participles.
 def get_pseudoparticiple(form, verb_class):
     # If this is a contract form, call the separate function for that
     if form[-2:] in ["on", "ōn"]:

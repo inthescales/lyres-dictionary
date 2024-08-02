@@ -6,7 +6,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "a shelter for %pl",
+        "gloss": "shelter for %pl",
         "requires": {
             "follows": {
                 "has-tag": "animal"
