@@ -46,10 +46,15 @@ def get_derivational(form_tail):
 # That said, Verner's law does apply in cases like 'forlese' -> 'forlorn', so I should
 # probably add handling from it at some point.
 # TODO: Support Verner's law sound changes in past participles.
-def get_pseudoparticiple(form, verb_class):
+def get_strong_pseudoparticiple(form, verb_class, drop_suffix=False):
     # If this is a contract form, call the separate function for that
     if form[-2:] in ["on", "ōn"]:
-        return get_pseudoparticiple_contracted(form, verb_class)
+        return get_strong_pseudoparticiple_contracted(form, verb_class, drop_suffix)
+
+    if not drop_suffix:
+        suffix = "+en"
+    else:
+        suffix = ""
 
     # Remove inflectional ending, if any}
     form = form.split("|")[0]
@@ -58,7 +63,7 @@ def get_pseudoparticiple(form, verb_class):
         # TODO: handle class 3 weak verbs (should work for 2 as well)
         return form
     elif verb_class == 7:
-        return form + "+en"
+        return form + suffix
 
     vowel_map = {
         1: { "ī": "i" },
@@ -94,10 +99,15 @@ def get_pseudoparticiple(form, verb_class):
     if vowels not in vowel_map[verb_class]:
         print("VOWELS NOT FOUND IN VOWEL MAP! Have " + str(vowels) + " FOR CLASS " + str(verb_class))
 
-    return form[0:cluster_indices[0]] + vowel_map[verb_class][vowels] + form[cluster_indices[1]:] + "+en"
+    return form[0:cluster_indices[0]] + vowel_map[verb_class][vowels] + form[cluster_indices[1]:] + suffix
 
 # Get a pseudoparticiple for a verb in a contracted form (e.g. 'lēon', 'þēon')
-def get_pseudoparticiple_contracted(form, verb_class):
+def get_strong_pseudoparticiple_contracted(form, verb_class, drop_suffix=False):
+    if not drop_suffix:
+        suffix = "+en"
+    else:
+        suffix = ""
+
     if verb_class == "weak":
         return form[0:-2]
     else:
@@ -108,13 +118,13 @@ def get_pseudoparticiple_contracted(form, verb_class):
 
         if verb_class == 1:
             # TODO: Handle cases where class 1 verbs are given class 2-style endings, as in 'tēon' -> 'togen'
-            return stem + "iġ+en"
+            return stem + "iġ" + suffix
         elif verb_class == 2:
-            return stem + "og+en"
+            return stem + "og" + suffix
         elif verb_class == 7:
             # Also appeared as '-ongen' in OE
             # HACK: '-æng' spelling is constructed, with intent of consistently giving '-ang' forms in MnE.
             # TODO: Find a more elegant way to do this.
-            return stem + "æng+en"
+            return stem + "æng" + suffix
         else:
             Logger.error("ERROR: NO CONTRACTED VERB PARTICIPLE BEHAVIOR FOR CLASS " + str(verb_class) + ", requested for '" + form + "'")

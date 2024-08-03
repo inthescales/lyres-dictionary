@@ -15,25 +15,24 @@ def me_phone_to_ne_orth(me_phone, config):
     return ne_orthography.from_me_phonemes(me_phone, config)
 
 def oe_form_to_ne_participle(oe_form, verb_class, method, config):
-    if method in [1, 2]:
-        pseudoparticiple = oe_morphology.get_pseudoparticiple(oe_form, verb_class)
-
-        if method == 2 and pseudoparticiple.endswith("+en"):
-            pseudoparticiple = pseudoparticiple[:-3]
-
+    # Strong participles
+    if verb_class != "weak" and method in [1, 2]:
+        pseudoparticiple = oe_morphology.get_strong_pseudoparticiple(oe_form, verb_class, drop_suffix=(method == 2))
         participle_form = oe_form_to_ne_form(pseudoparticiple, config)
     else:
         participle_form = oe_form_to_ne_form(oe_form, config)
 
+    # Weak participles
     if verb_class == "weak" or method in [3, 4]:
         if not participle_form.endswith("e"):
             participle_form = mne_affixation.get_joined_form(participle_form, "ed")
         else:
             participle_form += "d"
 
+    # Spelling adjustments
     # TODO: Move this somewhere else
     if participle_form.endswith("ren") and len(participle_form) >= 4 and participle_form[-4] in ["a", "e", "i", "o", "u", "y"]:
-        # Handle cases like 'boren' -> 'born'
+        # Handle cases like 'boren' -> 'born', 'forloren' -> 'forlorn'
         participle_form = participle_form[0:-2] + "n"
 
     return participle_form

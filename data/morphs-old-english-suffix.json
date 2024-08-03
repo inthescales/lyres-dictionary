@@ -363,6 +363,13 @@
                     }
                 },
                 "gloss": "covered with %pl"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "tree"
+                    }
+                },
+                "gloss": "like or resembling the %!sg or its wood"
             }
         ],
         "origin": "old-english"

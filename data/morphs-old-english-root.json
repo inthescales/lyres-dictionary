@@ -3192,6 +3192,15 @@
         "origin": "old-english",
         "notes": "Original sense was 'person'"
     }, {
+        "key": "mapul",
+        "form-raw": "mapul",
+        "form-canon": "maple",
+        "type": "noun",
+        "gloss": "maple [tree]",
+        "tags": ["count", "concrete", "living", "plant", "tree"],
+        "origin": "old-english",
+        "notes": "Attested only in compounds, such as 'mapultrēow'"
+    }, {
         "key": "mapulder",
         "form-raw": "mapulder",
         "form-raw-alt": ["mapuldre", "mapolder", "mapuldor"],
@@ -3686,8 +3695,9 @@
         "form-raw": "sċyld",
         "type": "noun",
         "gloss": ["guilt", "debt"],
-        "tags": ["count", "abstract", "speculative"],
-        "origin": "old-english"
+        "tags": ["count", "abstract", "quality", "speculative"],
+        "origin": "old-english",
+        "notes": "TODO: Add 'state' tag for 'guilt' sense."
     }, {
         "key": "sċyldiġ",
         "form-raw": "sċyld+iġ",
