@@ -882,12 +882,24 @@ class EvolutorTests(unittest.TestCase):
 
         # Class 6
 
-        check("wasċ|an", 6, 1, "washen")
-        check("drag|an", 6, 1, "drawn")
-        check("sleġ|an", 6, 1, "slain")
-        check("grōw|an", 7, 1, "grown")
+        check("for-sac|an", 6, 1, "forsaken")
+        check("sċeac|an", 6, 1, "shaken")
+        check("slē|an", 6, 1, "slain")
+        # check("sweri|an", 6, 1, "sworn") # FIX THIS
+
+        # Class 7
+
+        # Of type 1 (ending in '-ow')
+
         check("blāw|an", 7, 1, "blown")
+        check("grōw|an", 7, 1, "grown")
         check("cnāw|an", 7, 1, "known")
+
+        # Of type 2 (all others)
+
+        check("bēat|an", 7, 1, "beaten")
+        check("feall|an", 7, 1, "fallen")
+        check("hēaw|an", 7, 1, "hewn", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
 
         # Participle method 2 — descent from OE participle, without '-en' ending -----------
 
@@ -942,18 +954,19 @@ class EvolutorTests(unittest.TestCase):
         check("hlæhh|an", 6, 3, "laughed")
 
         # Strong class 7
-        # check("hat|an", 7, 3, "hated") # Can't explain 'a' vowel in base
+        check("drǣd|an", 7, 3, "dreaded")
         check("gang|an", 7, 3, "ganged", overrides=[["HL:ng", False]])
         check("hlēap|an", 7, 3, "leaped")
 
         # Participle method 4 — weak form + '-ed' suffix, with contractions ------------ 
-        # check("hliehh|an", 6, "laught")
-        # check("hleap|an", 7, "leapt")
 
-        # Ahistorically treated as strong, or as a different class of strong
-        # check("hleap|an", 7, "lopen")
+        # check("hliehh|an", 6, 4, "laught")
+        # check("wealc|an", 7, 4, "walked")
+        # check("hlēap|an", 7, 4, "leapt")
+        # check("slēp|an", 7, 4, "slept")
 
-        # Participles for contracted verbs
+        # Participles for contracted verbs ---------------------------------------------
+
         check("tē|on", "weak", 1, "teed")
         check("wrē|on", 1, 1, "wrine") #* Conjectured form, taken from Anglish wiki
         check("flē|on", 2, 1, "flown")

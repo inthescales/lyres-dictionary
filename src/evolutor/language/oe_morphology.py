@@ -10,6 +10,7 @@ def get_prefix(form):
         "biġ": "by",
         "bī": "by",
         "be": "be",
+        "for": "for",
         "ġe": "", # TODO: Allow this to be rendered as /a/, /e/, or /i/ in some cases (as in 'afford', 'enough', 'handiwork')
         "on": "a" # TODO: Maybe add a probability to this
     }
@@ -71,7 +72,7 @@ def get_strong_pseudoparticiple(form, verb_class, drop_suffix=False):
         3: { "e": "o", "eo": "o", "i": "u", "ie": "o" },
         4: { "e": "o", "i": "u", "u": "u" },
         5: { "e": "e", "i": "e", "ie": "e"},
-        6: { "a": "a", "e": "a", "ea": "a", "ie": "a"}, # 'ie' as in 'hliehhan'. 'a', 'ie' can also go to 'æ".
+        6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"}, # 'ie' as in 'hliehhan'. 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
         7: {}
     }
 

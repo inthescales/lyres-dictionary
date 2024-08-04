@@ -14,7 +14,39 @@ def oe_phone_to_me_phone(oe_phone, config):
 def me_phone_to_ne_orth(me_phone, config):
     return ne_orthography.from_me_phonemes(me_phone, config)
 
+def oe_form_to_ne_form(oe_form, config):
+    return process(oe_form, config, get_updated_form)
+
 def oe_form_to_ne_participle(oe_form, verb_class, method, config):
+    return process(oe_form, config, lambda oe_form, config: get_participle_form(oe_form, verb_class, method, config))
+
+def process(oe_form, config, lammy):
+    elements = oe_form.split("-")
+    modern_form = ""
+
+    for element_form in elements:
+        prefix = oe_morphology.get_prefix(element_form)
+        if prefix != None:
+            # Prefixes aren't subjected to the usual form evolution process, but have their own distinct forms
+            # Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
+            form = prefix
+        else:
+            irregular_form = get_irregular_form(oe_form, config)
+            if irregular_form != None:
+                element_form = irregular_form
+            
+            form = lammy(element_form, config)
+
+        modern_form += form
+
+    return modern_form
+
+def get_updated_form(form, config):
+    oe_phonemes = oe_read.to_phonemes(form)
+    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
+    return mne_write.from_me_phonemes(me_phonemes, config)
+
+def get_participle_form(oe_form, verb_class, method, config):
     # Strong participles
     if verb_class != "weak" and method in [1, 2]:
         pseudoparticiple = oe_morphology.get_strong_pseudoparticiple(oe_form, verb_class, drop_suffix=(method == 2))
@@ -36,32 +68,6 @@ def oe_form_to_ne_participle(oe_form, verb_class, method, config):
         participle_form = participle_form[0:-2] + "n"
 
     return participle_form
-
-def oe_form_to_ne_form(oe_form, config):
-    elements = oe_form.split("-")
-    modern_form = ""
-
-    for element_form in elements:
-        prefix = oe_morphology.get_prefix(element_form)
-        if prefix != None:
-            # Prefixes aren't subjected to the usual form evolution process, but have their own distinct forms
-            # Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
-            form = prefix
-        else:
-            irregular_form = get_irregular_form(oe_form, config)
-            if irregular_form != None:
-                element_form = irregular_form
-
-            form = get_updated_form(element_form, config)
-
-        modern_form += form
-
-    return modern_form
-
-def get_updated_form(form, config):
-    oe_phonemes = oe_read.to_phonemes(form)
-    me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
-    return mne_write.from_me_phonemes(me_phonemes, config)
 
 # For the given Old English form, return an alternate form that should have the
 # evolution process applied to it rather than the one supplied.
