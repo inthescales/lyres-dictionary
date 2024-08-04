@@ -1,5 +1,8 @@
 from random import Random
 
+def always(id, config):
+    return hinge(id, 1.00, config)
+
 def often(id, config):
     return hinge(id, 0.75, config) 
 
@@ -8,6 +11,9 @@ def even(id, config):
 
 def occ(id, config):
     return hinge(id, 0.25, config)
+
+def never(id, config):
+    return hinge(id, 0.00, config)
 
 # TODO: consider making this object a member of config
 random = None
@@ -41,7 +47,11 @@ def hinge(id, odds, config):
         "Orth:iː#->ie/ye": [["ie", "ye"], "ie"],
         "Orth:ɔː->oa/oCV": [["oa", "oCV"], "oa"],
         "Orth:uːn->ow/ou": [["ow", "ou"], "ow"],
-        "Orth:uːr->ou/owe": [["ou", "owe"], "ou"]
+        "Orth:uːr->ou/owe": [["ou", "owe"], "ou"],
+        "PPart:use-strong": [[True, False], True],
+        "PPart:use-class-3-suffix": [[True, False], False],
+        "PPart:contract-weak": [[True, False, True]],
+        "PPart:verners-law": [[True, False], False]
     }
 
     if not random:

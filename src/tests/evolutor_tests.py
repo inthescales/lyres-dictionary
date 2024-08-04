@@ -820,45 +820,50 @@ class EvolutorTests(unittest.TestCase):
     def _test_participles(self):
         total = 0
         failures = []
-        def check(raw, verb_class, method, target, overrides=[]):
+        def check(raw, verb_class, target, overrides=[]):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_participle(raw, verb_class, method, config)
+            form = evolutor.oe_form_to_ne_participle(raw, verb_class, config)
             total += 1
             if not form == target:
                 failures.append([form, target])
 
-        # Participle method 1 — direct descendent of strong OE participle -------------------
+        # Direct descendents of strong OE participle -------------------
 
         # Class 1 — ī
-        check("bīt|an", 1, 1, "bitten")
-        check("rīd|an", 1, 1, "ridden")
-        check("wrīt|an", 1, 1, "written")
+        check("bīt|an", 1, "bitten")
+        check("rīd|an", 1, "ridden")
+        check("wrīt|an", 1, "written")
 
         # Class 2 — ēo
-        check("ċēos|an", 2, 1, "chosen", overrides=[["SVC:eːo->eː/oː", "oː"]])
-        check("clēof|an", 2, 1, "cloven")
-        check("flēog|an", 2, 1, "flown")
-        check("frēos|an", 2, 1, "frosen") # TODO: Figure out if there's a way to retain the 'z' here
+        check("ċēos|an", 2, "chosen", overrides=[["SVC:eːo->eː/oː", "oː"]])
+        check("clēof|an", 2, "cloven")
+        check("flēog|an", 2, "flown")
+        check("frēos|an", 2, "frosen") # TODO: Figure out if there's a way to retain the 'z' here
 
         # Class 3
 
-        # Note that few Class 3 strong verbs keep the -en ending.
+        # Class 3 strong verbs usually drop the '-en' suffix
 
-        # With nasal as first postvocalic consonant
-        check("drinc|an", 3, 1, "drunken")
-        check("sċrinc|an", 3, 1, "shrunken")
-        check("sinc|an", 3, 1, "sunken")
+        check("grind|an", 3, "ground")
+        check("wind|an", 3, "wound")
+        check("feoht|an", 3, "fought")
+        check("ġield|an", 3, "yold")
 
-        # ...and without nasal as first postvocalic consonant
-        check("feoht|an", 3, 1, "foughten")
-        check("swell|an", 3, 1, "swollen")
+        # But in a few forms they keep it.
+
+        check("drinc|an", 3, "drunken", overrides=[["PPart:use-class-3-suffix", True]])
+        check("sċrinc|an", 3, "shrunken", overrides=[["PPart:use-class-3-suffix", True]])
+        check("sinc|an", 3, "sunken", overrides=[["PPart:use-class-3-suffix", True]])
+        check("feoht|an", 3, "foughten", overrides=[["PPart:use-class-3-suffix", True]])
+        check("swell|an", 3, "swollen", overrides=[["PPart:use-class-3-suffix", True]])
 
         # Class 4
-        check("ber|an", 4, 1, "born")
-        check("brec|an", 4, 1, "broken")
-        check("stel|an", 4, 1, "stolen")
+
+        check("ber|an", 4, "born")
+        check("brec|an", 4, "broken")
+        check("stel|an", 4, "stolen")
 
         # Class 5
 
@@ -866,99 +871,92 @@ class EvolutorTests(unittest.TestCase):
 
         # A few act predictably
 
-        check("et|an", 5, 1, "eaten")
-        check("cweþ|an", 5, 1, "queathen")
+        check("et|an", 5, "eaten")
+        check("cweþ|an", 5, "queathen")
 
         # Some take class 4 style participles
 
-        check("spec|an", 4, 1, "spoken")
-        check("wef|an", 4, 1, "woven")
+        check("spec|an", 4, "spoken")
+        check("wef|an", 4, "woven")
 
         # Others I don't know how to account for
 
-        # check("bidd|an", 5, 1, "bidden")
-        # check("tred|an", 5, 1, "trodden")
-        # check("sitt|an", 5, 1, "sitten") # Appears irregular
+        # check("bidd|an", 5, "bidden")
+        # check("tred|an", 5, "trodden")
+        # check("sitt|an", 5, "sitten") # Appears irregular
 
         # Class 6
 
-        check("for-sac|an", 6, 1, "forsaken")
-        check("sċeac|an", 6, 1, "shaken")
-        check("slē|an", 6, 1, "slain")
-        # check("sweri|an", 6, 1, "sworn") # FIX THIS
+        check("for-sac|an", 6, "forsaken")
+        check("sċeac|an", 6, "shaken")
+        check("slē|an", 6, "slain")
+        # check("sweri|an", 6, "sworn") # FIX THIS
 
         # Class 7
 
         # Of type 1 (ending in '-ow')
 
-        check("blāw|an", 7, 1, "blown")
-        check("grōw|an", 7, 1, "grown")
-        check("cnāw|an", 7, 1, "known")
+        check("blāw|an", 7, "blown")
+        check("grōw|an", 7, "grown")
+        check("cnāw|an", 7, "known")
 
         # Of type 2 (all others)
 
-        check("bēat|an", 7, 1, "beaten")
-        check("feall|an", 7, 1, "fallen")
-        check("hēaw|an", 7, 1, "hewn", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("bēat|an", 7, "beaten")
+        check("feall|an", 7, "fallen")
+        check("hēaw|an", 7, "hewn", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
 
-        # Participle method 2 — descent from OE participle, without '-en' ending -----------
-
-        check("grind|an", 3, 2, "ground")
-        check("wind|an", 3, 2, "wound")
-        check("feoht|an", 3, 2, "fought")
-        check("ġield|an", 3, 2, "yold")
-        # check("cum|an", 4, 2, "come") # Idiosyncratic spelling?
-        # check("sitt|an", 5, 2, "sit")
-
-        # Participle method 3 — weak-verb-style: modern form + '-ed' ------------------------
+        # Direct descendants of weak OE verb participles ------------------------
 
         # Weak
-        check("bend|an", "weak", 1, "bended")
-        check("send|an", "weak", 1, "sended")
-        check("stōwi|an", "weak", 1, "stowed")
+        check("bend|an", "weak", "bended")
+        check("send|an", "weak", "sended")
+        check("stōwi|an", "weak", "stowed")
+
+        # Strong OE verbs treated as weak — modern form + '-ed' ending ----------
 
         # Strong class 1
-        check("glīd|an", 1, 3, "glided")
-        check("spīw|an", 1, 3, "spewed", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
-        check("wriþ|an", 1, 3, "writhed")
+        check("glīd|an", 1, "glided", overrides=[["PPart:use-strong", False]])
+        check("spīw|an", 1, "spewed", overrides=[["PPart:use-strong", False], ["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("wriþ|an", 1, "writhed", overrides=[["PPart:use-strong", False]])
 
         # Strong class 2
-        check("brēow|an", 2, 3, "brewed", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
-        check("lēog|an", 2, 3, "lied")
-        check("sēoþ|an", 2, 3, "seethed")
+        check("brēow|an", 2, "brewed", overrides=[["PPart:use-strong", False], ["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("lēog|an", 2, "lied", overrides=[["PPart:use-strong", False]])
+        check("sēoþ|an", 2, "seethed", overrides=[["PPart:use-strong", False]])
 
         # Strong class 3
-        check("beorc|an", 3, 3, "barked", overrides=[["Orth:e+r->e/a/ea", "a"]])
-        check("sweorf|an", 3, 3, "swerved", overrides=[["Orth:e+r->e/a/ea", "e"]])
-        check("delf|an", 3, 3, "delved")
-        check("ġell|an", 3, 3, "yelled")
-        check("help|an", 3, 3, "helped")
-        check("spurn|an", 3, 3, "spurned")
+        check("beorc|an", 3, "barked", overrides=[["PPart:use-strong", False], ["Orth:e+r->e/a/ea", "a"]])
+        check("sweorf|an", 3, "swerved", overrides=[["PPart:use-strong", False], ["Orth:e+r->e/a/ea", "e"]])
+        check("delf|an", 3, "delved", overrides=[["PPart:use-strong", False]])
+        check("ġell|an", 3, "yelled", overrides=[["PPart:use-strong", False]])
+        check("help|an", 3, "helped", overrides=[["PPart:use-strong", False]])
+        check("spurn|an", 3, "spurned", overrides=[["PPart:use-strong", False]])
 
         # Strong class 4
 
         # Few class 4 verbs use weak participles in PDE.
 
-        check("cwel|an", 4, 3, "quealed")
-        check("nim|an", 4, 3, "nimmed")
+        check("cwel|an", 4, "quealed", overrides=[["PPart:use-strong", False]])
+        check("nim|an", 4, "nimmed", overrides=[["PPart:use-strong", False]])
 
         # Strong class 5
 
-        check("cned|an", 5, 3, "kneaded")
-        check("met|an", 5, 3, "meted", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
-        check("wrec|an", 5, 3, "wreaked")
+        check("cned|an", 5, "kneaded", overrides=[["PPart:use-strong", False]])
+        check("met|an", 5, "meted", overrides=[["PPart:use-strong", False], ["Orth:ɛː->ea/eCV", "eCV"]])
+        check("wrec|an", 5, "wreaked", overrides=[["PPart:use-strong", False]])
 
         # Strong class 6
-        check("stepp|an", 6, 3, "stepped")
-        check("wasċ|an", 6, 3, "washed")
-        check("hlæhh|an", 6, 3, "laughed")
+        check("stepp|an", 6, "stepped", overrides=[["PPart:use-strong", False]])
+        check("wasċ|an", 6, "washed", overrides=[["PPart:use-strong", False]])
+        check("hlæhh|an", 6, "laughed", overrides=[["PPart:use-strong", False]])
 
         # Strong class 7
-        check("drǣd|an", 7, 3, "dreaded")
-        check("gang|an", 7, 3, "ganged", overrides=[["HL:ng", False]])
-        check("hlēap|an", 7, 3, "leaped")
+        check("drǣd|an", 7, "dreaded", overrides=[["PPart:use-strong", False]])
+        check("gang|an", 7, "ganged", overrides=[["PPart:use-strong", False], ["HL:ng", False]])
+        check("hlēap|an", 7, "leaped", overrides=[["PPart:use-strong", False]])
 
-        # Participle method 4 — weak form + '-ed' suffix, with contractions ------------ 
+        # Weak participle forms, with contraction --------------------------------------
 
         # check("hliehh|an", 6, 4, "laught")
         # check("wealc|an", 7, 4, "walked")
@@ -967,11 +965,11 @@ class EvolutorTests(unittest.TestCase):
 
         # Participles for contracted verbs ---------------------------------------------
 
-        check("tē|on", "weak", 1, "teed")
-        check("wrē|on", 1, 1, "wrine") #* Conjectured form, taken from Anglish wiki
-        check("flē|on", 2, 1, "flown")
-        check("h|ōn", 7, 1, "hangen")
-        check("f|ōn", 7, 3, "fanged")
+        check("tē|on", "weak", "teed")
+        check("wrē|on", 1, "wrine") #* Conjectured form, taken from Anglish wiki
+        check("flē|on", 2, "flown")
+        check("h|ōn", 7, "hangen")
+        check("f|ōn", 7, "fanged", overrides=[["PPart:use-strong", False]])
 
         return [total, failures]
 

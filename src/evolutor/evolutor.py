@@ -1,9 +1,12 @@
 import src.evolutor.language.oe_read as oe_read
 import src.evolutor.language.oe_morphology as oe_morphology
 import src.evolutor.language.oe_phonology as oe_phonology
+import src.evolutor.language.oe_participles as oe_participles
 import src.evolutor.language.me_phonology as me_phonology
 import src.evolutor.language.mne_write as mne_write
 import src.evolutor.language.mne_affixation as mne_affixation
+
+from src.evolutor.engine.hinges import often, even, occ
 
 def oe_orth_to_oe_phone(oe_form, config):
     return oe_phonology.from_oe_written(oe_form)
@@ -17,8 +20,8 @@ def me_phone_to_ne_orth(me_phone, config):
 def oe_form_to_ne_form(oe_form, config):
     return process(oe_form, config, get_updated_form)
 
-def oe_form_to_ne_participle(oe_form, verb_class, method, config):
-    return process(oe_form, config, lambda oe_form, config: get_participle_form(oe_form, verb_class, method, config))
+def oe_form_to_ne_participle(oe_form, verb_class, config):
+    return process(oe_form, config, lambda oe_form, config: get_participle_form(oe_form, verb_class, config))
 
 def process(oe_form, config, lammy):
     elements = oe_form.split("-")
@@ -34,7 +37,7 @@ def process(oe_form, config, lammy):
             irregular_form = get_irregular_form(oe_form, config)
             if irregular_form != None:
                 element_form = irregular_form
-            
+
             form = lammy(element_form, config)
 
         modern_form += form
@@ -46,26 +49,20 @@ def get_updated_form(form, config):
     me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
     return mne_write.from_me_phonemes(me_phonemes, config)
 
-def get_participle_form(oe_form, verb_class, method, config):
+def get_participle_form(oe_form, verb_class, config):
     # Strong participles
-    if verb_class != "weak" and method in [1, 2]:
-        pseudoparticiple = oe_morphology.get_strong_pseudoparticiple(oe_form, verb_class, drop_suffix=(method == 2))
+    if verb_class != "weak" and often("PPart:use-strong", config):
+        pseudoparticiple = oe_participles.get_strong_pseudoparticiple(oe_form, verb_class, config)
         participle_form = oe_form_to_ne_form(pseudoparticiple, config)
     else:
         participle_form = oe_form_to_ne_form(oe_form, config)
 
-    # Weak participles
-    if verb_class == "weak" or method in [3, 4]:
         if not participle_form.endswith("e"):
             participle_form = mne_affixation.get_joined_form(participle_form, "ed")
         else:
             participle_form += "d"
 
-    # Spelling adjustments
-    # TODO: Move this somewhere else
-    if participle_form.endswith("ren") and len(participle_form) >= 4 and participle_form[-4] in ["a", "e", "i", "o", "u", "y"]:
-        # Handle cases like 'boren' -> 'born', 'forloren' -> 'forlorn'
-        participle_form = participle_form[0:-2] + "n"
+    participle_form = oe_participles.get_spelling_adjusted(participle_form)
 
     return participle_form
 
