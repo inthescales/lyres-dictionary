@@ -6,6 +6,7 @@ from src.tests.expression_tests import ExpressionTests
 from src.tests.evolutor_tests import EvolutorTests
 from src.tests.evolutor_affix_tests import EvolutorAffixTests
 from src.tests.helper_tests import HelperTests
+from src.tests.past_participle_tests import PastParticipleTests
 
 suite = unittest.TestSuite()
 loader = unittest.defaultTestLoader
@@ -16,6 +17,7 @@ suite.addTest(loader.loadTestsFromTestCase(GlossTests))
 suite.addTest(loader.loadTestsFromTestCase(ExpressionTests))
 suite.addTest(loader.loadTestsFromTestCase(EvolutorTests))
 suite.addTest(loader.loadTestsFromTestCase(EvolutorAffixTests))
+suite.addTest(loader.loadTestsFromTestCase(PastParticipleTests))
 suite.addTest(loader.loadTestsFromTestCase(HelperTests))
 
 # Run tests
