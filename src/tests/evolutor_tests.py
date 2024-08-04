@@ -829,27 +829,59 @@ class EvolutorTests(unittest.TestCase):
             if not form == target:
                 failures.append([form, target])
 
-        # Participle method 1 — direct descendent of OE participle
+        # Participle method 1 — direct descendent of strong OE participle -------------------
 
-        check("bend|an", "weak", 1, "bended")
-        check("send|an", "weak", 1, "sended")
-        check("stōwi|an", "weak", 1, "stowed")
+        # Class 1 — ī
+        check("bīt|an", 1, 1, "bitten")
+        check("rīd|an", 1, 1, "ridden")
         check("wrīt|an", 1, 1, "written")
-        check("wrīþ|an", 1, 1, "writhen")
-        check("bēod|an", 2, 1, "boden")
+
+        # Class 2 — ēo
+        check("ċēos|an", 2, 1, "chosen", overrides=[["SVC:eːo->eː/oː", "oː"]])
         check("clēof|an", 2, 1, "cloven")
         check("flēog|an", 2, 1, "flown")
+        check("frēos|an", 2, 1, "frosen") # TODO: Figure out if there's a way to retain the 'z' here
+
+        # Class 3
+
+        # Note that few Class 3 strong verbs keep the -en ending.
+
+        # With nasal as first postvocalic consonant
         check("drinc|an", 3, 1, "drunken")
-        check("help|an", 3, 1, "holpen")
-        check("weorp|an", 3, 1, "worpen")
-        check("ġield|an", 3, 1, "yolden")
+        check("sċrinc|an", 3, 1, "shrunken")
+        check("sinc|an", 3, 1, "sunken")
+
+        # ...and without nasal as first postvocalic consonant
+        check("feoht|an", 3, 1, "foughten")
+        check("swell|an", 3, 1, "swollen")
+
+        # Class 4
+        check("ber|an", 4, 1, "born")
         check("brec|an", 4, 1, "broken")
         check("stel|an", 4, 1, "stolen")
-        check("ber|an", 4, 1, "born")
+
+        # Class 5
+
+        # Class 5 participle forms are highly irregular in PDE
+
+        # A few act predictably
+
+        check("et|an", 5, 1, "eaten")
         check("cweþ|an", 5, 1, "queathen")
-        # check("ġief|an", 5, 1, "yiven") # Various ME forms?
-        # check("sprec|an", 5, 1, "spoken") # Irregular both in infinitive and participle forms
+
+        # Some take class 4 style participles
+
+        check("spec|an", 4, 1, "spoken")
+        check("wef|an", 4, 1, "woven")
+
+        # Others I don't know how to account for
+
+        # check("bidd|an", 5, 1, "bidden")
+        # check("tred|an", 5, 1, "trodden")
         # check("sitt|an", 5, 1, "sitten") # Appears irregular
+
+        # Class 6
+
         check("wasċ|an", 6, 1, "washen")
         check("drag|an", 6, 1, "drawn")
         check("sleġ|an", 6, 1, "slain")
@@ -857,7 +889,8 @@ class EvolutorTests(unittest.TestCase):
         check("blāw|an", 7, 1, "blown")
         check("cnāw|an", 7, 1, "known")
 
-        # Participle method 2 — descent from OE participle, without '-en' ending
+        # Participle method 2 — descent from OE participle, without '-en' ending -----------
+
         check("grind|an", 3, 2, "ground")
         check("wind|an", 3, 2, "wound")
         check("feoht|an", 3, 2, "fought")
@@ -865,21 +898,55 @@ class EvolutorTests(unittest.TestCase):
         # check("cum|an", 4, 2, "come") # Idiosyncratic spelling?
         # check("sitt|an", 5, 2, "sit")
 
-        # Participle method 3 — modern form + '-ed'
-        # check("rēp|an", 1, 3, "reaped") # Can't explain 'ea' vowel in base
+        # Participle method 3 — weak-verb-style: modern form + '-ed' ------------------------
+
+        # Weak
+        check("bend|an", "weak", 1, "bended")
+        check("send|an", "weak", 1, "sended")
+        check("stōwi|an", "weak", 1, "stowed")
+
+        # Strong class 1
+        check("glīd|an", 1, 3, "glided")
+        check("spīw|an", 1, 3, "spewed", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
+        check("wriþ|an", 1, 3, "writhed")
+
+        # Strong class 2
+        check("brēow|an", 2, 3, "brewed", overrides=[["Orth:ɛ/iu->ew/ue", "ew"]])
         check("lēog|an", 2, 3, "lied")
         check("sēoþ|an", 2, 3, "seethed")
-        check("lūt|an", 2, 3, "louted")
+
+        # Strong class 3
+        check("beorc|an", 3, 3, "barked", overrides=[["Orth:e+r->e/a/ea", "a"]])
+        check("sweorf|an", 3, 3, "swerved", overrides=[["Orth:e+r->e/a/ea", "e"]])
+        check("delf|an", 3, 3, "delved")
+        check("ġell|an", 3, 3, "yelled")
+        check("help|an", 3, 3, "helped")
+        check("spurn|an", 3, 3, "spurned")
+
+        # Strong class 4
+
+        # Few class 4 verbs use weak participles in PDE.
+
         check("cwel|an", 4, 3, "quealed")
         check("nim|an", 4, 3, "nimmed")
+
+        # Strong class 5
+
+        check("cned|an", 5, 3, "kneaded")
+        check("met|an", 5, 3, "meted", overrides=[["Orth:ɛː->ea/eCV", "eCV"]])
+        check("wrec|an", 5, 3, "wreaked")
+
+        # Strong class 6
         check("stepp|an", 6, 3, "stepped")
         check("wasċ|an", 6, 3, "washed")
         check("hlæhh|an", 6, 3, "laughed")
+
+        # Strong class 7
         # check("hat|an", 7, 3, "hated") # Can't explain 'a' vowel in base
         check("gang|an", 7, 3, "ganged", overrides=[["HL:ng", False]])
         check("hlēap|an", 7, 3, "leaped")
 
-        # Participle method 4 — modern form + '-ed' suffix, with assimilations
+        # Participle method 4 — weak form + '-ed' suffix, with contractions ------------ 
         # check("hliehh|an", 6, "laught")
         # check("hleap|an", 7, "leapt")
 

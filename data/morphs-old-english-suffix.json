@@ -224,7 +224,7 @@
                         { "has-tag": "concrete" },
                         { "has-type": "verb" }
                     ] },
-                    { "not": { "has-tag": "bodypart "} }
+                    { "not": { "has-tag": "bodypart"} }
                 ]
             }
         },

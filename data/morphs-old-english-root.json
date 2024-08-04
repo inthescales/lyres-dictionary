@@ -798,7 +798,7 @@
         "origin": "old-english"
     }, {
         "key": "sneorcan",
-        "form-raw": "sneorcan",
+        "form-raw": "sneorc|an",
         "type": "verb",
         "gloss": "shrivel",
         "tags": ["intransitive", "speculative"],
@@ -1106,6 +1106,23 @@
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "ċeap",
+        "form-raw": "ċeap",
+        "form-canon": "cheap",
+        "type": "noun",
+        "gloss": ["trade", "merchandise", "bargain"],
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "Also 'cattle'"
+    }, {
+        "key": "ċeapian",
+        "form-raw": "ċeapi|an",
+        "form-canon": "cheap",
+        "type": "verb",
+        "gloss": ["trade", "buy", "bribe"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ċeariġ",
@@ -1729,6 +1746,24 @@
         "gloss": ["[guilty] or [criminal]", "hostile"],
         "tags": ["speculative"],
         "origin": "old-english"
+    }, {
+        "key": "fær",
+        "form-raw": "fær",
+        "form-canon": "fare",
+        "type": "noun",
+        "gloss": ["journey", "expedition", "way"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Also 'vehicle', 'road'"
+    }, {
+        "key": "faru",
+        "form-raw": "faru",
+        "form-canon": "fare",
+        "type": "noun",
+        "gloss": ["passing", "journey", "voyage", "[course] of action"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english",
+        "notes": "Also 'travel companions', 'followers of a teacher', 'vehicle'"
     }, {
         "key": "fām",
         "form-raw": "fām",
@@ -2604,6 +2639,20 @@
         "type": "noun",
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "hoþma-count",
+        "form-raw": "hoþma",
+        "type": "noun",
+        "gloss": ["covering", "cloud"],
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hoþma-mass",
+        "form-raw": "hoþma",
+        "type": "noun",
+        "gloss": ["darkness"],
+        "tags": ["mass", "concrete", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hrafn",
@@ -4724,7 +4773,8 @@
         "form-canon": "wise",
         "type": "adj",
         "gloss": "wise",
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Bright cites this as 'wīse', so I'd guess this is based on an inflected form, but I kind of want to leave it for the goofy alternate form 'wice'"
     }, {
         "key": "witt",
         "form-raw": "witt",
@@ -4778,6 +4828,22 @@
         "tags": ["mass", "abstract", "speculative", "homophonic"],
         "origin": "old-english",
         "notes": "TODO: Break apart senses so I can give 'good looks' the quality tag"
+    }, {
+        "key": "wolcen-count",
+        "form-raw": "wolcen",
+        "form-canon": "welkin",
+        "type": "noun",
+        "gloss": ["cloud"],
+        "tags": ["count", "concrete", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "wolcen-singleton",
+        "form-raw": "wolcen",
+        "form-canon": "welkin",
+        "type": "noun",
+        "gloss": ["sky", "heavens", "clouds"],
+        "tags": ["singleton", "concrete", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "wolf",
         "form-raw": "wolf",

@@ -38,13 +38,13 @@ def get_derivational(form_tail):
 # NOTE: this does *not* produce historical Old English participles. Rather, it produces
 # an alternative form that should convert properly into a modern-style participle.
 #
-# Specifically, it does not produce changes in consonants in cases such as
-# 'sniþan' -> '(ġe)sniden'. Rather, it would would produce 'sniþen', since that type
-# of consonant change is not present in modern English, where the observed participle
-# of this word is 'snithen'
+# Specifically, it does not produce changes in consonants due to Verner's law, as in cases like
+# 'frēosan' (freeze) -> 'fruron', or 'ċēosan' choose -> 'curon', as PDE does not include
+# these sound changes, using the forms 'frozen' and 'chosen'
 #
-# That said, Verner's law does apply in cases like 'forlese' -> 'forlorn', so I should
-# probably add handling from it at some point.
+# That said, Verner's law does apply in cases like 'forlese' -> 'forlorn', or 'sodden' (from 'sēoþan'),
+# so I should probably add handling from it at some point. There are also some cases of literary use,
+# e.g. 'frore' in Milton
 # TODO: Support Verner's law sound changes in past participles.
 def get_strong_pseudoparticiple(form, verb_class, drop_suffix=False):
     # If this is a contract form, call the separate function for that

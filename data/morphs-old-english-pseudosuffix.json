@@ -16,6 +16,23 @@
         "origin": "old-english",
         "notes": "TODO: Apply only to tame animals"
     }, {
+        "key": "-fare",
+        "form-stem": "fare",
+        "form-raw": "faru",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "taking part in %@",
+        "requires": {
+            "follows": {
+                "has-tag": "activity"
+            }
+        },
+        "tags": ["uncountable", "abstract"],
+        "origin": "old-english",
+        "notes": "TODO: Add the 'activity' tag to abstract nouns. Ex. 'warfare', 'chaffer'. Also consider 'drightfare' for another usage."
+    }, {
         "key": "-ful",
         "form-stem": "ful",
         "form-raw": "ful",
