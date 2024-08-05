@@ -94,6 +94,7 @@ def get_strong_spelling_adjusted(form, config):
 
 # Weak participles ==============================================
 
+# Returns a weak participle for the given form
 def get_weak_participle_form(form):
     if not form.endswith("e"):
         return mne_affixation.get_joined_form(form, "ed")

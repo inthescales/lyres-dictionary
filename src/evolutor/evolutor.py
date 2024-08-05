@@ -56,12 +56,13 @@ def get_modern_form(form, config):
     return mne_write.from_me_phonemes(me_phonemes, config)
 
 def get_participle_form(oe_form, verb_class, config):
-    # Strong participles
     if verb_class != "weak" and often("PPart:use-strong", config):
+        # Strong participle forms
         pseudoparticiple = oe_participles.get_strong_pseudoparticiple(oe_form, verb_class, config)
         participle_form = oe_form_to_ne_form(pseudoparticiple, config)
         participle_form = oe_participles.get_strong_spelling_adjusted(participle_form, config)
     else:
+        # Weak participle forms
         participle_form = oe_form_to_ne_form(oe_form, config)
         participle_form = oe_participles.get_weak_participle_form(participle_form)
 

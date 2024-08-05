@@ -192,6 +192,13 @@ class PastParticipleTests(unittest.TestCase):
         # 'lend' -> 'lent'
         # 'rend' -> 'rent'
 
+        # Participles with Verner's Law changes ----------------------------------------
+
+        # TODO: Add Verner's Law support to strong participle forms
+        
+        # 'forlese' -> 'forlorn'
+        # 'freeze' -> 'froren'
+
         # Participles for contracted verbs ---------------------------------------------
 
         check("tē|on", "weak", "teed")
