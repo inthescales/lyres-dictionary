@@ -4,6 +4,9 @@ import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import often, even, occ
 
+# Unhandled cases:
+# - Weak verbs with infininitive in'-ēaġan', pp. in '-ēad' (not relevant to MnE)
+
 # Strong participles ==============================================
 
 # Mapping from strong verb class to pairs of infinitive and past participle vowels.
@@ -12,8 +15,8 @@ vowel_map = {
     1: { "ī": "i" },
     2: { "ēo": "o", "ū": "o" },
     3: { "e": "o", "eo": "o", "i": "u", "ie": "o" },
-    4: { "e": "o", "i": "u", "u": "u" },
-    5: { "e": "e", "i": "e", "ie": "e"},
+    4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
+    5: { "e": "e", "i": "e", "ie": "ie"},
     6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
 }
 
@@ -31,8 +34,8 @@ vowel_map = {
 # e.g. 'frore' in Milton
 # TODO: Support Verner's law sound changes in past participles.
 def get_strong_pseudoparticiple(form, verb_class, config):
-    # If this is a contract form, call the separate function for that
-    if form[-2:] in ["on", "ōn"]:
+    # If this is a contracted form, call the separate function for that
+    if is_contracted(form):
         return get_strong_pseudoparticiple_contracted(form, verb_class)
 
     # Remove inflectional ending, if any
@@ -57,21 +60,31 @@ def get_strong_pseudoparticiple(form, verb_class, config):
 
     return "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:]) + suffix
 
+def is_contracted(form):
+    return form[-2:] in ["on", "ōn"] or form[-4:] == "ē|an"
+
 # Get a pseudoparticiple for a verb in a contracted form (e.g. 'lēon', 'þēon')
 def get_strong_pseudoparticiple_contracted(form, verb_class):
     if verb_class == "weak":
         return form[0:-2]
     else:
-        if form[-4:] == "ē|on":
+        if form[-4:] in ["ē|on", "ē|an"]:
             stem = form[0:-4]
         elif form[-2:] == "ōn":
             stem = form[0:-3]
 
-        if verb_class == 1:
+        # Contracted forms in '-ēon' formerly ended in -'han'. The 'h' was later elided, but
+        # changed to 'g' in the past participle under Verner's Law.
+        if verb_class in [1, 5]:
             # TODO: Handle cases where class 1 verbs are given class 2-style endings, as in 'tēon' -> 'togen'
             return stem + "iġ+en"
         elif verb_class == 2:
             return stem + "og+en"
+        elif verb_class == 6:
+            # Class 6 strong verbs in '-ēan' show various participle forms: '-agen', '-æġen', '-eġen'.
+            # Of these, '-agen' seems to be the most regular for its class, but I believe '-eġen' best
+            # represents reflexes in modern English.
+            return stem + "eġ+en"
         elif verb_class == 7:
             # Also appeared as '-ongen' in OE
             # HACK: '-æng' spelling is constructed, with intent of consistently giving '-ang' forms in MnE.
@@ -96,7 +109,9 @@ def get_strong_spelling_adjusted(form, config):
 
 # Returns a weak participle for the given form
 def get_weak_participle_form(form):
-    if not form.endswith("e"):
-        return mne_affixation.get_joined_form(form, "ed")
-    else:
+    if form.endswith("e"):
         return form + "d"
+    elif form.endswith("ay"):
+        return form[:-1] + "id"
+    else:
+        return mne_affixation.get_joined_form(form, "ed")

@@ -73,6 +73,8 @@ class PastParticipleTests(unittest.TestCase):
         check("ber|an", 4, "born")
         check("brec|an", 4, "broken")
         check("stel|an", 4, "stolen")
+        check("sċier|an", 4, "shorn")
+        check("ġield|an", 4, "yolden") #*
 
         # Class 5
 
@@ -82,6 +84,7 @@ class PastParticipleTests(unittest.TestCase):
 
         check("et|an", 5, "eaten")
         check("cweþ|an", 5, "queathen")
+        check("ġief|an", 5, "yiven", overrides=[["SVC:y->i/e/u", "i"]])
 
         # Some take class 4 style participles
 
@@ -117,10 +120,14 @@ class PastParticipleTests(unittest.TestCase):
 
         # Direct descendants of weak OE verb participles ------------------------
 
-        # Weak
+        # Weak participles that can be regularly derived from the modern form
+
         check("bend|an", "weak", "bended")
         check("send|an", "weak", "sended")
         check("stōwi|an", "weak", "stowed")
+
+        # Weak participles based on other patterns
+        check("seċġ|an", "weak", "said")
 
         # Strong OE verbs treated as weak — modern form + '-ed' ending ----------
 

@@ -55,6 +55,8 @@ def get_modern_form(form, config):
     me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
     return mne_write.from_me_phonemes(me_phonemes, config)
 
+# TODO: Move this to the participles file if possible.
+# Consider using a lambda for the OE -> MnE transformation
 def get_participle_form(oe_form, verb_class, config):
     if verb_class != "weak" and often("PPart:use-strong", config):
         # Strong participle forms
@@ -70,8 +72,11 @@ def get_participle_form(oe_form, verb_class, config):
 
 # For the given Old English form, return an alternate form that should have the
 # evolution process applied to it rather than the one supplied.
+# TODO: Move this somewhere else — it feels outside the scope of this file to
+# be managing verb paradigms; rather it should be delegating that work.
 def get_irregular_form(cited_form, config):
-    # Contracted class 7 strong verbs use irregular '-ang' form in MnE.
+    # Contracted class 7 strong verbs in '-ōn', having '-ang' form in MnE.
+    # These are contracted from earlier '-ahan' forms
     # e.g. 'hōn' -> 'hang', 'gōn' -> 'gang'
     if cited_form[-3:] == "|ōn":
         if config.verbose:
