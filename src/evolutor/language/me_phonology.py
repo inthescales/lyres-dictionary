@@ -19,6 +19,8 @@ def from_oe_phonemes(oe_phonemes, config):
 
     # The 'ċġ' digraph is represented phonemically as /dʒ/ in this system. However, there are
     # cases where it resolves as /j/ in MnE, as in 'seċġan' -> 'say' and 'leċġan' -> 'lay'.
+    # This is an attempt to capture these cases, in distinction against cases like 'edge',
+    # 'sedge', 'cudgel'
     def cg_distinction(state):
         if state.current.value == "dʒ" \
             and state.prev and state.prev.is_vowel() and state.prev.value in ["i", "iː", "e", "eː"] \

@@ -168,7 +168,7 @@ def get_phoneme(graph, anteprev_g, prev_g, next_g, stressed, inflectional, deriv
     elif graph == "ċċ":
         return Phoneme("tʃtʃ", False, inflectional, derivational)
     elif graph in ["cg", "gc", "cgg", "ccg", "gcg", "ċġ", "ġċ"]:
-        # These are sometimes represented as /j/ or /jj/, but for simplicity I use /dʒ/ in all cases
+        # I represent this phoneme as /dʒ/, though it can evolve as /j/ in some environments
         return Phoneme("dʒ", False, inflectional, derivational)
     elif graph == "d":
         return Phoneme("d", False, inflectional, derivational)

@@ -19,6 +19,7 @@ class EvolutorTests(unittest.TestCase):
             self._test_homorganic_lengthening,
             self._test_drop_inflectional_endings,
             self._test_g,
+            self._test_cg,
             self._test_der_to_ther,
             self._test_th_to_d,
             self._test_unstressed_vowel_syncope,
@@ -601,6 +602,39 @@ class EvolutorTests(unittest.TestCase):
         # Forms diphthongs between other sounds
         check("breġd|an", "braid")
         check("fæġer", "fair")
+
+        return [total, failures]
+
+    # Tests the various destinies of the 'ċġ' digraph
+    def _test_cg(self):
+        total = 0
+        failures = []
+        def check(raw, target, overrides=[]):
+            nonlocal total, failures
+
+            config = Config(verbose=False, locked=True, overrides=overrides)
+            form = evolutor.oe_form_to_ne_form(raw, config)
+            total += 1
+            if not form == target:
+                failures.append([form, target])
+
+        # Affricate /dʒ/ --------------------------------
+
+        check("eċġ", "edge")
+        check("heċġ", "hedge")
+        check("seċġ", "sedge")
+        check("miċġ", "midge")
+        check("hryċġ", "ridge")
+        check("myċġ", "midge")    
+        check("cyċġel", "cudgel", overrides=[["SVC:y->i/e/u", "u"]])
+        check("bryċġ", "bridge")
+
+        check("eċġ|an", "edge")
+
+        # Glide /j/ -------------------------------------
+
+        check("leċġ|an", "lay")
+        check("seċġ|an", "say")
 
         return [total, failures]
 

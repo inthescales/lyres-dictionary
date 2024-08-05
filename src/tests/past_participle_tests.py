@@ -127,6 +127,7 @@ class PastParticipleTests(unittest.TestCase):
         check("stōwi|an", "weak", "stowed")
 
         # Weak participles based on other patterns
+        check("leċġ|an", "weak", "laid")
         check("seċġ|an", "weak", "said")
 
         # Strong OE verbs treated as weak — modern form + '-ed' ending ----------
