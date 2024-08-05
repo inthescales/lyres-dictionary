@@ -1,4 +1,5 @@
 import src.evolutor.language.oe_orthography as orthography
+import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import often, even, occ
 
@@ -46,28 +47,13 @@ def get_strong_pseudoparticiple(form, verb_class, config):
         return form + suffix
 
     if not verb_class in vowel_map:
-        print("VERB CLASS NOT IN VOWEL MAP! HAVE: " + str(verb_class))
+        return None
 
-    # Locate the vowel cluster to be changed
-    cluster_indices = []
-    for i in range(0, len(form)):
-        if form[i] in orthography.vowels:
-            cluster_indices = [i]
-            for j in range(i, len(form)):
-                if form[j] not in orthography.vowels:
-                    cluster_indices += [j]
-                    break
+    clusters = helpers.split_clusters(form, lambda char: char in orthography.vowels)
+    vowels_index = next(i for i in range(0, len(clusters)) if clusters[i][0] in orthography.vowels)
+    vowels = clusters[vowels_index]
 
-            if len(cluster_indices) == 2:
-                break
-            elif len(cluster_indices) == 1:
-                cluster_indices += [len(form)]
-
-    vowels = form[cluster_indices[0]: cluster_indices[1]]
-    if vowels not in vowel_map[verb_class]:
-        print("VOWELS NOT FOUND IN VOWEL MAP! Have " + str(vowels) + " FOR CLASS " + str(verb_class))
-
-    return form[0:cluster_indices[0]] + vowel_map[verb_class][vowels] + form[cluster_indices[1]:] + suffix
+    return "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:]) + suffix
 
 # Get a pseudoparticiple for a verb in a contracted form (e.g. 'lēon', 'þēon')
 def get_strong_pseudoparticiple_contracted(form, verb_class):
@@ -90,12 +76,15 @@ def get_strong_pseudoparticiple_contracted(form, verb_class):
             # TODO: Find a more elegant way to do this.
             return stem + "æng+en"
         else:
-            Logger.error("ERROR: NO CONTRACTED VERB PARTICIPLE BEHAVIOR FOR CLASS " + str(verb_class) + ", requested for '" + form + "'")
+            return None
 
 # Make spelling adjustments in the MnE form of a participle based on PDE spelling conventions.
 def get_spelling_adjusted(form):
     if form.endswith("ren") and len(form) >= 4 and form[-4] in ["a", "e", "i", "o", "u", "y"]:
         # Handle cases like 'boren' -> 'born', 'forloren' -> 'forlorn'
         return form[0:-2] + "n"
+
+    # Contractions for weak participles
+    #if form.endswith("ed") and often("PPart:contract-weak"):
 
     return form

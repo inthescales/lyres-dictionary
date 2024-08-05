@@ -56,7 +56,7 @@ class EvolutorTests(unittest.TestCase):
         # a
         check("mann", "man")
         check("lamb", "lamb")
-        check("sang", "sang", overrides=[["HL:ng", False]])
+        check("sang", "sang", overrides=[["HL:ng", False]]) # The non-lengthening may be caused by participle analogy
         check("sacc", "sack")
         check("assa", "ass")
         check("fæþm", "fathom")

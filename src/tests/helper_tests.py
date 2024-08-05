@@ -37,6 +37,20 @@ class HelperTests(unittest.TestCase):
 
         self.assertEqual(helpers.syllable_count("panopticon"), 4)
 
+    def testSplitClusters(self):
+        def is_vowel(letter):
+            return letter in ["a", "e", "i", "o", "u"]
+
+        self.assertEqual(helpers.split_clusters("assess", lambda char: is_vowel(char)), ["a", "ss", "e", "ss"])
+        self.assertEqual(helpers.split_clusters("scarecrow", lambda char: is_vowel(char)), ["sc", "a", "r", "e", "cr", "o", "w"])
+        self.assertEqual(helpers.split_clusters("yarrow", lambda char: is_vowel(char)), ["y", "a", "rr", "o", "w"])
+
+        def is_vowel_oe(letter):
+            return letter in ["æ", "ǣ", "a", "ā", "e", "ē", "i", "ī", "o", "ō", "u", "ū", "y", "ȳ"]
+
+        self.assertEqual(helpers.split_clusters("ċeorfan", lambda char: is_vowel_oe(char)), ["ċ", "eo", "rf", "a", "n"])
+        self.assertEqual(helpers.split_clusters("snytru", lambda char: is_vowel_oe(char)), ["sn", "y", "tr", "u"])
+
     def testArticles(self):
         self.assertEqual(helpers.indefinite_article_for("cat"), "a")
         self.assertEqual(helpers.indefinite_article_for("worm"), "a")

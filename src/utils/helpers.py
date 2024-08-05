@@ -58,6 +58,21 @@ def syllable_count(word, y_is_vowel=False):
         prev = char
     return count
 
+# Returns the letters in the given word, split into consonant/vowel clusters, as
+# an array of strings
+def split_clusters(word, is_vowel):
+    polarity = None
+    result = []
+    for i in range(0, len(word)):
+        new_polarity = is_vowel(word[i])
+        if new_polarity != polarity:
+            result += [""]
+            polarity = new_polarity
+
+        result[-1] += word[i]
+
+    return result
+
 def l_in_last_two(word):
     state = 0
     prev = None
