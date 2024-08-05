@@ -50,7 +50,7 @@ def hinge(id, odds, config):
         "Orth:uːr->ou/owe": [["ou", "owe"], "ou"],
         "PPart:use-strong": [[True, False], True],
         "PPart:use-class-3-suffix": [[True, False], False],
-        "PPart:contract-weak": [[True, False, True]],
+        "PPart:contract-weak": [[True, False], True],
         "PPart:verners-law": [[True, False], False]
     }
 

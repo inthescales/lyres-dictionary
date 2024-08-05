@@ -4,9 +4,10 @@ import src.evolutor.language.oe_phonology as oe_phonology
 import src.evolutor.language.oe_participles as oe_participles
 import src.evolutor.language.me_phonology as me_phonology
 import src.evolutor.language.mne_write as mne_write
-import src.evolutor.language.mne_affixation as mne_affixation
 
 from src.evolutor.engine.hinges import often, even, occ
+
+# Functions to be used externally ==================================
 
 def oe_orth_to_oe_phone(oe_form, config):
     return oe_phonology.from_oe_written(oe_form)
@@ -18,11 +19,15 @@ def me_phone_to_ne_orth(me_phone, config):
     return ne_orthography.from_me_phonemes(me_phone, config)
 
 def oe_form_to_ne_form(oe_form, config):
-    return process(oe_form, config, get_updated_form)
+    return process(oe_form, config, get_modern_form)
 
 def oe_form_to_ne_participle(oe_form, verb_class, config):
     return process(oe_form, config, lambda oe_form, config: get_participle_form(oe_form, verb_class, config))
 
+# Old English form processing ======================================
+
+# Control-flow function for applying any modernizing process to an Old English word while
+# using stock prefix forms.
 def process(oe_form, config, lammy):
     elements = oe_form.split("-")
     modern_form = ""
@@ -44,7 +49,8 @@ def process(oe_form, config, lammy):
 
     return modern_form
 
-def get_updated_form(form, config):
+# Returns a MnE form for a given OE word
+def get_modern_form(form, config):
     oe_phonemes = oe_read.to_phonemes(form)
     me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
     return mne_write.from_me_phonemes(me_phonemes, config)
@@ -54,15 +60,10 @@ def get_participle_form(oe_form, verb_class, config):
     if verb_class != "weak" and often("PPart:use-strong", config):
         pseudoparticiple = oe_participles.get_strong_pseudoparticiple(oe_form, verb_class, config)
         participle_form = oe_form_to_ne_form(pseudoparticiple, config)
+        participle_form = oe_participles.get_strong_spelling_adjusted(participle_form, config)
     else:
         participle_form = oe_form_to_ne_form(oe_form, config)
-
-        if not participle_form.endswith("e"):
-            participle_form = mne_affixation.get_joined_form(participle_form, "ed")
-        else:
-            participle_form += "d"
-
-    participle_form = oe_participles.get_spelling_adjusted(participle_form)
+        participle_form = oe_participles.get_weak_participle_form(participle_form)
 
     return participle_form
 
@@ -74,6 +75,7 @@ def get_irregular_form(cited_form, config):
     if cited_form[-3:] == "|ōn":
         if config.verbose:
             print("- Using contracted class 7 strong verb irregular form in '-ang'" + config.separator)
+
         # HACK: This doesn't represent a historical form, but is devised such that phonetic evolution will
         # always produce a modern form in '-ang'.
         # TODO: Come up with something cleaner here. Maybe a context property for evolution to enforce this spelling.

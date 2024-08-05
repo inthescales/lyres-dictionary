@@ -1,7 +1,10 @@
 import src.evolutor.language.oe_orthography as orthography
+import src.evolutor.language.mne_affixation as mne_affixation
 import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import often, even, occ
+
+# Strong participles ==============================================
 
 # Mapping from strong verb class to pairs of infinitive and past participle vowels.
 # For predicting past participle forms based on the form of the infinitive.
@@ -11,8 +14,7 @@ vowel_map = {
     3: { "e": "o", "eo": "o", "i": "u", "ie": "o" },
     4: { "e": "o", "i": "u", "u": "u" },
     5: { "e": "e", "i": "e", "ie": "e"},
-    6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"}, # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
-    7: {}
+    6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
 }
 
 # Get a pseudo-past-participle form for the given form, treating it as the given verb class
@@ -79,12 +81,21 @@ def get_strong_pseudoparticiple_contracted(form, verb_class):
             return None
 
 # Make spelling adjustments in the MnE form of a participle based on PDE spelling conventions.
-def get_spelling_adjusted(form):
+def get_strong_spelling_adjusted(form, config):
     if form.endswith("ren") and len(form) >= 4 and form[-4] in ["a", "e", "i", "o", "u", "y"]:
         # Handle cases like 'boren' -> 'born', 'forloren' -> 'forlorn'
         return form[0:-2] + "n"
 
-    # Contractions for weak participles
-    #if form.endswith("ed") and often("PPart:contract-weak"):
+    # TODO: Add contracted participle forms.
+    # See participle tests file for examples.
+    # if form.endswith("ed") and often("PPart:contract-weak", config):
 
     return form
+
+# Weak participles ==============================================
+
+def get_weak_participle_form(form):
+    if not form.endswith("e"):
+        return mne_affixation.get_joined_form(form, "ed")
+    else:
+        return form + "d"

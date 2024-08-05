@@ -60,7 +60,7 @@ def syllable_count(word, y_is_vowel=False):
 
 # Returns the letters in the given word, split into consonant/vowel clusters, as
 # an array of strings
-def split_clusters(word, is_vowel):
+def split_clusters(word, is_vowel=lambda char: is_vowel(char)):
     polarity = None
     result = []
     for i in range(0, len(word)):

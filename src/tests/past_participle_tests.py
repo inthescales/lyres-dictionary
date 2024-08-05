@@ -167,10 +167,30 @@ class PastParticipleTests(unittest.TestCase):
 
         # Weak participle forms, with contraction --------------------------------------
 
-        # check("hliehh|an", 6, 4, "laught")
-        # check("wealc|an", 7, 4, "walked")
-        # check("hlēap|an", 7, 4, "leapt")
-        # check("slēp|an", 7, 4, "slept")
+        # TODO: Add contracted weak participle forms
+
+        # '-t' suffix (often with shortened vowel in pronunciation, but unchanged spelling)
+        # 'leap' -> 'leapt'
+        # 'dream' -> 'dreamt'
+        # 'laugh' -> 'laught'
+        # 'mean' -> 'meant'
+
+        # Shortened vowel with '-t' suffix
+        # 'keep' -> 'kept'
+        # 'sleep' -> 'slept'
+        # 'weep' -> 'wept'
+
+        # '-l' -> '-lt'
+        # 'spill' -> 'spilt'
+        # 'spoil' -> 'spoilt'
+
+        # '-n' -> '-nt'
+        # 'burn' -> 'burnt'
+
+        # '-nd' -> 'nt'
+        # 'bend' -> 'bent'
+        # 'lend' -> 'lent'
+        # 'rend' -> 'rent'
 
         # Participles for contracted verbs ---------------------------------------------
 
