@@ -17,6 +17,15 @@ def from_oe_phonemes(oe_phonemes, config):
         elif state.current.value == "ɣɣ":
             return [Phoneme("gg", template=state.current)]
 
+    # The 'ċġ' digraph is represented phonemically as /dʒ/ in this system. However, there are
+    # cases where it resolves as /j/ in MnE, as in 'seċġan' -> 'say' and 'leċġan' -> 'lay'.
+    def cg_distinction(state):
+        if state.current.value == "dʒ" \
+            and state.prev and state.prev.is_vowel() and state.prev.value in ["i", "iː", "e", "eː"] \
+            and state.next and state.next.is_vowel() \
+            and not len(state.preceding) == 1:
+            return [Phoneme("j", template=state.current)]
+
     # Lengthening of vowels followed by certain homorganic consonant clusters
     #
     # Per Kruger(2020):
@@ -401,8 +410,9 @@ def from_oe_phonemes(oe_phonemes, config):
     if config.verbose:
         print("/" + "".join(p.value for p in rig.phonemes) + "/" + config.separator)
 
-    # 'g' changes 1
+    # Early consonant distinctions
     rig.run_capture(harden_g, 1, "Harden g's", config)
+    rig.run_capture(cg_distinction, 1, "Distinguish cg's", config)
 
     # Early vowel changes
     rig.run_capture(homorganic_lengthening, 3, "Homorganic lengthening", config)
