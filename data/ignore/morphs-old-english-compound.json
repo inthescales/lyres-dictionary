@@ -1,11 +1,13 @@
 [
     {
-        "key": "ælf-sċīne",
-        "form-raw": "ælf-sċīne",
+        "key": "elf-sċēne",
+        "form-raw": "elf-sċēne",
+        "form-raw-alt": ["ælf-sċȳne"],
         "type": "adj",
-        "gloss": "as beautiful as an elf",
+        "gloss": ["ethereally [beautiful]", "[beautiful] like an elf"],
         "tags": ["speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Chosen form is Mercian/Kentish, alt. is EWS"
     }, {
         "key": "ǣġ-wyrt",
         "form-raw": "ǣġ-wyrt",
@@ -18,7 +20,7 @@
         "key": "āþ-briċe",
         "form-raw": "āþ-briċe",
         "form-canon": "oathbreach",
-        "type": "adj",
+        "type": "noun",
         "gloss": ["the [breaking] of promises", "perjury"],
         "tags": ["uncountable", "abstract", "speculative"],
         "origin": "old-english"
@@ -56,6 +58,13 @@
         "tags": ["mass", "concrete", "fluid", "liquid", "metal"],
         "origin": "old-english",
         "notes": "'sylfer' is Anglian form, 'seolfor' WS"
+    }, {
+        "key": "drenċ-hūs",
+        "form-raw": "drenċ-hūs",
+        "type": "noun",
+        "gloss": "[bar] or [tavern]",
+        "tags": ["count", "concerete"],
+        "origin": "old-english"
     }, {
         "key": "ende-rīm",
         "form-raw": "ende-rīm",

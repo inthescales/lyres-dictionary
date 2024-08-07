@@ -835,6 +835,16 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "biċġan",
+        "form-raw": "biċġ|an",
+        "form-raw-alt": ["byċġ|an"],
+        "form-canon": "buy",
+        "type": "verb",
+        "gloss": "buy",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Not sure if alt. form may have been more common in OE, but based on the 'ċġ' -> /j/ evolution I'm guessing the chosen form influence MnE more."
+    }, {
         "key": "biddan",
         "form-raw": "bidd|an",
         "form-canon": "bid",
@@ -1675,6 +1685,23 @@
         "gloss": "eternal",
         "origin": "old-english"
     }, {
+        "key": "eċġ",
+        "form-raw": "eċġ",
+        "form-canon": "edge",
+        "type": "noun",
+        "gloss": ["edge", "blade"],
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english",
+        "notes": "'blade' gloss is my extension, but fits OE usage fairly well"
+    }, {
+        "key": "eċġan",
+        "form-raw": "eċġ|an",
+        "form-canon": "edge",
+        "type": "verb",
+        "gloss": "sharpen",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "efn",
         "form-raw": "efn",
         "form-raw-alt": ["emn", "em"],
@@ -1682,6 +1709,26 @@
         "type": "adj",
         "gloss": "even, level",
         "origin": "old-english"
+    }, {
+        "key": "elf",
+        "form-raw": "elf",
+        "form-raw-alt": ["ælf", "ylf"],
+        "form-canon": "elf",
+        "type": "noun",
+        "gloss": "elf",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Chosen form is Mercian/Kentish, alt. is WS (following OED anyway)"
+    }, {
+        "key": "elfen",
+        "form-raw": "elf+en",
+        "form-raw-alt": ["ælf+en", "ylf+en"],
+        "form-canon": "elf",
+        "type": "noun",
+        "gloss": "female [elf]",
+        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "origin": "old-english",
+        "notes": "Chosen form is Mercian/Kentish, alt. is WS"
     }, {
         "key": "eln-arm",
         "form-raw": "eln",
@@ -1812,6 +1859,13 @@
         "tags": ["mass", "concrete", "bodypart", "speculative", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "feċġan",
+        "form-raw": "feċġ|an",
+        "type": "verb",
+        "gloss": "seize",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "fēdan",
         "form-raw": "fēd|an",
         "form-canon": "feed",
@@ -1906,6 +1960,14 @@
         "tags": ["mass", "concrete", "living", "bodypart"],
         "origin": "old-english"
     }, {
+        "key": "fleċġan",
+        "form-raw": "fleċġ|an",
+        "type": "verb",
+        "gloss": ["[put] to flight"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "OED has MnE 'fleg', based on Scots evolution. Apparently this word's status in OE is unclear, but I'll leave it here."
+    }, {
         "key": "flēogan",
         "form-raw": "flēog|an",
         "form-raw-alt": ["flēg|an"],
@@ -1933,10 +1995,12 @@
     }, {
         "key": "flīgan",
         "form-raw": "flīg|an",
+        "form-raw-alt": ["fliġan", "fleġan"],
         "type": "verb",
-        "gloss": ["[drive] out", "[put] to flight"],
+        "gloss": ["[drive] out", "[put] to flight", "[frighten] away"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "I'm not positive if these forms represent the same word or not, but they're all pretty similar anyway"
     }, {
         "key": "flītan",
         "form-raw": "flīt|an",
@@ -2047,6 +2111,13 @@
         "type": "verb",
         "gloss": "freeze",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "friċġan",
+        "form-raw": "friċġ|an",
+        "type": "verb",
+        "gloss": ["ask", "inquire", "question", "[seek] out"],
+        "tags": ["transitive", "obscure", "speculative"],
         "origin": "old-english"
     }, {
         "key": "friþ",
@@ -2248,7 +2319,7 @@
         "key": "ġe-bǣre",
         "form-raw": "ġe-bǣre",
         "type": "noun",
-        "gloss": ["[demeanor], [bearing]"],
+        "gloss": ["[bearing] or [demeanor]"],
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
@@ -2276,6 +2347,14 @@
         "type": "verb",
         "gloss": ["[give] or [give] up", "produce"],
         "gloss-alt": "pay",
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ġiellan",
+        "form-raw": "ġiell|an",
+        "form-canon": "yell",
+        "type": "verb",
+        "gloss": "yell",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
@@ -3445,6 +3524,16 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "plyċan",
+        "form-raw": "plyċ|an",
+        "form-raw-alt": ["pliċġ|an"],
+        "type": "verb",
+        "gloss": "[pull] or [pluck]",
+        "gloss-alt": ["[scrape] or [scratch]"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Alt. form 'pliċġan' seems more standard in OE, following Bosworth, but OED shows a form 'plitch' enduring into the 15th c."
+    }, {
         "key": "pott",
         "form-raw": "pott",
         "form-canon": "pot",
@@ -3688,6 +3777,24 @@
         "origin": "old-english",
         "notes": "Only chosen form is attested, as origin of archaic modern 'shalk'. 'sċelc' is my own hypothetical Anglian variant."
     }, {
+        "key": "sċēne",
+        "form-raw": "sċēne",
+        "form-raw-alt": ["sċȳne", "sċīne"],
+        "type": "adj",
+        "gloss": ["beautiful", "[bright], [brilliant]"],
+        "tags": ["obscure"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian. 'sċȳne' is WS I assume, not sure about other variant but it's in Bosworth. No canon because I want to allow variation here, but it would be 'sheen'."
+    }, {
+        "key": "sċēne-noun",
+        "form-raw": "sċēne",
+        "form-raw-alt": ["sċȳne", "sċīne"],
+        "type": "noun",
+        "gloss": ["beauty", "[brightness], [brilliance]"],
+        "tags": ["mass", "abstract", "quality", "obscure"],
+        "origin": "old-english",
+        "notes": "Historically this noun usage appears around the time of MnE, but including it for fun."
+    }, {
         "key": "sċeran",
         "form-raw": "sċer|an",
         "form-raw-alt": ["sċier|an", "sċir|an"],
@@ -3710,7 +3817,7 @@
         "form-raw": "sċīn|an",
         "form-canon": "shine",
         "type": "verb",
-        "gloss": "shine",
+        "gloss": ["shine", "[give] out light"],
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
@@ -3763,6 +3870,14 @@
         "gloss-tool": ["[cut] with a dagger", "stab"],
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
         "origin": "old-english"
+    }, {
+        "key": "seċġ",
+        "form-raw": "seċġ",
+        "type": "noun",
+        "gloss": "man",
+        "tags": ["count", "concrete", "living", "person", "speculative", "rare"],
+        "origin": "old-english",
+        "notes": "Only found in poetry in OE"
     }, {
         "key": "seolc",
         "form-raw": "seolc",
@@ -3837,7 +3952,7 @@
         "form-raw": "sī|on",
         "form-raw-alt": ["sē|on"],
         "form-canon": "sie",
-        "type": "adj",
+        "type": "verb",
         "gloss": ["strain (as with a strainer)", "[stain] by dripping liquid"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3899,6 +4014,31 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "sogoþa-count",
+        "form-raw": "sogoþa",
+        "type": "noun",
+        "gloss": "hiccup",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "sogoþa-mass",
+        "form-raw": "sogoþa",
+        "type": "noun",
+        "gloss": "heartburn",
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "This usage seems to be uncertain"
+    }, {
+        "key": "sorg",
+        "form-raw": "sorg",
+        "form-raw-alt": ["sorh"],
+        "form-canon": "sorrow",
+        "type": "noun",
+        "gloss": "sorrow",
+        "gloss-alt": ["anxiety", "trouble"],
+        "tags": ["mass", "abstract", "state", "obscure"],
+        "origin": "old-english"
+    }, {
         "key": "swīfan-OE",
         "form-raw": "swīf|an",
         "type": "verb",
@@ -3914,6 +4054,14 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
         "notes": "Connection between ME+ sense of 'copulate with' appears a bit uncertain in OED, but leaving here in OE for now"
+    }, {
+        "key": "smæċċan",
+        "form-raw": ["smæċċ|an", "smeċċ|an", "smeċġ|an"],
+        "form-canon": "smatch",
+        "type": "verb",
+        "gloss": "taste",
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "smēaġan-intransitive",
         "form-raw": "smēaġ|an",
@@ -4120,6 +4268,13 @@
         "type": "verb",
         "gloss": ["[put] or [lull] to sleep", "kill"],
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "swerian",
+        "form-raw": "sweri|an",
+        "type": "verb",
+        "gloss": "swear",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "swefn",
@@ -4388,6 +4543,14 @@
         "origin": "old-english",
         "notes": "Original meaning 'customs' or 'good qualities'"
     }, {
+        "key": "þiċġan",
+        "form-raw": "þiċġ|an",
+        "type": "verb",
+        "gloss": ["[take] or [receive]", "accept", "[eat] or [drink]", "consume"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "OED has MnE 'thig', based on Norse cognate"
+    }, {
         "key": "þolian",
         "form-raw": "þoli|an",
         "form-canon": "thole",
@@ -4623,6 +4786,14 @@
         "tags": ["count", "concrete", "bodypart", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
+        "key": "weċġ",
+        "form-raw": "weċġ",
+        "type": "noun",
+        "gloss": "wedge",
+        "gloss-alt": ["ingot"],
+        "tags": ["count", "concrete", "shape"],
+        "origin": "old-english"
+    }, {
         "key": "weddian",
         "form-raw": "wedd|an",
         "form-canon": "wed",
@@ -4734,6 +4905,15 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Original meaning 'woman'"
+    }, {
+        "key": "wiċġ",
+        "form-raw": "wiċġ",
+        "form-raw-alt": ["wyċġ"],
+        "type": "noun",
+        "gloss": ["horse", "steed"],
+        "gloss-alt": ["donkey"],
+        "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "wiġel",
         "form-raw": ["wiġel", "wiġle"],
