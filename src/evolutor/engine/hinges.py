@@ -12,6 +12,9 @@ def even(id, config):
 def occ(id, config):
     return hinge(id, 0.25, config)
 
+def rarely(id, config):
+    return hinge(id, 0.1, config)
+
 def never(id, config):
     return hinge(id, 0.00, config)
 

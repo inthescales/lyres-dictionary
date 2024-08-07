@@ -2,7 +2,7 @@ import src.evolutor.language.oe_orthography as orthography
 import src.evolutor.language.mne_affixation as mne_affixation
 import src.utils.helpers as helpers
 
-from src.evolutor.engine.hinges import often, even, occ
+from src.evolutor.engine.hinges import often, even, occ, rarely
 
 # Unhandled cases:
 # - Weak verbs with infininitive in'-ēaġan', pp. in '-ēad' (not relevant to MnE)
@@ -18,6 +18,12 @@ vowel_map = {
     4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
     5: { "e": "e", "i": "e", "ie": "ie"},
     6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
+}
+
+verner_map = {
+    "h": "ġ",
+    "s": "r",
+    "þ": "d"
 }
 
 # Get a pseudo-past-participle form for the given form, treating it as the given verb class
@@ -58,7 +64,16 @@ def get_strong_pseudoparticiple(form, verb_class, config):
     vowels_index = next(i for i in range(0, len(clusters)) if clusters[i][0] in orthography.vowels)
     vowels = clusters[vowels_index]
 
-    return "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:]) + suffix
+    if vowels not in vowel_map[verb_class]:
+        return form
+
+    form = "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:])
+
+    if rarely("PPart:verners-law", config):
+        form = apply_verner(form)
+
+    print(form + suffix)
+    return form + suffix
 
 def is_contracted(form):
     return form[-2:] in ["on", "ōn"] or form[-4:] == "ē|an"
@@ -115,3 +130,24 @@ def get_weak_participle_form(form):
         return form[:-1] + "id"
     else:
         return mne_affixation.get_joined_form(form, "ed")
+
+# Verner's Law ==================================================
+
+# Apply Verner's Law, as it appears in participles, to the given participle form.
+# Ex. 'frosen' -> 'froren'
+# Here I just replace the last, single consonant according to Verner's Law.
+# Ignoring any cases with multiple consonants in the final cluster because I'm
+# not sure whether Verner's Law should apply there - I'm not aware of any MnE cases.
+# Equality check handles cases like 'hliehhan' -> 'hlæġen'
+def apply_verner(form):
+    if form[-1] not in orthography.consonants \
+        or (form[-2] in orthography.consonants and form[-2] != form[-1]) \
+        or form[-1] not in verner_map:
+        return form
+
+    if form[-2] != form[-1]:
+        stem = form[:-1]
+    else:
+        stem = form[:-2]
+
+    return stem + verner_map[form[-1]]

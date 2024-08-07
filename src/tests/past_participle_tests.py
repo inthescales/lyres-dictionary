@@ -204,8 +204,16 @@ class PastParticipleTests(unittest.TestCase):
 
         # TODO: Add Verner's Law support to strong participle forms
         
-        # 'forlese' -> 'forlorn'
-        # 'freeze' -> 'froren'
+        # 's' -> 'r'
+        check("for-lēos|an", 2, "forlorn", overrides=[["PPart:verners-law", True]])
+        check("frēos|an", 2, "frorn", overrides=[["PPart:verners-law", True]])
+
+        # 'þ' -> 'd'
+        check("sēoþ|an", 2, "sodden", overrides=[["PPart:verners-law", True]])
+        check("snīþ|an", 1, "snidden", overrides=[["PPart:verners-law", True]]) #*
+
+        # 'h' -> 'ġ'
+        check("hliehh|an", 6, "lain", overrides=[["PPart:verners-law", True]]) #*
 
         # Participles for contracted verbs ---------------------------------------------
 
