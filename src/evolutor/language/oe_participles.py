@@ -45,6 +45,9 @@ verner_map = {
 # e.g. 'frore' in Milton
 # TODO: Support Verner's law sound changes in past participles.
 def get_strong_pseudoparticiple(form, verb_class, config):
+    if verb_class == "preterite-present":
+        return None
+    
     # If this is a contracted form, call the separate function for that
     if is_contracted(form):
         return get_strong_pseudoparticiple_contracted(form, verb_class)

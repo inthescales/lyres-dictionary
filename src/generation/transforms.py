@@ -119,7 +119,7 @@ def transform_word(word, morphothec, is_single):
             bag.append(("add_prefix", 5))
 
         if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
-            bag.append(("add_modern_prefix", 1))
+            bag.append(("add_modern_prefix", 5))
 
     if len(relational_suffixes) > 0 and word.size() == 1 and current_type == "noun":
         bag.append(("relational", 10))
@@ -160,7 +160,8 @@ def transform_word(word, morphothec, is_single):
         and root_morph.get_type() == "verb" \
         and root_morph.has_tag("transitive") \
         and root_morph.morph["verb-class"] != "weak":
-        config = Config()
+        # TODO: Use a context property instead of manually setting these overrides
+        config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])
         form = root_morph.morph["form-raw"]
         if isinstance(form, list):
             form = random.choice(form)
@@ -170,8 +171,9 @@ def transform_word(word, morphothec, is_single):
         and (
             "form-participle-canon" not in root_morph.morph \
             or past_participle_form not in root_morph.morph["form-participle-canon"] \
+            or root_morph.has_tag("obscure") or root_morph.has_tag("speculative")
         ):
-        bag.append(("past-participle", 30000000000))
+        bag.append(("past-participle", 20))
         
     # If there is no override, choose, or return False if no choices ------
     if not override: 
@@ -298,12 +300,20 @@ def transform_word(word, morphothec, is_single):
         root_morph.morph["form-final"] = alternate_form
 
     elif choice == "past-participle":
-        print("WAHOOOOOOO ===========")
         root_morph.morph["key"] += "-adhoc:ppart"
         root_morph.morph["type"] = "adj"
+
+        original_gloss = root_morph.morph["gloss"]
         if isinstance(root_morph.morph["gloss"], list):
             root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss"])
         root_morph.morph["gloss"] = inflection.inflect(root_morph.morph["gloss"], "ppart")
+        if not root_morph.has_tag("obscure") and not root_morph.has_tag("speculative") \
+            and root_morph.morph["form-canon"] == original_gloss:
+            # NOTE: My other idea for the last condition above was:
+            #   "form-participle-canon" in root_morph.morph:
+            # They both produce some weird output.
+            root_morph.morph["gloss"] = "alternate form of '" + root_morph.morph["form-participle-canon"][0] + "'"
+
         del root_morph.morph["form-raw"]
         if "form-canon" in root_morph.morph:
             del root_morph.morph["form-canon"]

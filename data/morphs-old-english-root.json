@@ -743,7 +743,8 @@
         "verb-class": 2,
         "gloss": ["vow", "promise", "boast", "threaten"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Needs bitransitivity"
     }, {
         "key": "bera",
         "form-raw": "bera",
@@ -1058,7 +1059,7 @@
         "verb-class": 2,
         "gloss": "[endure] or [tolerate]",
         "gloss-alt": ["use", "[make] use of", "enjoy"],
-        "tags": ["transitive"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "brȳd",
@@ -2108,7 +2109,7 @@
         "key": "flēon",
         "form-raw": "flē|on",
         "form-canon": "flee",
-        "form-participle-canon": ["fled"],
+        "form-participle-canon": ["fled", "flown"],
         "type": "verb",
         "verb-class": 2,
         "gloss": "flee",
@@ -2207,9 +2208,9 @@
         "verb-class": 3,
         "type": "verb",
         "gloss": ["ask", "inquire"],
-        "tags": ["transitive", "obscure"],
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english",
-        "notes": "OED shows more modern usages with both 'frain' and 'frayn' spellings."
+        "notes": "OED shows more modern usages with both 'frain' and 'frayn' spellings. Needs bitransitivity"
     }, {
         "key": "fremian",
         "form-raw": "fremi|an",
@@ -3348,7 +3349,7 @@
         "type": "verb",
         "verb-class": 2,
         "gloss": "lie",
-        "tags": ["transitive"],
+        "tags": ["intransitive"],
         "origin": "old-english"
     }, {
         "key": "lēon-2",
@@ -4159,7 +4160,7 @@
         "form-participle-canon": ["shoved"],
         "type": "verb",
         "verb-class": 2,
-        "gloss": "push",
+        "gloss": "shove",
         "gloss-alt": ["[launch] (a ship)"],
         "tags": ["transitive", "motion"],
         "origin": "old-english"
@@ -4333,7 +4334,7 @@
         "form-participle-canon": ["slit", "slitten", "slitted"],
         "type": "verb",
         "verb-class": 1,
-        "gloss": ["tear", "[rend] (a garment)", "[split] or [divide]", "[wear] out"],
+        "gloss": ["tear", "[rend] (of garments)", "[split] or [divide]", "[wear] out"],
         "gloss-alt": ["sharpen"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",

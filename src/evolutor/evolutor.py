@@ -61,6 +61,9 @@ def get_participle_form(oe_form, verb_class, config):
     if verb_class != "weak" and often("PPart:use-strong", config):
         # Strong participle forms
         pseudoparticiple = oe_participles.get_strong_pseudoparticiple(oe_form, verb_class, config)
+        if pseudoparticiple == None:
+            return None
+        
         participle_form = oe_form_to_ne_form(pseudoparticiple, config)
         participle_form = oe_participles.get_strong_spelling_adjusted(participle_form, config)
     else:
