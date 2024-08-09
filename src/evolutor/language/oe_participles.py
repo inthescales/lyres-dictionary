@@ -6,6 +6,11 @@ from src.evolutor.engine.hinges import often, even, occ, rarely
 
 # Unhandled cases:
 # - Weak verbs with infininitive in'-ēaġan', pp. in '-ēad' (not relevant to MnE)
+# - Cases where 'g' or 'ġ' change their palatalization (I don't know this to be reflected in MnE)
+# - 'ċġ' digraph appears to become 'ġ' in participles of words like 'seċġan', 'leċġan'. I can
+#   get away without a rule for it because I do a similar change in phonetic processing, but
+#   it may be necessary to process this here at some point. Note that this change happens even
+#   for weak verbs.
 
 # Strong participles ==============================================
 
@@ -14,9 +19,9 @@ from src.evolutor.engine.hinges import often, even, occ, rarely
 vowel_map = {
     1: { "ī": "i" },
     2: { "ēo": "o", "ū": "o" },
-    3: { "e": "o", "eo": "o", "i": "u", "ie": "o" },
+    3: { "e": "o", "eo": "o", "i": "u", "ie": "o", "y": "u" }, # 'y' -> 'u' as in 'byrnan' -> 'ġeburnen'
     4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
-    5: { "e": "e", "i": "e", "ie": "ie"},
+    5: { "e": "e", "i": "e", "ie": "ie"}, # 'ġiefan' -> 'ġefen' (acc. Wiktionary)?
     6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
 }
 
@@ -46,6 +51,8 @@ def get_strong_pseudoparticiple(form, verb_class, config):
 
     # Remove inflectional ending, if any
     form = form.split("|")[0]
+    if form[-1] == "i":
+        form = form[:-1]
 
     # Determine whether the '-en' suffix should be added
     if (verb_class == 3 and not occ("PPart:use-class-3-suffix", config)):
@@ -72,7 +79,6 @@ def get_strong_pseudoparticiple(form, verb_class, config):
     if rarely("PPart:verners-law", config):
         form = apply_verner(form)
 
-    print(form + suffix)
     return form + suffix
 
 def is_contracted(form):

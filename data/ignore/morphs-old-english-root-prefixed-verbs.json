@@ -203,6 +203,15 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "ā-lēsan",
+        "form-raw": "ā-lēs|an",
+        "form-raw-alt": ["ā-līs|an", "ā-lȳs|an"],
+        "type": "verb",
+        "gloss": ["[set] free", "release"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "Chosen form Anglian, alt. LWS"
+    }, {
         "key": "ā-leċġan",
         "form-raw": "ā-leċġ|an",
         "form-canon": "lay",

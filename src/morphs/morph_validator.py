@@ -13,6 +13,8 @@ valid_properties = [
     "form-raw",                 # Original form, before historical changes
     "form-raw-alt",             # Nonstandard raw forms (e.g. rare or dialectal)
     "form-canon",               # Actual form in modern English (as opposed to plausible alternatives)
+    "form-participle-raw",      # Original participle forms. There may be one or a list.
+    "form-participle-canon",    # Accepted modern participle forms.
     "form-stem-present",        # Present participle stem for Latin verbs
     "form-stem-perfect",        # Perfect participle stem for Latin verbs
     "form-stem-assim",          # Stem for assimilating prefixes
@@ -33,6 +35,7 @@ valid_properties = [
     "gloss-state",              # Adjective gloss associated with a stative verb
     "gloss-tool",               # Verb gloss associated with a tool noun
     "gloss-animal",             # Verb gloss associated with an animal noun
+    "verb-class",               # Verb class (used in Old English)
     "suffixes",                 # Valid suffixes that can follow this morph
     "tags",
     "requires",
@@ -203,7 +206,11 @@ def validate_morph(morph):
             
         if morph["origin"] == "old-english":
             if not ("form-raw" in morph or "form-stem" in morph):
-                record_error(" - noun must have 'form-raw' or 'form-stem'")
+                record_error(" - verb must have 'form-raw' or 'form-stem'")
+                return False
+
+            if not ("verb-class" in morph):
+                record_error(" - verb must have 'verb-class'")
                 return False
 
     elif morph_type == "prefix":

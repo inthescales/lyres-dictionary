@@ -21,6 +21,24 @@ def from_oe_phonemes(oe_phonemes, config):
     # cases where it resolves as /j/ in MnE, as in 'seċġan' -> 'say' and 'leċġan' -> 'lay'.
     # This is an attempt to capture these cases, in distinction against cases like 'edge',
     # 'sedge', 'cudgel'
+    #
+    # NOTE: OED indicates that this is not properly understood as a phonetic process, but rather a
+    # leveling to stem forms in these verbs, where the stem forms had 'ġ' instead of 'ċġ'. See this
+    # note from the OED's etymology for 'buy':
+    # 
+    #   In Old English the form of the present stem bycg- reflects gemination of stem-final West Germanic
+    #   g before the inflectional suffix j and the development of that geminated consonant to a voiced
+    #   affricate. This stem form originally occurred in the infinitive, 1st singular and plural present
+    #   indicative, present subjunctive, present participle, and imperative plural. The stem form without
+    #   gemination, Old English byg-, shows regular palatalization of the stem-final consonant, with subsequent
+    #   development of a long vowel or a diphthong in Middle English. This stem form originally occurred in the
+    #   2nd and 3rd singular present indicative and imperative singular (compare Forms 1b and 1c); levelling
+    #   to all other forms of the present tense (already very occasionally attested in Old English; compare
+    #   Northumbrian byges, present indicative plural) is reflected in the modern standard pronunciation
+    #
+    # Despite this, I am going to leave it here in the phonetics for now, since it seems to adequately
+    # model modern forms for both nouns and verbs. However, if this produces inaccuracies in the future, it
+    # should be changed. 
     def cg_distinction(state):
         if state.current.value == "dʒ" \
             and state.prev and state.prev.is_vowel() and state.prev.value in ["i", "iː", "e", "eː"] \

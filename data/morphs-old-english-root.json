@@ -108,6 +108,7 @@
         "key": "ǣrendian",
         "form-raw": "ǣrendi|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "negotiate",
         "tags": ["intransitive"],
         "origin": "old-english",
@@ -116,9 +117,11 @@
         "key": "ǣrnan",
         "form-raw": "ǣrn|an",
         "type": "verb",
-        "gloss": "gallop",
+        "verb-class": "weak",
+        "gloss": ["gallop", "run"],
         "tags": ["transitive", "motion", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "This was in Bright, but I can't find it in Bosworth or Wiktionary"
     }, {
         "key": "ǣs",
         "form-raw": "ǣs",
@@ -219,16 +222,9 @@
         "form-raw": "āg|an",
         "form-canon": "own",
         "type": "verb",
+        "verb-class": "preterite-present",
         "gloss": "own",
         "tags": ["transitive"],
-        "origin": "old-english"
-    }, {
-        "key": "ālēsan",
-        "form-raw": "ālīes|an",
-        "form-canon": "lease",
-        "type": "verb",
-        "gloss": ["[set] free", "release"],
-        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ambeht-impersonal",
@@ -278,6 +274,7 @@
         "key": "ārian",
         "form-raw": "āri|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["pardon", "[show] mercy"],
         "tags": ["transitive"],
         "origin": "old-english"
@@ -332,6 +329,7 @@
         "form-raw-alt": ["āxi|an"],
         "form-canon": "ask",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "ask",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -401,6 +399,7 @@
         "form-raw-alt": ["bīecn|an", "bīcn|an", "bȳcn|an"],
         "form-canon": "beckon",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "beckon",
         "gloss-alt": ["[show] or [indicate]"],
         "tags": ["transitive"],
@@ -497,6 +496,7 @@
         "form-raw": "bann|an",
         "form-canon": "ban",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "[summon], [gather] together",
         "gloss-alt": ["proclaim", "[call] out"],
         "tags": ["transitive", "obscure", "homophonic"],
@@ -532,6 +532,7 @@
         "form-raw": "baþi|an",
         "form-canon": "bathe",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "bathe",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -589,6 +590,7 @@
         "form-raw": "bēat|an",
         "form-canon": "beat",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "beat",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -613,6 +615,7 @@
         "key": "bēdan",
         "form-raw": "bēd|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "compel",
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
@@ -630,6 +633,7 @@
         "form-raw": "belg|an",
         "form-canon": "bellow",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "bellow",
         "gloss-alt": ["[swell] with anger", "[be] angry"],
         "tags": ["intransitive"],
@@ -639,6 +643,7 @@
         "form-raw": "bell|an",
         "form-canon": "bell",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "[bellow] or [roar]",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -671,7 +676,9 @@
         "form-raw": "bēod|an",
         "form-canon": "bede",
         "type": "verb",
-        "gloss": "[pray] or [request]",
+        "verb-class": 2,
+        "gloss": ["pray", "request"],
+        "gloss-alt": ["offer", "proclaim"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english",
         "notes": "Original meaning 'offer, give' and 'proclaim, announce'"
@@ -703,6 +710,7 @@
         "key": "beorgan",
         "form-raw": "beorg|an",
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["[protect], [defend]", "fortify", "[take] shelter", "[save], [deliver]", "spare"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -725,6 +733,7 @@
         "key": "bēotian",
         "form-raw": "bēot|ian",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["vow", "promise", "boast", "threaten"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -741,6 +750,7 @@
         "form-raw": "ber|an",
         "form-canon": "bear",
         "type": "verb",
+        "verb-class": 4,
         "gloss": "bear",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -749,6 +759,7 @@
         "form-raw": "berġ|an",
         "form-raw-alt": ["bierġ|an", "byrġ|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["taste", "[partake] of"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
@@ -758,6 +769,7 @@
         "form-raw": "berst|an",
         "form-canon": "burst",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "burst",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -767,6 +779,7 @@
         "form-raw-alt": ["smiri|an", "smyri|an", "smerw|an", "smirw|an", "smierw|an"],
         "form-canon": "smear",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "smear",
         "gloss-alt": ["[scorn] or [deride]"],
         "tags": ["transitive"],
@@ -775,6 +788,7 @@
         "key": "smēocan",
         "form-raw": "smēoc|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["smoke", "[emit] smoke", "fumigate", "[scent] with incense"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english",
@@ -800,6 +814,7 @@
         "key": "sneorcan",
         "form-raw": "sneorc|an",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "shrivel",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -807,9 +822,11 @@
         "key": "snēowan",
         "form-raw": "snēowan",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["proceed", "[go] hastily"],
         "tags": ["intransitive", "motion", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Class seems to bee unclear, following Bosworth"
     }, {
         "key": "snēr",
         "form-raw": "snēr",
@@ -823,6 +840,7 @@
         "form-raw": "bēt|an",
         "form-canon": "beet",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["improve", "atone", "[make] a fire"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -831,6 +849,7 @@
         "form-raw": "bīd|an",
         "form-canon": "bide",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "[wait] for",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -838,8 +857,10 @@
         "key": "biċġan",
         "form-raw": "biċġ|an",
         "form-raw-alt": ["byċġ|an"],
+        "form-participle-raw": "bohte",
         "form-canon": "buy",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "buy",
         "tags": ["transitive"],
         "origin": "old-english",
@@ -849,6 +870,7 @@
         "form-raw": "bidd|an",
         "form-canon": "bid",
         "type": "verb",
+        "verb-class": 5,
         "gloss": "[ask] for",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -856,6 +878,7 @@
         "key": "bifian",
         "form-raw": "bifi|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[shake] or [tremble]",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -880,6 +903,7 @@
         "form-raw": "bind|an",
         "form-canon": "bind",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "bind",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -905,6 +929,7 @@
         "form-raw": "bīsni|an",
         "form-raw-alt": ["bȳsni|an", "bīseni|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[set] an example",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -937,6 +962,7 @@
         "form-raw": "blinn|an",
         "form-canon": "blin",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "[cease] or [abate]",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -959,6 +985,7 @@
         "form-raw": "brec|an",
         "form-canon": "break",
         "type": "verb",
+        "verb-class": 4,
         "gloss": "break",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -967,6 +994,7 @@
         "form-raw": "breġd|an",
         "form-canon": "braid",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "braid",
         "gloss-alt": ["[move] back and forth", "[draw] a weapon", "drag", "bend"],
         "tags": ["transitive"],
@@ -975,6 +1003,7 @@
         "key": "brēoþan",
         "form-raw": "brēoþ|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["[decay] or [waste] away", "[fail], [come] to naught"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -1007,6 +1036,7 @@
         "form-raw": "brūc|an",
         "form-canon": "brook",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "[endure] or [tolerate]",
         "gloss-alt": ["use", "[make] use of", "enjoy"],
         "tags": ["transitive"],
@@ -1061,6 +1091,7 @@
         "form-raw-alt": ["bylt|an"],
         "form-canon": "build",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "build",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1069,6 +1100,7 @@
         "form-raw": "byrġ|an",
         "form-canon": "bury",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "bury",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1076,17 +1108,21 @@
         "key": "byrnan",
         "form-raw": "byrn|an",
         "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
+        "form-participle-raw": ["burnen", "bærned"],
         "form-canon": "burn",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "burn",
         "tags": ["transitive"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Class and participle forms are ambiguous since this is kind of mashing together a bunch of forms."
     }, {
         "key": "bysiġan",
         "form-raw": "bysiġ|an",
         "form-raw-alt": ["bisgi|an"],
         "form-canon": "busy",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[occupy] or [engage]",
         "tags": ["transitive"],
         "origin": "old-english",
@@ -1131,6 +1167,7 @@
         "form-raw": "ċeapi|an",
         "form-canon": "cheap",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["trade", "buy", "bribe"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1144,16 +1181,20 @@
         "origin": "old-english",
         "tags": ["obscure"]
     }, {
-        "key": "cēgan",
-        "form-raw": "cēg|an",
+        "key": "ċēġan",
+        "form-raw": "ċēġ|an",
+        "form-raw-alt": ["ċīġ|an", "ċȳġ|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["call", "[call] upon, [invoke]"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Chosen form Anglian, others LWS."
     }, {
         "key": "cennan",
         "form-raw": "cenn|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[make] known, [declare]", "[bring] forth, [produce]"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1252,13 +1293,16 @@
         "form-raw": "cwaci|an",
         "form-canon": "quake",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[shake] or [quiver]",
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
         "key": "cweċċan",
         "form-raw": "cweċċ|an",
+        "form-participle-raw": "cweaht",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[shake], [swing], or [vibrate]", "[brandish] a weapon"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -1267,6 +1311,7 @@
         "form-raw": "cwel|an",
         "form-canon": "queal",
         "type": "verb",
+        "verb-class": 4,
         "gloss": "faint",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -1275,6 +1320,7 @@
         "form-raw": "cwell|an",
         "form-canon": "quell",
         "type": "verb",
+        "verb-class": 4,
         "gloss": "[subdue] or [silence]",
         "gloss-alt": "[kill] or [destroy]",
         "tags": ["transitive"],
@@ -1291,6 +1337,7 @@
         "key": "cwenċan",
         "form-raw": "cwenċ|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "extinguish",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1308,6 +1355,7 @@
         "form-raw": "cweþ|an",
         "form-canon": "quethe",
         "type": "verb",
+        "verb-class": 5,
         "gloss": "say",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -1385,6 +1433,7 @@
         "form-raw": "cȳþ|an",
         "form-canon": "kithe",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[announce], [make] known",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -1425,6 +1474,7 @@
         "form-raw": "dēm|an",
         "form-canon": "deem",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "judge",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -1432,6 +1482,7 @@
         "key": "dēon",
         "form-raw": "dē|on",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "suck",
         "gloss-alt": ["suckle"],
         "tags": ["transitive", "speculative"],
@@ -1457,6 +1508,7 @@
         "form-raw": "dileg|an",
         "form-raw-alt": ["dilgi|an", "diligi|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[blot] out or [destroy]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1480,6 +1532,7 @@
         "form-raw": "drenċ|an",
         "form-canon": "drench",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "soak",
         "gloss-alt": "[give] someone a drink",
         "tags": ["transitive"],
@@ -1488,6 +1541,7 @@
         "key": "drēogan",
         "form-raw": "drēog|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["[perform] a duty", "[suffer] or [undergo]"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1496,6 +1550,7 @@
         "form-raw": "drēop|an",
         "form-canon": "dreep",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "[fall] in drops, [drip]",
         "gloss-alt": ["drop", "droop"],
         "tags": ["transitive", "obscure"],
@@ -1506,6 +1561,7 @@
         "form-raw-alt": ["drǣf|an"],
         "form-canon": "drive",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "[drive] out, [expel]",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1514,6 +1570,7 @@
         "form-raw": "drinc|an",
         "form-canon": "drink",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "drink",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1522,6 +1579,7 @@
         "form-raw": "drohtni|an",
         "form-raw-alt": ["drohti|an"],
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["live", "inhabit", "[conduct] onself"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1531,6 +1589,7 @@
         "form-raw-alt": ["dropi|an"],
         "form-canon": "drop",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "drop",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1562,6 +1621,7 @@
         "form-raw": "dug|an",
         "form-canon": "dow",
         "type": "verb",
+        "verb-class": "preterite-present",
         "gloss": "[be] of use or [have] value",
         "gloss-alt": ["[thrive], [prosper]", "[be] fit or strong", "[be] fit for a purpose", "[be] able to do something"],
         "tags": ["intransitive", "stative", "obscure"],
@@ -1586,8 +1646,10 @@
         "form-raw": "dwæsċ|an",
         "type": "verb",
         "gloss": "extinguish",
+        "verb-class": "weak",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Bosworth has this as a short 'æ', Wiktionary as long"
     }, {
         "key": "dweorg",
         "form-raw": "dweorg",
@@ -1610,6 +1672,7 @@
         "form-raw": "dwīn|an",
         "form-canon": "dwine",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["[decline] or [fade]", "[waste] away"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -1674,6 +1737,7 @@
         "form-raw": "ebbi|an",
         "form-canon": "ebb",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "ebb",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -1698,6 +1762,7 @@
         "form-raw": "eċġ|an",
         "form-canon": "edge",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "sharpen",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1831,6 +1896,7 @@
         "form-raw": "far|an",
         "form-canon": "fare",
         "type": "verb",
+        "verb-class": 6,
         "gloss": "travel",
         "tags": ["intransitive", "motion"],
         "origin": "old-english"
@@ -1839,6 +1905,7 @@
         "form-raw": "faell|an",
         "form-canon": "fall",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "fall",
         "tags": ["intransitive", "motion"],
         "origin": "old-english"
@@ -1862,14 +1929,17 @@
         "key": "feċġan",
         "form-raw": "feċġ|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "seize",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Unable to find class for this. Will assume it is weak, as it may be related to 'feċċan'"
     }, {
         "key": "fēdan",
         "form-raw": "fēd|an",
         "form-canon": "feed",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "feed",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1885,7 +1955,9 @@
         "key": "fēoġan",
         "form-raw": "fēoġ|an",
         "form-raw-alt": ["fēoġean", "fē|on"],
+        "form-participle-raw": ["fēod"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["hate", "persecute"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1903,6 +1975,7 @@
         "form-raw": "feoht|an",
         "form-canon": "fight",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "fight",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1920,6 +1993,7 @@
         "form-raw": "fēsi|an",
         "form-canon": "feeze",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["frighten", "[frighten] away"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -1938,6 +2012,7 @@
         "form-raw-alt": ["fæll|an", "fyll|an"],
         "form-canon": "fell",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[cut] down",
         "gloss-alt": "kill",
         "tags": ["transitive"],
@@ -1963,15 +2038,17 @@
         "key": "fleċġan",
         "form-raw": "fleċġ|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[put] to flight"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "OED has MnE 'fleg', based on Scots evolution. Apparently this word's status in OE is unclear, but I'll leave it here."
+        "notes": "OED has MnE 'fleg', based on Scots evolution. Apparently this word's status in OE is unclear, but I'll leave it here. Class unknown, defaulting to 'weak'"
     }, {
         "key": "flēogan",
         "form-raw": "flēog|an",
         "form-raw-alt": ["flēg|an"],
         "type": "verb",
+        "verb-class": 2,
         "gloss": "fly",
         "tags": ["intransitive", "motion"],
         "origin": "old-english",
@@ -1981,6 +2058,7 @@
         "form-raw": "flē|on",
         "form-canon": "flee",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "flee",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -1989,6 +2067,7 @@
         "form-raw": "flīem|an",
         "form-raw-alt": "flȳm|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[put] to flight", "banish"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -1997,6 +2076,7 @@
         "form-raw": "flīg|an",
         "form-raw-alt": ["fliġan", "fleġan"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[drive] out", "[put] to flight", "[frighten] away"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
@@ -2006,6 +2086,7 @@
         "form-raw": "flīt|an",
         "form-canon": "flite",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["[strive] or [contend]", "quarrel", "debate", "scold", "complain"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -2030,6 +2111,7 @@
         "form-raw": "folg|an",
         "form-canon": "follow",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "follow",
         "tags": ["transitive", "motion"],
         "origin": "old-english"
@@ -2038,6 +2120,7 @@
         "form-raw": "f|ōn",
         "form-canon": "fang",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "[sieze] or [capture]",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -2053,6 +2136,7 @@
         "key": "framian",
         "form-raw": "frami|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[set] in a frame or border",
         "gloss-alt": ["construct", "[profit], [avail]", "[promote] or [advance]"],
         "tags": ["intransitive"],
@@ -2062,6 +2146,8 @@
         "key": "freġnan",
         "form-raw": "freġn|an",
         "form-raw-alt": ["friġn|an", "frin|an"],
+        "form-participle-raw": ["fruġn+en", "frugn+en", "frūn+en"],
+        "verb-class": 3,
         "type": "verb",
         "gloss": ["ask", "inquire"],
         "tags": ["transitive", "obscure"],
@@ -2071,13 +2157,15 @@
         "key": "fremian",
         "form-raw": "fremi|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[profit] or [benefit]",
-        "tags": ["intransitive", "speculative"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "fremman",
         "form-raw": "fremm|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[perform] or [accomplish]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
@@ -2109,13 +2197,16 @@
         "form-raw": "frēos|an",
         "form-canon": "freeze",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "freeze",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "friċġan",
         "form-raw": "friċġ|an",
+        "form-participle-raw": ["friġ+en", "frugen"],
         "type": "verb",
+        "verb-class": 5,
         "gloss": ["ask", "inquire", "question", "[seek] out"],
         "tags": ["transitive", "obscure", "speculative"],
         "origin": "old-english"
@@ -2161,6 +2252,7 @@
         "key": "fyhtan",
         "form-raw": "fyht|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "moisten",
         "tags": ["transitive", "speculative", "homophonic"],
         "origin": "old-english"
@@ -2169,6 +2261,7 @@
         "form-raw": "fyll|an",
         "form-canon": "fill",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "fill",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2177,6 +2270,7 @@
         "form-raw": "fyrht|an",
         "form-canon": "fright",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "frighten",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2209,9 +2303,28 @@
         "form-raw": "gal|an",
         "form-canon": "gale",
         "type": "verb",
+        "verb-class": 6,
         "gloss": ["sing", "[cry] or [scream]", "call", "enchant", "[cast] a spell"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
+    }, {
+        "key": "galdor-count",
+        "form-raw": "galdor",
+        "form-raw-alt": ["ġealdor"],
+        "type": "adj",
+        "gloss": ["enchantment", "magic [spell]"],
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english",
+        "notes": "ME has 'galder'"
+    }, {
+        "key": "galdor-mass",
+        "form-raw": "galdor",
+        "form-raw-alt": ["ġealdor"],
+        "type": "adj",
+        "gloss": ["magic", "sorcery"],
+        "tags": ["mass", "abstract", "man-made"],
+        "origin": "old-english",
+        "notes": "ME has 'galder'"
     }, {
         "key": "gamen-count",
         "form-raw": "gamen",
@@ -2234,6 +2347,7 @@
         "form-raw": "gang|an",
         "form-canon": "gang",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "go",
         "tags": ["intransitive", "motion", "obscure"],
         "origin": "old-english"
@@ -2280,6 +2394,7 @@
         "form-raw": "ġeorni|an",
         "form-canon": "yearn",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "yearn",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -2287,6 +2402,7 @@
         "key": "ġēotan",
         "form-raw": "ġēot|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["pour", "[shed] (blood, tears, etc.)", "[cast] metal"],
         "tags": ["transitive", "motion", "speculative"],
         "origin": "old-english",
@@ -2311,6 +2427,7 @@
         "key": "ġe-bǣran",
         "form-raw": "ġe-bǣr|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[behave] or [conduct] (oneself)",
         "tags": ["intransitive", "no-gen"],
         "origin": "old-english",
@@ -2325,7 +2442,10 @@
     }, {
         "key": "ġiefan",
         "form-raw": "ġief|an",
+        "form-raw-alt": ["ġif|an", "ġeof|an"],
+        "form-participle-raw": ["ġef+en", "ġif+en"],
         "type": "verb",
+        "verb-class": 5,
         "gloss": "give",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -2345,6 +2465,7 @@
         "form-raw-alt": ["ġeld|an", "ġyld|an"],
         "form-canon": "yield",
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["[give] or [give] up", "produce"],
         "gloss-alt": "pay",
         "tags": ["transitive"],
@@ -2354,6 +2475,7 @@
         "form-raw": "ġiell|an",
         "form-canon": "yell",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "yell",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2385,6 +2507,7 @@
         "key": "gnīdan",
         "form-raw": "gnīd|an",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "rub",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -2417,6 +2540,7 @@
         "form-raw": "graf|an",
         "form-canon": "grave",
         "type": "verb",
+        "verb-class": 6,
         "gloss": ["dig", "[carve] or [cut]", "engrave", "[shape] by carving or chiseling", "[entomb], [bury]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -2425,6 +2549,7 @@
         "form-raw": "grimm|an",
         "form-canon": "grim",
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["[be] angry", "[look] fierce"],
         "gloss-alt": ["rage", "roar", "clamor"],
         "tags": ["intransitive", "obscure"],
@@ -2465,6 +2590,7 @@
         "key": "gyltan",
         "form-raw": "gylt|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[commit] (of sins)",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2481,7 +2607,8 @@
         "key": "hǣman",
         "form-raw": "hǣm|an",
         "type": "verb",
-        "gloss": ["[have] sex with", "[cohabitate] with"],
+        "verb-class": "weak",
+        "gloss": ["copulate with", "[cohabitate] with"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
@@ -2539,6 +2666,7 @@
         "form-raw": "hald|an",
         "form-canon": "hold",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "hold",
         "tags": ["transitive"],
         "origin": "old-english",
@@ -2547,6 +2675,7 @@
         "key": "hātan-intransitive",
         "form-raw": "hāt|an",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "[be] named",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -2554,6 +2683,7 @@
         "key": "hātan-transitive",
         "form-raw": "hāt|an",
         "type": "verb",
+        "verb-class": 7,
         "gloss": ["command", "name"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -2569,13 +2699,16 @@
         "form-raw": "hēaw|an",
         "form-canon": "hew",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "[cut] down",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "hebban",
         "form-raw": "hebb|an",
+        "form-canon": "heave",
         "type": "verb",
+        "verb-class": 6,
         "gloss": "[lift] up",
         "tags": ["transitive", "motion", "speculative"],
         "origin": "old-english"
@@ -2583,6 +2716,7 @@
         "key": "helan",
         "form-raw": ["hel|an"],
         "type": "verb",
+        "verb-class": 4,
         "gloss": ["[hide], [conceal]", "[keep] secret", "cover"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -2616,6 +2750,7 @@
         "form-raw": "hlad|an",
         "form-canon": "lade",
         "type": "verb",
+        "verb-class": 6,
         "gloss": ["[fill] or [load]", "[load] up", "[weigh] down or [burden]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -2624,6 +2759,7 @@
         "form-raw": "hlēap|an",
         "form-canon": "leap",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "leap",
         "gloss-alt": ["dance"],
         "tags": ["intransitive", "motion"],
@@ -2693,6 +2829,7 @@
         "form-raw": "h|ōn",
         "form-canon": "hang",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "hang",
         "tags": ["transitive", "motion"],
         "origin": "old-english"
@@ -2744,7 +2881,9 @@
     }, {
         "key": "hreddan",
         "form-raw": "hredd|an",
+        "form-participle-raw": ["hreded", "hredd", "hred"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "rescue",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -2753,6 +2892,7 @@
         "form-raw": "hrēm|an",
         "form-raw-alt": ["hrīem|an", "hrȳm|an", "hrīm|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["shout", "lament", "boast"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
@@ -2770,6 +2910,7 @@
         "key": "hrēosan",
         "form-raw": "hrēos|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "[fall] down, [collapse]",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -2792,6 +2933,7 @@
         "key": "hrūtan",
         "form-raw": "hrūt|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["snore", "[snort], [grunt]", "grumble", "[roar] or [rumble]"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english",
@@ -2828,6 +2970,7 @@
         "form-raw": "hunti|an",
         "form-canon": "hunt",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "hunt",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2866,7 +3009,9 @@
         "key": "hȳdan",
         "form-raw": "hȳd|an",
         "form-canon": "hide",
+        "form-participle-canon": ["hidden"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "hide",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2888,6 +3033,7 @@
         "key": "hyllan",
         "form-raw": ["hyll|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "cover",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -2905,6 +3051,7 @@
         "form-raw-alt": ["ȳdli|an"],
         "form-canon": "idle",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[be] idle",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -2944,6 +3091,7 @@
         "key": "lǣċan",
         "form-raw": "lǣċ|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "play",
         "gloss-alt": ["[spring], [leap]", "[move] quickly", "flicker"],
         "tags": ["intransitive", "speculative"],
@@ -2960,13 +3108,16 @@
         "key": "lǣdan",
         "form-raw": "lǣd|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "lead",
+        "gloss-alt": ["[bring] forth", "produce"],
         "tags": ["transitive", "motion"],
         "origin": "old-english"
     }, {
         "key": "lǣran",
         "form-raw": "lǣr|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "teach",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -2984,6 +3135,7 @@
         "form-raw": "lǣt|an",
         "form-canon": "let",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "[let], [allow]",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -2998,8 +3150,9 @@
         "key": "lācan-intransitive",
         "form-raw": "lāc|an",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "play",
-        "gloss-alt": ["sing", "[make] waving movements"],
+        "gloss-alt": ["play", "sing", "[make] waving movements"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
         "notes": "Attested Northern form 'lake'"
@@ -3007,6 +3160,7 @@
         "key": "lācan-transitive",
         "form-raw": "lāc|an",
         "type": "verb",
+        "verb-class": 7,
         "gloss": ["fight", "[fence] (with swords)"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
@@ -3015,6 +3169,7 @@
         "key": "lācnian",
         "form-raw": "lācni|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[give] medical treatment",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3054,6 +3209,7 @@
         "key": "lēon",
         "form-raw": "lē|on",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["[blame], [fault]", "reproach"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3083,6 +3239,7 @@
         "form-raw": "leċġ|an",
         "form-canon": "lay",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[put] down",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -3100,6 +3257,7 @@
         "form-raw": "lēog|an",
         "form-canon": "lie",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "lie",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -3107,6 +3265,7 @@
         "key": "lēon-2",
         "form-raw": "lē|on",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["loan", "lend"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3115,16 +3274,17 @@
         "form-raw": "lēos|an",
         "form-canon": "leese",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "lose",
         "gloss-alt": ["[bring] to ruin", "spoil", "fail"],
         "tags": ["intransitive", "motion"],
-        "origin": "old-english",
-        "notes": "Participle 'lorn'! Need Verner's law support"
+        "origin": "old-english"
     }, {
         "key": "lesan",
         "form-raw": "les|an",
         "form-canon": "lease",
         "type": "verb",
+        "verb-class": 5,
         "gloss": ["gather", "collect", "select"],
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -3134,10 +3294,12 @@
         "form-raw-alt": ["līes|an", "līs|an", "lȳs|an"],
         "form-canon": "lease",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[grant] use of",
         "gloss-alt": ["[set] free", "release"],
         "tags": ["transitive"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Not positive on verb class"
     }, {
         "key": "līċ",
         "form-raw": "līċ",
@@ -3152,8 +3314,9 @@
         "form-raw-alt": ["līef|an", "līf|an", "lȳf|an"],
         "form-canon": "leave",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "allow",
-        "gloss-alt": "trust",
+        "gloss-alt": ["trust"],
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "'lēfan' Anglian, 'līefan' is EWS, 'līfan' and 'lȳfan' LWS."
@@ -3170,6 +3333,7 @@
         "form-raw": "linn|an",
         "form-canon": "lin",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "[stop] or [cease]",
         "gloss-alt": ["lose", "surrender", "[lose] one's life"],
         "tags": ["intransitive", "obscure"],
@@ -3186,6 +3350,7 @@
         "key": "ġelīþan",
         "form-raw": "ġe-līþ|an",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["[go], [move]", "sail", "[proceed] or [advance]", "[come] to land, [reach] port (of a sea vessel)"],
         "tags": ["intransitive", "motion", "speculative"],
         "origin": "old-english"
@@ -3211,7 +3376,9 @@
         "form-raw": "lofi|an",
         "form-canon": "lofe",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "praise",
+        "gloss-alt": ["appraise", "[assign] value to"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
@@ -3219,6 +3386,7 @@
         "form-raw": "lufi|an",
         "form-canon": "love",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "love",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -3235,6 +3403,7 @@
         "form-raw": "losi|an",
         "form-canon": "lose",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "lose",
         "gloss-alt": ["perish", "[bring] to ruin"],
         "tags": ["intransitive", "motion"],
@@ -3244,6 +3413,7 @@
         "form-raw": "lūc|an",
         "form-canon": "louk",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["[pull] up weeds", "weed"],
         "gloss-alt": ["[pull] up or out"],
         "tags": ["transitive", "obscure"],
@@ -3252,6 +3422,7 @@
         "key": "lūcan-2",
         "form-raw": "lūc|an",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["close", "conclude", "fasten", "lock"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3260,6 +3431,7 @@
         "form-raw": "lūt|an",
         "form-canon": "lout",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["bow", "[bend] or [stoop]", "[make] obeisance"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -3284,6 +3456,7 @@
         "form-raw": "mǣn|an",
         "form-canon": "mean",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "indicate",
         "tags": ["intransitive"],
         "origin": "old-english",
@@ -3300,6 +3473,7 @@
         "key": "mǣtan",
         "form-raw": "mǣt|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["dream", "[appear] in a dream"],
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
@@ -3307,6 +3481,7 @@
         "key": "mangian",
         "form-raw": "mangi|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "trade",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -3361,6 +3536,7 @@
         "form-raw": "masi|an",
         "form-canon": "maze",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["amaze", "[confuse], [perplex]"],
         "gloss-alt": ["[make] winding movements"],
         "tags": ["transitive"],
@@ -3392,9 +3568,11 @@
         "origin": "old-english"
     }, {
         "key": "merran",
-        "form-raw": "mierr|an",
+        "form-raw": "merr|an",
+        "form-raw-alt": ["mierr|an"],
         "form-canon": "mar",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[ruin] or [damage]",
         "gloss-alt": ["hinder", "waste"],
         "tags": ["transitive"],
@@ -3403,6 +3581,7 @@
         "key": "mētan",
         "form-raw": "mēt|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[draw] or [paint]",
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
@@ -3450,6 +3629,7 @@
         "key": "mirran",
         "form-raw": "mirr|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["hinder", "disturb"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3495,6 +3675,7 @@
         "form-raw": "nim|an",
         "form-canon": "nim",
         "type": "verb",
+        "verb-class": 4,
         "gloss": "take",
         "gloss-alt": ["[go] or [proceed]", "steal"],
         "tags": ["transitive", "obscure"],
@@ -3520,6 +3701,7 @@
         "form-raw": "pleġ|an",
         "form-canon": "play",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "play",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -3528,6 +3710,7 @@
         "form-raw": "plyċ|an",
         "form-raw-alt": ["pliċġ|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[pull] or [pluck]",
         "gloss-alt": ["[scrape] or [scratch]"],
         "tags": ["transitive", "speculative"],
@@ -3546,15 +3729,17 @@
         "form-raw": "pric|an",
         "form-canon": "prick",
         "type": "verb",
-        "gloss": "pierce",
+        "verb-class": "weak",
+        "gloss": "prick",
+        "gloss-alt": ["pierce"],
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "pric+els",
         "form-raw": "pric+els",
-        "type": "verb",
+        "type": "noun",
         "gloss": "sharp [point]",
-        "tags": ["transitive"],
+        "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "rǣd",
@@ -3571,10 +3756,12 @@
         "form-raw": "rǣd|an",
         "form-canon": "rede",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "[advise] or [give] counsel",
         "gloss-alt": ["[govern] or [protect]", "[discuss] or [deliberate]", "[interpret] or [explain]"],
         "tags": ["transitive", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Was weak in later OE."
     }, {
         "key": "rǣd-count",
         "form-raw": "rǣd",
@@ -3599,13 +3786,15 @@
         "key": "ræfnan",
         "form-raw": "ræfn|an",
         "type": "verb",
-        "gloss": "endure",
+        "verb-class": "weak",
+        "gloss": "[endure], [suffer]",
         "tags": ["transitive", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "rǣman",
         "form-raw": "rǣm|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[rise] up", "[wake] from rest"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -3614,6 +3803,7 @@
         "form-raw": "rǣr|an",
         "form-canon": "rear",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[raise] up",
         "gloss-alt": ["establish", "promote"],
         "tags": ["intransitive"],
@@ -3631,6 +3821,7 @@
         "key": "rēċelsian",
         "form-raw": "rēċ+elsi|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[perfume] with incense", "[burn] incense"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
@@ -3648,6 +3839,7 @@
         "key": "rētan",
         "form-raw": "rēt|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[cheer] up",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3672,6 +3864,7 @@
         "form-raw-alt": ["iernan", "irnan", "yrnan"],
         "form-canon": "run",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "run",
         "tags": ["intransitive", "motion"],
         "origin": "old-english"
@@ -3680,6 +3873,7 @@
         "form-raw": "rīs|an",
         "form-canon": "rise",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "rise",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -3731,6 +3925,7 @@
         "form-raw": "rūn|ian",
         "form-canon": "roun",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "whisper",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -3760,8 +3955,10 @@
     }, {
         "key": "sċeacan",
         "form-raw": "sċeac|an",
+        "form-raw-alt": ["sċac|an"],
         "form-canon": "shake",
         "type": "verb",
+        "verb-class": 6,
         "gloss": "shake",
         "gloss-alt": "brandish",
         "tags": ["transitive"],
@@ -3800,15 +3997,17 @@
         "form-raw-alt": ["sċier|an", "sċir|an"],
         "form-canon": "shear",
         "type": "verb",
+        "verb-class": 4,
         "gloss": ["shear", "[cut] or [tear]"],
         "gloss-alt": "shave",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "sċiepan",
-        "form-raw": "sċiep|an",
+        "key": "sċieppan",
+        "form-raw": "sċiepp|an",
         "form-canon": "shape",
         "type": "verb",
+        "verb-class": 6,
         "gloss": "shape",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -3817,6 +4016,7 @@
         "form-raw": "sċīn|an",
         "form-canon": "shine",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["shine", "[give] out light"],
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -3833,8 +4033,9 @@
         "form-raw": "sċrīf|an",
         "form-canon": "shrive",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "absolve",
-        "gloss-alt": ["[impose] penance on"],
+        "gloss-alt": ["[impose] penance on", "[pass] judgement", "prescribe"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
@@ -3842,6 +4043,7 @@
         "form-raw": "sċūf|an",
         "form-canon": "shove",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "push",
         "gloss-alt": ["[launch] (a ship)"],
         "tags": ["transitive", "motion"],
@@ -3892,6 +4094,7 @@
         "form-raw": "selc|an",
         "form-raw-alt": ["seolc|an"],
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["[become] idle", "languish", "slacken"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
@@ -3910,6 +4113,7 @@
         "form-raw": "sett|an",
         "form-canon": "set",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[set], [place]",
         "tags": ["transitive", "motion"],
         "origin": "old-english"
@@ -3918,6 +4122,7 @@
         "form-raw": "sing|an",
         "form-canon": "sing",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "sing",
         "gloss-alt": ["chant", "recite"],
         "tags": ["transitive"],
@@ -3927,6 +4132,7 @@
         "form-raw": "sitt|an",
         "form-canon": "sit",
         "type": "verb",
+        "verb-class": 5,
         "gloss": "sit",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -3951,8 +4157,10 @@
         "key": "sīon-transitive",
         "form-raw": "sī|on",
         "form-raw-alt": ["sē|on"],
+        "form-participle-raw": ["sew+en"],
         "form-canon": "sie",
         "type": "verb",
+        "verb-class": 5,
         "gloss": ["strain (as with a strainer)", "[stain] by dripping liquid"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -3980,8 +4188,10 @@
         "key": "sleċċan",
         "form-raw": "sleċċ|an",
         "form-raw-alt": ["slæċċ|an"],
+        "form-participle-raw": ["slehte", "slæhte"],
         "form-canon": "sletch",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[slacken] or [abate]",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -3990,6 +4200,7 @@
         "form-raw": "slīf|an",
         "form-canon": "slive",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["cut", "[cut] through", "[split] or [divide]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -3999,6 +4210,7 @@
         "form-raw": "slīt|an",
         "form-canon": "slite",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["tear", "[rend] (a garment)", "[split] or [divide]", "[wear] out"],
         "gloss-alt": ["sharpen"],
         "tags": ["transitive", "obscure"],
@@ -4042,6 +4254,7 @@
         "key": "swīfan-OE",
         "form-raw": "swīf|an",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["[move] in a course", "sweep", "intervene"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -4050,6 +4263,7 @@
         "form-raw": "swīf|an",
         "form-canon": "swive",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "[copulate] with",
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -4057,8 +4271,10 @@
     }, {
         "key": "smæċċan",
         "form-raw": ["smæċċ|an", "smeċċ|an", "smeċġ|an"],
+        "form-participle-raw": ["smæht", "smeht"],
         "form-canon": "smatch",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "taste",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -4066,7 +4282,9 @@
         "key": "smēaġan-intransitive",
         "form-raw": "smēaġ|an",
         "form-raw-alt": ["smē|an", "smēaġe|an"],
+        "form-participle-raw": ["smēad"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "meditate",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
@@ -4074,7 +4292,9 @@
         "key": "smēaġan-transitive",
         "form-raw": "smēaġ|an",
         "form-raw-alt": ["smē|an", "smēaġe|an"],
+        "form-participle-raw": ["smēad"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[consider], [contemplate]", "examine"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -4083,6 +4303,7 @@
         "form-raw": "smiþi|an",
         "form-canon": "smith",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[forge] or [make] from metal",
         "gloss-alt": "[make] skillfully",
         "tags": ["transitive"],
@@ -4120,6 +4341,7 @@
         "form-raw": "spelli|an",
         "form-canon": "spell",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "spell",
         "gloss-alt": ["[talk], [converse]", "[put] into words"],
         "tags": ["transitive"],
@@ -4129,6 +4351,7 @@
         "form-raw": "spend|an",
         "form-canon": "spend",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "spend",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -4137,7 +4360,8 @@
         "form-raw": "spring|an",
         "form-canon": "spring",
         "type": "verb",
-        "gloss": ["leap", "[burst] forth (as a fluid)"],
+        "verb-class": 3,
+        "gloss": ["spring", "leap", "[burst] forth (as a fluid)"],
         "gloss-alt": ["[grow] (as a plant)"],
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -4154,6 +4378,7 @@
         "form-raw": "stand|an",
         "form-canon": "stand",
         "type": "verb",
+        "verb-class": 6,
         "gloss": "stand",
         "tags": ["intransitive"],
         "origin": "old-english"
@@ -4170,14 +4395,17 @@
         "form-raw": "stel|an",
         "form-canon": "steal",
         "type": "verb",
+        "verb-class": 4,
         "gloss": "steal",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "stellan",
         "form-raw": "stell|an",
+        "form-participle-raw": ["steald"],
         "form-canon": "stell",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[put] in place", "[set] up or [mount]", "[show] or [portray]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -4185,6 +4413,7 @@
         "key": "stīgan",
         "form-raw": "stīg|an",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["climb", "ascend"],
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
@@ -4193,6 +4422,7 @@
         "form-raw": "sting|an",
         "form-canon": "sting",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "sting",
         "gloss-alt": "stab",
         "tags": ["transitive"],
@@ -4218,8 +4448,10 @@
     }, {
         "key": "streċċan",
         "form-raw": "streċċ|an",
+        "form-participle-raw": ["streht", "streaht"],
         "form-canon": "stretch",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "stretch",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -4228,6 +4460,7 @@
         "form-raw": "styr|an",
         "form-canon": "stir",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "move",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -4242,13 +4475,15 @@
         "key": "swamian",
         "form-raw": "swam|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[become] dark",
-        "tags": ["transitive", "speculative"],
+        "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "swarian",
         "form-raw": "swari|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[answer] or [respond]",
         "tags": ["intransitive"],
         "origin": "old-english",
@@ -4258,6 +4493,7 @@
         "form-raw": "swebb|an",
         "form-canon": "sweb",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[swoon] or [faint]",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -4266,14 +4502,17 @@
         "form-raw": "sebb|an",
         "form-canon": "sweb",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[put] or [lull] to sleep", "kill"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "swerian",
         "form-raw": "sweri|an",
+        "form-participle-raw": ["sworen"],
         "type": "verb",
         "gloss": "swear",
+        "verb-class": 6,
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
@@ -4290,6 +4529,7 @@
         "key": "sweltan",
         "form-raw": "swelt|an",
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["die", "faint", "[be] overcome (as with emotion, heat, etc.)"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -4298,6 +4538,7 @@
         "form-raw": "swīc|an",
         "form-canon": "swike",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["deceive", "betray"],
         "gloss-alt": ["wander"],
         "tags": ["transitive", "obscure"],
@@ -4316,6 +4557,7 @@
         "form-raw": "swinc|an",
         "form-canon": "swink",
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["[work] hard", "[labor], [toil]"],
         "gloss-alt": ["strive"],
         "tags": ["intransitive", "obscure"],
@@ -4352,6 +4594,7 @@
         "form-raw": "tē|on",
         "form-canon": "tee",
         "type": "verb",
+        "verb-class": 2,
         "gloss": ["[pull] or [drag]", "[bring] or [lead]", "educate"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -4359,6 +4602,7 @@
         "key": "tēon-2",
         "form-raw": "tē|on",
         "type": "verb",
+        "verb-class": 2,
         "gloss": "accuse",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -4383,6 +4627,7 @@
         "form-raw": "timbran|an",
         "form-canon": "timber",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[build] (from wood)",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -4437,7 +4682,9 @@
         "key": "twēogan",
         "form-raw": "twēog|an",
         "form-raw-alt": ["twēoni|an", "twē|on"],
+        "form-participle-raw": ["twēod"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "doubt",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -4447,6 +4694,7 @@
         "form-raw-alt": ["tēori|an"],
         "form-canon": "tire",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[become] tired",
         "gloss-alt": ["faint", "fail", "cease"],
         "tags": ["intransitive"],
@@ -4473,9 +4721,11 @@
         "form-raw": "þeġni|an",
         "form-raw-alt": ["þēn|ian"],
         "type": "verb",
-        "gloss": "serve",
-        "tags": ["transitive"],
-        "origin": "old-english"
+        "verb-class": "weak",
+        "gloss": ["serve", "[hold] office"],
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Needs bitransitivity"
     }, {
         "key": "þeġn-ruler",
         "form-raw": "þeġn",
@@ -4487,8 +4737,10 @@
     }, {
         "key": "þencan",
         "form-raw": "þenc|an",
+        "form-participle-raw": ["þoht"],
         "form-canon": "think",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "think",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -4505,6 +4757,7 @@
         "form-raw": "þenn|an",
         "form-raw-alt": ["þēn|ian"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[stretch] out or [extend]", "[bend] (a bow)", "[prostrate] oneself", "[exert] oneself"],
         "gloss-alt": ["overthrow"],
         "tags": ["intransitive"],
@@ -4519,8 +4772,10 @@
     }, {
         "key": "þēon",
         "form-raw": "þē|on",
+        "form-participle-raw": ["þiġ+en", "þung+en", "þog+en"],
         "form-canon": "thee",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["[flourish] and [prosper]", "thrive", "[be] successful"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -4529,6 +4784,7 @@
         "form-raw": "þēostri|an",
         "form-raw-alt": ["þīestri|an", "þȳstri|an"],
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["darken", "[become] dark"],
         "tags": ["intransitive"],
         "origin": "old-english",
@@ -4546,6 +4802,7 @@
         "key": "þiċġan",
         "form-raw": "þiċġ|an",
         "type": "verb",
+        "verb-class": 5,
         "gloss": ["[take] or [receive]", "accept", "[eat] or [drink]", "consume"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
@@ -4555,6 +4812,7 @@
         "form-raw": "þoli|an",
         "form-canon": "thole",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "endure",
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -4578,6 +4836,7 @@
         "form-raw": "þrāw|an",
         "form-canon": "throw",
         "type": "verb",
+        "verb-class": 7,
         "gloss": "throw",
         "tags": ["transitive", "motion"],
         "origin": "old-english",
@@ -4587,6 +4846,7 @@
         "form-raw": "þring|an",
         "form-canon": "thring",
         "type": "verb",
+        "verb-class": 3,
         "gloss": ["[crowd] about", "[press] or [squeeze]", "push", "[force] one's way"],
         "gloss-alt": ["constrict"],
         "tags": ["transitive", "obscure"],
@@ -4594,7 +4854,9 @@
     }, {
         "key": "þwēan",
         "form-raw": "þwē|an",
+        "form-participle-raw": ["þwæġ+en", "þwag+en", "þweġ+en"],
         "type": "verb",
+        "verb-class": 6,
         "gloss": "wash",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -4603,6 +4865,7 @@
         "form-raw": "þwīt|an",
         "form-canon": "thwite",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["whittle", "[pare] down"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -4617,8 +4880,10 @@
         "key": "wæċċan",
         "form-raw": "wæċċ|an",
         "form-raw-alt": "weċċ|an",
+        "form-participle-raw": ["wæht"],
         "form-canon": "watch",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "watch",
         "gloss-alt": ["wake", "[remain] awake", "[stand] guard"],
         "tags": ["transitive"],
@@ -4629,6 +4894,7 @@
         "form-raw": "wæcn|an",
         "form-canon": "waken",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[wake] up",
         "gloss-alt": ["[come] into being"],
         "tags": ["intransitive"],
@@ -4646,6 +4912,7 @@
         "key": "wǣgan",
         "form-raw": "wǣg|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["deceive", "[harass] or [afflict]"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
@@ -4707,6 +4974,7 @@
         "form-raw": "wac|an",
         "form-canon": "wake",
         "type": "verb",
+        "verb-class": 6,
         "gloss": "[wake] up",
         "gloss-alt": ["arise", "originate", "[be] born"],
         "tags": ["intransitive"],
@@ -4716,6 +4984,7 @@
         "form-raw": "waci|an",
         "form-canon": "wake",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[be] or [remain] awake",
         "gloss-alt": ["[keep] watch"],
         "tags": ["intransitive"],
@@ -4767,6 +5036,7 @@
         "form-raw-alt": ["weald|an"],
         "form-canon": "wald",
         "type": "verb",
+        "verb-class": 7,
         "gloss": ["govern", "inherit", "rule"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -4798,6 +5068,7 @@
         "form-raw": "wedd|an",
         "form-canon": "wed",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "marry",
         "tags": ["transitive"],
         "origin": "old-english",
@@ -4807,6 +5078,7 @@
         "form-raw": "weg|an",
         "form-canon": "weigh",
         "type": "verb",
+        "verb-class": 5,
         "gloss": "weight",
         "gloss-alt": ["carry"],
         "tags": ["transitive"],
@@ -4818,6 +5090,7 @@
         "form-raw-alt": ["wield|an", "wild|an"],
         "form-canon": "wield",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "wield",
         "gloss-alt": ["control", "[have] power over"],
         "tags": ["transitive"],
@@ -4827,6 +5100,7 @@
         "key": "wēnan",
         "form-raw": "wēn|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[hold] (of an opinion)",
         "gloss-alt": ["[expect] or [hope]"],
         "tags": ["transitive", "obscure"],
@@ -4844,6 +5118,7 @@
         "form-raw": "wend|an",
         "form-canon": "wend",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[go] by indirect route",
         "gloss-alt": ["turn", "change", "translate", "happen", "depart"],
         "tags": ["intransitive"],
@@ -4853,6 +5128,7 @@
         "form-raw": "weorp|an",
         "form-canon": "warp",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "warp",
         "gloss-alt": ["throw"],
         "tags": ["transitive"],
@@ -4870,6 +5146,7 @@
         "key": "weorþan",
         "form-raw": "weorþ|an",
         "type": "verb",
+        "verb-class": 3,
         "gloss": "become",
         "tags": ["transitive", "speculative", "homophonic"],
         "origin": "old-english",
@@ -4990,6 +5267,7 @@
         "key": "wlātian",
         "form-raw": "wlāti|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[gaze] or [observe]",
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
@@ -4997,6 +5275,7 @@
         "key": "wlītan",
         "form-raw": "wlīt|an",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "[look], [behold]",
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
@@ -5060,6 +5339,7 @@
         "key": "wreċċan",
         "form-raw": "wreċċ|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[awaken] or [arouse]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -5068,6 +5348,7 @@
         "form-raw": "wrēġ|an",
         "form-canon": "wray",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": ["accuse", "[stir] up or [incite]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -5076,8 +5357,10 @@
         "key": "wrēon",
         "form-raw": "wrē|on",
         "form-raw-alt": ["wrī|on"],
+        "form-participle-raw": ["wriġ+en", "wrog+en"],
         "form-canon": "wry",
         "type": "verb",
+        "verb-class": 1,
         "gloss": ["cover", "clothe", "hide"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -5094,7 +5377,8 @@
         "form-raw": "wrīġi|an",
         "form-canon": "wry",
         "type": "verb",
-        "gloss": ["[turn] or [twist]"],
+        "verb-class": "weak",
+        "gloss": "[turn] or [twist]",
         "gloss-alt": ["[endeavor], [venture]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
@@ -5103,6 +5387,7 @@
         "form-raw": "wrīt|an",
         "form-canon": "write",
         "type": "verb",
+        "verb-class": 1,
         "gloss": "write",
         "tags": ["transitive"],
         "origin": "old-english"
@@ -5142,6 +5427,7 @@
         "form-raw": "wuni|an",
         "form-canon": "wone",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "[stay] or [dwell] in a place",
         "gloss-alt": ["[be] in a certain condition", "[be] located somewhere", "[remain], [last]", "endure", "exist"],
         "tags": ["transitive", "obscure"],
@@ -5167,6 +5453,7 @@
         "key": "wyrdan",
         "form-raw": "wyrd|an",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "injure",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -5175,6 +5462,7 @@
         "form-raw": "wyrġ|an",
         "form-canon": "worry",
         "type": "verb",
+        "verb-class": "weak",
         "gloss": "worry",
         "gloss-alt": ["strangle"],
         "tags": ["transitive"],

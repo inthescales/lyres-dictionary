@@ -116,6 +116,7 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",
+        "verb-class": "weak",
         "gloss": "[become] %@",
         "exception": [{
             "case": {
@@ -135,6 +136,7 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "verb",
+        "verb-class": "weak",
         "gloss": "[make] %@",
         "exception": [{
             "case": {
@@ -718,6 +720,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
+        "verb-class": "weak",
         "gloss": "[act] like %sg",
         "requires": {
             "follows": {
@@ -745,6 +748,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
+        "verb-class": "weak",
         "gloss": "[use] %sg",
         "requires": {
             "follows": {
