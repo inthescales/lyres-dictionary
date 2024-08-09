@@ -10,6 +10,12 @@ from src.models.morph import Morph
 from src.morphs.morphothec import Morphothec
 from src.utils.logging import Logger
 
+# For ad-hoc morphs
+# TODO: Move these
+import src.evolutor.evolutor as evolutor
+import src.utils.inflection as inflection
+from src.evolutor.engine.config import Config
+
 def seed_word(word, morphothec):
     bag = [
         # ("latin", morphothec.root_count_for_language("latin")),
@@ -147,6 +153,25 @@ def transform_word(word, morphothec, is_single):
     if alternate_form != None \
         and "gloss-alt" in root_morph.morph:
         bag.append(("alternate_form_and_gloss", 30))
+
+    # Past participle
+    past_participle_form = None
+    if language == "old-english" \
+        and root_morph.get_type() == "verb" \
+        and root_morph.has_tag("transitive") \
+        and root_morph.morph["verb-class"] != "weak":
+        config = Config()
+        form = root_morph.morph["form-raw"]
+        if isinstance(form, list):
+            form = random.choice(form)
+        past_participle_form = evolutor.get_participle_form(form, root_morph.morph["verb-class"], config)
+
+    if past_participle_form != None \
+        and (
+            "form-participle-canon" not in root_morph.morph \
+            or past_participle_form not in root_morph.morph["form-participle-canon"] \
+        ):
+        bag.append(("past-participle", 30000000000))
         
     # If there is no override, choose, or return False if no choices ------
     if not override: 
@@ -271,5 +296,21 @@ def transform_word(word, morphothec, is_single):
         del root_morph.morph["form-raw"]
         del root_morph.morph["form-canon"]
         root_morph.morph["form-final"] = alternate_form
+
+    elif choice == "past-participle":
+        print("WAHOOOOOOO ===========")
+        root_morph.morph["key"] += "-adhoc:ppart"
+        root_morph.morph["type"] = "adj"
+        if isinstance(root_morph.morph["gloss"], list):
+            root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss"])
+        root_morph.morph["gloss"] = inflection.inflect(root_morph.morph["gloss"], "ppart")
+        del root_morph.morph["form-raw"]
+        if "form-canon" in root_morph.morph:
+            del root_morph.morph["form-canon"]
+        root_morph.morph["form-final"] = past_participle_form
+        if "tags" in root_morph.morph:
+            root_morph.morph["tags"] += ["fixed-gloss"]
+        else:
+            root_morph.morph["tags"] = ["fixed-gloss"]
 
     return True
