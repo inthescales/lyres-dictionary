@@ -33,7 +33,7 @@ def is_in_open_syllable(phonemes, index):
 
         if phoneme.is_consonant():
             # NOTE: I'm not positive about the affricate exceptions, it's just a hunch.
-            if phoneme.is_geminate() or phoneme.value in ["tʃ", "dʒ"]:
+            if phoneme.is_geminate() or phoneme.value in ["tʃ", "dʒ", "ks"]:
                 return False
             
             if state == 0:

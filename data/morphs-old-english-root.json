@@ -974,6 +974,22 @@
         "gloss": "bitter",
         "origin": "old-english"
     }, {
+        "key": "blenċan",
+        "form-raw": "bleċ|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[deceive] or [cheat]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "blīcan",
+        "form-raw": "blīc|an",
+        "type": "verb",
+        "verb-class": 1,
+        "gloss": "[shine], [glisten]",
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "blinnan",
         "form-raw": "blinn|an",
         "form-canon": "blin",
@@ -1041,6 +1057,17 @@
         "type": "noun",
         "gloss": "sea",
         "tags": ["singleton", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "bringan",
+        "form-raw": "bring|an",
+        "form-participle-raw": ["brōht"],
+        "form-canon": "bring",
+        "form-participle-canon": ["brought"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "bring",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "brōþor",
@@ -1707,6 +1734,25 @@
         "type": "noun",
         "gloss": ["error", "heresy"],
         "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "dwimer-mass",
+        "form-raw": "dwimer",
+        "form-raw-alt": ["dwimor", "dwymer", "dwymor"],
+        "form-canon": "dwimmer",
+        "type": "noun",
+        "gloss": ["magic", "sorcery"],
+        "gloss-alt": ["illusion", "delusion", "error"],
+        "tags": ["mass", "abstract", "man-made", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "dwimer-count",
+        "form-raw": "dwimer",
+        "form-raw-alt": ["dwimor", "dwymer", "dwymor"],
+        "form-canon": "dwimmer",
+        "type": "noun",
+        "gloss": ["phantom", "ghost", "apparition"],
+        "tags": ["count", "concrete", "magical", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "dwīnan",
@@ -2627,7 +2673,7 @@
         "form-canon": "grime",
         "type": "noun",
         "gloss": ["mask", "visor"],
-        "gloss-tool": "[conceal] or [disguise",
+        "gloss-tool": "[conceal] or [disguise]",
         "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
@@ -3843,6 +3889,15 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "plēon",
+        "form-raw": "plē|on",
+        "form-participle-raw": ["pleġ+en"],
+        "type": "verb",
+        "verb-class": 5,
+        "gloss": ["risk", "endanger"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "plyċan",
         "form-raw": "plyċ|an",
         "form-raw-alt": ["pliċġ|an"],
@@ -4222,6 +4277,17 @@
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "seċan",
+        "form-raw": "seċ|an",
+        "form-participle-raw": ["sōht"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "seek",
+        "gloss-alt": ["visit", "attack"],
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "Modern 'seek' may be influenced by Norse, but leaving this for itself"
+    }, {
         "key": "seċġ",
         "form-raw": "seċġ",
         "type": "noun",
@@ -4577,6 +4643,15 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "steorra",
+        "form-raw": "steorra",
+        "form-raw-alt": ["stearra", "sterra"],
+        "form-canon": "star",
+        "type": "noun",
+        "gloss": "star",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
         "key": "stīgan",
         "form-raw": "stīg|an",
         "type": "verb",
@@ -4751,6 +4826,18 @@
         "origin": "old-english",
         "notes": "WS form 'seolvor'"
     }, {
+        "key": "tǣċan",
+        "form-raw": "tǣċ|an",
+        "form-participle-raw": ["tāht"],
+        "form-canon": "teach",
+        "form-participle-canon": ["tought"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "teach",
+        "tags": ["transitive"],
+        "origin": "old-english",
+        "notes": "OE had some intransitive senses"
+    }, {
         "key": "tæfl",
         "form-raw": "tæfl",
         "form-canon": "tavel",
@@ -4858,6 +4945,13 @@
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
+        "key": "tungol",
+        "form-raw": "tungol",
+        "type": "noun",
+        "gloss": "star",
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "twēoġan",
         "form-raw": "twēoġ|an",
         "form-raw-alt": ["twēoni|an", "twē|on"],
@@ -4917,7 +5011,7 @@
     }, {
         "key": "þencan",
         "form-raw": "þenc|an",
-        "form-participle-raw": ["þoht"],
+        "form-participle-raw": ["þōht"],
         "form-canon": "think",
         "form-participle-canon": ["thought"],
         "type": "verb",
@@ -5212,6 +5306,17 @@
         "tags": ["obscure"],
         "origin": "old-english"
     }, {
+        "key": "wanian",
+        "form-raw": "wani|an",
+        "form-canon": "wane",
+        "form-participle-canon": ["waned"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "lessen",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "OE had transitive meanings 'impair', 'infringe', 'annul'"
+    }, {
         "key": "weald-woodland",
         "form-raw": "weald",
         "form-canon": "wald",
@@ -5245,6 +5350,17 @@
         "type": "noun",
         "gloss": ["callus", "[knot] of a tree"],
         "tags": ["count", "concrete", "bodypart", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "weaxan",
+        "form-raw": "weax|an",
+        "form-canon": "wax",
+        "form-participle-canon": ["waxed"],
+        "type": "verb",
+        "verb-class": 7,
+        "gloss": "grow",
+        "gloss-alt": ["flourish", "[become] strong"],
+        "tags": ["intransitive"],
         "origin": "old-english"
     }, {
         "key": "weċġ",
