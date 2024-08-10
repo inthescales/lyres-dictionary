@@ -2372,7 +2372,7 @@
         "key": "galdor-count",
         "form-raw": "galdor",
         "form-raw-alt": ["ġealdor"],
-        "type": "adj",
+        "type": "noun",
         "gloss": ["enchantment", "magic [spell]"],
         "tags": ["count", "abstract", "man-made"],
         "origin": "old-english",
@@ -2613,6 +2613,33 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "grim",
+        "form-raw": "grim",
+        "form-canon": "grim",
+        "type": "adj",
+        "gloss": "grim",
+        "gloss-alt": ["fierce", "cruel", "terrible"],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "grīma",
+        "form-raw": "grīma",
+        "form-canon": "grime",
+        "type": "noun",
+        "gloss": ["mask", "visor"],
+        "gloss-tool": "[conceal] or [disguise",
+        "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "grīma-creature",
+        "form-raw": "grīma",
+        "form-canon": "grime",
+        "type": "noun",
+        "gloss": ["apparition", "goblin", "nightmare"],
+        "tags": ["count", "concrete", "living", "magical", "speculative"],
+        "origin": "old-english",
+        "notes": "Fix tags with nightmare with senses"
+    }, {
         "key": "grimman",
         "form-raw": "grimm|an",
         "form-canon": "grim",
@@ -2780,14 +2807,16 @@
         "origin": "old-english"
     }, {
         "key": "hebban",
-        "form-raw": "hebb|an",
+        "form-raw": "hef|an",
+        "form-participle-raw": ["haf+en"],
         "form-canon": "heave",
         "form-participle-canon": ["hoven", "hove", "heaved", "heft"],
         "type": "verb",
         "verb-class": 6,
         "gloss": "[lift] up",
         "tags": ["transitive", "motion", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Raw forms represent inflected form typical of verbs with geminate 'bb'"
     }, {
         "key": "helan",
         "form-raw": ["hel|an"],
@@ -3318,10 +3347,14 @@
     }, {
         "key": "lēasian",
         "form-raw": "lēasi|an",
-        "type": "adj",
+        "form-canon": "lease",
+        "form-participle-canon": ["leased"],
+        "type": "verb",
+        "verb-class": "weak",
         "gloss": ["[tell] lies, [falsify]"],
         "tags": ["intransitive", "obscure", "homophonic"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "needs bitransitivity"
     }, {
         "key": "leċġan",
         "form-raw": "leċġ|an",
@@ -3968,7 +4001,7 @@
     }, {
         "key": "rinnan",
         "form-raw": "rinn|an",
-        "form-raw-alt": ["iernan", "irnan", "yrnan"],
+        "form-raw-alt": ["iern|an", "irn|an", "yrn|an"],
         "form-canon": "run",
         "form-participle-canon": ["run"],
         "type": "verb",
@@ -4268,7 +4301,8 @@
         "form-raw": "sī|on",
         "form-raw-alt": ["sē|on"],
         "form-canon": "sie",
-        "type": "adj",
+        "type": "verb",
+        "verb-class": 5,
         "gloss": "[drip] or [drain] (of liquids)",
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
@@ -4824,8 +4858,8 @@
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
-        "key": "twēogan",
-        "form-raw": "twēog|an",
+        "key": "twēoġan",
+        "form-raw": "twēoġ|an",
         "form-raw-alt": ["twēoni|an", "twē|on"],
         "form-participle-raw": ["twēod"],
         "type": "verb",

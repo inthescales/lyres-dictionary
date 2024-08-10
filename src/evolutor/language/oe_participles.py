@@ -5,7 +5,7 @@ import src.utils.helpers as helpers
 from src.evolutor.engine.hinges import often, even, occ, rarely
 
 # Unhandled cases:
-# - Weak verbs with infininitive in'-ēaġan', pp. in '-ēad' (not relevant to MnE)
+# - Weak verbs with infinitive in'-ēaġan', pp. in '-ēad', or '-ēoġan' / '-ēod' (not relevant to MnE)
 # - Cases where 'g' or 'ġ' change their palatalization (I don't know this to be reflected in MnE)
 # - 'ċġ' digraph appears to become 'ġ' in participles of words like 'seċġan', 'leċġan'. I can
 #   get away without a rule for it because I do a similar change in phonetic processing, but
@@ -47,7 +47,7 @@ verner_map = {
 def get_strong_pseudoparticiple(form, verb_class, config):
     if verb_class == "preterite-present":
         return None
-    
+
     # If this is a contracted form, call the separate function for that
     if is_contracted(form):
         return get_strong_pseudoparticiple_contracted(form, verb_class)
@@ -63,6 +63,7 @@ def get_strong_pseudoparticiple(form, verb_class, config):
     else:
         suffix = "+en"
 
+
     # Class 7 verbs don't involve vowel changes
     if verb_class == 7:
         return form + suffix
@@ -76,6 +77,17 @@ def get_strong_pseudoparticiple(form, verb_class, config):
 
     if vowels not in vowel_map[verb_class]:
         return form
+
+    # Geminates in some class should be reduced, e.g. 'biddan' -> 'beden' (5), 'sċeappen' -> 'sċapen' (6)
+    # (These words have infinitives that show gemination due to being formed with '-jan')
+    # However, this should not apply to cases such as 'swellan' -> 'swollen' (3)
+    if verb_class in [5, 6]:
+        for i in range(0, len(clusters)):
+            if len(clusters[i]) == 2:
+                if clusters[i][0] == clusters[i][1] and clusters[i][0] in orthography.consonants:
+                    clusters[i] = clusters[i][0]
+                elif clusters[i][0:1] == "ċġ":
+                    clusters[i] = "ġ"
 
     form = "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:])
 
@@ -94,7 +106,7 @@ def get_strong_pseudoparticiple_contracted(form, verb_class):
     else:
         if form[-4:] in ["ē|on", "ē|an"]:
             stem = form[0:-4]
-        elif form[-2:] == "ōn":
+        elif form[-2:] in ["on", "ōn"]:
             stem = form[0:-3]
 
         # Contracted forms in '-ēon' formerly ended in -'han'. The 'h' was later elided, but

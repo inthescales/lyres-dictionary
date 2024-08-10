@@ -648,7 +648,7 @@
                         "has-type": "verb"
                     }
                 },
-                "gloss": "tending %inf"
+                "gloss": "%part frequently"
             }, {
                 "case": {
                     "follows": {
@@ -689,7 +689,7 @@
                         ]
                     }
                 },
-                "gloss": ["tending %inf", "easy %inf"]
+                "gloss": ["%part frequently", "easy %inf"]
             }, {
                 "case": {
                     "follows": {

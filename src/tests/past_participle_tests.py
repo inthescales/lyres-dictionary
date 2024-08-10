@@ -223,4 +223,9 @@ class PastParticipleTests(unittest.TestCase):
         check("h|ōn", 7, "hangen")
         check("f|ōn", 7, "fanged", overrides=[["PPart:use-strong", False]])
 
+        # De-gemination in participles for clasess 5 and 6 -----------------------------
+
+        check("liċġ|an", 5, "lain")
+        check("sċiepp|an", 6, "shapen")
+
         return [total, failures]
