@@ -12,6 +12,10 @@ from src.evolutor.engine.hinges import often, even, occ, rarely
 #   it may be necessary to process this here at some point. Note that this change happens even
 #   for weak verbs.
 
+# TODOs:
+# - Cases where a verb uses a different verb class' participle-formation method
+# - Cases where past participles are formed from preterite forms
+
 # Strong participles ==============================================
 
 # Mapping from strong verb class to pairs of infinitive and past participle vowels.
@@ -33,17 +37,13 @@ verner_map = {
 
 # Get a pseudo-past-participle form for the given form, treating it as the given verb class
 #
-# NOTE: this does *not* produce historical Old English participles. Rather, it produces
-# an alternative form that should convert properly into a modern-style participle.
+# NOTE: this does *not* necessarily produce historical Old English participles. Rather, it produces
+# an alternative form that should convert properly into a modern-style participle. For example, it
+# doesn't make changes in 'c' palatalization when surrounding vowels change
 #
-# Specifically, it does not produce changes in consonants due to Verner's law, as in cases like
-# 'frēosan' (freeze) -> 'fruron', or 'ċēosan' choose -> 'curon', as PDE does not include
-# these sound changes, using the forms 'frozen' and 'chosen'
-#
-# That said, Verner's law does apply in cases like 'forlese' -> 'forlorn', or 'sodden' (from 'sēoþan'),
-# so I should probably add handling from it at some point. There are also some cases of literary use,
-# e.g. 'frore' in Milton
-# TODO: Support Verner's law sound changes in past participles.
+# NOTE: The following cases are *not* handled by this function:
+# - Weak verbs with participle forms in -'ht' (forming modern 'taught', 'sought', etc.)
+#   As far as I can tell, these aren't predictable from the perspective of recorded OE.
 def get_strong_pseudoparticiple(form, verb_class, config):
     if verb_class == "preterite-present":
         return None
