@@ -263,7 +263,8 @@ def get_joined_form(language, last_morph, morph, original, proposed):
     
     if language == "old-english":
         if morph.is_suffix():
-            return mne_affixation.get_joined_form(form, addition)
+            y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
+            return mne_affixation.get_joined_form(form, addition, y_to_i=y_to_i)
 
         if last_morph.get_type() == "number":
             form = form + "-"

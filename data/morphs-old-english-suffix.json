@@ -374,6 +374,7 @@
                 "gloss": "like or resembling the %!sg or its wood"
             }
         ],
+        "tags": ["y-to-i"],
         "origin": "old-english"
     }, {
         "key": "-isċ",
@@ -433,6 +434,7 @@
             },
             "gloss": "pertaining or suitable to %pl"
         }],
+        "tags": ["y-to-i"],
         "origin": "old-english"
     }, {
         "key": "-liċe",

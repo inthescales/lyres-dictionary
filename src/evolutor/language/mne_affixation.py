@@ -1,6 +1,8 @@
 import src.utils.helpers as helpers
 
-def get_joined_form(form, addition):
+# Returns a string concatenating the given form and addition strings, with typical
+# modern English spelling changes applied.
+def get_joined_form(form, addition, y_to_i=False):
     if helpers.is_vowel(addition[0], True):
         if len(form) >= 2 \
         and helpers.is_consonant(form[-1], False) \
@@ -30,10 +32,13 @@ def get_joined_form(form, addition):
             # Ex. 'fish' + 'ship' -X-> 'fishship'
             addition = "-" + addition
 
-    if form[-1] == "y" \
+    if form[-1] == "y" and y_to_i \
     	and helpers.is_consonant(addition[0]) \
     	and not (helpers.syllable_count(form, True) == 1 and helpers.is_consonant(form[-2])):
-        # If word ends in 'y' and is being suffixed with a consonant, change the 'y' to 'i'
+        # If word ends in 'y',is being suffixed with a consonant, and the y-to-i flag is on,
+        # change the 'y' to 'i'. The flag generally corresponds with involving the '-y' or '-ly'
+        # suffixes.
+
         # Only do this if the word is *not* a one-syllable word ending in '-Cy'.
         # Ex. 'day' + 'ly' -> 'daily', 'doughty' + 'ness' -> 'doughtiness'
         # Ex. of exceptions: 'dry' + 'ly' -> 'dryly', 'shy' + 'ness' -> 'shyness'

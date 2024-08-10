@@ -5,6 +5,8 @@ from src.generation.former import Former_Config
 from src.generation.generator import word_for_keys
 import src.generation.composer as composer
 
+import src.evolutor.language.mne_affixation as mne_affixation
+
 class EvolutorAffixTests(unittest.TestCase):
     def setUp(self):
         self.morphothec = Morphothec("data/")
@@ -92,22 +94,45 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["cræfte", "-iġ", "-liċ"], "craftily")
         self.assertForm(["īs", "-iġ", "-nes"], "iciness")
         self.assertForm(["frēond", "-liċ", "-nes"], "friendliness")
-        
-        # Spelling changes ------------------------------
+ 
+    def testJoinedSpellings(self):
+        # Final diphthong 'y' changes to 'i', if indicated
+        self.assertJoined(["day", "ly"], True, "daily")
+        self.assertJoined(["gay", "ly"], True, "gaily")
 
-        # Change final y to i before consonant
+        # Final vowel 'y' changes to 'i', if indicated and unstressed
+        self.assertJoined(["lady", "ly"], True, "ladily")
+
+        # Final vowel 'y' changes to 'i' if indicated and part of '-y' suffix
+        self.assertJoined(["busy", "ness"], True, "business")
+        self.assertJoined(["dizzy", "ness"], True, "dizziness")   
+        self.assertJoined(["worthy", "ness"], True, "worthiness")
+
+        # Final vowel 'y' stressed and not part of '-y' suffix never changes, even if indicated
+        self.assertJoined(["dry", "ly"], True, "dryly")
+        self.assertJoined(["shy", "ness"], True, "shyness")
+
+        # Final vowel 'y' remains if not indicated
+        self.assertJoined(["coy", "ness"], False, "coyness")
+        self.assertJoined(["lady", "like"], False, "ladylike")
+
+    def test_t_to_i_indication(self):
+        # '-liċ' imposes y-to-i on previous morph
         self.assertForm(["dæġ", "-liċ"], "daily")
+
+        # Morph with baked-in '-iġ' ending uses y-to-i
         self.assertForm(["dohtiġ", "-nes"], "doughtiness")
 
-        # ...but not always
+        # Other morphs ending in '-y' don't
         self.assertForm(["drȳġe", "-nes"], "dryness")
 
+    def test_misc_spelling_changes(self):
         # Drop silent e in favor of vowel
+        self.assertForm(["hors", "-isċ"], "horsish")
         self.assertForm(["rose", "-iġ"], "rosy")
         
         # Eliminate triple consonants
         self.assertForm(["full", "-liċ"], "fully")
-
 
 # Helpers ==========
     
@@ -118,3 +143,9 @@ class EvolutorAffixTests(unittest.TestCase):
         # self.assertEqual(composed, form)
         if form != composed:
             print(form + " != " + composed)
+
+    def assertJoined(self, strings, y_to_i, target):
+        joined = mne_affixation.get_joined_form(strings[0], strings[1], y_to_i=y_to_i)
+        if joined != target:
+            print(joined + " !+ " + target)
+

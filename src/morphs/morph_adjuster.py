@@ -23,6 +23,16 @@ def adjust_morph(morph):
             # else:
             #     morph["tags"] = ["no-prep"]
 
+        # Add 'y-to-i' tag to any word with a baked-in '-iġ' suffix
+        if "form-raw" in morph \
+            and (
+                (isinstance(morph["form-raw"], str) and morph["form-raw"].endswith("+iġ")) \
+                or (isinstance(morph["form-raw"], list) and any([form.endswith("+iġ") for form in morph["form-raw"]])) \
+            ):
+            if "tags" not in morph:
+                morph["tags"] = []
+            morph["tags"] += ["y-to-i"]
+
         # Add 'rare' tag to homophonic words
         if "tags" in morph and "homophonic" in morph["tags"]:
             morph["tags"] += ["rare"]

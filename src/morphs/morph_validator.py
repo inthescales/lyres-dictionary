@@ -58,6 +58,8 @@ valid_tags = [
     "person",                   # Noun semantics - a kind of person
     "role",                     # Noun semantics - a role that a person takes on (as opposed to inborn identity)
     "ruler",                    # Noun semantics - a person who rules over a place or thing
+    "divine",                   # Noun semantics - a divine being (god, angel, etc)
+    "magical",                  # Noun semantics - a magical or supernatural being (elf, ghost, etc)
     "bodypart",                 # Noun semantics - a member or organ of a living being, animal or plant
     "bodypart-plant",           # Noun semantics - a member belonging only to a plant, like a leaf or stem
     "bodypart-single",          # Noun semantics - a bodypart that a being has only one of, like heart or head
@@ -107,7 +109,8 @@ valid_tags = [
     "non-final",                # Generation - cannot be the final morph in the word
     "suffix-only",              # Generation - adding a suffix is the only valid transformation following this morph
     "fixed-gloss",              # Generation - the gloss of this morph is fixed - no additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds,
-    "i-mutating"                # OE morphophonology - causes i-mutation in the joined root
+    "i-mutating",               # OE morphophonology - causes i-mutation in the joined root
+    "y-to-i"                    # MnE orthography - causes a final unstressed 'y' to become 'i' when a consonant is suffixed (e.g. 'day' + '-ly' -> 'daily')
 ]
 
 def validate_morph(morph):
