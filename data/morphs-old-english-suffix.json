@@ -199,7 +199,7 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["uncountable", "concrete"],
+        "tags": ["uncountable", "concrete", "y-to-i"],
         "exception": [{
             "case": {
                 "follows": {

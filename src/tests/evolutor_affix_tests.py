@@ -120,8 +120,14 @@ class EvolutorAffixTests(unittest.TestCase):
         # '-liċ' imposes y-to-i on previous morph
         self.assertForm(["dæġ", "-liċ"], "daily")
 
-        # Morph with baked-in '-iġ' ending uses y-to-i
+        # '-iġ' uses y-to-i
+        self.assertForm(["mōd", "-iġ", "-nes"], "moodiness")
+
+        # Morph with baked-in '-iġ' ending also uses y-to-i
         self.assertForm(["dohtiġ", "-nes"], "doughtiness")
+
+        # '-ere' uses y-to-i
+        # self.assertForm(["bysiġan", "-ere"], "busier") # Needs overrides for 'y' -> /u/
 
         # Other morphs ending in '-y' don't
         self.assertForm(["drȳġe", "-nes"], "dryness")
