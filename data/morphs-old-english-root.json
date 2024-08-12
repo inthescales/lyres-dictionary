@@ -842,7 +842,7 @@
         "key": "snēr",
         "form-raw": "snēr",
         "type": "noun",
-        "gloss": "[string] of a musical instrument",
+        "gloss": "[string] (of a musical instrument)",
         "gloss-tool": "[pluck] (of stringed instruments)",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english"
@@ -1253,7 +1253,7 @@
         "form-raw": "ċeole",
         "type": "noun",
         "gloss": ["throat", "jaw"],
-        "tags": ["count", "concrete", "living", "bodypart"],
+        "tags": ["count", "concrete", "living", "bodypart", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ċeorl",
@@ -1265,6 +1265,25 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "ċīd",
+        "form-raw": "ċīd",
+        "type": "noun",
+        "gloss": "strife",
+        "tags": ["mass", "abstract", "speculative", "homophonic"],
+        "origin": "old-english",
+        "notes": "Is related to MnE 'chide', but sense is different enough I'll leave it speculative"
+    }, {
+        "key": "ċīdan",
+        "form-raw": "ċīd|an",
+        "form-canon": "chide",
+        "form-participle-canon": ["chided"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[scold], [find] fault",
+        "gloss-alt": ["rebuke", "complain", "quarrel"],
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "ċild",
         "form-raw": "ċild",
         "form-canon": "child",
@@ -1272,6 +1291,45 @@
         "gloss": "child",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
+    }, {
+        "key": "ċele",
+        "form-raw": "ċele",
+        "form-raw-alt": ["ċiele", "ċīl"],
+        "type": "noun",
+        "gloss": "[cold], [chill]",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian, alt West Saxon. Bosworth has the vowel long, Wiktionary (and I think OED) have it short. None of these produce the modern form 'chill', but OED suggests the modern form may derive from a backformation from the verb (if I understand correctly). TODO: Add mass form 'coldness'"
+    }, {
+        "key": "ċim",
+        "form-raw": "ċim",
+        "type": "adj",
+        "gloss": "[base] or [foundation]",
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ċin",
+        "form-raw": "ċin",
+        "form-canon": "chin",
+        "type": "adj",
+        "gloss": "chin",
+        "tags": ["count", "concrete", "living", "bodypart"],
+        "origin": "old-english"
+    }, {
+        "key": "ċir",
+        "form-raw": "ċir",
+        "type": "adj",
+        "gloss": "[turn] or [time]",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ċīse",
+        "form-raw": "ċīse",
+        "type": "adj",
+        "gloss": ["[fastidious] in eating", "selective"],
+        "tags": ["speculative"],
+        "origin": "old-english",
+        "notes": "Sense a bit unclear"
     }, {
         "key": "clǣġ",
         "form-raw": "clǣġ",
@@ -1321,6 +1379,13 @@
         "type": "noun",
         "gloss": "knot",
         "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "cōl",
+        "form-raw": "cōl",
+        "form-canon": "cool",
+        "type": "adj",
+        "gloss": "cool",
         "origin": "old-english"
     }, {
         "key": "cræfte",
@@ -1879,9 +1944,9 @@
         "form-raw-alt": ["ælf+en", "ylf+en"],
         "type": "noun",
         "gloss": "female [elf]",
-        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "tags": ["count", "concrete", "living", "person", "speculative", "rare"],
         "origin": "old-english",
-        "notes": "Chosen form is Mercian/Kentish, alt. is WS"
+        "notes": "Chosen form is Mercian/Kentish, alt. is WS. Rare for balance with 'elf'"
     }, {
         "key": "eln-arm",
         "form-raw": "eln",
@@ -2558,6 +2623,14 @@
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "ġe-rōtsian",
+        "form-raw": "ġe-rōtsi|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[make] sad",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "ġelp",
         "form-raw": "ġelp",
         "form-raw-alt": ["ġelp", "ġilp", "ġielp", "ġylp"],
@@ -2636,6 +2709,14 @@
         "type": "noun",
         "gloss": "young [sow]",
         "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġītsian",
+        "form-raw": "ġītsi|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "covet",
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ġiw",
@@ -2731,8 +2812,8 @@
         "form-raw": "grīma",
         "form-canon": "grime",
         "type": "noun",
-        "gloss": ["mask", "visor"],
-        "gloss-tool": "[conceal] or [disguise]",
+        "gloss": "[mask] or [visor]",
+        "gloss-tool": ["[conceal] or [disguise]", "[cover], [protect]"],
         "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
@@ -2873,6 +2954,21 @@
         "tags": ["transitive"],
         "origin": "old-english",
         "notes": "Form 'haldan' is Anglian. WS had 'healdan'"
+    }, {
+        "key": "hals-OE",
+        "form-raw": ["hals", "heals"],
+        "type": "noun",
+        "gloss": "neck",
+        "tags": ["count", "concrete", "living", "bodypart", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "halsian",
+        "form-raw": "hals|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[augur], [divine]", "invoke", "exorcise", "conjure", "greet"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "hātan-intransitive",
         "form-raw": "hāt|an",
@@ -3806,6 +3902,15 @@
         "tags": ["count", "concrete", "living", "animal", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "mos",
+        "form-raw": "mos",
+        "form-raw-alt": ["mēos", "mose", "mēos"],
+        "form-canon": "moss",
+        "type": "noun",
+        "gloss": "moss",
+        "tags": ["mass", "concrete", "living", "plant"],
+        "origin": "old-english"
+    }, {
         "key": "merran",
         "form-raw": "merr|an",
         "form-raw-alt": ["mierr|an"],
@@ -3818,12 +3923,29 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "mēse",
+        "form-raw": ["mēse", "mēose", "mīse", "mȳse"],
+        "type": "noun",
+        "gloss": "table",
+        "tags": ["count", "concrete", "man-made", "speculative"],
+        "origin": "old-english",
+        "notes": "From Latin 'mensa'. Along with French 'mes' influenced MnE 'mess'. TODO: Bring in additional senses from 'mess'. Wiktionar"
+    }, {
         "key": "mētan",
         "form-raw": "mēt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[draw] or [paint]",
         "tags": ["intransitive", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "metsian",
+        "form-raw": "metsi|an",
+        "form-canon": "mess",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[provide] with food",
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "midl",
@@ -4327,6 +4449,20 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
+        "key": "searu-count",
+        "form-raw": "searu",
+        "type": "noun",
+        "gloss": ["contrivance", "device", "deceit", "stratagem"],
+        "tags": ["count", "abstract", "man-made", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "searu-mass",
+        "form-raw": "searu",
+        "type": "noun",
+        "gloss": ["[art] or [skill]", "contrivance", "artifice"],
+        "tags": ["mass", "abstract", "man-made", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "seax",
         "form-raw": "seax",
         "form-raw-alt": ["sex", "syx"],
@@ -4416,7 +4552,8 @@
     }, {
         "key": "sīcan",
         "form-raw": "sīc|an",
-        "type": "adj",
+        "type": "verb",
+        "verb-class": 1,
         "gloss": ["[sigh] or [groan]", "[long] for"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
@@ -4785,6 +4922,23 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "swan",
+        "form-raw": "swan",
+        "form-canon": "swan",
+        "type": "noun",
+        "gloss": "swan",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english"
+    }, {
+        "key": "swān",
+        "form-raw": "swān",
+        "type": "noun",
+        "gloss": ["swineherd", "herder", "peasant", "boy", "youth"],
+        "gloss-alt": ["man", "warrior"],
+        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "origin": "old-english",
+        "notes": "Apparently related to MnE 'swain', OE 'sweġen', but as that apparently shows Norse influence (says OED), I'll consider this separate."
+    }, {
         "key": "swarian",
         "form-raw": "swari|an",
         "type": "verb",
@@ -4813,6 +4967,15 @@
         "gloss": ["[put] or [lull] to sleep", "kill"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
+    }, {
+        "key": "sweġen",
+        "form-raw": "sweġen",
+        "form-canon": "swain",
+        "type": "noun",
+        "gloss": ["young [man]", "squire", "servant [boy]", "rural [laborer]", "lover"],
+        "tags": ["count", "concrete", "living", "person", "obscure"],
+        "origin": "old-english",
+        "notes": "May have Norse influence, but appears in OE, at least in compounds like 'bāt-sweġen' -> MnE 'bosun'."
     }, {
         "key": "swerian",
         "form-raw": "sweri|an",
@@ -5606,6 +5769,14 @@
         "gloss": "wise",
         "origin": "old-english",
         "notes": "Bright cites this as 'wīse', so I'd guess this is based on an inflected form, but I kind of want to leave it for the goofy alternate form 'wice'"
+    }, {
+        "key": "wīte",
+        "form-raw": "wīte",
+        "type": "noun",
+        "gloss": "[torment] or [punishment]",
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "TODO: Add count sense 'penalty, fine'"
     }, {
         "key": "witt",
         "form-raw": "witt",
