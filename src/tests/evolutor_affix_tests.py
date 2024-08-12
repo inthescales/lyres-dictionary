@@ -127,9 +127,12 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["drȳġe", "-nes"], "dryness")
 
     def test_misc_spelling_changes(self):
-        # Drop silent e in favor of vowel
+        # Drop silent 'e' in favor of vowel
         self.assertForm(["hors", "-isċ"], "horsish")
         self.assertForm(["rose", "-iġ"], "rosy")
+
+        # ...but don't drop non-silent final 'e'
+        self.assertForm(["trēo", "-isċ"], "treeish")
         
         # Eliminate triple consonants
         self.assertForm(["full", "-liċ"], "fully")

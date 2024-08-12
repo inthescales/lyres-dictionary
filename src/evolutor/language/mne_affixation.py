@@ -12,11 +12,7 @@ def get_joined_form(form, addition, y_to_i=False):
             # If word ends in a consonant following a short vowel, and suffix begins with vowel, double the final consonant
             # Ex. 'cat' + 'y' -> 'catty'
             form = form + form[-1]
-        elif form[-1] == "e" \
-            and (
-                (helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3])) \
-                or form[-2] == "l"
-            ):
+        elif form[-1] == "e" and helpers.is_consonant(form[-2]) and helpers.syllable_count(form, True) > 1:
             # TODO: Use syllable count — any word ending in '-Ce' with one syllable has a silent e
             # If word ends in a silent e, and suffix begins with a vowel, drop the e
             # Ex. 'rose' + 'y' -> 'rosy'
@@ -37,8 +33,7 @@ def get_joined_form(form, addition, y_to_i=False):
     	and helpers.is_consonant(addition[0]) \
     	and not (helpers.syllable_count(form, True) == 1 and helpers.is_consonant(form[-2])):
         # If word ends in 'y',is being suffixed with a consonant, and the y-to-i flag is on,
-        # change the 'y' to 'i'. The flag generally corresponds with involving the '-y' or '-ly'
-        # suffixes.
+        # change the 'y' to 'i'. The flag generally corresponds with the '-y' and '-ly' suffixes.
 
         # Only do this if the word is *not* a one-syllable word ending in '-Cy'.
         # Ex. 'day' + 'ly' -> 'daily', 'doughty' + 'ness' -> 'doughtiness'

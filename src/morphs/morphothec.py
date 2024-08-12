@@ -125,7 +125,6 @@ class Morphothec:
 
     # TODO: Store morphs by frequency if this turns out to be useful
     def filter_freq(self, morph_freq, language, morph_filter=None):
-
         selected = []
         for morph in self.languages[language].roots:
             if morph_freq == "speculative":
