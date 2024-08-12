@@ -442,12 +442,11 @@
         "origin": "old-english"
     }, {
         "key": "bǣtan",
-        "form-raw": "bǣtan",
-        "form-canon": "bridle",
-        "type": "noun",
-        "gloss": "bridle",
-        "gloss-tool": ["[fit] with a bridle", "restrain"],
-        "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative"],
+        "form-raw": "bǣt|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["bridle", "[rein] in, [restrain]"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "bæþ",
@@ -975,7 +974,7 @@
         "origin": "old-english"
     }, {
         "key": "blenċan",
-        "form-raw": "bleċ|an",
+        "form-raw": "blenċ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[deceive] or [cheat]",
@@ -1878,7 +1877,6 @@
         "key": "elfen",
         "form-raw": "elf+en",
         "form-raw-alt": ["ælf+en", "ylf+en"],
-        "form-canon": "elf",
         "type": "noun",
         "gloss": "female [elf]",
         "tags": ["count", "concrete", "living", "person", "speculative"],
@@ -2565,7 +2563,7 @@
         "form-raw-alt": ["ġelp", "ġilp", "ġielp", "ġylp"],
         "type": "noun",
         "gloss": ["pride", "boastfulness", "vanity"],
-        "tags": ["mass", "abstract", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
         "origin": "old-english",
         "notes": "Chosen form is Anglian. Root is ancestor of modern 'yelp', but labeling speculative due to different meaning. Additional sense of 'a boast'."
     }, {

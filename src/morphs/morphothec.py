@@ -123,6 +123,23 @@ class Morphothec:
         
         return selected
 
+    # TODO: Store morphs by frequency if this turns out to be useful
+    def filter_freq(self, morph_freq, language, morph_filter=None):
+
+        selected = []
+        for morph in self.languages[language].roots:
+            if morph_freq == "speculative":
+                if "tags" in morph and "speculative" in morph["tags"]:
+                    selected.append(morph["key"])
+            elif morph_freq == "obscure":
+                if "tags" in morph and "obscure" in morph["tags"]:
+                    selected.append(morph["key"])
+            elif morph_freq == "common":
+                if "tags" not in morph or ("speculative" not in morph["tags"] and "obscure" not in morph["tags"]):
+                    selected.append(morph["key"])
+        
+        return selected
+
     def filter_prepends_to(self, base_type, language, morph_filter=None):
         if not base_type in self.languages[language].morphs_before:
             return []

@@ -59,13 +59,13 @@ def get_greek_root(morphothec):
 def get_old_english_root(morphothec):
 
     bag = [
-        ("noun", 3),
-        ("adj", 3),
-        ("verb", 3)
+        ("speculative", 2),
+        ("obscure", 2),
+        ("common", 1)
     ]
 
-    type_ = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type_, "old-english"))
+    freq = helpers.choose_bag(bag)
+    key = random.choice(morphothec.filter_freq(freq, "old-english"))
     morph = Morph(key, morphothec)
     return morph
  
