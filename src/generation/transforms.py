@@ -2,6 +2,7 @@ import random
 
 import src.models
 
+import src.generation.derivative_morphs as derivative_morph
 import src.generation.former as former
 import src.utils.helpers as helpers
 
@@ -13,7 +14,6 @@ from src.utils.logging import Logger
 # For ad-hoc morphs
 # TODO: Move these
 import src.evolutor.evolutor as evolutor
-import src.utils.inflection as inflection
 from src.evolutor.engine.config import Config
 
 def seed_word(word, morphothec):
@@ -137,8 +137,7 @@ def transform_word(word, morphothec, is_single):
             env = word.environment_for_index(0)
             config = former.Former_Config(True, False)
             form = former.form(root_morph, env, config)
-            form_canon = root_morph.morph["form-canon"]
-            if form != form_canon:
+            if form != root_morph.morph["form-canon"]:
                 alternate_form = form
 
     # Show an alternate form for common words
@@ -270,57 +269,21 @@ def transform_word(word, morphothec, is_single):
 
     # Alternate form
     elif choice == "alternate_form" and alternate_form != None:
-        root_morph.morph["key"] += "-adhoc:alt"
-        root_morph.morph["gloss"] = "alternate form of '" + form_canon + "'"
-        del root_morph.morph["form-raw"]
-        del root_morph.morph["form-canon"]
-        root_morph.morph["form-final"] = alternate_form
-        if "tags" in root_morph.morph:
-            root_morph.morph["tags"] += ["fixed-gloss"]
-        else:
-            root_morph.morph["tags"] = ["fixed-gloss"]
+        new_morph = derivative_morph.with_alternate_form(root_morph, alternate_form)
+        word.morphs = [new_morph]
 
     # Alternate gloss
     elif choice == "alternate_gloss":
-        root_morph.morph["key"] += "-adhoc:alt"
-        if isinstance(root_morph.morph["gloss-alt"], list):
-            root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss-alt"])
-        elif isinstance(root_morph.morph["gloss-alt"], str):
-            root_morph.morph["gloss"] = root_morph.morph["gloss-alt"]
+        new_morph = derivative_morph.with_alternate_gloss(root_morph)
+        word.morphs = [new_morph]
 
     # Alternate form and gloss
     elif choice == "alternate_form_and_gloss" and alternate_form != None:
-        root_morph.morph["key"] += "-adhoc:alt"
-        if isinstance(root_morph.morph["gloss-alt"], list):
-            root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss-alt"])
-        elif isinstance(root_morph.morph["gloss-alt"], str):
-            root_morph.morph["gloss"] = root_morph.morph["gloss-alt"]
-        del root_morph.morph["form-raw"]
-        del root_morph.morph["form-canon"]
-        root_morph.morph["form-final"] = alternate_form
+        new_morph = derivative_morph.with_alternate_form_and_gloss(root_morph, alternate_form)
+        word.morphs = [new_morph]
 
     elif choice == "past-participle":
-        root_morph.morph["key"] += "-adhoc:ppart"
-        root_morph.morph["type"] = "adj"
-
-        original_gloss = root_morph.morph["gloss"]
-        if isinstance(root_morph.morph["gloss"], list):
-            root_morph.morph["gloss"] = random.choice(root_morph.morph["gloss"])
-        root_morph.morph["gloss"] = inflection.inflect(root_morph.morph["gloss"], "ppart")
-        if not root_morph.has_tag("obscure") and not root_morph.has_tag("speculative") \
-            and root_morph.morph["form-canon"] == original_gloss:
-            # NOTE: My other idea for the last condition above was:
-            #   "form-participle-canon" in root_morph.morph:
-            # They both produce some weird output.
-            root_morph.morph["gloss"] = "alternate form of '" + root_morph.morph["form-participle-canon"][0] + "'"
-
-        del root_morph.morph["form-raw"]
-        if "form-canon" in root_morph.morph:
-            del root_morph.morph["form-canon"]
-        root_morph.morph["form-final"] = past_participle_form
-        if "tags" in root_morph.morph:
-            root_morph.morph["tags"] += ["fixed-gloss"]
-        else:
-            root_morph.morph["tags"] = ["fixed-gloss"]
+        new_morph = derivative_morph.from_past_participle(root_morph, past_participle_form)
+        word.morphs = [new_morph]
 
     return True

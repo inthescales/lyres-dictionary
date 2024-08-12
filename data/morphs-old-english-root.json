@@ -5130,7 +5130,7 @@
         "form-canon": "thew",
         "type": "noun",
         "gloss": "bodily [force]",
-        "tags": ["mass", "abstract", "quality"],
+        "tags": ["mass", "abstract", "quality", "obscure"],
         "origin": "old-english",
         "notes": "Original meaning 'customs' or 'good qualities'"
     }, {
@@ -5581,7 +5581,7 @@
         "form-canon": "wight",
         "type": "noun",
         "gloss": "living [being]",
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wilde",
