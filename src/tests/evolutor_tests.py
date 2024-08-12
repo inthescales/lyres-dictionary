@@ -874,10 +874,10 @@ class EvolutorTests(unittest.TestCase):
     def _test_misc(self):
         total = 0
         failures = []
-        def check(raw, target, overrides=[]):
+        def check(raw, target, overrides=[], verbose=False):
             nonlocal total, failures
 
-            config = Config(verbose=False, locked=True, overrides=overrides)
+            config = Config(locked=True, overrides=overrides, verbose=verbose)
             form = evolutor.oe_form_to_ne_form(raw, config)
             total += 1
             if not form == target:
@@ -915,6 +915,12 @@ class EvolutorTests(unittest.TestCase):
         check("rose", "rose")
         check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
 
+        # Final /ls/ is spelled 'lce'
+        check("ġe-miltsi|an", "milce")
+
+        # ...while final /lz/ is spelled 'lse'
+        check("halsi|an", "halse")
+
         # Incorporated suffixes --------------------------
 
         # '-iġ'
@@ -950,6 +956,11 @@ class EvolutorTests(unittest.TestCase):
         # ds -> s
         check("godsib", "gosseb") # Artificial form for testing 'ds' -> 'ss' assimilation
         check("gōdspel", "gosple") # Artificial form for testing 'dsC' -> 's' assimilation
+
+        # ts -> s
+        check("blets|ian", "bless")
+        check("betst", "best")
+        check("ġe-miltsi|an", "milce")
 
         # hþ -> þ
         check("fyrhþ", "frith")

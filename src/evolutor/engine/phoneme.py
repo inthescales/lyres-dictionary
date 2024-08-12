@@ -55,14 +55,16 @@ class Phoneme:
         return False
 
     def is_voiced(self):
-        return self.value in ["b", "d", "g", "ɣ", "m", "n", "l", "r", "w", "dʒ", "v", "z", "ð"]
+        voiced = ["b", "d", "g", "ɣ", "m", "n", "l", "r", "w", "dʒ", "v", "z", "ð"]
+        return self.value in voiced or (self.is_geminate() and self.get_geminate_reduced().is_voiced())
 
     def is_plosive(self):
         plosives = ["b", "c", "ċ", "dʒ", "d", "g", "k", "p", "t", "tʃ"]
-        return self.value in plosives
+        return self.value in plosives or (self.is_geminate() and self.get_geminate_reduced().is_plosive())
 
     def is_fricative(self):
-        return self.value in ["x", "f", "s", "ʃ", "θ", "ɣ", "v", "z", "ð"]
+        fricatives = ["x", "f", "s", "ʃ", "θ", "ɣ", "v", "z", "ð"]
+        return self.value in fricatives or (self.is_geminate() and self.get_geminate_reduced().is_fricative())
 
     def is_nasal(self):
         plosives = ["n", "m"]

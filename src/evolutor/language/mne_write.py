@@ -291,12 +291,17 @@ def from_me_phonemes(phonemes, config):
             else:
                 if prev and prev.is_vowel() and prev.is_short():
                     result += "ss"
+                elif prev and prev.value == "l":
+                    result += "ce"
                 elif prev and prev.value == "r":
                     result += "se"
                 elif prev and prev.value == "iː":
                     result += "c"
                 elif prev and prev.is_vowel() and prev.is_long() and not insert_lengthening_e:
-                    result += "se"
+                    if prev.value in ["l", "r"]:
+                        result += "ce"
+                    else:
+                        result += "se"
                 else:
                     result += "s"
         elif phone.value == "z":

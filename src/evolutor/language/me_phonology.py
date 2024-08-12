@@ -412,6 +412,9 @@ def from_oe_phonemes(oe_phonemes, config):
                 return [Phoneme("s", template=state.capture[0])]
             else:
                 return [Phoneme("ss", template=state.capture[0])]
+        # Cases like 'bletsian' -> 'bless', 'betst' -> 'best'
+        elif state.joined == "ts":
+            return [Phoneme("ss", template=state.capture[0])]
         elif state.joined in ["xθ", "xð"]:
             # Only known case is 'fyrhþ' -> 'fryhþ' -> 'frith''
             # Must occur before 'breaking'
