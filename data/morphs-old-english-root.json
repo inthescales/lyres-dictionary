@@ -2468,6 +2468,15 @@
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
         "origin": "old-english"
     }, {
+        "key": "gāst",
+        "form-raw": "gāst",
+        "form-canon": "ghost",
+        "type": "noun",
+        "gloss": "ghost",
+        "gloss-alt": ["spirit"],
+        "tags": ["count", "concrete", "magical"],
+        "origin": "old-english"
+    }, {
         "key": "ġearu",
         "form-raw": "ġearu",
         "form-canon": "yare",
@@ -2551,6 +2560,22 @@
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "ġelp",
+        "form-raw": "ġelp",
+        "form-raw-alt": ["ġelp", "ġilp", "ġielp", "ġylp"],
+        "type": "noun",
+        "gloss": ["pride", "boastfulness", "vanity"],
+        "tags": ["mass", "abstract", "quality", "speculative"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian. Root is ancestor of modern 'yelp', but labeling speculative due to different meaning. Additional sense of 'a boast'."
+    }, {
+        "key": "ġiċel",
+        "form-raw": "ġiċel",
+        "type": "noun",
+        "gloss": "icicle",
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "ġiefan",
         "form-raw": "ġief|an",
         "form-raw-alt": ["ġif|an", "ġeof|an"],
@@ -2591,6 +2616,42 @@
         "verb-class": 3,
         "gloss": "yell",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ġifl",
+        "form-raw": "ġifl",
+        "type": "noun",
+        "gloss": ["food", "meat"],
+        "tags": ["mass", "concrete", "speculative"],
+        "origin": "old-english",
+        "notes": "Only listed on Bosworth, so not 100% sure of 'g' palatalization. Needs bitransitivity for 'piece of food' gloss"
+    }, {
+        "key": "ġifol",
+        "form-raw": "ġifol",
+        "type": "adj",
+        "gloss": ["generous", "gracious"],
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "gilte",
+        "form-raw": "gilte",
+        "type": "noun",
+        "gloss": "young [sow]",
+        "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġiw",
+        "form-raw": ["ġiw", "ġiow", "ġeow", "eow"],
+        "type": "noun",
+        "gloss": "griffin",
+        "tags": ["count", "concrete", "living", "animal", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġīsl",
+        "form-raw": ["ġīsl", "ġīsel"],
+        "type": "noun",
+        "gloss": "hostage",
+        "tags": ["count", "concrete", "living", "person", "speculative"],
         "origin": "old-english"
     }, {
         "key": "glæd",
@@ -2663,7 +2724,7 @@
         "form-raw": "grim",
         "form-canon": "grim",
         "type": "adj",
-        "gloss": "grim",
+        "gloss": ["[gloomy] or [forbidding]"],
         "gloss-alt": ["fierce", "cruel", "terrible"],
         "tags": ["count", "abstract"],
         "origin": "old-english"
@@ -4277,8 +4338,8 @@
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "seċan",
-        "form-raw": "seċ|an",
+        "key": "sēċan",
+        "form-raw": "sēċ|an",
         "form-participle-raw": ["sōht"],
         "type": "verb",
         "verb-class": "weak",
@@ -5602,6 +5663,26 @@
         "tags": ["mass", "abstract", "speculative", "homophonic"],
         "origin": "old-english",
         "notes": "TODO: Break apart senses so I can give 'good looks' the quality tag"
+    }, {
+        "key": "wōd-adj",
+        "form-raw": "wōd",
+        "form-raw-alt": ["wēde"],
+        "form-canon": "wode",
+        "type": "adj",
+        "gloss": ["[mad], [insane]", "furious", "rabid"],
+        "gloss-alt": ["frantic", "possessed"],
+        "tags": ["obscure"],
+        "origin": "old-english",
+        "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
+    }, {
+        "key": "wōd-noun",
+        "form-raw": "wōd",
+        "form-canon": "wode",
+        "type": "noun",
+        "gloss": "madness",
+        "tags": ["count", "abstract", "state", "obscure"],
+        "origin": "old-english",
+        "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
     }, {
         "key": "wolcen-count",
         "form-raw": "wolcen",

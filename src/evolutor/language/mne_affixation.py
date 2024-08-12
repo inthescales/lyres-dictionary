@@ -17,6 +17,7 @@ def get_joined_form(form, addition, y_to_i=False):
                 (helpers.is_consonant(form[-2]) and helpers.is_vowel(form[-3])) \
                 or form[-2] == "l"
             ):
+            # TODO: Use syllable count — any word ending in '-Ce' with one syllable has a silent e
             # If word ends in a silent e, and suffix begins with a vowel, drop the e
             # Ex. 'rose' + 'y' -> 'rosy'
             form = form[:-1]
