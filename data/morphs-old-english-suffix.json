@@ -433,6 +433,26 @@
         "origin": "old-english",
         "notes": "TODO: Allow -ikin form in some cases. TODO: Allow as affectionate for family, or positive adjectives. TODO: Allow color compounds on pattern of 'greenkin'. TODO: Properly ME"
     }, {
+        "key": "-el",
+        "form-stem": "le",
+        "form-final": "le",
+        "form-raw": "el",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "pertaining to %pl",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "living"
+                }
+            },
+            "gloss": "pertaining or suitable to %pl"
+        }],
+        "tags": ["y-to-i"],
+        "origin": "old-english"
+    }, {
         "key": "-liċ",
         "form-stem": "li",
         "form-final": "ly",

@@ -371,6 +371,7 @@ def from_oe_phonemes(oe_phonemes, config):
             and not (state.next and state.next.is_consonant()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_fricative()) \
+            and not (state.capture[0].is_nasal() and state.capture[1].is_liquid()) \
             and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
@@ -419,6 +420,13 @@ def from_oe_phonemes(oe_phonemes, config):
             # Only known case is 'fyrhþ' -> 'fryhþ' -> 'frith''
             # Must occur before 'breaking'
             return [state.capture[1]]
+
+    # Break up two heterorganic consonants by inserting another consonant
+    def dissimilating_insertion(state):
+        if state.joined in ["ml", "mr"]:
+            return [state.capture[0], Phoneme("b", template=state.capture[0]), state.capture[1]]
+        elif state.joined in ["nl", "nr"]:
+            return [state.capture[0], Phoneme("d", template=state.capture[0]), state.capture[1]]
 
     # Cases of reanalysis
     # TODO: Consider plural reanalysis dropping other final 's's
@@ -484,5 +492,6 @@ def from_oe_phonemes(oe_phonemes, config):
 
     # Later sound changes
     rig.run_capture(reanalysis, 1, "Reanalysis", config)
+    rig.run_capture(dissimilating_insertion, 2, "Dissimilation insertions", config)
 
     return rig.phonemes
