@@ -1,5 +1,23 @@
 [
     {
+        "key": "-aster",
+        "form-final": "aster",
+        "form-stem": "astr",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "declension": 2,
+        "suffixes": [],
+        "gloss": "inadequate %!sg",
+        "requires": {
+            "follows": {
+                "has-tag": "person"
+            }
+        },
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin",
+        "notes": "Consider narrowing to just jobs, or adding a gloss exception in that case, like 'mediocre or incompetent', while for others it could be 'contemptible'"
+    }, {
         "key": "-culture",
         "form-final": "culture",
         "form-stem": "cultur",

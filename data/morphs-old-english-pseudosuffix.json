@@ -92,6 +92,22 @@
         "gloss": "without %pl",
         "origin": "old-english"
     }, {
+        "key": "-maker",
+        "form-stem": "maker",
+        "form-final": "maker",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "someone who makes %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "man-made"
+            }
+        },
+        "tags": ["uncountable", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "This presumably emerged in ME, but the root is OE. "
+    }, {
         "key": "-man",
         "form-stem": "man",
         "form-raw": "man",

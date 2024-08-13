@@ -327,6 +327,22 @@
         "origin": "old-english",
         "notes": "ME variation of -hād. TODO: change origin when ME is added"
     }, {
+        "key": "-ie-animal",
+        "form-stem": "i",
+        "form-final": "ie",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "%!sg (affectionate)",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "tags": ["count", "concrete", "living", "animal", "rare"],
+        "origin": "old-english",
+        "notes": "Not properly OE, but throwing it in here for now."
+    }, {
         "key": "-iġ",
         "form-stem": "i",
         "form-final": "y",
@@ -650,7 +666,7 @@
                         "has-type": "verb"
                     }
                 },
-                "gloss": "%part frequently"
+                "gloss": "tending %inf"
             }, {
                 "case": {
                     "follows": {
@@ -691,7 +707,7 @@
                         ]
                     }
                 },
-                "gloss": ["%part frequently", "easy %inf"]
+                "gloss": ["tending %inf", "easy %inf"]
             }, {
                 "case": {
                     "follows": {

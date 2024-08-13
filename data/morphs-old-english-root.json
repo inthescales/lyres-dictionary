@@ -1303,7 +1303,7 @@
     }, {
         "key": "ċim",
         "form-raw": "ċim",
-        "type": "adj",
+        "type": "noun",
         "gloss": "[base] or [foundation]",
         "tags": ["count", "concrete", "speculative"],
         "origin": "old-english"
@@ -1311,14 +1311,14 @@
         "key": "ċin",
         "form-raw": "ċin",
         "form-canon": "chin",
-        "type": "adj",
+        "type": "noun",
         "gloss": "chin",
         "tags": ["count", "concrete", "living", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "ċir",
         "form-raw": "ċir",
-        "type": "adj",
+        "type": "noun",
         "gloss": "[turn] or [time]",
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
@@ -1837,11 +1837,12 @@
         "origin": "old-english"
     }, {
         "key": "ēad",
-        "form-raw": "ead",
+        "form-raw": "ēad",
         "type": "noun",
         "gloss": ["happiness", "prosperity"],
         "tags": ["mass", "abstract", "quality", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Bosworth has this as an adjective also"
     }, {
         "key": "eald",
         "form-raw": "ald",
@@ -3649,6 +3650,14 @@
         "origin": "old-english",
         "notes": "'lēfan' Anglian, 'līefan' is EWS, 'līfan' and 'lȳfan' LWS."
     }, {
+        "key": "lybb",
+        "form-raw": "lybb",
+        "form-raw-alt": ["lyb"],
+        "type": "noun",
+        "gloss": ["[potion] or [concoction]", "[medicine], [drug]", "poison", "magic [charm]"],
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
         "key": "lind",
         "form-raw": "lind",
         "form-canon": "lind",
@@ -4557,7 +4566,7 @@
         "gloss": ["[sigh] or [groan]", "[long] for"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
-        "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving without canon form."
+        "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving without canon form. Needs bitransitivity"
     }, {
         "key": "sīon-intransitive",
         "form-raw": "sī|on",
@@ -5119,6 +5128,15 @@
         "gloss": "[build] (from wood)",
         "tags": ["transitive"],
         "origin": "old-english"
+    }, {
+        "key": "timpana",
+        "form-raw": "timpana",
+        "form-raw-alt": ["tympana"],
+        "type": "noun",
+        "gloss": ["drum", "small [drum]", "drumskin"],
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english",
+        "notes": "Historically referred to earlier instruments (timbrel, tabret). Extending sense for effect here."
     }, {
         "key": "tin",
         "form-raw": "tin",
