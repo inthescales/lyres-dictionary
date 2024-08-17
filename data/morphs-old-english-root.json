@@ -617,6 +617,14 @@
         "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "ġe-bland",
+        "form-raw": "ġe-bland",
+        "type": "noun",
+        "gloss": "mixture",
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english",
+        "notes": "Other sense, but having fun with man-made for now"
+    }, {
         "key": "bēdan",
         "form-raw": "bēd|an",
         "type": "verb",
@@ -807,9 +815,18 @@
     }, {
         "key": "smoca",
         "form-raw": "smoca",
+        "form-canon": "smoke",
         "type": "noun",
         "gloss": "smoke",
         "tags": ["mass", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "snaw",
+        "form-raw": "snāw",
+        "form-canon": "snow",
+        "type": "noun",
+        "gloss": "snow",
+        "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
         "key": "snearu",
@@ -3091,6 +3108,14 @@
         "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "hlīsa",
+        "form-raw": "hlīsa",
+        "type": "noun",
+        "gloss": ["fame", "glory"],
+        "tags": ["mass", "concrete", "speculative"],
+        "origin": "old-english",
+        "notes": "A few similar sense I'm leaving out"
+    }, {
         "key": "hlūd",
         "form-raw": "hlūd",
         "form-canon": "loud",
@@ -3223,6 +3248,24 @@
         "verb-class": 2,
         "gloss": "[fall] down, [collapse]",
         "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hrēow",
+        "form-raw": "hrēow",
+        "form-canon": "rue",
+        "type": "noun",
+        "gloss": "regret",
+        "gloss-alt": ["sorrow", "pity"],
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "hrēowan",
+        "form-raw": "hrēow|an",
+        "form-canon": "rue",
+        "type": "verb",
+        "verb-class": 2,
+        "gloss": "regret",
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "hrīm",
@@ -3911,6 +3954,24 @@
         "tags": ["count", "concrete", "living", "animal", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "mearu",
+        "form-raw": "mearu",
+        "type": "adj",
+        "gloss": "[tender], [delicate]",
+        "tags": ["speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "meltan",
+        "form-raw": "melt|an",
+        "form-participle-canon": ["melted", "molten"],
+        "form-canon": "melt",
+        "type": "verb",
+        "verb-class": 3,
+        "gloss": "melt",
+        "gloss-alt": ["digest"],
+        "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
         "key": "mos",
         "form-raw": "mos",
         "form-raw-alt": ["mēos", "mose", "mēos"],
@@ -4211,6 +4272,15 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
         "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
+    }, {
+        "key": "recenian",
+        "form-raw": "receni|an",
+        "form-canon": "reckon",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[count], [calculate]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "regel",
         "form-raw": ["regel", "reogol", "regl"],
@@ -5078,6 +5148,15 @@
         "tags": ["count", "concrete", "man-made", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "talu",
+        "form-raw": "talu",
+        "form-canon": "tale",
+        "type": "noun",
+        "gloss": "story",
+        "gloss-alt": ["calculation", "reckoning"],
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english"
+    }, {
         "key": "telg",
         "form-raw": "telg",
         "form-raw-alt": ["tælg"],
@@ -5085,6 +5164,17 @@
         "gloss": ["dye", "ink"],
         "gloss-tool": ["[color] with dye", "[color] with ink"],
         "tags": ["mass", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
+        "key": "tellan",
+        "form-raw": "tell|an",
+        "form-participle-canon": ["told"],
+        "form-canon": "tell",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "tell",
+        "gloss-alt": ["count", "calculate"],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "tēon",
@@ -5556,6 +5646,14 @@
         "tags": ["intransitive"],
         "origin": "old-english",
         "notes": "OE had transitive meanings 'impair', 'infringe', 'annul'"
+    }, {
+        "key": "wase",
+        "form-raw": "wase",
+        "type": "noun",
+        "gloss": "mud",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english",
+        "notes": "Origin of 'ooze', but feels different enough to leave without canon. TODO: Add sense 'marsh'."
     }, {
         "key": "weald-woodland",
         "form-raw": "weald",

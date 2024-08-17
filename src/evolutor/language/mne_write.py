@@ -284,7 +284,6 @@ def from_me_phonemes(phonemes, config):
                 and not (len(result) >= 3 and "".join(result[-3:-1]) in ["ll", "rr"]):
                 # Swap 'e' from /ə/ and 'l' at the end of a word
                 # Certain consonants before the 'e' can prevent this
-                print(result[:-1])
                 result = result[:-1] + "le"
             elif is_final \
                 and prev and prev.is_consonant() \
