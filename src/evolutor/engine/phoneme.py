@@ -67,16 +67,16 @@ class Phoneme:
         return self.value in fricatives or (self.is_geminate() and self.get_geminate_reduced().is_fricative())
 
     def is_nasal(self):
-        plosives = ["n", "m"]
-        return self.value in plosives
+        nasals = ["n", "m"]
+        return self.value in nasals or (self.is_geminate() and self.get_geminate_reduced().is_nasal())
 
     def is_liquid(self):
-        plosives = ["l", "r"]
-        return self.value in plosives
+        liquids = ["l", "r"]
+        return self.value in liquids or (self.is_geminate() and self.get_geminate_reduced().is_liquid())
         
     def is_semivowel(self):
-        plosives = ["l", "r", "w", "j"]
-        return self.value in plosives
+        semivowels = ["l", "r", "w", "j"]
+        return self.value in semivowels or (self.is_geminate() and self.get_geminate_reduced().is_semivowel())
     
     def is_short(self):
         return not "ː" in self.value and not self.is_diphthong()

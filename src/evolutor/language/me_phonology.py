@@ -218,7 +218,11 @@ def from_oe_phonemes(oe_phonemes, config):
                     # If we earlier resolved 'ēo' into 'iː', the 'ɣ' melds into that
                     return []
                 if state.next:
-                    return [Phoneme("u", template=state.current, history=["vocalized-g"])]
+                    if state.prev and state.prev.value == "u":
+                        # Need to find cases of this, but it prevents some invalid vowel combinations
+                        return []
+                    else:
+                        return [Phoneme("u", template=state.current, history=["vocalized-g"])]
                 else:
                     return [Phoneme("x", template=state.current)]
             elif state.current.value == "w":
@@ -368,11 +372,13 @@ def from_oe_phonemes(oe_phonemes, config):
     def consonant_cluster_breaking(state):
         if all(phone.is_consonant() for phone in state.capture) \
             and state.syllable_data.prev_vowel != None \
-            and not (state.next and state.next.is_consonant()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_plosive()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_fricative()) \
             and not (state.capture[0].is_nasal() and state.capture[1].is_liquid()) \
             and not (state.capture[0].is_fricative() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_liquid() and state.capture[1].is_fricative()) \
+            and not (state.capture[0].is_liquid() and state.capture[1].is_nasal()) \
+            and not (state.capture[0].is_liquid() and state.capture[1].is_plosive()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()) \

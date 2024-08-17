@@ -737,7 +737,7 @@
         "notes": "Wiktionary indicates a modern descendent of the same form, but I'm suspicious"
     }, {
         "key": "bēotian",
-        "form-raw": "bēot|ian",
+        "form-raw": "bēoti|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": ["vow", "promise", "boast", "threaten"],
@@ -831,7 +831,7 @@
         "origin": "old-english"
     }, {
         "key": "snēowan",
-        "form-raw": "snēowan",
+        "form-raw": "snēow|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["proceed", "[go] hastily"],
@@ -2057,7 +2057,7 @@
         "origin": "old-english"
     }, {
         "key": "feallan",
-        "form-raw": "faell|an",
+        "form-raw": "feall|an",
         "form-canon": "fall",
         "form-participle-canon": ["fallen", "fell"],
         "type": "verb",
@@ -5120,7 +5120,7 @@
         "origin": "old-english"
     }, {
         "key": "timbran",
-        "form-raw": "timbran|an",
+        "form-raw": "timbr|an",
         "form-canon": "timber",
         "form-participle-canon": ["timbered"],
         "type": "verb",

@@ -6,7 +6,7 @@ from src.evolutor.engine.hinges import often, even, occ, hinge
 
 def from_me_phonemes(phonemes, config):
     random = Random(config.seed)
-    result = []
+    result = ""
     insert_lengthening_e = False
     would_have_inserted_lengthening_e = False
 
@@ -81,22 +81,28 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "au":
             result += "aw"
         elif phone.value in ["ɛu", "iu"]:
-            override = next((x[1] for x in config.overrides if x[0] == "Orth:ɛ/iu->ew/ue"), None)
-            if override == "ew":
+            if not prev:
                 result += "ew"
-            elif override == "ue":
-                result += "ue"
+            elif next1 and next1.is_consonant():
+                # Uncertain about this, but added with 'truth' and 'ruth' in mind
+                result += "u"
             else:
-                choices = ["ue"]
-                if next1:
-                    choices += ["u"]
-                if len(result) == 0 or result[-1] != "c":
-                    choices += ["ew"]
+                override = next((x[1] for x in config.overrides if x[0] == "Orth:ɛ/iu->ew/ue"), None)
+                if override == "ew":
+                    result += "ew"
+                elif override == "ue":
+                    result += "ue"
+                else:
+                    choices = ["ue"]
+                    if next1:
+                        choices += ["u"]
+                    if len(result) == 0 or result[-1] != "c":
+                        choices += ["ew"]
 
-                result += random.choice(choices)
-            
-            if next1 and next1.value == "ə":
-                skip_next = True
+                    result += random.choice(choices)
+                
+                if next1 and next1.value == "ə":
+                    skip_next = True
         elif phone.value == "ɔu":
             if next1 and next1.is_consonant() and next1.value != "n":
                 # Added based on pairs such as 'sāwol'->'soul'/'flogen'->'flown'
@@ -268,15 +274,24 @@ def from_me_phonemes(phonemes, config):
             else:
                 result += "ff"
         elif phone.value == "l":
-            if next1 != None \
+            if not is_final \
                 or (prev and prev.is_vowel() and prev.is_long()) \
-                or (prev and prev.is_consonant()):
+                or (prev and prev.is_consonant() and prev.value == "r"):
                 result += "l"
             elif is_final and prev and prev.value == "ə" \
                 and prev2 and prev2.is_consonant() \
                 and not prev2.value in ["tʃ", "dʒ", "v", "ð", "z", "j"] \
-                and not (len(result) >= 3 and "".join(result[-3:-1]) == "rr"):
-                result = result[:-1] + ["le"]
+                and not (len(result) >= 3 and "".join(result[-3:-1]) in ["ll", "rr"]):
+                # Swap 'e' from /ə/ and 'l' at the end of a word
+                # Certain consonants before the 'e' can prevent this
+                print(result[:-1])
+                result = result[:-1] + "le"
+            elif is_final \
+                and prev and prev.is_consonant() \
+                and prev2 and prev2.is_consonant() \
+                and not (len(result) >= 3 and "".join(result[-3:-1]) in ["ll", "rr"]):
+                # Add an extra 'e' after the 'l' if it is preceded by two or more consonants
+                result += "le"
             elif prev.is_vowel() and (not prev.stressed or prev.is_diphthong()):
                 result += "l"
             else:
@@ -328,7 +343,8 @@ def from_me_phonemes(phonemes, config):
             else:
                 result += "gh"
         elif phone.value == "k":
-            if is_final and prev and prev.is_vowel() and prev.is_short():
+            if (is_final or (next1 and next1.is_consonant())) \
+                and prev and prev.is_vowel() and prev.is_short():
                 # Doubled form after a short vowel
                 result += "ck"
             elif next1 and next1.value == "w":
@@ -387,7 +403,7 @@ def from_me_phonemes(phonemes, config):
             and phone.value not in ["v", "j", "θ", "ð", "ʃ", "dʒ"]:
             # Double non-final consonant after short vowel
             if phone.value == "k":
-                result = result[:-1] + ["ck"]
+                result = result[:-1] + "ck"
             elif not (phone.value == "z" and len(result) and result[-1] == "s") \
                 and phone.value not in ["x", "ks", "dʒ", "tʃ"]:
                 result += result[-1]
