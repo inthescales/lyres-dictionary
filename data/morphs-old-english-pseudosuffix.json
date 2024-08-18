@@ -167,6 +167,21 @@
         "tags": ["uncountable", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "-seoc",
+        "form-stem": "sick",
+        "form-raw": "seoc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "sick from %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "state"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-scin-adj",
         "form-stem": "skin",
         "form-raw": "scin",

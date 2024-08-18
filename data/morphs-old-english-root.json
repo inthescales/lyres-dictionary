@@ -2046,7 +2046,7 @@
         "type": "noun",
         "gloss": "vat",
         "gloss-alt": ["[vessel] or [container]", "box", "[jar] or [cup]"],
-        "tags": ["mass", "abstract", "obscure"],
+        "tags": ["count", "abstract", "obscure"],
         "origin": "old-english",
         "notes": "'fet' form is Mercian. Canon form shows southern dialect initial fricative voicing"
     }, {
@@ -3065,6 +3065,16 @@
         "origin": "old-english",
         "notes": "Raw forms represent inflected form typical of verbs with geminate 'bb'"
     }, {
+        "key": "heċġ",
+        "form-raw": "heċġ",
+        "form-canon": "hedge",
+        "type": "noun",
+        "gloss": "hedge",
+        "gloss-alt": ["fence"],
+        "tags": ["count", "concrete"],
+        "origin": "old-english",
+        "notes": "TODO: add man-made tag only for fence sense, add adj 'poor quality'"
+    }, {
         "key": "helan",
         "form-raw": ["hel|an"],
         "type": "verb",
@@ -3096,6 +3106,14 @@
         "gloss": "sword",
         "gloss-tool": "[cut] with a sword",
         "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
+        "key": "hete",
+        "form-raw": "hete",
+        "form-canon": "hate",
+        "type": "noun",
+        "gloss": "hatred",
+        "tags": ["mass", "abstract", "state"],
         "origin": "old-english"
     }, {
         "key": "hladan",
@@ -3404,6 +3422,32 @@
         "type": "noun",
         "gloss": ["hiding [place]", "shelter"],
         "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "hyċġan",
+        "form-raw": "hyċġ|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[think] about, [consider]"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hogian",
+        "form-raw": "hogi|an",
+        "form-canon": "how",
+        "form-participle-canon": ["howed"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[think] about, [consider]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "OED: 'later modification of 'hyċġan''"
+    }, {
+        "key": "hyġe",
+        "form-raw": "hyġe",
+        "type": "noun",
+        "gloss": ["[thought], [mind]", "[desire], [inclinations]"],
+        "tags": ["mass", "abstract", "rare", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hyll",
@@ -3839,6 +3883,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "lust",
+        "form-raw": "lust",
+        "form-canon": "lust",
+        "type": "noun",
+        "gloss": "lust",
+        "tags": ["mass", "abstract", "state"],
+        "origin": "old-english"
+    }, {
         "key": "lūtan",
         "form-raw": "lūt|an",
         "form-canon": "lout",
@@ -3941,8 +3993,8 @@
         "form-raw-alt": ["mæs"],
         "form-canon": "maze",
         "type": "noun",
-        "gloss": ["delusion", "confusion", "[state] of bewilderment"],
-        "tags": ["count", "concrete", "state", "obscure"],
+        "gloss": ["delusion", "confusion", "bewilderment"],
+        "tags": ["mass", "concrete", "state", "obscure"],
         "origin": "old-english",
         "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
     }, {
@@ -4390,6 +4442,14 @@
         "origin": "old-english",
         "notes": "Alternate meaning 'wooden beam or spar'"
     }, {
+        "key": "rōf",
+        "form-raw": "rōf",
+        "type": "adj",
+        "gloss": ["[strong] or [vigorous]", "[brave] or [keen]"],
+        "gloss-alt": ["noble", "renowned"],
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
         "key": "rose",
         "form-raw": "rose",
         "form-canon": "rose",
@@ -4436,6 +4496,14 @@
         "form-canon": "sore",
         "type": "adj",
         "gloss": "pained",
+        "origin": "old-english"
+    }, {
+        "key": "sċamu",
+        "form-raw": "sċamu",
+        "form-canon": "shame",
+        "type": "noun",
+        "gloss": "shame",
+        "tags": ["mass", "abstract", "state"],
         "origin": "old-english"
     }, {
         "key": "sċanca",
@@ -4553,9 +4621,9 @@
         "form-raw": "sċyld",
         "type": "noun",
         "gloss": ["guilt", "debt"],
-        "tags": ["mass", "abstract", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "state", "speculative"],
         "origin": "old-english",
-        "notes": "TODO: Add 'state' tag for 'guilt' sense."
+        "notes": "Should separate the 'state' tag only for the 'guilt' sense but let's play with it for now"
     }, {
         "key": "sċyldiġ",
         "form-raw": "sċyld+iġ",
@@ -4567,14 +4635,14 @@
         "key": "searu-count",
         "form-raw": "searu",
         "type": "noun",
-        "gloss": ["contrivance", "device", "deceit", "stratagem"],
+        "gloss": ["contrivance", "device", "stratagem"],
         "tags": ["count", "abstract", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "searu-mass",
         "form-raw": "searu",
         "type": "noun",
-        "gloss": ["[art] or [skill]", "contrivance", "artifice"],
+        "gloss": ["[art] or [skill]", "contrivance", "deceit", "artifice"],
         "tags": ["mass", "abstract", "man-made", "speculative"],
         "origin": "old-english"
     }, {
