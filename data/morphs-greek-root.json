@@ -777,6 +777,21 @@
         "tags": ["transitive", "no-prep"],
         "origin": "greek"
     }, {
+        "key": "lampas-greek",
+        "form-stem": "lampad",
+        "type": "noun",
+        "gloss": "lamp",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "greek"
+    }, {
+        "key": "lampein",
+        "form-stem": "lampe",
+        "type": "verb",
+        "gloss": "shine",
+        "tags": ["intransitive"],
+        "origin": "greek",
+        "notes": "Combining form is a guess"
+    }, {
         "key": "lexis",
         "form-stem": "lex",
         "type": "noun",

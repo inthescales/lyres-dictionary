@@ -83,9 +83,6 @@ def from_me_phonemes(phonemes, config):
         elif phone.value in ["ɛu", "iu"]:
             if not prev:
                 result += "ew"
-            elif next1 and next1.is_consonant():
-                # Uncertain about this, but added with 'truth' and 'ruth' in mind
-                result += "u"
             else:
                 override = next((x[1] for x in config.overrides if x[0] == "Orth:ɛ/iu->ew/ue"), None)
                 if override == "ew":

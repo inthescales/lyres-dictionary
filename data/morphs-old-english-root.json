@@ -563,7 +563,7 @@
         "form-canon": "bale",
         "type": "noun",
         "gloss": ["[harm] or [evil]"],
-        "tags": ["count", "abstract", "obscure"],
+        "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "bēam",
@@ -2039,6 +2039,17 @@
         "origin": "old-english",
         "notes": "Also 'vehicle', 'road'"
     }, {
+        "key": "fet",
+        "form-raw": "fet",
+        "form-raw-alt": ["fæt"],
+        "form-canon": "vat",
+        "type": "noun",
+        "gloss": "vat",
+        "gloss-alt": ["[vessel] or [container]", "box", "[jar] or [cup]"],
+        "tags": ["mass", "abstract", "obscure"],
+        "origin": "old-english",
+        "notes": "'fet' form is Mercian. Canon form shows southern dialect initial fricative voicing"
+    }, {
         "key": "faru",
         "form-raw": "faru",
         "form-canon": "fare",
@@ -2055,6 +2066,23 @@
         "gloss": "foam",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
+    }, {
+        "key": "fana",
+        "form-raw": "fana",
+        "form-raw-alt": ["fona"],
+        "type": "noun",
+        "gloss": ["[flag], [banner]", "[patch] or [scrap] of cloth"],
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "fana-vane",
+        "form-raw": "fana",
+        "form-canon": "vane",
+        "type": "noun",
+        "gloss": "weathervane",
+        "tags": ["count", "concrete", "man-made", "metallic"],
+        "origin": "old-english",
+        "notes": "Properly the same morph as the base 'fana', but I want to separate for alt. form usage"
     }, {
         "key": "fang",
         "form-raw": "fang",
@@ -3105,7 +3133,7 @@
         "form-canon": "lewth",
         "type": "noun",
         "gloss": "[shelter], [protection]",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "hlīsa",
@@ -4517,7 +4545,7 @@
         "form-raw": "sċyld",
         "type": "noun",
         "gloss": ["guilt", "debt"],
-        "tags": ["count", "abstract", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "speculative"],
         "origin": "old-english",
         "notes": "TODO: Add 'state' tag for 'guilt' sense."
     }, {
@@ -5084,7 +5112,7 @@
         "type": "verb",
         "verb-class": 3,
         "gloss": ["die", "faint", "[be] overcome (as with emotion, heat, etc.)"],
-        "tags": ["transitive", "obscure"],
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "swīcan",
@@ -5960,9 +5988,20 @@
         "form-canon": "wode",
         "type": "noun",
         "gloss": "madness",
-        "tags": ["count", "abstract", "state", "obscure"],
+        "tags": ["mass", "abstract", "state", "obscure"],
         "origin": "old-english",
         "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
+    }, {
+        "key": "wōgian",
+        "form-raw": "wōgi|an",
+        "form-canon": "woo",
+        "form-participle-canon": ["wooed"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "woo",
+        "gloss-alt": ["marry"],
+        "tags": ["transitive"],
+        "origin": "old-english"
     }, {
         "key": "wolcen-count",
         "form-raw": "wolcen",

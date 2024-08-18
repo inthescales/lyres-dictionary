@@ -3277,6 +3277,15 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
+        "key": "lampas",
+        "form-stem": "lampad",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "lamp",
+        "gloss-tool": ["[light] up"],
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
+    }, {
         "key": "lapis",
         "form-stem": "lapid",
         "type": "noun",

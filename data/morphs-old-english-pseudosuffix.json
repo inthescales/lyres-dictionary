@@ -189,12 +189,24 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "someone who makes %pl",
+        "gloss": "one who makes %pl",
         "requires": {
             "follows": {
-                "has-all-tags": ["man-made", "metallic"]
+                "or": [
+                    { "has-all-tags": ["man-made", "metallic"] },
+                    { "has-tag": "metal" }
+                ]
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "metal"
+                }
+            },
+            "gloss": "one who works %!sg",
+            "tags": ["count", "concrete", "living", "person"]
+        }],
         "tags": ["uncountable", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
@@ -215,6 +227,15 @@
         "origin": "old-english"
     }, {
         "key": "-wis",
+        "form-stem": "wise",
+        "form-raw": "wis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "knowledgeable with respect to %pl",
+        "origin": "old-english"
+    }, {
+        "key": "-wis-adv",
         "form-stem": "wise",
         "form-raw": "wis",
         "type": "derive",
