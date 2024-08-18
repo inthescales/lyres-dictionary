@@ -124,5 +124,34 @@
             }
         },
         "origin": "old-english"
+    }, {
+        "key": "hedge-",
+        "form-stem": "hedge-",
+        "type": "prefix",
+        "prefix-on": "noun",
+        "gloss": "incompetent %@",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["role", "man-made"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-tag": "man-made"
+                }
+            },
+            "gloss": "poor-quality %@",
+            "tags": ["count", "concrete", "man-made"]
+        }, {
+            "case": {
+                "precedes": {
+                    "has-tag": "ruler"
+                }
+            },
+            "tags": ["count", "concrete", "living", "person", "role", "rare"]
+        }],
+        "tags": ["count", "concrete", "living", "person", "role"],
+        "origin": "old-english"
     }
 ]

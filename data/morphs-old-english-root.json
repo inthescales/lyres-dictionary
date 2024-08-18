@@ -2004,7 +2004,7 @@
         "form-canon": "father",
         "type": "noun",
         "gloss": "father",
-        "tags": ["count", "concrete", "living", "person", "role"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
         "key": "fǣġe",
@@ -4194,6 +4194,14 @@
         "type": "noun",
         "gloss": "pot",
         "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "prēost",
+        "form-raw": "prēost",
+        "form-canon": "priest",
+        "type": "noun",
+        "gloss": "priest",
+        "tags": ["count", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
         "key": "prician",

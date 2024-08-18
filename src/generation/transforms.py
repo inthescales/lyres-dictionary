@@ -117,11 +117,12 @@ def transform_word(word, morphothec, is_single):
             else:
                 bag.append(("add_prep_prefix", 33))
 
-    if (current_type == "verb" or (current_type == "adj" and root_morph.has_tag("past-participle"))) \
-        and not first_morph.get_type() == "prefix":
+    if not first_morph.get_type() == "prefix":
         if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
             if root_morph.has_tag("past-participle"):
                 bag.append(("add_prefix", 20))
+            elif root_morph.get_type() == "noun":
+                bag.append(("add_prefix", 1))
             else:
                 bag.append(("add_prefix", 5))
 
@@ -233,6 +234,8 @@ def transform_word(word, morphothec, is_single):
             choice = random.choice(prefixes)
             new_morph = Morph.with_key(choice, morphothec)
             word.add_prefix(new_morph)
+        else:
+            return False
     
     # Add Modern Prefix
     elif choice == "add_modern_prefix":
