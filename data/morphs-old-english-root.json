@@ -3914,7 +3914,7 @@
         "form-canon": "maze",
         "type": "noun",
         "gloss": ["delusion", "confusion", "[state] of bewilderment"],
-        "tags": ["count", "concrete", "state"],
+        "tags": ["count", "concrete", "state", "obscure"],
         "origin": "old-english",
         "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
     }, {
@@ -5557,15 +5557,10 @@
         "gloss": "weapon",
         "gloss-tool": ["[attack] with a weapon"],
         "tags": ["count", "concrete", "tool"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Alt. meaning 'penis'"
     }, {
-        "key": "wǣpen-penis",
-        "form-raw": "wǣpen",
-        "type": "noun",
-        "gloss": "penis",
-        "tags": ["count", "concrete", "living", "bodypart", "speculative", "rare"],
-        "origin": "old-english"
-    }, {
+
         "key": "wærc",
         "form-raw": "wærc",
         "form-canon": "wark",
@@ -5647,10 +5642,10 @@
         "origin": "old-english",
         "notes": "OE had transitive meanings 'impair', 'infringe', 'annul'"
     }, {
-        "key": "wase",
-        "form-raw": "wase",
+        "key": "wāse",
+        "form-raw": "wāse",
         "type": "noun",
-        "gloss": "mud",
+        "gloss": ["mud", "slime"],
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english",
         "notes": "Origin of 'ooze', but feels different enough to leave without canon. TODO: Add sense 'marsh'."

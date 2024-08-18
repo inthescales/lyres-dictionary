@@ -24,6 +24,13 @@
         "derive-to": "noun",
         "suffixes": [],
         "gloss": "the quality of being %sg",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
@@ -118,6 +125,13 @@
         "derive-to": "verb",
         "verb-class": "weak",
         "gloss": "[become] %@",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "exception": [{
             "case": {
                 "follows": {
@@ -138,6 +152,13 @@
         "derive-to": "verb",
         "verb-class": "weak",
         "gloss": "[make] %@",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "exception": [{
             "case": {
                 "follows": {
@@ -433,26 +454,6 @@
         "origin": "old-english",
         "notes": "TODO: Allow -ikin form in some cases. TODO: Allow as affectionate for family, or positive adjectives. TODO: Allow color compounds on pattern of 'greenkin'. TODO: Properly ME"
     }, {
-        "key": "-el",
-        "form-stem": "le",
-        "form-final": "le",
-        "form-raw": "el",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": [],
-        "gloss": "pertaining to %pl",
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-tag": "living"
-                }
-            },
-            "gloss": "pertaining or suitable to %pl"
-        }],
-        "tags": ["y-to-i"],
-        "origin": "old-english"
-    }, {
         "key": "-liċ",
         "form-stem": "li",
         "form-final": "ly",
@@ -492,6 +493,13 @@
         "derive-to": "noun",
         "gloss": "one who is %@",
         "tags": ["uncountable", "person", "rare"],
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-ling-noun",
@@ -645,6 +653,13 @@
         "suffixes": [],
         "gloss": "the quality of being %@",
         "tags": ["mass", "abstract", "rare"],
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-sċipe",
@@ -672,6 +687,13 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -749,6 +771,13 @@
         "suffixes": [],
         "gloss": "the quality of being %sg",
         "tags": ["mass", "abstract", "i-mutating", "no-gen"],
+        "requires": {
+            "follows": {
+                "not": {
+                    "has-tag": "past-participle"
+                }
+            }
+        },
         "origin": "old-english",
         "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
     }, {

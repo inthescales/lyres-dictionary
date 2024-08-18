@@ -8,12 +8,15 @@ from src.morphs.requirements import meets_requirements
 
 class Morph:
     
-    def __init__(self, key, morphothec):
-        self.morphothec = morphothec
-        self.base = morphothec.morph_for_key[key]
+    def __init__(self, base_dict):
+        self.base = base_dict
         self.morph = self.base.copy()
         self.seed = random.randint(0, 100)
-        
+    
+    @classmethod
+    def with_key(self, key, morphothec):
+        return Morph(morphothec.morph_for_key[key])
+
     def __eq__(self, other):
         if other is None:
             return False
@@ -72,6 +75,9 @@ class Morph:
     
     def is_affix(self):
         return self.is_prefix() or self.is_suffix()
+
+    def final(self):
+        return self.has_tag("final")
 
     def final_ok(self):
         has_form = "form-final" in self.morph or "form" in self.morph or "form-raw" in self.morph

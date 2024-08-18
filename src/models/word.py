@@ -12,7 +12,11 @@ class Word:
     # Mutation
     
     def set_keys(self, keys):
-        self.morphs = [Morph(key, self.morphothec) for key in keys]
+        self.morphs = [Morph.with_key(key, self.morphothec) for key in keys]
+        self.refresh_morphs()
+
+    def set_morphs(self, morphs):
+        self.morphs = morphs
         self.refresh_morphs()
 
     def add_prefix(self, morph):

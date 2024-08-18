@@ -106,6 +106,7 @@ valid_tags = [
     "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
     "speculative",              # Generation - the morph is not attested in modern English
     "homophonic",               # Generation - the morphs processed form is a homophone (or nearly) with a common actual word
+    "final",                    # Generation - immediately ends generation
     "non-final",                # Generation - cannot be the final morph in the word
     "suffix-only",              # Generation - adding a suffix is the only valid transformation following this morph
     "fixed-gloss",              # Generation - the gloss of this morph is fixed - no additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds,
@@ -214,6 +215,10 @@ def validate_morph(morph):
 
             if not ("verb-class" in morph):
                 record_error(" - verb must have 'verb-class'")
+                return False
+
+            if morph["verb-class"] not in [1, 2, 3, 4, 5, 6, 7, "weak", "preterite-present"]:
+                record_error(" - invalid verb class '" + morph["verb-class"] + "'")
                 return False
 
     elif morph_type == "prefix":

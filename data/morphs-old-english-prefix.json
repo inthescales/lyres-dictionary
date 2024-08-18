@@ -39,5 +39,90 @@
         "tags": ["no-gen"],
         "origin": "old-english",
         "notes": "TODO: no-gen until I figure out how to use this better"
+    }, {
+        "key": "well-",
+        "form-stem": "well-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "%@ well",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "ill-",
+        "form-stem": "ill-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "badly %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english",
+        "notes": "Properly Norse via ME, but putting it here for now"
+    }, {
+        "key": "full-",
+        "form-stem": "full-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "fully %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "half-",
+        "form-stem": "half-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "halfway %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "twice-",
+        "form-stem": "twice-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "%@ two times",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "thrice-",
+        "form-stem": "thrice-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "%@ three times",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "un-",
+        "form-stem": "un",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "not %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
     }
 ]

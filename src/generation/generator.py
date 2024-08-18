@@ -30,10 +30,15 @@ def generate_word(morphothec):
     maximum_size = 3
     
     transforms_done = 0
-    while (transforms_done < transform_count and word.size() < maximum_size) \
+    while (
+            transforms_done < transform_count \
+            and word.size() < maximum_size \
+            and not word.last_morph().final()
+        ) \
         or not word.last_morph().final_ok():
-        transforms.transform_word(word, morphothec, transform_count == 1)
-        transforms_done += 1
+        success = transforms.transform_word(word, morphothec, transform_count == 1)
+        if success:
+            transforms_done += 1
     
     Logger.trace("generated morph: " + str(word.get_keys()))
     return word

@@ -46,7 +46,6 @@ class Morphothec:
                 for before_type in before_types:
                     if not before_type in self.morphs_before:
                         self.morphs_before[before_type] = []
-
                     self.morphs_before[before_type].append(morph_key)
 
             else:
