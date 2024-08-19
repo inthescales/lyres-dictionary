@@ -336,6 +336,13 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "asċ-boat",
+        "form-raw": "asċ",
+        "type": "noun",
+        "gloss": ["small [boat]", "sailboat", "rowboat"],
+        "tags": ["count", "concrete", "man-made", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "assa",
         "form-raw": "assa",
         "form-canon": "ass",
@@ -1669,6 +1676,25 @@
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "draca",
+        "form-raw": "draca",
+        "form-canon": "drake",
+        "type": "noun",
+        "gloss": "dragon",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "old-english",
+        "notes": "Also has sense 'man'"
+    }, {
+        "key": "drēam",
+        "form-raw": "drēam",
+        "form-canon": "dream",
+        "type": "noun",
+        "gloss": "dream",
+        "gloss-alt": ["music", "revelry", "[frenzy], [ecstasy]"],
+        "tags": ["mass", "abstract"],
+        "origin": "old-english",
+        "notes": "Combining the modern sense with OE glosses of unclear relation. TODO: Separate senses for tagging 'man-made'"
+    }, {
         "key": "drenċan",
         "form-raw": "drenċ|an",
         "form-canon": "drench",
@@ -1742,6 +1768,13 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "drȳ",
+        "form-raw": "drȳ",
+        "type": "noun",
+        "gloss": ["wizard", "sorcerer"],
+        "tags": ["count", "concrete", "living", "person", "role", "magical"],
+        "origin": "old-english"
+    }, {
         "key": "drȳġe",
         "form-raw": "drȳġe",
         "form-raw-alt": ["drīġe"],
@@ -1800,6 +1833,14 @@
         "origin": "old-english",
         "notes": "Bosworth has this as a short 'æ', Wiktionary as long"
     }, {
+        "key": "dwelian",
+        "form-raw": "dweli|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[err], [go] astray"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "dweorg",
         "form-raw": "dweorg",
         "form-raw-alt": ["drweorh", "dwerg", "dwearg"],
@@ -1844,6 +1885,13 @@
         "verb-class": 1,
         "gloss": ["[decline] or [fade]", "[waste] away"],
         "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "dwole",
+        "form-raw": "dwole",
+        "type": "noun",
+        "gloss": ["error", "heresy"],
+        "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
         "key": "dysiġ",
@@ -2299,6 +2347,15 @@
         "gloss": ["[strive] or [contend]", "quarrel", "debate", "scold", "complain"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
+    }, {
+        "key": "flit",
+        "form-raw": "flit",
+        "form-canon": "flit",
+        "type": "noun",
+        "gloss": "argument",
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english",
+        "notes": "Also senses 'fighting', 'contest', but I want to have the 'man-made' tag for now."
     }, {
         "key": "floga",
         "form-raw": "floga",
@@ -2907,6 +2964,13 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
+    }, {
+        "key": "gūþ",
+        "form-raw": "gūþ",
+        "type": "noun",
+        "gloss": "war",
+        "tags": ["mass", "abstract", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "gyd+en",
         "form-raw": "gyd+en",
@@ -3721,6 +3785,14 @@
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "lēoþ",
+        "form-raw": "lēoþ",
+        "type": "noun",
+        "gloss": ["song", "poem"],
+        "tags": ["count", "abstract", "man-made", "obscure"],
+        "origin": "old-english",
+        "notes": "Attested form is 'leed', which seems to be a ME variation"
+    }, {
         "key": "lesan",
         "form-raw": "les|an",
         "form-canon": "lease",
@@ -4183,6 +4255,16 @@
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "nēdl",
+        "form-raw": "nēdl",
+        "form-raw-alt": ["nǣdl", "nēþl"],
+        "form-canon": "needle",
+        "type": "noun",
+        "gloss": "needl",
+        "gloss-tool": ["[sew] or [embroider]", "[pierce] with a needle"],
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
         "key": "niman",
         "form-raw": "nim|an",
         "form-canon": "nim",
@@ -4274,6 +4356,14 @@
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
+        "key": "puca",
+        "form-raw": "puca",
+        "form-canon": "puck",
+        "type": "noun",
+        "gloss": ["evil [spirit]", "goblin"],
+        "tags": ["count", "concrete", "living", "magical"],
+        "origin": "old-english"
+    }, {
         "key": "rǣd",
         "form-raw": "rǣd",
         "form-raw-alt": "rēd",
@@ -4343,6 +4433,15 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "rāp",
+        "form-raw": "rāp",
+        "form-canon": "rope",
+        "type": "noun",
+        "gloss": "speak",
+        "gloss-tool": ["[tie] with rope", "[catch] with a rope"],
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
         "key": "rēċels",
         "form-raw": "rēċ+els",
         "type": "noun",
@@ -4398,9 +4497,10 @@
         "form-raw": "rinc",
         "form-canon": "rink",
         "type": "noun",
-        "gloss": ["man", "hero"],
-        "tags": ["count", "concrete", "living", "person", "obscure"],
-        "origin": "old-english"
+        "gloss": "hero",
+        "tags": ["count", "concrete", "living", "person", "role", "obscure"],
+        "origin": "old-english",
+        "notes": "Also has sense 'man'"
     }, {
         "key": "rinnan",
         "form-raw": "rinn|an",
@@ -4904,6 +5004,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "smiþ",
+        "form-raw": "smiþ",
+        "form-canon": "smith",
+        "type": "noun",
+        "gloss": "smith",
+        "tags": ["count", "concrete", "living", "person", "role"],
+        "origin": "old-english"
+    }, {
         "key": "smiþian",
         "form-raw": "smiþi|an",
         "form-canon": "smith",
@@ -4931,6 +5039,18 @@
         "gloss": "truth",
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
+    }, {
+        "key": "specan",
+        "form-raw": "spec|an",
+        "form-raw-alt": ["sprec|an"],
+        "form-canon": "speak",
+        "form-participle-canon": ["spoken"],
+        "type": "verb",
+        "verb-class": 5,
+        "gloss": "speak",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "'specan' is a later OE form"
     }, {
         "key": "spell",
         "form-raw": "spell",
@@ -5151,6 +5271,22 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "swēġ",
+        "form-raw": "swēġ",
+        "type": "noun",
+        "gloss": ["[sound], [noise]"],
+        "tags": ["mass", "abstract", "homophonic"],
+        "origin": "old-english",
+        "notes": "Needs bitransitivity"
+    }, {
+        "key": "swēġan",
+        "form-raw": "swēġ|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[make] noise", "[play] music"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "sweġen",
         "form-raw": "sweġen",
         "form-canon": "swain",
@@ -5220,6 +5356,22 @@
         "gloss": ["[work] hard", "[labor], [toil]"],
         "gloss-alt": ["strive"],
         "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "swinsian",
+        "form-raw": "swinsi|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["sing", "[sound] melodiously", "[make] melody"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "swōgan",
+        "form-raw": "swōg|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[make] noise", "[roar] or [resound]", "[move] violently, [invade]"],
+        "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "sylfer",
@@ -5934,6 +6086,15 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Original meaning 'woman'"
+    }, {
+        "key": "wiċċe",
+        "form-raw": "wiċċa",
+        "form-canon": "witch",
+        "type": "noun",
+        "gloss": ["witch", "magician"],
+        "tags": ["count", "concrete", "living", "person", "role"],
+        "origin": "old-english",
+        "notes": "Feminine form in OE was 'wiċċa', but they come out the same"
     }, {
         "key": "wiċġ",
         "form-raw": "wiċġ",

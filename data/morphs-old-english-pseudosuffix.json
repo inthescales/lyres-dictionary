@@ -16,6 +16,43 @@
         "origin": "old-english",
         "notes": "TODO: Apply only to tame animals"
     }, {
+        "key": "-cræft",
+        "form-stem": "craft",
+        "form-raw": "cræft",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "the art of making %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["man-made", "material", "tool", "role"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "tool"
+                }
+            },
+            "gloss": ["skill in using %pl", "the art of making %pl"]
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "role"
+                }
+            },
+            "gloss": ["the work of %sg"]
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "material"
+                }
+            },
+            "gloss": ["the art of working with %pl"]
+        }],
+        "tags": ["uncountable", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "-fare",
         "form-stem": "fare",
         "form-raw": "faru",
@@ -145,12 +182,20 @@
         "gloss": "[seller] of %pl",
         "requires": {
             "follows": {
-                "has-tag": "concrete"
+                "has-any-tags": ["concrete", "state"]
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "state"
+                }
+            },
+            "gloss": "one who provokes %pl",
+            "tags": ["uncountable", "concrete", "living", "person", "rare"]
+        }],
         "tags": ["count", "concrete", "living", "person", "rare"],
-        "origin": "old-english",
-        "notes": "TODO: allow for abstracts that represent mental states, with exception to gloss as 'one who provokes...', e.g. 'fearmonger', or events e.g. 'warmonger'"
+        "origin": "old-english"
     }, {
         "key": "-pleġe",
         "form-stem": "play",

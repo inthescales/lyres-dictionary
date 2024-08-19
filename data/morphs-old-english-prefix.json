@@ -129,7 +129,7 @@
         "form-stem": "hedge-",
         "type": "prefix",
         "prefix-on": "noun",
-        "gloss": "incompetent %@",
+        "gloss": ["incompetent %@", "wandering %@"],
         "requires": {
             "precedes": {
                 "has-any-tags": ["role", "man-made"]
