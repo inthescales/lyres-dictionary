@@ -231,6 +231,35 @@
         }],
         "origin": "old-english"
     }, {
+        "key": "-ess",
+        "form-stem": "ess",
+        "form-final": "ess",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "female %@",
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "person" },
+                    { "not": {"has-tag": "gendered"} }
+                ]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "rer"
+                }
+            },
+            "form-final": "//ess",
+            "form-stem": "//ess"
+        }],
+        "origin": "old-english",
+        "notes": "Not properly OE, but want to let it combine for now. TODO: Move this"
+    }, {
         "key": "-ery",
         "form-stem": "ery",
         "form-final": "ery",

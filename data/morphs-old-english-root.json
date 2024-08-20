@@ -48,7 +48,7 @@
         "form-raw": "ælde",
         "type": "noun",
         "gloss": "men",
-        "tags": ["mass", "concrete", "living", "person", "gendered", "speculative", "rare"],
+        "tags": ["mass", "concrete", "living", "person", "gendered", "speculative", "poetic"],
         "origin": "old-english"
     }, {
         "key": "ǣled",
@@ -763,9 +763,10 @@
         "key": "beorn",
         "form-raw": "beorn",
         "type": "noun",
-        "gloss": ["man", "hero"],
-        "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
+        "gloss": "hero",
+        "tags": ["count", "concrete", "living", "person", "poetic"],
+        "origin": "old-english",
+        "notes": "Also gloss 'man'"
     }, {
         "key": "bēot",
         "form-raw": "bēot",
@@ -1067,7 +1068,7 @@
         "form-raw": "brego",
         "type": "noun",
         "gloss": ["lord", "prince", "ruler"],
-        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare", "homophonic"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "poetic", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "breahtm",
@@ -1138,7 +1139,7 @@
         "form-canon": "brother",
         "type": "noun",
         "gloss": "brother",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "brūcan",
@@ -1157,7 +1158,7 @@
         "form-canon": "bride",
         "type": "noun",
         "gloss": "bride",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "bryht",
@@ -1280,7 +1281,7 @@
         "form-raw": "carl",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "ċeap",
@@ -1340,9 +1341,9 @@
         "form-canon": "churl",
         "type": "noun",
         "gloss": "low-class [person]",
-        "gloss-alt": ["man", "husband"],
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Additional glosses 'man', 'husband', but don't want to gender for now"
     }, {
         "key": "ċīd",
         "form-raw": "ċīd",
@@ -1530,7 +1531,7 @@
         "form-canon": "queen",
         "type": "noun",
         "gloss": "queen",
-        "tags": ["count", "concrete", "living", "person", "ruler"],
+        "tags": ["count", "concrete", "living", "person", "ruler", "gendered"],
         "origin": "old-english"
     }, {
         "key": "cwenċan",
@@ -1547,7 +1548,7 @@
         "form-canon": "quean",
         "type": "noun",
         "gloss": "[woman] (derogatory)",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
         "notes": "Original sense of 'woman' generally"
     }, {
@@ -1590,7 +1591,8 @@
         "form-raw": ["cot", "cote"],
         "form-canon": "cote",
         "type": "noun",
-        "tags": ["count", "concrete", "man-made"],
+        "gloss": ["small [house]", "[shelter] for animals"],
+        "tags": ["count", "concrete", "man-made", "obscure"],
         "origin": "old-english"
     }, {
         "key": "culufre",
@@ -1625,9 +1627,9 @@
         "form-canon": "kin",
         "type": "noun",
         "gloss": "family",
-        "tags": ["mass", "abstract", "living", "person"],
+        "tags": ["mass", "abstract", "living", "person", "gendered"],
         "origin": "old-english",
-        "notes": "Alt. meanings I don't feel like including right now"
+        "notes": "Alt. meanings I don't feel like including right now. 'gendered' tag just because I don't want to add gender suffixes."
     }, {
         "key": "cȳþan",
         "form-raw": "cȳþ|an",
@@ -2116,7 +2118,7 @@
         "form-canon": "father",
         "type": "noun",
         "gloss": "father",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "fǣġe",
@@ -2953,7 +2955,7 @@
         "form-canon": "god",
         "type": "noun",
         "gloss": "god",
-        "tags": ["uncountable", "concrete", "living", "person"],
+        "tags": ["uncountable", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "gold",
@@ -3033,7 +3035,7 @@
         "type": "noun",
         "gloss": "groom",
         "gloss-alt": ["man"],
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
         "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
     }, {
@@ -3048,7 +3050,7 @@
         "form-raw": "gyd+en",
         "type": "noun",
         "gloss": "goddess",
-        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "speculative"],
         "origin": "old-english"
     }, {
         "key": "gyltan",
@@ -4109,7 +4111,7 @@
         "form-raw-alt": "meċġ",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "mǣnan",
@@ -4152,7 +4154,7 @@
         "form-canon": "man",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
         "notes": "Original sense was 'person'"
     }, {
@@ -4788,10 +4790,10 @@
         "form-raw": "sċealc",
         "form-raw-alt": ["sċelc"],
         "type": "noun",
-        "gloss": ["servant", "official", "soldier", "man"],
+        "gloss": ["servant", "official", "soldier"],
         "tags": ["count", "concrete", "living", "person", "speculative"],
         "origin": "old-english",
-        "notes": "Only chosen form is attested, as origin of archaic modern 'shalk'. 'sċelc' is my own hypothetical Anglian variant."
+        "notes": "Only chosen form is attested, as origin of archaic modern 'shalk'. 'sċelc' is my own hypothetical Anglian variant. Also had sense 'man'"
     }, {
         "key": "sċēne",
         "form-raw": "sċēne",
@@ -4933,9 +4935,8 @@
         "form-raw": "seċġ",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person", "speculative", "rare"],
-        "origin": "old-english",
-        "notes": "Only found in poetry in OE"
+        "tags": ["count", "concrete", "living", "person", "gendered", "speculative", "poetic"],
+        "origin": "old-english"
     }, {
         "key": "seolc",
         "form-raw": "seolc",
@@ -5416,7 +5417,7 @@
         "type": "noun",
         "gloss": ["swineherd", "herder", "peasant", "boy", "youth"],
         "gloss-alt": ["man", "warrior"],
-        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "speculative"],
         "origin": "old-english",
         "notes": "Apparently related to MnE 'swain', OE 'sweġen', but as that apparently shows Norse influence (says OED), I'll consider this separate."
     }, {
@@ -5470,7 +5471,7 @@
         "form-canon": "swain",
         "type": "noun",
         "gloss": ["young [man]", "squire", "servant [boy]", "rural [laborer]", "lover"],
-        "tags": ["count", "concrete", "living", "person", "obscure"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "obscure"],
         "origin": "old-english",
         "notes": "May have Norse influence, but appears in OE, at least in compounds like 'bāt-sweġen' -> MnE 'bosun'."
     }, {
@@ -6256,7 +6257,7 @@
         "form-raw": "wer",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "weþer",
@@ -6279,7 +6280,7 @@
         "form-canon": "wife",
         "type": "noun",
         "gloss": "wife",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
         "notes": "Original meaning 'woman'"
     }, {
@@ -6644,7 +6645,7 @@
         "form-raw": ["wyrġ+en", "wierġ+en"],
         "type": "noun",
         "gloss": ["female [criminal]", "she-beast", "she-wolf"],
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "wyrm",
