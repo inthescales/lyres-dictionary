@@ -37,4 +37,8 @@ def adjust_morph(morph):
         if "tags" in morph and "homophonic" in morph["tags"]:
             morph["tags"] += ["rare"]
 
+        # Add 'rare' tag to poetic words
+        if "tags" in morph and "poetic" in morph["tags"]:
+            morph["tags"] += ["rare"]
+
     return morph

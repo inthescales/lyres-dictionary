@@ -56,6 +56,7 @@ valid_tags = [
     "animal",                   # Noun semantics - an animal
     "plant",                    # Noun semantics - a plant
     "person",                   # Noun semantics - a kind of person
+    "gendered",                 # Noun semantics - unchangeably gendered
     "role",                     # Noun semantics - a role that a person takes on (as opposed to inborn identity)
     "ruler",                    # Noun semantics - a person who rules over a place or thing
     "divine",                   # Noun semantics - a divine being (god, angel, etc)
@@ -105,6 +106,7 @@ valid_tags = [
     "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix
     "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
     "speculative",              # Generation - the morph is not attested in modern English
+    "poetic",                   # Generation - the morph is only attested in poetic usage in its original language
     "homophonic",               # Generation - the morphs processed form is a homophone (or nearly) with a common actual word
     "final",                    # Generation - immediately ends generation
     "non-final",                # Generation - cannot be the final morph in the word

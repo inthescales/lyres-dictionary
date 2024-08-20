@@ -31,6 +31,9 @@ def with_alternate_gloss(morph):
     elif isinstance(morph.morph["gloss-alt"], str):
         new_dict["gloss"] = morph.morph["gloss-alt"]
 
+    if "verb-class" in morph.morph:
+        new_dict["verb-class"] = morph.morph["verb-class"]
+
     return Morph(new_dict)
 
 def with_alternate_form_and_gloss(morph, form):
@@ -44,6 +47,9 @@ def with_alternate_form_and_gloss(morph, form):
         new_dict["gloss"] = random.choice(morph.morph["gloss-alt"])
     elif isinstance(morph.morph["gloss-alt"], str):
         new_dict["gloss"] = morph.morph["gloss-alt"]
+
+    if "verb-class" in morph.morph:
+        new_dict["verb-class"] = morph.morph["verb-class"]
 
     return Morph(new_dict)
 

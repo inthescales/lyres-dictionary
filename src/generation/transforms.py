@@ -277,10 +277,17 @@ def transform_word(word, morphothec, is_single):
         new_morph = derivative_morph.with_alternate_form(root_morph, alternate_form)
         word.set_morphs([new_morph])
 
+        # TODO: Add a small chance to not use the special gloss, and return False
+        # so we can get more transforms with an alternate form
+
     # Alternate gloss
     elif choice == "alternate_gloss":
         new_morph = derivative_morph.with_alternate_gloss(root_morph)
         word.set_morphs([new_morph])
+
+        # Most of the time, don't count this as a transform
+        if random.randint(1, 4) > 1:
+            return False
 
     # Alternate form and gloss
     elif choice == "alternate_form_and_gloss" and alternate_form != None:

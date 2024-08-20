@@ -176,6 +176,13 @@
         "tags": ["transitive", "motion"],
         "origin": "greek"
     }, {
+        "key": "benthos",
+        "form-stem": "benth",
+        "type": "noun",
+        "gloss": "ocean depths",
+        "tags": ["singleton", "concrete", "terrain"],
+        "origin": "greek"
+    }, {
         "key": "biblion",
         "form-stem": "bibli",
         "type": "noun",
@@ -1097,6 +1104,13 @@
         "type": "verb",
         "gloss": "[make] solid",
         "tags": ["transitive"],
+        "origin": "greek"
+    }, {
+        "key": "pelagos",
+        "form-stem": "pelag",
+        "type": "noun",
+        "gloss": "open [sea]",
+        "tags": ["singleton", "concrete", "terrain"],
         "origin": "greek"
     }, {
         "key": "peripatein",

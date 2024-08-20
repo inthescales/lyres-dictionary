@@ -734,7 +734,6 @@
                     "follows": {
                         "and": [
                             { "has-type": "noun" },
-                            { "has-tag": "abstract" },
                             { "has-tag": "state" }
                         ]
                     }

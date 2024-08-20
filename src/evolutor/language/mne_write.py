@@ -323,7 +323,7 @@ def from_me_phonemes(phonemes, config):
                 and prev and prev.value == "i":
                 # /izəj/ check handles cases like 'dizzy'. cf. 'busy'
                 result += "z"
-            elif is_final and prev and prev.value == "r":
+            elif is_final and prev and prev.value in ["n", "r"]:
                 result += "se"
             else:
                 result += "s"
