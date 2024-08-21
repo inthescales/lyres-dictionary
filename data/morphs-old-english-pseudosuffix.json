@@ -182,13 +182,13 @@
         "gloss": "[seller] of %pl",
         "requires": {
             "follows": {
-                "has-any-tags": ["concrete", "state"]
+                "has-any-tags": ["concrete", "mind-state"]
             }
         },
         "exception": [{
             "case": {
                 "follows": {
-                    "has-tag": "state"
+                    "has-tag": "mind-state"
                 }
             },
             "gloss": "one who provokes %pl",
@@ -219,10 +219,10 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
-        "gloss": "sick from %pl",
+        "gloss": "sick with %pl",
         "requires": {
             "follows": {
-                "has-tag": "state"
+                "has-tag": "mind-state"
             }
         },
         "origin": "old-english"
@@ -351,6 +351,21 @@
             }
         },
         "tags": ["rare"],
+        "origin": "old-english"
+    }, {
+        "key": "-worn",
+        "form-stem": "worn",
+        "form-final": "sick",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "worn out from %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-wurþ",

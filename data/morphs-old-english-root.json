@@ -284,7 +284,7 @@
         "type": "noun",
         "gloss": "[spite], [malice]",
         "gloss-alt": "injury",
-        "tags": ["mass", "abstract", "state", "quality", "speculative"],
+        "tags": ["mass", "abstract", "mind-state", "quality", "speculative"],
         "origin": "old-english"
     }, {
         "key": "apuldre",
@@ -1053,7 +1053,7 @@
         "type": "noun",
         "gloss": "bliss",
         "gloss-alt": ["[joy], [delight"],
-        "tags": ["mass", "abstract", "state", "obscure"],
+        "tags": ["mass", "abstract", "mind-state", "obscure"],
         "origin": "old-english"
     }, {
         "key": "blīþe",
@@ -1284,6 +1284,17 @@
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
+        "key": "caru",
+        "form-raw": "caru",
+        "form-raw-alt": ["ċearu"],
+        "form-canon": "care",
+        "type": "noun",
+        "gloss": "care",
+        "gloss-alt": ["worry"],
+        "tags": ["mass", "abstract", "mind-state"],
+        "origin": "old-english",
+        "notes": "Chosen form is Anglian. Could be 'mass' or 'count'"
+    }, {
         "key": "ċeap",
         "form-raw": "ċeap",
         "form-canon": "cheap",
@@ -1425,6 +1436,15 @@
         "type": "noun",
         "gloss": "cliff",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english"
+    }, {
+        "key": "clipian",
+        "form-raw": "clipi|an",
+        "form-raw-alt": ["cleopi|an"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[call] out, or [appeal]"],
+        "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "clot",
@@ -3251,7 +3271,7 @@
         "form-canon": "hate",
         "type": "noun",
         "gloss": "hatred",
-        "tags": ["mass", "abstract", "state"],
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "hladan",
@@ -3345,7 +3365,7 @@
         "form-canon": "how",
         "type": "noun",
         "gloss": ["sorrow", "anxiety", "trouble"],
-        "tags": ["count", "abstract", "state", "obscure"],
+        "tags": ["count", "abstract", "mind-state", "obscure"],
         "origin": "old-english"
     }, {
         "key": "holen",
@@ -4048,7 +4068,7 @@
         "form-canon": "love",
         "type": "noun",
         "gloss": "love",
-        "tags": ["mass", "abstract", "state"],
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "losian",
@@ -4085,7 +4105,7 @@
         "form-canon": "lust",
         "type": "noun",
         "gloss": "lust",
-        "tags": ["mass", "abstract", "state"],
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "lūtan",
@@ -4191,7 +4211,7 @@
         "form-canon": "maze",
         "type": "noun",
         "gloss": ["delusion", "confusion", "bewilderment"],
-        "tags": ["mass", "concrete", "state", "obscure"],
+        "tags": ["mass", "concrete", "mind-state", "obscure"],
         "origin": "old-english",
         "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
     }, {
@@ -4349,7 +4369,7 @@
         "type": "noun",
         "gloss": "strong [feeling]",
         "gloss-alt": ["[state] of mind", "[heart], [spirit]", "courage", "pride"],
-        "tags": ["count", "abstract", "state"],
+        "tags": ["count", "abstract", "mind-state"],
         "origin": "old-english",
         "notes": "Gloss chosen based on modern usage, and for ease of compounding (e.g. 'moody' = 'affected by a strong feeling'"
     }, {
@@ -4441,6 +4461,14 @@
         "tags": ["mass", "concrete", "material", "obscure"],
         "origin": "old-english",
         "notes": "Survives in 'pallbearer'"
+    }, {
+        "key": "pintel",
+        "form-raw": "pintel",
+        "form-canon": "pintle",
+        "type": "noun",
+        "gloss": "penis",
+        "tags": ["count", "concrete", "bodypart", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "pleġan",
         "form-raw": "pleġ|an",
@@ -4761,7 +4789,7 @@
         "form-canon": "shame",
         "type": "noun",
         "gloss": "shame",
-        "tags": ["mass", "abstract", "state"],
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "sċanca",
@@ -4886,7 +4914,7 @@
         "form-raw": "sċyld",
         "type": "noun",
         "gloss": ["guilt", "debt"],
-        "tags": ["mass", "abstract", "quality", "state", "speculative"],
+        "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english",
         "notes": "Should separate the 'state' tag only for the 'guilt' sense but let's play with it for now"
     }, {
@@ -5121,7 +5149,7 @@
         "type": "noun",
         "gloss": "sorrow",
         "gloss-alt": ["anxiety", "trouble"],
-        "tags": ["mass", "abstract", "state"],
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "swīfan-OE",
@@ -6387,7 +6415,7 @@
         "form-raw": "wlanc",
         "type": "noun",
         "gloss": "pride",
-        "tags": ["mass", "abstract", "state", "quality", "speculative"],
+        "tags": ["mass", "abstract", "mind-state", "quality", "speculative"],
         "origin": "old-english"
     }, {
         "key": "wlātian",
@@ -6430,7 +6458,7 @@
         "form-canon": "wode",
         "type": "noun",
         "gloss": "madness",
-        "tags": ["mass", "abstract", "state", "obscure"],
+        "tags": ["mass", "abstract", "mind-state", "obscure"],
         "origin": "old-english",
         "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
     }, {
@@ -6468,6 +6496,23 @@
         "gloss": "wolf",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
+    }, {
+        "key": "wrāþ",
+        "form-raw": "wrāþ",
+        "form-canon": "wroth",
+        "type": "adj",
+        "gloss": "angry",
+        "tags": ["obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "wrǣþþu",
+        "form-raw": "wrǣþþu",
+        "form-canon": "wrath",
+        "type": "noun",
+        "gloss": "anger",
+        "tags": ["mass", "abstract", "mind-state"],
+        "origin": "old-english",
+        "notes": "Comes out as 'wreth' for me. Seems to have to do with order of PCS/SVC"
     }, {
         "key": "wræc",
         "form-raw": "wræc",
@@ -6608,7 +6653,7 @@
         "form-raw": "wynn",
         "type": "noun",
         "gloss": "[joy], [delight]",
-        "tags": ["mass", "abstract", "state", "obscure"],
+        "tags": ["mass", "abstract", "mind-state", "obscure"],
         "origin": "old-english",
         "notes": "Occurs in 'winsome', leaving canonless though"
     }, {

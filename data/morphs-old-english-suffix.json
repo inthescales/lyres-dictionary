@@ -420,7 +420,7 @@
             }, {
                 "case": {
                     "follows": {
-                        "has-tag": "state"
+                        "has-tag": "mind-state"
                     }
                 },
                 "gloss": "affected by %sg"
@@ -763,7 +763,7 @@
                     "follows": {
                         "and": [
                             { "has-type": "noun" },
-                            { "has-tag": "state" }
+                            { "has-tag": "mind-state" }
                         ]
                     }
                 },
