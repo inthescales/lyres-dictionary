@@ -13,7 +13,7 @@ def generate_word(morphothec):
 
     if word.root_morph().has_tag("speculative"):
         bag = [
-            (0, 4) ,
+            (0, 3) ,
             (1, 1)
         ]
     elif word.root_morph().has_tag("obscure"):
@@ -23,8 +23,7 @@ def generate_word(morphothec):
         ]
     else:
         bag = [
-            (1, 5) #,
-            # (2, 3)
+            (1, 1)
         ]
     transform_count = helpers.choose_bag(bag)
     maximum_size = 3

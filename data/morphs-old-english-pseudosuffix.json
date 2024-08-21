@@ -1,5 +1,42 @@
 [
     {
+        "key": "-bound",
+        "form-stem": "bound",
+        "form-final": "bound",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "heading toward %sg",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["place", "concrete"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": { "has-tag": "place" }
+                }
+            },
+            "tags": ["rare"]
+        }],
+        "origin": "old-english"
+    }, {
+        "key": "-bryht",
+        "form-stem": "bright",
+        "form-final": "bright",
+        "form-raw": "bryht",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "as bright as %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "luminous"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-cot",
         "form-stem": "cote",
         "form-raw": "cot",
@@ -12,9 +49,16 @@
                 "has-tag": "animal"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": {"has-tag": "tame" }
+                }
+            },
+            "tags": ["count", "concrete", "man-made", "rare"]
+        }],
         "tags": ["count", "concrete", "man-made"],
-        "origin": "old-english",
-        "notes": "TODO: Apply only to tame animals"
+        "origin": "old-english"
     }, {
         "key": "-cræft",
         "form-stem": "craft",
@@ -60,15 +104,14 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "taking part in %@",
+        "gloss": "engaging in %@",
         "requires": {
             "follows": {
                 "has-tag": "activity"
             }
         },
         "tags": ["uncountable", "abstract"],
-        "origin": "old-english",
-        "notes": "TODO: Add the 'activity' tag to abstract nouns. Ex. 'warfare', 'chaffer'. Also consider 'drightfare' for another usage."
+        "origin": "old-english"
     }, {
         "key": "-ful",
         "form-stem": "ful",
@@ -91,6 +134,60 @@
             },
             "gloss": "having much %pl"
         }],
+        "origin": "old-english"
+    }, {
+        "key": "-ful-vessel",
+        "form-stem": "ful",
+        "form-final": "ful",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-mælum"],
+        "gloss": "as much as %sg holds",
+        "requires": {
+            "follows": {
+                "has-tag": "vessel"
+            }
+        },
+        "tags": ["count", "abstract", "measure"],
+        "origin": "old-english"
+    }, {
+        "key": "-hierde",
+        "form-stem": "herd",
+        "form-final": "herd",
+        "form-raw": "hierde",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "one who herds %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": {"has-tag": "tame" }
+                }
+            },
+            "tags": ["count", "concrete", "living", "person", "role", "rare"]
+        }],
+        "tags": ["count", "concrete", "living", "person", "role"],
+        "origin": "old-english"
+    }, {
+        "key": "-hȳd",
+        "form-stem": "hide",
+        "form-final": "hide",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "made from the hide of %sg",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["animal", "mammal"]
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-kyn",
@@ -119,6 +216,23 @@
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
+        "key": "-lād",
+        "form-stem": "load",
+        "form-final": "load",
+        "form-raw": "lād",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["-mælum"],
+        "gloss": "as much as %sg holds",
+        "requires": {
+            "follows": {
+                "has-tag": "vessel"
+            }
+        },
+        "tags": ["count", "abstract", "measure"],
+        "origin": "old-english"
+    }, {
         "key": "-lēas",
         "form-stem": "less",
         "form-raw": "lēas",
@@ -140,6 +254,36 @@
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english",
         "notes": "Older form '-leche'"
+    }, {
+        "key": "-lēoma",
+        "form-stem": "leam",
+        "form-raw": "lēoma",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "light of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "luminous"
+            }
+        },
+        "tags": ["singleton", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-liht",
+        "form-stem": "light",
+        "form-final": "light",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "light of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "luminous"
+            }
+        },
+        "tags": ["singleton", "abstract"],
+        "origin": "old-english"
     }, {
         "key": "-maker",
         "form-stem": "maker",
@@ -172,6 +316,29 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "-mælum",
+        "form-stem": "meal",
+        "form-final": "meal",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "one %!sg at a time",
+        "requires": {
+            "follows": {
+                "has-tag": "count"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": { "has-tag": "measure" }
+                }
+            },
+            "tags": ["rare"]
+        }],
+        "origin": "old-english"
+    }, {
         "key": "-mangere",
         "form-stem": "monger",
         "form-raw": "mangere",
@@ -182,7 +349,10 @@
         "gloss": "[seller] of %pl",
         "requires": {
             "follows": {
-                "has-any-tags": ["concrete", "mind-state"]
+                "and": [
+                    { "has-any-tags": ["concrete", "mind-state"] },
+                    { "not": { "has-tag": "person" } }
+                ]
             }
         },
         "exception": [{
@@ -192,9 +362,9 @@
                 }
             },
             "gloss": "one who provokes %pl",
-            "tags": ["uncountable", "concrete", "living", "person", "rare"]
+            "tags": ["uncountable", "concrete", "living", "person"]
         }],
-        "tags": ["count", "concrete", "living", "person", "rare"],
+        "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
         "key": "-pleġe",
@@ -227,20 +397,65 @@
         },
         "origin": "old-english"
     }, {
-        "key": "-scin-adj",
+        "key": "-scīn",
+        "form-stem": "shine",
+        "form-final": "shine",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "shining light of %sg",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["luminous", "metallic", "shiny"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "shiny"
+                }
+            },
+            "gloss": "shine of light on %pl"
+        }],
+        "tags": ["singleton", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-scīn-2",
+        "form-stem": "shine",
+        "form-final": "shine",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "[power] or [influence] of %sg",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["divine", "magical"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "divine"
+                }
+            },
+            "gloss": "[radiance] of %sg"
+        }],
+        "tags": ["mass", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-scinn",
         "form-stem": "skin",
-        "form-raw": "scin",
+        "form-final": "skin",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "gloss": "made from the hide of %sg",
+        "gloss": "made from the skin of %sg",
         "requires": {
             "follows": {
                 "has-tag": "animal"
             }
         },
-        "origin": "old-english",
-        "notes": "TODO: consider adding noun version: 'the hide of %sg'"
+        "origin": "old-english"
     }, {
         "key": "-smiþ",
         "form-stem": "smith",
@@ -347,15 +562,22 @@
         "gloss": "toward %sg",
         "requires": {
             "follows": {
-                "has-tag": "concrete"
+                "has-any-tags": ["place", "concrete"]
             }
         },
-        "tags": ["rare"],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": { "has-tag": "place" }
+                }
+            },
+            "tags": ["rare"]
+        }],
         "origin": "old-english"
     }, {
         "key": "-worn",
         "form-stem": "worn",
-        "form-final": "sick",
+        "form-final": "worn",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",

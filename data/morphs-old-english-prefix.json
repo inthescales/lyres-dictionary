@@ -40,6 +40,30 @@
         "origin": "old-english",
         "notes": "TODO: no-gen until I figure out how to use this better"
     }, {
+        "key": "new-",
+        "form-stem": "new-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "newly %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "fresh-",
+        "form-stem": "fresh-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "freshly %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "well-",
         "form-stem": "well-",
         "type": "prefix",
@@ -152,6 +176,22 @@
             "tags": ["count", "concrete", "living", "person", "role", "rare"]
         }],
         "tags": ["count", "concrete", "living", "person", "role"],
+        "origin": "old-english"
+    }, {
+        "key": "she-",
+        "form-stem": "she-",
+        "type": "prefix",
+        "prefix-on": "noun",
+        "gloss": "female %@",
+        "requires": {
+            "precedes": {
+                "and": [
+                    {"has-tag": "animal" },
+                    { "not": { "has-tag": "gendered" }}
+                ]
+            }
+        },
+        "tags": ["count", "concrete", "living", "animal", "gendered"],
         "origin": "old-english"
     }
 ]

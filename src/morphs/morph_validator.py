@@ -54,6 +54,9 @@ valid_tags = [
     "bounded",                  # Noun actuality - optionally for abstracts, does it have a bounded aspect (e.g. a length of time)
     "living",                   # Noun semantics - a living being
     "animal",                   # Noun semantics - an animal
+    "tame",                     # Noun semantics - a tame animal
+    "wild",                     # Noun semantics - a wild animal
+    "mammal",                   # Noun semantics - a mammal
     "plant",                    # Noun semantics - a plant
     "person",                   # Noun semantics - a kind of person
     "gendered",                 # Noun semantics - unchangeably gendered
@@ -68,22 +71,28 @@ valid_tags = [
     "garment",                  # Noun semantics - a garment, or anything that is worn on the body
     "man-made",                 # Noun semantics - something made by humans
     "metallic",                 # Noun semantics - an object made from metal
+    "shiny",                    # Noun semantics - reflects light
     "tool",                     # Noun semantics - a tool
     "weapon",                   # Noun semantics - a weapon
+    "vessel",                   # Noun semantics - a vessel (containers and boats)
     "material",                 # Noun semantics - a material things can be made out of
     "food",                     # Noun semantics - a food or ingredient of food
     "metal",                    # Noun semantics - a metal
     "fluid",                    # Noun semantics - a fluid, like a liquid or gas
     "liquid",                   # Noun semantics - a liquid
     "gas",                      # Noun semantics - a gas
+    "luminous",                 # Noun semantics - emits light (or shines)
     "region",                   # Noun semantics - a region
     "terrain",                  # Noun semantics - a type of land
+    "place",                    # Noun semantics - a specific place (e.g. hell, home, the sky)
     "grouping",                 # Noun semantics - a group or collection of things
     "color",                    # Noun semantics - a color
     "shape",                    # Noun semantics - a shape
     "quality",                  # Noun semantics - an abstract quality
     "mind-state",               # Noun semantics - a mental or emotional state
+    "activity",                 # Noun semantics - an activity that a person can undertake
     "time",                     # Noun semantics - a period of time
+    "measure",                  # Noun semantics - a unit of measure
     "tree",                     # Noun semantics - a kind of tree
     "number",                   # Noun semantics - a number (used as a noun)
     "superlative",              # Adjective morphology - a superlative
