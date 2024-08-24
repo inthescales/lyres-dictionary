@@ -34,7 +34,7 @@
         "form-canon": "ache",
         "type": "noun",
         "gloss": "ache",
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "body-state"],
         "origin": "old-english"
     }, {
         "key": "æċed",
@@ -231,7 +231,7 @@
         "form-canon": "addle",
         "type": "noun",
         "gloss": "[disease], [sickness]",
-        "tags": ["count", "abstract", "quality"],
+        "tags": ["count", "abstract", "body-state", "quality"],
         "origin": "old-english"
     }, {
         "key": "āfor",
@@ -783,7 +783,7 @@
         "form-raw": "bēot",
         "type": "noun",
         "gloss": ["promise", "boast"],
-        "tags": ["count", "abstract", "man-made", "obscure"],
+        "tags": ["count", "abstract", "man-made", "obscure", "homophonic"],
         "origin": "old-english",
         "notes": "Wiktionary indicates a modern descendent of the same form, but I'm suspicious"
     }, {
@@ -791,10 +791,10 @@
         "form-raw": "bēoti|an",
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["vow", "promise", "boast", "threaten"],
+        "gloss": ["vow", "promise", "threaten"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Needs bitransitivity"
+        "notes": "Needs bitransitivity. Also sense 'boast'"
     }, {
         "key": "bera",
         "form-raw": "bera",
@@ -907,13 +907,20 @@
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "snytro",
+        "form-raw": "snytro",
+        "type": "noun",
+        "gloss": "[prudence], [wisdom]",
+        "tags": ["mass", "abstract", "quality", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "bētan",
         "form-raw": "bēt|an",
         "form-canon": "beet",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["improve", "atone", "[make] a fire"],
-        "tags": ["transitive", "obscure"],
+        "tags": ["transitive", "obscure", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "bīdan",
@@ -1143,6 +1150,14 @@
         "verb-class": "weak",
         "gloss": "bring",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "broc",
+        "form-raw": "broc",
+        "form-canon": "brock",
+        "type": "noun",
+        "gloss": "badger",
+        "tags": ["count", "concrete", "living", "animal", "wild", "obscure"],
         "origin": "old-english"
     }, {
         "key": "brōþor",
@@ -1543,6 +1558,22 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "cwalm",
+        "form-raw": "cwalm",
+        "form-canon": "qualm",
+        "type": "noun",
+        "gloss": ["[feeling] of apprehension or doubt"],
+        "tags": ["count", "abstract", "mind-state"],
+        "origin": "old-english"
+    }, {
+        "key": "cwalm-OE",
+        "form-raw": "cwalm",
+        "type": "noun",
+        "gloss": ["[plague], [pestilence]", "destruction"],
+        "tags": ["mass", "abstract", "speculative", "homophonic"],
+        "origin": "old-english",
+        "notes": "Represents OE sens, where base morph represents modern usage. Separate for tags."
+    }, {
         "key": "cweċċan",
         "form-raw": "cweċċ|an",
         "form-participle-raw": "cweaht",
@@ -1573,6 +1604,16 @@
         "gloss": "[subdue] or [silence]",
         "gloss-alt": "[kill] or [destroy]",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "cwem|an",
+        "form-raw": "cwem|an",
+        "form-canon": "queme",
+        "form-participle-canon": ["quemed"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[please] or [satisfy]",
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "cwēn",
@@ -1617,6 +1658,21 @@
         "type": "adj",
         "gloss": "fast",
         "gloss-alt": "living",
+        "origin": "old-english"
+    }, {
+        "key": "cwide",
+        "form-raw": "cwide",
+        "type": "noun",
+        "gloss": "[saying] or [proverb]",
+        "gloss-alt": ["sentence"],
+        "tags": ["count", "abstract", "man-made", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "cwild",
+        "form-raw": "cwild",
+        "type": "noun",
+        "gloss": ["[plague], [pestilence]", "destruction"],
+        "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "cȳme",
@@ -1857,6 +1913,13 @@
         "verb-class": 3,
         "gloss": "drink",
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "drōf",
+        "form-raw": "drōf",
+        "type": "adj",
+        "gloss": ["[troubled], [disturbed]", "turbid"],
+        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "drohtnian",
@@ -2920,6 +2983,13 @@
         "tags": ["count", "concrete", "shiny", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "gidiġ",
+        "form-raw": "gid+iġ",
+        "form-raw-alt": ["gyd+iġ"],
+        "type": "adj",
+        "gloss": "giddy",
+        "origin": "old-english"
+    }, {
         "key": "ġiefan",
         "form-raw": "ġief|an",
         "form-raw-alt": ["ġif|an", "ġeof|an"],
@@ -3072,6 +3142,15 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "gremman",
+        "form-raw": ["gremm|an", "gremi|an"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[anger], [provoke]", "annoy"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english",
+        "notes": "This morph may combine two related words"
+    }, {
         "key": "grim",
         "form-raw": "grim",
         "form-canon": "grim",
@@ -3125,6 +3204,28 @@
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "grornian",
+        "form-raw": "grorni|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["mourn", "murmur"],
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "gryre",
+        "form-raw": "gryre",
+        "type": "noun",
+        "gloss": "[fright], [terror]",
+        "tags": ["mass", "abstract", "mind-state", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "gryre-adj",
+        "form-raw": "gryre",
+        "type": "adj",
+        "gloss": "terrifying",
+        "tags": ["speculative"],
+        "origin": "old-english"
+    }, {
         "key": "guma",
         "form-raw": "guma",
         "form-canon": "groom",
@@ -3140,6 +3241,13 @@
         "type": "noun",
         "gloss": "war",
         "tags": ["mass", "abstract", "activity", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ġyċċe",
+        "form-raw": "ġyċċe",
+        "type": "noun",
+        "gloss": "itch",
+        "tags": ["count", "abstract", "body-state"],
         "origin": "old-english"
     }, {
         "key": "gyd+en",
@@ -3164,6 +3272,20 @@
         "gloss": "[place] of safety",
         "gloss-alt": "harbor",
         "tags": ["count", "concrete", "terrain", "place"],
+        "origin": "old-english"
+    }, {
+        "key": "hæft-person",
+        "form-raw": "hæft",
+        "type": "noun",
+        "gloss": "[captive] or [prisoner]",
+        "tags": ["count", "concrete", "living", "person", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hæft-state",
+        "form-raw": "hæft",
+        "type": "noun",
+        "gloss": "[captivity], [imprisonment]",
+        "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hǣman",
@@ -3450,6 +3572,14 @@
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "hocor",
+        "form-raw": "hocor",
+        "type": "noun",
+        "gloss": "[mockery], [scorn]",
+        "tags": ["mass", "abstract", "activity", "speculative"],
+        "origin": "old-english",
+        "notes": "Bosworth has the initial 'o' as long, while OED says 'the o is of doubtful length, but probably short'. Going with short for variety, since long produces 'hooker'"
+    }, {
         "key": "hogu",
         "form-raw": "hogu",
         "form-canon": "how",
@@ -3683,6 +3813,21 @@
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
+        "key": "husċ",
+        "form-raw": ["husċ", "hux"],
+        "type": "noun",
+        "gloss": "[insult], [scorn], or [scoffing]",
+        "tags": ["mass", "abstract", "activity", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hysċan",
+        "form-raw": ["hysċ|an", "hyx|an", "hyh|an"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[mock] or [deride]",
+        "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "hwǣte",
         "form-raw": "hwǣte",
         "form-canon": "wheat",
@@ -3698,6 +3843,16 @@
         "gloss": "puppy",
         "tags": ["count", "concrete", "living", "tame", "animal", "mammal"],
         "origin": "old-english"
+    }, {
+        "key": "hwirfan",
+        "form-raw": "hwirf|an",
+        "form-raw-alt": ["hwærf|an", "hwerf|an", "hwearf|an", "hwyrf|an"],
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[turn] or [revolve]", "[move] about"],
+        "tags": ["intransitive", "speculative"],
+        "origin": "old-english",
+        "notes": "TODO: Add related words like 'behwirfan' with meaning 'barter'"
     }, {
         "key": "hwīt",
         "form-raw": "hwīt",
@@ -3782,6 +3937,14 @@
         "verb-class": "weak",
         "gloss": "[be] idle",
         "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "ilfiġ",
+        "form-raw": "ilf+iġ",
+        "form-raw-alt": ["ylf+iġ"],
+        "type": "adj",
+        "gloss": "[mad], [frantic]",
+        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "iġil",
@@ -4498,12 +4661,21 @@
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
         "origin": "old-english"
     }, {
+        "key": "nēd",
+        "form-raw": "nēd",
+        "form-raw-alt": ["nēad", "nȳd"],
+        "type": "noun",
+        "gloss": "need",
+        "gloss-alt": ["distress"],
+        "tags": ["mass", "abstract", "mind-state"],
+        "origin": "old-english"
+    }, {
         "key": "nēdl",
         "form-raw": "nēdl",
         "form-raw-alt": ["nǣdl", "nēþl"],
         "form-canon": "needle",
         "type": "noun",
-        "gloss": "needl",
+        "gloss": "needle",
         "gloss-tool": ["[sew] or [embroider]", "[pierce] with a needle"],
         "tags": ["count", "concrete", "man-made", "tool", "metallic"],
         "origin": "old-english"
@@ -4713,7 +4885,7 @@
         "form-raw": "rāp",
         "form-canon": "rope",
         "type": "noun",
-        "gloss": "speak",
+        "gloss": "rope",
         "gloss-tool": ["[tie] with rope", "[catch] with a rope"],
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
@@ -4980,6 +5152,13 @@
         "tags": ["mass", "concrete", "living", "bodypart", "material"],
         "origin": "old-english"
     }, {
+        "key": "sċop",
+        "form-raw": "sċop",
+        "type": "noun",
+        "gloss": "poet",
+        "tags": ["count", "concrete", "living", "person", "role", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "sċrīfan",
         "form-raw": "sċrīf|an",
         "form-canon": "shrive",
@@ -5151,7 +5330,7 @@
         "form-participle-canon": ["sied"],
         "type": "verb",
         "verb-class": 5,
-        "gloss": ["strain (as with a strainer)", "[stain] by dripping liquid"],
+        "gloss": ["[strain] (as with a strainer)", "[stain] by dripping liquid"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -5230,14 +5409,14 @@
         "form-raw": "sogoþa",
         "type": "noun",
         "gloss": "hiccup",
-        "tags": ["count", "abstract", "speculative"],
+        "tags": ["count", "abstract", "body-state", "speculative"],
         "origin": "old-english"
     }, {
         "key": "sogoþa-mass",
         "form-raw": "sogoþa",
         "type": "noun",
         "gloss": "heartburn",
-        "tags": ["mass", "abstract", "speculative"],
+        "tags": ["mass", "abstract", "body-state", "speculative"],
         "origin": "old-english",
         "notes": "This usage seems to be uncertain"
     }, {
@@ -5401,6 +5580,17 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
+        "key": "spyrian",
+        "form-raw": "spyri|an",
+        "form-raw-alt": ["spiri|an"],
+        "form-canon": "speer",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["track", "[investigate] or [examine]"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english",
+        "notes": "Canon form based on Scottish usage, which I believe is plausible in Midlands as well. Some other similar senses."
+    }, {
         "key": "stān",
         "form-raw": "stān",
         "form-canon": "stone",
@@ -5531,6 +5721,13 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "swamm",
+        "form-raw": "swamm",
+        "type": "noun",
+        "gloss": ["[mushroom], [fungus]", "sponge"],
+        "tags": ["count", "concrete", "living", "plant", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "swan",
         "form-raw": "swan",
         "form-canon": "swan",
@@ -5631,6 +5828,14 @@
         "verb-class": 3,
         "gloss": ["die", "faint", "[be] overcome (as with emotion, heat, etc.)"],
         "tags": ["intransitive", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "swenċan",
+        "form-raw": "swenċ|an",
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": ["[cause] to work", "[harass], [vex]"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "swīcan",
@@ -5759,7 +5964,7 @@
         "form-raw": "timber",
         "form-canon": "timber",
         "type": "noun",
-        "gloss": "building",
+        "gloss": "[building] (esp. of wood)",
         "tags": ["count", "concrete", "man-made", "speculative"],
         "origin": "old-english"
     }, {
@@ -6041,6 +6246,13 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "þyld",
+        "form-raw": "þyld",
+        "type": "noun",
+        "gloss": ["patience", "endurance"],
+        "tags": ["mass", "abstract", "quality", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "þwēan",
         "form-raw": "þwē|an",
         "form-participle-raw": ["þwæġ+en", "þwag+en", "þweġ+en"],
@@ -6146,7 +6358,7 @@
         "form-canon": "wark",
         "type": "noun",
         "gloss": "[pain], [ache]",
-        "tags": ["count", "abstract", "obscure"],
+        "tags": ["count", "abstract", "body-state", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wæx",
@@ -6407,9 +6619,16 @@
         "form-canon": "wife",
         "type": "noun",
         "gloss": "wife",
+        "gloss-alt": ["woman"],
         "tags": ["count", "concrete", "living", "person", "gendered"],
-        "origin": "old-english",
-        "notes": "Original meaning 'woman'"
+        "origin": "old-english"
+    }, {
+        "key": "wīġ",
+        "form-raw": "wīġ",
+        "type": "noun",
+        "gloss": "war",
+        "tags": ["mass", "abstract", "activity", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "wiċċe",
         "form-raw": "wiċċa",
@@ -6434,7 +6653,7 @@
         "type": "noun",
         "gloss": "trickery",
         "gloss-alt": ["sorcery", "divination"],
-        "tags": ["mass", "abstract", "man-made", "speculative"],
+        "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
         "origin": "old-english",
         "notes": "Unclear whether the two senses should be combined or separate. See OED's discussion at 'wile' vs 'wiel'"
     }, {
@@ -6482,7 +6701,7 @@
         "form-raw": "wīte",
         "type": "noun",
         "gloss": "[torment] or [punishment]",
-        "tags": ["mass", "abstract", "man-made", "speculative"],
+        "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
         "origin": "old-english",
         "notes": "TODO: Add count sense 'penalty, fine'"
     }, {
@@ -6536,10 +6755,16 @@
         "key": "wlite",
         "form-raw": "wlite",
         "type": "noun",
-        "gloss": ["[looks], [appearance]", "good [looks]"],
+        "gloss": "[aspect] or [appearance]",
         "tags": ["mass", "abstract", "speculative", "homophonic"],
-        "origin": "old-english",
-        "notes": "TODO: Break apart senses so I can give 'good looks' the quality tag"
+        "origin": "old-english"
+    }, {
+        "key": "wlite-good-looks",
+        "form-raw": "wlite",
+        "type": "noun",
+        "gloss": "good [looks]",
+        "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
+        "origin": "old-english"
     }, {
         "key": "wōd-adj",
         "form-raw": "wōd",
@@ -6570,6 +6795,13 @@
         "gloss": "woo",
         "gloss-alt": ["marry"],
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "wōl",
+        "form-raw": "wōl",
+        "type": "noun",
+        "gloss": "[plague], [pestilence]",
+        "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "wolcen-count",

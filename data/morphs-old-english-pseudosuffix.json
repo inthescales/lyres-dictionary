@@ -173,7 +173,7 @@
             },
             "tags": ["count", "concrete", "living", "person", "role", "rare"]
         }],
-        "tags": ["count", "concrete", "living", "person", "role"],
+        "tags": ["uncountable", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
         "key": "-hȳd",
@@ -406,16 +406,16 @@
         "gloss": "shining light of %sg",
         "requires": {
             "follows": {
-                "has-any-tags": ["luminous", "metallic", "shiny"]
+                "has-any-tags": ["luminous", "metal", "metallic", "shiny"]
             }
         },
         "exception": [{
             "case": {
                 "follows": {
-                    "has-tag": "shiny"
+                    "has-any-tags": ["metal", "metallic", "shiny"]
                 }
             },
-            "gloss": "shine of light on %pl"
+            "gloss": "shine of light on %sg"
         }],
         "tags": ["singleton", "abstract"],
         "origin": "old-english"

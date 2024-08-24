@@ -59,6 +59,14 @@
         "origin": "old-english",
         "notes": "'sylfer' is Anglian form, 'seolfor' WS"
     }, {
+        "key": "cwild-tīd",
+        "form-raw": "cwild-tīd",
+        "type": "noun",
+        "gloss": "evening",
+        "tags": ["count", "abstract", "speculative"],
+        "origin": "old-english",
+        "notes": "Could be tagged 'time' and 'time-of-day', but don't want to duplicate suffixes"
+    }, {
         "key": "drenċ-hūs",
         "form-raw": "drenċ-hūs",
         "type": "noun",

@@ -286,7 +286,7 @@
                     "follows": {
                         "or": [
                             { "has-suffix": "e" },
-                            { "has-suffix": ["el", "en", "ld", "nd", "ow"] }
+                            { "has-suffix": ["el", "en", "ld", "nd", "om", "ow"] }
                         ]
                     }
                 },
