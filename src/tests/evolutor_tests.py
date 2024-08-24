@@ -964,6 +964,23 @@ class EvolutorTests(unittest.TestCase):
 
         # hþ -> þ
         check("fyrhþ", "frith")
+
+        # Dropping initial /j/ before /i/
+        check("ġiċċe", "itch")
+        check("ġicol", "ickle")
+
+        # ... but not in some cases
+        check("ġief|an", "yive")
+
+        # Insert dissimilating consonants
+        # TODO: add tests here
+        # - 'ml' -> 'mbl' (as in 'nimble')
+        # - 'mr' -> 'mbr' (as in 'ember')
+        # - 'nl' -> 'ndl' (as in 'spindle')
+        # - 'nr' -> 'ndr'
+
+        # Excrescent consonants
+        check("þum", "thumb")
     
         return [total, failures]
 

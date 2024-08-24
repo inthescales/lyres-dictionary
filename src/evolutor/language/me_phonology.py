@@ -451,6 +451,13 @@ def from_oe_phonemes(oe_phonemes, config):
         elif state.joined in ["nl", "nr"]:
             return [state.capture[0], Phoneme("d", template=state.capture[0]), state.capture[1]]
 
+    # Addition of unetymological consonants
+    def additional_excrescences(state):
+        if state.current.value == "m" \
+            and state.prev and state.prev.value == "u" \
+            and not state.next:
+            return[state.current, Phoneme("b")]
+
     # Cases of reanalysis
     # TODO: Consider plural reanalysis dropping other final 's's
     # TODO: Add loss of initial 'n' as in 'nadder' -> 'adder', 'napron' -> 'apron'
@@ -517,5 +524,6 @@ def from_oe_phonemes(oe_phonemes, config):
     # Later sound changes
     rig.run_capture(reanalysis, 1, "Reanalysis", config)
     rig.run_capture(dissimilating_insertion, 2, "Dissimilation insertions", config)
+    rig.run_capture(additional_excrescences, 1, "Additional excrescences", config)
 
     return rig.phonemes
