@@ -89,6 +89,7 @@ valid_tags = [
     "color",                    # Noun semantics - a color
     "shape",                    # Noun semantics - a shape
     "quality",                  # Noun semantics - an abstract quality
+    "body-state",               # Noun semantics - a bodily condition
     "mind-state",               # Noun semantics - a mental or emotional state
     "activity",                 # Noun semantics - an activity that a person can undertake
     "time",                     # Noun semantics - a period of time

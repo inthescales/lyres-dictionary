@@ -380,6 +380,7 @@ def from_oe_phonemes(oe_phonemes, config):
             and not (state.capture[0].is_liquid() and state.capture[1].is_fricative()) \
             and not (state.capture[0].is_liquid() and state.capture[1].is_nasal()) \
             and not (state.capture[0].is_liquid() and state.capture[1].is_plosive()) \
+            and not (state.capture[0].is_liquid() and state.capture[1].is_semivowel() and len(state.following) > 1) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_fricative()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_nasal()) \
             and not (state.capture[0].is_semivowel() and state.capture[1].is_plosive()) \

@@ -2417,6 +2417,15 @@
         "origin": "old-english",
         "notes": "WS 'fiellan' accords best with modern form. 'fællan' is Anglian, 'fyllan' is LWS"
     }, {
+        "key": "firgen",
+        "form-raw": "firgen",
+        "form-raw-alt": ["fyrgen", "firing", "firgin"],
+        "type": "noun",
+        "gloss": "mountain [forest]",
+        "tags": ["count", "concrete", "terrain", "speculative"],
+        "origin": "old-english",
+        "notes": "Following Wiktionary in with non-palagal 'g'"
+    }, {
         "key": "fisċ",
         "form-raw": "fisċ",
         "form-canon": "fish",
@@ -2670,6 +2679,13 @@
         "form-canon": "full",
         "type": "adj",
         "gloss": "full",
+        "origin": "old-english"
+    }, {
+        "key": "furh",
+        "form-raw": "furh",
+        "type": "noun",
+        "gloss": "pine [tree]",
+        "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
         "key": "fyhtan",

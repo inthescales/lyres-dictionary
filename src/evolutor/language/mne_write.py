@@ -244,8 +244,9 @@ def from_me_phonemes(phonemes, config):
                 # Also influenced by Crowley's handling of 'ambeht' -> 'ambight' I suppose
                 result += "i"
             elif not next2:
+                # See evolutor tests for discussion
                 if next1.value in ["m", "n", "w"] \
-                    and prev and prev.value != "v" \
+                    and prev and prev.value not in ["v", "w"] \
                     and not would_have_inserted_lengthening_e:
                     # Words ending in 'm', 'n', or 'w' usually take 'o'
                     result += "o"
@@ -401,7 +402,7 @@ def from_me_phonemes(phonemes, config):
             if phone.value == "k":
                 result = result[:-1] + "ck"
             elif not (phone.value == "z" and len(result) and result[-1] == "s") \
-                and phone.value not in ["x", "ks", "dʒ", "tʃ"]:
+                and phone.value not in ["w", "x", "ks", "dʒ", "tʃ"]:
                 result += result[-1]
         elif is_final and result[-1] != "e" \
             and ( \

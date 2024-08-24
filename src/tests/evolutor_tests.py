@@ -816,8 +816,15 @@ class EvolutorTests(unittest.TestCase):
         check("hræfn", "raven")
         check("ofen", "oven")
 
-        # ... I think we want to leave it if there's a non-digraphic long vowel in the preceding syllable
+        # ...as well as 'w'
+        # NOTE: There are no modern examples of this either way that I'm aware of, but it fits 'morgen' -> ME 'morwen' (though
+        # this is complicated by the loss of 'n' / 'we' in different cases). Anyway lacking hard evidence, call it a
+        # stylistic decision
+        check("morgen", "morwen") #*
+
+        # ... and we also want to use 'e' if the preceding syllable has a vowel that requires a lengthening 'e'
         check("open", "open")
+        check("tācen", "token")
 
         # ...forms incorporating a derivational ending with a vowel should maintain that spelling
         check("bast+ard", "bastard")
