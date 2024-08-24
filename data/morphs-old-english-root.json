@@ -2897,10 +2897,11 @@
         "notes": "Chosen form is Anglian. Root is ancestor of modern 'yelp', but labeling speculative due to different meaning. Additional sense of 'a boast'."
     }, {
         "key": "ġiċel",
-        "form-raw": "ġiċel",
+        "form-raw": ["ġiċel", "ġicol"],
+        "form-canon": "ickle",
         "type": "noun",
         "gloss": "icicle",
-        "tags": ["count", "concrete", "speculative"],
+        "tags": ["count", "concrete", "shiny", "obscure"],
         "origin": "old-english"
     }, {
         "key": "ġiefan",

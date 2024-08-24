@@ -17,6 +17,7 @@ def from_oe_phonemes(oe_phonemes, config):
         elif state.current.value == "ɣɣ":
             return [Phoneme("gg", template=state.current)]
 
+
     # The 'ċġ' digraph is represented phonemically as /dʒ/ in this system. However, there are
     # cases where it resolves as /j/ in MnE, as in 'seċġan' -> 'say' and 'leċġan' -> 'lay'.
     # This is an attempt to capture these cases, in distinction against cases like 'edge',
@@ -399,6 +400,22 @@ def from_oe_phonemes(oe_phonemes, config):
             and "".join(x.value for x in state.following[:3]) in ["dər", "ðər"]:
             return [Phoneme("o" , state.capture[0])]
 
+    # Initial /j/ disappears before /i/ in some cases.
+    # See 'ġicol' -> 'ickle', 'ġiċċe' -> 'itch', vs 'ġifan' -> 'yive'
+    def drop_initial_palatal_g(state):
+        if state.current.value == "j" \
+            and not state.prev \
+            and state.next and state.next.value == "i":
+
+            # This is a rather arbitrary mixing of orthographic concerns with phonetic, since
+            # in the examples I'm aware of the 'y' dropping corresponds with cases where the
+            # following consonant demands a silent 'e'.
+            #
+            # I'll change this if I find contradictory cases, but for now I can accept it as a
+            # stylistic decision if nothing else. Consider also using a hinge here.
+            if not (len(state.following) >= 2 and state.following[1].value in ["ð", "v", "z"]):
+                return []
+
     # Forced metathesis between 'r' and neighboring vowels
     # 'r' and a neighboring vowel often switch places within OE: e.g.: 'brid'/'bird', 'fyrht'/'fryht', 'byrht', 'bright'
     # We see at least some cases of both (e.g. 'bird' vs 'bride'). However, in some cases we may want to force the
@@ -492,6 +509,7 @@ def from_oe_phonemes(oe_phonemes, config):
     # Assorted sound-specific changes
     rig.run_capture(d_ð_alternation, 3, "d/ð alternation", config)
     rig.run_capture(shorten_o_before_dðer, 1, "shorten ō before -[d|ð]er ", config)
+    rig.run_capture(drop_initial_palatal_g, 1, "Drop initial palatal g", config)
 
     # Loss of final unstressed vowel
     rig.run_capture(loss_of_final_unstressed_vowel, 1, "Loss of final unstressed vowel", config)
