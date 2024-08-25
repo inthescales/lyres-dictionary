@@ -19,7 +19,7 @@
         "form-raw": "ǣdre",
         "type": "noun",
         "gloss": "[river] or [channel]",
-        "tags": ["count", "concrete", "terrain", "speculative"],
+        "tags": ["count", "concrete", "terrain", "liquid", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ǣdre-quick",
@@ -256,7 +256,7 @@
         "form-raw-alt": ["ambiht", "ambyht"],
         "type": "noun",
         "gloss": "[office] or [ministry]",
-        "tags": ["count", "abstract", "speculative"],
+        "tags": ["count", "abstract", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ambeht-person",
@@ -406,7 +406,7 @@
         "type": "noun",
         "gloss": ["[poison], [venom]", "corrupt [matter] or [pus]"],
         "gloss-alt": "[gall], [bitterness]",
-        "tags": ["mass", "concrete", "liquid", "secretion", "obscure"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "obscure"],
         "origin": "old-english"
     }, {
         "key": "āþ",
@@ -588,7 +588,7 @@
         "form-raw-alt": ["balu", "bealo"],
         "form-canon": "bale",
         "type": "noun",
-        "gloss": ["[harm] or [evil]"],
+        "gloss": "[harm] or [evil]",
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
@@ -673,6 +673,25 @@
         "gloss": "bellow",
         "gloss-alt": ["[swell] with anger", "[be] angry"],
         "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
+        "key": "belġ",
+        "form-raw": "belġ",
+        "form-raw-alt": ["bælġ", "beliġ", "bylg", "byliġ"],
+        "form-canon": "belly",
+        "type": "noun",
+        "gloss": "belly",
+        "tags": ["count", "concrete", "bodypart", "vessel"],
+        "origin": "old-english"
+    }, {
+        "key": "belġ-bag",
+        "form-raw": "belġ",
+        "form-raw-alt": ["bælġ", "beliġ", "bylg", "byliġ"],
+        "form-canon": "belly",
+        "type": "noun",
+        "gloss": "bag",
+        "gloss-tool": ["[put] in a bag"],
+        "tags": ["count", "concrete", "man-made", "tool", "vessel", "speculative"],
         "origin": "old-english"
     }, {
         "key": "bellan",
@@ -947,7 +966,7 @@
         "form-raw": "bliss",
         "type": "noun",
         "gloss": "bliss",
-        "gloss-alt": ["[joy], [delight"],
+        "gloss-alt": "[joy], [delight",
         "tags": ["mass", "abstract", "mind-state", "obscure"],
         "origin": "old-english"
     }, {
@@ -1015,7 +1034,7 @@
         "form-raw": "brim",
         "type": "noun",
         "gloss": "sea",
-        "tags": ["singleton", "concrete", "terrain", "shiny"],
+        "tags": ["singleton", "concrete", "terrain", "liquid", "shiny"],
         "origin": "old-english"
     }, {
         "key": "bringan",
@@ -1625,7 +1644,7 @@
         "form-canon": "kin",
         "type": "noun",
         "gloss": "family",
-        "tags": ["mass", "abstract", "living", "person", "gendered"],
+        "tags": ["mass", "abstract", "living", "person", "grouping", "gendered"],
         "origin": "old-english",
         "notes": "Alt. meanings I don't feel like including right now. 'gendered' tag just because I don't want to add gender suffixes."
     }, {
@@ -1847,7 +1866,7 @@
         "form-raw": "dryht",
         "type": "noun",
         "gloss": ["[army] or [troop]", "large [crowd]"],
-        "tags": ["count", "concrete", "living"],
+        "tags": ["count", "concrete", "living", "grouping"],
         "origin": "old-english"
     }, {
         "key": "dufa",
@@ -1954,6 +1973,15 @@
         "tags": ["count", "abstract", "man-made"],
         "origin": "old-english"
     }, {
+        "key": "dyrne",
+        "form-raw": "dyrne",
+        "form-canon": "dern",
+        "type": "noun",
+        "gloss": ["secret", "secret [place]", "obscure [language]"],
+        "tags": ["count", "abstract", "man-made", "obscure"],
+        "origin": "old-english",
+        "notes": "Also sense 'darkness', 'obscurity'"
+    }, {
         "key": "dysiġ",
         "form-raw": "dys+iġ",
         "form-canon": "dizzy",
@@ -1990,7 +2018,6 @@
         "form-raw": "earfoþe",
         "type": "noun",
         "gloss": ["labor"],
-        "gloss-alt": ["labor [pains]"],
         "tags": ["mass", "abstract", "activity", "speculative"],
         "origin": "old-english"
     }, {
@@ -2322,6 +2349,22 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "ferd-grouping",
+        "form-raw": "ferd",
+        "form-raw-alt": ["fyrd"],
+        "type": "noun",
+        "gloss": ["[army], [host]", "[band], [company]"],
+        "tags": ["count", "concrete", "living", "grouping", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ferd-activity",
+        "form-raw": "ferd",
+        "form-raw-alt": ["fyrd"],
+        "type": "noun",
+        "gloss": ["military [expedition]", "campaign"],
+        "tags": ["count", "concrete", "living", "activity", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "fersċ",
         "form-raw": "fersċ",
         "form-canon": "fresh",
@@ -2465,6 +2508,14 @@
         "gloss": "flying [being]",
         "tags": ["count", "concrete", "homophonic"],
         "origin": "old-english"
+    }, {
+        "key": "flohta",
+        "form-raw": "flohta",
+        "type": "noun",
+        "gloss": "[agitation] or [excitement]",
+        "tags": ["mass", "abstract", "mind-state", "speculative"],
+        "origin": "old-english",
+        "notes": "Unattested root, but OED posits it based on Scottish 'flocht'. Related to 'flight'"
     }, {
         "key": "flyht",
         "form-raw": "flyht",
@@ -2732,6 +2783,25 @@
         "tags": ["mass", "concrete", "activity", "obscure"],
         "origin": "old-english",
         "notes": "TODO: Add gloss 'joy, pleasure' as mind-state"
+    }, {
+        "key": "gang-going",
+        "form-raw": "gang",
+        "form-raw-alt": ["gong", "ġeong"],
+        "form-canon": "gang",
+        "type": "noun",
+        "gloss": ["journey", "passage", "walk"],
+        "tags": ["count", "abstract", "activity", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "gang-group",
+        "form-raw": "gang",
+        "form-raw-alt": ["gong", "ġeong"],
+        "form-canon": "gang",
+        "type": "noun",
+        "gloss": ["gang", "[group] of travelers"],
+        "tags": ["count", "abstract", "grouping"],
+        "origin": "old-english",
+        "notes": "Straddles modern usage"
     }, {
         "key": "gangan",
         "form-raw": "gang|an",
@@ -3404,6 +3474,16 @@
         "tags": ["singleton", "concrete", "place"],
         "origin": "old-english"
     }, {
+        "key": "heord",
+        "form-raw": "heord",
+        "form-raw-alt": ["hierd"],
+        "form-canon": "herd",
+        "type": "noun",
+        "gloss": "herd",
+        "tags": ["mass", "abstract", "living","grouping"],
+        "origin": "old-english",
+        "notes": "Not sure how we get the modern vowel."
+    }, {
         "key": "heoru",
         "form-raw": "heoru",
         "type": "noun",
@@ -4064,6 +4144,16 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "leġer",
+        "form-raw": "leġer",
+        "form-canon": "lair",
+        "type": "noun",
+        "gloss": "lair",
+        "gloss-alt": ["deathbed", "grave", "resting [place]"],
+        "tags": ["count", "concrete", "terrain", "place"],
+        "origin": "old-english",
+        "notes": "Also OE sense 'couch, bed'"
+    }, {
         "key": "lēof",
         "form-raw": "lēof",
         "form-raw-alt": ["leaf"],
@@ -4562,6 +4652,14 @@
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
         "origin": "old-english"
     }, {
+        "key": "mūþ",
+        "form-raw": "mūþ",
+        "form-canon": "mouth",
+        "type": "noun",
+        "gloss": "mouth",
+        "tags": ["count", "concrete", "bodypart", "vessel"],
+        "origin": "old-english"
+    }, {
         "key": "myln",
         "form-raw": "myln",
         "form-raw-alt": ["mylen"],
@@ -4721,6 +4819,22 @@
         "type": "noun",
         "gloss": ["evil [spirit]", "goblin"],
         "tags": ["count", "concrete", "living", "magical"],
+        "origin": "old-english"
+    }, {
+        "key": "prūd",
+        "form-raw": "prūd",
+        "form-raw-alt": ["prūt"],
+        "type": "adj",
+        "gloss": "proud",
+        "origin": "old-english"
+    }, {
+        "key": "prȳde",
+        "form-raw": "prȳde",
+        "form-raw-alt": ["prȳte"],
+        "form-canon": "pride",
+        "type": "noun",
+        "gloss": "pride",
+        "tags": ["mass", "abstract", "quality", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "ræċed",
@@ -5202,6 +5316,30 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
         "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving without canon form. Needs bitransitivity"
+    }, {
+        "key": "sibb",
+        "form-raw": "sibb",
+        "type": "noun",
+        "gloss": "family",
+        "tags": ["count", "concrete", "living", "grouping", "obscure"],
+        "origin": "old-english"
+    }, {
+        "key": "sibb-sibling",
+        "form-raw": "sibb",
+        "form-canon": "sib",
+        "type": "noun",
+        "gloss": "sibling",
+        "tags": ["count", "concrete", "living", "person", "grouping"],
+        "origin": "old-english",
+        "notes": "A modern usage"
+    }, {
+        "key": "sibb-peace",
+        "form-raw": "sibb",
+        "type": "noun",
+        "gloss": "peace",
+        "tags": ["mass", "abstract", "quality", "speculative"],
+        "origin": "old-english",
+        "notes": "Not sure about quality since it's not really personal, but let's see"
     }, {
         "key": "siġe",
         "form-raw": "siġe",
@@ -5695,6 +5833,15 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "supan",
+        "form-raw": "sup|an",
+        "form-canon": "sup",
+        "type": "verb",
+        "verb-class": 2,
+        "gloss": ["[drink], [consume] liquid food", "[sip], [drink]"],
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "sūr",
         "form-raw": "sūr",
         "form-canon": "sour",
@@ -5969,6 +6116,14 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "tīd",
+        "form-raw": "tīd",
+        "type": "noun",
+        "gloss": "time",
+        "tags": ["count", "abstract", "measure", "speculative"],
+        "origin": "old-english",
+        "notes": "Not tagging as time since it's not a specific time."
+    }, {
         "key": "timber-count",
         "form-raw": "timber",
         "form-canon": "timber",
@@ -6154,11 +6309,18 @@
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "þēod",
+        "key": "þēod-grouping",
         "form-raw": "þēod",
         "type": "noun",
-        "gloss": ["[nation] or [people]", "language"],
-        "tags": ["count", "abstract", "speculative"],
+        "gloss": "[nation] or [people]",
+        "tags": ["count", "abstract", "grouping", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "þēod-language",
+        "form-raw": "þēod",
+        "type": "noun",
+        "gloss": "language",
+        "tags": ["count", "abstract", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "þēon",
@@ -6231,6 +6393,15 @@
         "type": "noun",
         "gloss": "[power], [force]",
         "tags": ["mass", "abstract", "quality", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "þrang",
+        "form-raw": "þrang",
+        "form-canon": "throng",
+        "type": "noun",
+        "gloss": ["dense [crowd"],
+        "gloss-alt": ["army"],
+        "tags": ["count", "concrete", "living", "grouping"],
         "origin": "old-english"
     }, {
         "key": "þrāwan",

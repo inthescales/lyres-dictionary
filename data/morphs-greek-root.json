@@ -1640,6 +1640,13 @@
         "tags": ["transitive"],
         "origin": "greek"
     }, {
+        "key": "zelos",
+        "form-stem": "zel",
+        "type": "noun",
+        "gloss": "zeal",
+        "tags": ["mass", "abstract", "quality"],
+        "origin": "greek"
+    }, {
         "key": "zoon",
         "form-stem": "zoo",
         "type": "noun",

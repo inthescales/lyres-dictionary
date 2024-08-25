@@ -283,7 +283,7 @@
                     }
                 },
                 "gloss": "acting like %sg",
-                "tags": ["count", "abstract"]
+                "tags": ["uncountable", "abstract"]
             }, {
                 "case": {
                     "follows": {
@@ -344,6 +344,23 @@
         "tags": ["uncountable", "concrete", "rare"],
         "origin": "old-english",
         "notes": "gloss is modern. Original usage was feminine only"
+    }, {
+        "key": "-estre-grouping",
+        "form-stem": "ster",
+        "form-raw": "estre",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "member of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "grouping"
+            }
+        },
+        "tags": ["count", "concrete"],
+        "origin": "old-english",
+        "notes": "Modern usage, as in 'gangster'"
     }, {
         "key": "-hād",
         "form-stem": "hood",
@@ -461,6 +478,20 @@
                     }
                 },
                 "gloss": "near to %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "liquid"
+                    }
+                },
+                "gloss": ["like or resembling %sg", "covered with %sg", "mixed with %sg"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "gas"
+                    }
+                },
+                "gloss": ["like or resembling %sg", "filled with %sg"]
             }
         ],
         "tags": ["y-to-i"],
@@ -563,7 +594,10 @@
         "tags": ["count", "living"],
         "requires": {
             "follows": {
-                "has-all-tags": ["living", "count"]
+                "or": [
+                    { "has-all-tags": ["living", "count"] },
+                    { "has-tag": "grouping" }
+                ]
             }
         },
         "exception": [
@@ -581,6 +615,13 @@
                     }
                 },
                 "gloss": "small or petty %@"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "grouping"
+                    }
+                },
+                "gloss": "member of %sg"
             }
         ],
         "origin": "old-english"

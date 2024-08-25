@@ -91,7 +91,7 @@ def from_me_phonemes(phonemes, config):
                     result += "ue"
                 else:
                     choices = ["ue"]
-                    if next1 and next.value == "θ":
+                    if next1 and next1.value == "θ":
                         choices += ["u"]
                     if len(result) == 0 or result[-1] != "c":
                         choices += ["ew"]
@@ -400,9 +400,10 @@ def from_me_phonemes(phonemes, config):
             insert_lengthening_e = False
         elif phone.is_consonant() and not phone.is_geminate() \
             and prev and prev.is_vowel() and prev.is_short() \
-            and next1 and next1.is_vowel() \
+            and next1 and (next1.is_vowel() or next1.value in ["j"]) \
             and phone.value not in ["v", "j", "θ", "ð", "ʃ", "dʒ"]:
             # Double non-final consonant after short vowel
+            # See evolutor tests for discussion about whether to double before /j/
             if phone.value == "k":
                 result = result[:-1] + "ck"
             elif not (phone.value == "z" and len(result) and result[-1] == "s") \

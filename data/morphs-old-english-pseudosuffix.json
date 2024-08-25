@@ -1,5 +1,39 @@
 [
     {
+        "key": "-eċe",
+        "form-stem": "ache",
+        "form-raw": "eċe",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "pain in one's %!sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "bodypart" },
+                    { "not": { "has-tag": "bodypart-plant" } }
+                ]
+            }
+        },
+        "tags": ["count", "abstract", "body-state"],
+        "origin": "old-english"
+    }, {
+        "key": "-blind",
+        "form-stem": "blind",
+        "form-final": "blind",
+        "form-raw": "blind",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "blinded by %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-bound",
         "form-stem": "bound",
         "form-final": "bound",
@@ -109,11 +143,22 @@
         "gloss": "engaging in %@",
         "requires": {
             "follows": {
-                "has-tag": "activity"
+                "has-any-tags": ["activity", "grouping"]
             }
         },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "grouping"
+                    }
+                },
+                "gloss": "traveling in %sg"
+            }
+        ],
         "tags": ["uncountable", "abstract"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "'grouping' usage is my innovation"
     }, {
         "key": "-ful",
         "form-stem": "ful",
@@ -207,6 +252,23 @@
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "-lǣwe",
+        "form-stem": "lew",
+        "form-final": "lew",
+        "form-raw": "lǣwe",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "afflicted by %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["body-state", "mind-state"]
+            }
+        },
+        "origin": "old-english",
+        "notes": "Consider adding 'afflicive' tag for other root types. Also, see OED for other usages, but leaving them for now"
+    }, {
         "key": "-lāc",
         "form-stem": "lock",
         "form-raw": "lāc",
@@ -234,6 +296,23 @@
         },
         "tags": ["count", "abstract", "measure"],
         "origin": "old-english"
+    }, {
+        "key": "-lait",
+        "form-stem": "lait",
+        "form-raw": "lait",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "[look] or [expression] showing %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english",
+        "notes": "From Scandinavian originally. Various spellings which I won't capture here"
     }, {
         "key": "-lēas",
         "form-stem": "less",
@@ -285,6 +364,22 @@
             }
         },
         "tags": ["singleton", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-lufu",
+        "form-stem": "love",
+        "form-raw": "love",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "love accompanied by %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "-mælum",
@@ -459,6 +554,22 @@
         },
         "origin": "old-english"
     }, {
+        "key": "-song",
+        "form-stem": "-song",
+        "form-raw": "-song",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "song of %!sg",
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "tags": ["count", "abstract", "man-made"],
+        "origin": "old-english"
+    }, {
         "key": "-smiþ",
         "form-stem": "smith",
         "form-raw": "smiþ",
@@ -518,7 +629,7 @@
                 ]
             }
         },
-        "tags": ["count", "abstract"],
+        "tags": ["count", "abstract", "body-state"],
         "origin": "old-english"
     }, {
         "key": "-weard",

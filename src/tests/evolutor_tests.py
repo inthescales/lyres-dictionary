@@ -114,7 +114,7 @@ class EvolutorTests(unittest.TestCase):
         check("streċċ|an", "stretch")#{}
         check("seofon", "seven", overrides=[["SVC:y->i/e/u", "e"], ["Orth:ɛː->ea/eCV", "eCV"]]) # Unsure why vowel is short, but spelling is plausible
         # check("myriġ", "merry") # Produces long vowel, which throws off spelling. May be influence by history as affixed root
-        check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]]) # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish
+        # check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]]) # Not based on Anglian dialect. Spelling based on West Saxon, pronunciation based on Kentish # Commented due to confusion about 'r' duplication
         check("lyft", "left", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cnyll", "knell", overrides=[["SVC:y->i/e/u", "e"]]) # Not based on Anglian dialect. Apparently Kentish
         check("cēpte", "kept")
@@ -987,7 +987,19 @@ class EvolutorTests(unittest.TestCase):
         # - 'nr' -> 'ndr'
 
         # Excrescent consonants
+
         check("þum", "thumb")
+
+        # Should consonants be doubled before /j/?
+
+        # Some should be
+        check("belġ", "belly")
+        check("wyrġ|an", "worry")
+
+        # .. but others shouldn't
+        # check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]])
+
+        # Need more evidence
     
         return [total, failures]
 

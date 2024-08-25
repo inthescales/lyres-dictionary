@@ -7271,5 +7271,14 @@
         "gloss": "voice",
         "tags": ["count", "abstract"],
         "origin": "latin"
+    }, {
+        "key": "zelus",
+        "form-stem": "zel",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "zeal",
+        "tags": ["mass", "abstract", "quality"],
+        "origin": "latin",
+        "notes": "Late latin form"
     }
 ]
