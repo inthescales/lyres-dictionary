@@ -351,9 +351,13 @@ def from_me_phonemes(phonemes, config):
             elif (not prev or prev.is_vowel()) \
                 and next1 \
                 and next1.value != "n" \
-                and not next1.value in ["ɛ", "e", "i", "ɛː", "eː", "iː", "ə"] \
+                and not next1.value in ["ɛ", "e", "i", "ɛː", "eː", "iː"] \
                 and not insert_lengthening_e:
-                # 'c' when not followed by a /e/ or /e/
+                # 'c' when not followed by a front vowels
+
+                # NOTE: I had schwa in that list of vowels, but it breaks 'beacon' so I removed it.
+                # I forget why I added it though
+
                 result += "c"
             else:
                 result += "k"
