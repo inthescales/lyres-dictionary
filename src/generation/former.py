@@ -52,7 +52,10 @@ def form(morph, env, config=Former_Config()):
 
             # Sub-function for processing
             def process(form):
-                config = Config(locked=True, seed=morph.seed)
+                locked = True
+                if morph.has_tag("obscure") or morph.has_tag("speculative"):
+                    locked = False
+                config = Config(locked=locked, seed=morph.seed)
                 return evolutor.oe_form_to_ne_form(form, config) 
 
             # Process, dividing into chunks if needed
