@@ -91,7 +91,7 @@ def from_me_phonemes(phonemes, config):
                     result += "ue"
                 else:
                     choices = ["ue"]
-                    if next1:
+                    if next1 and next.value == "θ":
                         choices += ["u"]
                     if len(result) == 0 or result[-1] != "c":
                         choices += ["ew"]

@@ -52,7 +52,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "not": {"has-tag": "tame" }
+                    "not": { "has-tag": "tame" }
                 }
             },
             "tags": ["count", "concrete", "man-made", "rare"]
@@ -72,28 +72,30 @@
                 "has-any-tags": ["man-made", "material", "tool", "role"]
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-tag": "tool"
-                }
-            },
-            "gloss": ["skill in using %pl", "the art of making %pl"]
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "role"
-                }
-            },
-            "gloss": ["the work of %sg"]
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "material"
-                }
-            },
-            "gloss": ["the art of working with %pl"]
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": ["skill in using %pl", "the art of making %pl"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "role"
+                    }
+                },
+                "gloss": ["the work of %sg"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "material"
+                    }
+                },
+                "gloss": ["the art of working with %pl"]
+            }
+        ],
         "tags": ["uncountable", "abstract"],
         "origin": "old-english"
     }, {
@@ -168,7 +170,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "not": {"has-tag": "tame" }
+                    "not": { "has-tag": "tame" }
                 }
             },
             "tags": ["count", "concrete", "living", "person", "role", "rare"]
@@ -285,6 +287,29 @@
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "-mælum",
+        "form-stem": "meal",
+        "form-final": "meal",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "one %!sg at a time",
+        "requires": {
+            "follows": {
+                "has-tag": "count"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "not": { "has-tag": "measure" }
+                }
+            },
+            "tags": ["rare"]
+        }],
+        "origin": "old-english"
+    }, {
         "key": "-maker",
         "form-stem": "maker",
         "form-final": "maker",
@@ -314,29 +339,6 @@
             }
         },
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
-    }, {
-        "key": "-mælum",
-        "form-stem": "meal",
-        "form-final": "meal",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": [],
-        "gloss": "one %!sg at a time",
-        "requires": {
-            "follows": {
-                "has-tag": "count"
-            }
-        },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "not": { "has-tag": "measure" }
-                }
-            },
-            "tags": ["rare"]
-        }],
         "origin": "old-english"
     }, {
         "key": "-mangere",
@@ -382,21 +384,6 @@
         "tags": ["uncountable", "abstract"],
         "origin": "old-english"
     }, {
-        "key": "-seoc",
-        "form-stem": "sick",
-        "form-raw": "seoc",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": [],
-        "gloss": "sick with %pl",
-        "requires": {
-            "follows": {
-                "has-tag": "mind-state"
-            }
-        },
-        "origin": "old-english"
-    }, {
         "key": "-scīn",
         "form-stem": "shine",
         "form-final": "shine",
@@ -418,6 +405,20 @@
             "gloss": "shine of light on %sg"
         }],
         "tags": ["singleton", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-scinn",
+        "form-stem": "skin",
+        "form-final": "skin",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "made from the skin of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
         "origin": "old-english"
     }, {
         "key": "-scīn-2",
@@ -443,16 +444,17 @@
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
-        "key": "-scinn",
-        "form-stem": "skin",
-        "form-final": "skin",
+        "key": "-seoc",
+        "form-stem": "sick",
+        "form-raw": "seoc",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "gloss": "made from the skin of %sg",
+        "suffixes": [],
+        "gloss": "sick with %pl",
         "requires": {
             "follows": {
-                "has-tag": "animal"
+                "has-tag": "mind-state"
             }
         },
         "origin": "old-english"
@@ -501,40 +503,6 @@
         "tags": ["uncountable", "abstract", "bounded"],
         "origin": "old-english"
     }, {
-        "key": "-wis",
-        "form-stem": "wise",
-        "form-raw": "wis",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": "knowledgeable with respect to %pl",
-        "origin": "old-english"
-    }, {
-        "key": "-wis-adv",
-        "form-stem": "wise",
-        "form-raw": "wis",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": ["in the manner of %sg", "with regard to %pl"],
-        "origin": "old-english",
-        "notes": "Properly ME, but categorizing as OE for now"
-    }, {
-        "key": "-wryhta",
-        "form-stem": "wright",
-        "form-raw": "wryhta",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "someone who makes %pl",
-        "requires": {
-            "follows": {
-                "has-tag": "man-made"
-            }
-        },
-        "tags": ["uncountable", "concrete", "living", "person"],
-        "origin": "old-english"
-    }, {
         "key": "-wærc",
         "form-stem": "wark",
         "form-raw": "wærc",
@@ -575,6 +543,25 @@
         }],
         "origin": "old-english"
     }, {
+        "key": "-wis",
+        "form-stem": "wise",
+        "form-raw": "wis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "knowledgeable with respect to %pl",
+        "origin": "old-english"
+    }, {
+        "key": "-wis-adv",
+        "form-stem": "wise",
+        "form-raw": "wis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": ["in the manner of %sg", "with regard to %pl"],
+        "origin": "old-english",
+        "notes": "Properly ME, but categorizing as OE for now"
+    }, {
         "key": "-worn",
         "form-stem": "worn",
         "form-final": "worn",
@@ -588,6 +575,21 @@
                 "has-tag": "mind-state"
             }
         },
+        "origin": "old-english"
+    }, {
+        "key": "-wryhta",
+        "form-stem": "wright",
+        "form-raw": "wryhta",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "someone who makes %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "man-made"
+            }
+        },
+        "tags": ["uncountable", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
         "key": "-wurþ",

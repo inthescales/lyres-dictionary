@@ -26,9 +26,7 @@
         "gloss": "the quality of being %sg",
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
+                "not": { "has-tag": "past-participle" }
             }
         },
         "tags": ["mass", "abstract", "rare"],
@@ -48,39 +46,6 @@
                 "has-tag": "ruler"
             }
         },
-        "origin": "old-english"
-    }, {
-        "key": "-ed-having",
-        "form-stem": "ed",
-        "form-raw": "ed",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "suffixes": ["-nes"],
-        "gloss": "having %pl",
-        "requires": {
-            "follows": {
-                "not": { "has-tag": "singleton" }
-            }
-        },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "bodypart-single"
-                    }
-                },
-                "gloss": "having %sg"
-            }, {
-                "case": {
-                    "follows": {
-                        "has-suffix": "e"
-                    }
-                },
-                "form-final": "d",
-                "form-stem": "d"
-            }
-        ],
         "origin": "old-english"
     }, {
         "key": "-ed-bodypart",
@@ -117,6 +82,39 @@
         "origin": "old-english",
         "notes": "The same as the '-ed-having' morph. Are both needed?"
     }, {
+        "key": "-ed-having",
+        "form-stem": "ed",
+        "form-raw": "ed",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "having %pl",
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "singleton" }
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "bodypart-single"
+                    }
+                },
+                "gloss": "having %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-suffix": "e"
+                    }
+                },
+                "form-final": "d",
+                "form-stem": "d"
+            }
+        ],
+        "origin": "old-english"
+    }, {
         "key": "-en-adj-intransitive",
         "form-stem": "en",
         "form-raw": "en",
@@ -127,9 +125,7 @@
         "gloss": "[become] %@",
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
+                "not": { "has-tag": "past-participle" }
             }
         },
         "exception": [{
@@ -154,9 +150,7 @@
         "gloss": "[make] %@",
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
+                "not": { "has-tag": "past-participle" }
             }
         },
         "exception": [{
@@ -179,19 +173,6 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "made from %pl",
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-suffix": "e"
-                }
-            },
-            "form-final": "n"
-        }],
-        "requires": {
-            "follows": {
-                "has-any-tags": ["food", "material", "tree"]
-            }
-        },
         "exception": [
             {
                 "case": {
@@ -209,6 +190,11 @@
                 "gloss": "made from the wood of the %!sg"
             }
         ],
+        "requires": {
+            "follows": {
+                "has-any-tags": ["food", "material", "tree"]
+            }
+        },
         "origin": "old-english",
         "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
     }, {
@@ -231,35 +217,6 @@
         }],
         "origin": "old-english"
     }, {
-        "key": "-ess",
-        "form-stem": "ess",
-        "form-final": "ess",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "suffixes": [],
-        "gloss": "female %@",
-        "tags": ["count", "concrete", "living", "person", "gendered"],
-        "requires": {
-            "follows": {
-                "and": [
-                    { "has-tag": "person" },
-                    { "not": {"has-tag": "gendered"} }
-                ]
-            }
-        },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-suffix": "rer"
-                }
-            },
-            "form-final": "//ess",
-            "form-stem": "//ess"
-        }],
-        "origin": "old-english",
-        "notes": "Not properly OE, but want to let it combine for now. TODO: Move this"
-    }, {
         "key": "-ery",
         "form-stem": "ery",
         "form-final": "ery",
@@ -275,8 +232,8 @@
                     { "or": [
                         { "has-tag": "concrete" },
                         { "has-type": "verb" }
-                    ] },
-                    { "not": { "has-tag": "bodypart"} }
+                    ]},
+                    { "not": { "has-tag": "bodypart" } }
                 ]
             }
         },
@@ -322,6 +279,22 @@
             }, {
                 "case": {
                     "follows": {
+                        "has-all-tags": ["animal", "wild"]
+                    }
+                },
+                "gloss": "acting like %sg",
+                "tags": ["count", "abstract"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-all-tags": ["animal", "tame"]
+                    }
+                },
+                "gloss": "[place] where %pl are raised",
+                "tags": ["count", "concrete", "terrain"]
+            }, {
+                "case": {
+                    "follows": {
                         "has-type": "verb"
                     }
                 },
@@ -329,7 +302,36 @@
             }
         ],
         "origin": "old-english",
-        "notes": "Properly ME. TODO: When added to a tame animal, a place where they are raised. TODO: When adding to any animal, acting like that animal"
+        "notes": "Properly ME"
+    }, {
+        "key": "-ess",
+        "form-stem": "ess",
+        "form-final": "ess",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "female %@",
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "person" },
+                    { "not": { "has-tag": "gendered" } }
+                ]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "rer"
+                }
+            },
+            "form-final": "//ess",
+            "form-stem": "//ess"
+        }],
+        "origin": "old-english",
+        "notes": "Not properly OE, but want to let it combine for now. TODO: Move this"
     }, {
         "key": "-estre",
         "form-stem": "ster",
@@ -420,6 +422,13 @@
             }, {
                 "case": {
                     "follows": {
+                        "has-tag": "body-state"
+                    }
+                },
+                "gloss": "affected by %sg"
+            }, {
+                "case": {
+                    "follows": {
                         "has-tag": "mind-state"
                     }
                 },
@@ -438,6 +447,20 @@
                     }
                 },
                 "gloss": "like or resembling the %!sg or its wood"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "material"
+                    }
+                },
+                "gloss": "like or resembling %pl"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "measure"
+                    }
+                },
+                "gloss": "near to %sg"
             }
         ],
         "tags": ["y-to-i"],
@@ -524,9 +547,7 @@
         "tags": ["uncountable", "person", "rare"],
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
+                "not": { "has-tag": "past-participle" }
             }
         },
         "origin": "old-english"
@@ -673,24 +694,6 @@
         },
         "origin": "old-english"
     }, {
-        "key": "-sċipe-adj",
-        "form-stem": "ship",
-        "form-raw": "sċipe",
-        "type": "derive",
-        "derive-from": "adj",
-        "derive-to": "noun",
-        "suffixes": [],
-        "gloss": "the quality of being %@",
-        "tags": ["mass", "abstract", "rare"],
-        "requires": {
-            "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
-            }
-        },
-        "origin": "old-english"
-    }, {
         "key": "-sċipe",
         "form-stem": "ship",
         "form-raw": "sċipe",
@@ -708,6 +711,22 @@
         "origin": "old-english",
         "notes": "This usage was common in OE, but is very rare in MnE"
     }, {
+        "key": "-sċipe-adj",
+        "form-stem": "ship",
+        "form-raw": "sċipe",
+        "type": "derive",
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the quality of being %@",
+        "tags": ["mass", "abstract", "rare"],
+        "requires": {
+            "follows": {
+                "not": { "has-tag": "past-participle" }
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-sum",
         "form-stem": "some",
         "form-raw": "sum",
@@ -718,9 +737,7 @@
         "gloss": "having %pl",
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
+                "not": { "has-tag": "past-participle" }
             }
         },
         "exception": [
@@ -801,9 +818,7 @@
         "tags": ["mass", "abstract", "i-mutating", "no-gen"],
         "requires": {
             "follows": {
-                "not": {
-                    "has-tag": "past-participle"
-                }
+                "not": { "has-tag": "past-participle" }
             }
         },
         "origin": "old-english",

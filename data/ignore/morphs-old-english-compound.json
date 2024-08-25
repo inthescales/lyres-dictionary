@@ -87,18 +87,19 @@
         "form-raw": ["frum-byrd-ling", "frum-bierd-ling"],
         "type": "noun",
         "gloss": ["youth", "young [man]"],
-        "tags": ["count", "concrete", "living", "person", "speculative"],
-        "origin": "old-english"
+        "tags": ["count", "concrete", "living", "person", "speculative", "no-gen"],
+        "origin": "old-english",
+        "notes": "Probably needs some kind of coprocessing"
     },
     {
         "key": "middan-ġeard",
-        "form-raw": "midd+an-eard",
-        "form-raw-alt": ["midd+an-ġeard", "mydd+an-ġeard"],
+        "form-raw": "midd|an-eard",
+        "form-raw-alt": ["midd|an-ġeard", "mydd|an-ġeard"],
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "fluid", "terrain", "speculative"],
         "origin": "old-english",
-        "notes": "'-an' is an inflectional suffix on the adjective 'midd', but I'm not sure what to do with it here."
+        "notes": "'-an' is an inflectional suffix on the adjective 'midd', I think this rendering makes sense"
     },
     {
         "key": "gār-lēac",
