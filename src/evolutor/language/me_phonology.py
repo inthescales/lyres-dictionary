@@ -126,7 +126,8 @@ def from_oe_phonemes(oe_phonemes, config):
                     elif result == "oː":
                         return [Phoneme("oː", template=state.current)]
             elif state.current.value == "y":
-                result = hinge("SVC:y->i/e/u", [0.5, 0.3], config)
+                # See below on odds
+                result = hinge("SVC:y->i/e/u", [1.1, 0], config)
                 if result == "i":
                     # Anglian dialect
                     return [Phoneme("i", template=state.current)]
