@@ -189,9 +189,9 @@ def get_definition(word):
 
     # Make modifications to outermost gloss
     if not morph.has_tag("fixed-gloss"):
-        if morph.get_type() == "verb":
+        if word.get_type() == "verb":
             return "to " + inflection.inflect(definition, "inf")
-        elif morph.get_type() == "noun":
+        elif word.get_type() == "noun":
             inflected = inflection.inflect(definition, "sg")
 
             if morph.has_tag("count"):

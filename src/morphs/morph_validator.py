@@ -4,6 +4,7 @@ valid_properties = [
     "key",
     "type",
     "prefix-on",                # Preposition / Prefix - determines what root types this can be prefixed to
+    "prefix-to",                # Preposition / Prefix - determines what type the outcome of this prefixing is
     "derive-from",              # Type derive attaches to
     "derive-to",                # Type derive produces
     "derive-participle",        # Participle type used by a suffix
@@ -93,6 +94,8 @@ valid_tags = [
     "mind-state",               # Noun semantics - a mental or emotional state
     "activity",                 # Noun semantics - an activity that a person can undertake
     "time",                     # Noun semantics - a period of time
+    "time-of-day",              # Noun semantics - a period of time in the day (e.g. morning, dawn)
+    "time-of-year",             # Noun semantics - a period of time in the year (e.g. winter, lent)
     "measure",                  # Noun semantics - a unit of measure
     "tree",                     # Noun semantics - a kind of tree
     "number",                   # Noun semantics - a number (used as a noun)

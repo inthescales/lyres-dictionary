@@ -34,6 +34,21 @@
         },
         "origin": "old-english"
     }, {
+        "key": "-borne",
+        "form-stem": "borne",
+        "form-final": "borne",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "carried by %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
+        "origin": "old-english",
+        "notes": "More of a modern formation"
+    }, {
         "key": "-bound",
         "form-stem": "bound",
         "form-final": "bound",
@@ -69,6 +84,14 @@
                 "has-tag": "luminous"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["time-of-day", "time-of-year"]
+                }
+            },
+            "gloss": "light of %!sg"
+        }],
         "origin": "old-english"
     }, {
         "key": "-cot",
@@ -159,6 +182,31 @@
         "tags": ["uncountable", "abstract"],
         "origin": "old-english",
         "notes": "'grouping' usage is my innovation"
+    }, {
+        "key": "-flōw",
+        "form-stem": "flow",
+        "form-raw": "flow",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "flowing of %!sg",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["liquid", "gas"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "secretion"
+                }
+            },
+            "gloss": "flow of %pl",
+            "tags": ["singleton", "abstract"]
+        }],
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
     }, {
         "key": "-ful",
         "form-stem": "ful",
@@ -348,6 +396,14 @@
                 "has-tag": "luminous"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["time-of-day", "time-of-year"]
+                }
+            },
+            "gloss": "light of %!sg"
+        }],
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
@@ -363,6 +419,14 @@
                 "has-tag": "luminous"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["time-of-day", "time-of-year"]
+                }
+            },
+            "gloss": "light of %!sg"
+        }],
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
@@ -498,6 +562,13 @@
                 }
             },
             "gloss": "shine of light on %sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-any-tags": ["time-of-day", "time-of-year"]
+                }
+            },
+            "gloss": "shining light of %!sg"
         }],
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
@@ -605,7 +676,7 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "the time of %@",
+        "gloss": "the time of %!sg",
         "requires": {
             "follows": {
                 "has-tag": "time"
@@ -716,5 +787,21 @@
             }
         },
         "origin": "old-english"
+    }, {
+        "key": "-wend",
+        "form-stem": "wend",
+        "form-raw": "wende",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "causing or conducive of %pl",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["mass", "abstract"]
+            }
+        },
+        "origin": "old-english",
+        "notes": "Revived from ME"
     }
 ]

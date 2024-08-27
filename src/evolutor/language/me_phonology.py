@@ -137,7 +137,12 @@ def from_oe_phonemes(oe_phonemes, config):
                     # West Saxon dialect
                     return [Phoneme("u", template=state.current)]
             elif state.current.value == "yː":
-                result = hinge("SVC:y->i/e/u", [0.5, 0.3], config)
+                # In actuality, this change depends on the dialect
+                # For now, always use 'i', which is consistent with the midlands dialect that
+                # had the greatest influence on English.
+                #
+                # TODO: Open this up again when we have more consciousness of dialect.
+                result = hinge("SVC:y->i/e/u", [1.1, 0], config)
                 if result == "i":
                     # Anglian dialect
                     return [Phoneme("iː", template=state.current)]

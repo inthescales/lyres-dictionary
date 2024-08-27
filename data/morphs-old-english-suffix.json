@@ -217,6 +217,30 @@
         }],
         "origin": "old-english"
     }, {
+        "key": "-ere/hunter",
+        "form-stem": "er",
+        "form-raw": "ere",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "one who hunts %pl",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["animal", "wild"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": "e"
+                }
+            },
+            "form-final": "r"
+        }],
+        "tags": ["uncountable", "concrete", "y-to-i"],
+        "origin": "old-english"
+    }, {
         "key": "-ery",
         "form-stem": "ery",
         "form-final": "ery",
@@ -428,73 +452,91 @@
                         "has-suffix": "y"
                     }
                 },
-                "form-final": "ey"
+                "form-final": "ey",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "quality"
                     }
                 },
-                "gloss": "having %sg"
+                "gloss": "having %sg",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "body-state"
                     }
                 },
-                "gloss": "affected by %sg"
+                "gloss": "affected by %sg",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "mind-state"
                     }
                 },
-                "gloss": "affected by %sg"
+                "gloss": "affected by %sg",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-any-tags": ["plant", "bodypart-plant"]
                     }
                 },
-                "gloss": "covered with %pl"
+                "gloss": "covered with %pl",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "tree"
                     }
                 },
-                "gloss": "like or resembling the %!sg or its wood"
+                "gloss": "like or resembling the %!sg or its wood",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "material"
                     }
                 },
-                "gloss": "like or resembling %pl"
+                "gloss": "like or resembling %pl",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "measure"
                     }
                 },
-                "gloss": "near to %sg"
+                "gloss": "near to %sg",
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "liquid"
                     }
                 },
-                "gloss": ["like or resembling %sg", "covered with %sg", "mixed with %sg"]
+                "gloss": ["like or resembling %sg", "covered with %sg", "mixed with %sg"],
+                "tags": ["y-to-i"]
             }, {
                 "case": {
                     "follows": {
                         "has-tag": "gas"
                     }
                 },
-                "gloss": ["like or resembling %sg", "filled with %sg"]
+                "gloss": ["like or resembling %sg", "filled with %sg"],
+                "tags": ["y-to-i"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "terrain"
+                    }
+                },
+                "gloss": "having or consisting of %pl",
+                "tags": ["y-to-i"]
             }
         ],
-        "tags": ["y-to-i"],
+        "tags": ["y-to-i", "rare"],
         "origin": "old-english"
     }, {
         "key": "-isċ",
@@ -865,6 +907,23 @@
         "origin": "old-english",
         "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
     }, {
+        "key": "-ung/time",
+        "form-stem": "ing",
+        "form-final": "ing",
+        "form-raw": "ung",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": [],
+        "gloss": "the time of %!sg",
+        "requires": {
+            "follows": {
+                "has-all-tags": ["count", "time-of-day"]
+            }
+        },
+        "tags": ["mass", "abstract", "rare"],
+        "origin": "old-english"
+    }, {
         "key": "-0-animal",
         "form-stem": "",
         "form-raw": "",
@@ -892,6 +951,37 @@
         "tags": ["no-length"],
         "origin": "old-english",
         "notes": "Not properly a suffix of course, but putting it here for now"
+    }, {
+        "key": "-0-time-of-day",
+        "form-stem": "",
+        "form-raw": "",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "verb-class": "weak",
+        "gloss": "[become] %!sg",
+        "requires": {
+            "follows": {
+                "has-tag": "time-of-day"
+            }
+        },
+        "origin": "old-english",
+        "notes": "Not properly a suffix of course, but putting it here for now"
+    }, {
+        "key": "-0-time-of-year",
+        "form-stem": "",
+        "form-raw": "",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "verb-class": "weak",
+        "gloss": "[pass] the %!sg season",
+        "requires": {
+            "follows": {
+                "has-tag": "time-of-year"
+            }
+        },
+        "origin": "old-english"
     }, {
         "key": "-0-tool",
         "form-stem": "",
