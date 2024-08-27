@@ -407,7 +407,8 @@
         "gloss": ["[poison], [venom]", "corrupt [matter] or [pus]"],
         "gloss-alt": "[gall], [bitterness]",
         "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "TODO: double-check the chosen form here. Is there another form?"
     }, {
         "key": "āþ",
         "form-raw": "āþ",
@@ -5954,9 +5955,9 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "steorra",
-        "form-raw": "steorra",
-        "form-raw-alt": ["stearra", "sterra"],
+        "key": "stearra",
+        "form-raw": "stearra",
+        "form-raw-alt": ["steorra", "sterra"],
         "form-canon": "star",
         "type": "noun",
         "gloss": "star",
@@ -7070,7 +7071,7 @@
         "form-canon": "wind",
         "type": "noun",
         "gloss": "wind",
-        "tags": ["mass", "concrete"],
+        "tags": ["mass", "concrete", "fluid", "gas"],
         "origin": "old-english"
     }, {
         "key": "winter",

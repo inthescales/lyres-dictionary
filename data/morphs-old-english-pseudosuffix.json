@@ -67,7 +67,7 @@
                     "not": { "has-tag": "place" }
                 }
             },
-            "tags": ["rare"]
+            "tags": ["super-rare"]
         }],
         "origin": "old-english"
     }, {
@@ -721,7 +721,7 @@
                     "not": { "has-tag": "place" }
                 }
             },
-            "tags": ["rare"]
+            "tags": ["super-rare"]
         }],
         "origin": "old-english"
     }, {

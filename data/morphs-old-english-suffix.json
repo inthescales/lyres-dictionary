@@ -952,6 +952,23 @@
         "origin": "old-english",
         "notes": "Not properly a suffix of course, but putting it here for now"
     }, {
+        "key": "-0-grouping",
+        "form-stem": "",
+        "form-raw": "",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "verb-class": "weak",
+        "gloss": "[form] %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "grouping"
+            }
+        },
+        "tags": ["no-length"],
+        "origin": "old-english",
+        "notes": "Not properly a suffix of course, but putting it here for now"
+    }, {
         "key": "-0-time-of-day",
         "form-stem": "",
         "form-raw": "",
