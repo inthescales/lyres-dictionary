@@ -4681,6 +4681,15 @@
         "tags": ["intransitive", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
+        "key": "mete",
+        "form-raw": "mete",
+        "form-canon": "meat",
+        "type": "noun",
+        "gloss": "meat",
+        "gloss-alt": ["food"],
+        "tags": ["mass", "concrete", "food", "material"],
+        "origin": "old-english"
+    }, {
         "key": "metsian",
         "form-raw": "metsi|an",
         "form-canon": "mess",

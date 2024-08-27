@@ -264,7 +264,18 @@ def get_joined_form(language, last_morph, morph, original, proposed):
     if language == "old-english":
         if morph.is_suffix():
             y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
-            return mne_affixation.get_joined_form(form, addition, y_to_i=y_to_i)
+
+            # HACK: This dash-splitting was necessary for words like 'three-starred', since the process of doubling the final 'r'
+            # uses syllable count, and the compounded value of 'form' threw off the syllable count. This will work for compounds
+            # separated by dashes like this, but it won't work for other compounds.
+            #
+            # TODO: Do something smarter here, like having the ability to reference the last chunk added and use that chunk's
+            # syllable count
+            dash_split = form.split("-")
+            if len(dash_split) > 1:
+                return "-".join(dash_split[:-1]) + "-" + mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
+            else:
+                return mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
 
         if last_morph.get_type() == "number":
             form = form + "-"

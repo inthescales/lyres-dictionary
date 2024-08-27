@@ -116,6 +116,7 @@ valid_tags = [
     "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Generation - does not count towards maximum morph count
     "rare",                     # Generation - occurs less often in generation
+    "super-rare",               # Generation - occurs even less often in generation
     "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix
     "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
     "speculative",              # Generation - the morph is not attested in modern English

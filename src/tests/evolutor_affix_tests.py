@@ -116,7 +116,7 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertJoined(["coy", "ness"], False, "coyness")
         self.assertJoined(["lady", "like"], False, "ladylike")
 
-    def test_t_to_i_indication(self):
+    def test_y_to_i_indication(self):
         # '-liċ' imposes y-to-i on previous morph
         self.assertForm(["dæġ", "-liċ"], "daily")
 
@@ -133,6 +133,18 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["drȳġe", "-nes"], "dryness")
 
     def test_misc_spelling_changes(self):
+        # Double consonants following a short stressed vowel if a suffix begins with a vowel
+        self.assertForm(["stearra", "-iġ"], "starry")
+
+        # ...preceding morphs shouldn't mess this up
+        self.assertForm(["þrēo-", "stearra", "-ed-having"], "three-starred")
+
+        # ...but not following a long vowel
+        self.assertForm(["mete", "-iġ"], "meaty")
+
+        # ...and not if the vowel is unstressed
+        self.assertForm(["sumor", "-iġ"], "summery")
+
         # Drop silent 'e' in favor of vowel
         self.assertForm(["hors", "-isċ"], "horsish")
         self.assertForm(["rose", "-iġ"], "rosy")

@@ -93,6 +93,8 @@ class Morph:
     def frequency(self):
         if self.has_tag("rare"):
             return 10
+        elif self.has_tag("super-rare"):
+            return 1
 
         return 100
         
