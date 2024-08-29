@@ -7056,8 +7056,8 @@
         "form-raw-alt": ["wyht", "wuht"],
         "form-canon": "wight",
         "type": "noun",
-        "gloss": "living [being]",
-        "tags": ["count", "concrete", "living", "obscure"],
+        "gloss": ["person", "living [being]"],
+        "tags": ["count", "concrete", "living", "person", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wilde",

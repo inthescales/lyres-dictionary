@@ -18,12 +18,7 @@ def rarely(id, config):
 def never(id, config):
     return hinge(id, 0.00, config)
 
-# TODO: consider making this object a member of config
-random = None
-
 def hinge(id, odds, config):
-    global random
-
     # Format: [[options], default]
     # First option should represent a change occurring, when applicable
     points = {
@@ -57,8 +52,9 @@ def hinge(id, odds, config):
         "PPart:verners-law": [[True, False], False]
     }
 
-    if not random:
-        random = Random(config.seed)
+    # Combine the config's seed with the hashed hinge ID so that we get consistent results for
+    # each hinge, but different results for different hinges.
+    random = Random(config.seed + hash(id))
 
     if not id in points:
         print("error: override id '" + str(id) + "' not recognized")
