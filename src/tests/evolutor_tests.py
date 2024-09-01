@@ -990,14 +990,14 @@ class EvolutorTests(unittest.TestCase):
 
         check("þum", "thumb")
 
-        # Should consonants be doubled before /j/?
+        # Double consonants following a short vowel before a final 'y' (as with other final vowels)
 
-        # Some should be
         check("belġ", "belly")
         check("wyrġ|an", "worry")
 
-        # .. but others shouldn't
-        # check("byrġ|an", "bury", overrides=[["SVC:y->i/e/u", "u"]])
+        # ... but 'bury' is an exceptional case, since it's form and pronunciation diverged in an unusual way
+
+        check("byrġ|an", "burry", overrides=[["SVC:y->i/e/u", "u"]])
 
         # Need more evidence
     

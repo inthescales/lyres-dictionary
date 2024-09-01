@@ -42,6 +42,7 @@ def from_me_phonemes(phonemes, config):
         is_vowel_open = phone.is_vowel() and next1 and next2 and next1.is_consonant() and next2.is_vowel()
         precedes_lengthening_cluster = phone.is_vowel() and next1 and next2 and next1.value + next2.value in ["ld", "lð", "mb", "nd", "ng", "rl", "rn"] # Excludes 'rd'. Adding 'lð' as an alternation for 'ld'.
         precedes_blocking_digraph = phone.is_vowel() and next1 and next1.value in ["tʃ", "dʒ", "x", "ks"] # Some digraphs prevent silent-e vowel spellings
+        precedes_digraph = phone.is_vowel() and next1 and next1.is_consonant() and (next1.is_geminate() or (next2 and next2.is_consonant()))
 
         if insert_lengthening_e and phone.is_vowel():
             insert_lengthening_e = False
@@ -134,7 +135,7 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ɛ":
             result += "e"
         elif phone.value == "ɛː":
-            if precedes_blocking_digraph:
+            if precedes_digraph:
                 result += "ea"
             else:
                 roll = often("Orth:ɛː->ea/eCV", config)
@@ -191,6 +192,9 @@ def from_me_phonemes(phonemes, config):
                 # Words ending in voiced fricatives must have silent e
                 result += "o"
                 insert_lengthening_e = True
+            elif precedes_digraph:
+                # Only use the digraph vowel if followed by a consonant cluster, e.g. 'hoard' instead of 'hored'
+                result += "oa"
             else:
                 roll = often("Orth:ɔː->oa/oCV", config)
                 if roll == "oa":
@@ -402,8 +406,7 @@ def from_me_phonemes(phonemes, config):
             and prev and prev.is_vowel() and prev.is_short() \
             and next1 and ( \
                 next1.is_vowel() \
-                or (next1.value in ["j"] and phone.value in ["l"]) \
-                or (next1.value in ["j"] and phone.value == "r" and prev.value == "u") \
+                or (next1.value in ["j"] and not next2) \
             ) \
             and phone.value not in ["v", "j", "θ", "ð", "ʃ", "dʒ"]:
             # Double non-final consonant after short vowel

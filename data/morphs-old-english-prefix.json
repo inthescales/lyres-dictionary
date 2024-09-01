@@ -8,9 +8,7 @@
         "exception": [{
             "case": {
                 "precedes": {
-                    "not": {
-                        "has-tag": "motion"
-                    }
+                    "has-tag": "motion"
                 }
             },
             "gloss": "%@ all over"
@@ -135,9 +133,14 @@
         "type": "prep",
         "prefix-on": "verb",
         "gloss": "%@ against",
-        "tags": ["no-gen"],
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["obscure", "speculative"]
+            }
+        },
+        "tags": [],
         "origin": "old-english",
-        "notes": "TODO: no-gen until I figure out how to use this better"
+        "notes": "Feels a bit funny on common words. TODO: Reevaluate this"
     }, {
         "key": "new-",
         "form-stem": "new-",

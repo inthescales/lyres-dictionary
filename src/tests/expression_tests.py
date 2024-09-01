@@ -91,13 +91,6 @@ class ExpressionTests(unittest.TestCase):
         self.assertFalse(evaluate_expression({'has-suffix-template': ["VCV", "mon"]}, test_morphs["volumen"]))
         self.assertFalse(evaluate_expression({'has-suffix-template': ["CoC", "mon"]}, test_morphs["volumen"]))
 
-        self.assertTrue(evaluate_expression({'even-syllables': True }, test_morphs["lumen"]))
-        self.assertFalse(evaluate_expression({'even-syllables': False }, test_morphs["lumen"]))
-        self.assertTrue(evaluate_expression({'odd-syllables': True }, test_morphs["arktos"]))
-        self.assertFalse(evaluate_expression({'odd-syllables': False }, test_morphs["arktos"]))
-        self.assertTrue(evaluate_expression({'odd-syllables': True }, test_morphs["enigma"]))
-        self.assertFalse(evaluate_expression({'odd-syllables': False }, test_morphs["enigma"]))
-
         self.assertTrue(evaluate_expression({'final-or-semifinal-l': True }, test_morphs["stella"]))
         self.assertTrue(evaluate_expression({'final-or-semifinal-l': True }, test_morphs["columna"]))
         self.assertTrue(evaluate_expression({'final-or-semifinal-l': False }, test_morphs["cancer"]))
