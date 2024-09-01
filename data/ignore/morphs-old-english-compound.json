@@ -67,6 +67,21 @@
         "origin": "old-english",
         "notes": "Could be tagged 'time' and 'time-of-day', but don't want to duplicate suffixes"
     }, {
+        "key": "dæġ-mǣl",
+        "form-raw": ["dæġ-mǣl", "dæġ-mēl"],
+        "type": "noun",
+        "gloss": "[clock] or other timekeeping [instrument]",
+        "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
+        "key": "dæġ-red",
+        "form-raw": "dæġ-red",
+        "form-canon": "dayred",
+        "type": "noun",
+        "gloss": "dawn",
+        "tags": ["count", "abstract", "time", "time-of-day", "luminous"],
+        "origin": "old-english"
+    }, {
         "key": "drenċ-hūs",
         "form-raw": "drenċ-hūs",
         "type": "noun",
@@ -108,6 +123,14 @@
         "type": "noun",
         "gloss": "garlic",
         "tags": ["mass", "concrete", "living", "plant"],
+        "origin": "old-english"
+    }, {
+        "key": "reġn-wyrm",
+        "form-raw": "reġn-wyrm",
+        "form-canon": "rainworm",
+        "type": "noun",
+        "gloss": "earthworm",
+        "tags": ["count", "concrete", "living", "animal", "wild"],
         "origin": "old-english"
     },
     {

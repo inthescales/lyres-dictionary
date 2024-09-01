@@ -82,7 +82,8 @@ valid_tags = [
     "fluid",                    # Noun semantics - a fluid, like a liquid or gas
     "liquid",                   # Noun semantics - a liquid
     "gas",                      # Noun semantics - a gas
-    "luminous",                 # Noun semantics - emits light (or shines)
+    "luminous",                 # Noun semantics - emits light
+    "gloomy",                   # Noun semantics - obscures light or darkens (esp. of weather and times)
     "region",                   # Noun semantics - a region
     "terrain",                  # Noun semantics - a type of land
     "place",                    # Noun semantics - a specific place (e.g. hell, home, the sky)
@@ -99,6 +100,7 @@ valid_tags = [
     "measure",                  # Noun semantics - a unit of measure
     "tree",                     # Noun semantics - a kind of tree
     "number",                   # Noun semantics - a number (used as a noun)
+    "weather",                  # Noun semantics - a type of weather
     "superlative",              # Adjective morphology - a superlative
     "character",                # Adjective semantics - descriptor of a person's character
     "a-prefix",                 # Verb lexical - can take the OE 'ā-' prefix without change in meaning

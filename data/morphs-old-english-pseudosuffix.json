@@ -247,6 +247,37 @@
         "tags": ["count", "abstract", "measure"],
         "origin": "old-english"
     }, {
+        "key": "-glōm",
+        "form-stem": ["gloom", "gloam"],
+        "form-final": ["gloom", "gloam"],
+        "form-raw": ["glōm", "glom|e"],
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "darkness of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "gloomy"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "time"
+                }
+            },
+            "gloss": "darkness of %!sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "weather"
+                }
+            },
+            "gloss": "darkness caused by %pl"
+        }],
+        "tags": ["singleton", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "-hierde",
         "form-stem": "herd",
         "form-final": "herd",
@@ -607,7 +638,7 @@
             },
             "gloss": "[radiance] of %sg"
         }],
-        "tags": ["mass", "abstract"],
+        "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
         "key": "-seoc",
@@ -803,5 +834,37 @@
         },
         "origin": "old-english",
         "notes": "Revived from ME"
+    }, {
+        "key": "-weorc",
+        "form-stem": "work",
+        "form-final": "work",
+        "form-raw": "weorc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "[work] made from %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "material"
+            }
+        },
+        "tags": ["mass", "concrete", "man-made"],
+        "origin": "old-english"
+    }, {
+        "key": "-wose",
+        "form-stem": "wose",
+        "form-final": "wose",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "[person] or [being] that inhabits %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "terrain"
+            }
+        },
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "old-english",
+        "notes": "Obscure origin. Observed in 'woodwose'"
     }
 ]

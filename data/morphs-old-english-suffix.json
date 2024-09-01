@@ -173,6 +173,11 @@
         "derive-to": "adj",
         "suffixes": ["-nes"],
         "gloss": "made from %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["food", "material", "plant"]
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -190,13 +195,40 @@
                 "gloss": "made from the wood of the %!sg"
             }
         ],
+        "origin": "old-english",
+        "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
+    }, {
+        "key": "-en-animal",
+        "form-stem": "en",
+        "form-raw": "en",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "pertaining to %pl, resembling %sg",
         "requires": {
             "follows": {
-                "has-any-tags": ["food", "material", "tree"]
+                "has-tag": "animal"
             }
         },
         "origin": "old-english",
-        "notes": "This usage more closely resembles ME construction. In OE, this would cause i-umlaut"
+        "notes": "Captures most meanings, see OED 'mothen' for another"
+    }, {
+        "key": "-en-place",
+        "form-stem": "en",
+        "form-raw": "en",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": ["-nes"],
+        "gloss": "from or as if from %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "place"
+            }
+        },
+        "origin": "old-english",
+        "notes": "Based primarily on 'hellen'. See OED"
     }, {
         "key": "-ere",
         "form-stem": "er",
@@ -539,6 +571,14 @@
                     }
                 },
                 "gloss": "having or consisting of %pl",
+                "tags": ["y-to-i"]
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "weather"
+                    }
+                },
+                "gloss": "marked by or abounding in %pl",
                 "tags": ["y-to-i"]
             }
         ],

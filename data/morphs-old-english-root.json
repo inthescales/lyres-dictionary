@@ -41,7 +41,7 @@
         "form-canon": "even",
         "type": "noun",
         "gloss": "evening",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "ælde",
@@ -507,10 +507,9 @@
         "form-canon": "bane",
         "type": "noun",
         "gloss": ["harm", "poison", "[death] or [destruction]"],
-        "gloss-alt": ["murderer", "[cause] of death"],
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english",
-        "notes": "TODO: unpack these meanings for semantics like poison/liquid, murderer/person"
+        "notes": "TODO: unpack these meanings for semantics like poison/liquid. Alt. meanings 'murderer', 'cause of death'"
     }, {
         "key": "bannan",
         "form-raw": "bann|an",
@@ -1402,7 +1401,7 @@
         "form-canon": "cloud",
         "type": "noun",
         "gloss": "cloud",
-        "tags": ["count", "concrete"],
+        "tags": ["count", "concrete", "weather", "gloomy"],
         "origin": "old-english",
         "notes": "Alternate meaning 'rock, hill', or general sense of 'accumulated mass'"
     }, {
@@ -1411,7 +1410,7 @@
         "form-canon": "cloud",
         "type": "noun",
         "gloss": "clouds",
-        "tags": ["singleton", "concrete", "place"],
+        "tags": ["singleton", "concrete", "place", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "cnīf",
@@ -1440,6 +1439,13 @@
         "gloss": "knot",
         "gloss-tool": ["[tie] with a knot"],
         "tags": ["count", "concrete", "man-made", "tool"],
+        "origin": "old-english"
+    }, {
+        "key": "cocc",
+        "form-raw": "cocc",
+        "type": "noun",
+        "gloss": "rooster",
+        "tags": ["count", "concrete", "living", "animal", "tame", "gendered"],
         "origin": "old-english"
     }, {
         "key": "coeċel",
@@ -1683,7 +1689,7 @@
         "form-canon": "dawn",
         "type": "noun",
         "gloss": "dawn",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
         "origin": "old-english",
         "notes": "HACK: Totally fake morph, meant to capture the later 'dawn', in fact derived from OE 'dawian' or a Norse cognate. See OED."
     }, {
@@ -1783,7 +1789,7 @@
         "form-canon": "dusk",
         "type": "noun",
         "gloss": "dusk",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
         "origin": "old-english",
         "notes": "Form evolution is unclear, according to OED. 'dosc' is my assumption based on OED's mention of metathesis"
     }, {
@@ -2559,6 +2565,15 @@
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "flocc",
+        "form-raw": "flocc",
+        "form-canon": "flock",
+        "type": "noun",
+        "gloss": "flock",
+        "gloss-alt": ["[group] or [band]"],
+        "tags": ["count", "concrete", "living", "grouping"],
+        "origin": "old-english"
+    }, {
         "key": "floga",
         "form-raw": "floga",
         "type": "noun",
@@ -2574,9 +2589,9 @@
         "origin": "old-english",
         "notes": "Unattested root, but OED posits it based on Scottish 'flocht'. Related to 'flight'"
     }, {
-        "key": "flōw",
-        "form-raw": "flōw",
-        "form-canon": "flow",
+        "key": "flōd",
+        "form-raw": "flōd",
+        "form-canon": "flood",
         "type": "noun",
         "gloss": "high [tide]",
         "tags": ["mass", "abstract", "bounded", "time", "time-of-day"],
@@ -2588,6 +2603,14 @@
         "type": "noun",
         "gloss": "[power] of flight",
         "tags": ["singleton", "abstract", "quality"],
+        "origin": "old-english"
+    }, {
+        "key": "folc",
+        "form-raw": "folc",
+        "form-canon": "folk",
+        "type": "noun",
+        "gloss": "people",
+        "tags": ["count", "concrete", "living", "grouping"],
         "origin": "old-english"
     }, {
         "key": "folgian",
@@ -3170,6 +3193,40 @@
         "tags": ["count", "concrete", "man-made", "garment"],
         "origin": "old-english"
     }, {
+        "key": "glōm",
+        "form-raw": "glōm",
+        "form-canon": "gloom",
+        "type": "noun",
+        "gloss": "[gloom], [darkness]",
+        "tags": ["count", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "glōm/time",
+        "form-raw": "glōm",
+        "form-canon": "gloom",
+        "type": "noun",
+        "gloss": "twilight",
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
+        "origin": "old-english"
+    }, {
+        "key": "glome",
+        "form-raw": "glom|e",
+        "form-canon": "gloam",
+        "type": "noun",
+        "gloss": "[gloom], [darkness]",
+        "tags": ["count", "abstract", "obscure"],
+        "origin": "old-english",
+        "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
+    }, {
+        "key": "glome/time",
+        "form-raw": "glom|e",
+        "form-canon": "gloam",
+        "type": "noun",
+        "gloss": "twilight",
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy", "obscure"],
+        "origin": "old-english",
+        "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
+    }, {
         "key": "gnīdan",
         "form-raw": "gnīd|an",
         "type": "verb",
@@ -3397,7 +3454,7 @@
         "form-canon": "harvest",
         "type": "noun",
         "gloss": ["harvest", "autumn"],
-        "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"],
+        "tags": ["singleton", "abstract", "bounded", "time", "time-of-year", "obscure"],
         "origin": "old-english"
     }, {
         "key": "hæsel",
@@ -3456,6 +3513,29 @@
         "type": "noun",
         "gloss": "neck",
         "tags": ["count", "concrete", "living", "bodypart", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "hām",
+        "form-raw": "hām",
+        "form-canon": "home",
+        "type": "noun",
+        "gloss": "home",
+        "tags": ["uncountable", "concrete", "place"],
+        "origin": "old-english"
+    }, {
+        "key": "hām/count",
+        "form-raw": "hām",
+        "form-canon": "home",
+        "type": "noun",
+        "gloss": "home",
+        "tags": ["count", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "hana",
+        "form-raw": "hana",
+        "type": "noun",
+        "gloss": "rooster",
+        "tags": ["count", "concrete", "living", "animal", "tame", "gendered", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hātan-intransitive",
@@ -3538,6 +3618,15 @@
         "type": "noun",
         "gloss": "hell",
         "tags": ["uncountable", "concrete", "terrain", "place"],
+        "origin": "old-english"
+    }, {
+        "key": "henn",
+        "form-raw": "henn",
+        "form-raw-alt": ["hænn"],
+        "form-canon": "hen",
+        "type": "noun",
+        "gloss": "hen",
+        "tags": ["count", "concrete", "living", "animal", "tame", "gendered"],
         "origin": "old-english"
     }, {
         "key": "heofon",
@@ -3750,14 +3839,14 @@
         "form-raw": "hoþma",
         "type": "noun",
         "gloss": ["covering", "cloud"],
-        "tags": ["count", "concrete", "speculative"],
+        "tags": ["count", "concrete", "speculative", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "hoþma-mass",
         "form-raw": "hoþma",
         "type": "noun",
         "gloss": ["darkness"],
-        "tags": ["mass", "concrete", "speculative"],
+        "tags": ["mass", "concrete", "speculative", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "hræċan",
@@ -4579,13 +4668,23 @@
         "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "mase-count",
+        "key": "mase/maze",
         "form-raw": "mase",
         "form-raw-alt": ["mæs"],
         "form-canon": "maze",
         "type": "noun",
-        "gloss": ["maze", "delusion", "deception", "winding [movement]"],
-        "tags": ["count", "concrete"],
+        "gloss": "maze",
+        "tags": ["count", "concrete", "terrain"],
+        "origin": "old-english",
+        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
+    }, {
+        "key": "mase/count+abstract",
+        "form-raw": "mase",
+        "form-raw-alt": ["mæs"],
+        "form-canon": "maze",
+        "type": "noun",
+        "gloss": ["delusion", "deception", "winding [movement]"],
+        "tags": ["count", "abstract", "activity"],
         "origin": "old-english",
         "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
     }, {
@@ -4642,6 +4741,17 @@
         "tags": ["speculative", "homophonic"],
         "origin": "old-english"
     }, {
+        "key": "mǣl",
+        "form-raw": "mǣl",
+        "form-raw-alt": ["mēl"],
+        "form-canon": "meal",
+        "type": "noun",
+        "gloss": "meal",
+        "gloss-alt": ["[time] or [occasion]", "season"],
+        "tags": ["count", "abstract", "time", "measure"],
+        "origin": "old-english",
+        "notes": "Chosen form is WS, alt. is Anglian/Kentish"
+    }, {
         "key": "meltan",
         "form-raw": "melt|an",
         "form-participle-canon": ["melted", "molten"],
@@ -4651,6 +4761,15 @@
         "gloss": "melt",
         "gloss-alt": ["digest"],
         "tags": ["transitive"],
+        "origin": "old-english"
+    }, {
+        "key": "melu",
+        "form-raw": "melu",
+        "form-raw-alt": ["meolo", "meala"],
+        "form-canon": "meal",
+        "type": "noun",
+        "gloss": ["flour", "[meal] (of grain)"],
+        "tags": ["mass", "concrete", "food"],
         "origin": "old-english"
     }, {
         "key": "merran",
@@ -4745,6 +4864,15 @@
         "verb-class": "weak",
         "gloss": ["hinder", "disturb"],
         "tags": ["transitive", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "mist",
+        "form-raw": "mist",
+        "form-raw-alt": ["myst"],
+        "form-canon": "mist",
+        "type": "noun",
+        "gloss": "mist",
+        "tags": ["mass", "concrete", "weather", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "mōd",
@@ -4866,8 +4994,8 @@
         "form-raw": "niht",
         "form-canon": "night",
         "type": "noun",
-        "gloss": "day",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "measure", "luminous"],
+        "gloss": "night",
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "measure", "luminous", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "niman",
@@ -5140,6 +5268,16 @@
         "tags": ["count", "abstract", "man-made", "obscure"],
         "origin": "old-english",
         "notes": "Meaning as 'rule or principle' demoted to alternate for aesthetics"
+    }, {
+        "key": "reġn",
+        "form-raw": "reġn",
+        "form-raw-alt": ["rēn", "renġ", "reng"],
+        "form-canon": "rain",
+        "type": "noun",
+        "gloss": "rain",
+        "tags": ["mass", "concrete", "weather", "gloomy"],
+        "origin": "old-english",
+        "notes": "'reng' form is in OED as rare; palatalization is unclear."
     }, {
         "key": "rētan",
         "form-raw": "rēt|an",
@@ -6021,6 +6159,16 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "stund",
+        "form-raw": "stund",
+        "form-canon": "stound",
+        "type": "noun",
+        "gloss": "hour",
+        "gloss-alt": ["while", "[length] of time"],
+        "tags": ["count", "abstract", "time", "measure", "obscure"],
+        "origin": "old-english",
+        "notes": "Alt. sense in modern usage, 'a strike or blow', 'a shock or sudden pain'"
+    }, {
         "key": "styrian",
         "form-raw": "styr|an",
         "form-canon": "stir",
@@ -6053,7 +6201,8 @@
         "form-canon": "sup",
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["[drink], [consume] liquid food", "[sip], [drink]"],
+        "gloss": "eat",
+        "gloss-alt": ["[drink], [consume] liquid food", "[sip], [drink]"],
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
@@ -6174,7 +6323,7 @@
         "form-raw": "swenċ|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[cause] to work", "[harass], [vex]"],
+        "gloss": ["[force] to work", "[harass], [vex]"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -6986,6 +7135,14 @@
         "origin": "old-english",
         "notes": "Alternate intransitive meaning 'happen'"
     }, {
+        "key": "wēpan",
+        "form-raw": "wēp|an",
+        "type": "verb",
+        "verb-class": 7,
+        "gloss": "negotiate",
+        "tags": ["intransitive"],
+        "origin": "old-english"
+    }, {
         "key": "wer",
         "form-raw": "wer",
         "type": "noun",
@@ -7088,7 +7245,7 @@
         "form-canon": "winter",
         "type": "noun",
         "gloss": "winter",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-year", "luminous"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-year", "luminous", "gloomy"],
         "origin": "old-english"
     }, {
         "key": "wīs",
@@ -7211,7 +7368,7 @@
         "form-canon": "welkin",
         "type": "noun",
         "gloss": ["cloud"],
-        "tags": ["count", "concrete", "obscure"],
+        "tags": ["count", "concrete", "weather", "gloomy", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wolcen-singleton",
@@ -7219,7 +7376,7 @@
         "form-canon": "welkin",
         "type": "noun",
         "gloss": ["sky", "heavens", "clouds"],
-        "tags": ["singleton", "concrete", "place", "obscure"],
+        "tags": ["singleton", "concrete", "place", "luminous", "gloomy", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wolf",
@@ -7260,7 +7417,7 @@
         "form-canon": "wroth",
         "type": "adj",
         "gloss": "angry",
-        "tags": ["obscure"],
+        "tags": [],
         "origin": "old-english"
     }, {
         "key": "wreċċ",

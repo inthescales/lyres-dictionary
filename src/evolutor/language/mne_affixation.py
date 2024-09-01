@@ -31,7 +31,7 @@ def get_joined_form(form, addition, y_to_i=False):
 
     if form[-1] == "y" and y_to_i \
     	and helpers.is_consonant(addition[0]) \
-    	and not (helpers.syllable_count(form, True) == 1 and helpers.is_consonant(form[-2])):
+    	and not (helpers.syllable_count_simple(form, True) == 1 and helpers.is_consonant(form[-2])):
         # If word ends in 'y', is being suffixed with a consonant, and the y-to-i flag is on,
         # change the 'y' to 'i'. The flag generally corresponds with the '-y' and '-ly' suffixes.
 
