@@ -46,7 +46,7 @@ def y_is_vowel_heuristic(prev_char):
 # Returns the estimated number of syllables in the word, based on vowel/consonant clusters
 # Does not handle silent 'e', always evaluates 'y' one-way, based on parameter
 # TODO: Delete this when it's no longer needed OR rename 'vowel_cluster_count' or something
-def syllable_count(word, y_is_vowel=False):
+def syllable_count_simple(word, y_is_vowel=False):
     count = 0
     in_vowels = False
     prev = None
