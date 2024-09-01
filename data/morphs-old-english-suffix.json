@@ -267,7 +267,10 @@
                     "follows": {
                         "or": [
                             { "has-suffix": "e" },
-                            { "has-suffix": ["el", "en", "ld", "nd", "om", "ow"] }
+                            { "and": [
+                                { "not": { "syllable-count": 1 } },
+                                { "has-suffix": ["d", "l", "n", "p", "ss", "t", "th", "y", "ld", "nd", "om", "ow"] }
+                            ]}
                         ]
                     }
                 },
@@ -275,7 +278,10 @@
             }, {
                 "case": {
                     "follows": {
-                        "has-suffix": "er"
+                        "and": [
+                            { "not": { "syllable-count": 1 } },
+                            { "has-suffix": "er" }
+                        ]
                     }
                 },
                 "form-final": "y"

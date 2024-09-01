@@ -69,6 +69,8 @@ def evaluate_expression(expression, referent):
         return evaluate_conjugation(value, referent["conjugation"])
     elif key == "has-declension":
         return evaluate_declension(value, referent["declension"])
+    elif key == "syllable-count":
+        return evaluate_syllable_count(referent["form"]) == value
     elif key == "even-syllables":
         return evaluate_even_syllables(referent["form"]) == value
     elif key == "odd-syllables":
@@ -235,11 +237,14 @@ def evaluate_declension(acceptable, declension):
         Logger.error("bad value for has-declension")
         sys.exit(1)
     
+def evaluate_syllable_count(form):
+    return helpers.syllable_count_smart(form)
+
 def evaluate_even_syllables(form):
-    return helpers.syllable_count(form) % 2 == 0
+    return helpers.syllable_count_simple(form) % 2 == 0
 
 def evaluate_odd_syllables(form):
-    return helpers.syllable_count(form) % 2 == 1
+    return helpers.syllable_count_simple(form) % 2 == 1
 
 def evaluate_is_root(morph_type):
     return morph_type in ["noun", "adj", "verb"]

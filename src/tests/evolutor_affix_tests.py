@@ -22,6 +22,27 @@ class EvolutorAffixTests(unittest.TestCase):
         # -ere
         self.assertForm(["lufian", "-ere"], "lover")
 
+        # -ery
+
+        # In a 1 syllable word, takes its full form after a consonant
+        self.assertForm(["clǣġ", "-ery"], "clayery")
+        self.assertForm(["cyng", "-ery"], "kingery")
+        self.assertForm(["smiþ", "-ery"], "smithery")
+
+        # ... though final 'e's are not duplicated
+        self.assertForm(["draca", "-ery"], "drakery")
+
+        # 1-syllable words ending in a vowel are a bit odd
+        self.assertForm(["drȳġe", "-ery"], "dryery")
+        self.assertForm(["feoh", "-ery"], "feery")
+
+        # With 2 syllables, it's generally reduced to -ry following a consonant
+        self.assertForm(["bastard", "-ery"], "bastardry")
+        self.assertForm(["belġ", "-ery"], "bellyry")
+
+        # ... or -y if that consonant is an 'r'
+        self.assertForm(["ǣmerġe", "-ery"], "embery")
+
         # -iġ
         self.assertForm(["clǣġ", "-iġ"], "clayey")
         self.assertForm(["clif", "-iġ"], "cliffy")
@@ -159,7 +180,7 @@ class EvolutorAffixTests(unittest.TestCase):
     
     def assertForm(self, keys, form):
         word = word_for_keys(keys, self.morphothec)
-        former_config = Former_Config(False, False)
+        former_config = Former_Config(False, True)
         composed = composer.get_form(word, former_config)
         # self.assertEqual(composed, form)
         if form != composed:

@@ -24,18 +24,45 @@ class HelperTests(unittest.TestCase):
         self.assertTrue(helpers.y_is_vowel_heuristic("y"))
 
     def testSyllables(self):
-        self.assertEqual(helpers.syllable_count("flea"), 1)
-        self.assertEqual(helpers.syllable_count("old"), 1)
-        self.assertEqual(helpers.syllable_count("warm"), 1)
+        # Simple syllable count
 
-        self.assertEqual(helpers.syllable_count("echo"), 2)
-        self.assertEqual(helpers.syllable_count("magnum"), 2)
-        self.assertEqual(helpers.syllable_count("smile"), 2) #*
+        self.assertEqual(helpers.syllable_count_simple("flea"), 1)
+        self.assertEqual(helpers.syllable_count_simple("old"), 1)
+        self.assertEqual(helpers.syllable_count_simple("warm"), 1)
 
-        self.assertEqual(helpers.syllable_count("rubicon"), 3)
-        self.assertEqual(helpers.syllable_count("simile"), 3)
+        self.assertEqual(helpers.syllable_count_simple("echo"), 2)
+        self.assertEqual(helpers.syllable_count_simple("magnum"), 2)
+        self.assertEqual(helpers.syllable_count_simple("smile"), 2) #*
 
-        self.assertEqual(helpers.syllable_count("panopticon"), 4)
+        self.assertEqual(helpers.syllable_count_simple("rubicon"), 3)
+        self.assertEqual(helpers.syllable_count_simple("simile"), 3)
+
+        self.assertEqual(helpers.syllable_count_simple("panopticon"), 4)
+
+        # Smart syllable count
+
+        self.assertEqual(helpers.syllable_count_smart("flea"), 1)
+        self.assertEqual(helpers.syllable_count_smart("tree"), 1)
+        self.assertEqual(helpers.syllable_count_smart("sky"), 1)
+        self.assertEqual(helpers.syllable_count_smart("rue"), 1)
+        self.assertEqual(helpers.syllable_count_smart("dye"), 1)
+
+        self.assertEqual(helpers.syllable_count_smart("cork"), 1)
+        self.assertEqual(helpers.syllable_count_smart("steam"), 1)
+
+        self.assertEqual(helpers.syllable_count_smart("ear"), 1)
+        self.assertEqual(helpers.syllable_count_smart("arch"), 1)
+
+        self.assertEqual(helpers.syllable_count_smart("eye"), 1)
+        self.assertEqual(helpers.syllable_count_smart("stone"), 1)
+        self.assertEqual(helpers.syllable_count_smart("rose"), 1)
+
+        self.assertEqual(helpers.syllable_count_smart("baby"), 2)
+        self.assertEqual(helpers.syllable_count_smart("boba"), 2)
+        self.assertEqual(helpers.syllable_count_smart("order"), 2)
+        self.assertEqual(helpers.syllable_count_smart("skybox"), 2)
+
+        self.assertEqual(helpers.syllable_count_smart("dromedary"), 4)
 
     def testSplitClusters(self):
         def is_vowel(letter):

@@ -400,7 +400,11 @@ def from_me_phonemes(phonemes, config):
             insert_lengthening_e = False
         elif phone.is_consonant() and not phone.is_geminate() \
             and prev and prev.is_vowel() and prev.is_short() \
-            and next1 and (next1.is_vowel() or next1.value in ["j"]) \
+            and next1 and ( \
+                next1.is_vowel() \
+                or (next1.value in ["j"] and phone.value in ["l"]) \
+                or (next1.value in ["j"] and phone.value == "r" and prev.value == "u") \
+            ) \
             and phone.value not in ["v", "j", "θ", "ð", "ʃ", "dʒ"]:
             # Double non-final consonant after short vowel
             # See evolutor tests for discussion about whether to double before /j/
