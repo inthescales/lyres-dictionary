@@ -56,7 +56,7 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "gloss": ["[encased] in %pl", "[trapped] in %pl"],
+        "gloss": ["encased or trapped in %pl"],
         "requires": {
             "follows": {
                 "has-any-tags": ["material", "mind-state", "body-state"]
@@ -65,7 +65,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-tag": ["mind-state", "body-state"]
+                    "has-any-tags": ["mind-state", "body-state"]
                 }
             },
             "gloss": "immobilized by %pl"
@@ -571,7 +571,7 @@
         "origin": "old-english",
         "notes": "This presumably emerged in ME, but the root is OE. "
     }, {
-        "key": "-man/activity",
+        "key": "-man",
         "form-stem": "man",
         "form-raw": "man",
         "type": "derive",
@@ -580,54 +580,70 @@
         "gloss": "man who engages in %pl",
         "requires": {
             "follows": {
-                "has-tag": "activity"
+                "has-any-tags": ["activity", "weapon", "terrain"]
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "weapon"
+                }
+            },
+            "gloss": "man who fights with %sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "terrain"
+                }
+            },
+            "gloss": "man who frequents or works in %pl"
+        }, {
+            "case": {
+                "follows": {
+                    "has-suffix": "d"
+                }
+            },
+            "form-stem": "sman",
+            "form-final": "sman"
+        }],
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
-        "key": "-woman/activity",
+        "key": "-woman",
         "form-stem": "woman",
-        "form-final": "woman",
+        "form-raw": "woman",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
         "gloss": "woman who engages in %pl",
         "requires": {
             "follows": {
-                "has-tag": "activity"
+                "has-any-tags": ["activity", "weapon", "terrain"]
             }
         },
-        "tags": ["count", "concrete", "living", "person", "gendered"],
-        "origin": "old-english"
-    }, {
-        "key": "-man/weapon",
-        "form-stem": "man",
-        "form-raw": "man",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "man who fights with %sg",
-        "requires": {
-            "follows": {
-                "has-tag": "weapon"
-            }
-        },
-        "tags": ["count", "concrete", "living", "person", "gendered"],
-        "origin": "old-english"
-    }, {
-        "key": "-woman/weapon",
-        "form-stem": "woman",
-        "form-final": "woman",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "woman who fights with %sg",
-        "requires": {
-            "follows": {
-                "has-tag": "weapon"
-            }
-        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "weapon"
+                }
+            },
+            "gloss": "woman who fights with %sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "terrain"
+                }
+            },
+            "gloss": "woman who frequents or works in %pl"
+        }, {
+            "case": {
+                "follows": {
+                    "has-suffix": "d"
+                }
+            },
+            "form-stem": "swoman",
+            "form-final": "swoman"
+        }],
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {

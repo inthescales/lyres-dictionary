@@ -679,7 +679,6 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "gloss": "small %@",
-        "tags": ["count", "living"],
         "requires": {
             "follows": {
                 "or": [
@@ -709,10 +708,11 @@
                         "has-tag": "grouping"
                     }
                 },
-                "gloss": "member of %sg"
+                "gloss": "[member] of %sg"
             }
         ],
-        "origin": "old-english"
+        "tags": ["count", "living"],
+        "origin": "old-english"        
     }, {
         "key": "-ling-verb",
         "form-stem": "ling",

@@ -104,6 +104,7 @@ def evaluate_type(type_, comparand):
         
 def evaluate_tag(tag, referent_tags):
     if not isinstance(tag, str):
+        print("IT IS: " + str(tag))
         Logger.error("tag must be string")
         sys.exit(1)
         

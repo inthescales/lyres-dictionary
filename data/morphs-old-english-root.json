@@ -2902,7 +2902,7 @@
         "form-participle-canon": ["galen", "galed"],
         "type": "verb",
         "verb-class": 6,
-        "gloss": ["sing", "[cry] or [scream]", "call", "enchant", "[cast] a spell"],
+        "gloss": ["sing", "[cry] or [scream]", "call", "enchant", "[cast] (of spells)"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
@@ -3719,7 +3719,7 @@
         "form-canon": "herd",
         "type": "noun",
         "gloss": "herd",
-        "tags": ["mass", "abstract", "living","grouping"],
+        "tags": ["count", "abstract", "living","grouping"],
         "origin": "old-english",
         "notes": "Not sure how we get the modern vowel."
     }, {
@@ -4530,7 +4530,7 @@
         "form-canon": "light",
         "type": "noun",
         "gloss": "light",
-        "tags": ["mass", "concrete", "luminous", "obscure"],
+        "tags": ["mass", "concrete", "luminous"],
         "origin": "old-english"
     }, {
         "key": "lind",
@@ -6152,7 +6152,7 @@
         "form-canon": "spell",
         "type": "noun",
         "gloss": ["magic [spell]"],
-        "gloss-tool": ["enchant"],
+        "gloss-tool": ["[cast] a spell"],
         "tags": ["count", "abstract", "man-made", "magical", "tool"],
         "origin": "old-english"
     }, {
