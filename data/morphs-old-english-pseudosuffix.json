@@ -18,6 +18,61 @@
         "tags": ["count", "abstract", "body-state"],
         "origin": "old-english"
     }, {
+        "key": "-blīc",
+        "form-stem": "blike",
+        "form-final": "blike",
+        "form-raw": "blīc",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "shining light of %sg",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["luminous", "metal", "metallic", "shiny"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["metal", "metallic", "shiny"]
+                }
+            },
+            "gloss": "shine of light on %sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-any-tags": ["time-of-day", "time-of-year"]
+                }
+            },
+            "gloss": "shining light of %!sg"
+        }],
+        "tags": ["singleton", "abstract"],
+        "origin": "old-english",
+        "notes": "INVENTED based on cases like '-shine' and '-leam', from a comparable verb 'blīcan'"
+    }, {
+        "key": "-bound",
+        "form-stem": "bound",
+        "form-final": "bound",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": ["[encased] in %pl", "[trapped] in %pl"],
+        "requires": {
+            "follows": {
+                "has-any-tags": ["material", "mind-state", "body-state"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": ["mind-state", "body-state"]
+                }
+            },
+            "gloss": "immobilized by %pl"
+        }],
+        "origin": "old-english",
+        "notes": "Fanciful, but based on 'icebound' (of ships)"
+    }, {
         "key": "-blind",
         "form-stem": "blind",
         "form-final": "blind",
@@ -49,7 +104,7 @@
         "origin": "old-english",
         "notes": "More of a modern formation"
     }, {
-        "key": "-bound",
+        "key": "-bound/heading",
         "form-stem": "bound",
         "form-final": "bound",
         "type": "derive",
@@ -496,7 +551,7 @@
                     "not": { "has-tag": "measure" }
                 }
             },
-            "tags": ["rare"]
+            "tags": ["super-rare"]
         }],
         "origin": "old-english"
     }, {
@@ -516,19 +571,64 @@
         "origin": "old-english",
         "notes": "This presumably emerged in ME, but the root is OE. "
     }, {
-        "key": "-man",
+        "key": "-man/activity",
         "form-stem": "man",
         "form-raw": "man",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "one who fights with %sg",
+        "gloss": "man who engages in %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "activity"
+            }
+        },
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "origin": "old-english"
+    }, {
+        "key": "-woman/activity",
+        "form-stem": "woman",
+        "form-final": "woman",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "woman who engages in %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "activity"
+            }
+        },
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "origin": "old-english"
+    }, {
+        "key": "-man/weapon",
+        "form-stem": "man",
+        "form-raw": "man",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "man who fights with %sg",
         "requires": {
             "follows": {
                 "has-tag": "weapon"
             }
         },
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "origin": "old-english"
+    }, {
+        "key": "-woman/weapon",
+        "form-stem": "woman",
+        "form-final": "woman",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "woman who fights with %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "weapon"
+            }
+        },
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "-mangere",
@@ -700,6 +800,22 @@
         "tags": ["uncountable", "concrete", "living", "person"],
         "origin": "old-english"
     }, {
+        "key": "-struck",
+        "form-stem": "struck",
+        "form-final": "struck",
+        "form-raw": "struck",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "stricken by %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-tīd",
         "form-stem": "tide",
         "form-raw": "tīd",
@@ -826,7 +942,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
-        "gloss": "causing or conducive of %pl",
+        "gloss": "causing or conducive to %pl",
         "requires": {
             "follows": {
                 "has-all-tags": ["mass", "abstract"]
@@ -856,7 +972,7 @@
         "form-final": "wose",
         "type": "derive",
         "derive-from": "noun",
-        "derive-to": "adj",
+        "derive-to": "noun",
         "gloss": "[person] or [being] that inhabits %pl",
         "requires": {
             "follows": {

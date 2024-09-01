@@ -85,7 +85,8 @@
                     "has-tag": "role"
                 }
             },
-            "gloss": ["[make] into a %sg", "[furnish] with %pl"]
+            "gloss": ["[make] into a %sg", "[furnish] with %pl", "[perform] the work of %sg (on someone)"],
+            "notes": "TODO: Maybe add a 'gloss-role' for cases like 'bewitch'"
         }, {
             "case": {
                 "precedes": {

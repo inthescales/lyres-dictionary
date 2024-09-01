@@ -112,7 +112,7 @@ def from_oe_phonemes(oe_phonemes, config):
             elif state.current.value == "aː":
                 return [Phoneme("ɔː", template=state.current)]
             elif state.current.value == "eo":
-                # TODO: Handle 'ġeong'-> 'young'
+                # TODO: Handle 'ġeong'-> 'young. See Wiktionary for 'ġeol', may be related
                 return [Phoneme("e", template=state.current)]
             elif state.current.value == "eːo":
                 if state.next and state.next.value in ["ɣ", "j"]:

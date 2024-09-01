@@ -205,7 +205,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": ["-nes"],
-        "gloss": "pertaining to %pl, resembling %sg",
+        "gloss": "pertaining to %pl or resembling %sg",
         "requires": {
             "follows": {
                 "has-tag": "animal"
