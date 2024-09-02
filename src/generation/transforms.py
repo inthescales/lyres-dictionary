@@ -18,9 +18,9 @@ from src.evolutor.engine.config import Config
 
 def seed_word(word, morphothec):
     bag = [
-        # ("latin", morphothec.root_count_for_language("latin")),
-        # ("greek", morphothec.root_count_for_language("greek")),
-        ("old-english", morphothec.root_count_for_language("old-english"))
+        ("latin", morphothec.root_count_for_language("latin")),
+        ("greek", morphothec.root_count_for_language("greek")),
+        ("old-english", int(morphothec.root_count_for_language("old-english") * 0.7))
     ]
     choice = helpers.choose_bag(bag)
     if choice == "latin":
@@ -70,7 +70,6 @@ def get_old_english_root(morphothec):
     return morph
  
 def transform_word(word, morphothec, is_single):
-
     language = word.get_origin()
     current_type = word.get_type()
 
@@ -126,7 +125,7 @@ def transform_word(word, morphothec, is_single):
 
         if len(morphothec.filter_prepends_to(current_type, "modern-english", { "has-type": "prefix" })) > 0:
             bag.append(("add_modern_prefix", 5))
-
+    
     if len(relational_suffixes) > 0 and word.size() == 1 and current_type == "noun":
         bag.append(("relational", 10))
 
@@ -174,7 +173,7 @@ def transform_word(word, morphothec, is_single):
 
     if past_participle_form != None:
         bag.append(("past-participle", 20))
-        
+
     # If there is no override, choose, or return False if no choices ------
     if not override: 
         if len(bag) > 0:

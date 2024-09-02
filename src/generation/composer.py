@@ -7,6 +7,8 @@ import src.utils.inflection as inflection
 
 import src.evolutor.language.mne_affixation as mne_affixation
 
+from src.generation.former import Former_Config
+
 def entry(word):
     composed = get_form(word)
     tag = get_part_tag(word)
@@ -38,6 +40,10 @@ def get_form(word, former_config=None):
     for index, morph in enumerate(word.morphs):
 
         env = word.environment_for_index(index)
+        random = Random(morph.seed)
+        if former_config == None and morph.has_tag("obscure") and random.choice([True, False]):
+            former_config = Former_Config(random.choice([True, False]), False)
+
         if former_config != None:
             addition = former.form(morph, env, former_config)
         else:

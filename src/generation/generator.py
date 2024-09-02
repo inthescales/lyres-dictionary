@@ -11,19 +11,26 @@ def generate_word(morphothec):
     word = Word(morphothec)
     transforms.seed_word(word, morphothec)
 
-    if word.root_morph().has_tag("speculative"):
-        bag = [
-            (0, 3) ,
-            (1, 1)
-        ]
-    elif word.root_morph().has_tag("obscure"):
-        bag = [
-            (0, 2) ,
-            (1, 2)
-        ]
+    bag = [(1, 1)]
+    if word.get_origin() == "old-english":
+        if word.root_morph().has_tag("speculative"):
+            bag = [
+                (0, 3) ,
+                (1, 1)
+            ]
+        elif word.root_morph().has_tag("obscure"):
+            bag = [
+                (0, 2) ,
+                (1, 2)
+            ]
+        else:
+            bag = [
+                (1, 1)
+            ]
     else:
         bag = [
-            (1, 1)
+            (1, 5),
+            (2, 3)
         ]
     transform_count = helpers.choose_bag(bag)
     maximum_size = 3
@@ -36,7 +43,12 @@ def generate_word(morphothec):
         ) \
         or not word.last_morph().final_ok():
         success = transforms.transform_word(word, morphothec, transform_count == 1)
-        if success:
+        # HACK: In OE I used the convention that returning False should give you another try,
+        # but that isn't the case in Latin and Greek where you can legitimately have no
+        # valid transforms, and need to exit.
+        #
+        # TODO: come up with a better convention for 'free' transforms
+        if success or word.get_origin() != "old-english":
             transforms_done += 1
     
     Logger.trace("generated morph: " + str(word.get_keys()))

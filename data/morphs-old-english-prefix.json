@@ -121,13 +121,8 @@
         "type": "prep",
         "prefix-on": "verb",
         "gloss": "%@ away",
-        "requires": {
-            "precedes": {
-                "has-tag": "motion"
-            }
-        },
         "origin": "old-english",
-        "notes": "Would like to expand usage more later"
+        "notes": "Had a 'motion' requirement on this, but opening it up, like it is in Latin"
     }, {
         "key": "wiþ-",
         "form-stem": "with",
