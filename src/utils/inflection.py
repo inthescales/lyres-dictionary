@@ -56,6 +56,10 @@ def override_inflection(string, mode):
         if mode == "pl":
             return "dice"
 
+    elif string == "dusk":
+        if mode == "pl":
+            return "dusks"
+
     elif string == "do":
         if mode == "3sg":
             return "does"

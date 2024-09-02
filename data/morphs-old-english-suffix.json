@@ -211,6 +211,14 @@
                 "has-tag": "animal"
             }
         },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-suffix": ["e", "r"]
+                }
+            },
+            "form-final": "n"
+        }],
         "origin": "old-english",
         "notes": "Captures most meanings, see OED 'mothen' for another"
     }, {

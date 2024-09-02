@@ -113,17 +113,27 @@
         "gloss": "heading toward %sg",
         "requires": {
             "follows": {
-                "has-any-tags": ["place", "concrete"]
+                "has-tag": "place"
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "not": { "has-tag": "place" }
-                }
-            },
-            "tags": ["super-rare"]
-        }],
+        "origin": "old-english"
+    }, {
+        "key": "-bound/heading/general",
+        "form-stem": "bound",
+        "form-final": "bound",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "heading toward %sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "concrete" },
+                    { "not": { "has-tag": "place"} }
+                ]
+            }
+        },
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-bryht",
@@ -560,17 +570,28 @@
         "gloss": "one %!sg at a time",
         "requires": {
             "follows": {
-                "has-tag": "count"
+                "has-tag": "measure"
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "not": { "has-tag": "measure" }
-                }
-            },
-            "tags": ["super-rare"]
-        }],
+        "origin": "old-english"
+    }, {
+        "key": "-mælum/general",
+        "form-stem": "meal",
+        "form-final": "meal",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "suffixes": [],
+        "gloss": "one %!sg at a time",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "count" },
+                    { "not": { "has-tag": "measure" } }
+                ]
+            }
+        },
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-maker",
@@ -908,17 +929,27 @@
         "gloss": "toward %sg",
         "requires": {
             "follows": {
-                "has-any-tags": ["place", "concrete"]
+                "has-tag": "place"
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "not": { "has-tag": "place" }
-                }
-            },
-            "tags": ["super-rare"]
-        }],
+        "origin": "old-english"
+    }, {
+        "key": "-weard/general",
+        "form-stem": "ward",
+        "form-raw": "weard",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "toward %sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "concrete" },
+                    { "not": { "has-tag": "place"} }
+                ]
+            }
+        },
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-wis",
@@ -947,7 +978,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "suffixes": [],
-        "gloss": "worn out from %pl",
+        "gloss": "worn down by %pl",
         "requires": {
             "follows": {
                 "has-tag": "mind-state"

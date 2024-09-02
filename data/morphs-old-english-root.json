@@ -938,7 +938,7 @@
         "origin": "old-english"
     }, {
         "key": "biṡċop",
-        "form-raw": "biṡċop",
+        "form-raw": "bisċop",
         "form-canon": "bishop",
         "type": "noun",
         "gloss": "bishop",
@@ -976,7 +976,7 @@
         "type": "noun",
         "gloss": "bliss",
         "gloss-alt": "[joy], [delight",
-        "tags": ["mass", "abstract", "mind-state", "obscure"],
+        "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "blīþe",
@@ -1535,7 +1535,7 @@
         "gloss": ["[plague], [pestilence]", "destruction"],
         "tags": ["mass", "abstract", "speculative", "homophonic"],
         "origin": "old-english",
-        "notes": "Represents OE sens, where base morph represents modern usage. Separate for tags."
+        "notes": "Represents OE sens, where base morph represents modern usage. Separate for tags. TODO: Separate disease sense for 'body-state'"
     }, {
         "key": "cweċċan",
         "form-raw": "cweċċ|an",
@@ -2671,7 +2671,8 @@
         "type": "noun",
         "gloss": "people",
         "tags": ["count", "concrete", "living", "grouping"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Consider making 'singleton'?"
     }, {
         "key": "folgian",
         "form-raw": "folg|an",
@@ -2917,7 +2918,7 @@
         "key": "galdor-mass",
         "form-raw": "galdor",
         "form-raw-alt": ["ġealdor"],
-        "type": "adj",
+        "type": "noun",
         "gloss": ["magic", "sorcery"],
         "tags": ["mass", "abstract", "man-made", "activity"],
         "origin": "old-english",
@@ -3521,7 +3522,7 @@
         "form-canon": "harvest",
         "type": "noun",
         "gloss": ["harvest", "autumn"],
-        "tags": ["singleton", "abstract", "bounded", "time", "time-of-year", "obscure"],
+        "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"],
         "origin": "old-english"
     }, {
         "key": "hæsel",
@@ -4694,7 +4695,7 @@
         "form-raw": "mæġd",
         "form-canon": "maid",
         "type": "noun",
-        "gloss": "unmarried [woman]",
+        "gloss": "unmarried [woman] or [girl]",
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
@@ -5036,6 +5037,14 @@
         "origin": "old-english",
         "notes": "Gloss chosen based on modern usage, and for ease of compounding (e.g. 'moody' = 'affected by a strong feeling'"
     }, {
+        "key": "modor",
+        "form-raw": "modor",
+        "form-canon": "mother",
+        "type": "noun",
+        "gloss": "mother",
+        "tags": ["count", "concrete", "living", "person", "role", "gendered"],
+        "origin": "old-english"
+    }, {
         "key": "mōn",
         "form-raw": "mōn",
         "form-canon": "moon",
@@ -5144,7 +5153,7 @@
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[attempt] or [intend]", "[think], [suppose]"],
-        "tags": ["transitive", "obscure"],
+        "tags": ["transitive", "obscure", "homophonic"],
         "origin": "old-english",
         "notes": "Glosses here combine OE with later Northern/Scottish usage"
     }, {
@@ -5449,7 +5458,7 @@
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[count], [calculate]"],
-        "tags": ["transitive", "obscure"],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "regel",
@@ -6530,6 +6539,15 @@
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
+        "key": "sweostor",
+        "form-raw": ["sweostor", "swustor", "swester", "swuster", "swæstar", "swestar", "swystor", "swyster"],
+        "form-canon": "sister",
+        "type": "noun",
+        "gloss": "sister",
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "origin": "old-english",
+        "notes": "Wiktionary lists a lot of alternate forms. Look there for dialect info."
+    }, {
         "key": "swerian",
         "form-raw": "sweri|an",
         "form-participle-raw": ["sworen"],
@@ -7091,7 +7109,7 @@
         "form-raw-alt": ["wange", "wonge", "wenge"],
         "form-canon": "wang",
         "type": "noun",
-        "gloss": "cheek",
+        "gloss": ["cheek", "molar"],
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {

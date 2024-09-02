@@ -65,7 +65,7 @@ def meets_morph_requirements(morph, env):
 # Randomly filter out morphs with less than 100% frequency
 def frequency_filter(morph):
     frequency = morph.frequency()
-    if frequency < 100 and random.randint(1, 100) > frequency:
+    if frequency < 100 and random.randint(0, 99) > frequency:
         return False
 
     return True
