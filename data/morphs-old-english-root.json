@@ -41,7 +41,7 @@
         "form-canon": "even",
         "type": "noun",
         "gloss": "evening",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
         "origin": "old-english"
     }, {
         "key": "ælde",
@@ -1409,7 +1409,7 @@
         "form-canon": "cloud",
         "type": "noun",
         "gloss": "cloud",
-        "tags": ["count", "concrete", "weather", "gloomy"],
+        "tags": ["count", "concrete", "weather", "glooming"],
         "origin": "old-english",
         "notes": "Alternate meaning 'rock, hill', or general sense of 'accumulated mass'"
     }, {
@@ -1418,7 +1418,7 @@
         "form-canon": "cloud",
         "type": "noun",
         "gloss": "clouds",
-        "tags": ["singleton", "concrete", "place", "gloomy"],
+        "tags": ["singleton", "concrete", "place", "glooming"],
         "origin": "old-english"
     }, {
         "key": "cnīf",
@@ -1697,7 +1697,7 @@
         "form-canon": "dawn",
         "type": "noun",
         "gloss": "dawn",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
         "origin": "old-english",
         "notes": "HACK: Totally fake morph, meant to capture the later 'dawn', in fact derived from OE 'dawian' or a Norse cognate. See OED."
     }, {
@@ -1797,7 +1797,7 @@
         "form-canon": "dusk",
         "type": "noun",
         "gloss": "dusk",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
         "origin": "old-english",
         "notes": "Form evolution is unclear, according to OED. 'dosc' is my assumption based on OED's mention of metathesis"
     }, {
@@ -2084,9 +2084,8 @@
         "form-raw": "earfoþe",
         "type": "noun",
         "gloss": "labor [pains]",
-        "tags": ["mass", "abstract", "body-state", "speculative", "rare"],
-        "origin": "old-english",
-        "notes": "Rare since this is a specific and not the main sense, but I want to keep it. TODO: Add a body-state tag?"
+        "tags": ["mass", "abstract", "body-state", "speculative"],
+        "origin": "old-english"
     }, {
         "key": "earfoþe-state",
         "form-raw": "earfoþe",
@@ -3274,7 +3273,7 @@
         "form-canon": "gloom",
         "type": "noun",
         "gloss": "twilight",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
         "origin": "old-english"
     }, {
         "key": "glome",
@@ -3291,7 +3290,7 @@
         "form-canon": "gloam",
         "type": "noun",
         "gloss": "twilight",
-        "tags": ["mass", "abstract", "bounded", "time", "time-of-day", "luminous", "gloomy", "obscure"],
+        "tags": ["mass", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming", "obscure"],
         "origin": "old-english",
         "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
     }, {
@@ -3907,14 +3906,14 @@
         "form-raw": "hoþma",
         "type": "noun",
         "gloss": ["covering", "cloud"],
-        "tags": ["count", "concrete", "speculative", "gloomy"],
+        "tags": ["count", "concrete", "speculative", "glooming"],
         "origin": "old-english"
     }, {
         "key": "hoþma-mass",
         "form-raw": "hoþma",
         "type": "noun",
         "gloss": ["darkness"],
-        "tags": ["mass", "concrete", "speculative", "gloomy"],
+        "tags": ["mass", "concrete", "speculative", "glooming"],
         "origin": "old-english"
     }, {
         "key": "hræċan",
@@ -4058,6 +4057,15 @@
         "gloss-animal": ["pursue"],
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal"],
         "origin": "old-english"
+    }, {
+        "key": "hunt/FAKE",
+        "form-raw": "hunt",
+        "form-canon": "hunt",
+        "type": "noun",
+        "gloss": "hunt",
+        "tags": ["count", "abstract", "activity"],
+        "origin": "old-english",
+        "notes": "A FAKE form approximating the modern noun 'hunt', for forming compounds like 'huntsman'. OE had 'huntoþ'"
     }, {
         "key": "huntian",
         "form-raw": "hunti|an",
@@ -4260,18 +4268,23 @@
         "tags": ["transitive", "motion"],
         "origin": "old-english"
     }, {
-        "key": "lǣden-lang",
-        "form-raw": "lǣden",
-        "form-raw-alt": ["lēden", "lȳden", "lēoden", "liden", "leden"],
+        "key": "lǣden-Latin",
+        "form-raw": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en"],
         "type": "noun",
-        "gloss": ["latin [language]", "[language] of a people or nation", "[language] of birds"],
-        "tags": ["singleton", "concrete", "weather", "gloomy"],
+        "gloss": "latin [language]",
+        "tags": ["singleton", "concrete"],
+        "origin": "old-english"
+    }, {
+        "key": "lǣden-language",
+        "form-raw": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en", "lid+en", "led+en", "lēd"],
+        "type": "noun",
+        "gloss": ["[speech] of a person or class of persons", "[language] of a people or nation", "[language] of birds"],
+        "tags": ["singleton", "concrete"],
         "origin": "old-english",
-        "notes": "Short vowel forms are FAKE, intended to produce the occasionally-attested forms 'lidden', 'ledden'"
+        "notes": "Short vowel forms and forms without '-en' are FAKE, intended to produce the occasionally-attested forms 'lidden', 'ledden', and 'leed'. Similar for +'s"
     }, {
         "key": "lǣden-noise",
-        "form-raw": "lǣden",
-        "form-raw-alt": ["lēden", "lȳden", "lēoden", "liden", "leden"],
+        "form-raw": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en", "lid+en", "led+en"],
         "type": "noun",
         "gloss": "[noise], [chatter]",
         "tags": ["mass", "abstract"],
@@ -5010,7 +5023,7 @@
         "form-canon": "mist",
         "type": "noun",
         "gloss": "mist",
-        "tags": ["mass", "concrete", "weather", "gloomy"],
+        "tags": ["mass", "concrete", "weather", "gas", "glooming"],
         "origin": "old-english"
     }, {
         "key": "mōd",
@@ -5028,7 +5041,7 @@
         "form-canon": "moon",
         "type": "noun",
         "gloss": "moon",
-        "tags": ["singleton", "concrete", "place", "luminous"],
+        "tags": ["singleton", "concrete", "terrain", "place", "luminous"],
         "origin": "old-english"
     }, {
         "key": "morgen",
@@ -5167,7 +5180,7 @@
         "form-canon": "night",
         "type": "noun",
         "gloss": "night",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "measure", "luminous", "gloomy"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "measure", "luminous", "glooming"],
         "origin": "old-english"
     }, {
         "key": "niman",
@@ -5195,6 +5208,13 @@
         "form-canon": "open",
         "type": "adj",
         "gloss": "open",
+        "origin": "old-english"
+    }, {
+        "key": "orf",
+        "form-raw": "orf",
+        "type": "noun",
+        "gloss": "cattle",
+        "tags": ["mass", "concrete", "living", "animal", "tame", "mammal", "speculative"],
         "origin": "old-english"
     }, {
         "key": "pǣċa",
@@ -5447,7 +5467,7 @@
         "form-canon": "rain",
         "type": "noun",
         "gloss": "rain",
-        "tags": ["mass", "concrete", "weather", "gloomy"],
+        "tags": ["mass", "concrete", "weather", "glooming"],
         "origin": "old-english",
         "notes": "'reng' form is in OED as rare; palatalization is unclear."
     }, {
@@ -6039,7 +6059,7 @@
         "form-canon": "smoke",
         "type": "noun",
         "gloss": "smoke",
-        "tags": ["mass", "concrete", "fluid", "gas"],
+        "tags": ["mass", "concrete", "fluid", "gas", "glooming"],
         "origin": "old-english"
     }, {
         "key": "smyrels",
@@ -7435,7 +7455,7 @@
         "form-canon": "winter",
         "type": "noun",
         "gloss": "winter",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-year", "luminous", "gloomy"],
+        "tags": ["count", "abstract", "bounded", "time", "time-of-year", "luminous", "glooming"],
         "origin": "old-english"
     }, {
         "key": "wīs",
@@ -7558,7 +7578,7 @@
         "form-canon": "welkin",
         "type": "noun",
         "gloss": ["cloud"],
-        "tags": ["count", "concrete", "weather", "gloomy", "obscure"],
+        "tags": ["count", "concrete", "weather", "glooming", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wolcen-singleton",
@@ -7566,7 +7586,7 @@
         "form-canon": "welkin",
         "type": "noun",
         "gloss": ["sky", "heavens", "clouds"],
-        "tags": ["singleton", "concrete", "place", "luminous", "gloomy", "obscure"],
+        "tags": ["singleton", "concrete", "place", "luminous", "glooming", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wolf",

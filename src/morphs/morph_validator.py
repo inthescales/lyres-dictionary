@@ -83,7 +83,7 @@ valid_tags = [
     "liquid",                   # Noun semantics - a liquid
     "gas",                      # Noun semantics - a gas
     "luminous",                 # Noun semantics - emits light
-    "gloomy",                   # Noun semantics - obscures light or darkens (esp. of weather and times)
+    "glooming",                 # Noun semantics - obscures light or darkens (esp. of weather and times)
     "region",                   # Noun semantics - a region
     "terrain",                  # Noun semantics - a type of land
     "place",                    # Noun semantics - a specific place (e.g. hell, home, the sky)

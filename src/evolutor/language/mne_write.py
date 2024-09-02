@@ -120,6 +120,9 @@ def from_me_phonemes(phonemes, config):
             if next1 and not (next1.is_geminate() or (next2 and next2.is_consonant()) or next1.value in ["ʃ"]):
                 insert_lengthening_e = True
         elif phone.value == "e":
+            # NOTE: The Big Chart indicates that /e/, occurring between /w/ and /r/, should result
+            # in an 'ar' spelling. However, both the examples they give, 'war' and 'warble' are from AN,
+            # and applying that rule seems to mess up 'swerve'. Who knows?
             if next1 and next1.value == "r":
                 # These cases seem ambiguous. 
                 # "ea" may be more common when descending from "eo" spelling?

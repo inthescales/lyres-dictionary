@@ -98,7 +98,7 @@
         "gloss": "carried by %pl",
         "requires": {
             "follows": {
-                "has-tag": "liquid"
+                "has-any-tags": ["liquid", "gas"]
             }
         },
         "origin": "old-english",
@@ -211,6 +211,24 @@
         "tags": ["uncountable", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "-cwealm",
+        "form-stem": "qualm",
+        "form-final": "qualm",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": ["death among %pl", "a disease afflicting %pl"],
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "living" },
+                    { "not": { "has-tag": "role" } }
+                ]
+            }
+        },
+        "tags": ["uncountable", "abstract"],
+        "origin": "old-english"
+    }, {
         "key": "-fare",
         "form-stem": "fare",
         "form-raw": "faru",
@@ -312,7 +330,7 @@
         "gloss": "darkness of %sg",
         "requires": {
             "follows": {
-                "has-tag": "gloomy"
+                "has-tag": "glooming"
             }
         },
         "exception": [{
@@ -572,15 +590,15 @@
         "notes": "This presumably emerged in ME, but the root is OE. "
     }, {
         "key": "-man",
-        "form-stem": "man",
-        "form-raw": "man",
+        "form-stem": ["man", "sman"],
+        "form-raw": ["man", "sman"],
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "man who engages in %pl",
+        "gloss": "one who engages in %pl",
         "requires": {
             "follows": {
-                "has-any-tags": ["activity", "weapon", "terrain"]
+                "has-any-tags": ["activity", "grouping", "weapon", "tool", "terrain"]
             }
         },
         "exception": [{
@@ -589,29 +607,38 @@
                     "has-tag": "weapon"
                 }
             },
-            "gloss": "man who fights with %sg"
+            "gloss": "one who fights with %sg"
         }, {
             "case": {
                 "follows": {
                     "has-tag": "terrain"
                 }
             },
-            "gloss": "man who frequents or works in %pl"
+            "gloss": "one who frequents or works in %pl"
         }, {
             "case": {
                 "follows": {
-                    "has-suffix": "d"
+                    "has-tag": "grouping"
                 }
             },
-            "form-stem": "sman",
-            "form-final": "sman"
+            "gloss": "one who is a member of %sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "tool"
+                }
+            },
+            "gloss": "one who uses %sg"
         }],
-        "tags": ["count", "concrete", "living", "person", "gendered"],
-        "origin": "old-english"
+        "tags": ["uncountable", "concrete", "living", "person", "gendered"],
+        "origin": "old-english",
+        "notes": "The 'sman' form covers cases like 'huntsman' or 'kinsman'. Possibly a possessive in origin. This *could* end up weird if the preceding word ends in 's', but I think either it'll be double, as in 'class', in which case the extra will be removed, or followed by a vowel, as in 'manse' (neither is OE I know, but spelling should work out the same)",
+        "notes": "TODO: I'd like the 'tool' sense to include the tool-gloss, but it wouldn't be conjugated correctly. Find a way to do this.",
+        "notes": "Consider adding a 'one who works with X' sense here, as in oilman, milkman"
     }, {
         "key": "-woman",
-        "form-stem": "woman",
-        "form-raw": "woman",
+        "form-stem": ["woman", "swoman"],
+        "form-raw": ["woman", "swoman"],
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
@@ -627,22 +654,28 @@
                     "has-tag": "weapon"
                 }
             },
-            "gloss": "woman who fights with %sg"
+            "gloss": "[woman] who fights with %sg"
         }, {
             "case": {
                 "follows": {
                     "has-tag": "terrain"
                 }
             },
-            "gloss": "woman who frequents or works in %pl"
+            "gloss": "[woman] who frequents or works in %pl"
         }, {
             "case": {
                 "follows": {
-                    "has-suffix": "d"
+                    "has-tag": "grouping"
                 }
             },
-            "form-stem": "swoman",
-            "form-final": "swoman"
+            "gloss": "[woman] who is a member of %sg"
+        }, {
+            "case": {
+                "follows": {
+                    "has-tag": "tool"
+                }
+            },
+            "gloss": "[woman] who uses %sg"
         }],
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
