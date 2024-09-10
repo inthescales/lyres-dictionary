@@ -1601,7 +1601,7 @@
         "form-canon": "quean",
         "type": "noun",
         "gloss": "[woman] (derogatory)",
-        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "no-gen"],
         "origin": "old-english",
         "notes": "Original sense of 'woman' generally"
     }, {
@@ -1781,7 +1781,7 @@
         "form-canon": "doom",
         "type": "noun",
         "gloss": "judgement",
-        "tags": ["mass", "abstract", "activity"],
+        "tags": ["mass", "abstract", "activity", "man-made"],
         "origin": "old-english"
     }, {
         "key": "dox",

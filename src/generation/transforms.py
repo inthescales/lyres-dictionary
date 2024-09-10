@@ -20,7 +20,7 @@ def seed_word(word, morphothec):
     bag = [
         ("latin", morphothec.root_count_for_language("latin")),
         ("greek", morphothec.root_count_for_language("greek")),
-        ("old-english", int(morphothec.root_count_for_language("old-english") * 0.7))
+        ("old-english", int(morphothec.root_count_for_language("old-english") * 0.5))
     ]
     choice = helpers.choose_bag(bag)
     if choice == "latin":

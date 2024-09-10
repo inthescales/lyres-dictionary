@@ -157,7 +157,7 @@
                 }
             },
             "form-stem": "later",
-            "gloss": "one who worships %pl"
+            "gloss": "[worship] %pl"
         }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
@@ -257,6 +257,25 @@
         "derive-to": "verb",
         "suffixes": ["greek-ist", "-ic-def", "-y-def"],
         "gloss": "the study of %pl",
+        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    }, {
+        "key": "-plast",
+        "form-final": "plast",
+        "form-stem": "plast",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "suffixes": ["greek-silent-agent", "-y-def", "-ic"],
+        "gloss": "the forming of %pl",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-silent-agent"
+                }
+            },
+            "gloss": "[form] %pl"
+        }],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     }

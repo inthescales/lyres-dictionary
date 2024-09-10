@@ -87,6 +87,7 @@
                 "has-tag": "mind-state"
             }
         },
+        "tags": ["no-gen"],
         "origin": "old-english"
     }, {
         "key": "-borne",
