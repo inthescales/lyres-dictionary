@@ -1,4 +1,5 @@
 lemminflect>=0.2.0
 tweepy==4.12.0
 mastodon.py==1.5.1
+atproto==0.0.55
 git+https://github.com/inthescales/bot-buddy.git#egg=botbuddy
