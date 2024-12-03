@@ -11,6 +11,7 @@ import src.utils.validator as validator
 from src.evolutor.engine.config import Config
 from src.morphs.morphothec import Morphothec
 from src.generation.generator import generate_word, word_for_keys
+from src.posting import posting
 from src.tools.analysis import Analyst
 from src.utils.logging import Logger
 
@@ -41,7 +42,8 @@ def generate_entry():
         entry = composer.entry(word)
         
         if validator.validate(entry):
-            return entry
+            meta = posting.get_meta(word)
+            return { "content": entry, "meta": meta }
 
 def entry_for_keys(keys):
     global morphothec, composer
@@ -57,7 +59,7 @@ def test_with_count(count):
     
     print("")
     for i in range(0, count):
-        print(generate_entry())
+        print(generate_entry()["content"])
         print("")
 
 def test_with_keys(keys):

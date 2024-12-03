@@ -4856,7 +4856,7 @@
         "form-raw": "mamme",
         "type": "noun",
         "gloss": "[teat], [breast]",
-        "tags": ["count", "concrete", "living", "bodypart", "sexual", "speculative"],
+        "tags": ["count", "concrete", "living", "bodypart", "speculative"],
         "origin": "old-english",
         "notes": "From Latin 'mamma'"
     }, {
@@ -7383,7 +7383,7 @@
         "form-canon": "wether",
         "type": "noun",
         "gloss": "castrated [ram]",
-        "tags": ["count", "concrete", "living", "animal", "tame", "sexual"],
+        "tags": ["count", "concrete", "living", "animal", "tame"],
         "origin": "old-english"
     }, {
         "key": "wiċċe",

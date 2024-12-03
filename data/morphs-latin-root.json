@@ -3818,7 +3818,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "breast",
-        "tags": ["count", "concrete", "bodypart", "sexual"],
+        "tags": ["count", "concrete", "bodypart"],
         "origin": "latin"
     }, {
         "key": "mandare",
