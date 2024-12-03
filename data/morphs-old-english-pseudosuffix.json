@@ -247,7 +247,7 @@
         "derive-from": "noun",
         "derive-to": "noun",
         "suffixes": [],
-        "gloss": "engaging in %@",
+        "gloss": "engaging in %pl",
         "requires": {
             "follows": {
                 "has-any-tags": ["activity", "grouping"]

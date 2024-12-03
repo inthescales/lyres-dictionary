@@ -2929,7 +2929,7 @@
         "form-canon": "game",
         "type": "noun",
         "gloss": "game",
-        "tags": ["count", "concrete", "man-made"],
+        "tags": ["count", "concrete", "activity", "man-made"],
         "origin": "old-english"
     }, {
         "key": "gamen-mass",
@@ -3488,7 +3488,7 @@
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[copulate] with", "[cohabitate] with"],
-        "tags": ["transitive", "speculative"],
+        "tags": ["transitive", "sexual", "speculative"],
         "origin": "old-english",
         "notes": "Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
     }, {
@@ -4856,7 +4856,7 @@
         "form-raw": "mamme",
         "type": "noun",
         "gloss": "[teat], [breast]",
-        "tags": ["count", "concrete", "living", "bodypart", "speculative"],
+        "tags": ["count", "concrete", "living", "bodypart", "sexual", "speculative"],
         "origin": "old-english",
         "notes": "From Latin 'mamma'"
     }, {
@@ -5257,7 +5257,7 @@
         "form-canon": "pintle",
         "type": "noun",
         "gloss": "penis",
-        "tags": ["count", "concrete", "bodypart", "obscure"],
+        "tags": ["count", "concrete", "bodypart", "sexual", "obscure"],
         "origin": "old-english"
     }, {
         "key": "pleġan",
@@ -6593,7 +6593,7 @@
         "type": "verb",
         "verb-class": 1,
         "gloss": "[copulate] with",
-        "tags": ["transitive", "obscure"],
+        "tags": ["transitive", "sexual", "obscure"],
         "origin": "old-english",
         "notes": "Connection between ME+ sense of 'copulate with' appears a bit uncertain in OED, but leaving here in OE for now"
     }, {
@@ -7383,7 +7383,7 @@
         "form-canon": "wether",
         "type": "noun",
         "gloss": "castrated [ram]",
-        "tags": ["count", "concrete", "living", "animal", "tame"],
+        "tags": ["count", "concrete", "living", "animal", "tame", "sexual"],
         "origin": "old-english"
     }, {
         "key": "wiċċe",

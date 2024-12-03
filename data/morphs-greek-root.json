@@ -453,7 +453,7 @@
         "form-stem": "erot",
         "type": "noun",
         "gloss": "sex",
-        "tags": ["mass", "abstract"],
+        "tags": ["mass", "abstract", "sexual"],
         "origin": "greek"
     }, {
         "key": "eschata",
@@ -845,7 +845,7 @@
         "form-stem": "mast",
         "type": "noun",
         "gloss": "breast",
-        "tags": ["count", "concrete", "bodypart"],
+        "tags": ["count", "concrete", "bodypart", "sexual"],
         "origin": "greek"
     }, {
         "key": "mathein",
@@ -1048,7 +1048,7 @@
         "form-stem": "orgias",
         "type": "verb",
         "gloss": "[celebrate] orgies",
-        "tags": ["intransitive", "rare"],
+        "tags": ["intransitive", "sexual", "rare"],
         "origin": "greek"
     }, {
         "key": "ortha",
@@ -1124,7 +1124,7 @@
         "form-stem": "phall",
         "type": "noun",
         "gloss": "penis",
-        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
+        "tags": ["count", "concrete", "bodypart", "bodypart-single", "sexual"],
         "origin": "greek"
     }, {
         "key": "phanai",
