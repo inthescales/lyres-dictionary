@@ -17,6 +17,7 @@ out.html
 
 # Deployment files
 creds.json
+deploy
 
 # Supporting documentation
 notes
