@@ -171,7 +171,7 @@ def validate_morph(morph):
 
         Logger.warn(message)
 
-    # Returns true if the given requirement clause is satisfied by the given morph.
+    # Returns true if the key and optional value type are found by the given morph.
     # key_required - indicates whether errors should be logged if the given key is missing
     # Clause format:
     # - key                              - valid if the key exists in the morph
@@ -179,7 +179,7 @@ def validate_morph(morph):
     #   - list                           - valid if the key's value is any of the elements in the list
     #   - dict { "one-or-many": [list] } - valid if the key's value is one of the elements in the list, or a list
     #                                      all of whose contents are in the given list
-    def evaluate_clause(clause, morph, key_required=True, category=None):
+    def evaluate_key(clause, morph, key_required=True, category=None):
         key = clause["key"]
         if key not in morph:
             if key_required:
@@ -201,16 +201,36 @@ def validate_morph(morph):
                     record_error(" - invalid value '" + str(morph[key]) + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(accepted) + ", or a list of these.")
                     return False
             else:
-                record_error(" - unrecognized values requirement: " + str(clause["values"]))
+                record_error(" - unrecognized validation values requirement: " + str(clause["values"]))
 
         return True
+
+    # Returns true if any of the tags given in the clause are found in the morph
+    def evaluate_tags(clause, morph, category):
+        if "tags" not in morph:
+            if category == None:
+                record_error(" - all morphs require one of the following tags: " + str(clause["tags"]))
+            else:
+                record_error(" - morphs of type '" + category + "' require one of the following tags: " + str(clause["tags"]))
+            return False
+
+        for tag in clause["tags"]:
+            if tag in morph["tags"]:
+                return True
+
+        if category == None:
+            record_error(" - all morphs require one of the following tags: " + str(clause["tags"]))
+        else:
+            record_error(" - morphs of type '" + category + "' require one of the following tags: " + str(clause["tags"]))
+
+        return False
 
     # Returns true if any of the given clauses are satisfied by the given morph
     # Any format:
     # - any - list of clauses, at least one of which must be valid
     def evaluate_any(clauses, morph, category=None):
         for clause in clauses:
-            if evaluate_clause(clause, morph, False, category):
+            if evaluate_key(clause, morph, False, category):
                 return True
 
         if category == None:
@@ -225,8 +245,12 @@ def validate_morph(morph):
         for requirement in requirements:
             if "any" in requirement:
                 valid = valid and evaluate_any(requirement["any"], morph, category)
+            elif "tags" in requirement:
+                valid = valid and evaluate_tags(requirement, morph, category)
+            elif "key" in requirement:
+                valid = valid and evaluate_key(requirement, morph, True, category)
             else:
-                valid = valid and evaluate_clause(requirement, morph, True, category)
+                record_error(" - unrecognized validation requirement type: " + str(requirement))
 
         return valid
 
@@ -242,6 +266,9 @@ def validate_morph(morph):
 
     # Properties required by morphs of a certain type
     type_requirements = {
+        "noun": [
+            { "tags": ["count", "mass", "singleton", "uncountable"] }
+        ],
         "derive": [
             { "key": "derive-from", "values": { "one-or-many": root_types } },
             { "key": "derive-to", "values": { "one-or-many": root_types } }
@@ -315,26 +342,6 @@ def validate_morph(morph):
 
     if morph["origin"] in origin_type_requirements and morph["type"] in origin_type_requirements[morph["origin"]]:
         valid = valid and evaluate_requirements(origin_type_requirements[morph["origin"]][morph["type"]], morph, " ".join(morph["origin"].split("-")) + " " + morph["type"])
-
-    morph_type = morph["type"]
-
-    derive_type = None
-    if morph_type == "derive": derive_type = morph["derive-to"]
-
-    # Root and prefix type requirements
-    if morph_type == "noun" or derive_type == "noun":
-        if morph["origin"] == "latin":
-            if not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
-                record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
-                return False
-        elif morph["origin"] == "greek":
-            if not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
-                record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
-                return False
-        elif morph["origin"] == "old-english":
-            if not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
-                record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
-                return False
 
     # Check key whitelist
     for key in morph:
