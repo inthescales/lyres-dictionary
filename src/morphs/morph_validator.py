@@ -152,6 +152,7 @@ valid_origins = [
 
 def validate_morph(morph):
     errored = False
+    # Logs an error, logging a top-level error line only once
     def record_error(message):
         nonlocal errored
 
@@ -164,6 +165,8 @@ def validate_morph(morph):
 
         Logger.warn(message)
 
+    # Returns true if the given requirement clause is satisfied by the given morph.
+    # key_required - indicates whether errors should be logged if the given key is missing
     def evaluate_clause(clause, morph, key_required=True, category=None):
         key = clause["key"]
         if key not in morph:
@@ -182,6 +185,7 @@ def validate_morph(morph):
 
         return True
 
+    # Returns true if any of the given clauses are satisfied by the given morph
     def evaluate_any(clauses, morph, category=None):
         for clause in clauses:
             if evaluate_clause(clause, morph, False, category):
@@ -193,12 +197,18 @@ def validate_morph(morph):
             record_error(" - morphs of type '" + category + "' must contain one of: " + ", ".join([x["key"] for x in clauses]))
         return False
 
+    # Checks whether the given requirements are satisfied by the given morph
     def evaluate_requirements(requirements, morph, category=None):
+        valid = True
         for requirement in requirements:
             if "any" in requirement:
-                evaluate_any(requirement["any"], morph, category)
+                valid = valid and evaluate_any(requirement["any"], morph, category)
             else:
-                evaluate_clause(requirement, morph, True, category)
+                valid = valid and evaluate_clause(requirement, morph, True, category)
+
+        return valid
+
+    valid = True
 
     # Properties required by all morphs
     universal_requirements = [
@@ -206,8 +216,9 @@ def validate_morph(morph):
         { "key": "type", "values": valid_types},
         { "key": "origin", "values": valid_origins }
     ]
-    evaluate_requirements(universal_requirements, morph)
+    valid = valid and evaluate_requirements(universal_requirements, morph)
 
+    # Properties required by morphs of a certain type
     type_requirements = {
         "derive": [
             { "key": "derive-from" },
@@ -221,8 +232,9 @@ def validate_morph(morph):
         ]
     }
     if morph["type"] in type_requirements:
-        evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
+        valid = valid and evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
 
+    # Properties required by morphs of a certain type and origin
     origin_type_requirements = {
         "latin": {
             "noun": [
@@ -251,6 +263,9 @@ def validate_morph(morph):
             ],
             "adj": [
                 { "key": "form-stem" },
+            ],
+            "verb": [
+                { "key": "form-stem" },
             ]
         },
         "old-english": {
@@ -277,7 +292,7 @@ def validate_morph(morph):
     }
 
     if morph["origin"] in origin_type_requirements and morph["type"] in origin_type_requirements[morph["origin"]]:
-        evaluate_requirements(origin_type_requirements[morph["origin"]][morph["type"]], morph, " ".join(morph["origin"].split("-")) + " " + morph["type"])
+        valid = valid and evaluate_requirements(origin_type_requirements[morph["origin"]][morph["type"]], morph, " ".join(morph["origin"].split("-")) + " " + morph["type"])
 
     morph_type = morph["type"]
 
@@ -303,11 +318,13 @@ def validate_morph(morph):
     for key in morph:
         if not key in valid_properties:
             record_error("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
+            valid = False
 
     # Check tag whitelist
     if "tags" in morph:
         for tag in morph["tags"]:
             if not tag in valid_tags:
                 record_error("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
+                valid = False
 
-    return True
+    return valid
