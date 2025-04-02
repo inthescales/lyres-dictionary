@@ -167,7 +167,6 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             test_evolution(evolution_form, evolution_lang)
         else:
             test_with_count(count)
-            
-        print("")
+        
     elif mode == "analyze":
         analyze()
