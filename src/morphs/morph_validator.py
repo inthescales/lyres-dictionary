@@ -133,30 +133,76 @@ valid_tags = [
     "y-to-i"                    # MnE orthography - causes a final unstressed 'y' to become 'i' when a consonant is suffixed (e.g. 'day' + '-ly' -> 'daily')
 ]
 
+valid_types = [
+    "noun",
+    "adj",
+    "verb",
+    "number",
+    "prep",
+    "prefix",
+    "derive"
+]
+
+valid_origins = [
+    "latin",
+    "greek",
+    "old-english",
+    "modern-english"
+]
+
 def validate_morph(morph):
-
-    if not "key" in morph:
-        Logger.error("no key found in morph:")
-        Logger.error(" - " + str(morph))
-        return False
-
     errored = False
     def record_error(message):
         nonlocal errored
 
         if errored == False:
-            Logger.warn("errors found reading morph '" + morph["key"] + "'")
+            if "key" in morph:
+                Logger.warn("errors found reading morph '" + morph["key"] + "'")
+            else:
+                Logger.warn("errors found reading morph without key: " + str(morph))
             errored = True
 
         Logger.warn(message)
 
-    if not "type" in morph:
-        record_error(" - type is missing")
+    # Properties required by all morphs
+    universal_requirements = [
+        { "key": "key" },
+        { "key": "type", "values": valid_types},
+        { "key": "origin", "values": valid_origins }
+    ]
+
+    def evaluate_clause(clause, morph, key_required=True, category=None):
+        key = clause["key"]
+        if key_required and key not in morph:
+            if category == None:
+                record_error(" - property '" + key + "' is required all morphs")
+            else:
+                record_error(" - property '" + key + "' is required for morphs of type '" + category + "'")
+            return False
+
+        elif "values" in clause and morph[key] not in clause["values"]:
+            record_error(" - invalid value '" + morph[key] + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(clause["values"]))
+            return False
+
+    def evaluate_any(clauses, morph, category=None):
+        for clause in clauses:
+            if evaluate_clause(clause, morph, False):
+                return True
+
+        if category == None:
+            record_error(" - all morphs must contain one of: " + ", ".join([x["key"] for x in clauses]))
+        else:
+            record_error(" - morphs of type '" + category + "' must contain one of: " + ", ".join([x["key"] for x in clauses]))
         return False
 
-    if not "origin" in morph:
-        record_error(" - origin is missing")
-        return False
+    def evaluate_requirements(requirements, morph):
+        for requirement in requirements:
+            if "any" in requirement:
+                evaluate_any(requirement["any"], morph)
+            else:
+                evaluate_clause(requirement, morph)
+
+    evaluate_requirements(universal_requirements, morph)
 
     morph_type = morph["type"]
 

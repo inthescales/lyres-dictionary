@@ -5982,10 +5982,11 @@
         "origin": "old-english",
         "notes": "Gloss 'sharpen' from Scottish usage"
     }, {
-        "key": "slīþan",
-        "form-raw": "slīþ|an",
+        "key": "snīþan",
+        "form-raw": "snīþ|an",
         "form-canon": "snithe",
-        "type": "ver b",
+        "type": "verb",
+        "verb-class": 1,
         "gloss": "cut",
         "gloss-alt": ["[kill] by cutting", "[make] an incision"],
         "tags": ["transitive", "obscure"],
