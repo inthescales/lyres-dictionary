@@ -166,11 +166,12 @@ def validate_morph(morph):
 
     def evaluate_clause(clause, morph, key_required=True, category=None):
         key = clause["key"]
-        if key_required and key not in morph:
-            if category == None:
-                record_error(" - property '" + key + "' is required all morphs")
-            else:
-                record_error(" - property '" + key + "' is required for morphs of type '" + category + "'")
+        if key not in morph:
+            if key_required:
+                if category == None:
+                    record_error(" - property '" + key + "' is required all morphs")
+                else:
+                    record_error(" - property '" + key + "' is required for morphs of type '" + category + "'")
             return False
 
         # TODO: Validate values where the value may be a specific value or a list of values (e.g. derive-from,
@@ -178,6 +179,8 @@ def validate_morph(morph):
         elif "values" in clause and morph[key] not in clause["values"]:
             record_error(" - invalid value '" + str(morph[key]) + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(clause["values"]))
             return False
+
+        return True
 
     def evaluate_any(clauses, morph, category=None):
         for clause in clauses:
@@ -209,10 +212,72 @@ def validate_morph(morph):
         "derive": [
             { "key": "derive-from" },
             { "key": "derive-to" }
+        ],
+        "prep": [
+            { "key": "prefix-on" },
+        ],
+        "prefix": [
+            { "key": "prefix-on" },
         ]
     }
     if morph["type"] in type_requirements:
         evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
+
+    origin_type_requirements = {
+        "latin": {
+            "noun": [
+                { "key": "form-stem" },
+                { "key": "declension", "values": [0, 1, 2, 3, 4, 5] },
+            ],
+            "adj": [
+                { "key": "form-stem" },
+                { "key": "declension", "values": [0, 12, 3] },
+            ],
+            "verb": [
+                { "any": [
+                    { "key": "form-stem-present" },
+                    { "key": "form-stem" }
+                ]},
+                { "any": [
+                    { "key": "form-final" },
+                    { "key": "form-stem" }
+                ]},
+                { "key": "conjugation", "value": [0, 1, 2, 3, 4] },
+            ]
+        },
+        "greek": {
+            "noun": [
+                { "key": "form-stem" },
+            ],
+            "adj": [
+                { "key": "form-stem" },
+            ]
+        },
+        "old-english": {
+            "noun": [
+                { "any": [
+                    { "key": "form-stem" },
+                    { "key": "form-raw" },
+                ]}
+            ],
+            "adj": [
+                { "any": [
+                    { "key": "form-stem" },
+                    { "key": "form-raw" },
+                ]}
+            ],
+            "verb": [
+                { "any": [
+                    { "key": "form-stem" },
+                    { "key": "form-raw" },
+                ]},
+                { "key": "verb-class", "values": [1, 2, 3, 4, 5, 6, 7, "weak", "preterite-present"] }
+            ]
+        }
+    }
+
+    if morph["origin"] in origin_type_requirements and morph["type"] in origin_type_requirements[morph["origin"]]:
+        evaluate_requirements(origin_type_requirements[morph["origin"]][morph["type"]], morph, " ".join(morph["origin"].split("-")) + " " + morph["type"])
 
     morph_type = morph["type"]
 
@@ -222,81 +287,17 @@ def validate_morph(morph):
     # Root and prefix type requirements
     if morph_type == "noun" or derive_type == "noun":
         if morph["origin"] == "latin":
-            if not "form-stem" in morph or not "declension" in morph:
-                record_error(" - noun must have 'form-stem' and 'declension'")
-                return False
-            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
+            if not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
                 record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
                 return False
-            elif morph["declension"] not in [0, 1, 2, 3, 4, 5]:
-                record_error(" - invalid declension '" + str(morph["declension"]) + "'")
-                return False
         elif morph["origin"] == "greek":
-            if not "form-stem" in morph:
-                record_error(" - noun must have 'form-stem'")
-                return False
-            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
+            if not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
                 record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
                 return False
         elif morph["origin"] == "old-english":
-            if not ("form-raw" in morph or "form-stem" in morph):
-                record_error(" - noun must have 'form-raw' or 'form-stem'")
-                return False
-            elif not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
+            if not ("tags" in morph and ("count" in morph["tags"] or "mass" in morph["tags"] or "singleton" in morph["tags"] or "uncountable" in morph["tags"])):
                 record_error(" - noun must have a countability tag ('count', 'mass', 'singleton', or 'uncountable')")
                 return False
-
-    elif morph_type == "adj" or derive_type == "adj":
-        if morph["origin"] == "latin":
-            if not "form-stem" in morph or not "declension" in morph:
-                record_error(" - adjective must have 'form-stem' and 'declension'")
-                return False
-            elif morph["declension"] not in [0, 12, 3]:
-                record_error(" - invalid declension '" + str(morph["declension"]) + "'")
-                return False
-        elif morph["origin"] == "greek":
-            if not "form-stem" in morph:
-                record_error(" - adjective must have 'form-stem'")
-                return False
-        elif morph["origin"] == "old-english":
-            if not ("form-raw" in morph or "form-stem" in morph):
-                record_error(" - noun must have 'form-raw' or 'form-stem'")
-                return False
-
-    elif morph_type == "verb" or derive_type == "verb":
-        if morph["origin"] == "latin":
-            if "form-stem-present" in morph and "form-stem-perfect" in morph and morph["form-stem-present"] == morph["form-stem-perfect"]:
-                print("SAME: " + morph["key"])
-            if not (("form-stem-present" in morph or "form-stem" in morph) \
-                 and ("form-final" or "form-stem" in morph) in morph \
-                 and "conjugation" in morph):
-                record_error(" - verbs require 'form-stem-present', 'form-stem-perfect', 'form-final', and 'conjugation'")
-                return False
-
-            if morph["conjugation"] not in [0, 1, 2, 3, 4]:
-                record_error(" - invalid conjugation '" + str(morph["conjugation"]) + "'")
-                return False
-            
-        if morph["origin"] == "old-english":
-            if not ("form-raw" in morph or "form-stem" in morph):
-                record_error(" - verb must have 'form-raw' or 'form-stem'")
-                return False
-
-            if not ("verb-class" in morph):
-                record_error(" - verb must have 'verb-class'")
-                return False
-
-            if morph["verb-class"] not in [1, 2, 3, 4, 5, 6, 7, "weak", "preterite-present"]:
-                record_error(" - invalid verb class '" + morph["verb-class"] + "'")
-                return False
-
-    elif morph_type == "prefix":
-        if not ("prefix-on" in morph):
-            record_error(" - prefix morphs must have 'prefix-on'")
-
-    elif morph_type == "prep":
-        if not ("prefix-on" in morph):
-            record_error(" - prep morphs must have 'prefix-on'")
 
     # Check key whitelist
     for key in morph:
