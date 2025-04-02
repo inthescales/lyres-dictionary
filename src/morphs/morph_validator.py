@@ -133,7 +133,7 @@ valid_tags = [
     "y-to-i"                    # MnE orthography - causes a final unstressed 'y' to become 'i' when a consonant is suffixed (e.g. 'day' + '-ly' -> 'daily')
 ]
 
-valid_types = [
+morph_types = [
     "noun",
     "adj",
     "verb",
@@ -143,7 +143,13 @@ valid_types = [
     "derive"
 ]
 
-valid_origins = [
+root_types = [
+    "noun",
+    "adj",
+    "verb"
+]
+
+morph_origins = [
     "latin",
     "greek",
     "old-english",
@@ -167,6 +173,12 @@ def validate_morph(morph):
 
     # Returns true if the given requirement clause is satisfied by the given morph.
     # key_required - indicates whether errors should be logged if the given key is missing
+    # Clause format:
+    # - key                              - valid if the key exists in the morph
+    # - values
+    #   - list                           - valid if the key's value is any of the elements in the list
+    #   - dict { "one-or-many": [list] } - valid if the key's value is one of the elements in the list, or a list
+    #                                      all of whose contents are in the given list
     def evaluate_clause(clause, morph, key_required=True, category=None):
         key = clause["key"]
         if key not in morph:
@@ -177,15 +189,25 @@ def validate_morph(morph):
                     record_error(" - property '" + key + "' is required for morphs of type '" + category + "'")
             return False
 
-        # TODO: Validate values where the value may be a specific value or a list of values (e.g. derive-from,
-        # which may be a word type of a list of types)
-        elif "values" in clause and morph[key] not in clause["values"]:
-            record_error(" - invalid value '" + str(morph[key]) + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(clause["values"]))
-            return False
+        elif "values" in clause:
+            if type(clause["values"]) is list:
+                accepted = clause["values"]
+                if morph[key] not in accepted:
+                    record_error(" - invalid value '" + str(morph[key]) + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(accepted))
+                    return False
+            elif type(clause["values"] is dict) and "one-or-many" in clause["values"]:
+                accepted = clause["values"]["one-or-many"]
+                if morph[key] not in accepted and not (type(morph[key]) == list and all(x in accepted for x in morph[key])):
+                    record_error(" - invalid value '" + str(morph[key]) + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(accepted) + ", or a list of these.")
+                    return False
+            else:
+                record_error(" - unrecognized values requirement: " + str(clause["values"]))
 
         return True
 
     # Returns true if any of the given clauses are satisfied by the given morph
+    # Any format:
+    # - any - list of clauses, at least one of which must be valid
     def evaluate_any(clauses, morph, category=None):
         for clause in clauses:
             if evaluate_clause(clause, morph, False, category):
@@ -213,22 +235,22 @@ def validate_morph(morph):
     # Properties required by all morphs
     universal_requirements = [
         { "key": "key" },
-        { "key": "type", "values": valid_types},
-        { "key": "origin", "values": valid_origins }
+        { "key": "type", "values": morph_types},
+        { "key": "origin", "values": morph_origins }
     ]
     valid = valid and evaluate_requirements(universal_requirements, morph)
 
     # Properties required by morphs of a certain type
     type_requirements = {
         "derive": [
-            { "key": "derive-from" },
-            { "key": "derive-to" }
+            { "key": "derive-from", "values": { "one-or-many": root_types } },
+            { "key": "derive-to", "values": { "one-or-many": root_types } }
         ],
         "prep": [
-            { "key": "prefix-on" },
+            { "key": "prefix-on", "values": { "one-or-many": root_types }  },
         ],
         "prefix": [
-            { "key": "prefix-on" },
+            { "key": "prefix-on", "values": { "one-or-many": root_types }  },
         ]
     }
     if morph["type"] in type_requirements:
