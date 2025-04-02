@@ -164,13 +164,6 @@ def validate_morph(morph):
 
         Logger.warn(message)
 
-    # Properties required by all morphs
-    universal_requirements = [
-        { "key": "key" },
-        { "key": "type", "values": valid_types},
-        { "key": "origin", "values": valid_origins }
-    ]
-
     def evaluate_clause(clause, morph, key_required=True, category=None):
         key = clause["key"]
         if key_required and key not in morph:
@@ -180,13 +173,15 @@ def validate_morph(morph):
                 record_error(" - property '" + key + "' is required for morphs of type '" + category + "'")
             return False
 
+        # TODO: Validate values where the value may be a specific value or a list of values (e.g. derive-from,
+        # which may be a word type of a list of types)
         elif "values" in clause and morph[key] not in clause["values"]:
-            record_error(" - invalid value '" + morph[key] + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(clause["values"]))
+            record_error(" - invalid value '" + str(morph[key]) + "' for property '" + key + "' in morph '" + morph["key"] + "'. Accepted values: " + str(clause["values"]))
             return False
 
     def evaluate_any(clauses, morph, category=None):
         for clause in clauses:
-            if evaluate_clause(clause, morph, False):
+            if evaluate_clause(clause, morph, False, category):
                 return True
 
         if category == None:
@@ -195,25 +190,34 @@ def validate_morph(morph):
             record_error(" - morphs of type '" + category + "' must contain one of: " + ", ".join([x["key"] for x in clauses]))
         return False
 
-    def evaluate_requirements(requirements, morph):
+    def evaluate_requirements(requirements, morph, category=None):
         for requirement in requirements:
             if "any" in requirement:
-                evaluate_any(requirement["any"], morph)
+                evaluate_any(requirement["any"], morph, category)
             else:
-                evaluate_clause(requirement, morph)
+                evaluate_clause(requirement, morph, True, category)
 
+    # Properties required by all morphs
+    universal_requirements = [
+        { "key": "key" },
+        { "key": "type", "values": valid_types},
+        { "key": "origin", "values": valid_origins }
+    ]
     evaluate_requirements(universal_requirements, morph)
+
+    type_requirements = {
+        "derive": [
+            { "key": "derive-from" },
+            { "key": "derive-to" }
+        ]
+    }
+    if morph["type"] in type_requirements:
+        evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
 
     morph_type = morph["type"]
 
     derive_type = None
     if morph_type == "derive": derive_type = morph["derive-to"]
-
-    # Derives requirements (not exclusive with root type requirements)  
-    if morph_type == "derive":
-        if not ("derive-from" in morph and "derive-to" in morph):
-            record_error(" - derive morphs must have 'derive-from' and 'derive-to'")
-            return False
 
     # Root and prefix type requirements
     if morph_type == "noun" or derive_type == "noun":
