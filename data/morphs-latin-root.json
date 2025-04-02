@@ -301,7 +301,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "subordinate",
-        "tags": ["count", "living"],
+        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     }, {
         "key": "apta",

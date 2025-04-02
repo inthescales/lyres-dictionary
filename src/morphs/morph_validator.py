@@ -267,7 +267,8 @@ def validate_morph(morph):
     # Properties required by morphs of a certain type
     type_requirements = {
         "noun": [
-            { "tags": ["count", "mass", "singleton", "uncountable"] }
+            { "tags": ["count", "mass", "singleton", "uncountable"] },
+            { "tags": ["concrete", "abstract"] }
         ],
         "derive": [
             { "key": "derive-from", "values": { "one-or-many": root_types } },
