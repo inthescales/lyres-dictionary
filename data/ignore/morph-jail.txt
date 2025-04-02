@@ -5,6 +5,11 @@
 # transformation. This ultimately challenges the current system where words can
 # be unambiguously represented as a list of morphs.
 
+# It may make sense to add this as a sound/form mutation process rather than a suffix.
+# But I believe that, while many actual forms of this kind result from these roots
+# passing through French, a separate process will be needed to represent learned
+# borrowings that use '-e' endings instead of classical forms.
+
 {
     "key": "-e",
     "form-stem": "",
@@ -63,35 +68,6 @@
     "gloss": "go",
     "tags": ["intransitive"],
     "origin": "latin"
-},
-
-# Need to fix the inflection on the singular here
-{
-    "key": "icule",
-    "final": ["icule", "icle"],
-    "link": "icul",
-    "type": "derive",
-    "from": "noun",
-    "to": "noun",
-    "suffixes": ["al", "ary"],
-    "gloss": "a small %@",
-    "requires": {
-        "follows": {
-            "has-all-tags": ["count", "concrete"]
-        }
-    },
-    "exception": [{
-        "case": {
-            "follows": {
-                "has-suffix": "ic"
-            }
-        },
-        "final": ["ule", "le"],
-        "link": "ul"
-    }],
-    "tags": ["count", "concrete"],
-    "origin": "latin",
-    "notes": "find a way to make this plural..."
 },
 
 # The word order doesn't work out right
@@ -273,17 +249,7 @@
     "origin": "latin"
 },
 
-# Removed for decency
-
-{
-    "base": "nigra",
-    "link": "nigr",
-    "type": "adj",
-    "definition": "black",
-    "origin": "latin"
-},
-
-    # put this one back in w/ word filter
+# put this one back in w/ word filter
 {
     "key": "rapere",
     "link-present": "rapi",
@@ -359,52 +325,3 @@
     "tags": ["count", "concrete"],
     "origin": "latin"
 },
-
-# Old french is similar but may use different prefixes
-
-{
-    "base": "avouer",
-    "link-present": "avowa",
-    "link-perfect": "contat",
-    "link-verb": "avow",
-    "type": "verb",
-    "definition": "to tell",
-    "tags": ["transitive"],
-    "origin": "old french"
-},
-{
-    "base": "conter",
-    "link-present": "counta",
-    "link-perfect": "contat",
-    "link-verb": "count",
-    "type": "verb",
-    "definition": "to tell",
-    "tags": ["transitive"],
-    "origin": "old french"
-}
-{
-    "key": "issir",
-    "link-verb": "issue",
-    "origin": "old french"
-}
-lavish,
-sembler (dissemble, resemble),
-plentif - plenteous,
-pleasant,
-valuer,
-pursue,
-finer (finance),
-regard,
-lease / release / lessor,
-vengier,
-relief / relieve,
-surpass,
-briller,
-rely,
-reprieve / prendre,
-endurer,
-surveillance,
-remembrer,
-rampant,
-
-

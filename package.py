@@ -16,7 +16,8 @@ files = [
 
 directories = [
 	"src",
-	"data"
+	"data",
+	"scripts"
 ]
 
 print ("Copying files")

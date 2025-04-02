@@ -3181,7 +3181,8 @@
         "declension": 3,
         "gloss": "young [person]",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Separate modern meaning from classical"
     }, {
         "key": "labi",
         "form-stem-present": "lab",
@@ -5535,7 +5536,8 @@
         "declension": 2,
         "gloss": "boy",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "latin"
+        "origin": "latin",
+        "notes": "Separate modern meaning 'child', as in 'puerile', from classical meaning"
     }, {
         "key": "pugnare",
         "form-stem-present": "pugn",

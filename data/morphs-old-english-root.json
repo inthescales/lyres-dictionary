@@ -2785,7 +2785,7 @@
     }, {
         "key": "friċġan",
         "form-raw": "friċġ|an",
-        "form-participle-raw": ["friġ+en", "frugen"],
+        "form-participle-raw": ["friġ|en", "frug|en"],
         "type": "verb",
         "verb-class": 5,
         "gloss": ["ask", "inquire", "question", "[seek] out"],
