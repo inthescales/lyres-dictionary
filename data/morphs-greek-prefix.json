@@ -9,8 +9,8 @@
         },
         "type": "prep",
         "prefix-on": "verb",
-        "gloss-verb": "%@ up",
         "gloss-noun": "on %sg",
+        "gloss-verb": "%@ up",
         "requires": {
             "precedes": {
                 "has-tag": "motion"
@@ -27,8 +27,8 @@
         },
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ against",
         "gloss-noun": "against %pl",
+        "gloss-verb": "%@ against",
         "requires": {
             "precedes": {
                 "or": [
@@ -43,8 +43,8 @@
         "form-stem": "cata",
         "type": "prep",
         "prefix-on": "verb",
-        "gloss-verb": "%@ down",
         "gloss-noun": "down %sg",
+        "gloss-verb": "%@ down",
         "requires": {
             "precedes": {
                 "has-tag": "motion"
@@ -61,8 +61,8 @@
         },
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ across",
         "gloss-noun": "across %sg",
+        "gloss-verb": "%@ across",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "concrete", "bounded"]
@@ -74,8 +74,8 @@
         "form-stem": "ec",
         "type": "prep",
         "prefix-on": "verb",
-        "gloss-verb": "%@ out from",
         "gloss-noun": "out of %sg",
+        "gloss-verb": "%@ out from",
         "requires": {
             "precedes": {
                 "has-tag": "motion"
@@ -91,8 +91,8 @@
         },
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ in",
         "gloss-noun": "in %sg",
+        "gloss-verb": "%@ in",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "concrete", "bounded"]
@@ -103,14 +103,14 @@
         "key": "epi-",
         "form-stem": "epi",
         "form-stem-assim": "ep",
-        "type": "prep",
-        "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ upon",
-        "gloss-noun": "upon %sg",
         "form-assimilation": {
             "form-stem-assim": ["a", "e", "i", "o", "u", "y"],
             "form-stem": ["*"]
         },
+        "type": "prep",
+        "prefix-on": ["verb", "noun"],
+        "gloss-noun": "upon %sg",
+        "gloss-verb": "%@ upon",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "concrete"]
@@ -122,8 +122,8 @@
         "form-stem": "hyper",
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ over",
         "gloss-noun": "above %sg",
+        "gloss-verb": "%@ over",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "concrete"]
@@ -144,8 +144,8 @@
         "form-stem": "hypo",
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ under",
         "gloss-noun": "under %sg",
+        "gloss-verb": "%@ under",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "concrete"]
@@ -171,8 +171,8 @@
         },
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ beyond",
         "gloss-noun": "beyond %sg",
+        "gloss-verb": "%@ beyond",
         "requires": {
             "precedes": {
                 "or": [
@@ -187,8 +187,8 @@
         "form-stem": "peri",
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ around",
         "gloss-noun": "around %sg",
+        "gloss-verb": "%@ around",
         "requires": {
             "precedes": {
                 "has-any-tags": ["motion", "concrete"]
@@ -216,8 +216,8 @@
         },
         "type": "prep",
         "prefix-on": ["verb", "noun"],
-        "gloss-verb": "%@ together",
         "gloss-noun": "of the same %!sg",
+        "gloss-verb": "%@ together",
         "requires": {
             "precedes": {
                 "not": { "has-tag": "dividing" }
@@ -491,8 +491,8 @@
         },
         "type": "prefix",
         "prefix-on": "verb",
-        "gloss-verb": "%@ everything",
         "gloss-noun": "all %pl",
+        "gloss-verb": "%@ everything",
         "requires": {
             "precedes": {
                 "and": [

@@ -22,86 +22,88 @@
         "prefix-on": "noun",
         "prefix-to": "verb",
         "gloss": "[furnish] with %pl",
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-tag": "concrete"
-                }
-            },
-            "gloss": "[fill] or [provide] with %pl"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "abstract"
-                }
-            },
-            "gloss": "[bring] about %pl"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-any-tags": ["gas", "material"]
-                }
-            },
-            "gloss": ["[cover] or [surround] with %pl", "[furnish] with %pl"]
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "liquid"
-                }
-            },
-            "gloss": "[wet] with %pl"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-any-tags": ["mind-state", "body-state", "quality"]
-                }
-            },
-            "gloss": "[bring] about %pl in someone",
-            "tags": ["final", "object-specifier"]
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "garment"
-                }
-            },
-            "gloss": "[clothe] in %sg"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-all-tags": ["tool", "concrete"]
-                }
-            },
-            "gloss": "[equip] with %sg"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "food"
-                }
-            },
-            "gloss": ["[cook] %pl into a meal", "[furnish] with %pl"]
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "role"
-                }
-            },
-            "gloss": ["[make] into a %sg", "[furnish] with %pl", "[perform] the work of %sg (on someone)"],
-            "notes": "TODO: Maybe add a 'gloss-role' for cases like 'bewitch'"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "vessel"
-                }
-            },
-            "gloss": "[fill] %sg with"
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "bodypart"
-                }
-            },
-            "gloss": "[remove] one's %!sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-tag": "concrete"
+                    }
+                },
+                "gloss": "[fill] or [provide] with %pl"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "abstract"
+                    }
+                },
+                "gloss": "[bring] about %pl"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-any-tags": ["gas", "material"]
+                    }
+                },
+                "gloss": ["[cover] or [surround] with %pl", "[furnish] with %pl"]
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "liquid"
+                    }
+                },
+                "gloss": "[wet] with %pl"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-any-tags": ["mind-state", "body-state", "quality"]
+                    }
+                },
+                "gloss": "[bring] about %pl in someone",
+                "tags": ["final", "object-specifier"]
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "garment"
+                    }
+                },
+                "gloss": "[clothe] in %sg"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-all-tags": ["tool", "concrete"]
+                    }
+                },
+                "gloss": "[equip] with %sg"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "food"
+                    }
+                },
+                "gloss": ["[cook] %pl into a meal", "[furnish] with %pl"]
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "role"
+                    }
+                },
+                "gloss": ["[make] into a %sg", "[furnish] with %pl", "[perform] the work of %sg (on someone)"],
+                "notes": "TODO: Maybe add a 'gloss-role' for cases like 'bewitch'"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "vessel"
+                    }
+                },
+                "gloss": "[fill] %sg with"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "bodypart"
+                    }
+                },
+                "gloss": "[remove] one's %!sg"
+            }
+        ],
         "tags": ["final"],
         "origin": "old-english",
         "notes": "TODO: 'final' tag is added because I can't currently get suffixes added to roots with prefixes that change the type. Fix this."
@@ -257,22 +259,24 @@
                 "has-any-tags": ["role", "man-made"]
             }
         },
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-tag": "man-made"
-                }
-            },
-            "gloss": "poor-quality %@",
-            "tags": ["count", "concrete", "man-made"]
-        }, {
-            "case": {
-                "precedes": {
-                    "has-tag": "ruler"
-                }
-            },
-            "tags": ["count", "concrete", "living", "person", "role", "rare"]
-        }],
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-tag": "man-made"
+                    }
+                },
+                "gloss": "poor-quality %@",
+                "tags": ["count", "concrete", "man-made"]
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "ruler"
+                    }
+                },
+                "tags": ["count", "concrete", "living", "person", "role", "rare"]
+            }
+        ],
         "tags": ["count", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
@@ -284,8 +288,8 @@
         "requires": {
             "precedes": {
                 "and": [
-                    {"has-tag": "animal" },
-                    { "not": { "has-tag": "gendered" }}
+                    { "has-tag": "animal" },
+                    { "not": { "has-tag": "gendered" } }
                 ]
             }
         },

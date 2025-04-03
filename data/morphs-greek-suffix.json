@@ -1,13 +1,13 @@
 [
     {
         "key": "-ad",
-        "form-final": "ad",
         "form-stem": "ad",
+        "form-final": "ad",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ic"],
         "gloss": "a group of %@",
+        "suffixes": ["-ic"],
         "requires": {
             "follows": {
                 "has-tag": "number"
@@ -22,8 +22,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "[disease] or [disorder] of the %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "bodypart"
@@ -41,12 +41,12 @@
         "origin": "greek"
     }, {
         "key": "-isk",
-        "form-final": "isk",
         "form-stem": "isk",
+        "form-final": "isk",
         "type": "derive",
+        "declension": 3,
         "derive-from": "noun",
         "derive-to": "noun",
-        "declension": 3,
         "gloss": "small %@",
         "requires": {
             "follows": {
@@ -58,13 +58,13 @@
         "notes": "TODO: Consider adding passthrough concreteness"
     }, {
         "key": "-ite-dweller",
-        "form-final": "ite",
         "form-stem": "it",
+        "form-final": "ite",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ic"],
         "gloss": "one who dwells on %sg",
+        "suffixes": ["-ic"],
         "requires": {
             "follows": {
                 "has-tag": "terrain"
@@ -88,8 +88,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "[inflammation] of the %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "bodypart"
@@ -107,13 +107,13 @@
         "origin": "greek"
     }, {
         "key": "-phag-",
-        "form-final": "phag",
         "form-stem": "phag",
+        "form-final": "phag",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["greek-e-agent", "-ic-def", "-y-def"],
         "gloss": "the eating of %pl",
+        "suffixes": ["greek-e-agent", "-ic-def", "-y-def"],
         "requires": {
             "follows": {
                 "and": [
@@ -134,14 +134,14 @@
         "origin": "greek"
     }, {
         "key": "-phil-",
-        "form-final": "phil",
         "form-stem": "phil",
+        "form-final": "phil",
         "type": "derive",
         "derive-from": ["adj", "noun"],
         "derive-to": "noun",
-        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
         "gloss-adj": "[love] of %pl things",
         "gloss-noun": "[love] of %pl",
+        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
         "requires": {
             "follows": {
                 "not": { "has-key": ["pais", "ephebe"] }
@@ -151,25 +151,25 @@
         "origin": "greek"
     }, {
         "key": "-phob-",
-        "form-final": "phob",
         "form-stem": "phob",
+        "form-final": "phob",
         "type": "derive",
         "derive-from": ["adj", "noun"],
         "derive-to": "noun",
-        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
         "gloss-adj": "[fear] of %pl things",
         "gloss-noun": "[fear] of %pl",
+        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
         "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     }, {
         "key": "-phor-",
-        "form-final": "phor",
         "form-stem": "phor",
+        "form-final": "phor",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["greek-e-agent", "-ic-part", "-ia-def"],
         "gloss": "the bearing of %pl",
+        "suffixes": ["greek-e-agent", "-ic-part", "-ia-def"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -182,13 +182,13 @@
         "origin": "greek"
     }, {
         "key": "-pot-",
-        "form-final": "pot",
         "form-stem": "pot",
+        "form-final": "pot",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["greek-e-agent", "-ic-def", "-ia-def"],
         "gloss": "the drinking of %sg",
+        "suffixes": ["greek-e-agent", "-ic-def", "-ia-def"],
         "requires": {
             "follows": {
                 "has-tag": "liquid"
@@ -206,13 +206,13 @@
         "origin": "greek"
     }, {
         "key": "-rrhea",
-        "form-final": "rrhea",
         "form-stem": "rrhe",
+        "form-final": "rrhea",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ic"],
         "gloss": "[flowing] of %pl",
+        "suffixes": ["-ic"],
         "requires": {
             "follows": {
                 "has-any-tags": ["fluid", "abstract"]
@@ -222,14 +222,14 @@
         "origin": "greek"
     }, {
         "key": "-scop-",
-        "form-final": "scop",
         "form-stem": "scop",
+        "form-final": "scop",
         "type": "derive",
         "derive-from": ["adj", "noun"],
         "derive-to": "verb",
-        "suffixes": ["-e-instrument", "-ic-verb", "-y-def"],
         "gloss-adj": "the viewing of %pl things",
         "gloss-noun": "the viewing of %pl",
+        "suffixes": ["-e-instrument", "-ic-verb", "-y-def"],
         "requires": {
             "follows": {
                 "not": { "has-key": "pais" }
@@ -244,8 +244,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "[collection] of %!pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "not": { "has-tag": "singleton" }
@@ -255,24 +255,24 @@
         "origin": "greek"
     }, {
         "key": "-techn-",
-        "form-final": "techn",
         "form-stem": "techn",
+        "form-final": "techn",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ic-def", "-y-def"],
         "gloss": "the art that works with %pl",
+        "suffixes": ["-ic-def", "-y-def"],
         "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     }, {
         "key": "-iatr-",
-        "form-final": "iatr",
         "form-stem": "iatr",
+        "form-final": "iatr",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ician", "-ic-def", "-y-def"],
         "gloss": "the medical treatment of %pl",
+        "suffixes": ["-ician", "-ic-def", "-y-def"],
         "requires": {
             "follows": {
                 "has-any-tags": ["living", "bodypart"]
@@ -282,14 +282,14 @@
         "origin": "greek"
     }, {
         "key": "-ic",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
-        "gloss-noun": "pertaining to %pl",
         "gloss-relative": "%@",
+        "gloss-noun": "pertaining to %pl",
+        "suffixes": [],
         "exception": [{
             "case": {
                 "follows": {
@@ -303,95 +303,95 @@
         "notes": "add suffixes ity, ize"
     }, {
         "key": "-ic-character",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "characterized by %@",
+        "suffixes": [],
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     }, {
         "key": "-ic-def",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "pertaining to %sg",
+        "suffixes": [],
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     }, {
         "key": "-ic-verb",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "pertaining to the %part",
+        "suffixes": [],
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     }, {
         "key": "-ic-part",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "%part",
+        "suffixes": [],
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     }, {
         "key": "-ic-having",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "having %@",
+        "suffixes": [],
         "tags": ["no-gen"],
         "origin": "greek",
         "notes": "add suffixes ity, ize"
     }, {
         "key": "-ic-number",
-        "form-final": "ic",
         "form-stem": "ic",
+        "form-final": "ic",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "having %@",
+        "suffixes": [],
         "tags": ["mass", "abstract", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-ician",
-        "form-final": "ician",
         "form-stem": "ician",
+        "form-final": "ician",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who practices %sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-tic/verb",
-        "form-final": "tic",
         "form-stem": "tic",
+        "form-final": "tic",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "relating to %part",
+        "suffixes": [],
         "tags": ["no-head-joiner"],
         "origin": "greek"
     }, {
@@ -401,8 +401,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one engaged in %sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
     }, {
@@ -412,8 +412,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-ic"],
         "gloss": "something that resembles %sg",
+        "suffixes": ["-ic"],
         "requires": {
             "follows": {
                 "has-tag": "concrete"
@@ -428,8 +428,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["-ic"],
         "gloss": "that which is %ppart",
+        "suffixes": ["-ic"],
         "exception": [
             {
                 "case": {
@@ -477,8 +477,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": ["-ic"],
         "gloss": "one who %3sg",
+        "suffixes": ["-ic"],
         "exception": [
             {
                 "case": {
@@ -507,8 +507,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the act or state of %part",
+        "suffixes": [],
         "exception": [{
             "case": {
                 "follows": {
@@ -526,8 +526,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "[place] for %part",
+        "suffixes": [],
         "tags": ["count", "concrete", "rare", "no-head-joiner"],
         "origin": "greek"
     }, {
@@ -537,9 +537,9 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "verb",
-        "suffixes": [],
         "gloss": "[make] %sg",
         "gloss-relative": "cause to be %@",
+        "suffixes": [],
         "tags": ["transitive"],
         "origin": "greek"
     }, {
@@ -559,107 +559,107 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who practices %sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "living", "person", "no-gen"],
         "origin": "greek"
     }, {
         "key": "greek-silent",
-        "form-final": "",
         "form-stem": "",
+        "form-final": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "%@",
+        "suffixes": [],
         "tags": ["uncountable", "no-gen"],
         "origin": "greek"
     }, {
         "key": "greek-silent-agent",
-        "form-final": "",
         "form-stem": "",
+        "form-final": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who %3sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "greek-silent-haver",
-        "form-final": "",
         "form-stem": "",
+        "form-final": "",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who has %!sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "greek-e-agent",
-        "form-final": "e",
         "form-stem": "",
+        "form-final": "e",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who %3sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-er-agent",
-        "form-final": "er",
         "form-stem": "",
+        "form-final": "er",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who %3sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-e-haver",
-        "form-final": "e",
         "form-stem": "",
+        "form-final": "e",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who has %sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-e-instrument",
-        "form-final": "e",
         "form-stem": "",
+        "form-final": "e",
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "instrument for the %@",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-ia-def",
-        "form-final": "ia",
         "form-stem": "i",
+        "form-final": "ia",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the %@",
+        "suffixes": [],
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-y-relative",
-        "form-final": ["y", "ia"],
         "form-stem": "i",
+        "form-final": ["y", "ia"],
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state of being %@",
+        "suffixes": [],
         "exception": [{
             "case": {
                 "follows": {
@@ -672,13 +672,13 @@
         "origin": "greek"
     }, {
         "key": "-y-number",
-        "form-final": ["y", "ia"],
         "form-stem": "i",
+        "form-final": ["y", "ia"],
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state of having %@",
+        "suffixes": [],
         "exception": [{
             "case": {
                 "follows": {
@@ -691,35 +691,35 @@
         "origin": "greek"
     }, {
         "key": "-iac-haver",
-        "form-final": "iac",
         "form-stem": "iac",
+        "form-final": "iac",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who has %sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-y-def",
-        "form-final": "y",
         "form-stem": "i",
+        "form-final": "y",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "%sg",
+        "suffixes": [],
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
     }, {
         "key": "-y-passthrough",
-        "form-final": "y",
         "form-stem": "i",
+        "form-final": "y",
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "%@",
+        "suffixes": [],
         "tags": ["uncountable", "abstract", "no-gen"],
         "origin": "greek"
     }, {
@@ -729,8 +729,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the act or state of %part",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "not": { "has-suffix": ["is", "i"] }

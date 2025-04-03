@@ -6,14 +6,14 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state or condition of being %sg",
-        "tags": ["mass", "abstract"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "person"
             }
         },
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "-dom-adj",
@@ -22,8 +22,8 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the quality of being %sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
@@ -38,14 +38,14 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the domain ruled by %sg",
-        "tags": ["mass", "abstract"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "ruler"
             }
         },
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "-ed-bodypart",
@@ -54,8 +54,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "having %pl",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "has-tag": "bodypart"
@@ -88,8 +88,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "having %pl",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "not": { "has-tag": "singleton" }
@@ -119,9 +119,9 @@
         "form-stem": "en",
         "form-raw": "en",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "adj",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[become] %@",
         "requires": {
             "follows": {
@@ -144,9 +144,9 @@
         "form-stem": "en",
         "form-raw": "en",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "adj",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[make] %@",
         "requires": {
             "follows": {
@@ -171,8 +171,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "made from %pl",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "has-any-tags": ["food", "material", "plant"]
@@ -204,8 +204,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "pertaining to %pl or resembling %sg",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "has-tag": "animal"
@@ -228,8 +228,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "from or as if from %sg",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "has-tag": "place"
@@ -244,9 +244,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who %3sg",
-        "tags": ["uncountable", "concrete", "y-to-i"],
+        "suffixes": [],
         "exception": [{
             "case": {
                 "follows": {
@@ -255,6 +254,7 @@
             },
             "form-final": "r"
         }],
+        "tags": ["uncountable", "concrete", "y-to-i"],
         "origin": "old-english"
     }, {
         "key": "-ere/hunter",
@@ -263,8 +263,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who hunts %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-all-tags": ["animal", "wild"]
@@ -287,9 +287,8 @@
         "type": "derive",
         "derive-from": ["noun", "verb"],
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "a place for %pl",
-        "tags": ["uncountable", "mass"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "and": [
@@ -371,6 +370,7 @@
                 "gloss": ["the act or practice of %part", "a place where %part occurs"]
             }
         ],
+        "tags": ["uncountable", "mass"],
         "origin": "old-english",
         "notes": "Properly ME"
     }, {
@@ -380,9 +380,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "female %@",
-        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "and": [
@@ -400,6 +399,7 @@
             "form-final": "//ess",
             "form-stem": "//ess"
         }],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
         "notes": "Not properly OE, but want to let it combine for now. TODO: Move this"
     }, {
@@ -409,8 +409,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who %3sg",
+        "suffixes": [],
         "tags": ["uncountable", "concrete", "rare"],
         "origin": "old-english",
         "notes": "gloss is modern. Original usage was feminine only"
@@ -421,8 +421,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "member of %sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "grouping"
@@ -438,14 +438,14 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state or condition of being %sg",
-        "tags": ["mass", "abstract"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "person"
             }
         },
+        "tags": ["mass", "abstract"],
         "origin": "old-english",
         "notes": "Occasionally applied to non-person nouns or adjectives in MnE, but near-universally people in OE"
     }, {
@@ -455,14 +455,14 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state or condition of being %sg",
-        "tags": ["mass", "abstract", "rare"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "person"
             }
         },
+        "tags": ["mass", "abstract", "rare"],
         "origin": "old-english",
         "notes": "ME variation of -hād. TODO: change origin when ME is added"
     }, {
@@ -489,8 +489,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "having the qualities of %sg",
+        "suffixes": ["-nes"],
         "exception": [
             {
                 "case": {
@@ -600,8 +600,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "like or resembling %sg",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "has-tag": "concrete"
@@ -640,8 +640,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "pertaining to %pl",
+        "suffixes": [],
         "exception": [{
             "case": {
                 "follows": {
@@ -671,12 +671,12 @@
         "derive-from": "adj",
         "derive-to": "noun",
         "gloss": "one who is %@",
-        "tags": ["uncountable", "person", "rare"],
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
             }
         },
+        "tags": ["uncountable", "person", "rare"],
         "origin": "old-english"
     }, {
         "key": "-ling-noun",
@@ -720,7 +720,7 @@
             }
         ],
         "tags": ["count", "living"],
-        "origin": "old-english"        
+        "origin": "old-english"
     }, {
         "key": "-ling-verb",
         "form-stem": "ling",
@@ -729,12 +729,12 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
+        "gloss": "one who is %ppart",
         "requires": {
             "follows": {
                 "has-tag": "transitive"
             }
         },
-        "gloss": "one who is %ppart",
         "tags": ["uncountable", "person", "rare"],
         "origin": "old-english"
     }, {
@@ -744,8 +744,8 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the quality of being %sg",
+        "suffixes": [],
         "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
@@ -796,7 +796,6 @@
         "derive-from": ["noun", "verb"],
         "derive-to": "noun",
         "gloss": "the state or condition of being %sg",
-        "tags": ["mass", "abstract", "rare"],
         "requires": {
             "follows": {
                 "or": [
@@ -813,6 +812,7 @@
             },
             "gloss": "the state or condition of %part"
         }],
+        "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
         "key": "-ric",
@@ -821,14 +821,14 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the domain ruled by %sg",
-        "tags": ["mass", "abstract"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "ruler"
             }
         },
+        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "-sċipe",
@@ -837,8 +837,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state or condition of being %sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "person"
@@ -854,14 +854,14 @@
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the quality of being %@",
-        "tags": ["mass", "abstract", "rare"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
             }
         },
+        "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
         "key": "-sum",
@@ -870,8 +870,8 @@
         "type": "derive",
         "derive-from": ["adj", "noun", "verb"],
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "having %pl",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
@@ -944,20 +944,20 @@
         "origin": "old-english"
     }, {
         "key": "-þ",
-        "form-final": "th",
         "form-stem": "th",
+        "form-final": "th",
         "form-raw": "þ",
         "type": "derive",
         "derive-from": "adj",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the quality of being %sg",
-        "tags": ["mass", "abstract", "i-mutating", "no-gen"],
+        "suffixes": [],
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
             }
         },
+        "tags": ["mass", "abstract", "i-mutating", "no-gen"],
         "origin": "old-english",
         "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
     }, {
@@ -968,8 +968,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the time of %!sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-all-tags": ["count", "time-of-day"]
@@ -982,9 +982,9 @@
         "form-stem": "",
         "form-raw": "",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "noun",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[act] like %sg",
         "requires": {
             "follows": {
@@ -1010,9 +1010,9 @@
         "form-stem": "",
         "form-raw": "",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "noun",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[form] %sg",
         "requires": {
             "follows": {
@@ -1027,9 +1027,9 @@
         "form-stem": "",
         "form-raw": "",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "noun",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[become] %!sg",
         "requires": {
             "follows": {
@@ -1043,9 +1043,9 @@
         "form-stem": "",
         "form-raw": "",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "noun",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[pass] the %!sg season",
         "requires": {
             "follows": {
@@ -1058,9 +1058,9 @@
         "form-stem": "",
         "form-raw": "",
         "type": "derive",
+        "verb-class": "weak",
         "derive-from": "noun",
         "derive-to": "verb",
-        "verb-class": "weak",
         "gloss": "[use] %sg",
         "requires": {
             "follows": {

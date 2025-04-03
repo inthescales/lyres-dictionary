@@ -31,21 +31,23 @@
                 "has-any-tags": ["luminous", "metal", "metallic", "shiny"]
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-any-tags": ["metal", "metallic", "shiny"]
-                }
-            },
-            "gloss": "shine of light on %sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-any-tags": ["time-of-day", "time-of-year"]
-                }
-            },
-            "gloss": "shining light of %!sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["metal", "metallic", "shiny"]
+                    }
+                },
+                "gloss": "shine of light on %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["time-of-day", "time-of-year"]
+                    }
+                },
+                "gloss": "shining light of %!sg"
+            }
+        ],
         "tags": ["singleton", "abstract"],
         "origin": "old-english",
         "notes": "INVENTED based on cases like '-shine' and '-leam', from a comparable verb 'blīcan'"
@@ -80,8 +82,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "blinded by %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -130,7 +132,7 @@
             "follows": {
                 "and": [
                     { "has-tag": "concrete" },
-                    { "not": { "has-tag": "place"} }
+                    { "not": { "has-tag": "place" } }
                 ]
             }
         },
@@ -246,23 +248,21 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "engaging in %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-any-tags": ["activity", "grouping"]
             }
         },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "grouping"
-                    }
-                },
-                "gloss": "traveling in %sg"
-            }
-        ],
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-tag": "grouping"
+                }
+            },
+            "gloss": "traveling in %sg"
+        }],
         "tags": ["uncountable", "abstract"],
         "origin": "old-english",
         "notes": "'grouping' usage is my innovation"
@@ -273,8 +273,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "flowing of %!sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-any-tags": ["liquid", "gas"]
@@ -298,8 +298,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "having many %pl",
+        "suffixes": ["-nes"],
         "requires": {
             "follows": {
                 "has-any-tags": ["count", "mass"]
@@ -321,8 +321,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-mælum"],
         "gloss": "as much as %sg holds",
+        "suffixes": ["-mælum"],
         "requires": {
             "follows": {
                 "has-tag": "vessel"
@@ -344,21 +344,23 @@
                 "has-tag": "glooming"
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-tag": "time"
-                }
-            },
-            "gloss": "darkness of %!sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "weather"
-                }
-            },
-            "gloss": "darkness caused by %pl"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "time"
+                    }
+                },
+                "gloss": "darkness of %!sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "weather"
+                    }
+                },
+                "gloss": "darkness caused by %pl"
+            }
+        ],
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
@@ -422,8 +424,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "afflicted by %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-any-tags": ["body-state", "mind-state"]
@@ -438,8 +440,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the process of %part",
+        "suffixes": [],
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english"
     }, {
@@ -450,8 +452,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": ["-mælum"],
         "gloss": "as much as %sg holds",
+        "suffixes": ["-mælum"],
         "requires": {
             "follows": {
                 "has-tag": "vessel"
@@ -466,8 +468,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "[look] or [expression] showing %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -483,8 +485,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": ["-nes"],
         "gloss": "without %pl",
+        "suffixes": ["-nes"],
         "origin": "old-english"
     }, {
         "key": "-lec",
@@ -493,8 +495,8 @@
         "type": "derive",
         "derive-from": "verb",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the state of %part",
+        "suffixes": [],
         "tags": ["mass", "abstract", "rare"],
         "origin": "old-english",
         "notes": "Older form '-leche'"
@@ -551,8 +553,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "love accompanied by %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -567,8 +569,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "one %!sg at a time",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "measure"
@@ -582,8 +584,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "one %!sg at a time",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "and": [
@@ -623,39 +625,39 @@
                 "has-any-tags": ["activity", "grouping", "weapon", "tool", "terrain"]
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-tag": "weapon"
-                }
-            },
-            "gloss": "one who fights with %sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "terrain"
-                }
-            },
-            "gloss": "one who frequents or works in %pl"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "grouping"
-                }
-            },
-            "gloss": "one who is a member of %sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "tool"
-                }
-            },
-            "gloss": "one who uses %sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "weapon"
+                    }
+                },
+                "gloss": "one who fights with %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "terrain"
+                    }
+                },
+                "gloss": "one who frequents or works in %pl"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "grouping"
+                    }
+                },
+                "gloss": "one who is a member of %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": "one who uses %sg"
+            }
+        ],
         "tags": ["uncountable", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
-        "notes": "The 'sman' form covers cases like 'huntsman' or 'kinsman'. Possibly a possessive in origin. This *could* end up weird if the preceding word ends in 's', but I think either it'll be double, as in 'class', in which case the extra will be removed, or followed by a vowel, as in 'manse' (neither is OE I know, but spelling should work out the same)",
-        "notes": "TODO: I'd like the 'tool' sense to include the tool-gloss, but it wouldn't be conjugated correctly. Find a way to do this.",
         "notes": "Consider adding a 'one who works with X' sense here, as in oilman, milkman"
     }, {
         "key": "-woman",
@@ -670,35 +672,37 @@
                 "has-any-tags": ["activity", "weapon", "terrain"]
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-tag": "weapon"
-                }
-            },
-            "gloss": "[woman] who fights with %sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "terrain"
-                }
-            },
-            "gloss": "[woman] who frequents or works in %pl"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "grouping"
-                }
-            },
-            "gloss": "[woman] who is a member of %sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-tag": "tool"
-                }
-            },
-            "gloss": "[woman] who uses %sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "weapon"
+                    }
+                },
+                "gloss": "[woman] who fights with %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "terrain"
+                    }
+                },
+                "gloss": "[woman] who frequents or works in %pl"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "grouping"
+                    }
+                },
+                "gloss": "[woman] who is a member of %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": "[woman] who uses %sg"
+            }
+        ],
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
@@ -708,8 +712,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "[seller] of %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "and": [
@@ -757,21 +761,23 @@
                 "has-any-tags": ["luminous", "metal", "metallic", "shiny"]
             }
         },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-any-tags": ["metal", "metallic", "shiny"]
-                }
-            },
-            "gloss": "shine of light on %sg"
-        }, {
-            "case": {
-                "follows": {
-                    "has-any-tags": ["time-of-day", "time-of-year"]
-                }
-            },
-            "gloss": "shining light of %!sg"
-        }],
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["metal", "metallic", "shiny"]
+                    }
+                },
+                "gloss": "shine of light on %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["time-of-day", "time-of-year"]
+                    }
+                },
+                "gloss": "shining light of %!sg"
+            }
+        ],
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
@@ -818,8 +824,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "sick with %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -833,8 +839,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "song of %!sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -849,8 +855,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "one who makes %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "or": [
@@ -878,8 +884,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "stricken by %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -893,8 +899,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "noun",
-        "suffixes": [],
         "gloss": "the time of %!sg",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "time"
@@ -946,7 +952,7 @@
             "follows": {
                 "and": [
                     { "has-tag": "concrete" },
-                    { "not": { "has-tag": "place"} }
+                    { "not": { "has-tag": "place" } }
                 ]
             }
         },
@@ -978,8 +984,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "worn down by %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-tag": "mind-state"
@@ -1022,8 +1028,8 @@
         "type": "derive",
         "derive-from": "noun",
         "derive-to": "adj",
-        "suffixes": [],
         "gloss": "causing or conducive to %pl",
+        "suffixes": [],
         "requires": {
             "follows": {
                 "has-all-tags": ["mass", "abstract"]
