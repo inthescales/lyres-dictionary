@@ -2,17 +2,32 @@ import getopt
 import json
 import sys
 
+from collections import OrderedDict
+
 import alphabetical
 import morphs_files as file_tool
 
 indent_spaces = 4
 
+# Get a number of spaces appropriate to the given indentation depth
 def spaces(depth):
     return " " * depth * indent_spaces
 
+# Sort given morphs alphabetically according to their keys
 def sort(morphs):
     return alphabetical.key_sorted(morphs)
 
+# Returns an ordered dict representing the morph, with its keys in print-order
+def ordered_morph(morph, meta_properties):
+    ordered = OrderedDict()
+
+    for prop in meta_properties:
+        if prop in morph:
+            ordered[prop] = morph[prop]
+
+    return ordered
+
+# Format a property given properties indicating its place in a morph structure
 def format(obj, indent=0, tag_stack=[]):
     formatted = ""
 
@@ -97,6 +112,7 @@ def format(obj, indent=0, tag_stack=[]):
 
     return formatted
 
+# Get single-line dump of the given object
 def unformatted(obj):
     dump = json.dumps(obj, ensure_ascii=False)
     dump = dump.replace("{", "{ ")
@@ -115,6 +131,7 @@ def should_break_between(first, second, tag_stack):
 
     return True
 
+# Returns whether the given dict should be separated from its container and indented
 def should_indent_dict(element, tag_stack):
     keys = list(element.keys())
 
@@ -125,6 +142,7 @@ def should_indent_dict(element, tag_stack):
 
     return True
 
+# Returns whether the given element should be formatted on multiple lines or condensed onto one
 def should_format(element, key, tag_stack):
     stacksize = len(tag_stack)
 
@@ -156,6 +174,15 @@ def should_format(element, key, tag_stack):
 
     return True
 
+# Loads morph format metadata
+def load_metadata():
+    meta = {}
+    with open("./data/meta/morph-properties.json") as prop_data:
+        jdata = json.load(prop_data)
+        meta["properties"] = [m[0] for m in jdata]
+
+    return meta
+
 # Formats contents of specified files
 if __name__ == '__main__':
     # Read args
@@ -183,12 +210,18 @@ if __name__ == '__main__':
     files = params
 
     for file in files:
+        # Read metadata
+        meta = load_metadata()
+
         # Read in morphs
         morphs = file_tool.get_morphs_from(file)
 
         # Sort if requested
         if should_sort:
             morphs = sort(morphs)
+
+        # Order morph properties
+        morphs = [ordered_morph(m, meta["properties"]) for m in morphs]
 
         # Format morphs
         formatted = format(morphs)

@@ -1,136 +1,91 @@
 from src.utils.logging import Logger
 
-valid_properties = [
-    "key",
-    "type",
-    "prefix-on",                # Preposition / Prefixdetermines what root types this can be prefixed to
-    "prefix-to",                # Preposition / Prefixdetermines what type the outcome of this prefixing is
-    "derive-from",              # Type derive attaches to
-    "derive-to",                # Type derive produces
-    "derive-participle",        # Participle type used by a suffix
-    "form",
-    "form-final",
-    "form-stem",
-    "form-raw",                 # Original form, before historical changes
-    "form-raw-alt",             # Nonstandard raw forms (e.g. rare or dialectal)
-    "form-canon",               # Actual form in modern English (as opposed to plausible alternatives)
-    "form-participle-raw",      # Original participle forms. There may be one or a list.
-    "form-participle-canon",    # Accepted modern participle forms.
-    "form-stem-present",        # Present participle stem for Latin verbs
-    "form-stem-perfect",        # Perfect participle stem for Latin verbs
-    "form-stem-assim",          # Stem for assimilating prefixes
-    "form-joiner",              # Joining vowel override for this morph
-    "form-joiner-present",      # Joining vowel(s) used for Latin present participles
-    "form-assimilation",        # Assimilation rules
-    "conjugation",
-    "declension",
-    "gloss",
-    "gloss-alt",                # Nonstandard glosses (e.g. historical)
-    "gloss-final",              # Gloss used when this is the last morph
-    "gloss-link",               # Gloss used when not the last morph
-    "gloss-relative",           # Verb:   Alternate gloss used with prepositional prefix
-                                # Derive: Gloss used in relative constructs
-    "gloss-adj",                # Gloss used when derive is attached to adjective.
-    "gloss-noun",               # Gloss used when preposition attaches to noun in relative construct
-    "gloss-verb",               # Gloss used when preposition or derive is attached to verb
-    "gloss-state",              # Adjective gloss associated with a stative verb
-    "gloss-tool",               # Verb gloss associated with a tool noun
-    "gloss-animal",             # Verb gloss associated with an animal noun
-    "verb-class",               # Verb class (used in Old English)
-    "suffixes",                 # Valid suffixes that can follow this morph
-    "tags",
-    "requires",
-    "exception",
-    "origin",
-    "notes"
-]
-
 valid_tags = [
-    "count",                    # Noun countabilitycountable
-    "mass",                     # Noun countabilitymass
-    "singleton",                # Noun countabilitysingleton, e.g. "The Earth"
-    "uncountable",              # Noun countabilitygenerically uncountable, will never use articles
-    "concrete",                 # Noun actualitya concrete object in the world
-    "abstract",                 # Noun actualitysomething not physically in the world
-    "bounded",                  # Noun actualityoptionally for abstracts, does it have a bounded aspect (e.g. a length of time)
-    "living",                   # Noun semanticsa living being
-    "animal",                   # Noun semanticsan animal
-    "tame",                     # Noun semanticsa tame animal
-    "wild",                     # Noun semanticsa wild animal
-    "mammal",                   # Noun semanticsa mammal
-    "plant",                    # Noun semanticsa plant
-    "person",                   # Noun semanticsa kind of person
-    "gendered",                 # Noun semanticsunchangeably gendered
-    "role",                     # Noun semanticsa role that a person takes on (as opposed to inborn identity)
-    "ruler",                    # Noun semanticsa person who rules over a place or thing
-    "divine",                   # Noun semanticsa divine being (god, angel, etc)
-    "magical",                  # Noun semanticsa magical or supernatural being (elf, ghost, etc)
-    "bodypart",                 # Noun semanticsa member or organ of a living being, animal or plant
-    "bodypart-plant",           # Noun semanticsa member belonging only to a plant, like a leaf or stem
-    "bodypart-single",          # Noun semanticsa bodypart that a being has only one of, like heart or head
-    "secretion",                # Noun semanticsa bodily secretion, or mental creation
-    "garment",                  # Noun semanticsa garment, or anything that is worn on the body
-    "man-made",                 # Noun semanticssomething made by humans
-    "metallic",                 # Noun semanticsan object made from metal
-    "shiny",                    # Noun semanticsreflects light
-    "tool",                     # Noun semanticsa tool
-    "weapon",                   # Noun semanticsa weapon
-    "vessel",                   # Noun semanticsa vessel (containers and boats)
-    "material",                 # Noun semanticsa material things can be made out of
-    "food",                     # Noun semanticsa food or ingredient of food
-    "metal",                    # Noun semanticsa metal
-    "fluid",                    # Noun semanticsa fluid, like a liquid or gas
-    "liquid",                   # Noun semanticsa liquid
-    "gas",                      # Noun semanticsa gas
-    "luminous",                 # Noun semanticsemits light
-    "glooming",                 # Noun semanticsobscures light or darkens (esp. of weather and times)
-    "region",                   # Noun semanticsa region
-    "terrain",                  # Noun semanticsa type of land
-    "place",                    # Noun semanticsa specific place (e.g. hell, home, the sky)
-    "grouping",                 # Noun semanticsa group or collection of things
-    "color",                    # Noun semanticsa color
-    "shape",                    # Noun semanticsa shape
-    "quality",                  # Noun semanticsan abstract quality
-    "body-state",               # Noun semanticsa bodily condition
-    "mind-state",               # Noun semanticsa mental or emotional state
-    "activity",                 # Noun semanticsan activity that a person can undertake
-    "time",                     # Noun semanticsa period of time
-    "time-of-day",              # Noun semanticsa period of time in the day (e.g. morning, dawn)
-    "time-of-year",             # Noun semanticsa period of time in the year (e.g. winter, lent)
-    "measure",                  # Noun semanticsa unit of measure
-    "tree",                     # Noun semanticsa kind of tree
-    "number",                   # Noun semanticsa number (used as a noun)
-    "weather",                  # Noun semanticsa type of weather
-    "superlative",              # Adjective morphologya superlative
-    "character",                # Adjective semanticsdescriptor of a person's character
-    "a-prefix",                 # Verb lexicalcan take the OE 'ā-' prefix without change in meaning
-    "ge-prefix",                # Verb lexicalcan take the OE 'ġe-' prefix without change in meaning
-    "transitive",               # Verb transitivitytransitive verb
-    "intransitive",             # Verb transitivityintransitive verb
-    "no-prep",                  # Verb morphologycannot take a prepositional prefix
-    "always-prep",              # Verb morphologymust always have a prepositional prefix
-    "stative",                  # Verb syntaxdescribes being in a particular state, as a verb
-    "object-specifier",         # Verb syntaxspecifies the object of an attached verb
-    "motion",                   # Verb semanticsmoving or causing motion
-    "joining",                  # Verb semanticsjoining or connecting two things into one
-    "dividing",                 # Verb semanticsdividing one thing into two or more
-    "sexual",                   # Verb semanticsmay contain sexual content
-    "no-head-joiner",           # FormDoesn't take joining vowels on the front end
-    "no-tail-joiner",           # FormDoesn't take joining vowels on the back end
-    "no-length",                # Generationdoes not count towards maximum morph count
-    "rare",                     # Generationoccurs less often in generation
-    "super-rare",               # Generationoccurs even less often in generation
-    "no-gen",                   # Generationwill not be chosen randomly in generation, only if specified as allowed suffix
-    "obscure",                  # Generationthe morph is attested in modern English, but only in archaic texts or minor dialects
-    "speculative",              # Generationthe morph is not attested in modern English
-    "poetic",                   # Generationthe morph is only attested in poetic usage in its original language
-    "homophonic",               # Generationthe morphs processed form is a homophone (or nearly) with a common actual word
-    "final",                    # Generationimmediately ends generation
-    "non-final",                # Generationcannot be the final morph in the word
-    "suffix-only",              # Generationadding a suffix is the only valid transformation following this morph
-    "fixed-gloss",              # Generationthe gloss of this morph is fixedno additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds,
-    "i-mutating",               # OE morphophonologycauses i-mutation in the joined root
-    "y-to-i"                    # MnE orthographycauses a final unstressed 'y' to become 'i' when a consonant is suffixed (e.g. 'day' + '-ly' -> 'daily')
+    "count",                    # Noun countability - countable
+    "mass",                     # Noun countability - mass
+    "singleton",                # Noun countability - singleton, e.g. "The Earth"
+    "uncountable",              # Noun countability - generically uncountable, will never use articles
+    "concrete",                 # Noun actuality - a concrete object in the world
+    "abstract",                 # Noun actuality - something not physically in the world
+    "bounded",                  # Noun actuality - optionally for abstracts, does it have a bounded aspect (e.g. a length of time)
+    "living",                   # Noun semantics - a living being
+    "animal",                   # Noun semantics - an animal
+    "tame",                     # Noun semantics - a tame animal
+    "wild",                     # Noun semantics - a wild animal
+    "mammal",                   # Noun semantics - a mammal
+    "plant",                    # Noun semantics - a plant
+    "person",                   # Noun semantics - a kind of person
+    "gendered",                 # Noun semantics - unchangeably gendered
+    "role",                     # Noun semantics - a role that a person takes on (as opposed to inborn identity)
+    "ruler",                    # Noun semantics - a person who rules over a place or thing
+    "divine",                   # Noun semantics - a divine being (god, angel, etc)
+    "magical",                  # Noun semantics - a magical or supernatural being (elf, ghost, etc)
+    "bodypart",                 # Noun semantics - a member or organ of a living being, animal or plant
+    "bodypart-plant",           # Noun semantics - a member belonging only to a plant, like a leaf or stem
+    "bodypart-single",          # Noun semantics - a bodypart that a being has only one of, like heart or head
+    "secretion",                # Noun semantics - a bodily secretion, or mental creation
+    "garment",                  # Noun semantics - a garment, or anything that is worn on the body
+    "man-made",                 # Noun semantics - something made by humans
+    "metallic",                 # Noun semantics - an object made from metal
+    "shiny",                    # Noun semantics - reflects light
+    "tool",                     # Noun semantics - a tool
+    "weapon",                   # Noun semantics - a weapon
+    "vessel",                   # Noun semantics - a vessel (containers and boats)
+    "material",                 # Noun semantics - a material things can be made out of
+    "food",                     # Noun semantics - a food or ingredient of food
+    "metal",                    # Noun semantics - a metal
+    "fluid",                    # Noun semantics - a fluid, like a liquid or gas
+    "liquid",                   # Noun semantics - a liquid
+    "gas",                      # Noun semantics - a gas
+    "luminous",                 # Noun semantics - emits light
+    "glooming",                 # Noun semantics - obscures light or darkens (esp. of weather and times)
+    "region",                   # Noun semantics - a region
+    "terrain",                  # Noun semantics - a type of land
+    "place",                    # Noun semantics - a specific place (e.g. hell, home, the sky)
+    "grouping",                 # Noun semantics - a group or collection of things
+    "color",                    # Noun semantics - a color
+    "shape",                    # Noun semantics - a shape
+    "quality",                  # Noun semantics - an abstract quality
+    "body-state",               # Noun semantics - a bodily condition
+    "mind-state",               # Noun semantics - a mental or emotional state
+    "activity",                 # Noun semantics - an activity that a person can undertake
+    "time",                     # Noun semantics - a period of time
+    "time-of-day",              # Noun semantics - a period of time in the day (e.g. morning, dawn)
+    "time-of-year",             # Noun semantics - a period of time in the year (e.g. winter, lent)
+    "measure",                  # Noun semantics - a unit of measure
+    "tree",                     # Noun semantics - a kind of tree
+    "number",                   # Noun semantics - a number (used as a noun)
+    "weather",                  # Noun semantics - a type of weather
+    "superlative",              # Adjective morphology - a superlative
+    "character",                # Adjective semantics - descriptor of a person's character
+    "a-prefix",                 # Verb lexical - can take the OE 'ā-' prefix without change in meaning
+    "ge-prefix",                # Verb lexical - can take the OE 'ġe-' prefix without change in meaning
+    "transitive",               # Verb transitivity - transitive verb
+    "intransitive",             # Verb transitivity - intransitive verb
+    "no-prep",                  # Verb morphology - cannot take a prepositional prefix
+    "always-prep",              # Verb morphology - must always have a prepositional prefix
+    "stative",                  # Verb syntax - describes being in a particular state, as a verb
+    "object-specifier",         # Verb syntax - specifies the object of an attached verb
+    "motion",                   # Verb semantics - moving or causing motion
+    "joining",                  # Verb semantics - joining or connecting two things into one
+    "dividing",                 # Verb semantics - dividing one thing into two or more
+    "sexual",                   # Verb semantics - may contain sexual content
+    "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
+    "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
+    "no-length",                # Generation - does not count towards maximum morph count
+    "rare",                     # Generation - occurs less often in generation
+    "super-rare",               # Generation - occurs even less often in generation
+    "no-gen",                   # Generation - will not be chosen randomly in generation, only if specified as allowed suffix
+    "obscure",                  # Generation - the morph is attested in modern English, but only in archaic texts or minor dialects
+    "speculative",              # Generation - the morph is not attested in modern English
+    "poetic",                   # Generation - the morph is only attested in poetic usage in its original language
+    "homophonic",               # Generation - the morphs processed form is a homophone (or nearly) with a common actual word
+    "final",                    # Generation - immediately ends generation
+    "non-final",                # Generation - cannot be the final morph in the word
+    "suffix-only",              # Generation - adding a suffix is the only valid transformation following this morph
+    "fixed-gloss",              # Generation - the gloss of this morph is fixedno additions should be made (e.g. articles, infinitive 'to', etc), and it has no embeds,
+    "i-mutating",               # OE morphophonology - causes i-mutation in the joined root
+    "y-to-i"                    # MnE orthography - causes a final unstressed 'y' to become 'i' when a consonant is suffixed (e.g. 'day' + '-ly' -> 'daily')
 ]
 
 morph_types = [
@@ -156,7 +111,7 @@ morph_origins = [
     "modern-english"
 ]
 
-def validate_morph(morph):
+def validate_morph(morph, meta_properties):
     errors = []
 
     # Returns true if the key and optional value type are found by the given morph.
@@ -335,7 +290,7 @@ def validate_morph(morph):
 
     # Check key whitelist
     for key in morph:
-        if not key in valid_properties:
+        if not key in meta_properties:
             errors.append("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
             valid = False
 

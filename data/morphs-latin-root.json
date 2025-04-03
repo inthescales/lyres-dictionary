@@ -340,7 +340,6 @@
         "type": "noun",
         "declension": 3,
         "gloss": "tree",
-        "tags": ["count", "concrete", "living", "plant"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -349,6 +348,7 @@
             },
             "form-stem": "arbore"
         }],
+        "tags": ["count", "concrete", "living", "plant"],
         "origin": "latin"
     }, {
         "key": "arcus",
@@ -544,7 +544,6 @@
         "conjugation": 3,
         "gloss": "[beat] down",
         "gloss-relative": "beat",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -553,6 +552,7 @@
             },
             "form-joiner-present": "a"
         }],
+        "tags": ["transitive"],
         "origin": "latin",
         "notes": "verb: combat vs debate vs abate"
     }, {
@@ -807,8 +807,8 @@
         "key": "capere",
         "form-stem-present": "cap",
         "form-stem-perfect": "capt",
-        "form-joiner-present": "ie",
         "form-final": ["cept", "ceive"],
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "seize",
@@ -1156,8 +1156,8 @@
         "key": "cognoscere",
         "form-stem-present": "cogniz",
         "form-stem-perfect": "cognit",
-        "form-joiner-present": "a",
         "form-final": "cognize",
+        "form-joiner-present": "a",
         "type": "verb",
         "conjugation": 3,
         "gloss": "know",
@@ -1193,8 +1193,8 @@
     }, {
         "key": "communis",
         "form-stem": "commun",
-        "declension": 3,
         "type": "adj",
+        "declension": 3,
         "gloss": "common",
         "origin": "latin"
     }, {
@@ -1261,8 +1261,8 @@
         "origin": "latin"
     }, {
         "key": "cornus",
-        "form-final": "corn",
         "form-stem": "corn",
+        "form-final": "corn",
         "type": "noun",
         "declension": 4,
         "gloss": "horn",
@@ -1474,7 +1474,6 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "owe",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -1483,6 +1482,7 @@
             },
             "form-stem": "debt"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "debilis",
@@ -1529,7 +1529,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "say",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -1539,6 +1538,7 @@
             "form-stem": "dict",
             "form-joiner-present": "a"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "dies",
@@ -1873,8 +1873,8 @@
         "key": "facere",
         "form-stem-present": "fac",
         "form-stem-perfect": "fact",
-        "form-joiner-present": "ie",
         "form-final": "fact",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "make",
@@ -2052,8 +2052,8 @@
         "key": "ferre",
         "form-stem-present": "fer",
         "form-stem-perfect": "lat",
-        "form-joiner-present": "e",
         "form-final": "fer",
+        "form-joiner-present": "e",
         "type": "verb",
         "conjugation": 0,
         "gloss": "bring",
@@ -2215,7 +2215,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "bend",
-        "tags": ["transitive", "motion"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -2225,6 +2224,7 @@
             "form-stem": "flex",
             "form-joiner-present": "i"
         }],
+        "tags": ["transitive", "motion"],
         "origin": "latin",
         "notes": "reflex, flex vs deflect, inflect"
     }, {
@@ -2433,8 +2433,8 @@
         "key": "fugere",
         "form-stem-present": "fug",
         "form-stem-perfect": "fugit",
-        "form-joiner-present": "ie",
         "form-final": "fuge",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "flee",
@@ -2641,8 +2641,8 @@
         "key": "gradi",
         "form-stem-present": "grad",
         "form-stem-perfect": "gress",
-        "form-joiner-present": "ie",
         "form-final": "gress",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "step",
@@ -3164,7 +3164,6 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "swear",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -3173,6 +3172,7 @@
             },
             "form-stem": "jur"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "juvenis",
@@ -3187,8 +3187,8 @@
         "key": "labi",
         "form-stem-present": "lab",
         "form-stem-perfect": "laps",
-        "form-joiner-present": "ie",
         "form-final": "lapse",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "fall",
@@ -3576,7 +3576,6 @@
         "type": "noun",
         "declension": 2,
         "gloss": "wood",
-        "tags": ["mass", "concrete", "living", "material"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -3585,6 +3584,7 @@
             },
             "form-stem": "ligne"
         }],
+        "tags": ["mass", "concrete", "living", "material"],
         "origin": "latin"
     }, {
         "key": "lilium",
@@ -4010,7 +4010,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "immerse",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -4020,6 +4019,7 @@
             "form-stem": "mers",
             "form-joiner-present": "i"
         }],
+        "tags": ["transitive"],
         "origin": "latin",
         "notes": "immerse vs submerge? Chose merse because merge might be a separate word"
     }, {
@@ -4103,7 +4103,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "send",
-        "tags": ["transitive", "motion"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -4113,6 +4112,7 @@
             "form-stem": "miss",
             "form-joiner-present": "i"
         }],
+        "tags": ["transitive", "motion"],
         "origin": "latin",
         "notes": "Verb form: transmit vs dismiss"
     }, {
@@ -4458,8 +4458,8 @@
         "origin": "latin"
     }, {
         "key": "nox",
-        "form-final": "nox",
         "form-stem": "noct",
+        "form-final": "nox",
         "type": "noun",
         "declension": 3,
         "gloss": "night",
@@ -4924,8 +4924,8 @@
         "key": "pati",
         "form-stem-present": "pat",
         "form-stem-perfect": "pass",
-        "form-joiner-present": "ie",
         "form-final": "pass",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "undergo",
@@ -5003,8 +5003,8 @@
         "key": "pendere",
         "form-stem-present": "pend",
         "form-stem-perfect": "pens",
-        "form-joiner-present": "a",
         "form-final": "pend",
+        "form-joiner-present": "a",
         "type": "verb",
         "conjugation": 3,
         "gloss": "hang",
@@ -5046,8 +5046,8 @@
         "key": "performer",
         "form-stem-present": "perform",
         "form-stem-perfect": "performat",
-        "form-joiner-present": "a",
         "form-final": "perform",
+        "form-joiner-present": "a",
         "type": "verb",
         "conjugation": 0,
         "gloss": "[carry] out",
@@ -5058,8 +5058,8 @@
         "key": "perire",
         "form-stem-present": "per",
         "form-stem-perfect": "perit",
-        "form-joiner-present": "ie",
         "form-final": "per",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 0,
         "gloss": "[pass] away",
@@ -5082,8 +5082,8 @@
         "origin": "latin"
     }, {
         "key": "pes",
-        "form-final": "ped",
         "form-stem": "ped",
+        "form-final": "ped",
         "type": "noun",
         "declension": 3,
         "gloss": "foot",
@@ -5229,12 +5229,11 @@
         "key": "plere",
         "form-stem-present": "pl",
         "form-stem-perfect": "plet",
-        "form-joiner-present": "e",
         "form-final": "plete",
+        "form-joiner-present": "e",
         "type": "verb",
         "conjugation": 0,
         "gloss": "fill",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -5244,6 +5243,7 @@
             "form-stem": "plet",
             "form-joiner-present": "a"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "plicare",
@@ -5322,8 +5322,8 @@
         "form-stem-present": "port",
         "form-stem-perfect": "portat",
         "form-final": "port",
-        "conjugation": 1,
         "type": "verb",
+        "conjugation": 1,
         "gloss": "carry",
         "tags": ["transitive", "motion"],
         "origin": "latin"
@@ -5368,8 +5368,8 @@
         "key": "practicare",
         "form-stem-present": "practic",
         "form-stem-perfect": "practit",
-        "form-joiner-present": "a",
         "form-final": "practice",
+        "form-joiner-present": "a",
         "type": "verb",
         "conjugation": 0,
         "gloss": "practice",
@@ -5391,7 +5391,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "grasp",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -5401,6 +5400,7 @@
             "form-stem": "prehens",
             "form-joiner-present": "i"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "premere",
@@ -5615,7 +5615,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "seek",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -5625,6 +5624,7 @@
             "form-stem": "quir",
             "form-joiner-present": "a"
         }],
+        "tags": ["transitive"],
         "origin": "latin",
         "notes": "conquerable vs acquirable"
     }, {
@@ -5770,8 +5770,8 @@
         "key": "revereri",
         "form-stem-present": "rever",
         "form-stem-perfect": "reverit",
-        "form-joiner-present": "e",
         "form-final": "revere",
+        "form-joiner-present": "e",
         "type": "verb",
         "conjugation": 1,
         "gloss": "revere",
@@ -5884,7 +5884,6 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "[make] holy",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "follows": {
@@ -5894,6 +5893,7 @@
             "form-stem-present": "secr",
             "form-stem-perfect": "secrat"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "sagitta",
@@ -5984,8 +5984,8 @@
         "key": "scandere",
         "form-stem-present": "scand",
         "form-stem-perfect": "scans",
-        "form-joiner-present": "a",
         "form-final": "scend",
+        "form-joiner-present": "a",
         "type": "verb",
         "conjugation": 3,
         "gloss": "climb",
@@ -6076,8 +6076,8 @@
         "key": "sensata",
         "form-stem-present": "sens",
         "form-stem-perfect": "sensat",
-        "form-joiner-present": "a",
         "form-final": "sensate",
+        "form-joiner-present": "a",
         "type": "verb",
         "conjugation": 0,
         "gloss": "[be] able to feel",
@@ -6657,7 +6657,6 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "hold",
-        "tags": ["transitive"],
         "exception": [
             {
                 "case": {
@@ -6677,6 +6676,7 @@
                 "form-joiner-present": "a"
             }
         ],
+        "tags": ["transitive"],
         "origin": "latin",
         "notes": "spelling for sustenance. For perfect, both tens- and tent- are seen."
     }, {
@@ -6842,7 +6842,6 @@
         "conjugation": 2,
         "gloss": "[look] after",
         "gloss-relative": "look",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -6851,6 +6850,7 @@
             },
             "form-stem": "tut"
         }],
+        "tags": ["transitive"],
         "origin": "latin",
         "notes": "special gloss for in maybe"
     }, {
@@ -6969,8 +6969,8 @@
         "key": "velle",
         "form-stem-present": "vol",
         "form-stem-perfect": "volit",
-        "form-joiner-present": "e",
         "form-final": "vell",
+        "form-joiner-present": "e",
         "type": "verb",
         "conjugation": 0,
         "gloss": "wish",
@@ -7030,7 +7030,6 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "turn",
-        "tags": ["transitive", "motion"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -7039,6 +7038,7 @@
             },
             "form-stem": "vers"
         }],
+        "tags": ["transitive", "motion"],
         "origin": "latin",
         "notes": "convert / converse"
     }, {
@@ -7095,7 +7095,6 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "see",
-        "tags": ["transitive"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -7104,6 +7103,7 @@
             },
             "form-stem": "vis"
         }],
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "vigilare",
@@ -7143,7 +7143,6 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "mistreat",
-        "tags": ["transitive", "no-prep"],
         "exception": [{
             "case": {
                 "precedes": {
@@ -7152,6 +7151,7 @@
             },
             "form-joiner-present": "e"
         }],
+        "tags": ["transitive", "no-prep"],
         "origin": "latin"
     }, {
         "key": "vir",
@@ -7189,8 +7189,8 @@
         "key": "vivere",
         "form-stem-present": "viv",
         "form-stem-perfect": "vivat",
-        "form-joiner-present": "ie",
         "form-final": "vive",
+        "form-joiner-present": "ie",
         "type": "verb",
         "conjugation": 3,
         "gloss": "live",

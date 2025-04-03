@@ -62,8 +62,8 @@ class Morphothec:
         self.morph_for_key = {}
         self.languages = {}
 
+        # Read morph files
         files = []
-
         if isinstance(input, list):
             files = input
         elif isinstance(input, str):
@@ -75,6 +75,16 @@ class Morphothec:
         if len(files) == 0:
             Logger.error("no morph files found")
 
+        # Read metadata files
+        meta_properties = []
+        with open(input + "meta/morph-properties.json") as prop_data:
+            jdata = json.load(prop_data)
+            meta_properties = [m[0] for m in jdata]
+
+        if len(meta_properties) == 0:
+            Logger.error("failed to load morph format metadata")
+
+        # Read morphs from files
         for file in files:
             
             errors = 0
@@ -85,10 +95,11 @@ class Morphothec:
                 for morph in raw_morphs:
 
                     # Check that the morph is valid
-                    if not validator.validate_morph(morph):
+                    if not validator.validate_morph(morph, meta_properties):
                         errors += 1
                         continue
 
+                    # Make automated adjustments to the morph
                     morph = adjuster.adjust_morph(morph)
                     if morph == None:
                         continue
