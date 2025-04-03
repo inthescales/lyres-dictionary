@@ -19,8 +19,8 @@ def meets_universal_requirements(morph, env):
         return False
 
     # Can't put a suffix on a verb if that verb doesn't have the required participle type
-    if "derive-participle" in morph_dict:
-        link_key = "form-stem-" + morph_dict["derive-participle"]
+    if "suffix-participle" in morph_dict:
+        link_key = "form-stem-" + morph_dict["suffix-participle"]
         if not (link_key in env.prev.morph or "form-stem" in env.prev.morph):
             return False
 

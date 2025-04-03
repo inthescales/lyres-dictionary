@@ -121,7 +121,7 @@ def form(morph, env, config=Former_Config()):
                 form = morph_dict["form-stem"]
 
             # Verbs or verbal derivations need to take participle form into account
-            elif morph_dict["type"] == "verb" or (morph_dict["type"] == "derive" and morph_dict["derive-to"] == "verb"):
+            elif morph_dict["type"] == "verb" or (morph_dict["type"] == "suffix" and morph_dict["derive-to"] == "verb"):
                 if next_morph and "derive-participle" in next_morph:
                     if next_morph["derive-participle"] == "present":
                         form = morph_dict["form-stem-present"]

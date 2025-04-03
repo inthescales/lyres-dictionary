@@ -24,7 +24,7 @@ class Morphothec:
                 return
 
             # Add this morph to the generation lists
-            if morph_type == "derive":
+            if morph_type == "suffix":
                 if isinstance(morph["derive-from"], str):
                     from_types = [morph["derive-from"]]
                 else:

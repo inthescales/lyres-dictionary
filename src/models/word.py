@@ -52,7 +52,7 @@ class Word:
 
     def root_morph(self):
         for morph in self.morphs:
-            if morph.get_type() not in ["prep", "prefix", "derive"]:
+            if morph.get_type() not in ["prep", "prefix", "suffix"]:
                 return morph
 
     # Returns the environment of a potential prefix.

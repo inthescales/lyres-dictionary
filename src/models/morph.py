@@ -59,7 +59,7 @@ class Morph:
         return self.morph["key"]
         
     def get_type(self):
-        if self.morph["type"] == "derive":
+        if self.morph["type"] == "suffix":
             return self.morph["derive-to"]
         else:
             return self.morph["type"]
@@ -71,7 +71,7 @@ class Morph:
         return self.morph["type"] in ["prefix", "prep", "number"]
 
     def is_suffix(self):
-        return self.morph["type"] == "derive"
+        return self.morph["type"] == "suffix"
     
     def is_affix(self):
         return self.is_prefix() or self.is_suffix()

@@ -95,7 +95,7 @@ morph_types = [
     "number",
     "prep",
     "prefix",
-    "derive"
+    "suffix"
 ]
 
 root_types = [
@@ -214,9 +214,9 @@ def validate_morph(morph, meta_properties):
             { "tags": ["count", "mass", "singleton", "uncountable"] },
             { "tags": ["concrete", "abstract"] }
         ],
-        "derive": [
+        "suffix": [
             { "key": "derive-from", "values": { "one-or-many": root_types } },
-            { "key": "derive-to", "values": { "one-or-many": root_types } }
+            { "key": "derive-to", "values": root_types }
         ],
         "prep": [
             { "key": "prefix-on", "values": { "one-or-many": root_types }  },

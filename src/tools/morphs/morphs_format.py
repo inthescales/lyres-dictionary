@@ -4,7 +4,7 @@ import sys
 
 from collections import OrderedDict
 
-import src.tools.morphs.alphabetical
+import src.tools.morphs.alphabetical as alphabetical
 import src.tools.morphs.morphs_files as file_tool
 
 indent_spaces = 4

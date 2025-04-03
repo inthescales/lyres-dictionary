@@ -1,8 +1,8 @@
 import getopt
 import sys
 
-import morphs_files as file_tool
-import morphs_format as format
+import src.tools.morphs.morphs_files as file_tool
+import src.tools.morphs.morphs_format as format
 
 def modify(morph):
     # Write code to modify the morph here, returning the new version
@@ -14,20 +14,7 @@ def write(morphs, filename):
     formatted = format.format(asorted)
     file_tool.write_formatted_to(formatted, filename)
 
-if __name__ == '__main__':
-    # Read args
-    try:
-        opts, params = getopt.getopt(sys.argv[1:], "", [])
-    except getopt.GetoptError:
-        print('ERROR: getopt error')
-        sys.exit(2)
-
-    files = params
-
-    if len(files) == 0:
-        print("ERROR: Must specify at least one morphs file")
-        sys.exit(0)
-
+def modify_morphs(files):
     for file in files:
         # Read in morphs
         morphs = file_tool.get_morphs_from(file)
