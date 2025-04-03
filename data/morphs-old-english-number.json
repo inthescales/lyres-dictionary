@@ -7,34 +7,11 @@
         "gloss": "one %!sg",
         "origin": "old-english"
     }, {
-        "key": "twā-",
-        "form-raw": "twā",
-        "form-canon": "two",
+        "key": "ehta-",
+        "form-raw": "ehta",
+        "form-canon": "eight",
         "type": "number",
-        "gloss": "two %pl",
-        "origin": "old-english"
-    }, {
-        "key": "twēġen-",
-        "form-raw": "twēġen",
-        "form-canon": "twain",
-        "type": "number",
-        "gloss": "two %pl",
-        "tags": ["rare"],
-        "origin": "old-english"
-    }, {
-        "key": "twēġ-",
-        "form-raw": "twēġ",
-        "form-canon": "tway",
-        "type": "number",
-        "gloss": "two %pl",
-        "tags": ["rare"],
-        "origin": "old-english"
-    }, {
-        "key": "þrēo-",
-        "form-raw": "þrēo",
-        "form-canon": "three",
-        "type": "number",
-        "gloss": "three %pl",
+        "gloss": "eight %pl",
         "tags": ["rare"],
         "origin": "old-english"
     }, {
@@ -54,11 +31,26 @@
         "tags": ["rare"],
         "origin": "old-english"
     }, {
-        "key": "six-",
-        "form-raw": "six",
-        "form-canon": "six",
+        "key": "hundred-",
+        "form-raw": "hundred",
+        "form-canon": "hundred",
         "type": "number",
-        "gloss": "six %pl",
+        "gloss": "one hundred %pl",
+        "tags": ["rare"],
+        "origin": "old-english"
+    }, {
+        "key": "mæniġ-",
+        "form-raw": "mæniġ",
+        "form-canon": "many",
+        "type": "number",
+        "gloss": "many %pl",
+        "origin": "old-english"
+    }, {
+        "key": "niġon-",
+        "form-raw": "niġon",
+        "form-canon": "nine",
+        "type": "number",
+        "gloss": "nine %pl",
         "tags": ["rare"],
         "origin": "old-english"
     }, {
@@ -70,19 +62,11 @@
         "tags": ["rare"],
         "origin": "old-english"
     }, {
-        "key": "ehta-",
-        "form-raw": "ehta",
-        "form-canon": "eight",
+        "key": "six-",
+        "form-raw": "six",
+        "form-canon": "six",
         "type": "number",
-        "gloss": "eight %pl",
-        "tags": ["rare"],
-        "origin": "old-english"
-    }, {
-        "key": "niġon-",
-        "form-raw": "niġon",
-        "form-canon": "nine",
-        "type": "number",
-        "gloss": "nine %pl",
+        "gloss": "six %pl",
         "tags": ["rare"],
         "origin": "old-english"
     }, {
@@ -94,11 +78,34 @@
         "tags": ["rare"],
         "origin": "old-english"
     }, {
-        "key": "hundred-",
-        "form-raw": "hundred",
-        "form-canon": "hundred",
+        "key": "twā-",
+        "form-raw": "twā",
+        "form-canon": "two",
         "type": "number",
-        "gloss": "one hundred %pl",
+        "gloss": "two %pl",
+        "origin": "old-english"
+    }, {
+        "key": "twēġ-",
+        "form-raw": "twēġ",
+        "form-canon": "tway",
+        "type": "number",
+        "gloss": "two %pl",
+        "tags": ["rare"],
+        "origin": "old-english"
+    }, {
+        "key": "twēġen-",
+        "form-raw": "twēġen",
+        "form-canon": "twain",
+        "type": "number",
+        "gloss": "two %pl",
+        "tags": ["rare"],
+        "origin": "old-english"
+    }, {
+        "key": "þrēo-",
+        "form-raw": "þrēo",
+        "form-canon": "three",
+        "type": "number",
+        "gloss": "three %pl",
         "tags": ["rare"],
         "origin": "old-english"
     }, {
@@ -108,13 +115,6 @@
         "type": "number",
         "gloss": "one thousand %pl",
         "tags": ["rare"],
-        "origin": "old-english"
-    }, {
-        "key": "mæniġ-",
-        "form-raw": "mæniġ",
-        "form-canon": "many",
-        "type": "number",
-        "gloss": "many %pl",
         "origin": "old-english"
     }
 ]

@@ -18,6 +18,32 @@
         "origin": "latin",
         "notes": "Consider narrowing to just jobs, or adding a gloss exception in that case, like 'mediocre or incompetent', while for others it could be 'contemptible'"
     }, {
+        "key": "-cide",
+        "form-stem": "cid",
+        "form-final": "cide",
+        "type": "derive",
+        "declension": 0,
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "the act of killing %pl",
+        "suffixes": ["-al", "-ous", "-ism"],
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": ["-al", "-ous", "-ism"]
+                }
+            },
+            "gloss": "killing %pl"
+        }],
+        "tags": ["uncountable"],
+        "origin": "latin",
+        "notes": "Could add speculative variant for non-living roots with meaning 'cut', as in 'lapicida' ('stonecutter')"
+    }, {
         "key": "-culture",
         "form-stem": "cultur",
         "form-final": "culture",
@@ -44,31 +70,23 @@
         "origin": "latin",
         "notes": "Consider expanding in line with 'menticulture'"
     }, {
-        "key": "-cide",
-        "form-stem": "cid",
-        "form-final": "cide",
+        "key": "-fer",
+        "form-stem": "fer",
+        "form-final": "fer",
+        "form-joiner-present": "e",
         "type": "derive",
-        "declension": 0,
+        "conjugation": 0,
         "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "the act of killing %pl",
-        "suffixes": ["-al", "-ous", "-ism"],
+        "derive-to": "verb",
+        "gloss": "[bear] %pl",
+        "suffixes": ["silent-agent", "-ous", "-nt", "-nce", "-ize"],
         "requires": {
             "follows": {
-                "has-tag": "living"
+                "has-tag": "concrete"
             }
         },
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-key": ["-al", "-ous", "-ism"]
-                }
-            },
-            "gloss": "killing %pl"
-        }],
-        "tags": ["uncountable"],
-        "origin": "latin",
-        "notes": "Could add speculative variant for non-living roots with meaning 'cut', as in 'lapicida' ('stonecutter')"
+        "tags": ["suffix-only", "no-length", "non-final"],
+        "origin": "latin"
     }, {
         "key": "-form",
         "form-stem": "form",
@@ -96,57 +114,6 @@
             "gloss": "having the appearance of %sg"
         }],
         "origin": "latin"
-    }, {
-        "key": "-fer",
-        "form-stem": "fer",
-        "form-final": "fer",
-        "form-joiner-present": "e",
-        "type": "derive",
-        "conjugation": 0,
-        "derive-from": "noun",
-        "derive-to": "verb",
-        "gloss": "[bear] %pl",
-        "suffixes": ["silent-agent", "-ous", "-nt", "-nce", "-ize"],
-        "requires": {
-            "follows": {
-                "has-tag": "concrete"
-            }
-        },
-        "tags": ["suffix-only", "no-length", "non-final"],
-        "origin": "latin"
-    }, {
-        "key": "-ify",
-        "form-stem-present": "ific",
-        "form-stem-perfect": "ificat",
-        "form-final": "ify",
-        "type": "derive",
-        "conjugation": 1,
-        "derive-from": ["noun", "adj"],
-        "derive-to": "verb",
-        "gloss-relative": "[make] %@",
-        "gloss-adj": "[make] %@",
-        "gloss-noun": "[make] %sg",
-        "exception": [
-            {
-                "case": {
-                    "precedes": {
-                        "has-key": "-or"
-                    }
-                },
-                "form-stem": ["ifact", "ificat"]
-            }, {
-                "case": {
-                    "precedes": {
-                        "has-key": "-ble"
-                    }
-                },
-                "form-stem": "ific",
-                "form-joiner-present": "a"
-            }
-        ],
-        "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
     }, {
         "key": "-ger",
         "form-stem": "ger",
@@ -182,6 +149,39 @@
         "tags": ["suffix-only", "no-length", "non-final"],
         "origin": "latin",
         "notes": "add exceptions for 'ous'"
+    }, {
+        "key": "-ify",
+        "form-stem-present": "ific",
+        "form-stem-perfect": "ificat",
+        "form-final": "ify",
+        "type": "derive",
+        "conjugation": 1,
+        "derive-from": ["noun", "adj"],
+        "derive-to": "verb",
+        "gloss-relative": "[make] %@",
+        "gloss-adj": "[make] %@",
+        "gloss-noun": "[make] %sg",
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "-or"
+                    }
+                },
+                "form-stem": ["ifact", "ificat"]
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-key": "-ble"
+                    }
+                },
+                "form-stem": "ific",
+                "form-joiner-present": "a"
+            }
+        ],
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "Perfect forms: 'ifice' (magnificent) vs 'icant' (significant) vs 'ifia' (???) vs 'ifacie' (abortifacient) -- idea: for concrete nouns 'make into', for abstract, just 'make'"
     }, {
         "key": "-pote-drink",
         "form-stem": "pot",

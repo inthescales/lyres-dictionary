@@ -21,6 +21,7 @@ def generate_mapping(array):
 # Items grouped in an array together have equal priority.
 # Characters not in this array will appear at the end in no particular order.
 priority_list = [
+    "-",
     ["æ", "ǣ"],
     ["a", "ā"],
     "b",
@@ -49,8 +50,7 @@ priority_list = [
     "x",
     ["y", "ȳ"],
     "z",
-    "|",
-    "-"
+    "|"
 ]
 
 priority_map = generate_mapping(priority_list)

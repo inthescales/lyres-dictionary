@@ -1,20 +1,14 @@
 [
     {
-        "key": "be/verb-",
+        "key": "be/adj-",
         "form-stem": "be",
-        "type": "prep",
-        "prefix-on": "verb",
-        "gloss": "thoroughly %@",
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-tag": "motion"
-                }
-            },
-            "gloss": "%@ all over"
-        }],
+        "type": "prefix",
+        "prefix-on": "adj",
+        "prefix-to": "verb",
+        "gloss": "[make] %@",
+        "tags": ["final"],
         "origin": "old-english",
-        "notes": "TODO: use 'all over' for some transitive verbs as well, e.g. 'besmear'"
+        "notes": "TODO: 'final' tag is added because I can't currently get suffixes added to roots with prefixes that change the type. Fix this."
     }, {
         "key": "be/noun-",
         "form-stem": "be",
@@ -108,15 +102,21 @@
         "origin": "old-english",
         "notes": "TODO: 'final' tag is added because I can't currently get suffixes added to roots with prefixes that change the type. Fix this."
     }, {
-        "key": "be/adj-",
+        "key": "be/verb-",
         "form-stem": "be",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "prefix-to": "verb",
-        "gloss": "[make] %@",
-        "tags": ["final"],
+        "type": "prep",
+        "prefix-on": "verb",
+        "gloss": "thoroughly %@",
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-tag": "motion"
+                }
+            },
+            "gloss": "%@ all over"
+        }],
         "origin": "old-english",
-        "notes": "TODO: 'final' tag is added because I can't currently get suffixes added to roots with prefixes that change the type. Fix this."
+        "notes": "TODO: use 'all over' for some transitive verbs as well, e.g. 'besmear'"
     }, {
         "key": "for-",
         "form-stem": "for",
@@ -125,32 +125,6 @@
         "gloss": "%@ away",
         "origin": "old-english",
         "notes": "Had a 'motion' requirement on this, but opening it up, like it is in Latin"
-    }, {
-        "key": "wiþ-",
-        "form-stem": "with",
-        "type": "prep",
-        "prefix-on": "verb",
-        "gloss": "%@ against",
-        "requires": {
-            "precedes": {
-                "has-any-tags": ["obscure", "speculative"]
-            }
-        },
-        "tags": [],
-        "origin": "old-english",
-        "notes": "Feels a bit funny on common words. TODO: Reevaluate this"
-    }, {
-        "key": "new-",
-        "form-stem": "new-",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "gloss": "newly %@",
-        "requires": {
-            "precedes": {
-                "has-tag": "past-participle"
-            }
-        },
-        "origin": "old-english"
     }, {
         "key": "fresh-",
         "form-stem": "fresh-",
@@ -163,31 +137,6 @@
             }
         },
         "origin": "old-english"
-    }, {
-        "key": "well-",
-        "form-stem": "well-",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "gloss": "%@ well",
-        "requires": {
-            "precedes": {
-                "has-tag": "past-participle"
-            }
-        },
-        "origin": "old-english"
-    }, {
-        "key": "ill-",
-        "form-stem": "ill-",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "gloss": "badly %@",
-        "requires": {
-            "precedes": {
-                "has-tag": "past-participle"
-            }
-        },
-        "origin": "old-english",
-        "notes": "Properly Norse via ME, but putting it here for now"
     }, {
         "key": "full-",
         "form-stem": "full-",
@@ -206,42 +155,6 @@
         "type": "prefix",
         "prefix-on": "adj",
         "gloss": "halfway %@",
-        "requires": {
-            "precedes": {
-                "has-tag": "past-participle"
-            }
-        },
-        "origin": "old-english"
-    }, {
-        "key": "twice-",
-        "form-stem": "twice-",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "gloss": "%@ two times",
-        "requires": {
-            "precedes": {
-                "has-tag": "past-participle"
-            }
-        },
-        "origin": "old-english"
-    }, {
-        "key": "thrice-",
-        "form-stem": "thrice-",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "gloss": "%@ three times",
-        "requires": {
-            "precedes": {
-                "has-tag": "past-participle"
-            }
-        },
-        "origin": "old-english"
-    }, {
-        "key": "un-",
-        "form-stem": "un",
-        "type": "prefix",
-        "prefix-on": "adj",
-        "gloss": "not %@",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -280,6 +193,31 @@
         "tags": ["count", "concrete", "living", "person", "role"],
         "origin": "old-english"
     }, {
+        "key": "ill-",
+        "form-stem": "ill-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "badly %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english",
+        "notes": "Properly Norse via ME, but putting it here for now"
+    }, {
+        "key": "new-",
+        "form-stem": "new-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "newly %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "she-",
         "form-stem": "she-",
         "type": "prefix",
@@ -295,5 +233,67 @@
         },
         "tags": ["count", "concrete", "living", "animal", "gendered"],
         "origin": "old-english"
+    }, {
+        "key": "thrice-",
+        "form-stem": "thrice-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "%@ three times",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "twice-",
+        "form-stem": "twice-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "%@ two times",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "un-",
+        "form-stem": "un",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "not %@",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "well-",
+        "form-stem": "well-",
+        "type": "prefix",
+        "prefix-on": "adj",
+        "gloss": "%@ well",
+        "requires": {
+            "precedes": {
+                "has-tag": "past-participle"
+            }
+        },
+        "origin": "old-english"
+    }, {
+        "key": "wiþ-",
+        "form-stem": "with",
+        "type": "prep",
+        "prefix-on": "verb",
+        "gloss": "%@ against",
+        "requires": {
+            "precedes": {
+                "has-any-tags": ["obscure", "speculative"]
+            }
+        },
+        "tags": [],
+        "origin": "old-english",
+        "notes": "Feels a bit funny on common words. TODO: Reevaluate this"
     }
 ]

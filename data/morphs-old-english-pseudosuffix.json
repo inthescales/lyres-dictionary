@@ -1,23 +1,5 @@
 [
     {
-        "key": "-eċe",
-        "form-stem": "ache",
-        "form-raw": "eċe",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "pain in one's %!sg",
-        "requires": {
-            "follows": {
-                "and": [
-                    { "has-tag": "bodypart" },
-                    { "not": { "has-tag": "bodypart-plant" } }
-                ]
-            }
-        },
-        "tags": ["count", "abstract", "body-state"],
-        "origin": "old-english"
-    }, {
         "key": "-blīc",
         "form-stem": "blike",
         "form-final": "blike",
@@ -52,29 +34,6 @@
         "origin": "old-english",
         "notes": "INVENTED based on cases like '-shine' and '-leam', from a comparable verb 'blīcan'"
     }, {
-        "key": "-bound",
-        "form-stem": "bound",
-        "form-final": "bound",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": ["encased or trapped in %pl"],
-        "requires": {
-            "follows": {
-                "has-any-tags": ["material", "mind-state", "body-state"]
-            }
-        },
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-any-tags": ["mind-state", "body-state"]
-                }
-            },
-            "gloss": "immobilized by %pl"
-        }],
-        "origin": "old-english",
-        "notes": "Fanciful, but based on 'icebound' (of ships)"
-    }, {
         "key": "-blind",
         "form-stem": "blind",
         "form-final": "blind",
@@ -106,6 +65,29 @@
         },
         "origin": "old-english",
         "notes": "More of a modern formation"
+    }, {
+        "key": "-bound",
+        "form-stem": "bound",
+        "form-final": "bound",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": ["encased or trapped in %pl"],
+        "requires": {
+            "follows": {
+                "has-any-tags": ["material", "mind-state", "body-state"]
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-any-tags": ["mind-state", "body-state"]
+                }
+            },
+            "gloss": "immobilized by %pl"
+        }],
+        "origin": "old-english",
+        "notes": "Fanciful, but based on 'icebound' (of ships)"
     }, {
         "key": "-bound/heading",
         "form-stem": "bound",
@@ -240,6 +222,24 @@
             }
         },
         "tags": ["uncountable", "abstract"],
+        "origin": "old-english"
+    }, {
+        "key": "-eċe",
+        "form-stem": "ache",
+        "form-raw": "eċe",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "pain in one's %!sg",
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "bodypart" },
+                    { "not": { "has-tag": "bodypart-plant" } }
+                ]
+            }
+        },
+        "tags": ["count", "abstract", "body-state"],
         "origin": "old-english"
     }, {
         "key": "-fare",
@@ -660,52 +660,6 @@
         "origin": "old-english",
         "notes": "Consider adding a 'one who works with X' sense here, as in oilman, milkman"
     }, {
-        "key": "-woman",
-        "form-stem": ["woman", "swoman"],
-        "form-raw": ["woman", "swoman"],
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "woman who engages in %pl",
-        "requires": {
-            "follows": {
-                "has-any-tags": ["activity", "weapon", "terrain"]
-            }
-        },
-        "exception": [
-            {
-                "case": {
-                    "follows": {
-                        "has-tag": "weapon"
-                    }
-                },
-                "gloss": "[woman] who fights with %sg"
-            }, {
-                "case": {
-                    "follows": {
-                        "has-tag": "terrain"
-                    }
-                },
-                "gloss": "[woman] who frequents or works in %pl"
-            }, {
-                "case": {
-                    "follows": {
-                        "has-tag": "grouping"
-                    }
-                },
-                "gloss": "[woman] who is a member of %sg"
-            }, {
-                "case": {
-                    "follows": {
-                        "has-tag": "tool"
-                    }
-                },
-                "gloss": "[woman] who uses %sg"
-            }
-        ],
-        "tags": ["count", "concrete", "living", "person", "gendered"],
-        "origin": "old-english"
-    }, {
         "key": "-mangere",
         "form-stem": "monger",
         "form-raw": "mangere",
@@ -781,20 +735,6 @@
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
-        "key": "-scinn",
-        "form-stem": "skin",
-        "form-final": "skin",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": "made from the skin of %sg",
-        "requires": {
-            "follows": {
-                "has-tag": "animal"
-            }
-        },
-        "origin": "old-english"
-    }, {
         "key": "-scīn-2",
         "form-stem": "shine",
         "form-final": "shine",
@@ -818,6 +758,20 @@
         "tags": ["singleton", "abstract"],
         "origin": "old-english"
     }, {
+        "key": "-scinn",
+        "form-stem": "skin",
+        "form-final": "skin",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "made from the skin of %sg",
+        "requires": {
+            "follows": {
+                "has-tag": "animal"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-seoc",
         "form-stem": "sick",
         "form-raw": "seoc",
@@ -831,22 +785,6 @@
                 "has-tag": "mind-state"
             }
         },
-        "origin": "old-english"
-    }, {
-        "key": "-song",
-        "form-stem": "-song",
-        "form-raw": "-song",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "song of %!sg",
-        "suffixes": [],
-        "requires": {
-            "follows": {
-                "has-tag": "mind-state"
-            }
-        },
-        "tags": ["count", "abstract", "man-made"],
         "origin": "old-english"
     }, {
         "key": "-smiþ",
@@ -875,6 +813,22 @@
             "tags": ["count", "concrete", "living", "person"]
         }],
         "tags": ["uncountable", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "-song",
+        "form-stem": "-song",
+        "form-raw": "-song",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "song of %!sg",
+        "suffixes": [],
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "tags": ["count", "abstract", "man-made"],
         "origin": "old-english"
     }, {
         "key": "-struck",
@@ -959,69 +913,6 @@
         "tags": ["rare"],
         "origin": "old-english"
     }, {
-        "key": "-wis",
-        "form-stem": "wise",
-        "form-raw": "wis",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": "knowledgeable with respect to %pl",
-        "origin": "old-english"
-    }, {
-        "key": "-wis-adv",
-        "form-stem": "wise",
-        "form-raw": "wis",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": ["in the manner of %sg", "with regard to %pl"],
-        "origin": "old-english",
-        "notes": "Properly ME, but categorizing as OE for now"
-    }, {
-        "key": "-worn",
-        "form-stem": "worn",
-        "form-final": "worn",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "adj",
-        "gloss": "worn down by %pl",
-        "suffixes": [],
-        "requires": {
-            "follows": {
-                "has-tag": "mind-state"
-            }
-        },
-        "origin": "old-english"
-    }, {
-        "key": "-wryhta",
-        "form-stem": "wright",
-        "form-raw": "wryhta",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "noun",
-        "gloss": "someone who makes %pl",
-        "requires": {
-            "follows": {
-                "has-tag": "man-made"
-            }
-        },
-        "tags": ["uncountable", "concrete", "living", "person"],
-        "origin": "old-english"
-    }, {
-        "key": "-wurþ",
-        "form-stem": "worthy",
-        "form-raw": "wurþ",
-        "type": "derive",
-        "derive-from": "verb",
-        "derive-to": "adj",
-        "gloss": "worth %part",
-        "requires": {
-            "follows": {
-                "has-tag": "transitive"
-            }
-        },
-        "origin": "old-english"
-    }, {
         "key": "-wend",
         "form-stem": "wend",
         "form-raw": "wende",
@@ -1054,6 +945,86 @@
         "tags": ["mass", "concrete", "man-made"],
         "origin": "old-english"
     }, {
+        "key": "-wis",
+        "form-stem": "wise",
+        "form-raw": "wis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "knowledgeable with respect to %pl",
+        "origin": "old-english"
+    }, {
+        "key": "-wis-adv",
+        "form-stem": "wise",
+        "form-raw": "wis",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": ["in the manner of %sg", "with regard to %pl"],
+        "origin": "old-english",
+        "notes": "Properly ME, but categorizing as OE for now"
+    }, {
+        "key": "-woman",
+        "form-stem": ["woman", "swoman"],
+        "form-raw": ["woman", "swoman"],
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "woman who engages in %pl",
+        "requires": {
+            "follows": {
+                "has-any-tags": ["activity", "weapon", "terrain"]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-tag": "weapon"
+                    }
+                },
+                "gloss": "[woman] who fights with %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "terrain"
+                    }
+                },
+                "gloss": "[woman] who frequents or works in %pl"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "grouping"
+                    }
+                },
+                "gloss": "[woman] who is a member of %sg"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "tool"
+                    }
+                },
+                "gloss": "[woman] who uses %sg"
+            }
+        ],
+        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "origin": "old-english"
+    }, {
+        "key": "-worn",
+        "form-stem": "worn",
+        "form-final": "worn",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "adj",
+        "gloss": "worn down by %pl",
+        "suffixes": [],
+        "requires": {
+            "follows": {
+                "has-tag": "mind-state"
+            }
+        },
+        "origin": "old-english"
+    }, {
         "key": "-wose",
         "form-stem": "wose",
         "form-final": "wose",
@@ -1069,5 +1040,34 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Obscure origin. Observed in 'woodwose'"
+    }, {
+        "key": "-wryhta",
+        "form-stem": "wright",
+        "form-raw": "wryhta",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "someone who makes %pl",
+        "requires": {
+            "follows": {
+                "has-tag": "man-made"
+            }
+        },
+        "tags": ["uncountable", "concrete", "living", "person"],
+        "origin": "old-english"
+    }, {
+        "key": "-wurþ",
+        "form-stem": "worthy",
+        "form-raw": "wurþ",
+        "type": "derive",
+        "derive-from": "verb",
+        "derive-to": "adj",
+        "gloss": "worth %part",
+        "requires": {
+            "follows": {
+                "has-tag": "transitive"
+            }
+        },
+        "origin": "old-english"
     }
 ]

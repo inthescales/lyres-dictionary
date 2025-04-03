@@ -1,5 +1,30 @@
 [
     {
+        "key": "-agog",
+        "form-stem": "agog",
+        "form-final": "agog",
+        "type": "derive",
+        "derive-from": "noun",
+        "derive-to": "verb",
+        "gloss": "[leading] of %pl",
+        "suffixes": ["greek-e-agent", "-ic-def", "-y-def"],
+        "requires": {
+            "follows": {
+                "has-tag": "living"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-e-agent"
+                }
+            },
+            "gloss": "[lead] %pl",
+            "form-stem": "agogu"
+        }],
+        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "origin": "greek"
+    }, {
         "key": "-arch-",
         "form-stem": "arch",
         "form-final": "arch",
@@ -96,31 +121,6 @@
         "gloss": "[produce] %pl",
         "suffixes": ["greek-silent-agent", "-ic-part"],
         "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
-        "origin": "greek"
-    }, {
-        "key": "-agog",
-        "form-stem": "agog",
-        "form-final": "agog",
-        "type": "derive",
-        "derive-from": "noun",
-        "derive-to": "verb",
-        "gloss": "[leading] of %pl",
-        "suffixes": ["greek-e-agent", "-ic-def", "-y-def"],
-        "requires": {
-            "follows": {
-                "has-tag": "living"
-            }
-        },
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-key": "greek-e-agent"
-                }
-            },
-            "gloss": "[lead] %pl",
-            "form-stem": "agogu"
-        }],
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
         "origin": "greek"
     }, {
         "key": "-graph-",

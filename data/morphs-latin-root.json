@@ -24,15 +24,6 @@
         "gloss": "sharp",
         "origin": "latin"
     }, {
-        "key": "acus",
-        "form-stem": "ac",
-        "type": "noun",
-        "declension": 4,
-        "gloss": "needle",
-        "gloss-tool": "pierce",
-        "tags": ["count", "concrete", "tool"],
-        "origin": "latin"
-    }, {
         "key": "acuere",
         "form-stem-present": "acu",
         "form-stem-perfect": "acut",
@@ -43,6 +34,15 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "This form is classical. Was 'acuare' in later sources apparently"
+    }, {
+        "key": "acus",
+        "form-stem": "ac",
+        "type": "noun",
+        "declension": 4,
+        "gloss": "needle",
+        "gloss-tool": "pierce",
+        "tags": ["count", "concrete", "tool"],
+        "origin": "latin"
     }, {
         "key": "acuta",
         "form-stem": "acut",
@@ -209,6 +209,14 @@
         "gloss": "[wide], [abundant]",
         "origin": "latin"
     }, {
+        "key": "ancilla",
+        "form-stem": "ancill",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "subordinate",
+        "tags": ["count", "concrete", "living"],
+        "origin": "latin"
+    }, {
         "key": "angulus",
         "form-stem": "angul",
         "type": "noun",
@@ -294,14 +302,6 @@
         "conjugation": 1,
         "gloss": "appeal",
         "tags": ["intransitive"],
-        "origin": "latin"
-    }, {
-        "key": "ancilla",
-        "form-stem": "ancill",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "subordinate",
-        "tags": ["count", "concrete", "living"],
         "origin": "latin"
     }, {
         "key": "apta",
@@ -570,13 +570,6 @@
         "gloss": "beautiful",
         "origin": "latin"
     }, {
-        "key": "blanda",
-        "form-stem": "bland",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "[soothing], [bland]",
-        "origin": "latin"
-    }, {
         "key": "bellare",
         "form-stem-present": "bell",
         "form-stem-perfect": "bellat",
@@ -611,6 +604,13 @@
         "conjugation": 3,
         "gloss": "drink",
         "tags": ["transitive"],
+        "origin": "latin"
+    }, {
+        "key": "blanda",
+        "form-stem": "bland",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "[soothing], [bland]",
         "origin": "latin"
     }, {
         "key": "bona",
@@ -717,20 +717,20 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
-        "key": "calx-pebble",
-        "form-stem": "calc",
-        "type": "noun",
-        "declension": 3,
-        "gloss": ["pebble", "game [piece]"],
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    }, {
         "key": "calx-limestone",
         "form-stem": "calc",
         "type": "noun",
         "declension": 3,
         "gloss": "limestone",
         "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    }, {
+        "key": "calx-pebble",
+        "form-stem": "calc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": ["pebble", "game [piece]"],
+        "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
         "key": "camera",
@@ -866,20 +866,20 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
-        "key": "caseus",
-        "form-stem": "case",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "cheese",
-        "tags": ["mass", "concrete"],
-        "origin": "latin"
-    }, {
         "key": "caro",
         "form-stem": "carn",
         "type": "noun",
         "declension": 3,
         "gloss": "flesh",
         "tags": ["mass", "concrete", "bodypart", "material"],
+        "origin": "latin"
+    }, {
+        "key": "caseus",
+        "form-stem": "case",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "cheese",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     }, {
         "key": "casus",
@@ -977,43 +977,6 @@
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     }, {
-        "key": "certa",
-        "form-stem": "cert",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "certain",
-        "origin": "latin"
-    }, {
-        "key": "columna",
-        "form-stem": "column",
-        "type": "noun",
-        "declension": 1,
-        "gloss": "column",
-        "tags": ["count", "concrete"],
-        "origin": "latin"
-    }, {
-        "key": "cortex",
-        "form-stem": "cortic",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "tree [bark]",
-        "tags": ["mass", "concrete", "material"],
-        "origin": "latin"
-    }, {
-        "key": "crassa",
-        "form-stem": "crass",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "thick",
-        "origin": "latin"
-    }, {
-        "key": "crispa",
-        "form-stem": "crisp",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "curly",
-        "origin": "latin"
-    }, {
         "key": "cernere",
         "form-stem-present": "crem",
         "form-stem-perfect": "cret",
@@ -1024,6 +987,13 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "verb: secret vs excrete vs discern. Gloss fitting discern, not excrement"
+    }, {
+        "key": "certa",
+        "form-stem": "cert",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "certain",
+        "origin": "latin"
     }, {
         "key": "certare",
         "form-stem-present": "cert",
@@ -1052,14 +1022,6 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
-        "key": "ciner",
-        "form-stem": "ciner",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "ashes",
-        "tags": ["mass", "concrete"],
-        "origin": "latin"
-    }, {
         "key": "ciliare",
         "form-stem-present": "cili",
         "form-stem-perfect": "ciliat",
@@ -1071,14 +1033,12 @@
         "origin": "latin",
         "notes": "reconcile vs conciliate"
     }, {
-        "key": "citare",
-        "form-stem-present": "cit",
-        "form-stem-perfect": "citat",
-        "form-final": "cite",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "summon",
-        "tags": ["transitive", "motion"],
+        "key": "ciner",
+        "form-stem": "ciner",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "ashes",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     }, {
         "key": "circus",
@@ -1087,6 +1047,16 @@
         "declension": 2,
         "gloss": "circle",
         "tags": ["count", "abstract", "shape"],
+        "origin": "latin"
+    }, {
+        "key": "citare",
+        "form-stem-present": "cit",
+        "form-stem-perfect": "citat",
+        "form-final": "cite",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "summon",
+        "tags": ["transitive", "motion"],
         "origin": "latin"
     }, {
         "key": "civilis",
@@ -1191,6 +1161,14 @@
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "latin"
     }, {
+        "key": "columna",
+        "form-stem": "column",
+        "type": "noun",
+        "declension": 1,
+        "gloss": "column",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    }, {
         "key": "communis",
         "form-stem": "commun",
         "type": "adj",
@@ -1216,14 +1194,6 @@
         "tags": ["transitive", "motion"],
         "origin": "latin"
     }, {
-        "key": "conus",
-        "form-stem": "con",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "cone",
-        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
-        "origin": "latin"
-    }, {
         "key": "consolari",
         "form-stem-present": "consol",
         "form-stem-perfect": "consolat",
@@ -1232,6 +1202,14 @@
         "conjugation": 1,
         "gloss": "console",
         "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    }, {
+        "key": "conus",
+        "form-stem": "con",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "cone",
+        "tags": ["count", "concrete", "bodypart", "bodypart-plant"],
         "origin": "latin"
     }, {
         "key": "copia",
@@ -1277,12 +1255,27 @@
         "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     }, {
+        "key": "cortex",
+        "form-stem": "cortic",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "tree [bark]",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    }, {
         "key": "corvus",
         "form-stem": "corv",
         "type": "noun",
         "declension": 2,
         "gloss": "crow",
         "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
+    }, {
+        "key": "crassa",
+        "form-stem": "crass",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "thick",
         "origin": "latin"
     }, {
         "key": "credere",
@@ -1313,6 +1306,13 @@
         "conjugation": 3,
         "gloss": "grow",
         "tags": ["transitive"],
+        "origin": "latin"
+    }, {
+        "key": "crispa",
+        "form-stem": "crisp",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "curly",
         "origin": "latin"
     }, {
         "key": "cruciare",
@@ -1433,40 +1433,6 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
-        "key": "deminuere",
-        "form-stem-present": "diminu",
-        "form-stem-perfect": "diminut",
-        "form-final": "diminish",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "diminish",
-        "tags": ["transitive", "no-prep"],
-        "origin": "latin"
-    }, {
-        "key": "deus",
-        "form-stem": "de",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "god",
-        "tags": ["count", "concrete", "person"],
-        "origin": "latin"
-    }, {
-        "key": "dens",
-        "form-stem": "dent",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "tooth",
-        "tags": ["count", "concrete", "bodypart"],
-        "origin": "latin"
-    }, {
-        "key": "dermis",
-        "form-stem": "derm",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "skin",
-        "tags": ["mass", "concrete", "bodypart"],
-        "origin": "latin"
-    }, {
         "key": "debere",
         "form-stem-present": "deb",
         "form-stem-perfect": "debit",
@@ -1522,6 +1488,40 @@
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
     }, {
+        "key": "deminuere",
+        "form-stem-present": "diminu",
+        "form-stem-perfect": "diminut",
+        "form-final": "diminish",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "diminish",
+        "tags": ["transitive", "no-prep"],
+        "origin": "latin"
+    }, {
+        "key": "dens",
+        "form-stem": "dent",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "tooth",
+        "tags": ["count", "concrete", "bodypart"],
+        "origin": "latin"
+    }, {
+        "key": "dermis",
+        "form-stem": "derm",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "skin",
+        "tags": ["mass", "concrete", "bodypart"],
+        "origin": "latin"
+    }, {
+        "key": "deus",
+        "form-stem": "de",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "god",
+        "tags": ["count", "concrete", "person"],
+        "origin": "latin"
+    }, {
         "key": "dicere",
         "form-stem-present": "dic",
         "form-stem-perfect": "dict",
@@ -1571,16 +1571,6 @@
         "gloss": "diverse",
         "origin": "latin"
     }, {
-        "key": "divinare",
-        "form-stem-present": "divin",
-        "form-stem-perfect": "divinat",
-        "form-final": "divine",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "foresee",
-        "tags": ["transitive"],
-        "origin": "latin"
-    }, {
         "key": "dividere",
         "form-stem-present": "divid",
         "form-stem-perfect": "divis",
@@ -1596,6 +1586,16 @@
         "type": "adj",
         "declension": 12,
         "gloss": "divine",
+        "origin": "latin"
+    }, {
+        "key": "divinare",
+        "form-stem-present": "divin",
+        "form-stem-perfect": "divinat",
+        "form-final": "divine",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "foresee",
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "docere",
@@ -1824,14 +1824,6 @@
         "gloss": "precise",
         "origin": "latin"
     }, {
-        "key": "exemplum",
-        "form-stem": "exempl",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "example",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    }, {
         "key": "excellere",
         "form-stem-present": "excell",
         "form-stem-perfect": "excels",
@@ -1840,6 +1832,14 @@
         "conjugation": 3,
         "gloss": "[rise] high",
         "tags": ["intransitive", "no-prep"],
+        "origin": "latin"
+    }, {
+        "key": "exemplum",
+        "form-stem": "exempl",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "example",
+        "tags": ["count", "abstract"],
         "origin": "latin"
     }, {
         "key": "experiri",
@@ -1907,15 +1907,6 @@
         "gloss": "easy",
         "origin": "latin"
     }, {
-        "key": "falx",
-        "form-stem": "falc",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "sickle",
-        "gloss-tool": "reap",
-        "tags": ["count", "concrete", "tool"],
-        "origin": "latin"
-    }, {
         "key": "fallere",
         "form-stem-present": "fall",
         "form-stem-perfect": "fals",
@@ -1932,6 +1923,15 @@
         "type": "adj",
         "declension": 12,
         "gloss": "false",
+        "origin": "latin"
+    }, {
+        "key": "falx",
+        "form-stem": "falc",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "sickle",
+        "gloss-tool": "reap",
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     }, {
         "key": "fama",
@@ -2069,20 +2069,20 @@
         "origin": "latin",
         "notes": "Consider 'fer' or 'late' for verb"
     }, {
-        "key": "ferrum",
-        "form-stem": "ferr",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "iron",
-        "tags": ["mass", "concrete", "material", "metal"],
-        "origin": "latin"
-    }, {
         "key": "ferrugo",
         "form-stem": "ferrugin",
         "type": "noun",
         "declension": 3,
         "gloss": "rust",
         "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    }, {
+        "key": "ferrum",
+        "form-stem": "ferr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "iron",
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "latin"
     }, {
         "key": "fertilis",
@@ -2246,16 +2246,6 @@
         "tags": ["count", "concrete", "living", "bodypart", "bodypart-plant"],
         "origin": "latin"
     }, {
-        "key": "fluere",
-        "form-stem-present": "flu",
-        "form-stem-perfect": "fluct",
-        "form-final": "fluct",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "flow",
-        "tags": ["intransitive", "motion"],
-        "origin": "latin"
-    }, {
         "key": "fluctuare",
         "form-stem-present": "fluctu",
         "form-stem-perfect": "fluctuat",
@@ -2272,6 +2262,16 @@
         "declension": 4,
         "gloss": "wave",
         "tags": ["count", "concrete"],
+        "origin": "latin"
+    }, {
+        "key": "fluere",
+        "form-stem-present": "flu",
+        "form-stem-perfect": "fluct",
+        "form-final": "fluct",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "flow",
+        "tags": ["intransitive", "motion"],
         "origin": "latin"
     }, {
         "key": "fluvius",
@@ -2514,6 +2514,14 @@
         "origin": "latin",
         "notes": "final is a guess"
     }, {
+        "key": "geminus",
+        "form-stem": "gemin",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "twin",
+        "tags": ["count", "concrete", "living", "person"],
+        "origin": "latin"
+    }, {
         "key": "gemma",
         "form-stem": "gemm",
         "type": "noun",
@@ -2522,12 +2530,14 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
-        "key": "geminus",
-        "form-stem": "gemin",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "twin",
-        "tags": ["count", "concrete", "living", "person"],
+        "key": "generare",
+        "form-stem-present": "gener",
+        "form-stem-perfect": "generat",
+        "form-final": "generate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "beget",
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "generosa",
@@ -2551,16 +2561,6 @@
         "declension": 3,
         "gloss": "kind",
         "tags": ["count", "abstract"],
-        "origin": "latin"
-    }, {
-        "key": "generare",
-        "form-stem-present": "gener",
-        "form-stem-perfect": "generat",
-        "form-final": "generate",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "beget",
-        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "gerere",
@@ -2716,16 +2716,6 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
-        "key": "habitare",
-        "form-stem-present": "habit",
-        "form-stem-perfect": "habitat",
-        "form-final": "habit",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "dwell",
-        "tags": ["transitive"],
-        "origin": "latin"
-    }, {
         "key": "habere",
         "form-stem-present": "hab",
         "form-stem-perfect": "habit",
@@ -2746,6 +2736,16 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": ""
+    }, {
+        "key": "habitare",
+        "form-stem-present": "habit",
+        "form-stem-perfect": "habitat",
+        "form-final": "habit",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "dwell",
+        "tags": ["transitive"],
+        "origin": "latin"
     }, {
         "key": "habituare",
         "form-stem-present": "habitu",
@@ -3064,6 +3064,25 @@
         "tags": ["intransitive", "motion", "always-prep"],
         "origin": "latin"
     }, {
+        "key": "jacere",
+        "form-stem-present": "jac",
+        "form-stem-perfect": "jact",
+        "form-final": "jact",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "throw",
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-type": "prep"
+                }
+            },
+            "form-stem-perfect": "ject",
+            "form-final": "ject"
+        }],
+        "tags": ["transitive", "motion"],
+        "origin": "latin"
+    }, {
         "key": "joculare",
         "form-stem-present": "jocul",
         "form-stem-perfect": "joculat",
@@ -3082,25 +3101,6 @@
         "conjugation": 1,
         "gloss": "[shout] for joy",
         "tags": ["intransitive", "no-prep"],
-        "origin": "latin"
-    }, {
-        "key": "jacere",
-        "form-stem-present": "jac",
-        "form-stem-perfect": "jact",
-        "form-final": "jact",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "throw",
-        "exception": [{
-            "case": {
-                "follows": {
-                    "has-type": "prep"
-                }
-            },
-            "form-stem-perfect": "ject",
-            "form-final": "ject"
-        }],
-        "tags": ["transitive", "motion"],
         "origin": "latin"
     }, {
         "key": "judex",
@@ -3231,6 +3231,17 @@
         "gloss": "[tear] to pieces",
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
+    }, {
+        "key": "lacere",
+        "form-stem-present": "lic",
+        "form-stem-perfect": "licit",
+        "form-final": "licit",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "lure",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "relation to licere unclear"
     }, {
         "key": "lachryma",
         "form-stem": "lachrym",
@@ -3410,43 +3421,6 @@
         "origin": "latin",
         "notes": "no prep just 'cause only re- seems at all ok. Figure out later"
     }, {
-        "key": "limpida",
-        "form-stem": "limpid",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "[clear] or [transparent]",
-        "origin": "latin"
-    }, {
-        "key": "linere",
-        "form-stem-present": "lin",
-        "form-stem-perfect": "lit",
-        "form-final": "line",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "smear",
-        "tags": ["transitive"],
-        "origin": "latin"
-    }, {
-        "key": "liquere",
-        "form-stem-present": "liqu",
-        "form-final": "lique",
-        "type": "verb",
-        "conjugation": 2,
-        "gloss": "[be] fluid",
-        "gloss-state": "fluid",
-        "tags": ["intransitive", "stative", "no-prep"],
-        "origin": "latin",
-        "notes": "If I find a way to make it gloss as 'melt' with 'esce', allow preps"
-    }, {
-        "key": "lumen",
-        "form-stem": "lumin",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "lamp",
-        "gloss-tool": "[light] up",
-        "tags": ["count", "concrete", "tool"],
-        "origin": "latin"
-    }, {
         "key": "legare",
         "form-stem-present": "leg",
         "form-stem-perfect": "legat",
@@ -3540,17 +3514,6 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
-        "key": "lacere",
-        "form-stem-present": "lic",
-        "form-stem-perfect": "licit",
-        "form-final": "licit",
-        "type": "verb",
-        "conjugation": 3,
-        "gloss": "lure",
-        "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "relation to licere unclear"
-    }, {
         "key": "ligare",
         "form-stem-present": "lig",
         "form-stem-perfect": "ligat",
@@ -3603,12 +3566,29 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
+        "key": "limpida",
+        "form-stem": "limpid",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "[clear] or [transparent]",
+        "origin": "latin"
+    }, {
         "key": "linea",
         "form-stem": "line",
         "type": "noun",
         "declension": 1,
         "gloss": "line",
         "tags": ["count", "abstract", "shape"],
+        "origin": "latin"
+    }, {
+        "key": "linere",
+        "form-stem-present": "lin",
+        "form-stem-perfect": "lit",
+        "form-final": "line",
+        "type": "verb",
+        "conjugation": 3,
+        "gloss": "smear",
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "lingua",
@@ -3630,6 +3610,17 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "this produces lictor with wrong def. Same form as ligere-from-ligare. Divide later."
+    }, {
+        "key": "liquere",
+        "form-stem-present": "liqu",
+        "form-final": "lique",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "[be] fluid",
+        "gloss-state": "fluid",
+        "tags": ["intransitive", "stative", "no-prep"],
+        "origin": "latin",
+        "notes": "If I find a way to make it gloss as 'melt' with 'esce', allow preps"
     }, {
         "key": "littera",
         "form-stem": "liter",
@@ -3717,6 +3708,15 @@
         "conjugation": 3,
         "gloss": "play",
         "tags": ["intransitive"],
+        "origin": "latin"
+    }, {
+        "key": "lumen",
+        "form-stem": "lumin",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "lamp",
+        "gloss-tool": "[light] up",
+        "tags": ["count", "concrete", "tool"],
         "origin": "latin"
     }, {
         "key": "luna",
@@ -3977,14 +3977,6 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
-        "key": "mensus",
-        "form-stem": "mensur",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "measure",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    }, {
         "key": "mensurare",
         "form-stem-present": "mensur",
         "form-stem-perfect": "mensurat",
@@ -3995,6 +3987,14 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
+        "key": "mensus",
+        "form-stem": "mensur",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "measure",
+        "tags": ["count", "abstract"],
+        "origin": "latin"
+    }, {
         "key": "merda",
         "form-stem": "merd",
         "type": "noun",
@@ -4002,6 +4002,17 @@
         "gloss": "dung",
         "tags": ["mass", "concrete"],
         "origin": "latin"
+    }, {
+        "key": "merere",
+        "form-stem-present": "mer",
+        "form-stem-perfect": "merit",
+        "form-final": "merit",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "deserve",
+        "tags": ["transitive"],
+        "origin": "latin",
+        "notes": "compare meretrix"
     }, {
         "key": "mergere",
         "form-stem-present": "merg",
@@ -4022,17 +4033,6 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "immerse vs submerge? Chose merse because merge might be a separate word"
-    }, {
-        "key": "merere",
-        "form-stem-present": "mer",
-        "form-stem-perfect": "merit",
-        "form-final": "merit",
-        "type": "verb",
-        "conjugation": 2,
-        "gloss": "deserve",
-        "tags": ["transitive"],
-        "origin": "latin",
-        "notes": "compare meretrix"
     }, {
         "key": "metallum",
         "form-stem": "metall",
@@ -4096,6 +4096,23 @@
         "tags": ["intransitive"],
         "origin": "latin"
     }, {
+        "key": "miscere",
+        "form-stem-present": "misc",
+        "form-stem-perfect": "mixt",
+        "form-final": "mix",
+        "type": "verb",
+        "conjugation": 2,
+        "gloss": "mix",
+        "tags": ["transitive", "joining"],
+        "origin": "latin"
+    }, {
+        "key": "miser",
+        "form-stem": "miser",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "miserable",
+        "origin": "latin"
+    }, {
         "key": "mittere",
         "form-stem-present": "mitt",
         "form-stem-perfect": "miss",
@@ -4115,23 +4132,6 @@
         "tags": ["transitive", "motion"],
         "origin": "latin",
         "notes": "Verb form: transmit vs dismiss"
-    }, {
-        "key": "miscere",
-        "form-stem-present": "misc",
-        "form-stem-perfect": "mixt",
-        "form-final": "mix",
-        "type": "verb",
-        "conjugation": 2,
-        "gloss": "mix",
-        "tags": ["transitive", "joining"],
-        "origin": "latin"
-    }, {
-        "key": "miser",
-        "form-stem": "miser",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "miserable",
-        "origin": "latin"
     }, {
         "key": "modus",
         "form-stem": "mod",
@@ -4166,14 +4166,6 @@
         "gloss": "soft",
         "origin": "latin"
     }, {
-        "key": "monstrum",
-        "form-stem": "monstr",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "monster",
-        "tags": ["count", "concrete", "living", "animal"],
-        "origin": "latin"
-    }, {
         "key": "monstrare",
         "form-stem-present": "monstr",
         "form-stem-perfect": "monstrat",
@@ -4184,6 +4176,14 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "consider changing root to 'demonstrare'"
+    }, {
+        "key": "monstrum",
+        "form-stem": "monstr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "monster",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "latin"
     }, {
         "key": "morbus",
         "form-stem": "morb",
@@ -4257,19 +4257,19 @@
         "tags": ["intransitive"],
         "origin": "latin"
     }, {
+        "key": "multa",
+        "form-stem": "mult",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "many",
+        "origin": "latin"
+    }, {
         "key": "muscus",
         "form-stem": "musc",
         "type": "noun",
         "declension": 2,
         "gloss": "moss",
         "tags": ["mass", "concrete", "living", "plant"],
-        "origin": "latin"
-    }, {
-        "key": "multa",
-        "form-stem": "mult",
-        "type": "adj",
-        "declension": 12,
-        "gloss": "many",
         "origin": "latin"
     }, {
         "key": "mutare",
@@ -4709,20 +4709,20 @@
         "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
-        "key": "os-mouth",
-        "form-stem": "or",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "mouth",
-        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
-        "origin": "latin"
-    }, {
         "key": "os-bone",
         "form-stem": "oss",
         "type": "noun",
         "declension": 3,
         "gloss": "bone",
         "tags": ["count", "concrete", "bodypart", "material"],
+        "origin": "latin"
+    }, {
+        "key": "os-mouth",
+        "form-stem": "or",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "mouth",
+        "tags": ["count", "concrete", "bodypart", "bodypart-single"],
         "origin": "latin"
     }, {
         "key": "os-remains",
@@ -4792,6 +4792,16 @@
         "tags": ["count", "concrete", "living", "plant"],
         "origin": "latin"
     }, {
+        "key": "palpitare",
+        "form-stem-present": "palpit",
+        "form-stem-perfect": "palpitat",
+        "form-final": "palpitate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "throb",
+        "tags": ["intransitive"],
+        "origin": "latin"
+    }, {
         "key": "palustris",
         "form-stem": "palustr",
         "type": "noun",
@@ -4831,16 +4841,6 @@
         "origin": "latin",
         "notes": "compact vs impinge. Went with pact as it's also in impact"
     }, {
-        "key": "palpitare",
-        "form-stem-present": "palpit",
-        "form-stem-perfect": "palpitat",
-        "form-final": "palpitate",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "throb",
-        "tags": ["intransitive"],
-        "origin": "latin"
-    }, {
         "key": "panis",
         "form-stem": "pan",
         "type": "noun",
@@ -4870,6 +4870,14 @@
         "origin": "latin",
         "notes": "treating as intransitive because transitivite requires a 'to' at the end of the gloss"
     }, {
+        "key": "pars",
+        "form-stem": "part",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "part",
+        "tags": ["count", "concrete"],
+        "origin": "latin"
+    }, {
         "key": "partiri",
         "form-stem-present": "part",
         "form-stem-perfect": "partit",
@@ -4878,14 +4886,6 @@
         "conjugation": 4,
         "gloss": "divide",
         "tags": ["transitive", "dividing"],
-        "origin": "latin"
-    }, {
-        "key": "pars",
-        "form-stem": "part",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "part",
-        "tags": ["count", "concrete"],
         "origin": "latin"
     }, {
         "key": "parv",
@@ -5105,6 +5105,14 @@
         "tags": ["mass", "abstract", "living", "time", "bounded"],
         "origin": "latin"
     }, {
+        "key": "peter",
+        "form-stem": "petr",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "stone",
+        "tags": ["count", "concrete", "material"],
+        "origin": "latin"
+    }, {
         "key": "petere",
         "form-stem-present": "pet",
         "form-stem-perfect": "petit",
@@ -5115,14 +5123,6 @@
         "tags": ["transitive"],
         "origin": "latin",
         "notes": "present - compete vs petulant"
-    }, {
-        "key": "peter",
-        "form-stem": "petr",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "stone",
-        "tags": ["count", "concrete", "material"],
-        "origin": "latin"
     }, {
         "key": "phantasma",
         "form-stem": "phantasm",
@@ -5355,16 +5355,6 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
-        "key": "praedari",
-        "form-stem-present": "pred",
-        "form-stem-perfect": "predat",
-        "form-final": "predate",
-        "type": "verb",
-        "conjugation": 1,
-        "gloss": "rob",
-        "tags": ["transitive"],
-        "origin": "latin"
-    }, {
         "key": "practicare",
         "form-stem-present": "practic",
         "form-stem-perfect": "practit",
@@ -5382,6 +5372,16 @@
         "declension": 2,
         "gloss": "practice",
         "tags": ["mass", "abstract"],
+        "origin": "latin"
+    }, {
+        "key": "praedari",
+        "form-stem-present": "pred",
+        "form-stem-perfect": "predat",
+        "form-final": "predate",
+        "type": "verb",
+        "conjugation": 1,
+        "gloss": "rob",
+        "tags": ["transitive"],
         "origin": "latin"
     }, {
         "key": "prehendere",
@@ -5796,6 +5796,14 @@
         "tags": ["intransitive"],
         "origin": "latin"
     }, {
+        "key": "robigo",
+        "form-stem": ["robigin", "rubigin"],
+        "type": "noun",
+        "declension": 3,
+        "gloss": "rust",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "latin"
+    }, {
         "key": "roborare",
         "form-stem-present": "robor",
         "form-stem-perfect": "roborat",
@@ -5824,14 +5832,6 @@
         "conjugation": 1,
         "gloss": "ask",
         "tags": ["transitive"],
-        "origin": "latin"
-    }, {
-        "key": "robigo",
-        "form-stem": ["robigin", "rubigin"],
-        "type": "noun",
-        "declension": 3,
-        "gloss": "rust",
-        "tags": ["mass", "concrete", "material"],
         "origin": "latin"
     }, {
         "key": "rubra",
@@ -6614,14 +6614,6 @@
         "tags": ["transitive"],
         "origin": "latin"
     }, {
-        "key": "tempus",
-        "form-stem": "tempor",
-        "type": "noun",
-        "declension": 3,
-        "gloss": "time",
-        "tags": ["mass", "abstract", "time", "bounded"],
-        "origin": "latin"
-    }, {
         "key": "temptare",
         "form-stem-present": "tempt",
         "form-stem-perfect": "temptat",
@@ -6631,6 +6623,14 @@
         "gloss": "tempt",
         "gloss-relative": "try",
         "tags": ["transitive"],
+        "origin": "latin"
+    }, {
+        "key": "tempus",
+        "form-stem": "tempor",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "time",
+        "tags": ["mass", "abstract", "time", "bounded"],
         "origin": "latin"
     }, {
         "key": "tendere",
@@ -6997,14 +6997,6 @@
         "tags": ["intransitive", "motion"],
         "origin": "latin"
     }, {
-        "key": "verbum",
-        "form-stem": "verb",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "word",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    }, {
         "key": "verberare",
         "form-stem-present": "verber",
         "form-stem-perfect": "verberat",
@@ -7013,6 +7005,14 @@
         "conjugation": 1,
         "gloss": "beat",
         "tags": ["transitive"],
+        "origin": "latin"
+    }, {
+        "key": "verbum",
+        "form-stem": "verb",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "word",
+        "tags": ["count", "abstract"],
         "origin": "latin"
     }, {
         "key": "vermis",
@@ -7162,20 +7162,20 @@
         "tags": ["count", "concrete", "living", "person"],
         "origin": "latin"
     }, {
-        "key": "virus",
-        "form-stem": "vir",
-        "type": "noun",
-        "declension": 2,
-        "gloss": "venom",
-        "tags": ["mass", "concrete"],
-        "origin": "latin"
-    }, {
         "key": "virtus",
         "form-stem": "virtu",
         "type": "noun",
         "declension": 3,
         "gloss": "virtue",
         "tags": ["count", "abstract"],
+        "origin": "latin"
+    }, {
+        "key": "virus",
+        "form-stem": "vir",
+        "type": "noun",
+        "declension": 2,
+        "gloss": "venom",
+        "tags": ["mass", "concrete"],
         "origin": "latin"
     }, {
         "key": "vitis",
