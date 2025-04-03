@@ -6,11 +6,6 @@ import morphs_format as format
 
 def modify(morph):
     # Write code to modify the morph here, returning the new version
-    options = ["count", "mass", "singleton", "uncountable"]
-    for option in options:
-        if "tags" in morph and option in morph["tags"]:
-            morph["noun-countability"] = option
-            morph["tags"].remove(option)
     return morph
 
 # Write groups to the specified filenames

@@ -4,8 +4,8 @@ import sys
 
 from collections import OrderedDict
 
-import alphabetical
-import morphs_files as file_tool
+import src.tools.morphs.alphabetical
+import src.tools.morphs.morphs_files as file_tool
 
 indent_spaces = 4
 
@@ -31,6 +31,7 @@ def ordered_morph(morph, meta_properties):
 def format(obj, indent=0, tag_stack=[]):
     formatted = ""
 
+    # Format a list
     if isinstance(obj, list):
         one_item = len(obj) == 1
 
@@ -67,6 +68,7 @@ def format(obj, indent=0, tag_stack=[]):
 
         formatted += "]"
 
+    # Format a dictionaryu
     elif isinstance(obj, dict):
         keys = list(obj.keys())
         should_indent = should_indent_dict(obj, tag_stack)
@@ -174,51 +176,17 @@ def should_format(element, key, tag_stack):
 
     return True
 
-# Loads morph format metadata
-def load_metadata():
-    meta = {}
-    with open("./data/meta/morph-properties.json") as prop_data:
-        jdata = json.load(prop_data)
-        meta["properties"] = [m[0] for m in jdata]
-
-    return meta
-
-# Formats contents of specified files
-if __name__ == '__main__':
-    # Read args
-    try:
-        opts, params = getopt.getopt(sys.argv[1:], "rs", ["replace", "sort"])
-    except getopt.GetoptError:
-        print('getopt error')
-        sys.exit(2)
-
-    replace = False
-    should_sort = False
-    files = []
-
-    # Process args
-    for opt, arg in opts:
-        if opt in ["-r", "--replace"]:
-            replace = True
-        elif opt in ["-s", "--sort"]:
-            should_sort = True
-
-    if len(params) > 1 and not replace:
-        print("ERROR: morph format can only take one file argument for stdout")
-        sys.exit(0)
-
-    files = params
+# Format the given morph files, with the given metadata and options
+def format_morphs(files, meta_dir, test):
+    # Read metadata
+    meta = file_tool.load_metadata(meta_dir)
 
     for file in files:
-        # Read metadata
-        meta = load_metadata()
-
         # Read in morphs
         morphs = file_tool.get_morphs_from(file)
 
-        # Sort if requested
-        if should_sort:
-            morphs = sort(morphs)
+        # Sort morphs
+        morphs = sort(morphs)
 
         # Order morph properties
         morphs = [ordered_morph(m, meta["properties"]) for m in morphs]
@@ -227,7 +195,7 @@ if __name__ == '__main__':
         formatted = format(morphs)
 
         # Output
-        if replace:
-            file_tool.write_formatted_to(formatted, file)
-        else:
+        if test:
             print(formatted)
+        else:
+            file_tool.write_formatted_to(formatted, file)

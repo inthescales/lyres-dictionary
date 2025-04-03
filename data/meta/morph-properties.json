@@ -16,7 +16,6 @@
     ["form-assimilation",          "Assimilation rules"],
     ["type"],
     ["declension",                 "Noun declension (used in Latin)"],
-    ["noun-countability",          "Noun countability (options: count, mass, singleton, uncountable)"],
     ["conjugation",                "Verb conjugation (used in Latin)"],
     ["verb-class",                 "Verb class (used in Old English)"],
     ["prefix-on",                  "Preposition / Prefixdetermines what root types this can be prefixed to"],
