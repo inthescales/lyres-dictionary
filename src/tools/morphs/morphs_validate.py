@@ -1,4 +1,4 @@
-from src.utils.logging import Logger
+import src.tools.morphs.morphs_files as file_tool
 
 valid_tags = [
     "count",                    # Noun countability - countable
@@ -225,7 +225,7 @@ def validate_morph(morph, meta_properties):
             { "key": "prefix-on", "values": { "one-or-many": root_types }  },
         ]
     }
-    if morph["type"] in type_requirements:
+    if "type" in morph and morph["type"] in type_requirements:
         valid = valid and evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
 
     # Properties required by morphs of a certain type and origin
@@ -285,7 +285,8 @@ def validate_morph(morph, meta_properties):
         }
     }
 
-    if morph["origin"] in origin_type_requirements and morph["type"] in origin_type_requirements[morph["origin"]]:
+    if "origin" in morph and morph["origin"] in origin_type_requirements \
+        and "type" in morph and morph["type"] in origin_type_requirements[morph["origin"]]:
         valid = valid and evaluate_requirements(origin_type_requirements[morph["origin"]][morph["type"]], morph, " ".join(morph["origin"].split("-")) + " " + morph["type"])
 
     # Check key whitelist
@@ -303,11 +304,30 @@ def validate_morph(morph, meta_properties):
 
     if len(errors) > 0:
         if "key" in morph:
-            Logger.warn(str(len(errors)) + " errors found reading morph '" + morph["key"] + "'")
+            print(str(len(errors)) + " errors found reading morph '" + morph["key"] + "'")
         else:
-            Logger.warn(str(len(errors)) + " errors found reading morph without key: " + str(morph))
+            print(str(len(errors)) + " errors found reading morph without key: " + str(morph))
 
         for error in errors:
-            Logger.warn(" - " + error)
+            print(" - " + error)
 
     return valid
+
+def validate_morphs(files, meta_dir):
+    # Read in metadata
+    meta = file_tool.load_metadata(meta_dir)
+
+    # Read in morphs
+    morphs = []
+    for file in files:
+        morphs += file_tool.get_morphs_from(file)
+
+    fail_count = 0
+    for morph in morphs:
+        if not validate_morph(morph, meta["properties"]):
+            fail_count += 1
+
+    if fail_count == 0:
+        print("Validation succeeded")
+    else:
+        print("Validation failed on " + str(fail_count) + " morphs")

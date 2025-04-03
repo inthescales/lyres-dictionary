@@ -3,11 +3,8 @@ import os
 import sys
 
 from src.tools.morphs.morphs_format import format_morphs
+from src.tools.morphs.morphs_validate import validate_morphs
 import src.tools.morphs.morphs_files as file_tool
-
-commands = {
-    "format": ["", "[-r (replace)] [-s (sort)] [files]"]
-}
 
 data_dir = "./data"
 meta_dir = "./data/meta"
@@ -15,17 +12,9 @@ meta_dir = "./data/meta"
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     
-    command_name = sys.argv[1]
+    command = sys.argv[1]
 
-    if command_name not in commands:
-        print("ERROR: command '" + command + "' not recognized. Available commands are:")
-        for key, value in commands.items():
-            print(" - " + key + " " + value[1])
-        exit(1)
-
-    command = commands[command_name]
-
-    if command_name == "format":
+    if command == "format":
         try:
             opts, params = getopt.getopt(sys.argv[2:], "t", ["test"])
         except getopt.GetoptError:
@@ -52,3 +41,18 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             files = params
 
         format_morphs(files, meta_dir, test_mode)
+
+    elif command == "validate":
+        params = sys.argv[2:]
+
+        if len(params) == 0:
+            morphs_files = file_tool.all_morph_files(data_dir)
+            print("Validating " + str(len(morphs_files)) + " files")
+        else:
+            print("Validating " + str(len(params)) + " files")
+            morphs_files = params
+
+        validate_morphs(morphs_files, meta_dir)
+
+    else:
+        print("Command '" + command + "' not recognized. Available commands: format, validate")

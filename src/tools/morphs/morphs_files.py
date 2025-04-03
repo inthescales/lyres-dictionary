@@ -16,7 +16,7 @@ def load_metadata(root):
 # Returns all morph files in the given root data directory
 def all_morph_files(root_dir):
     all_files = os.listdir("./" + root_dir)
-    return [root_dir + file for file in all_files if file.startswith("morphs-") and file.endswith(".json")]
+    return [root_dir + "/" + file for file in all_files if file.startswith("morphs-") and file.endswith(".json")]
 
 # Returns a list of morphs from the file
 def get_morphs_from(file):
