@@ -8,8 +8,6 @@ import src.tools.tablemaker.combination_table as combination_table
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     
-    list_root = "assets/word_lists/"
-    
     mode = None
     list_path = None
 
@@ -46,7 +44,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         if list_path == None:
             error_no_list()
         
-        path = list_root + list_path
+        path = list_path
         if len(list_path) < 4 or list_path[-4:] != ".csv":
             path += ".csv"
 
