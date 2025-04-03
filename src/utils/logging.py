@@ -68,7 +68,8 @@ class Logger:
         Logger.log(1, "ERROR: " + message)
 
         if halt_threshold == "error":
-            raise Exception("halting on error")
+            print("")
+            exit(1)
 
     @staticmethod
     def trace(message):
