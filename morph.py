@@ -6,6 +6,8 @@ from src.tools.morphs.morphs_format import format_morphs
 from src.tools.morphs.morphs_validate import validate_morphs
 from src.tools.morphs.morphs_modify import modify_morphs
 from src.tools.morphs.morphs_merge import merge_morphs
+from src.tools.morphs.morphs_search import search_morphs
+
 import src.tools.morphs.morphs_files as file_tool
 
 data_dir = "./data"
@@ -67,6 +69,36 @@ def command_merge(args):
 
     merge_morphs(morphs_files)
 
+def command_search(args):
+    try:
+        opts, params = getopt.getopt(args, "cl", ["count", "list"])
+    except getopt.GetoptError:
+        print('ERROR: getopt error')
+        sys.exit(2)
+
+    task = None
+    files = []
+
+    # Process args
+    for opt, arg in opts:
+        if opt in ["-c", "--count"]:
+            task = "count"
+        elif opt in ["-l", "--list"]:
+            task = "list"
+
+    if task == None:
+        print("ERROR: must specify task. Available tasks: count, list")
+        sys.exit(0)
+
+    if len(params) == 0:
+        files = file_tool.all_morph_files(data_dir)
+        print("Searching " + str(len(files)) + " files")
+    else:
+        print("Searching " + str(len(params)) + " files")
+        files = params
+
+    search_morphs(files, task)
+
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     
@@ -81,5 +113,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         command_modify(args)
     elif command == "merge":
         command_merge(args)
+    elif command == "search":
+        command_search(args)
     else:
         print("Command '" + command + "' not recognized. Available commands: format, validate")
