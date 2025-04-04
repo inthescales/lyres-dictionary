@@ -7,6 +7,7 @@ from src.tools.morphs.morphs_validate import validate_morphs
 from src.tools.morphs.morphs_modify import modify_morphs
 from src.tools.morphs.morphs_merge import merge_morphs
 from src.tools.morphs.morphs_search import search_morphs
+from src.tools.morphs.morphs_split import split_morphs
 
 import src.tools.morphs.morphs_files as file_tool
 
@@ -99,6 +100,16 @@ def command_search(args):
 
     search_morphs(files, task)
 
+def command_split(args):
+    if len(args) != 1:
+        # TODO: Consider making it possible to split and re-group multiple files
+        print("ERROR: must split exactly 1 file")
+        sys.exit(0)
+    else:
+        file = args[0]
+
+    split_morphs(file)
+
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     
@@ -115,5 +126,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         command_merge(args)
     elif command == "search":
         command_search(args)
+    elif command == "split":
+        command_split(args)
     else:
         print("Command '" + command + "' not recognized. Available commands: format, validate")

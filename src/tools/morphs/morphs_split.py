@@ -1,8 +1,7 @@
-import getopt
 import sys
 
-import morphs_files as file_tool
-import morphs_format as format
+import src.tools.morphs.morphs_files as file_tool
+import src.tools.morphs.morphs_format as morphs_format
 
 # Filenames for the new split files
 # The indices should match the groups used below in get_group(...)
@@ -37,25 +36,16 @@ def write(groups, filenames):
         morphs = groups[i]
 
         if len(morphs) > 0:
-            asorted = format.sort(morphs)
-            formatted = format.format(asorted)
+            asorted = morphs_format.sort(morphs)
+            formatted = morphs_format.format(asorted)
             file_tool.write_formatted_to(formatted, filenames[i])
 
-if __name__ == '__main__':
-    # Read args
-    try:
-        opts, params = getopt.getopt(sys.argv[1:], "", [])
-    except getopt.GetoptError:
-        print('ERROR: getopt error')
-        sys.exit(2)
-
-    file = params[0]
-
+def split_morphs(file):
     # Read in morphs
     morphs = file_tool.get_morphs_from(file)
 
     # Divide into groups
     groups = group(morphs)
-
+    
     # Write to output files
-    write(groups, filenames)
+    #write(groups, filenames)
