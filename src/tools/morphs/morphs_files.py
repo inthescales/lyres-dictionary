@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 
 # Returns a metadata dictionary from the given file root
 # Properties:

@@ -5,6 +5,7 @@ import sys
 from src.tools.morphs.morphs_format import format_morphs
 from src.tools.morphs.morphs_validate import validate_morphs
 from src.tools.morphs.morphs_modify import modify_morphs
+from src.tools.morphs.morphs_merge import merge_morphs
 import src.tools.morphs.morphs_files as file_tool
 
 data_dir = "./data"
@@ -58,6 +59,14 @@ def command_modify(args):
 
     modify_morphs(morphs_files)
 
+def command_merge(args):
+    if len(args) < 2:
+        print("ERROR: must merge at least 2 morph files")
+    else:
+        morphs_files = args
+
+    merge_morphs(morphs_files)
+
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     
@@ -70,5 +79,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         command_validate(args)
     elif command == "modify":
         command_modify(args)
+    elif command == "merge":
+        command_merge(args)
     else:
         print("Command '" + command + "' not recognized. Available commands: format, validate")
