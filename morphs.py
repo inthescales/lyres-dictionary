@@ -72,24 +72,33 @@ def command_merge(args):
 
 def command_search(args):
     try:
-        opts, params = getopt.getopt(args, "cl", ["count", "list"])
+        opts, params = getopt.getopt(args, "e:hcl", ["expression", "hard", "count", "list"])
     except getopt.GetoptError:
         print('ERROR: getopt error')
         sys.exit(2)
 
-    task = None
+    expression = None
+    hard_mode = False
+    output_type = None
     files = []
 
     # Process args
     for opt, arg in opts:
-        if opt in ["-c", "--count"]:
-            task = "count"
+        if opt in ["-e", "--expression"]:
+            expression = arg
+        elif opt in ["-h", "--hard"]:
+            hard_mode = True
+        elif opt in ["-c", "--count"]:
+            output_type = "count"
         elif opt in ["-l", "--list"]:
-            task = "list"
+            output_type = "list"
 
-    if task == None:
+    if expression == None and not hard_mode:
+        print("ERROR: must specify an expression or hard-coded mode")
+        exit(1)
+    if output_type == None:
         print("ERROR: must specify task. Available tasks: count, list")
-        sys.exit(0)
+        exit(1)
 
     if len(params) == 0:
         files = file_tool.all_morph_files(data_dir)
@@ -98,7 +107,7 @@ def command_search(args):
         print("Searching " + str(len(params)) + " files")
         files = params
 
-    search_morphs(files, task)
+    search_morphs(files, output_type, expression)
 
 def command_split(args):
     if len(args) != 1:
@@ -148,7 +157,7 @@ commands = {
     "search": [
         command_search,
         "Find all morphs satisfying certain conditions",
-        "Usage: morphs search [-c/--count] [-l/--list] [files]\n\nSearches the given morph files, or all if none are given, for morphs matching hard-coded criteria.\nIn [c]ount mode, the number of matches only is printed.\nIn [l]ist mode, the full list of morphs is printed."
+        "Usage: morphs search [-c/--count] [-l/--list] [-e/--expression] [-h/--hard] [files]\n\nSearches the given morph files, or all if none are given, for morphs matching the given criteria.\nIn [c]ount mode, the number of matches only is printed.\nIn [l]ist mode, the full list of morphs is printed.\nIf an [e]xpression is given, search for morphs that satisfy that expression.\nIn [h]ard-coded, hard-coded search criteria are used."
     ],
     "merge": [
         command_merge,
