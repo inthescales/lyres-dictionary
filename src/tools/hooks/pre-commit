@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo ""
+
+# Run formatting
+python3 morphs.py format
+
 # Run validation
 python3 morphs.py validate
 success=$?
