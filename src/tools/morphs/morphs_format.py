@@ -193,6 +193,8 @@ def should_format(element, key, tag_stack):
 
 # Format the given morph files, with the given metadata and options
 def format_morphs(files, test):
+    changed = 0
+
     for file in files:
         # Read in morphs
         morphs = file_tool.get_morphs_from(file)
@@ -204,6 +206,9 @@ def format_morphs(files, test):
         morphs = [ordered_morph(m) for m in morphs]
 
         # Format morphs
+        with open(file, "r") as file_data:
+            before = file_data.read()
+        
         formatted = format(morphs)
 
         # Output
@@ -211,3 +216,13 @@ def format_morphs(files, test):
             print(formatted)
         else:
             file_tool.write_formatted_to(formatted, file)
+
+        if before != formatted:
+            changed += 1
+
+    if changed > 0:
+        print(str(changed) + " files changed")
+    else:
+        print("0 files changed")
+
+    return changed

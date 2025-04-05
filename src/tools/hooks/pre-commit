@@ -4,13 +4,24 @@ echo ""
 
 # Run formatting
 python3 morphs.py format
+files_changed=$?
+
+# Don't commit if formatting altered any files
+if [ $files_changed -eq 0 ]; then
+	true
+else
+	echo ""
+	echo "=== DID NOT COMMIT ==="
+	echo ""
+	exit 1
+fi
 
 # Run validation
 python3 morphs.py validate
-success=$?
+validate_success=$?
 
 # Don't commit if morph validation fails
-if [ $success -eq 0 ]; then
+if [ $validate_success -eq 0 ]; then
 	exit 0
 else
 	echo "=== DID NOT COMMIT ==="

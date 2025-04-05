@@ -39,7 +39,12 @@ def command_format(args):
         print("Formatting " + str(len(params)) + " files")
         files = params
 
-    format_morphs(files, test_mode)
+    files_changed = format_morphs(files, test_mode)
+
+    if files_changed == 0:
+        sys.exit(0)
+    else:
+        sys.exit(1)
 
 def command_validate(args):
     print()
@@ -50,10 +55,10 @@ def command_validate(args):
         print("Validating " + str(len(args)) + " files")
         morphs_files = args
 
-    rval = validate_morphs(morphs_files)
+    result_code = validate_morphs(morphs_files)
 
     print()
-    sys.exit(rval)
+    sys.exit(result_code)
 
 def command_modify(args):
     if len(args) == 0:
