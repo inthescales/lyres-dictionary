@@ -110,23 +110,83 @@ def command_split(args):
 
     split_morphs(file)
 
+def command_help(args):
+    if len(args) == 0:
+        print()
+        print("This program contains various tools for operating on the corpus of morphs.")
+        print("To use it, include a command name and any necessary arguments.")
+        print()
+        print("Available commands:")
+        command_list()
+        print()
+        print("For usage information, enter 'morphs help [command]'")
+        print()
+    else:
+        input_command = args[0]
+
+        print()
+        if input_command in commands:
+            print(commands[input_command][2])
+        print()
+
+commands = {
+    "format": [
+        command_format,
+        "Format and sort morphs",
+        "Usage: morphs format [-t/--test] [files]\n\nFormats the listed morph files in place, or all if none are given.\nIn [t]est mode, formatted data will be printed to stdout instead of modifying files."
+    ],
+    "validate": [
+        command_validate,
+        "Validate that morphs are properly formed",
+        "Usage: morphs validate [files]\n\nValidates the given morph files, or all if none are given, printing any errors found."
+    ],
+    "modify": [
+        command_modify,
+        "Apply a change to all morphs",
+        "Usage: morphs modify [files]\n\nModifies the given morph files, or all if none are given. Changes must be hard-coded."
+    ],
+    "search": [
+        command_search,
+        "Find all morphs satisfying certain conditions",
+        "Usage: morphs search [-c/--count] [-l/--list] [files]\n\nSearches the given morph files, or all if none are given, for morphs matching hard-coded criteria.\nIn [c]ount mode, the number of matches only is printed.\nIn [l]ist mode, the full list of morphs is printed."
+    ],
+    "merge": [
+        command_merge,
+        "Merge two or more morph files into one",
+        "Usage: morphs merge [files]\n\nMerges all morphs from the listed files into a single file, and prints it to stdout."
+    ],
+    "split": [
+        command_split,
+        "Split one morphs file into two or more",
+        "Usage: morphs split [file]\n\nSplits morphs from the listed file into multiple files, according to hard-coded criteria."
+    ],
+    "help": [
+        command_help,
+        "Get information about a particular command",
+        "Usage: morphs help [command]\n\nProvides information about the given command."
+    ]
+}
+
+def command_list():
+    for key, values in commands.items():
+        print(" - " + key.ljust(5) + "\t" + values[1])
+
+def input_error(message):
+    print()
+    print(message)
+    command_list()
+    print()
+    exit(1)
+
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
-    
-    command = sys.argv[1]
+    if len(sys.argv) == 1:
+        input_error("Enter a command. Available commands:")
+
+    command_input = sys.argv[1]
     args = sys.argv[2:]
 
-    if command == "format":
-        command_format(args)
-    elif command == "validate":
-        command_validate(args)
-    elif command == "modify":
-        command_modify(args)
-    elif command == "merge":
-        command_merge(args)
-    elif command == "search":
-        command_search(args)
-    elif command == "split":
-        command_split(args)
+    if command_input in commands:
+        commands[command_input][0](args)
     else:
-        print("Command '" + command + "' not recognized. Available commands: format, validate")
+        input_error("Command '" + command_input + "' not recognized. Available commands:")
