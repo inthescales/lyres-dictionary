@@ -252,5 +252,7 @@ def validate_morphs(files):
 
     if fail_count == 0:
         print("Validation succeeded")
+        return 0
     else:
         print("Validation failed on " + str(fail_count) + " morphs")
+        return 1

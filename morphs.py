@@ -42,6 +42,7 @@ def command_format(args):
     format_morphs(files, test_mode)
 
 def command_validate(args):
+    print()
     if len(args) == 0:
         morphs_files = file_tool.all_morph_files(data_dir)
         print("Validating " + str(len(morphs_files)) + " files")
@@ -49,7 +50,10 @@ def command_validate(args):
         print("Validating " + str(len(args)) + " files")
         morphs_files = args
 
-    validate_morphs(morphs_files)
+    rval = validate_morphs(morphs_files)
+
+    print()
+    sys.exit(rval)
 
 def command_modify(args):
     if len(args) == 0:
@@ -198,3 +202,5 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         commands[command_input][0](args)
     else:
         input_error("Command '" + command_input + "' not recognized. Available commands:")
+
+    sys.exit(0)
