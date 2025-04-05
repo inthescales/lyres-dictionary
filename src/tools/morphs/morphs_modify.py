@@ -4,9 +4,7 @@ import sys
 import src.tools.morphs.morphs_files as file_tool
 import src.tools.morphs.morphs_format as format
 
-def modify(morph):
-    # Write code to modify the morph here, returning the new version
-    return morph
+from src.tools.morphs.hardcoded.modify import modify
 
 # Write groups to the specified filenames
 def write(morphs, filename):

@@ -3,15 +3,7 @@ import sys
 import src.tools.morphs.morphs_files as file_tool
 import src.tools.morphs.morphs_format as morphs_format
 
-# Filenames for the new split files
-# The indices should match the groups used below in get_group(...)
-filenames = [
-]
-
-# Determine the group for the given morph
-def get_group(morph):
-    # Write code for dividing morphs into groups here
-    return 0
+from src.tools.morphs.hardcoded.split import get_group, filenames
 
 # Divide morphs into groups
 def group(morphs):
@@ -48,4 +40,4 @@ def split_morphs(file):
     groups = group(morphs)
     
     # Write to output files
-    #write(groups, filenames)
+    write(groups, filenames)

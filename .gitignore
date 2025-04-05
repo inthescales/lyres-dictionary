@@ -11,6 +11,9 @@
 env
 logs
 
+# Tool configurations
+src/tools/morphs/harcoded/*
+
 # Ad-hoc tools
 helpers
 out.html

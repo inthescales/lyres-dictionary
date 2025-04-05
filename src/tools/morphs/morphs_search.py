@@ -1,4 +1,6 @@
 import src.tools.morphs.morphs_files as file_tool
+
+from src.tools.morphs.hardcoded.search import matches as matches_hardcoded
 from src.morphs.expressions import evaluate_expression
 
 import json
@@ -10,10 +12,6 @@ def get_matches(morphs, matches):
             matches_found += [morph]
 
     return matches_found
-
-def matches_hard(morph):
-    # Write code for your specifier here
-    return False
 
 def matches_expression(morph, expression):
     return evaluate_expression(expression, morph)
@@ -46,7 +44,7 @@ def search_morphs(files, task, expression=None):
 
         matches = get_matches(morphs, lambda m: matches_expression(m, expression))
     else:
-        matches = get_matches(morphs, matches_hard)
+        matches = get_matches(morphs, matches_hardcoded)
 
     # Output
     if task == "count":
