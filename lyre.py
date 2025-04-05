@@ -21,9 +21,6 @@ def setup():
     global morphothec
 
     morphothec = Morphothec("data/")
-    # print("Latin: " + str(morphothec.root_count_for_language("latin")))
-    # print("Greek: " + str(morphothec.root_count_for_language("greek")))
-    # print("Old English: " + str(morphothec.root_count_for_language("old-english")))
 
 def needs_setup():
     return morphothec == None
@@ -70,7 +67,8 @@ def test_with_keys(keys):
 def test_evolution(form, language):
     print("")
     print(form + "\n")
-    if language == "oe":
+
+    if language == "old-english":
         config = Config(verbose=True, locked=False, overrides=[])
         print(evolutor.oe_form_to_ne_form(form, config))
     else:
@@ -97,25 +95,23 @@ def analyze():
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
-    
-    mode = None
-    count = None
-    keys = None
-    
-    evolution_form = None
-    evolution_lang = None
-
-    # Error cases
+        # Error cases
     def error_mode_conflict():
-        print("> Error: cannot both publish and test at the same time")
+        print("> Error: enter only one mode. Modes: test, publish, analyze")
         sys.exit(1)
     
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:e:", ["test", "publish", "analyze", "count=", "keys="])
+        opts, params = getopt.getopt(sys.argv[1:], "tpac:k:e:", ["test", "publish", "analyze", "count=", "keys=", "evolve="])
     except getopt.GetoptError:
         print('lyre.py requires a mode parameter: -t/--test, -p/--publish, or -a/--analyze')
         sys.exit(2)
+
+    mode = None
+    count = None
+    keys = None
+    
+    evolution_config = None
 
     # Process args
     for opt, arg in opts:
@@ -136,8 +132,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         elif opt in ["-k", "--keys"]:
             keys = map(lambda key: key.strip(), arg.split(","))
         elif opt in ["-e", "--evolution"]:
-            evolution_form = arg
-            evolution_lang = "oe"
+            evolution_config = { "form": arg, "language": "old-english"}
     
     # Assign defaults
     if mode == None:
@@ -163,10 +158,9 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)
-        elif evolution_form and evolution_lang:
-            test_evolution(evolution_form, evolution_lang)
+        elif evolution_config != None:
+            test_evolution(evolution_config["form"], evolution_config["language"])
         else:
             test_with_count(count)
-        
     elif mode == "analyze":
         analyze()

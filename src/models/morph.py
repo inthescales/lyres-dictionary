@@ -94,7 +94,6 @@ class Morph:
         if self.has_tag("rare"):
             return 10
         elif self.has_tag("super-rare"):
-            print("HERE")
             return 1
 
         return 100

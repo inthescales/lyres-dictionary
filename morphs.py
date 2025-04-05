@@ -80,7 +80,7 @@ def command_merge(args):
 
 def command_search(args):
     try:
-        opts, params = getopt.getopt(args, "e:hcl", ["expression", "hard", "count", "list"])
+        opts, params = getopt.getopt(args, "e:hcl", ["expression=", "hard", "count", "list"])
     except getopt.GetoptError:
         print('ERROR: getopt error')
         sys.exit(2)
