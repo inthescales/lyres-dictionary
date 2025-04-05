@@ -85,3 +85,21 @@ tags = [
     "i-mutating",               # OE morphophonology - causes i-mutation in the joined root
     "y-to-i"                    # MnE orthography - causes a final unstressed 'y' to become 'i' when a consonant is suffixed (e.g. 'day' + '-ly' -> 'daily')
 ]
+
+tag_dependencies = {
+    "animal": ["mammal", "tame", "wild"],
+    "bodypart": ["bodypart-single", "bodypart-plant"],
+    "man-made": ["food", "garment", "tool", "weapon"],
+    "material": ["food", "metal"],
+    "plant": ["tree"],
+    "person": ["role", "ruler"],
+    "time": ["time-of-day", "time-of-year"]
+}
+
+tag_dependency_map = {}
+for key, values in tag_dependencies.items():
+    for tag in values:
+        if tag not in tag_dependency_map:
+            tag_dependency_map[tag] = []
+
+        tag_dependency_map[tag].append(key)

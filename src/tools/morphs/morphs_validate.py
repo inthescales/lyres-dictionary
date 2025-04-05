@@ -2,6 +2,7 @@ import src.tools.morphs.morphs_files as file_tool
 
 from src.tools.morphs.schemas.properties import properties as valid_properties
 from src.tools.morphs.schemas.tags import tags as valid_tags
+from src.tools.morphs.schemas.tags import tag_dependency_map as tag_dependencies
 
 morph_types = [
     "noun",
@@ -217,6 +218,16 @@ def validate_morph(morph):
                 errors.append("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
                 valid = False
 
+    # Check tag dependencies
+    # TODO: Reenable this after having a chance to revise tags
+    # if "tags" in morph:
+    #     for tag in morph["tags"]:
+    #         if tag in tag_dependencies:
+    #             for dependency in tag_dependencies[tag]:
+    #                 if dependency not in morph["tags"]:
+    #                     errors.append("Missing tag '" + dependency + "' required by tag '" + tag + "'")
+
+    # Output
     if len(errors) > 0:
         if "key" in morph:
             print(str(len(errors)) + " errors found reading morph '" + morph["key"] + "'")
