@@ -1,17 +1,6 @@
 import json
 import os
 
-# Returns a metadata dictionary from the given file root
-# Properties:
-# - properties: list of valid morph properties
-def load_metadata(root):
-    meta = {}
-    with open(root + "/morph-properties.json") as prop_data:
-        jdata = json.load(prop_data)
-        meta["properties"] = [m[0] for m in jdata]
-
-    return meta
-
 # Returns all morph files in the given root data directory
 def all_morph_files(root_dir):
     all_files = os.listdir("./" + root_dir)

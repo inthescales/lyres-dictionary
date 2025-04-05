@@ -7,6 +7,8 @@ from collections import OrderedDict
 import src.tools.morphs.alphabetical as alphabetical
 import src.tools.morphs.morphs_files as file_tool
 
+from src.tools.morphs.schemas.properties import properties as properties_list
+
 indent_spaces = 4
 
 # Get a number of spaces appropriate to the given indentation depth
@@ -18,10 +20,10 @@ def sort(morphs):
     return alphabetical.key_sorted(morphs)
 
 # Returns an ordered dict representing the morph, with its keys in print-order
-def ordered_morph(morph, meta_properties):
+def ordered_morph(morph):
     ordered = OrderedDict()
 
-    for prop in meta_properties:
+    for prop in properties_list:
         if prop in morph:
             ordered[prop] = morph[prop]
 
@@ -177,10 +179,7 @@ def should_format(element, key, tag_stack):
     return True
 
 # Format the given morph files, with the given metadata and options
-def format_morphs(files, meta_dir, test):
-    # Read metadata
-    meta = file_tool.load_metadata(meta_dir)
-
+def format_morphs(files, test):
     for file in files:
         # Read in morphs
         morphs = file_tool.get_morphs_from(file)
@@ -189,7 +188,7 @@ def format_morphs(files, meta_dir, test):
         morphs = sort(morphs)
 
         # Order morph properties
-        morphs = [ordered_morph(m, meta["properties"]) for m in morphs]
+        morphs = [ordered_morph(m) for m in morphs]
 
         # Format morphs
         formatted = format(morphs)

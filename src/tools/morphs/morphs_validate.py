@@ -1,5 +1,7 @@
 import src.tools.morphs.morphs_files as file_tool
 
+from src.tools.morphs.schemas.properties import properties as valid_properties
+
 valid_tags = [
     "count",                    # Noun countability - countable
     "mass",                     # Noun countability - mass
@@ -111,7 +113,7 @@ morph_origins = [
     "modern-english"
 ]
 
-def validate_morph(morph, meta_properties):
+def validate_morph(morph):
     errors = []
 
     # Returns true if the key and optional value type are found by the given morph.
@@ -291,7 +293,7 @@ def validate_morph(morph, meta_properties):
 
     # Check key whitelist
     for key in morph:
-        if not key in meta_properties:
+        if not key in valid_properties:
             errors.append("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
             valid = False
 
@@ -313,10 +315,7 @@ def validate_morph(morph, meta_properties):
 
     return valid
 
-def validate_morphs(files, meta_dir):
-    # Read in metadata
-    meta = file_tool.load_metadata(meta_dir)
-
+def validate_morphs(files):
     # Read in morphs
     morphs = []
     for file in files:
@@ -324,7 +323,7 @@ def validate_morphs(files, meta_dir):
 
     fail_count = 0
     for morph in morphs:
-        if not validate_morph(morph, meta["properties"]):
+        if not validate_morph(morph):
             fail_count += 1
 
     if fail_count == 0:

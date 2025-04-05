@@ -12,7 +12,6 @@ from src.tools.morphs.morphs_split import split_morphs
 import src.tools.morphs.morphs_files as file_tool
 
 data_dir = "./data"
-meta_dir = "./data/meta"
 
 def command_format(args):
     try:
@@ -34,13 +33,13 @@ def command_format(args):
         sys.exit(0)
 
     if len(params) == 0:
-        morphs_files = file_tool.all_morph_files(data_dir)
-        print("Formatting " + str(len(morphs_files)) + " files")
+        files = file_tool.all_morph_files(data_dir)
+        print("Formatting " + str(len(files)) + " files")
     else:
         print("Formatting " + str(len(params)) + " files")
         files = params
 
-    format_morphs(files, meta_dir, test_mode)
+    format_morphs(files, test_mode)
 
 def command_validate(args):
     if len(args) == 0:
@@ -50,7 +49,7 @@ def command_validate(args):
         print("Validating " + str(len(args)) + " files")
         morphs_files = args
 
-    validate_morphs(morphs_files, meta_dir)
+    validate_morphs(morphs_files)
 
 def command_modify(args):
     if len(args) == 0:
