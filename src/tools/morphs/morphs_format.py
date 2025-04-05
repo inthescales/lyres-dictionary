@@ -8,6 +8,7 @@ import src.tools.morphs.alphabetical as alphabetical
 import src.tools.morphs.morphs_files as file_tool
 
 from src.tools.morphs.schemas.properties import properties as properties_list
+from src.tools.morphs.schemas.tags import tags as tags_list
 
 indent_spaces = 4
 
@@ -19,13 +20,25 @@ def spaces(depth):
 def sort(morphs):
     return alphabetical.key_sorted(morphs)
 
-# Returns an ordered dict representing the morph, with its keys in print-order
+# Returns an ordered dict representing the morph, with its keys in schema-order
 def ordered_morph(morph):
     ordered = OrderedDict()
 
     for prop in properties_list:
         if prop in morph:
-            ordered[prop] = morph[prop]
+            if prop == "tags":
+                ordered[prop] = ordered_tags(morph["tags"])
+            else:
+                ordered[prop] = morph[prop]
+
+    return ordered
+
+# Returns a tags array with the tags sorted by schema-order
+def ordered_tags(tags):
+    ordered = []
+    for tag in tags_list:
+        if tag in tags:
+            ordered.append(tag)
 
     return ordered
 

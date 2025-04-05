@@ -85,7 +85,7 @@
                 "has-tag": "concrete"
             }
         },
-        "tags": ["suffix-only", "no-length", "non-final"],
+        "tags": ["no-length", "non-final", "suffix-only"],
         "origin": "latin"
     }, {
         "key": "-form",
@@ -146,7 +146,7 @@
                 "gloss": "[bear] %pl"
             }
         ],
-        "tags": ["suffix-only", "no-length", "non-final"],
+        "tags": ["no-length", "non-final", "suffix-only"],
         "origin": "latin",
         "notes": "add exceptions for 'ous'"
     }, {
@@ -217,7 +217,7 @@
             },
             "gloss": "[be] skilled in the use of %pl"
         }],
-        "tags": ["non-final", "rare"],
+        "tags": ["rare", "non-final"],
         "origin": "latin"
     }, {
         "key": "-vor-",
@@ -242,7 +242,7 @@
             },
             "gloss": "[consume] %pl"
         }],
-        "tags": ["suffix-only", "no-length", "non-final"],
+        "tags": ["no-length", "non-final", "suffix-only"],
         "origin": "latin"
     }
 ]

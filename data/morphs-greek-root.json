@@ -166,7 +166,7 @@
         "form-stem": "ba",
         "type": "verb",
         "gloss": "go",
-        "tags": ["intransitive", "motion", "always-prep"],
+        "tags": ["intransitive", "always-prep", "motion"],
         "origin": "greek"
     }, {
         "key": "ballein",
@@ -430,7 +430,7 @@
         "type": "verb",
         "gloss": "put",
         "gloss-relative": "put",
-        "tags": ["transitive", "motion", "always-prep"],
+        "tags": ["transitive", "always-prep", "motion"],
         "origin": "greek"
     }, {
         "key": "dynasthai",
@@ -515,7 +515,7 @@
         "form-stem": "galact",
         "type": "noun",
         "gloss": "milk",
-        "tags": ["mass", "concrete", "liquid", "fluid"],
+        "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "greek"
     }, {
         "key": "gastros",
@@ -613,7 +613,7 @@
         "form-stem": "hem",
         "type": "noun",
         "gloss": "blood",
-        "tags": ["mass", "concrete", "liquid", "fluid"],
+        "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "greek"
     }, {
         "key": "hagia-adj",
@@ -737,7 +737,7 @@
         "form-stem": "hydr",
         "type": "noun",
         "gloss": "water",
-        "tags": ["mass", "concrete", "liquid", "fluid"],
+        "tags": ["mass", "concrete", "fluid", "liquid"],
         "origin": "greek"
     }, {
         "key": "hygeine",
@@ -1385,7 +1385,7 @@
         "form-stem": "pneum",
         "type": "noun",
         "gloss": "air",
-        "tags": ["mass", "concrete", "gas", "fluid"],
+        "tags": ["mass", "concrete", "fluid", "gas"],
         "origin": "greek"
     }, {
         "key": "poein",
@@ -1442,7 +1442,7 @@
         "form-stem": "potam",
         "type": "noun",
         "gloss": "river",
-        "tags": ["count", "concrete", "terrain", "fluid", "liquid"],
+        "tags": ["count", "concrete", "fluid", "liquid", "terrain"],
         "origin": "greek"
     }, {
         "key": "pous",
@@ -1647,7 +1647,7 @@
         "form-stem": "thalass",
         "type": "noun",
         "gloss": "sea",
-        "tags": ["singleton", "concrete", "terrain", "fluid", "liquid"],
+        "tags": ["singleton", "concrete", "fluid", "liquid", "terrain"],
         "origin": "greek"
     }, {
         "key": "thanatos",

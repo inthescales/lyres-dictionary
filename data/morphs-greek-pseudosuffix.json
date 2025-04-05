@@ -22,7 +22,7 @@
             "gloss": "[lead] %pl",
             "form-stem": "agogu"
         }],
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["singleton", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-arch-",
@@ -41,7 +41,7 @@
             },
             "gloss": "[rule] or [oversee] %pl"
         }],
-        "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["mass", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-clast",
@@ -65,7 +65,7 @@
             },
             "gloss": "[break] %pl"
         }],
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["singleton", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-crat",
@@ -109,7 +109,7 @@
                 "form-stem": "crac"
             }
         ],
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-gen",
@@ -120,7 +120,7 @@
         "derive-to": "noun",
         "gloss": "[produce] %pl",
         "suffixes": ["greek-silent-agent", "-ic-part"],
-        "tags": ["count", "concrete", "suffix-only", "no-length", "non-final"],
+        "tags": ["count", "concrete", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-graph-",
@@ -139,7 +139,7 @@
             },
             "gloss": "[describe] %pl"
         }],
-        "tags": ["singleton", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["singleton", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-lat-",
@@ -159,7 +159,7 @@
             "form-stem": "later",
             "gloss": "[worship] %pl"
         }],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-log-",
@@ -170,7 +170,7 @@
         "derive-to": "verb",
         "gloss": "the study of %pl",
         "suffixes": ["greek-ist", "-ic-def", "-y-def"],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-man-",
@@ -182,7 +182,7 @@
         "gloss-noun": "[obsession] or excessive [desire] for %pl",
         "gloss-verb": "excessive [desire] %inf",
         "suffixes": ["-ia-def", "-ic-def", "-iac-haver"],
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek",
         "notes": "Removing verb from derive-from until joining vowels are changed"
     }, {
@@ -202,7 +202,7 @@
             },
             "form-stem": "mant"
         }],
-        "tags": ["mass", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["mass", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-metr-",
@@ -227,7 +227,7 @@
             "form-stem": "meter",
             "gloss": "[measure] %pl"
         }],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-morph",
@@ -246,7 +246,7 @@
                 ]
             }
         },
-        "tags": ["uncountable", "concrete", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "concrete", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-nom-",
@@ -257,7 +257,7 @@
         "derive-to": "verb",
         "gloss": "the study of %pl",
         "suffixes": ["greek-ist", "-ic-def", "-y-def"],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-plast",
@@ -276,7 +276,7 @@
             },
             "gloss": "[form] %pl"
         }],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }
 ]

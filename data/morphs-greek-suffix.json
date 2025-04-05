@@ -95,7 +95,7 @@
                 "has-any-tags": ["living", "bodypart"]
             }
         },
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-ic",
@@ -335,7 +335,7 @@
                 "gloss": "the act of %part"
             }
         ],
-        "tags": ["uncountable", "concrete", "no-head-joiner", "object-specifier"],
+        "tags": ["uncountable", "concrete", "object-specifier", "no-head-joiner"],
         "origin": "greek"
     }, {
         "key": "-oid",
@@ -402,7 +402,7 @@
             },
             "gloss": "[eat] %pl"
         }],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-phil-",
@@ -419,7 +419,7 @@
                 "not": { "has-key": ["pais", "ephebe"] }
             }
         },
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-phob-",
@@ -431,7 +431,7 @@
         "gloss-adj": "[fear] of %pl things",
         "gloss-noun": "[fear] of %pl",
         "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
-        "tags": ["count", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-phor-",
@@ -450,7 +450,7 @@
             },
             "gloss": "[bear] %pl"
         }],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-pot-",
@@ -474,7 +474,7 @@
             },
             "gloss": "[drink] %sg"
         }],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-rrhea",
@@ -507,7 +507,7 @@
                 "not": { "has-key": "pais" }
             }
         },
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-sis",
@@ -567,7 +567,7 @@
         "derive-to": "noun",
         "gloss": "the art that works with %pl",
         "suffixes": ["-ic-def", "-y-def"],
-        "tags": ["uncountable", "abstract", "suffix-only", "no-length", "non-final"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-tery",
@@ -578,7 +578,7 @@
         "derive-to": "noun",
         "gloss": "[place] for %part",
         "suffixes": [],
-        "tags": ["count", "concrete", "rare", "no-head-joiner"],
+        "tags": ["count", "concrete", "no-head-joiner", "rare"],
         "origin": "greek"
     }, {
         "key": "-thec",

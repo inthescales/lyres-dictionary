@@ -19,7 +19,7 @@
         "form-raw": "ǣdre",
         "type": "noun",
         "gloss": "[river] or [channel]",
-        "tags": ["count", "concrete", "terrain", "liquid", "speculative"],
+        "tags": ["count", "concrete", "liquid", "terrain", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ǣdre-quick",
@@ -41,14 +41,14 @@
         "form-canon": "even",
         "type": "noun",
         "gloss": "evening",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
+        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
         "origin": "old-english"
     }, {
         "key": "ælde",
         "form-raw": "ælde",
         "type": "noun",
         "gloss": "men",
-        "tags": ["mass", "concrete", "living", "person", "gendered", "speculative", "poetic"],
+        "tags": ["mass", "concrete", "living", "person", "gendered", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ǣled",
@@ -230,7 +230,7 @@
         "form-canon": "addle",
         "type": "noun",
         "gloss": "[disease], [sickness]",
-        "tags": ["count", "abstract", "body-state", "quality"],
+        "tags": ["count", "abstract", "quality", "body-state"],
         "origin": "old-english"
     }, {
         "key": "āfor",
@@ -298,7 +298,7 @@
         "form-raw-alt": ["onde"],
         "type": "noun",
         "gloss": "[spite], [malice]",
-        "tags": ["mass", "abstract", "mind-state", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english",
         "notes": "Also gloss 'injury'"
     }, {
@@ -480,7 +480,7 @@
         "form-canon": "bath",
         "type": "noun",
         "gloss": "bath",
-        "tags": ["count", "concrete", "man-made", "terrain"],
+        "tags": ["count", "concrete", "terrain", "man-made"],
         "origin": "old-english",
         "notes": "Alternate meaning 'immersion'"
     }, {
@@ -900,7 +900,7 @@
         "type": "noun",
         "gloss": "sword",
         "gloss-tool": "[fight] with a sword",
-        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon"],
         "origin": "old-english"
     }, {
         "key": "bindan",
@@ -1019,7 +1019,7 @@
         "form-raw": "brego",
         "type": "noun",
         "gloss": ["lord", "prince", "ruler"],
-        "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "poetic", "homophonic"],
+        "tags": ["count", "concrete", "living", "person", "role", "ruler", "poetic", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "brēoþan",
@@ -1043,7 +1043,7 @@
         "form-raw": "brim",
         "type": "noun",
         "gloss": "sea",
-        "tags": ["singleton", "concrete", "terrain", "liquid", "shiny"],
+        "tags": ["singleton", "concrete", "liquid", "terrain", "shiny"],
         "origin": "old-english"
     }, {
         "key": "bringan",
@@ -1130,7 +1130,7 @@
         "type": "noun",
         "gloss": "[city] or [town]",
         "gloss-alt": "fortress",
-        "tags": ["count", "concrete", "man-made", "terrain"],
+        "tags": ["count", "concrete", "terrain", "man-made"],
         "origin": "old-english"
     }, {
         "key": "burġels",
@@ -1427,7 +1427,7 @@
         "type": "noun",
         "gloss": "knife",
         "gloss-tool": "[cut] with a knife",
-        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon"],
         "origin": "old-english"
     }, {
         "key": "cniht",
@@ -1584,7 +1584,7 @@
         "form-canon": "queen",
         "type": "noun",
         "gloss": "queen",
-        "tags": ["count", "concrete", "living", "person", "ruler", "gendered"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "ruler"],
         "origin": "old-english"
     }, {
         "key": "cwenċan",
@@ -1670,7 +1670,7 @@
         "form-canon": "kin",
         "type": "noun",
         "gloss": "family",
-        "tags": ["mass", "abstract", "living", "person", "grouping", "gendered"],
+        "tags": ["mass", "abstract", "living", "person", "gendered", "grouping"],
         "origin": "old-english",
         "notes": "Alt. meanings I don't feel like including right now. 'gendered' tag just because I don't want to add gender suffixes."
     }, {
@@ -1689,7 +1689,7 @@
         "form-canon": "day",
         "type": "noun",
         "gloss": "day",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "measure", "luminous"],
+        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day", "measure"],
         "origin": "old-english"
     }, {
         "key": "dagn/FAKE",
@@ -1697,7 +1697,7 @@
         "form-canon": "dawn",
         "type": "noun",
         "gloss": "dawn",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
+        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
         "origin": "old-english",
         "notes": "HACK: Totally fake morph, meant to capture the later 'dawn', in fact derived from OE 'dawian' or a Norse cognate. See OED."
     }, {
@@ -1781,7 +1781,7 @@
         "form-canon": "doom",
         "type": "noun",
         "gloss": "judgement",
-        "tags": ["mass", "abstract", "activity", "man-made"],
+        "tags": ["mass", "abstract", "man-made", "activity"],
         "origin": "old-english"
     }, {
         "key": "dox",
@@ -1797,7 +1797,7 @@
         "form-canon": "dusk",
         "type": "noun",
         "gloss": "dusk",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
+        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
         "origin": "old-english",
         "notes": "Form evolution is unclear, according to OED. 'dosc' is my assumption based on OED's mention of metathesis"
     }, {
@@ -2045,7 +2045,7 @@
         "form-raw": "ēad",
         "type": "noun",
         "gloss": ["happiness", "prosperity"],
-        "tags": ["mass", "abstract", "mind-state", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english",
         "notes": "TODO: Split happiness/prosperity senses"
     }, {
@@ -2136,7 +2136,7 @@
         "type": "noun",
         "gloss": ["edge", "blade"],
         "gloss-tool": ["[cut]"],
-        "tags": ["count", "concrete", "man-made", "metallic", "tool"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool"],
         "origin": "old-english",
         "notes": "'blade' gloss is my extension, but fits OE usage fairly well"
     }, {
@@ -2232,7 +2232,7 @@
         "gloss": "torch",
         "gloss-alt": ["[lamp], [light]"],
         "gloss-tool": ["[light] up"],
-        "tags": ["count", "concrete", "man-made", "tool", "luminous", "speculative"],
+        "tags": ["count", "concrete", "luminous", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "Alt. glosses are my invention"
     }, {
@@ -2241,7 +2241,7 @@
         "form-canon": "father",
         "type": "noun",
         "gloss": "father",
-        "tags": ["count", "concrete", "living", "person", "role", "gendered"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "role"],
         "origin": "old-english"
     }, {
         "key": "fǣġe",
@@ -2343,7 +2343,7 @@
         "form-canon": "vane",
         "type": "noun",
         "gloss": "weathervane",
-        "tags": ["count", "concrete", "man-made", "metallic"],
+        "tags": ["count", "concrete", "metallic", "man-made"],
         "origin": "old-english",
         "notes": "Properly the same morph as the base 'fana', but I want to separate for alt. form usage"
     }, {
@@ -2404,7 +2404,7 @@
         "form-canon": "fax",
         "type": "noun",
         "gloss": "hair",
-        "tags": ["mass", "concrete", "bodypart", "speculative", "obscure"],
+        "tags": ["mass", "concrete", "bodypart", "obscure", "speculative"],
         "origin": "old-english"
     }, {
         "key": "feċġan",
@@ -2553,7 +2553,7 @@
         "form-canon": "flesh",
         "type": "noun",
         "gloss": "flesh",
-        "tags": ["mass", "concrete", "living", "bodypart", "food", "material"],
+        "tags": ["mass", "concrete", "living", "bodypart", "material", "food"],
         "origin": "old-english"
     }, {
         "key": "fleċġan",
@@ -2611,7 +2611,7 @@
         "form-canon": "flit",
         "type": "noun",
         "gloss": "argument",
-        "tags": ["count", "abstract", "activity", "man-made"],
+        "tags": ["count", "abstract", "man-made", "activity"],
         "origin": "old-english",
         "notes": "Also senses 'fighting', 'contest', but I want to have the 'man-made' tag for now."
     }, {
@@ -2929,7 +2929,7 @@
         "form-canon": "game",
         "type": "noun",
         "gloss": "game",
-        "tags": ["count", "concrete", "activity", "man-made"],
+        "tags": ["count", "concrete", "man-made", "activity"],
         "origin": "old-english"
     }, {
         "key": "gamen-mass",
@@ -2976,7 +2976,7 @@
         "type": "noun",
         "gloss": "spear",
         "gloss-tool": "[stab], as with spear",
-        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon"],
         "origin": "old-english"
     }, {
         "key": "gāst",
@@ -3301,7 +3301,7 @@
         "form-canon": "gloam",
         "type": "noun",
         "gloss": "twilight",
-        "tags": ["mass", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming", "obscure"],
+        "tags": ["mass", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day", "obscure"],
         "origin": "old-english",
         "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
     }, {
@@ -3310,7 +3310,7 @@
         "form-canon": "gloom",
         "type": "noun",
         "gloss": "twilight",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous", "glooming"],
+        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
         "origin": "old-english"
     }, {
         "key": "gnīdan",
@@ -3342,7 +3342,7 @@
         "form-canon": "gold",
         "type": "noun",
         "gloss": "gold",
-        "tags": ["mass", "concrete", "metal", "material"],
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english"
     }, {
         "key": "grafan",
@@ -3746,7 +3746,7 @@
         "type": "noun",
         "gloss": "sword",
         "gloss-tool": "[cut] with a sword",
-        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative", "homophonic"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "hete",
@@ -3831,7 +3831,7 @@
         "type": "verb",
         "verb-class": "weak",
         "gloss": "resound",
-        "tags": ["intransitive", "speculative", "poetic"],
+        "tags": ["intransitive", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hocor",
@@ -3925,14 +3925,14 @@
         "form-raw": "hoþma",
         "type": "noun",
         "gloss": ["covering", "cloud"],
-        "tags": ["count", "concrete", "speculative", "glooming"],
+        "tags": ["count", "concrete", "glooming", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hoþma-mass",
         "form-raw": "hoþma",
         "type": "noun",
         "gloss": ["darkness"],
-        "tags": ["mass", "concrete", "speculative", "glooming"],
+        "tags": ["mass", "concrete", "glooming", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hræċan",
@@ -4124,7 +4124,7 @@
         "form-canon": "whelp",
         "type": "noun",
         "gloss": "puppy",
-        "tags": ["count", "concrete", "living", "tame", "animal", "mammal"],
+        "tags": ["count", "concrete", "living", "animal", "tame", "mammal"],
         "origin": "old-english"
     }, {
         "key": "hwirfan",
@@ -4173,7 +4173,7 @@
         "form-raw": "hyġe",
         "type": "noun",
         "gloss": ["[thought], [mind]", "[desire], [inclinations]"],
-        "tags": ["mass", "abstract", "speculative", "poetic"],
+        "tags": ["mass", "abstract", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hyll",
@@ -4239,7 +4239,7 @@
         "form-canon": "iron",
         "type": "noun",
         "gloss": "iron",
-        "tags": ["mass", "concrete", "metal", "material"],
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english",
         "notes": "Alternate form of 'īsen'"
     }, {
@@ -4256,7 +4256,7 @@
         "form-canon": "isen",
         "type": "noun",
         "gloss": "iron",
-        "tags": ["mass", "concrete", "metal", "material", "obscure"],
+        "tags": ["mass", "concrete", "material", "metal", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lǣċan",
@@ -4395,7 +4395,7 @@
         "form-canon": "lead",
         "type": "noun",
         "gloss": "lead",
-        "tags": ["mass", "concrete", "metal", "material"],
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english"
     }, {
         "key": "lēas-adj",
@@ -4960,7 +4960,7 @@
         "type": "noun",
         "gloss": "meat",
         "gloss-alt": ["food"],
-        "tags": ["mass", "concrete", "food", "material"],
+        "tags": ["mass", "concrete", "material", "food"],
         "origin": "old-english"
     }, {
         "key": "metsian",
@@ -5042,7 +5042,7 @@
         "form-canon": "mist",
         "type": "noun",
         "gloss": "mist",
-        "tags": ["mass", "concrete", "weather", "gas", "glooming"],
+        "tags": ["mass", "concrete", "gas", "weather", "glooming"],
         "origin": "old-english"
     }, {
         "key": "mōd",
@@ -5060,7 +5060,7 @@
         "form-canon": "mother",
         "type": "noun",
         "gloss": "mother",
-        "tags": ["count", "concrete", "living", "person", "role", "gendered"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "role"],
         "origin": "old-english"
     }, {
         "key": "mōn",
@@ -5075,7 +5075,7 @@
         "form-raw": "morgen",
         "type": "noun",
         "gloss": "morning",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous"],
+        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
         "origin": "old-english",
         "notes": "Same root as 'morn', but leaving canonless for new form"
     }, {
@@ -5084,7 +5084,7 @@
         "form-canon": "morrow",
         "type": "noun",
         "gloss": ["morning", "following [day]"],
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous"],
+        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
         "origin": "old-english",
         "notes": "Based on combining form of 'morgen'"
     }, {
@@ -5093,7 +5093,7 @@
         "form-canon": "morn",
         "type": "noun",
         "gloss": "morning",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "luminous"],
+        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
         "origin": "old-english",
         "notes": "Later variations of 'morgen'. Didn't appear until ME, so this fudges a bit"
     }, {
@@ -5191,7 +5191,7 @@
         "type": "noun",
         "gloss": "needle",
         "gloss-tool": ["[sew] or [embroider]", "[pierce] with a needle"],
-        "tags": ["count", "concrete", "man-made", "tool", "metallic"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "niht",
@@ -5199,7 +5199,7 @@
         "form-canon": "night",
         "type": "noun",
         "gloss": "night",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-day", "measure", "luminous", "glooming"],
+        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day", "measure"],
         "origin": "old-english"
     }, {
         "key": "niman",
@@ -5219,7 +5219,7 @@
         "type": "noun",
         "gloss": "noon",
         "gloss-alt": ["the ninth [hour] of the day"],
-        "tags": ["uncountable", "abstract", "bounded", "time", "time-of-day", "luminous"],
+        "tags": ["uncountable", "abstract", "bounded", "luminous", "time", "time-of-day"],
         "origin": "old-english"
     }, {
         "key": "open",
@@ -5363,7 +5363,7 @@
         "form-raw-alt": ["reċed", "reċyd"],
         "type": "noun",
         "gloss": ["[house] or dwelling [place]"],
-        "tags": ["count", "concrete", "man-made", "speculative", "poetic"],
+        "tags": ["count", "concrete", "man-made", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "rǣd",
@@ -5601,7 +5601,7 @@
         "form-canon": "seel",
         "type": "noun",
         "gloss": ["happiness", "prosperity"],
-        "tags": ["mass", "abstract", "mind-state", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english",
         "notes": "'prosperity' isn't quite a 'mind-state' but let's let it ride. Not sure about form, but prefer 'seel' for variety"
     }, {
@@ -5771,7 +5771,7 @@
         "form-raw": "searu",
         "type": "noun",
         "gloss": ["[art] or [skill]", "contrivance", "deceit", "artifice"],
-        "tags": ["mass", "abstract", "activity", "man-made", "speculative"],
+        "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
         "origin": "old-english"
     }, {
         "key": "seax",
@@ -5780,7 +5780,7 @@
         "type": "noun",
         "gloss": "dagger",
         "gloss-tool": ["[cut] with a dagger", "stab"],
-        "tags": ["count", "concrete", "man-made", "tool", "weapon", "metallic", "speculative"],
+        "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon", "speculative"],
         "origin": "old-english"
     }, {
         "key": "sēċan",
@@ -5798,7 +5798,7 @@
         "form-raw": "seċġ",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person", "gendered", "speculative", "poetic"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "seolc",
@@ -5806,7 +5806,7 @@
         "form-canon": "silk",
         "type": "noun",
         "gloss": "silk",
-        "tags": ["mass", "concrete", "material", "garment", "shiny"],
+        "tags": ["mass", "concrete", "material", "shiny", "garment"],
         "origin": "old-english",
         "notes": "Would expect 'selk'. 'silc' appears in ME."
     }, {
@@ -6078,7 +6078,7 @@
         "type": "noun",
         "gloss": "ointment",
         "gloss-tool": ["anoint", "[smear] with ointment"],
-        "tags": ["mass", "concrete", "man-made", "tool", "fluid", "liquid", "obscure"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "man-made", "tool", "obscure"],
         "origin": "old-english"
     }, {
         "key": "snaw",
@@ -6193,7 +6193,7 @@
         "type": "noun",
         "gloss": ["magic [spell]"],
         "gloss-tool": ["[cast] a spell"],
-        "tags": ["count", "abstract", "man-made", "magical", "tool"],
+        "tags": ["count", "abstract", "magical", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "spell-words",
@@ -6252,7 +6252,7 @@
         "form-canon": "spring",
         "type": "noun",
         "gloss": "spring",
-        "tags": ["singleton", "abstract", "bounded", "time", "time-of-year", "luminous"],
+        "tags": ["singleton", "abstract", "bounded", "luminous", "time", "time-of-year"],
         "origin": "old-english",
         "notes": "Represents post-OE usage"
     }, {
@@ -6408,7 +6408,7 @@
         "form-canon": "summer",
         "type": "noun",
         "gloss": "summer",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-year", "luminous"],
+        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-year"],
         "origin": "old-english"
     }, {
         "key": "sunne",
@@ -6767,7 +6767,7 @@
         "form-canon": "tin",
         "type": "noun",
         "gloss": "tin",
-        "tags": ["mass", "concrete", "metal", "material"],
+        "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english"
     }, {
         "key": "todiġe",
@@ -6845,7 +6845,7 @@
         "gloss": "torch",
         "gloss-alt": ["[lamp], [light]"],
         "gloss-tool": ["[light] up"],
-        "tags": ["count", "concrete", "man-made", "tool", "luminous", "speculative"],
+        "tags": ["count", "concrete", "luminous", "man-made", "tool", "speculative"],
         "origin": "old-english",
         "notes": "Alt. glosses are my invention"
     }, {
@@ -7484,7 +7484,7 @@
         "form-canon": "winter",
         "type": "noun",
         "gloss": "winter",
-        "tags": ["count", "abstract", "bounded", "time", "time-of-year", "luminous", "glooming"],
+        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-year"],
         "origin": "old-english"
     }, {
         "key": "wīs",
@@ -7531,7 +7531,7 @@
         "form-raw": "wlanc",
         "type": "noun",
         "gloss": "pride",
-        "tags": ["mass", "abstract", "mind-state", "quality", "speculative"],
+        "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english"
     }, {
         "key": "wlātian",

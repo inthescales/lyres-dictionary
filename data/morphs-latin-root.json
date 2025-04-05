@@ -81,7 +81,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "air",
-        "tags": ["mass", "concrete", "material", "gas"],
+        "tags": ["mass", "concrete", "gas", "material"],
         "origin": "latin"
     }, {
         "key": "aerugo",
@@ -238,7 +238,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "year",
-        "tags": ["count", "abstract", "time", "bounded"],
+        "tags": ["count", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "antiqua",
@@ -324,7 +324,7 @@
             },
             "form-stem": "aque"
         }],
-        "tags": ["mass", "concrete", "material", "liquid"],
+        "tags": ["mass", "concrete", "liquid", "material"],
         "origin": "latin"
     }, {
         "key": "aquila",
@@ -486,7 +486,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "dawn",
-        "tags": ["count", "abstract", "time", "bounded"],
+        "tags": ["count", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "aurum",
@@ -509,7 +509,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "autumn",
-        "tags": ["mass", "abstract", "time", "bounded"],
+        "tags": ["mass", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "auxilium",
@@ -772,7 +772,7 @@
         "conjugation": 2,
         "gloss": "[be] honest",
         "gloss-state": "honest",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "canere",
@@ -887,7 +887,7 @@
         "type": "noun",
         "declension": 4,
         "gloss": "case",
-        "tags": ["count", "abstract", "time", "bounded"],
+        "tags": ["count", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "catena",
@@ -1546,7 +1546,7 @@
         "type": "noun",
         "declension": 5,
         "gloss": "day",
-        "tags": ["count", "abstract", "time", "bounded"],
+        "tags": ["count", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "digitus",
@@ -2099,7 +2099,7 @@
         "conjugation": 2,
         "gloss": "boil",
         "gloss-state": "boiling",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "fessa",
@@ -2839,7 +2839,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "hour",
-        "tags": ["count", "abstract", "time", "bounded"],
+        "tags": ["count", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "horrere",
@@ -3061,7 +3061,7 @@
         "type": "verb",
         "conjugation": 0,
         "gloss": "go",
-        "tags": ["intransitive", "motion", "always-prep"],
+        "tags": ["intransitive", "always-prep", "motion"],
         "origin": "latin"
     }, {
         "key": "jacere",
@@ -3248,7 +3248,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "tear",
-        "tags": ["count", "concrete", "material", "fluid", "liquid", "secretion"],
+        "tags": ["count", "concrete", "fluid", "liquid", "secretion", "material"],
         "origin": "latin"
     }, {
         "key": "lachrymare",
@@ -3266,7 +3266,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "milk",
-        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "material"],
         "origin": "latin"
     }, {
         "key": "lacus",
@@ -3618,7 +3618,7 @@
         "conjugation": 2,
         "gloss": "[be] fluid",
         "gloss-state": "fluid",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin",
         "notes": "If I find a way to make it gloss as 'melt' with 'esce', allow preps"
     }, {
@@ -3933,7 +3933,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "honey",
-        "tags": ["mass", "concrete", "material", "liquid"],
+        "tags": ["mass", "concrete", "liquid", "material"],
         "origin": "latin"
     }, {
         "key": "melior",
@@ -4244,7 +4244,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "slime",
-        "tags": ["mass", "concrete", "material", "liquid"],
+        "tags": ["mass", "concrete", "liquid", "material"],
         "origin": "latin"
     }, {
         "key": "mugire",
@@ -4463,7 +4463,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "night",
-        "tags": ["mass", "abstract", "time", "bounded"],
+        "tags": ["mass", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "nubere",
@@ -4781,7 +4781,7 @@
         "conjugation": 2,
         "gloss": "[be] pale",
         "gloss-state": "pale",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "palma",
@@ -5102,7 +5102,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "plague",
-        "tags": ["mass", "abstract", "living", "time", "bounded"],
+        "tags": ["mass", "abstract", "bounded", "living", "time"],
         "origin": "latin"
     }, {
         "key": "peter",
@@ -5698,7 +5698,7 @@
         "conjugation": 2,
         "gloss": "[be] rotten",
         "gloss-state": "rotten",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "rapax",
@@ -5978,7 +5978,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "blood",
-        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "material"],
         "origin": "latin"
     }, {
         "key": "scandere",
@@ -6253,7 +6253,7 @@
         "type": "noun",
         "declension": 2,
         "gloss": "sleep",
-        "tags": ["mass", "abstract", "time", "bounded"],
+        "tags": ["mass", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "sorbere",
@@ -6368,7 +6368,7 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "shine",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "spondere",
@@ -6491,7 +6491,7 @@
         "conjugation": 2,
         "gloss": "[be] senseless",
         "gloss-state": "senseless",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "suadere",
@@ -6516,7 +6516,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "sweat",
-        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "material"],
         "origin": "latin"
     }, {
         "key": "suere",
@@ -6580,7 +6580,7 @@
             "form-stem-present": "tic",
             "form-stem-perfect": "ticit"
         }],
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "tangere",
@@ -6630,7 +6630,7 @@
         "type": "noun",
         "declension": 3,
         "gloss": "time",
-        "tags": ["mass", "abstract", "time", "bounded"],
+        "tags": ["mass", "abstract", "bounded", "time"],
         "origin": "latin"
     }, {
         "key": "tendere",
@@ -6760,7 +6760,7 @@
         "conjugation": 2,
         "gloss": "[be] inactive",
         "gloss-state": "inactive",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "torquere",
@@ -6881,7 +6881,7 @@
         "conjugation": 2,
         "gloss": "[be] swollen",
         "gloss-state": "swollen",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin"
     }, {
         "key": "turpis",
@@ -6912,7 +6912,7 @@
         "type": "noun",
         "declension": 1,
         "gloss": "urine",
-        "tags": ["mass", "concrete", "material", "fluid", "liquid", "secretion"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "material"],
         "origin": "latin"
     }, {
         "key": "uti",
@@ -6952,7 +6952,7 @@
         "type": "verb",
         "conjugation": 2,
         "gloss": "[be] strong",
-        "tags": ["intransitive", "stative", "no-prep"],
+        "tags": ["intransitive", "no-prep", "stative"],
         "origin": "latin",
         "notes": "prevalent vs valiant"
     }, {
@@ -7085,7 +7085,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "[move] to and fro",
-        "tags": ["intransitive", "motion", "no-prep"],
+        "tags": ["intransitive", "no-prep", "motion"],
         "origin": "latin"
     }, {
         "key": "videre",

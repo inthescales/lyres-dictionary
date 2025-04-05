@@ -370,7 +370,7 @@
                 "gloss": ["the act or practice of %part", "a place where %part occurs"]
             }
         ],
-        "tags": ["uncountable", "mass"],
+        "tags": ["mass", "uncountable"],
         "origin": "old-english",
         "notes": "Properly ME"
     }, {
@@ -590,7 +590,7 @@
                 "tags": ["y-to-i"]
             }
         ],
-        "tags": ["y-to-i", "rare"],
+        "tags": ["rare", "y-to-i"],
         "origin": "old-english"
     }, {
         "key": "-isċ",
@@ -957,7 +957,7 @@
                 "not": { "has-tag": "past-participle" }
             }
         },
-        "tags": ["mass", "abstract", "i-mutating", "no-gen"],
+        "tags": ["mass", "abstract", "no-gen", "i-mutating"],
         "origin": "old-english",
         "notes": "TODO: Requires undetermined work to make root vowels change as expected. See shelved i-mutation tests. Continued to be used in ME period without i-mutation"
     }, {
