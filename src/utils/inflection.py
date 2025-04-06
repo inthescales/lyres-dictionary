@@ -2,11 +2,13 @@ import lemminflect
 
 import src.utils.helpers as helpers
 
-def inflect(string, mode):
-    words = string.split(" ")    
+# Returns an inflected form of the given word according to the mode
+def inflect(word, mode):
+    words = word.split(" ")    
     for i, word in enumerate(words):
         final_punctuation = None
 
+        # Strip punctuation
         if word[0] == "[" \
             and (
                 word[-1] == "]"
@@ -20,8 +22,9 @@ def inflect(string, mode):
         elif len(words) > 1:
             continue
 
-        # Local checking for forms 3rd party library does wrong
+        # Local overrides for forms the 3rd party library does wrong
         override = override_inflection(words[i], mode)
+
         if override != None:
             words[i] = override          
         elif mode == "ppart":
@@ -42,55 +45,57 @@ def inflect(string, mode):
         elif mode == "singleton":
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
         
+        # Add back stripped final punctuation
         if final_punctuation:
             words[i] += final_punctuation
     
     return " ".join(words)
 
-def override_inflection(string, mode):
-    if string == "arms":
+# Custom overrides for words the inflection library gets wrong
+def override_inflection(word, mode):
+    if word == "arms":
         if mode == "pl":
             return "arms"
 
-    elif string == "die":
+    elif word == "die":
         if mode == "pl":
             return "dice"
 
-    elif string == "dusk":
+    elif word == "dusk":
         if mode == "pl":
             return "dusks"
 
-    elif string == "do":
+    elif word == "do":
         if mode == "3sg":
             return "does"
         elif mode == "ppart":
             return "done"
 
-    elif string == "flour":
+    elif word == "flour":
         if mode == "pl":
             return "flours"
 
-    elif string == "omen":
+    elif word == "omen":
         if mode == "pl":
             return "omens"
 
-    elif string == "ox":
+    elif word == "ox":
         if mode == "pl":
             return "oxen"
 
-    elif string == "people":
+    elif word == "people":
         if mode == "pl":
             return "peoples"
 
-    elif string == "sting":
+    elif word == "sting":
         if mode == "part":
             return "stinging"
 
-    elif string == "two":
+    elif word == "two":
         if mode == "pl":
             return "twos"
 
-    elif string == "urine":
+    elif word == "urine":
         if mode == "pl":
             return "urines"
 

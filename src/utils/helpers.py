@@ -4,6 +4,8 @@ from src.utils.logging import Logger
 
 # Bag probability
 
+# Given an array of [content, weight] tuples, returns a content item at random
+# based on the weights.
 def choose_bag(bag):
     total = 0
 
@@ -22,7 +24,10 @@ def choose_bag(bag):
     Logger.error("BAG ERROR")
     return nil
 
-# Morphs have their own way of doing this, but this is for raw data
+# Morph dictionary handling
+
+# Returns true if the given morph dictionary contains the given tag.
+# Morphs have their own way of doing this — this is for dictionary data
 def has_tag(morph, tag):
     if not "tags" in morph:
         return False
@@ -40,11 +45,12 @@ def is_vowel(letter, y_is_vowel=False):
 def is_consonant(letter, y_is_consonant=True):
     return not is_vowel(letter, not y_is_consonant)
 
+# Returns whether the letter y should be treated as a vowel, using a heuristic based on the previous letter
 def y_is_vowel_heuristic(prev_char):
     return prev_char != None and is_consonant(prev_char, True)
 
 # Returns the estimated number of syllables in the word, based on vowel/consonant clusters
-# Does not handle silent 'e', always evaluates 'y' one-way, based on parameter
+# Does not handle silent 'e', and always evaluates 'y' in one way based on the parameter
 # TODO: Delete this when it's no longer needed OR rename 'vowel_cluster_count' or something
 def syllable_count_simple(word, y_is_vowel=False):
     count = 0
@@ -89,11 +95,11 @@ def syllable_count_smart(word):
         prev = char
     return count
 
-# Returns the letters in the given word, split into consonant/vowel clusters, as
-# an array of strings
+# Splits the given word into consonant/vowel clusters, returning an array of strings
 def split_clusters(word, is_vowel=lambda char: is_vowel(char)):
     polarity = None
     result = []
+
     for i in range(0, len(word)):
         new_polarity = is_vowel(word[i])
         if new_polarity != polarity:
@@ -104,6 +110,7 @@ def split_clusters(word, is_vowel=lambda char: is_vowel(char)):
 
     return result
 
+# Returns true if an 'l' appears in the final two syllables of the word
 def l_in_last_two(word):
     state = 0
     prev = None
@@ -119,6 +126,7 @@ def l_in_last_two(word):
         prev = char
     return False
 
+# Returns the indefinite article to use before the given word
 def indefinite_article_for(word):
     word = word.replace("[", "").replace("]", "")
     if is_vowel(word[0]):
