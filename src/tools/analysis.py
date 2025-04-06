@@ -3,8 +3,24 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+import src.generation.generator as generator
+from src.morphs.morphothec import Morphothec
+
 log_dir = "logs"
 analysis_dir = "analysis"
+
+def analyze(count):
+    print("Analyzing...")
+
+    analyst = Analyst()
+    for i in range(0, count):
+        word = generator.generate_word(Morphothec.active)
+        analyst.register(word)
+        print(f"Analyzed: {i}/{count}", end="\r")
+
+    print(f"Analyzed: {count}/{count}")
+    print("Analysis complete")
+    analyst.print_results(log=True)
 
 class Analyst:
     def __init__(self):

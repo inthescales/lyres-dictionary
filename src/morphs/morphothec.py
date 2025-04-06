@@ -5,9 +5,8 @@ import src.morphs.expressions as expressions
 import src.morphs.morph_adjuster as adjuster
 
 from src.utils.logging import Logger
-    
-class Morphothec:
-    
+
+class Morphothec:    
     class Language:
         def __init__(self):
             self.roots = []
@@ -167,3 +166,7 @@ class Morphothec:
             return 0
                   
         return len(self.languages[language].roots)
+
+# Global instance
+
+Morphothec.active = Morphothec("data/")

@@ -4,64 +4,22 @@ import sys
 
 import botbuddy
 
-import src.generation.composer as composer
+import src.entry as entry
 import src.evolutor.evolutor as evolutor
-import src.utils.validator as validator
 
 from src.evolutor.engine.config import Config
-from src.morphs.morphothec import Morphothec
-from src.generation.generator import generate_word, word_for_keys
-from src.posting import posting
-from src.tools.analysis import Analyst
+from src.tools.analysis import analyze
 from src.utils.logging import Logger
 
-morphothec = None
-
-def setup():
-    global morphothec
-
-    morphothec = Morphothec("data/")
-
-def needs_setup():
-    return morphothec == None
-        
-# Generating operations
-
-def generate_entry():
-    global morphothec
-    
-    if needs_setup():
-        setup()
-    
-    # Generate until we have a valid entry
-    while True:
-        word = generate_word(morphothec)
-        entry = composer.entry(word)
-        
-        if validator.validate(entry):
-            meta = posting.get_meta(word)
-            return { "content": entry, "meta": meta }
-
-def entry_for_keys(keys):
-    global morphothec, composer
-    
-    if needs_setup():
-        setup()
-        
-    word = word_for_keys(keys, morphothec)
-    
-    return composer.entry(word)
-
 def test_with_count(count):
-    
     print("")
     for i in range(0, count):
-        print(generate_entry()["content"])
+        print(entry.generate_entry()["content"])
         print("")
 
 def test_with_keys(keys):
     print("")
-    print(entry_for_keys(keys))
+    print(entry.entry_for_keys(keys))
     print("")
 
 def test_evolution(form, language):
@@ -75,23 +33,6 @@ def test_evolution(form, language):
         print("error: unrecognized language '" + language + "'")
     
     print("")
-
-def analyze():
-
-    if needs_setup():
-        setup()
-
-    print("Analyzing...")
-
-    analyst = Analyst()
-    for i in range(0, count):
-        word = generate_word(morphothec)
-        analyst.register(word)
-        print(f"Analyzed: {i}/{count}", end="\r")
-
-    print(f"Analyzed: {count}/{count}")
-    print("Analysis complete")
-    analyst.print_results(log=True)
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
@@ -132,7 +73,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         elif opt in ["-k", "--keys"]:
             keys = map(lambda key: key.strip(), arg.split(","))
         elif opt in ["-e", "--evolution"]:
-            evolution_config = { "form": arg, "language": "old-english"}
+            evolution_config = { "form": arg, "language": "old-english" }
     
     # Assign defaults
     if mode == None:
@@ -152,9 +93,10 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     elif mode == "publish":
         Logger.configure("file", None, 2)
 
-    # Print output
+    # Output
     if mode == "publish":
         botbuddy.post(generate_entry)
+
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)
@@ -162,5 +104,6 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             test_evolution(evolution_config["form"], evolution_config["language"])
         else:
             test_with_count(count)
+        
     elif mode == "analyze":
-        analyze()
+        analyze(count)
