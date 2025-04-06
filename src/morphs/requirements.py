@@ -1,5 +1,7 @@
 import random
 
+import src.morphs.frequency as frequency
+
 from src.morphs.expressions import evaluate_expression
 from src.utils.logging import Logger
 
@@ -62,10 +64,9 @@ def meets_morph_requirements(morph, env):
     
     return True
 
-# Randomly filter out morphs with less than 100% frequency
 def frequency_filter(morph):
-    frequency = morph.frequency()
-    if frequency < 100 and random.randint(0, 99) > frequency:
-        return False
+    mfreq = frequency.for_morph(morph)
+    if mfreq < 100 and random.randint(0, 99) > mfreq:
+            return False
 
     return True

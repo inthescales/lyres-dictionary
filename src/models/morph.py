@@ -88,18 +88,14 @@ class Morph:
             return None
         else:
             return self.morph["suffixes"]
-
-    # How often this morph should be available, as a percentage
-    def frequency(self):
-        if self.has_tag("rare"):
-            return 10
-        elif self.has_tag("super-rare"):
-            return 1
-
-        return 100
         
-    def has_tag(self, target):
+    def tags(self):
+        if "tags" in self.morph:
+            return self.morph["tags"]
+        else:
+            return []
 
+    def has_tag(self, target):
         if "tags" in self.morph:
             if target in self.morph["tags"]:
                 return True

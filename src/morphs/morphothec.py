@@ -105,7 +105,6 @@ class Morphothec:
                     exit(0)
     
     def filter_type(self, morph_type, language, morph_filter=None):
-
         if morph_filter is None:
             return self.languages[language].type_morphs[morph_type]
         
