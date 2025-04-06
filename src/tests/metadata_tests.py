@@ -1,15 +1,16 @@
 import unittest
 
+import src.generation.metadata as metadata
+
 from src.generation.generator import word_for_keys
 from src.morphs.morphothec import Morphothec
-from src.posting import posting
 
-class PostingTests(unittest.TestCase):
+class MetadataTests(unittest.TestCase):
     def setUp(self):
         self.morphothec = Morphothec("data/")
 
-    # Tests that posts with sexual roots will have content warnings
-    def testWarnSexualContent(self):
+    # Tests that posts with sexual roots will be have warnings
+    def testSexualContent(self):
         self.assertWarned(["phallos", "-ic"], True)
         self.assertWarned(["hǣman", "-ere"], True)
         self.assertWarned(["pintel", "-lēas"], True)
@@ -25,7 +26,7 @@ class PostingTests(unittest.TestCase):
     
     def assertWarned(self, keys, warned):
         word = word_for_keys(keys, self.morphothec)
-        meta = posting.get_meta(word)
+        meta = metadata.for_word(word)
         is_warned = "warning" in meta and len("warning") > 0
         self.assertEqual(is_warned, warned)
 

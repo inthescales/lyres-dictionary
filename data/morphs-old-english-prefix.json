@@ -3,8 +3,8 @@
         "key": "be/adj-",
         "form-stem": "be",
         "type": "prefix",
-        "prefix-on": "adj",
-        "prefix-to": "verb",
+        "derive-from": "adj",
+        "derive-to": "verb",
         "gloss": "[make] %@",
         "tags": ["final"],
         "origin": "old-english",
@@ -13,8 +13,8 @@
         "key": "be/noun-",
         "form-stem": "be",
         "type": "prefix",
-        "prefix-on": "noun",
-        "prefix-to": "verb",
+        "derive-from": "noun",
+        "derive-to": "verb",
         "gloss": "[furnish] with %pl",
         "exception": [
             {
@@ -105,7 +105,7 @@
         "key": "be/verb-",
         "form-stem": "be",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "thoroughly %@",
         "exception": [{
             "case": {
@@ -121,7 +121,7 @@
         "key": "for-",
         "form-stem": "for",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ away",
         "origin": "old-english",
         "notes": "Had a 'motion' requirement on this, but opening it up, like it is in Latin"
@@ -129,7 +129,7 @@
         "key": "fresh-",
         "form-stem": "fresh-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "freshly %@",
         "requires": {
             "precedes": {
@@ -141,7 +141,7 @@
         "key": "full-",
         "form-stem": "full-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "fully %@",
         "requires": {
             "precedes": {
@@ -153,7 +153,7 @@
         "key": "half-",
         "form-stem": "half-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "halfway %@",
         "requires": {
             "precedes": {
@@ -165,7 +165,7 @@
         "key": "hedge-",
         "form-stem": "hedge-",
         "type": "prefix",
-        "prefix-on": "noun",
+        "derive-from": "noun",
         "gloss": ["incompetent %@", "wandering %@"],
         "requires": {
             "precedes": {
@@ -196,7 +196,7 @@
         "key": "ill-",
         "form-stem": "ill-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "badly %@",
         "requires": {
             "precedes": {
@@ -209,7 +209,7 @@
         "key": "new-",
         "form-stem": "new-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "newly %@",
         "requires": {
             "precedes": {
@@ -221,7 +221,7 @@
         "key": "she-",
         "form-stem": "she-",
         "type": "prefix",
-        "prefix-on": "noun",
+        "derive-from": "noun",
         "gloss": "female %@",
         "requires": {
             "precedes": {
@@ -237,7 +237,7 @@
         "key": "thrice-",
         "form-stem": "thrice-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "%@ three times",
         "requires": {
             "precedes": {
@@ -249,7 +249,7 @@
         "key": "twice-",
         "form-stem": "twice-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "%@ two times",
         "requires": {
             "precedes": {
@@ -261,7 +261,7 @@
         "key": "un-",
         "form-stem": "un",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "not %@",
         "requires": {
             "precedes": {
@@ -273,7 +273,7 @@
         "key": "well-",
         "form-stem": "well-",
         "type": "prefix",
-        "prefix-on": "adj",
+        "derive-from": "adj",
         "gloss": "%@ well",
         "requires": {
             "precedes": {
@@ -285,7 +285,7 @@
         "key": "wiþ-",
         "form-stem": "with",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ against",
         "requires": {
             "precedes": {

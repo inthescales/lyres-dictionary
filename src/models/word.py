@@ -73,8 +73,8 @@ class Word:
         
     def get_type(self):
         # TODO: Make this cleaner
-        if len(self.morphs) == 2 and self.morphs[0].get_type() in ["prep", "prefix"] and "prefix-to" in self.morphs[0].morph:
-            return self.morphs[0].morph["prefix-to"]
+        if len(self.morphs) == 2 and self.morphs[0].get_type() in ["prep", "prefix"] and "derive-to" in self.morphs[0].morph:
+            return self.morphs[0].morph["derive-to"]
 
         return self.last_morph().get_type()
 

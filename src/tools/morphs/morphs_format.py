@@ -171,7 +171,6 @@ def should_format(element, key, tag_stack):
     if key:
         if key in [
             "derive-from",
-            "prefix-on",
             "suffixes",
             "tags"
         ] \

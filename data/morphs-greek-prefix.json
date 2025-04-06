@@ -17,7 +17,7 @@
         "key": "a-/verb",
         "form-stem": "a",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "not %@",
         "requires": {
             "precedes": {
@@ -45,7 +45,7 @@
             "form-stem": ["*"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "on %sg",
         "gloss-verb": "%@ up",
         "requires": {
@@ -63,7 +63,7 @@
             "form-stem": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "against %pl",
         "gloss-verb": "%@ against",
         "requires": {
@@ -84,7 +84,7 @@
             "form-stem": ["*"]
         },
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ one's self",
         "requires": {
             "precedes": {
@@ -100,7 +100,7 @@
         "key": "cata-",
         "form-stem": "cata",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "down %sg",
         "gloss-verb": "%@ down",
         "requires": {
@@ -144,7 +144,7 @@
             "form-stem": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "across %sg",
         "gloss-verb": "%@ across",
         "requires": {
@@ -157,7 +157,7 @@
         "key": "ec-",
         "form-stem": "ec",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "out of %sg",
         "gloss-verb": "%@ out from",
         "requires": {
@@ -174,7 +174,7 @@
             "nasal": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "in %sg",
         "gloss-verb": "%@ in",
         "requires": {
@@ -206,7 +206,7 @@
             "form-stem": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "upon %sg",
         "gloss-verb": "%@ upon",
         "requires": {
@@ -261,7 +261,7 @@
         "key": "hyper-",
         "form-stem": "hyper",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "above %sg",
         "gloss-verb": "%@ over",
         "requires": {
@@ -289,7 +289,7 @@
         "key": "hypo-",
         "form-stem": "hypo",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "under %sg",
         "gloss-verb": "%@ under",
         "requires": {
@@ -322,7 +322,7 @@
             "form-stem": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "beyond %sg",
         "gloss-verb": "%@ beyond",
         "requires": {
@@ -398,7 +398,7 @@
             "nasal": ["*"]
         },
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "all %pl",
         "gloss-verb": "%@ everything",
         "requires": {
@@ -439,7 +439,7 @@
         "key": "peri-",
         "form-stem": "peri",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "around %sg",
         "gloss-verb": "%@ around",
         "requires": {
@@ -458,7 +458,7 @@
         "key": "pro-/greek",
         "form-stem": "pro",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ foward",
         "requires": {
             "precedes": {
@@ -474,7 +474,7 @@
             "nasal": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "of the same %!sg",
         "gloss-verb": "%@ together",
         "requires": {

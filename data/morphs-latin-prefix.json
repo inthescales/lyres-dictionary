@@ -10,7 +10,7 @@
             "au": ["f"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "away from %sg",
         "gloss-verb": "%@ away",
         "requires": {
@@ -30,7 +30,7 @@
             "ac": ["q"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "to %sg",
         "gloss-verb": "%@ to",
         "requires": {
@@ -56,7 +56,7 @@
         "key": "circum-",
         "form-stem": "circum",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "around %sg",
         "gloss-verb": "%@ around",
         "requires": {
@@ -72,7 +72,7 @@
         "key": "cis-",
         "form-stem": "cis",
         "type": "prep",
-        "prefix-on": "noun",
+        "derive-from": "noun",
         "gloss-noun": "on this side of %sg",
         "gloss-verb": "%@ on the same side",
         "requires": {
@@ -91,7 +91,7 @@
             "nasal": ["*"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "together with %sg",
         "gloss-verb": "%@ together",
         "requires": {
@@ -110,21 +110,21 @@
             "nasal": ["*"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-verb": "wholly %@",
         "origin": "latin"
     }, {
         "key": "contra-",
         "form-stem": "contra",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ against",
         "origin": "latin"
     }, {
         "key": "de-",
         "form-stem": "de",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "down from %sg",
         "gloss-verb": "%@ down",
         "requires": {
@@ -149,7 +149,7 @@
             "double": ["f"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "apart from %sg",
         "gloss-verb": "%@ apart",
         "requires": {
@@ -176,7 +176,7 @@
             "double": ["f"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "out of %sg",
         "gloss-verb": "%@ out from",
         "requires": {
@@ -195,7 +195,7 @@
             "nasal": ["*"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "in %sg",
         "gloss-verb": "%@ in",
         "requires": {
@@ -211,7 +211,7 @@
         "key": "infra-",
         "form-stem": "infra",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "below %sg",
         "gloss-verb": "%@ below",
         "requires": {
@@ -235,7 +235,7 @@
         "key": "inter-",
         "form-stem": "inter",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "between %pl",
         "gloss-verb": "%@ between",
         "requires": {
@@ -252,7 +252,7 @@
         "key": "intra-",
         "form-stem": "intra",
         "type": "prep",
-        "prefix-on": "noun",
+        "derive-from": "noun",
         "gloss-noun": "within %sg",
         "gloss-verb": "%@ within",
         "requires": {
@@ -289,7 +289,7 @@
             "double": ["c", "p", "f"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "away from %sg",
         "gloss-verb": "%@ away",
         "origin": "latin",
@@ -310,7 +310,7 @@
         "key": "per-",
         "form-stem": "per",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "through %sg",
         "gloss-verb": "%@ through",
         "origin": "latin"
@@ -324,7 +324,7 @@
         "key": "pre-",
         "form-stem": "pre",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "before %sg",
         "gloss-verb": "%@ before",
         "requires": {
@@ -337,7 +337,7 @@
         "key": "preter-",
         "form-stem": "preter",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "beyond %sg",
         "gloss-verb": "%@ beyond",
         "origin": "latin"
@@ -345,7 +345,7 @@
         "key": "pro-",
         "form-stem": "pro",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "before %sg",
         "gloss-verb": "%@ forward",
         "origin": "latin"
@@ -365,7 +365,7 @@
         "key": "re-",
         "form-stem": "re",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-verb": "%@ back",
         "origin": "latin",
         "notes": "In early latin, became 'red-' before a vowel."
@@ -373,7 +373,7 @@
         "key": "retro-",
         "form-stem": "retro",
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "behind %sg",
         "gloss-verb": "%@ retrospectively",
         "exception": [{
@@ -393,7 +393,7 @@
             "sed": ["a", "e", "i", "o", "u"]
         },
         "type": "prep",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss-noun": "apart from %sg",
         "gloss-verb": "%@ apart",
         "origin": "latin"
@@ -418,7 +418,7 @@
             "double": ["c", "f", "g", "p", "m", "r"]
         },
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "under %sg",
         "gloss-verb": "%@ under",
         "requires": {
@@ -435,7 +435,7 @@
         "key": "super-",
         "form-stem": "super",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "above %sg",
         "gloss-verb": "%@ above",
         "requires": {
@@ -451,7 +451,7 @@
         "key": "supra-",
         "form-stem": "supra",
         "type": "prep",
-        "prefix-on": "noun",
+        "derive-from": "noun",
         "gloss-noun": "above %sg",
         "gloss-verb": "%@ above",
         "requires": {
@@ -464,7 +464,7 @@
         "key": "trans-",
         "form-stem": "trans",
         "type": "prep",
-        "prefix-on": ["verb", "noun"],
+        "derive-from": ["verb", "noun"],
         "gloss-noun": "across %sg",
         "gloss-verb": "%@ across",
         "requires": {

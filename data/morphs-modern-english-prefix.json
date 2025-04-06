@@ -3,35 +3,35 @@
         "key": "mis-MnE",
         "form-stem": "mis",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ incorrectly",
         "origin": "modern-english"
     }, {
         "key": "out-",
         "form-stem": "out",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "surpass in %part",
         "origin": "modern-english"
     }, {
         "key": "over-",
         "form-stem": "over",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ excessively",
         "origin": "modern-english"
     }, {
         "key": "re-MnE",
         "form-stem": "re",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ again",
         "origin": "modern-english"
     }, {
         "key": "self-",
         "form-stem": "self-",
         "type": "prefix",
-        "prefix-on": "verb",
+        "derive-from": "verb",
         "gloss": "%@ oneself",
         "requires": {
             "precedes": {

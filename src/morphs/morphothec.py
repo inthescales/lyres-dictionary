@@ -36,10 +36,10 @@ class Morphothec:
                     self.morphs_from[from_type].append(morph_key)
 
             elif morph_type in ["prefix", "prep"]:
-                if isinstance(morph["prefix-on"], str):
-                    before_types = [morph["prefix-on"]]
+                if isinstance(morph["derive-from"], str):
+                    before_types = [morph["derive-from"]]
                 else:
-                    before_types = morph["prefix-on"]
+                    before_types = morph["derive-from"]
 
                 for before_type in before_types:
                     if not before_type in self.morphs_before:

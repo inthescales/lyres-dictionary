@@ -24,7 +24,7 @@ def with_alternate_gloss(morph):
     if "form-canon" in morph.morph:
         new_dict["form-canon"] = morph.morph["form-canon"]
     if "tags" in morph.morph:
-        new_dict["tags"] = morph.morph["tags"]
+        new_dict["tags"] = morph.tags()
     new_dict["origin"] = morph.morph["origin"]
 
     if isinstance(morph.morph["gloss-alt"], list):
@@ -44,7 +44,7 @@ def with_alternate_form_and_gloss(morph, form):
     new_dict["form-final"] = form
     new_dict["origin"] = morph.morph["origin"]
     if "tags" in morph.morph:
-        new_dict["tags"] = morph.morph["tags"]
+        new_dict["tags"] = morph.tags()
     
     if isinstance(morph.morph["gloss-alt"], list):
         new_dict["gloss"] = random.choice(morph.morph["gloss-alt"])

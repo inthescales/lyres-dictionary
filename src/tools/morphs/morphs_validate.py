@@ -135,10 +135,10 @@ def validate_morph(morph):
             { "key": "derive-to", "values": root_types }
         ],
         "prep": [
-            { "key": "prefix-on", "values": { "one-or-many": root_types }  },
+            { "key": "derive-from", "values": { "one-or-many": root_types }  },
         ],
         "prefix": [
-            { "key": "prefix-on", "values": { "one-or-many": root_types }  },
+            { "key": "derive-from", "values": { "one-or-many": root_types }  },
         ]
     }
     if "type" in morph and morph["type"] in type_requirements:

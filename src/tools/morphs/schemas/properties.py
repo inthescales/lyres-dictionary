@@ -18,10 +18,8 @@ properties = [
     "declension",                 # Noun declension (used in Latin)
     "conjugation",                # Verb conjugation (used in Latin)
     "verb-class",                 # Verb class (used in Old English)
-    "prefix-on",                  # Preposition / Prefixdetermines what root types this can be prefixed to
-    "prefix-to",                  # Preposition / Prefixdetermines what type the outcome of this prefixing is
-    "derive-from",                # Type derive attaches to
-    "derive-to",                  # Type derive produces
+    "derive-from",                # Type that a derivational affix attaches to
+    "derive-to",                  # Type that a derivational affix produces
     "derive-participle",          # Participle type used by a suffix (used in Latin)
     "gloss",
     "gloss-alt",                  # Nonstandard glosses (e.g. historical)
