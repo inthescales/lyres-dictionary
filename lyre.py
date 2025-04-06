@@ -4,7 +4,7 @@ import sys
 
 import botbuddy
 
-import src.entry as entry
+import src.generation.entry as entry
 import src.evolutor.evolutor as evolutor
 
 from src.evolutor.engine.config import Config
@@ -104,6 +104,6 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             test_evolution(evolution_config["form"], evolution_config["language"])
         else:
             test_with_count(count)
-        
+
     elif mode == "analyze":
         analyze(count)
