@@ -99,21 +99,24 @@
     {
         "key": "uni-",
         "form-stem": "uni",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one %!sg",
         "origin": "latin"
     },
     {
         "key": "tri-",
         "form-stem": "tri",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "three %!pl",
         "origin": "latin"
     },
     {
         "key": "deci-",
         "form-stem": "deci",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "ten %!pl",
         "origin": "latin"
     },

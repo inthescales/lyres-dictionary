@@ -260,7 +260,7 @@ def transform_word(word, morphothec, is_single):
     # Numerical
     elif choice == "numerical":
         env = word.prefix_environment()
-        numbers = morphothec.filter_type("number", language)
+        numbers = morphothec.filter_prepends_to(current_type, language, { "has-tag": "numerical" })
         numbers = [num for num in numbers if Morph.with_key(num, morphothec).meets_requirements(env)]
 
         if len(numbers) > 0:

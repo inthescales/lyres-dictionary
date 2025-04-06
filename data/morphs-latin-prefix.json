@@ -43,14 +43,18 @@
     }, {
         "key": "bi-",
         "form-stem": "bi",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "two %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "centi-",
         "form-stem": "centi",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one-hundred %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "circum-",
@@ -136,8 +140,10 @@
     }, {
         "key": "deci-",
         "form-stem": "deci",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "ten %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "dis-",
@@ -162,8 +168,10 @@
     }, {
         "key": "duodeci-",
         "form-stem": "duodeci",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "twelve %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "ex-",
@@ -264,20 +272,26 @@
     }, {
         "key": "milli-",
         "form-stem": "milli",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one-thousand %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "multi-",
         "form-stem": "multi",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "many %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "noni-",
         "form-stem": "noni",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "nine %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "ob-",
@@ -297,14 +311,18 @@
     }, {
         "key": "octi-",
         "form-stem": "octi",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "eight %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "omni-",
         "form-stem": "omni",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "all %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "per-",
@@ -317,8 +335,10 @@
     }, {
         "key": "pluri-",
         "form-stem": "pluri",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "multiple %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "pre-",
@@ -352,14 +372,18 @@
     }, {
         "key": "quadri-",
         "form-stem": "quadri",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "four %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "quinti-",
         "form-stem": "quinti",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "five %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "re-",
@@ -400,14 +424,18 @@
     }, {
         "key": "septi-",
         "form-stem": "septi",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "seven %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "sexi-",
         "form-stem": "sexi",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "six %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "sub-",
@@ -479,20 +507,26 @@
     }, {
         "key": "tri-",
         "form-stem": "tri",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "three %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "undeci-",
         "form-stem": "undeci",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "eleven %!pl",
+        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "uni-",
         "form-stem": "uni",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one %!sg",
+        "tags": ["numerical"],
         "origin": "latin"
     }
 ]

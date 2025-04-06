@@ -68,6 +68,7 @@ tags = [
     "joining",                  # Verb semantics - joining or connecting two things into one
     "dividing",                 # Verb semantics - dividing one thing into two or more
     "sexual",                   # Verb semantics - may contain sexual content
+    "numerical",                # Prefix semantics - a numerical prefix (e.g. mono-, bi-, etc)
     "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
     "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Usage - does not count towards maximum morph count

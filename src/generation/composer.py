@@ -180,7 +180,7 @@ def get_definition(word):
         next_morph = env.next
 
         # Stack prepositions and prefixes for proper definition ordering
-        if morph.get_type() == "prep" or morph.get_type() == "prefix" or morph.get_type() == "number":
+        if morph.get_type() == "prep" or morph.get_type() == "prefix":
             prefix_stack.append([morph, env])
         else:
             definition = build_def(morph, last_morph, env, definition)
@@ -229,7 +229,7 @@ def get_joined_form(language, last_morph, morph, original, proposed):
 
         letter = addition[0]
 
-        if (not last_morph.get_type() == "prep" and not last_morph.get_type() == "prefix" and not last_morph.get_type() == "number"):
+        if (last_morph.get_type() not in ["prep", "prefix"]):
             addition = addition[1:]
         elif letter in ["a", "i", "u"]:
             addition = "-" + addition

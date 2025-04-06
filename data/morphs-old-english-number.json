@@ -3,118 +3,136 @@
         "key": "ān-",
         "form-raw": "ān",
         "form-canon": "one",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one %!sg",
+        "tags": ["numerical"],
         "origin": "old-english"
     }, {
         "key": "ehta-",
         "form-raw": "ehta",
         "form-canon": "eight",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "eight %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "feawer-",
         "form-raw": "feawer",
         "form-canon": "four",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "four %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "fīf-",
         "form-raw": "fīf",
         "form-canon": "five",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "five %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "hundred-",
         "form-raw": "hundred",
         "form-canon": "hundred",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one hundred %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "mæniġ-",
         "form-raw": "mæniġ",
         "form-canon": "many",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "many %pl",
+        "tags": ["numerical"],
         "origin": "old-english"
     }, {
         "key": "niġon-",
         "form-raw": "niġon",
         "form-canon": "nine",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "nine %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "seofon-",
         "form-raw": "seofon",
         "form-canon": "seven",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "seven %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "six-",
         "form-raw": "six",
         "form-canon": "six",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "six %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "tēn-",
         "form-raw": "tēn",
         "form-canon": "ten",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "ten %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "twā-",
         "form-raw": "twā",
         "form-canon": "two",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "two %pl",
+        "tags": ["numerical"],
         "origin": "old-english"
     }, {
         "key": "twēġ-",
         "form-raw": "twēġ",
         "form-canon": "tway",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "two %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "twēġen-",
         "form-raw": "twēġen",
         "form-canon": "twain",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "two %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "þrēo-",
         "form-raw": "þrēo",
         "form-canon": "three",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "three %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }, {
         "key": "þūsend-",
         "form-raw": "þūsend",
         "form-canon": "thousand",
-        "type": "number",
+        "type": "prefix",
+        "derive-from": "noun",
         "gloss": "one thousand %pl",
-        "tags": ["rare"],
+        "tags": ["numerical", "rare"],
         "origin": "old-english"
     }
 ]

@@ -8,7 +8,6 @@ morph_types = [
     "noun",
     "adj",
     "verb",
-    "number",
     "prep",
     "prefix",
     "suffix"
