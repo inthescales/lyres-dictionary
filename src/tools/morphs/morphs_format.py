@@ -4,7 +4,8 @@ import sys
 
 from collections import OrderedDict
 
-import src.tools.morphs.alphabetical as alphabetical
+import src.tools.morphs.sort_alphabetical as alphabetical
+import src.tools.morphs.sort_numerical as numerical
 import src.tools.morphs.morphs_files as file_tool
 
 from src.tools.morphs.schemas.properties import properties as properties_list
@@ -17,8 +18,11 @@ def spaces(depth):
     return " " * depth * indent_spaces
 
 # Sort given morphs alphabetically according to their keys
-def sort(morphs):
-    return alphabetical.key_sorted(morphs)
+def sort(filename, morphs):
+    if "number" in filename:
+        return numerical.num_sorted(morphs)
+    else:
+        return alphabetical.key_sorted(morphs)
 
 # Returns an ordered dict representing the morph, with its keys in schema-order
 def ordered_morph(morph):
@@ -199,7 +203,7 @@ def format_morphs(files, test):
         morphs = file_tool.get_morphs_from(file)
 
         # Sort morphs
-        morphs = sort(morphs)
+        morphs = sort(file, morphs)
 
         # Order morph properties
         morphs = [ordered_morph(m) for m in morphs]

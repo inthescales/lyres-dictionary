@@ -62,6 +62,11 @@ def get_priority(char, mapping):
     else:
         return len(priority_list)
 
+def get_sort_key(char):
+    global priority_map
+
+    return get_priority(char, priority_map)
+
 # Returns the given morphs sorted by key
 def key_sorted(morphs):
-    return sorted(morphs, key=lambda morph: [get_priority(char, priority_map) for char in morph["key"]])
+    return sorted(morphs, key=lambda morph: [get_sort_key(char) for char in morph["key"]])
