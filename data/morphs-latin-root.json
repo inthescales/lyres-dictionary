@@ -1690,14 +1690,6 @@
         "gloss": "sweet",
         "origin": "latin"
     }, {
-        "key": "duo",
-        "form-stem": "du",
-        "type": "noun",
-        "declension": 0,
-        "gloss": "two",
-        "tags": ["count", "abstract"],
-        "origin": "latin"
-    }, {
         "key": "durare",
         "form-stem-present": "dur",
         "form-stem-perfect": "durat",
@@ -6816,14 +6808,6 @@
         "gloss": "calm",
         "origin": "latin"
     }, {
-        "key": "tres",
-        "form-stem": "tri",
-        "type": "noun",
-        "declension": 0,
-        "gloss": "three",
-        "tags": ["count", "abstract", "number"],
-        "origin": "latin"
-    }, {
         "key": "trudere",
         "form-stem-present": "trud",
         "form-stem-perfect": "trus",
@@ -6889,14 +6873,6 @@
         "type": "adj",
         "declension": 3,
         "gloss": "vile",
-        "origin": "latin"
-    }, {
-        "key": "unus",
-        "form-stem": "un",
-        "type": "noun",
-        "declension": 0,
-        "gloss": "one",
-        "tags": ["uncountable", "abstract"],
         "origin": "latin"
     }, {
         "key": "urbs",

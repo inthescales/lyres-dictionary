@@ -41,22 +41,6 @@
         "origin": "latin",
         "notes": "need 'aspire' - cut before 'sp'"
     }, {
-        "key": "bi-",
-        "form-stem": "bi",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "two %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "centi-",
-        "form-stem": "centi",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "one-hundred %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
         "key": "circum-",
         "form-stem": "circum",
         "type": "prep",
@@ -138,14 +122,6 @@
         },
         "origin": "latin"
     }, {
-        "key": "deci-",
-        "form-stem": "deci",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "ten %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
         "key": "dis-",
         "form-stem": "dis",
         "form-stem-assim": "di",
@@ -165,14 +141,6 @@
         },
         "origin": "latin",
         "notes": "Assimilation concerns: digress vs disgregate? The common digress and digest make me lean that way."
-    }, {
-        "key": "duodeci-",
-        "form-stem": "duodeci",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "twelve %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
     }, {
         "key": "ex-",
         "form-stem": "ex",
@@ -270,30 +238,6 @@
         },
         "origin": "latin"
     }, {
-        "key": "milli-",
-        "form-stem": "milli",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "one-thousand %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "multi-",
-        "form-stem": "multi",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "many %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "noni-",
-        "form-stem": "noni",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "nine %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
         "key": "ob-",
         "form-stem": "ob",
         "form-stem-assim": "o",
@@ -309,36 +253,12 @@
         "origin": "latin",
         "notes": "need spelling change for ostentatious. Can find 'obc' but only in later French or scientific words (maybe add as a separate suffix). 'obf' appears, as in obfuscate, but seems rarer. Also see 'oflete' for multi-char-prefix variation. 'g' seems to go both ways."
     }, {
-        "key": "octi-",
-        "form-stem": "octi",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "eight %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "omni-",
-        "form-stem": "omni",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "all %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
         "key": "per-",
         "form-stem": "per",
         "type": "prep",
         "derive-from": "verb",
         "gloss-noun": "through %sg",
         "gloss-verb": "%@ through",
-        "origin": "latin"
-    }, {
-        "key": "pluri-",
-        "form-stem": "pluri",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "multiple %!pl",
-        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "pre-",
@@ -368,22 +288,6 @@
         "derive-from": "verb",
         "gloss-noun": "before %sg",
         "gloss-verb": "%@ forward",
-        "origin": "latin"
-    }, {
-        "key": "quadri-",
-        "form-stem": "quadri",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "four %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "quinti-",
-        "form-stem": "quinti",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "five %!pl",
-        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "re-",
@@ -420,22 +324,6 @@
         "derive-from": "verb",
         "gloss-noun": "apart from %sg",
         "gloss-verb": "%@ apart",
-        "origin": "latin"
-    }, {
-        "key": "septi-",
-        "form-stem": "septi",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "seven %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "sexi-",
-        "form-stem": "sexi",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "six %!pl",
-        "tags": ["numerical"],
         "origin": "latin"
     }, {
         "key": "sub-",
@@ -503,30 +391,6 @@
                 ]
             }
         },
-        "origin": "latin"
-    }, {
-        "key": "tri-",
-        "form-stem": "tri",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "three %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "undeci-",
-        "form-stem": "undeci",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "eleven %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "uni-",
-        "form-stem": "uni",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "one %!sg",
-        "tags": ["numerical"],
         "origin": "latin"
     }
 ]

@@ -1,0 +1,163 @@
+[
+    {
+        "key": "unus",
+        "form-stem": "un",
+        "type": "noun",
+        "declension": 0,
+        "gloss": "one",
+        "tags": ["uncountable", "abstract", "number"],
+        "origin": "latin"
+    }, {
+        "key": "duo",
+        "form-stem": "du",
+        "type": "noun",
+        "declension": 0,
+        "gloss": "two",
+        "tags": ["count", "abstract", "number"],
+        "origin": "latin"
+    }, {
+        "key": "tres",
+        "form-stem": "tri",
+        "type": "noun",
+        "declension": 0,
+        "gloss": "three",
+        "tags": ["count", "abstract", "number"],
+        "origin": "latin"
+    }, {
+        "key": "uni-",
+        "form-stem": "uni",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "one %!sg",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "bi-",
+        "form-stem": "bi",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "two %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "tri-",
+        "form-stem": "tri",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "three %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "quadri-",
+        "form-stem": "quadri",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "four %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "quinti-",
+        "form-stem": "quinti",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "five %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "sexi-",
+        "form-stem": "sexi",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "six %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "septi-",
+        "form-stem": "septi",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "seven %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "octi-",
+        "form-stem": "octi",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "eight %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "noni-",
+        "form-stem": "noni",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "nine %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "deci-",
+        "form-stem": "deci",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "ten %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "undeci-",
+        "form-stem": "undeci",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "eleven %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "duodeci-",
+        "form-stem": "duodeci",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "twelve %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "centi-",
+        "form-stem": "centi",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "one-hundred %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "milli-",
+        "form-stem": "milli",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "one-thousand %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "multi-",
+        "form-stem": "multi",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "many %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "omni-",
+        "form-stem": "omni",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "all %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
+        "key": "pluri-",
+        "form-stem": "pluri",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "multiple %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }
+]
