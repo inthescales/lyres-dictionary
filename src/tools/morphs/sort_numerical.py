@@ -40,6 +40,8 @@ number_priority_list = [
     "billion",
     "few",
     "many",
+    ["too few", "insufficient"],
+    ["too many", "excessive"],
     ["all", "every", "each"]
 ]
 

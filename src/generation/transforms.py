@@ -117,13 +117,13 @@ def transform_word(word, morphothec, is_single):
                 bag.append(("add_prep_prefix", 33))
 
     if not first_morph.get_type() == "prefix":
-        if len(morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })) > 0:
+        if len(morphothec.filter_prepends_to(current_type, language, { "and": [ { "has-type": "prefix" }, { "not": { "has-tag": "numerical" } }] })) > 0:
             if root_morph.has_tag("past-participle"):
                 bag.append(("add_prefix", 20))
             else:
                 bag.append(("add_prefix", 5))
 
-        if len(morphothec.filter_prepends_to(current_type, "modern-english", { "has-type": "prefix" })) > 0:
+        if len(morphothec.filter_prepends_to(current_type, "modern-english", { "and": [ { "has-type": "prefix" }, { "not": { "has-tag": "numerical" } }] })) > 0:
             bag.append(("add_modern_prefix", 5))
     
     if len(relational_suffixes) > 0 and word.size() == 1 and current_type == "noun":
@@ -224,7 +224,7 @@ def transform_word(word, morphothec, is_single):
     # Add Prefix
     elif choice == "add_prefix":
         env = word.prefix_environment()
-        prefixes = morphothec.filter_prepends_to(current_type, language, { "has-type": "prefix" })
+        prefixes = morphothec.filter_prepends_to(current_type, language, { "and": [ { "has-type": "prefix" }, { "not": { "has-tag": "numerical" } }] })
         prefixes = [pref for pref in prefixes if Morph.with_key(pref, morphothec).meets_requirements(env)]
 
         if len(prefixes) > 0:
@@ -237,7 +237,7 @@ def transform_word(word, morphothec, is_single):
     # Add Modern Prefix
     elif choice == "add_modern_prefix":
         env = word.prefix_environment()
-        prefixes = morphothec.filter_prepends_to(current_type, "modern-english", { "has-type": "prefix" })
+        prefixes = morphothec.filter_prepends_to(current_type, "modern-english", { "and": [ { "has-type": "prefix" }, { "not": { "has-tag": "numerical" } }] })
         prefixes = [pref for pref in prefixes if Morph.with_key(pref, morphothec).meets_requirements(env)]
 
         if len(prefixes) > 0:

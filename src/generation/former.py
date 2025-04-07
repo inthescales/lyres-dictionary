@@ -191,4 +191,4 @@ def gloss(morph, env):
         if relative and "gloss-" + relative.get_type() in morph_dict:
             return morph_dict["gloss-" + relative.get_type()]
     
-    Logger.error("failed to find gloss for " + morph_dict["key"])
+    Logger.error("failed to find gloss for " + morph_dict["key"] + ", joining to " + relative.get_key())
