@@ -5,7 +5,8 @@
         "type": "noun",
         "declension": 0,
         "gloss": "one",
-        "tags": ["uncountable", "abstract", "number"],
+        "suffixes": ["-al", "-ity"],
+        "tags": ["uncountable", "abstract", "number", "cardinal"],
         "origin": "latin"
     }, {
         "key": "duo",
@@ -13,7 +14,8 @@
         "type": "noun",
         "declension": 0,
         "gloss": "two",
-        "tags": ["count", "abstract", "number"],
+        "suffixes": ["-al", "-ity"],
+        "tags": ["count", "abstract", "number", "cardinal"],
         "origin": "latin"
     }, {
         "key": "tres",
@@ -21,7 +23,481 @@
         "type": "noun",
         "declension": 0,
         "gloss": "three",
-        "tags": ["count", "abstract", "number"],
+        "suffixes": ["-al"],
+        "tags": ["count", "abstract", "number", "cardinal"],
+        "origin": "latin",
+        "notes": "Other cardinals have '-ity' suffix, but I feel like there's a reason you don't see 'trity'"
+    }, {
+        "key": "quattuor",
+        "form-stem": "quadr",
+        "type": "noun",
+        "declension": 0,
+        "gloss": "four",
+        "suffixes": ["-al", "-ity"],
+        "tags": ["count", "abstract", "number", "cardinal", "rare"],
+        "origin": "latin",
+        "notes": "Treating this as a cardinal form. Basically all derived terms use 'quadr' form"
+    }, {
+        "key": "prima-ordinal",
+        "form-stem": "prim",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "first",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal"],
+        "origin": "latin"
+    }, {
+        "key": "secunda",
+        "form-stem": "secund",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "second",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal"],
+        "origin": "latin"
+    }, {
+        "key": "tertia",
+        "form-stem": "terti",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "third",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal"],
+        "origin": "latin"
+    }, {
+        "key": "quarta",
+        "form-stem": "quart",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "fourth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "quinta",
+        "form-stem": "quint",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "fifth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "sexta",
+        "form-stem": "sext",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sixth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "septima",
+        "form-stem": "septim",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "seventh",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "octava",
+        "form-stem": "octav",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "eighth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "nona",
+        "form-stem": "non",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "ninth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "decima",
+        "form-stem": "decim",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "tenth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "centesima",
+        "form-stem": "centesim",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "hundredth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "millesima",
+        "form-stem": "millesim",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "thousandth",
+        "suffixes": ["-al", "-ary", "-ity"],
+        "tags": ["numerical", "ordinal", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "singulae",
+        "form-stem": "singul",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "one",
+        "suffixes": ["-al", "-ity", "-ate-distributive"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin"
+    }, {
+        "key": "uni",
+        "form-stem": "un",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "one",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin",
+        "notes": "Technically a 'plurale tantum', but seems to work like a distributive in English"
+    }, {
+        "key": "binae",
+        "form-stem": "bin",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "two",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin"
+    }, {
+        "key": "ternae",
+        "form-stem": "tern",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "three",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin"
+    }, {
+        "key": "trinae",
+        "form-stem": "trin",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "three",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin",
+        "notes": "Technically a 'plurale tantum', but seems to work like a distributive in English"
+    }, {
+        "key": "quadrinae",
+        "form-stem": "quadrin",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "four",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin",
+        "notes": "Technically a 'plurale tantum', but seems to work like a distributive in English"
+    }, {
+        "key": "quaternae",
+        "form-stem": "quatern",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "four",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive"],
+        "origin": "latin"
+    }, {
+        "key": "quinae",
+        "form-stem": "quin",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "five",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "senae",
+        "form-stem": "sen",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "six",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "septeni",
+        "form-stem": "septen",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "seven",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "octonae",
+        "form-stem": "octon",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "eight",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "novenae",
+        "form-stem": "noven",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "nine",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "denae",
+        "form-stem": "den",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "ten",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "centenae",
+        "form-stem": "centen",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "hundred",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "millenae",
+        "form-stem": "millen",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "thousand",
+        "suffixes": ["-al", "-ity", "-ate-distributive", "-0-distributive-adj", "-0-distributive-noun"],
+        "tags": ["numerical", "distributive", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "simplex",
+        "form-stem": "simplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "onefold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative"],
+        "origin": "latin"
+    }, {
+        "key": "duplex",
+        "form-stem": "duplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "twofold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative"],
+        "origin": "latin"
+    }, {
+        "key": "triplex",
+        "form-stem": "triplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "threefold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative"],
+        "origin": "latin"
+    }, {
+        "key": "quadruplux",
+        "form-stem": "quadruplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "fourfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative"],
+        "origin": "latin"
+    }, {
+        "key": "quincuplex",
+        "form-stem": "quincuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "fivefold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "sextuplex",
+        "form-stem": "sextuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sixfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "septuplex",
+        "form-stem": "septuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sevenfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "octuplex",
+        "form-stem": "octuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "eightfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "nonuplex",
+        "form-stem": "nonuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "ninefold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "decuplex",
+        "form-stem": "decuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "tenfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "centuplex",
+        "form-stem": "centuplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "hundredfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "milliplex",
+        "form-stem": "milliplic",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "thousandfold",
+        "suffixes": ["-ity", "-ate", "-ate-multiplicative"],
+        "tags": ["numerical", "multiplicative", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "simpla",
+        "form-stem": "simpl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "onefold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional"],
+        "origin": "latin"
+    }, {
+        "key": "dupla",
+        "form-stem": "dupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "twofold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional"],
+        "origin": "latin"
+    }, {
+        "key": "tripla",
+        "form-stem": "tripl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "threefold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional"],
+        "origin": "latin"
+    }, {
+        "key": "quadrupla",
+        "form-stem": "quadrupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "fourfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional"],
+        "origin": "latin"
+    }, {
+        "key": "quincupla",
+        "form-stem": "quincupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "fivefold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "sextupla",
+        "form-stem": "sextupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sixfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "septupla",
+        "form-stem": "septupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "sevenfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "octupla",
+        "form-stem": "octupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "eightfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "nonupla",
+        "form-stem": "nonupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "ninefold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "decupla",
+        "form-stem": "decupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "tenfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "centupla",
+        "form-stem": "centupl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "hundredfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
+        "origin": "latin"
+    }, {
+        "key": "millipla",
+        "form-stem": "millipl",
+        "type": "adj",
+        "declension": 12,
+        "gloss": "thousandfold",
+        "suffixes": ["-ify", "-ity", "-ate"],
+        "tags": ["numerical", "proportional", "rare"],
         "origin": "latin"
     }, {
         "key": "uni-",
@@ -136,6 +612,14 @@
         "tags": ["numerical"],
         "origin": "latin"
     }, {
+        "key": "pluri-",
+        "form-stem": "pluri",
+        "type": "prefix",
+        "derive-from": "noun",
+        "gloss": "multiple %!pl",
+        "tags": ["numerical"],
+        "origin": "latin"
+    }, {
         "key": "multi-",
         "form-stem": "multi",
         "type": "prefix",
@@ -149,14 +633,6 @@
         "type": "prefix",
         "derive-from": "noun",
         "gloss": "all %!pl",
-        "tags": ["numerical"],
-        "origin": "latin"
-    }, {
-        "key": "pluri-",
-        "form-stem": "pluri",
-        "type": "prefix",
-        "derive-from": "noun",
-        "gloss": "multiple %!pl",
         "tags": ["numerical"],
         "origin": "latin"
     }

@@ -68,7 +68,12 @@ tags = [
     "joining",                  # Verb semantics - joining or connecting two things into one
     "dividing",                 # Verb semantics - dividing one thing into two or more
     "sexual",                   # Verb semantics - may contain sexual content
-    "numerical",                # Prefix semantics - a numerical prefix (e.g. mono-, bi-, etc)
+    "numerical",                # Number semantics - a numerical meaning (but not a cardinal number)
+    "cardinal",                 # Number semantics - a cardinal number (one, two, three, etc)
+    "ordinal",                  # Number semantics - an ordinal number (first, second, third, etc)
+    "distributive",             # Number semantics - a distributive number (as Latin unī, bīnī, ternī, etc)
+    "multiplicative",           # Number semantics - a multiplicative number (as Latin simplex, duplex, triplex, etc.)
+    "proportional",             # Number semantics - a proportional number (as Latin simplus, duplus, triplus, etc.)
     "no-head-joiner",           # Form - Doesn't take joining vowels on the front end
     "no-tail-joiner",           # Form - Doesn't take joining vowels on the back end
     "no-length",                # Usage - does not count towards maximum morph count

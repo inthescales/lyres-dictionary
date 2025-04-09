@@ -41,6 +41,27 @@
                     }
                 },
                 "gloss": "%part"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "cardinal"
+                    }
+                },
+                "gloss": "having %@ parts"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "ordinal"
+                    }
+                },
+                "gloss": "of the %@ order"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "distributive"
+                    }
+                },
+                "gloss": "having %@ parts, in groups of %@"
             }
         ],
         "origin": "latin"
@@ -105,6 +126,20 @@
                 },
                 "form-final": "iary",
                 "form-stem": "iari"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "ordinal"
+                    }
+                },
+                "gloss": "in the %@ place"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "distributive"
+                    }
+                },
+                "gloss": "having %@ parts, in groups of %@"
             }
         ],
         "origin": "latin"
@@ -141,7 +176,7 @@
         ],
         "tags": ["transitive", "no-gen"],
         "origin": "latin",
-        "notes": "3rd declension exception doesn't fit with 'humiliate'"
+        "notes": "3rd declension exception doesn't fit with 'humiliate'. Present form in 'duplicable' should be nil?"
     }, {
         "key": "-ate-bodypart",
         "form-stem": "at",
@@ -186,6 +221,29 @@
         ],
         "origin": "latin"
     }, {
+        "key": "-ate-distributive",
+        "form-stem": "at",
+        "form-final": "ate",
+        "type": "suffix",
+        "declension": 12,
+        "derive-from": "adj",
+        "derive-to": "adj",
+        "gloss": "arranged in %!pl",
+        "requires": {
+            "follows": {
+                "has-tag": "distributive"
+            }
+        },
+        "exception": [{
+            "case": {
+                "follows": {
+                    "has-key": "singulae"
+                }
+            },
+            "gloss": "appearing individually"
+        }],
+        "origin": "latin"
+    }, {
         "key": "-ate-frequentative",
         "form-stem": "at",
         "form-final": "ate",
@@ -198,6 +256,21 @@
         "requires": {
             "follows": {
                 "not": { "has-suffix": "at" }
+            }
+        },
+        "origin": "latin"
+    }, {
+        "key": "-ate-multiplicative",
+        "form-stem": "at",
+        "form-final": "ate",
+        "type": "suffix",
+        "declension": 12,
+        "derive-from": "adj",
+        "derive-to": "adj",
+        "gloss": "one of a %@ set",
+        "requires": {
+            "follows": {
+                "has-tag": "multiplicative"
             }
         },
         "origin": "latin"
@@ -699,6 +772,13 @@
                     }
                 },
                 "gloss": "the quality of %part"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-any-tags": ["cardinal", "ordinal", "distributive"]
+                    }
+                },
+                "gloss": "the quality of being %@"
             }
         ],
         "tags": ["mass", "abstract"],
@@ -1103,6 +1183,64 @@
             "gloss": "the arrangement of one's %@"
         }],
         "tags": ["mass", "abstract"],
+        "origin": "latin"
+    }, {
+        "key": "-0-distributive-adj",
+        "form-stem": "",
+        "form-final": "",
+        "type": "suffix",
+        "declension": 0,
+        "derive-from": "adj",
+        "derive-to": "adj",
+        "gloss": "arranged in %!pl",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix-template": ["VC", "Cl"]
+                    }
+                },
+                "form-stem": "",
+                "form-final": "e"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-key": "singulae"
+                    }
+                },
+                "gloss": "appearing individually"
+            }
+        ],
+        "tags": ["no-gen", "final"],
+        "origin": "latin"
+    }, {
+        "key": "-0-distributive-noun",
+        "form-stem": "",
+        "form-final": "",
+        "type": "suffix",
+        "declension": 0,
+        "derive-from": "adj",
+        "derive-to": "noun",
+        "gloss": "a set of %@",
+        "exception": [
+            {
+                "case": {
+                    "follows": {
+                        "has-suffix-template": ["VC", "Cl"]
+                    }
+                },
+                "form-stem": "",
+                "form-final": "e"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-key": "singulae"
+                    }
+                },
+                "gloss": "a lone individual"
+            }
+        ],
+        "tags": ["no-gen", "final"],
         "origin": "latin"
     }, {
         "key": "silent-agent",
