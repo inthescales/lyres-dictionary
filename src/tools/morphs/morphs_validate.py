@@ -3,6 +3,8 @@ import src.tools.morphs.morphs_files as file_tool
 from src.tools.morphs.schemas.properties import properties as valid_properties
 from src.tools.morphs.schemas.tags import tags as valid_tags
 from src.tools.morphs.schemas.tags import tag_dependency_map as tag_dependencies
+from src.tools.morphs.schemas.expression_keys import one_or_more, expression_value_types
+from src.tools.morphs.schemas.expression_keys import expression_keys as valid_expression_keys
 
 morph_types = [
     "noun",
@@ -113,6 +115,60 @@ def validate_morph(morph):
 
         return valid
 
+    # Validate the structure and value types of an expression (as in morph requirements and exceptions)
+    def validate_expression(expression):
+        valid = True
+
+        def print_name(t, plural=False):
+            overrides = { str: "string", int: "integer", list: "list", one_or_more: "one-or-list", dict: "expression dict" }
+            base_string = str(t[0])
+            if t[0] in overrides:
+                base_string = overrides[t[0]]
+
+            if plural:
+                base_string += "s"
+
+            if t[0] in [list, one_or_more]:
+                base_string += " of " + print_name([t[1]], plural=True)
+
+            return base_string
+
+        # Check that each expression contains only one key
+        if len(expression.items()) > 1:
+            errors.append("expressions may only have one key, but found key " + str(len(expression.items())) + ": " + str(expression))
+            valid = False
+
+        for key, value in expression.items():
+            # Check that only valid keys appear
+            if key not in valid_expression_keys:
+                errors.append("invalid expression key \"" + key + "\" in expression: " + str(expression))
+                valid = False
+
+            # Check the top-level value type
+            value_type = expression_value_types[key]
+            if type(value) != value_type[0] \
+                and not (value_type[0] == one_or_more and type(value) in [list, value_type[1]]):
+                errors.append("invalid value type for expression key \"" + key + "\" in expression: " + str(expression) +". Value should be " + print_name(value_type) + "")
+                valid = False
+
+            # Check the types of list members
+            if value_type[0] in [list, one_or_more] and type(value) == list:
+                subvalue_type = value_type[1]
+                for list_value in value:
+                    if type(list_value) != subvalue_type:
+                        errors.append("invalid expression value for key \"" + key + "\" in expression: " + str(expression) +". List entries should be " + print_name([value_type[1]], plural=True))
+                        valid = False
+
+            # Recurse on sub-expressions
+            if type(value) == dict:
+                valid = validate_expression(value) and valid
+            elif type(value) == list:
+                for subvalue in value:
+                    if type(subvalue) == dict:
+                        valid = validate_expression(subvalue) and valid
+
+        return valid
+
     valid = True
 
     # Properties required by all morphs
@@ -121,7 +177,7 @@ def validate_morph(morph):
         { "key": "type", "values": morph_types},
         { "key": "origin", "values": morph_origins }
     ]
-    valid = valid and evaluate_requirements(universal_requirements, morph)
+    valid = evaluate_requirements(universal_requirements, morph) and valid
 
     # Properties required by morphs of a certain type
     type_requirements = {
@@ -141,7 +197,7 @@ def validate_morph(morph):
         ]
     }
     if "type" in morph and morph["type"] in type_requirements:
-        valid = valid and evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
+        valid = evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"]) and valid
 
     # Properties required by morphs of a certain type and origin
     origin_type_requirements = {
@@ -202,7 +258,9 @@ def validate_morph(morph):
 
     if "origin" in morph and morph["origin"] in origin_type_requirements \
         and "type" in morph and morph["type"] in origin_type_requirements[morph["origin"]]:
-        valid = valid and evaluate_requirements(origin_type_requirements[morph["origin"]][morph["type"]], morph, " ".join(morph["origin"].split("-")) + " " + morph["type"])
+        requirements = origin_type_requirements[morph["origin"]][morph["type"]]
+        category = " ".join(morph["origin"].split("-")) + " " + morph["type"]
+        valid = evaluate_requirements(requirements, morph, category) and valid
 
     # Check key whitelist
     for key in morph:
@@ -225,6 +283,22 @@ def validate_morph(morph):
     #             for dependency in tag_dependencies[tag]:
     #                 if dependency not in morph["tags"]:
     #                     errors.append("Missing tag '" + dependency + "' required by tag '" + tag + "'")
+
+    # Validate requirements
+    if "requires" in morph:
+        for referent in ["follows", "precedes"]:
+            if referent in morph["requires"]:
+                valid = validate_expression(morph["requires"][referent]) and valid
+
+    # Validate exceptions
+    if "exception" in morph:
+        for exception in morph["exception"]:
+            if not "case" in exception:
+                errors.append("Exception missing 'case': " + str(exception))
+
+            for referent in ["follows", "precedes"]:
+                if referent in exception["case"]:
+                    valid = validate_expression(exception["case"][referent]) and valid
 
     # Output
     if len(errors) > 0:

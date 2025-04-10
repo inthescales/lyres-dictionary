@@ -6,6 +6,7 @@ from src.utils.logging import Logger
 
 def evaluate_expression(expression, referent):
     if len(expression.keys()) != 1:
+        # Can remove this now that validation covers it
         Logger.error("Expression dict, must have exactly one key")
         Logger.error(" - " + str(expression))
         sys.exit(1)
