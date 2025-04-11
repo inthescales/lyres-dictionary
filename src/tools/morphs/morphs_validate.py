@@ -1,25 +1,10 @@
 import src.tools.morphs.morphs_files as file_tool
 
+from src.tools.morphs.expression_validation import validate_expression
 from src.tools.morphs.schemas.properties import properties as valid_properties
 from src.tools.morphs.schemas.tags import tags as valid_tags
 from src.tools.morphs.schemas.tags import tag_dependency_map as tag_dependencies
-from src.tools.morphs.schemas.expression_keys import one_or_more, expression_value_types
-from src.tools.morphs.schemas.expression_keys import expression_keys as valid_expression_keys
-
-morph_types = [
-    "noun",
-    "adj",
-    "verb",
-    "prep",
-    "prefix",
-    "suffix"
-]
-
-root_types = [
-    "noun",
-    "adj",
-    "verb"
-]
+from src.tools.morphs.schemas.types import morph_types, root_types
 
 morph_origins = [
     "latin",
@@ -112,60 +97,6 @@ def validate_morph(morph):
                 valid = evaluate_key(requirement, morph, True, category) and valid
             else:
                 errors.append("unrecognized validation requirement type: " + str(requirement))
-
-        return valid
-
-    # Validate the structure and value types of an expression (as in morph requirements and exceptions)
-    def validate_expression(expression):
-        valid = True
-
-        def print_name(t, plural=False):
-            overrides = { str: "string", int: "integer", list: "list", one_or_more: "one-or-list", dict: "expression dict" }
-            base_string = str(t[0])
-            if t[0] in overrides:
-                base_string = overrides[t[0]]
-
-            if plural:
-                base_string += "s"
-
-            if t[0] in [list, one_or_more]:
-                base_string += " of " + print_name([t[1]], plural=True)
-
-            return base_string
-
-        # Check that each expression contains only one key
-        if len(expression.items()) > 1:
-            errors.append("expressions may only have one key, but found key " + str(len(expression.items())) + ": " + str(expression))
-            valid = False
-
-        for key, value in expression.items():
-            # Check that only valid keys appear
-            if key not in valid_expression_keys:
-                errors.append("invalid expression key \"" + key + "\" in expression: " + str(expression))
-                valid = False
-
-            # Check the top-level value type
-            value_type = expression_value_types[key]
-            if type(value) != value_type[0] \
-                and not (value_type[0] == one_or_more and type(value) in [list, value_type[1]]):
-                errors.append("invalid value type for expression key \"" + key + "\" in expression: " + str(expression) +". Value should be " + print_name(value_type) + "")
-                valid = False
-
-            # Check the types of list members
-            if value_type[0] in [list, one_or_more] and type(value) == list:
-                subvalue_type = value_type[1]
-                for list_value in value:
-                    if type(list_value) != subvalue_type:
-                        errors.append("invalid expression value for key \"" + key + "\" in expression: " + str(expression) +". List entries should be " + print_name([value_type[1]], plural=True))
-                        valid = False
-
-            # Recurse on sub-expressions
-            if type(value) == dict:
-                valid = validate_expression(value) and valid
-            elif type(value) == list:
-                for subvalue in value:
-                    if type(subvalue) == dict:
-                        valid = validate_expression(subvalue) and valid
 
         return valid
 
@@ -288,7 +219,7 @@ def validate_morph(morph):
     if "requires" in morph:
         for referent in ["follows", "precedes"]:
             if referent in morph["requires"]:
-                valid = validate_expression(morph["requires"][referent]) and valid
+                valid = validate_expression(morph["requires"][referent], errors) and valid
 
     # Validate exceptions
     if "exception" in morph:
@@ -298,7 +229,7 @@ def validate_morph(morph):
 
             for referent in ["follows", "precedes"]:
                 if referent in exception["case"]:
-                    valid = validate_expression(exception["case"][referent]) and valid
+                    valid = validate_expression(exception["case"][referent], errors) and valid
 
     # Output
     if len(errors) > 0:

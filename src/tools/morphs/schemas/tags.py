@@ -54,6 +54,7 @@ tags = [
     "time-of-year",             # Noun semantics - a time of the year (e.g. winter, lent)
     "measure",                  # Noun semantics - a unit of measure
     "number",                   # Noun semantics - a number (used as a noun)
+    "past-participle",          # Adjective morphology - the 'adjective' is the past participle of a verb
     "superlative",              # Adjective morphology - a superlative
     "character",                # Adjective semantics - descriptor of a person's character
     "a-prefix",                 # Verb lexical - can take the OE 'ā-' prefix without change in meaning
