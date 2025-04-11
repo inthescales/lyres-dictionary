@@ -1,14 +1,5 @@
-class one_or_more:
-    def __init__(self):
-        return
+from src.tools.morphs.type_validation import one_or_more, tag, mtype
 
-class tag:
-    def __init__(self):
-        return
-
-class mtype:
-    def __init__(self):
-        return
                                 # ARGUMENT TYPE             EVALUATION RESULT
 expression_schema = [
     ["or",                      [list, dict]],              # true if any expression in list evaluates true
