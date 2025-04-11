@@ -17,13 +17,13 @@ def validate_morph(morph):
     errors = []
 
     # Returns true if the key and optional value type are found by the given morph.
-    # key_requiredindicates whether errors should be logged if the given key is missing
+    # key_required indicates whether errors should be logged if the given key is missing
     # Clause format:
-    #key                             valid if the key exists in the morph
-    #values
-    #  list                          valid if the key's value is any of the elements in the list
-    #  dict { "one-or-many": [list] }valid if the key's value is one of the elements in the list, or a list
-    #                                      all of whose contents are in the given list
+    # - key                                 valid if the key exists in the morph
+    # - values:
+    #    - list                             valid if the key's value is any of the elements in the list
+    #    - dict { "one-or-many": [list] }   valid if the key's value is one of the elements in the list, or a list
+    #                                       all of whose contents are in the given list
     def evaluate_key(clause, morph, key_required=True, category=None):
         key = clause["key"]
         if key not in morph:
