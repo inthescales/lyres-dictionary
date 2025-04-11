@@ -1,4 +1,4 @@
-from src.tools.morphs.type_validation import one_or_more, tag, mtype, mprop
+from src.tools.morphs.type_validation import one_or_more, tag, mtype, mprop, ValueType
 
                                 # ARGUMENT TYPE             EVALUATION RESULT
 expression_schema = [
@@ -28,4 +28,9 @@ expression_schema = [
 expression_keys = [x[0] for x in expression_schema]
 expression_value_types = {}
 for entry in expression_schema:
-    expression_value_types[entry[0]] = entry[1]
+    if len(entry[1]) == 1:
+        vtype = ValueType(entry[1][0])
+    else:
+        vtype = ValueType(entry[1][0], entry[1][1])
+
+    expression_value_types[entry[0]] = vtype

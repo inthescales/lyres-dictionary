@@ -100,15 +100,13 @@ def validate_morph(morph):
 
         return valid
 
-    valid = True
-
     # Properties required by all morphs
     universal_requirements = [
         { "key": "key" },
         { "key": "type", "values": morph_types},
         { "key": "origin", "values": morph_origins }
     ]
-    valid = evaluate_requirements(universal_requirements, morph) and valid
+    evaluate_requirements(universal_requirements, morph)
 
     # Properties required by morphs of a certain type
     type_requirements = {
@@ -128,7 +126,7 @@ def validate_morph(morph):
         ]
     }
     if "type" in morph and morph["type"] in type_requirements:
-        valid = evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"]) and valid
+        evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
 
     # Properties required by morphs of a certain type and origin
     origin_type_requirements = {
@@ -191,20 +189,18 @@ def validate_morph(morph):
         and "type" in morph and morph["type"] in origin_type_requirements[morph["origin"]]:
         requirements = origin_type_requirements[morph["origin"]][morph["type"]]
         category = " ".join(morph["origin"].split("-")) + " " + morph["type"]
-        valid = evaluate_requirements(requirements, morph, category) and valid
+        evaluate_requirements(requirements, morph, category)
 
     # Check key whitelist
     for key in morph:
         if not key in valid_properties:
             errors.append("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
-            valid = False
 
     # Check tag whitelist
     if "tags" in morph:
         for tag in morph["tags"]:
             if not tag in valid_tags:
                 errors.append("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
-                valid = False
 
     # Check tag dependencies
     # TODO: Reenable this after having a chance to revise tags
@@ -219,7 +215,7 @@ def validate_morph(morph):
     if "requires" in morph:
         for referent in ["follows", "precedes"]:
             if referent in morph["requires"]:
-                valid = validate_expression(morph["requires"][referent], errors) and valid
+                errors += validate_expression(morph["requires"][referent])
 
     # Validate exceptions
     if "exception" in morph:
@@ -229,7 +225,7 @@ def validate_morph(morph):
 
             for referent in ["follows", "precedes"]:
                 if referent in exception["case"]:
-                    valid = validate_expression(exception["case"][referent], errors) and valid
+                    errors += validate_expression(exception["case"][referent])
 
     # Output
     if len(errors) > 0:
@@ -241,7 +237,7 @@ def validate_morph(morph):
         for error in errors:
             print(" - " + error)
 
-    return valid
+    return len(errors) == 0
 
 def validate_morphs(files):
     # Read in morphs
