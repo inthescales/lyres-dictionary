@@ -1,8 +1,7 @@
-from src.tools.morphs.type_validation import type_match, print_name, one_or_more
+from src.tools.morphs.type_validation import type_match, type_name, one_or_more
 
 from src.tools.morphs.schemas.expression_keys import expression_value_types
 from src.tools.morphs.schemas.expression_keys import expression_keys as valid_expression_keys
-
 
 # Validate the structure and value types of an expression (as in morph requirements and exceptions)
 def validate_expression(expression, errors):
@@ -19,19 +18,16 @@ def validate_expression(expression, errors):
             errors.append("invalid expression key \"" + key + "\" in expression: " + str(expression))
             valid = False
 
-        # valid = type_match(value, expression_value_types[key], key, expression, errors)
+        # Call type validation
+        type_schema = expression_value_types[key]
+        expected_type = type_schema[0]
+        expected_subtype = None
+        if len(type_schema) > 1:
+            expected_subtype = type_schema[1]
 
-        expected_type = expression_value_types[key]
-        if not type_match(value, expected_type[0], errors) \
-            and not (expected_type[0] == one_or_more and (type(value) == list or type_match(value, expected_type[1], errors))):
-            errors.append("invalid value type for expression key \"" + key + "\" in expression: " + str(expression) +". Value should be " + print_name(expected_type) + "")
-            valid = False        
-
-        if expected_type[0] in [list, one_or_more] and type(value) == list:
-            for list_value in value:
-                if not type_match(list_value, expected_type[1], errors):
-                    errors.append("invalid expression value for key \"" + key + "\" in expression: " + str(expression) +". List entries should be " + print_name([expected_type[1]], plural=True))
-                    valid = False
+        type_errors = type_match(value, expected_type, expected_subtype, key, expression)
+        valid = (len(type_errors) == 0) and valid
+        errors += type_errors
 
         # Recurse on sub-expressions
         if type(value) == dict:

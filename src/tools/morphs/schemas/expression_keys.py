@@ -1,4 +1,4 @@
-from src.tools.morphs.type_validation import one_or_more, tag, mtype
+from src.tools.morphs.type_validation import one_or_more, tag, mtype, mprop
 
                                 # ARGUMENT TYPE             EVALUATION RESULT
 expression_schema = [
@@ -7,7 +7,7 @@ expression_schema = [
     ["not",                     [dict]],                    # true if the expression evaluates false
     ["has-key",                 [one_or_more, str]],        # true if the morph's key matches the given string, or is in the list
     ["has-type",                [one_or_more, mtype]],        # true if the morph's type is equal to the string, or is in the list
-    ["has-property",            [str]],                     # true if the morph contains a value for the given property
+    ["has-property",            [mprop]],                   # true if the morph contains a value for the given property
     ["has-tag",                 [tag]],                     # true if the morph contains the given tag
     ["has-all-tags",            [list, tag]],               # true if the morph contains all of the given tags
     ["has-any-tags",            [list, tag]],               # true if the morph contains any of the given tags
