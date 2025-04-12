@@ -2,20 +2,14 @@ import src.tools.morphs.morphs_files as file_tool
 
 from src.tools.morphs.validation.expression_validation import validate_expression
 from src.tools.morphs.validation.property_validation import validate_properties
+from src.tools.morphs.schemas.tags import tags as valid_tags
 from src.tools.morphs.schemas.tags import tag_dependency_map as tag_dependencies
 
 def validate_morph(morph):
     errors = []
 
+    # Validate properties
     errors += validate_properties(morph)
-    # Check tag dependencies
-    # TODO: Reenable this after having a chance to revise tags
-    # if "tags" in morph:
-    #     for tag in morph["tags"]:
-    #         if tag in tag_dependencies:
-    #             for dependency in tag_dependencies[tag]:
-    #                 if dependency not in morph["tags"]:
-    #                     errors.append("Missing tag '" + dependency + "' required by tag '" + tag + "'")
 
     # Validate requirements
     if "requires" in morph:
@@ -32,6 +26,21 @@ def validate_morph(morph):
             for referent in ["follows", "precedes"]:
                 if referent in exception["case"]:
                     errors += validate_expression(exception["case"][referent])
+
+    # Check tag whitelist
+    if "tags" in morph:
+        for tag in morph["tags"]:
+            if not tag in valid_tags:
+                errors.append("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
+
+    # Check tag dependencies
+    # TODO: Reenable this after having a chance to revise tags
+    # if "tags" in morph:
+    #     for tag in morph["tags"]:
+    #         if tag in tag_dependencies:
+    #             for dependency in tag_dependencies[tag]:
+    #                 if dependency not in morph["tags"]:
+    #                     errors.append("Missing tag '" + dependency + "' required by tag '" + tag + "'")
 
     # Output
     if len(errors) > 0:
