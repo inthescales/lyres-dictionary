@@ -1,4 +1,4 @@
-from src.tools.morphs.type_validation import one_or_more, tag, mtype, mprop, ValueType
+from src.tools.morphs.validation.type_validation import one_or_more, tag, mtype, mprop, ValueType
 
                                 # ARGUMENT TYPE             EVALUATION RESULT
 expression_schema = [
