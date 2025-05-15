@@ -4,15 +4,10 @@
         "form-stem": "ad",
         "form-final": "ad",
         "type": "suffix",
-        "derive-from": "noun",
+        "derive-from": "number",
         "derive-to": "noun",
         "gloss": "a group of %@",
         "suffixes": ["-ic"],
-        "requires": {
-            "follows": {
-                "has-tag": "number"
-            }
-        },
         "tags": ["mass", "abstract"],
         "origin": "greek"
     }, {

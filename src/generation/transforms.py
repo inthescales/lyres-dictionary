@@ -47,6 +47,7 @@ def get_root(language, expression_weights, morphothec):
     morph = random.choice(choices)
     return Morph(morph)
 
+# Get a random root from the given language, weighted by type count
 def get_root_by_type(language,  morphothec):
     bag = [(t, morphothec.root_count(language=language, type=t)) for t in ["noun", "adj", "verb", "number"]]
     type = helpers.choose_bag(bag)

@@ -75,7 +75,6 @@ class Morphothec:
 
         # Read morphs from files
         for file in files:
-            
             errors = 0
             
             with open(file) as morph_data:

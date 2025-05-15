@@ -29,18 +29,35 @@
         "form-stem": "arch",
         "form-final": "arch",
         "type": "suffix",
-        "derive-from": "noun",
+        "derive-from": ["noun", "number"],
         "derive-to": "noun",
         "gloss": "rule by %pl",
         "suffixes": ["greek-silent-agent", "-ic-character", "-y-passthrough"],
-        "exception": [{
-            "case": {
-                "precedes": {
-                    "has-key": "greek-silent-agent"
-                }
-            },
-            "gloss": "[rule] or [oversee] %pl"
-        }],
+        "requires": {
+            "follows": {
+                "or": [
+                    { "not": { "has-type": "number" } },
+                    { "has-tag": "cardinal" }
+                ]
+            }
+        },
+        "exception": [
+            {
+                "case": {
+                    "precedes": {
+                        "has-key": "greek-silent-agent"
+                    }
+                },
+                "gloss": "[rule] or [oversee] %pl"
+            }, {
+                "case": {
+                    "precedes": {
+                        "has-tag": "cardinal"
+                    }
+                },
+                "gloss": "rule by %@"
+            }
+        ],
         "tags": ["mass", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
