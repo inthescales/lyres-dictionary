@@ -27,9 +27,11 @@ def seed_word(word, morphothec):
     choice = helpers.choose_bag(bag)
 
     if choice == "latin":
-        root = get_root_by_type(choice, morphothec)
+        weights = { "number": 0.5 }
+        root = get_root_by_type(choice, weights, morphothec)
     elif choice == "greek":
-        root = get_root_by_type(choice, morphothec)
+        weights = { "number": 0.8 }
+        root = get_root_by_type(choice, weights, morphothec)
     elif choice == "old-english":
         expressions = [
             ({ "has-tag": "speculative"}, 2),
@@ -48,8 +50,14 @@ def get_root(language, expression_weights, morphothec):
     return Morph(morph)
 
 # Get a random root from the given language, weighted by type count
-def get_root_by_type(language,  morphothec):
-    bag = [(t, morphothec.root_count(language=language, type=t)) for t in ["noun", "adj", "verb", "number"]]
+def get_root_by_type(language, type_weights, morphothec):
+    def weight_for(t):
+        if t in type_weights:
+            return type_weights[t]
+        else:
+            return 1
+
+    bag = [(t, int(morphothec.root_count(language=language, type=t) * weight_for(t))) for t in ["noun", "adj", "verb", "number"]]
     type = helpers.choose_bag(bag)
     choices = morphothec.filter_type(type, language)
     key = random.choice(choices)
