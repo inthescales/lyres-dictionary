@@ -52,7 +52,7 @@ class Morphothec:
 
                 self.type_morphs[morph_type].append(morph_key)
 
-                if morph_type in ["noun", "adj", "verb"]:
+                if morph_type in ["noun", "adj", "verb", "number"]:
                     self.roots.append(morph)
 
 
@@ -152,12 +152,25 @@ class Morphothec:
         
         return selected
 
-    def root_count_for_language(self, language):
-        if not language in self.languages:
-            Logger.error("language \"" + language + "\" not found.")
-            return 0
-                  
-        return len(self.languages[language].roots)
+    def root_count(self, language=None, type=None, expression=None):
+        if language != None:
+            languages = [language]
+        else:
+            languages = self.languages.keys()
+
+        count = 0
+
+        for language in languages:
+            for root in self.languages[language].roots:
+                if type != None and root["type"] != type:
+                    continue
+
+                if expression == None:
+                    count += 1
+                elif expressions.evaluate_expression(expression, root):
+                    count += 1
+
+        return count
 
 # Global instance
 
