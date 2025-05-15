@@ -29,7 +29,8 @@ properties = [
                                   # Derive: Gloss used in relative constructs",
     "gloss-adj",                  # Gloss used when derive is attached to adjective.
     "gloss-noun",                 # Gloss used when preposition attaches to noun in relative construct
-    "gloss-verb",                 # Gloss used when preposition or derive is attached to verb
+    "gloss-verb",                 # Gloss used when preposition or affix is attached to verb
+    "gloss-number",               # Gloss used when affix is attached to number
     "gloss-state",                # Adjective gloss associated with a stative verb
     "gloss-tool",                 # Verb gloss associated with a tool noun
     "gloss-animal",               # Verb gloss associated with an animal noun

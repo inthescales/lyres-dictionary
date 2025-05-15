@@ -5,11 +5,19 @@
         "form-final": "al",
         "type": "suffix",
         "declension": 3,
-        "derive-from": "noun",
+        "derive-from": ["noun", "number"],
         "derive-to": "adj",
         "gloss": "of or relating to %pl",
         "gloss-relative": "%@",
         "suffixes": ["-ity", "-ize"],
+        "requires": {
+            "follows": {
+                "or": [
+                    { "not": { "has-type": "number" } },
+                    { "has-any-tags": ["cardinal", "ordinal", "distributive"] }
+                ]
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -61,7 +69,8 @@
                         "has-tag": "distributive"
                     }
                 },
-                "gloss": "having %@ parts, in groups of %@"
+                "gloss": "having %@ parts, in groups of %@",
+                "notes": "TODO: Something to keep 'parts' singular if the value is one"
             }
         ],
         "origin": "latin"
@@ -104,11 +113,19 @@
         "form-final": "ary",
         "type": "suffix",
         "declension": 12,
-        "derive-from": "noun",
+        "derive-from": ["noun", "number"],
         "derive-to": "adj",
         "gloss": "pertaining to %pl",
         "gloss-relative": "%@",
         "suffixes": ["-ity"],
+        "requires": {
+            "follows": {
+                "or": [
+                    { "not": { "has-type": "number" } },
+                    { "has-any-tags": ["ordinal", "distributive"] }
+                ]
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -149,9 +166,17 @@
         "form-final": "ate",
         "type": "suffix",
         "conjugation": 1,
-        "derive-from": ["noun", "adj"],
+        "derive-from": "number",
         "derive-to": "verb",
         "gloss": "[cause] to be %@",
+        "requires": {
+            "follows": {
+                "or": [
+                    { "not": { "has-type": "number" } },
+                    { "has-any-tags": ["multiplicative", "proportional"] }
+                ]
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -174,9 +199,9 @@
                 "form-final": "itate"
             }
         ],
-        "tags": ["transitive", "no-gen"],
+        "tags": ["transitive"],
         "origin": "latin",
-        "notes": "3rd declension exception doesn't fit with 'humiliate'. Present form in 'duplicable' should be nil?"
+        "notes": "3rd declension exception doesn't fit with 'humiliate'. Present form in 'duplicable' should be nil? - Was no-gen noun/adj/number, but opening it just for numbers"
     }, {
         "key": "-ate-bodypart",
         "form-stem": "at",
@@ -226,7 +251,7 @@
         "form-final": "ate",
         "type": "suffix",
         "declension": 12,
-        "derive-from": "adj",
+        "derive-from": "number",
         "derive-to": "adj",
         "gloss": "arranged in %!pl",
         "requires": {
@@ -265,7 +290,7 @@
         "form-final": "ate",
         "type": "suffix",
         "declension": 12,
-        "derive-from": "adj",
+        "derive-from": "number",
         "derive-to": "adj",
         "gloss": "one of a %@ set",
         "requires": {
@@ -741,10 +766,20 @@
         "form-final": "ity",
         "type": "suffix",
         "declension": 3,
-        "derive-from": ["noun", "adj"],
+        "derive-from": ["noun", "adj", "number"],
         "derive-to": "noun",
         "gloss": "the quality of being %sg",
-        "suffixes": ["-ous"],
+        "suffixes": [],
+        "requires": {
+            "follows": {
+                "not": {
+                    "and": [
+                        { "syllable-count": 1 },
+                        { "has-suffix": "i" }
+                    ]
+                }
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -775,7 +810,7 @@
             }, {
                 "case": {
                     "follows": {
-                        "has-any-tags": ["cardinal", "ordinal", "distributive"]
+                        "has-type": "number"
                     }
                 },
                 "gloss": "the quality of being %@"
@@ -1190,9 +1225,14 @@
         "form-final": "",
         "type": "suffix",
         "declension": 0,
-        "derive-from": "adj",
+        "derive-from": "number",
         "derive-to": "adj",
         "gloss": "arranged in %!pl",
+        "requires": {
+            "follows": {
+                "has-tag": "distributive"
+            }
+        },
         "exception": [
             {
                 "case": {
@@ -1219,9 +1259,14 @@
         "form-final": "",
         "type": "suffix",
         "declension": 0,
-        "derive-from": "adj",
+        "derive-from": "number",
         "derive-to": "noun",
         "gloss": "a set of %@",
+        "requires": {
+            "follows": {
+                "has-tag": "distributive"
+            }
+        },
         "exception": [
             {
                 "case": {

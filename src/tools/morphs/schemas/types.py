@@ -11,5 +11,6 @@ morph_types = [
 root_types = [
     "noun",
     "adj",
-    "verb"
+    "verb",
+    "number"
 ]

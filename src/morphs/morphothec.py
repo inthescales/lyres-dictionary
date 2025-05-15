@@ -103,6 +103,15 @@ class Morphothec:
                 if errors > 0:
                     Logger.error("morphothec validation found " + str(errors) + " errors")
                     exit(0)
+
+    def filter(self, language, expression):
+        selected = []
+        for morph in self.languages[language].roots:
+            if expressions.evaluate_expression(expression, morph):
+                selected.append(morph)
+
+        return selected
+
     
     def filter_type(self, morph_type, language, morph_filter=None):
         if morph_filter is None:
@@ -112,22 +121,6 @@ class Morphothec:
         for morph in self.languages[language].type_morphs[morph_type]:
             if expressions.evaluate_expression(morph_filter, self.morph_for_key[morph]):
                 selected.append(morph)
-        
-        return selected
-
-    # TODO: Store morphs by frequency if this turns out to be useful
-    def filter_freq(self, morph_freq, language, morph_filter=None):
-        selected = []
-        for morph in self.languages[language].roots:
-            if morph_freq == "speculative":
-                if "tags" in morph and "speculative" in morph["tags"]:
-                    selected.append(morph["key"])
-            elif morph_freq == "obscure":
-                if "tags" in morph and "obscure" in morph["tags"]:
-                    selected.append(morph["key"])
-            elif morph_freq == "common":
-                if "tags" not in morph or ("speculative" not in morph["tags"] and "obscure" not in morph["tags"]):
-                    selected.append(morph["key"])
         
         return selected
 

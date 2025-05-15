@@ -74,7 +74,7 @@ def type_name(expected, plural=False):
     if plural:
         base_string += "s"
 
-    if expected.type in [list, one_or_more]:
+    if expected.subtype != None:
         base_string += " of " + type_name(expected.sub_as_main, plural=True)
 
     return base_string
@@ -115,7 +115,7 @@ def type_match(value, expected, key=None, expression=None, is_member=False):
             errors.append("invalid value type for key \"" + key + "\" in expression: " + str(expression) +". List entries should be " + type_name(expected, plural=True))
 
     # Check matches for collection members
-    if expected.type in [list, one_or_more] and type(value) == list:
+    if expected.subtype != None and type(value) == list:
         for member in value:
             errors += type_match(member, expected.sub_as_main, key, expression, True)
 

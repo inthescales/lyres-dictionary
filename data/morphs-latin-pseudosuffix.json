@@ -156,11 +156,20 @@
         "form-final": "ify",
         "type": "suffix",
         "conjugation": 1,
-        "derive-from": ["noun", "adj"],
+        "derive-from": ["noun", "adj", "number"],
         "derive-to": "verb",
         "gloss-relative": "[make] %@",
         "gloss-adj": "[make] %@",
         "gloss-noun": "[make] %sg",
+        "gloss-number": "[multiply] %@",
+        "requires": {
+            "follows": {
+                "or": [
+                    { "not": { "has-type": "number" } },
+                    { "has-tag": "proportional" }
+                ]
+            }
+        },
         "exception": [
             {
                 "case": {

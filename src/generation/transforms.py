@@ -17,58 +17,44 @@ import src.evolutor.evolutor as evolutor
 from src.evolutor.engine.config import Config
 
 def seed_word(word, morphothec):
-    bag = [
-        ("latin", morphothec.root_count_for_language("latin")),
-        ("greek", morphothec.root_count_for_language("greek")),
-        ("old-english", int(morphothec.root_count_for_language("old-english") * 0.5))
+    languages_and_weights = [
+        ["latin", 1],
+        ["greek", 1],
+        ["old-english", 0.5]
     ]
+
+    bag = [(language, int(morphothec.root_count_for_language(language) * weight)) for language, weight in languages_and_weights]
     choice = helpers.choose_bag(bag)
+
     if choice == "latin":
-        word.morphs = [get_latin_root(morphothec)]
+        expressions = [
+            ({ "has-type": "noun"}, 3),
+            ({ "has-type": "adj"}, 3),
+            ({ "has-type": "verb"}, 5)
+        ]
     elif choice == "greek":
-        word.morphs = [get_greek_root(morphothec)]
+        expressions = [
+            ({ "has-type": "noun"}, 3),
+            ({ "has-type": "adj"}, 1),
+            ({ "has-type": "verb"}, 3)
+        ]
     elif choice == "old-english":
-        word.morphs = [get_old_english_root(morphothec)]
+        expressions = [
+            ({ "has-tag": "speculative"}, 2),
+            ({ "has-tag": "obscure"}, 2),
+            ({ "not": { "has-any-tags": ["speculative", "obscure"] } }, 1)
+        ]
 
-def get_latin_root(morphothec):
+    root = get_root(choice, expressions, morphothec)
+    word.morphs = [root]
 
-    bag = [
-        ("noun", 3),
-        ("adj", 3),
-        ("verb", 5)
-    ]
+# Get a random root from the given language, randomly choosing a filter by weight
+def get_root(language, expression_weights, morphothec):
+    expression = helpers.choose_bag(expression_weights)
+    choices = morphothec.filter(language, expression)
+    morph = random.choice(choices)
+    return Morph(morph)
 
-    type_ = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type_, "latin"))
-    morph = Morph.with_key(key, morphothec)
-    return morph
-
-def get_greek_root(morphothec):
-
-    bag = [
-        ("noun", 3),
-        ("adj", 1),
-        ("verb", 3)
-    ]
-
-    type_ = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_type(type_, "greek"))
-    morph = Morph.with_key(key, morphothec)
-    return morph
-
-def get_old_english_root(morphothec):
-
-    bag = [
-        ("speculative", 2),
-        ("obscure", 2),
-        ("common", 1)
-    ]
-
-    freq = helpers.choose_bag(bag)
-    key = random.choice(morphothec.filter_freq(freq, "old-english"))
-    morph = Morph.with_key(key, morphothec)
-    return morph
- 
 def transform_word(word, morphothec, is_single):
     language = word.get_origin()
     current_type = word.get_type()
