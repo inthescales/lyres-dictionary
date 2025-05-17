@@ -103,6 +103,8 @@ class Morphothec:
                     Logger.error("morphothec validation found " + str(errors) + " errors")
                     exit(0)
 
+    # Filtering for morphs
+
     def filter(self, language, expression):
         selected = []
         for morph in self.languages[language].roots:

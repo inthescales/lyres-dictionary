@@ -13,6 +13,7 @@ class Morph:
         self.morph = self.base.copy()
         self.seed = random.randint(0, 100)
     
+    # TODO: Maybe move this to morphothec
     @classmethod
     def with_key(self, key, morphothec):
         return Morph(morphothec.morph_for_key[key])
