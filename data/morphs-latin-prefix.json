@@ -346,7 +346,7 @@
             }
         },
         "origin": "latin",
-        "notes": "need 'sus' for cases like sustain, susceptible, but occurrence is a bit arbitrary. Should be 'su' before 'sp' (suspect). 'subp*' could happen in later joinings (ex. medical)"
+        "notes": "need 'sus' for cases like sustain, susceptible, but occurrence is a bit arbitrary. Should be 'su' before 'sp' (suspect). 'subp*' could happen in later joinings (ex. medical). TODO: Figure out sumere"
     }, {
         "key": "super-",
         "form-stem": "super",

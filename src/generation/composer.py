@@ -9,6 +9,9 @@ import src.evolutor.language.mne_affixation as mne_affixation
 
 from src.generation.former import Former_Config
 
+from src.utils.logging import Logger
+
+# TODO: Move this to an Entry model, which would be populated in entry.py?
 def entry(word):
     composed = get_form(word)
     tag = get_part_tag(word)
@@ -17,10 +20,9 @@ def entry(word):
     return entry
 
 def get_part_tag(word):
-
     pos = word.get_type()
 
-    if pos == "noun":
+    if pos == "noun" or pos == "number":
         abbrev = "n"
     elif pos == "adj":
         abbrev = "adj"
@@ -30,12 +32,12 @@ def get_part_tag(word):
         abbrev = "prep"
     else:
         abbrev = "???"
+        Logger.error("Unknown word type")
 
     return "(" + abbrev + ")"
 
 def get_form(word, former_config=None):
     form = ""
-    morph = None
     
     for index, morph in enumerate(word.morphs):
 
@@ -55,11 +57,6 @@ def get_form(word, former_config=None):
                 last_morph = word.morphs[index-1]
             else:
                 last_morph = None
-
-            if index < word.size() - 1:
-                next_morph = word.morphs[index+1]
-            else:
-                next_morph = None
 
             form = get_joined_form(word.get_origin(), last_morph, morph, form, addition)
 
@@ -224,28 +221,14 @@ def get_joined_form(language, last_morph, morph, original, proposed):
         if joining_vowel != None and form[-1] != joining_vowel:
             form += joining_vowel
 
-    # e.g.: glaci + ify -> glacify
+    # Merge vowels, e.g.: glaci + ify -> glacify
     if language in ["latin", "greek"] and addition[0] == form[-1] and helpers.is_vowel(addition[0]):
-
         letter = addition[0]
 
         if (last_morph.get_type() not in ["prep", "prefix"]):
             addition = addition[1:]
         elif letter in ["a", "i", "u"]:
             addition = "-" + addition
-
-    # Stem change
-    if morph.has_tag("stem-change") and form[-1] == "i":
-        addition = "e" + addition
-
-    # Stem raise
-    elif morph.has_tag("stem-raise") and form[-1] == "e":
-        form = form[:-1]
-        addition = "i" + addition
-
-    # Drop first (sub + emere -> sumere)
-    elif morph.has_tag("drop-first"):
-        addition = addition[1:]
 
     elif form[-1] == "/" or addition[0] == "/":
         form = form[:-1]
@@ -268,6 +251,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
             form = form[:-1] + "s"
     
     if language == "old-english":
+        if last_morph.get_type() == "prefix" and last_morph.has_tag("numerical"):
+            form = form + "-"
+
         if morph.is_suffix():
             y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
 
@@ -282,9 +268,6 @@ def get_joined_form(language, last_morph, morph, original, proposed):
                 return "-".join(dash_split[:-1]) + "-" + mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
             else:
                 return mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
-
-        if last_morph.get_type() == "number":
-            form = form + "-"
         
     return form + addition
 
