@@ -2,6 +2,7 @@ import random
 
 import src.generation.derivative_morphs as derivative_morph
 
+from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
 from src.utils.logging import Logger
 
@@ -25,9 +26,9 @@ class AlternateFormAndGlossTransform:
     def apply(word, context):
         new_morph = derivative_morph.with_alternate_form_and_gloss(word.root_morph(), context.alternate_form)
         word.set_morphs([new_morph])
-        return True
 
-        # TODO: Add this behavior back when I have a result object
-        # Most of the time, don't count this as a transform
-        # if random.randint(1, 4) > 1:
-        #     return False
+        # Most of the time, let this be a free transform
+        if random.randint(1, 4) > 1:
+            return TransformResult(False, free=True)
+        else:
+            return TransformResult(True)

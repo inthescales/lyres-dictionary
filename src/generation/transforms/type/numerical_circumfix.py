@@ -1,5 +1,6 @@
 import random
 
+from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
 from src.utils.logging import Logger
 
@@ -39,6 +40,6 @@ class NumericalCircumfixTransform:
             num_morph = Morph.with_key(random.choice(numbers) , context.morphothec)
             end_morph = Morph.with_key(random.choice(numerical_suffixes[language]), context.morphothec)
             word.add_affixes(num_morph, end_morph)
-            return True
+            return TransformResult(True)
         else:
-            return False
+            return TransformResult(False)

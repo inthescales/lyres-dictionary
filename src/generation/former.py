@@ -120,6 +120,8 @@ def form(morph, env, config=Former_Config()):
             if "form-stem" in morph_dict:
                 form = morph_dict["form-stem"]
 
+            # TODO: Make this more generalizable between languages
+            
             # Verbs or verbal derivations need to take participle form into account
             elif morph_dict["type"] == "verb" or (morph_dict["type"] == "suffix" and morph_dict["derive-to"] == "verb"):
                 if next_morph and "derive-participle" in next_morph:

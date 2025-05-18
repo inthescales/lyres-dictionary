@@ -1,5 +1,6 @@
 import random
 
+from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
 from src.utils.logging import Logger
 
@@ -35,6 +36,6 @@ class RelationalCircumfixTransform:
             prep_morph = Morph.with_key(random.choice(prepositions), context.morphothec)
             end_morph = Morph.with_key(random.choice(relational_suffixes[language]), context.morphothec)
             word.add_affixes(prep_morph, end_morph)
-            return True
+            return TransformResult(True)
         else:
-            return False
+            return TransformResult(False)

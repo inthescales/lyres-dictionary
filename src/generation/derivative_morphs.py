@@ -10,6 +10,7 @@ def with_alternate_form(morph, form):
     new_dict["key"] = morph.morph["key"] + "-adhoc:alt"
     new_dict["type"] = morph.morph["type"]
     new_dict["gloss"] = "alternate form of '" + morph.morph["form-canon"] + "'"
+    new_dict["form-stem"] = form
     new_dict["form-final"] = form
     new_dict["tags"] = ["fixed-gloss", "final"]
     new_dict["origin"] = morph.morph["origin"]
@@ -41,6 +42,7 @@ def with_alternate_form_and_gloss(morph, form):
     new_dict = {}
     new_dict["key"] = morph.morph["key"] + "-adhoc:alt"
     new_dict["type"] = morph.morph["type"]
+    new_dict["form-stem"] = form
     new_dict["form-final"] = form
     new_dict["origin"] = morph.morph["origin"]
     if "tags" in morph.morph:

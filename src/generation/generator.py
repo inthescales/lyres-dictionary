@@ -1,6 +1,6 @@
 import random
 
-import src.generation.transforms as transforms
+import src.generation.transforms.transforms as transforms
 import src.utils.helpers as helpers
 
 from src.models.word import Word
@@ -34,22 +34,26 @@ def generate_word(morphothec):
         ]
     transform_count = helpers.choose_bag(bag)
     maximum_size = 3
+    max_failures = 3
     
-    transforms_done = 0
+    successes = 0
+    failures = 0
     while (
-            transforms_done < transform_count \
+            successes < transform_count \
+            and failures < max_failures \
             and word.size() < maximum_size \
             and not word.last_morph().final()
         ) \
         or not word.last_morph().final_ok():
-        success = transforms.transform_word(word, morphothec, transform_count == 1)
-        # HACK: In OE I used the convention that returning False should give you another try,
-        # but that isn't the case in Latin and Greek where you can legitimately have no
-        # valid transforms, and need to exit.
-        #
-        # TODO: come up with a better convention for 'free' transforms
-        if success or word.get_origin() != "old-english":
-            transforms_done += 1
+
+        result = transforms.transform_word(word, morphothec, transform_count == 1)
+
+        if result.success:
+            if not result.free:
+                successes += 1
+        else:
+            Logger.trace("failed to add transform to word with keys: " + str([x.get_key() for x in word.morphs]))
+            failures += 1
     
     Logger.trace("generated morph: " + str(word.get_keys()))
     return word

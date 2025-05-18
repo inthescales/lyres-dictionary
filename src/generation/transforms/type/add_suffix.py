@@ -1,5 +1,6 @@
 import random
 
+from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
 from src.utils.logging import Logger
 
@@ -47,6 +48,6 @@ class AddSuffixTransform:
             
         if new_morph is not None:
             word.add_suffix(new_morph)
-            return True
+            return TransformResult(True)
         else:
-            return False
+            return TransformResult(False)

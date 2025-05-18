@@ -2,6 +2,7 @@ import random
 
 import src.generation.derivative_morphs as derivative_morph
 
+from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
 from src.utils.logging import Logger
 
@@ -25,7 +26,7 @@ class AlternateFormTransform:
     def apply(word, context):
         new_morph = derivative_morph.with_alternate_form(word.root_morph(), context.alternate_form)
         word.set_morphs([new_morph])
-        return True
+        return TransformResult(True)
 
         # TODO: Add a small chance to not use the special gloss, and return False
         # so we can get more transforms with an alternate form

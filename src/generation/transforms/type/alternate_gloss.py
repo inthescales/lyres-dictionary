@@ -2,6 +2,7 @@ import random
 
 import src.generation.derivative_morphs as derivative_morph
 
+from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
 from src.utils.logging import Logger
 
@@ -25,4 +26,4 @@ class AlternateGlossTransform:
     def apply(word, context):
         new_morph = derivative_morph.with_alternate_gloss(word.root_morph())
         word.set_morphs([new_morph])
-        return True
+        return TransformResult(True)

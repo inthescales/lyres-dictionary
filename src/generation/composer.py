@@ -48,7 +48,7 @@ def get_form(word, former_config=None):
             addition = former.form(morph, env, former_config)
         else:
             addition = former.form(morph, env)
-
+        
         # Handle joining rules
         if len(addition) > 0:
             if index > 0:
@@ -67,7 +67,7 @@ def get_form(word, former_config=None):
     
 def get_definition(word):
     morph = None
-
+    
     prefix_stack = []
 
     def pop_prefix(last_morph, definition):

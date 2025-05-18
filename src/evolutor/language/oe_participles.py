@@ -44,6 +44,7 @@ verner_map = {
 # NOTE: The following cases are *not* handled by this function:
 # - Weak verbs with participle forms in -'ht' (forming modern 'taught', 'sought', etc.)
 #   As far as I can tell, these aren't predictable from the perspective of recorded OE.
+#   TODO: Make a hinge for these if possible.
 def get_strong_pseudoparticiple(form, verb_class, config):
     if verb_class == "preterite-present":
         return None

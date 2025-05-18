@@ -6,22 +6,27 @@ import src.generation.derivative_morphs as derivative_morph
 import src.generation.former as former
 import src.utils.helpers as helpers
 
-from src.generation.transform_context import TransformContext
-from src.generation.transform_type.add_suffix import AddSuffixTransform
-from src.generation.transform_type.add_preposition import AddPrepositionTransform
-from src.generation.transform_type.add_prefix import AddPrefixTransform
-from src.generation.transform_type.add_modern_prefix import AddModernPrefixTransform
-from src.generation.transform_type.relational_circumfix import RelationalCircumfixTransform
-from src.generation.transform_type.numerical_circumfix import NumericalCircumfixTransform
-from src.generation.transform_type.alternate_form import AlternateFormTransform
-from src.generation.transform_type.alternate_gloss import AlternateGlossTransform
-from src.generation.transform_type.alternate_form_and_gloss import AlternateFormAndGlossTransform
-from src.generation.transform_type.past_participle import PastParticipleTransform
+from src.generation.transforms.transform_context import TransformContext
+from src.generation.transforms.transform_result import TransformResult
+from src.generation.transforms.type.add_suffix import AddSuffixTransform
+from src.generation.transforms.type.add_preposition import AddPrepositionTransform
+from src.generation.transforms.type.add_prefix import AddPrefixTransform
+from src.generation.transforms.type.add_modern_prefix import AddModernPrefixTransform
+from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
+from src.generation.transforms.type.numerical_circumfix import NumericalCircumfixTransform
+from src.generation.transforms.type.alternate_form import AlternateFormTransform
+from src.generation.transforms.type.alternate_gloss import AlternateGlossTransform
+from src.generation.transforms.type.alternate_form_and_gloss import AlternateFormAndGlossTransform
+from src.generation.transforms.type.past_participle import PastParticipleTransform
 
 from src.models.word import Word
 from src.models.morph import Morph
 from src.morphs.morphothec import Morphothec
 from src.utils.logging import Logger
+
+# For alternate and participle forms
+import src.evolutor.evolutor as evolutor
+from src.evolutor.engine.config import Config
 
 def seed_word(word, morphothec):
     languages_and_weights = [
@@ -91,7 +96,16 @@ def transform_word(word, morphothec, is_single):
             if form != root_morph.morph["form-canon"]:
                 alternate_form = form
         
-    context = TransformContext(morphothec, alternate_form)
+    # Generate a participle form if possible
+    past_participle_form = None
+    if "form-raw" in root_morph.morph and "verb-class" in root_morph.morph:
+        config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])
+        form = root_morph.morph["form-raw"]
+        if isinstance(form, list):
+            form = random.choice(form)
+        past_participle_form = evolutor.get_participle_form(form, root_morph.morph["verb-class"], config)
+
+    context = TransformContext(morphothec, alternate_form, past_participle_form)
 
     # List all transforms
 
@@ -126,10 +140,12 @@ def transform_word(word, morphothec, is_single):
 
     bag = [(t, t.weight(word)) for t in transforms if t.is_eligible(word, context)]
     if len(bag) == 0:
-        return False
-    
+        return TransformResult(False)
+
     transform = helpers.choose_bag(bag)
 
     # Apply transform
+
+    Logger.trace("applied transform '" + transform.name + "'")
 
     return transform.apply(word, context)
