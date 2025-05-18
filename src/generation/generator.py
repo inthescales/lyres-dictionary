@@ -1,38 +1,18 @@
 import random
 
+import src.generation.seeding as seeding
 import src.generation.transforms.transforms as transforms
-import src.utils.helpers as helpers
 
 from src.models.word import Word
-from src.morphs.morphothec import Morphothec
 from src.utils.logging import Logger
 
 def generate_word(morphothec):
     word = Word(morphothec)
-    transforms.seed_word(word, morphothec)
 
-    bag = [(1, 1)]
-    if word.get_origin() == "old-english":
-        if word.root_morph().has_tag("speculative"):
-            bag = [
-                (0, 3) ,
-                (1, 1)
-            ]
-        elif word.root_morph().has_tag("obscure"):
-            bag = [
-                (0, 1) ,
-                (1, 5)
-            ]
-        else:
-            bag = [
-                (1, 1)
-            ]
-    else:
-        bag = [
-            (1, 5),
-            (2, 3)
-        ]
-    transform_count = helpers.choose_bag(bag)
+    root = seeding.seed_root(morphothec)
+    word.morphs = [root]
+
+    transform_count = seeding.transform_count(word)
     maximum_size = 3
     max_failures = 3
     

@@ -28,53 +28,6 @@ from src.utils.logging import Logger
 import src.evolutor.evolutor as evolutor
 from src.evolutor.engine.config import Config
 
-def seed_word(word, morphothec):
-    languages_and_weights = [
-        ["latin", 1],
-        ["greek", 1],
-        ["old-english", 0.5]
-    ]
-
-    bag = [(language, int(morphothec.root_count(language=language) * weight)) for language, weight in languages_and_weights]
-    choice = helpers.choose_bag(bag)
-
-    if choice == "latin":
-        weights = { "number": 0.5 }
-        root = get_root_by_type(choice, weights, morphothec)
-    elif choice == "greek":
-        weights = { "number": 0.8 }
-        root = get_root_by_type(choice, weights, morphothec)
-    elif choice == "old-english":
-        expressions = [
-            ({ "has-tag": "speculative"}, 2),
-            ({ "has-tag": "obscure"}, 2),
-            ({ "not": { "has-any-tags": ["speculative", "obscure"] } }, 1)
-        ]
-        root = get_root(choice, expressions, morphothec)
-
-    word.morphs = [root]
-
-# Get a random root from the given language, randomly choosing a filter by weight
-def get_root(language, expression_weights, morphothec):
-    expression = helpers.choose_bag(expression_weights)
-    choices = morphothec.filter(language, expression)
-    morph = random.choice(choices)
-    return Morph(morph)
-
-# Get a random root from the given language, weighted by type count
-def get_root_by_type(language, type_weights, morphothec):
-    def weight_for(t):
-        if t in type_weights:
-            return type_weights[t]
-        else:
-            return 1
-
-    bag = [(t, int(morphothec.root_count(language=language, type=t) * weight_for(t))) for t in ["noun", "adj", "verb", "number"]]
-    type = helpers.choose_bag(bag)
-    choices = morphothec.filter_type(type, language)
-    key = random.choice(choices)
-    return Morph.with_key(key, morphothec)
-
 def transform_word(word, morphothec, is_single):
     bag = []
 
