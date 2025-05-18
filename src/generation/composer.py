@@ -221,8 +221,8 @@ def get_joined_form(language, last_morph, morph, original, proposed):
         if joining_vowel != None and form[-1] != joining_vowel:
             form += joining_vowel
 
-    # Merge vowels, e.g.: glaci + ify -> glacify
-    if language in ["latin", "greek"] and addition[0] == form[-1] and helpers.is_vowel(addition[0]):
+    # Merge vowels, e.g.: glaci + ify -> glacify, rage + er -> rager
+    if addition[0] == form[-1] and helpers.is_vowel(addition[0]):
         letter = addition[0]
 
         if (last_morph.get_type() not in ["prep", "prefix"]):
@@ -251,9 +251,6 @@ def get_joined_form(language, last_morph, morph, original, proposed):
             form = form[:-1] + "s"
     
     if language == "old-english":
-        if last_morph.get_type() == "prefix" and last_morph.has_tag("numerical"):
-            form = form + "-"
-
         if morph.is_suffix():
             y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
 

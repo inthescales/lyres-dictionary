@@ -25,23 +25,23 @@ class EvolutorAffixTests(unittest.TestCase):
         # -ery
 
         # In a 1 syllable word, takes its full form after a consonant
-        self.assertForm(["clǣġ", "-ery"], "clayery")
-        self.assertForm(["cyng", "-ery"], "kingery")
-        self.assertForm(["smiþ", "-ery"], "smithery")
+        self.assertForm(["clǣġ", "-ery"], "clayery") #*
+        self.assertForm(["cyng", "-ery"], "kingery") #*
+        self.assertForm(["smiþ", "-ery"], "smithery") #*
 
         # ... though final 'e's are not duplicated
-        self.assertForm(["draca", "-ery"], "drakery")
+        self.assertForm(["draca", "-ery"], "drakery") #*
 
         # 1-syllable words ending in a vowel are a bit odd
-        self.assertForm(["drȳġe", "-ery"], "dryery")
-        self.assertForm(["feoh", "-ery"], "feery")
+        self.assertForm(["drȳġe", "-ery"], "dryery") #*
+        self.assertForm(["feoh", "-ery"], "feery") #*
 
         # With 2 syllables, it's generally reduced to -ry following a consonant
         self.assertForm(["bastard", "-ery"], "bastardry")
-        self.assertForm(["belġ", "-ery"], "bellyry")
+        self.assertForm(["belġ", "-ery"], "bellyry") #*
 
         # ... or -y if that consonant is an 'r'
-        self.assertForm(["ǣmerġe", "-ery"], "embery")
+        self.assertForm(["ǣmerġe", "-ery"], "embery") #*
 
         # -iġ
         self.assertForm(["clǣġ", "-iġ"], "clayey")
@@ -103,6 +103,7 @@ class EvolutorAffixTests(unittest.TestCase):
         self.assertForm(["heard", "-sċipe"], "hardship")
 
         # -ere
+        self.assertForm(["baþian", "-ere"], "bather")
         self.assertForm(["pleġan", "-ere"], "player")
 
         # -estre
