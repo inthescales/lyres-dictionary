@@ -29,7 +29,6 @@ class AddModernPrefixTransform:
             choice = random.choice(prefixes)
             new_morph = Morph.with_key(choice, morphothec)
             word.add_prefix(new_morph)
-            print("ADDING MODERN")
             return True
         else:
             return False

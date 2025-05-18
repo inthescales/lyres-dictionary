@@ -6,22 +6,22 @@ import src.generation.derivative_morphs as derivative_morph
 import src.generation.former as former
 import src.utils.helpers as helpers
 
+from src.generation.transform_context import TransformContext
 from src.generation.transform_type.add_suffix import AddSuffixTransform
 from src.generation.transform_type.add_preposition import AddPrepositionTransform
 from src.generation.transform_type.add_prefix import AddPrefixTransform
 from src.generation.transform_type.add_modern_prefix import AddModernPrefixTransform
 from src.generation.transform_type.relational_circumfix import RelationalCircumfixTransform
 from src.generation.transform_type.numerical_circumfix import NumericalCircumfixTransform
+from src.generation.transform_type.alternate_form import AlternateFormTransform
+from src.generation.transform_type.alternate_gloss import AlternateGlossTransform
+from src.generation.transform_type.alternate_form_and_gloss import AlternateFormAndGlossTransform
+from src.generation.transform_type.past_participle import PastParticipleTransform
 
 from src.models.word import Word
 from src.models.morph import Morph
 from src.morphs.morphothec import Morphothec
 from src.utils.logging import Logger
-
-# For ad-hoc morphs
-# TODO: Move these
-import src.evolutor.evolutor as evolutor
-from src.evolutor.engine.config import Config
 
 def seed_word(word, morphothec):
     languages_and_weights = [
@@ -132,33 +132,22 @@ def transform_word(word, morphothec, is_single):
             if form != root_morph.morph["form-canon"]:
                 alternate_form = form
 
+    context = TransformContext(alternate_form)
+
     # Show an alternate form for common words
-    if alternate_form != None:
+    if AlternateFormTransform.is_eligible(word, context):
         bag.append(("alternate_form", 10))
 
     # Show alternate gloss
-    if "gloss-alt" in root_morph.morph:
+    if AlternateGlossTransform.is_eligible(word,):
         bag.append(("alternate_gloss", 10))
 
     # Show alternate form and gloss
-    if alternate_form != None \
-        and "gloss-alt" in root_morph.morph:
+    if AlternateFormAndGlossTransform.is_eligible(word, context):
         bag.append(("alternate_form_and_gloss", 30))
 
     # Past participle
-    past_participle_form = None
-    if language == "old-english" \
-        and root_morph.get_type() == "verb" \
-        and root_morph.has_tag("transitive") \
-        and (root_morph.morph["verb-class"] != "weak" or (not root_morph.has_tag("obscure") and not root_morph.has_tag("speculative"))):
-        # TODO: Use a context property instead of manually setting these overrides
-        config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])
-        form = root_morph.morph["form-raw"]
-        if isinstance(form, list):
-            form = random.choice(form)
-        past_participle_form = evolutor.get_participle_form(form, root_morph.morph["verb-class"], config)
-
-    if past_participle_form != None:
+    if PastParticipleTransform.is_eligible(word):
         bag.append(("past-participle", 20))
 
     # If there is no override, choose, or return False if no choices ------
@@ -195,47 +184,18 @@ def transform_word(word, morphothec, is_single):
         return NumericalCircumfixTransform.apply(word, morphothec)
 
     # Alternate form
-    elif choice == "alternate_form" and alternate_form != None:
-        new_morph = derivative_morph.with_alternate_form(root_morph, alternate_form)
-        word.set_morphs([new_morph])
-
-        # TODO: Add a small chance to not use the special gloss, and return False
-        # so we can get more transforms with an alternate form
+    elif choice == "alternate_form":
+        return AlternateFormTransform.apply(word, context)
 
     # Alternate gloss
     elif choice == "alternate_gloss":
-        new_morph = derivative_morph.with_alternate_gloss(root_morph)
-        word.set_morphs([new_morph])
-
-        # Most of the time, don't count this as a transform
-        if random.randint(1, 4) > 1:
-            return False
+        return AlternateGlossTransform.apply(word, context)
 
     # Alternate form and gloss
-    elif choice == "alternate_form_and_gloss" and alternate_form != None:
-        new_morph = derivative_morph.with_alternate_form_and_gloss(root_morph, alternate_form)
-        word.set_morphs([new_morph])
+    elif choice == "alternate_form_and_gloss":
+        return AlternateFormAndGlossTransform.apply(word, context)
 
     elif choice == "past-participle":
-        is_common = (not root_morph.has_tag("obscure") and not root_morph.has_tag("speculative"))
-        canon_participles = []
-        if "form-participle-canon" in root_morph.morph:
-            canon_participles = root_morph.morph["form-participle-canon"]
-
-        new_morph = derivative_morph.from_past_participle(root_morph, past_participle_form)
-        word.set_morphs([new_morph])
-
-        # HACK: I want common participles to always be put through at least one more transform.
-        # Pretend that we failed a transform if the participle is in the canon list.
-        # This only applies to common roots.
-        #
-        # Also do this randomly for all participles
-        if (
-            len(canon_participles) > 0
-            and new_morph.morph["form-final"] in canon_participles \
-            and is_common \
-           ) \
-            or random.randint(0, 9) == 0:
-            return False
+        return PastParticipleTransform.apply(word)
 
     return True

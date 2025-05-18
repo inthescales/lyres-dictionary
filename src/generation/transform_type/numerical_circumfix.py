@@ -15,7 +15,7 @@ class NumericalCircumfixTransform:
         return word.get_origin() in numerical_suffixes \
             and word.size() == 1 \
             and word.get_type() == "noun" \
-            and word.first_morph().has_tag("count")
+            and word.root_morph().has_tag("count")
 
     @staticmethod
     def override(word):
@@ -33,7 +33,6 @@ class NumericalCircumfixTransform:
             num_morph = Morph.with_key(random.choice(numbers) , morphothec)
             end_morph = Morph.with_key(random.choice(numerical_suffixes[language]), morphothec)
             word.add_affixes(num_morph, end_morph)
-            print("ADDING NUMERICAL")
             return True
         else:
             return False
