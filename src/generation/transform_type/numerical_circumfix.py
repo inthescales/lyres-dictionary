@@ -10,8 +10,10 @@ numerical_suffixes = {
 }
 
 class NumericalCircumfixTransform:
+    name = "numerical circumfix"
+    
     @staticmethod
-    def is_eligible(word):
+    def is_eligible(word, context):
         return word.get_origin() in numerical_suffixes \
             and word.size() == 1 \
             and word.get_type() == "noun" \
@@ -22,16 +24,20 @@ class NumericalCircumfixTransform:
         return False
 
     @staticmethod
-    def apply(word, morphothec):
+    def weight(word):
+        return 5
+
+    @staticmethod
+    def apply(word, context):
         language = word.get_origin()
 
         env = word.prefix_environment()
-        numbers = morphothec.filter_prepends_to(word.get_type(), language, { "has-tag": "numerical" })
-        numbers = [num for num in numbers if Morph.with_key(num, morphothec).meets_requirements(env)]
+        numbers = context.morphothec.filter_prepends_to(word.get_type(), language, { "has-tag": "numerical" })
+        numbers = [num for num in numbers if Morph.with_key(num, context.morphothec).meets_requirements(env)]
 
         if len(numbers) > 0:
-            num_morph = Morph.with_key(random.choice(numbers) , morphothec)
-            end_morph = Morph.with_key(random.choice(numerical_suffixes[language]), morphothec)
+            num_morph = Morph.with_key(random.choice(numbers) , context.morphothec)
+            end_morph = Morph.with_key(random.choice(numerical_suffixes[language]), context.morphothec)
             word.add_affixes(num_morph, end_morph)
             return True
         else:

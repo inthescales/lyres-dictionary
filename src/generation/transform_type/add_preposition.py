@@ -4,8 +4,10 @@ from src.models.morph import Morph
 from src.utils.logging import Logger
 
 class AddPrepositionTransform:
+    name = "add prepositional prefix"
+    
     @staticmethod
-    def is_eligible(word):
+    def is_eligible(word, context):
         return word.get_type() == "verb" and word.size() == 1 and not word.last_morph().has_tag("no-prep")
 
     @staticmethod
@@ -13,14 +15,21 @@ class AddPrepositionTransform:
         return word.first_morph().has_tag("always-prep")
 
     @staticmethod
-    def apply(word, morphothec):
+    def weight(word):
+        if word.get_origin() == "greek" and not word.root_morph().has_tag("motion"):
+            return 10
+        else:
+            return 33
+    
+    @staticmethod
+    def apply(word, context):
         env = word.prefix_environment()
-        prepositions = morphothec.filter_prepends_to(word.get_type(), word.get_origin(), { "has-type": "prep" })
-        prepositions = [prep for prep in prepositions if Morph.with_key(prep, morphothec).meets_requirements(env)]
+        prepositions = context.morphothec.filter_prepends_to(word.get_type(), word.get_origin(), { "has-type": "prep" })
+        prepositions = [prep for prep in prepositions if Morph.with_key(prep, context.morphothec).meets_requirements(env)]
                 
         if len(prepositions) > 0:
             choice = random.choice(prepositions)
-            new_morph = Morph.with_key(choice, morphothec)
+            new_morph = Morph.with_key(choice, context.morphothec)
             word.add_prefix(new_morph)
             return True
         else:

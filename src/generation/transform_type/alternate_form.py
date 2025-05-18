@@ -7,6 +7,8 @@ from src.utils.logging import Logger
 
 # TODO: Instead of a custom morph, should this be handled with some kind of 'presentation context'?
 class AlternateFormTransform:
+    name = "alternate form"
+    
     @staticmethod
     def is_eligible(word, context):
         return context.alternate_form != None
@@ -16,8 +18,11 @@ class AlternateFormTransform:
         return False
 
     @staticmethod
+    def weight(word):
+        return 10
+
+    @staticmethod
     def apply(word, context):
-        print("CONTEXT FORM: " + context.alternate_form)
         new_morph = derivative_morph.with_alternate_form(word.root_morph(), context.alternate_form)
         word.set_morphs([new_morph])
         return True

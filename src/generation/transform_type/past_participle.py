@@ -6,8 +6,10 @@ import src.evolutor.evolutor as evolutor
 from src.evolutor.engine.config import Config
 
 class PastParticipleTransform:
+    name = "past participle"
+    
     @staticmethod
-    def is_eligible(word):
+    def is_eligible(word, context):
         root_morph = word.root_morph()
         return word.get_origin() == "old-english" \
             and root_morph.get_type() == "verb" \
@@ -24,7 +26,11 @@ class PastParticipleTransform:
         return False
 
     @staticmethod
-    def apply(word):
+    def weight(word):
+        return 20
+
+    @staticmethod
+    def apply(word, context):
         root_morph = word.root_morph()
 
         config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])

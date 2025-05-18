@@ -7,6 +7,8 @@ from src.utils.logging import Logger
 
 # TODO: Instead of a custom morph, should this be part of a morphs 'fixing' process?
 class AlternateFormAndGlossTransform:
+    name = "alternate form and gloss"
+    
     @staticmethod
     def is_eligible(word, context):
         return context.alternate_form != None and "gloss-alt" in word.root_morph().morph
@@ -14,6 +16,10 @@ class AlternateFormAndGlossTransform:
     @staticmethod
     def override(word):
         return False
+
+    @staticmethod
+    def weight(word):
+        return 30
 
     @staticmethod
     def apply(word, context):

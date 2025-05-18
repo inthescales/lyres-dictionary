@@ -71,53 +71,12 @@ def get_root_by_type(language, type_weights, morphothec):
     return Morph.with_key(key, morphothec)
 
 def transform_word(word, morphothec, is_single):
-    language = word.get_origin()
-    current_type = word.get_type()
-
-    last_morph = word.last_morph()
-    first_morph = word.first_morph()
-    root_morph = word.root_morph()
-
-    choice = None
-    override = False
     bag = []
-    
-    # Conditions and probabilities --------------------------
-    
-    if AddSuffixTransform.is_eligible(word):
-        if AddSuffixTransform.override(word):
-            override = True
-            choice = "add_suffix"
-        else:
-            if root_morph.has_tag("past-participle"):
-                bag.append(("add_suffix", 5))    
-            else:
-                bag.append(("add_suffix", 100))
-        
-    if AddPrepositionTransform.is_eligible(word):
-        if AddPrepositionTransform.override(word):
-            override = True
-            choice = "add_prep_prefix"
-        else:
-            if language == "greek" and not first_morph.has_tag("motion"):
-                bag.append(("add_prep_prefix", 10))
-            else:
-                bag.append(("add_prep_prefix", 33))
 
-    if AddPrefixTransform.is_eligible(word, morphothec):
-        if root_morph.has_tag("past-participle"):
-            bag.append(("add_prefix", 20))
-        else:
-            bag.append(("add_prefix", 5))
+    # Prepare transform context
 
-    if AddModernPrefixTransform.is_eligible(word, morphothec):
-        bag.append(("add_modern_prefix", 5))
-    
-    if RelationalCircumfixTransform.is_eligible(word):
-        bag.append(("relational", 10))
-
-    if NumericalCircumfixTransform.is_eligible(word):
-        bag.append(("numerical", 5))
+    language = word.get_origin()
+    root_morph = word.root_morph()
 
     # See if an alternate form is available
     # TODO: Find a way to generate all possible alt. forms rather than relying on rolling one
@@ -131,71 +90,46 @@ def transform_word(word, morphothec, is_single):
             form = former.form(root_morph, env, config)
             if form != root_morph.morph["form-canon"]:
                 alternate_form = form
+        
+    context = TransformContext(morphothec, alternate_form)
 
-    context = TransformContext(alternate_form)
+    # List all transforms
 
-    # Show an alternate form for common words
-    if AlternateFormTransform.is_eligible(word, context):
-        bag.append(("alternate_form", 10))
+    transforms = [
+        AddSuffixTransform,
+        AddPrepositionTransform,
+        AddPrefixTransform,
+        AddModernPrefixTransform,
+        RelationalCircumfixTransform,
+        NumericalCircumfixTransform,
+        AlternateFormTransform,
+        AlternateGlossTransform,
+        AlternateFormAndGlossTransform,
+        PastParticipleTransform
+    ]
 
-    # Show alternate gloss
-    if AlternateGlossTransform.is_eligible(word,):
-        bag.append(("alternate_gloss", 10))
+    # Check for overrides
 
-    # Show alternate form and gloss
-    if AlternateFormAndGlossTransform.is_eligible(word, context):
-        bag.append(("alternate_form_and_gloss", 30))
+    override_transform = None
+    for transform in transforms:
+        if transform.override(word):
+            if override_transform != None:
+                Logger.error("Multiple overrides for word with morphs: " + str(word.morphs))
 
-    # Past participle
-    if PastParticipleTransform.is_eligible(word):
-        bag.append(("past-participle", 20))
+            override_transform = transform
+            break
 
-    # If there is no override, choose, or return False if no choices ------
-    if not override: 
-        if len(bag) > 0:
-            choice = helpers.choose_bag(bag)
-        else:
-            return False
+    if override_transform != None:
+        return override_transform.apply(word, context)
+
+    # Choose transform
+
+    bag = [(t, t.weight(word)) for t in transforms if t.is_eligible(word, context)]
+    if len(bag) == 0:
+        return False
     
-    # Transformations --------------------------
+    transform = helpers.choose_bag(bag)
 
-    # Add Suffix
-    if choice == "add_suffix":
-        return AddSuffixTransform.apply(word, morphothec)
+    # Apply transform
 
-    # Add Preposition
-    elif choice == "add_prep_prefix":
-        return AddPrepositionTransform.apply(word, morphothec)
-            
-    # Add Prefix
-    elif choice == "add_prefix":
-        return AddPrefixTransform.apply(word, morphothec)
-    
-    # Add Modern Prefix
-    elif choice == "add_modern_prefix":
-        return AddModernPrefixTransform.apply(word, morphothec)
-
-    # Relational
-    elif choice == "relational":
-        return RelationalCircumfixTransform.apply(word, morphothec)
-    
-    # Numerical
-    elif choice == "numerical":
-        return NumericalCircumfixTransform.apply(word, morphothec)
-
-    # Alternate form
-    elif choice == "alternate_form":
-        return AlternateFormTransform.apply(word, context)
-
-    # Alternate gloss
-    elif choice == "alternate_gloss":
-        return AlternateGlossTransform.apply(word, context)
-
-    # Alternate form and gloss
-    elif choice == "alternate_form_and_gloss":
-        return AlternateFormAndGlossTransform.apply(word, context)
-
-    elif choice == "past-participle":
-        return PastParticipleTransform.apply(word)
-
-    return True
+    return transform.apply(word, context)
