@@ -260,6 +260,25 @@ def get_joined_form(language, last_morph, morph, original, proposed):
             #
             # TODO: Do something smarter here, like having the ability to reference the last chunk added and use that chunk's
             # syllable count
+
+            # Proposal:
+            # Recognize two types of joining - single-unit and compound
+            # The usual type is single-unit, which is used for prefixes and suffixes
+            # The compound type is used for affixes that are specially marked as representing compounds,
+            # as the numerical prefixes ('three-'), and others, typically also using hyphens ('well-')
+            # Compound morphs ('midden-geard') will be treated as compound if their subsections are
+            # formed separately, but as a single unit if slurred ('leman')
+            # In single-unit-mode, syllable counts include the whole word. In compound mode, they
+            # only count the first chunk, if joining to a prefix, or the last chunk if a suffix.
+
+            # Should just be able to check the relevant morph I think, since compound morphs are
+            # still contained within one morph. For unslurred compounds I'd need to break the raw
+            # and regenerate (if seed is observed I think this will work?). For slurred, just compute
+            # the form normally
+
+            # Wait, but how will this work with the get_joined_form inputs? Do I need to add a parameter
+            # like "effective chunk"? Or could I just pass in effective syllable count?
+
             dash_split = form.split("-")
             if len(dash_split) > 1:
                 return "-".join(dash_split[:-1]) + "-" + mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
