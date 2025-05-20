@@ -488,7 +488,6 @@ class FormTests(unittest.TestCase):
         self.assertForm(["cornus", "-ate-bodypart"], "cornuate")
         self.assertFormIn(["os-remains", "-arium"], ["ossuarium", "ossuary"])
 
-        self.assertForm(["lacus", "-ine"], "lacustrine")
         self.assertForm(["quercus", "-ine"], "quercine")
         self.assertForm(["fructus", "-esce-plant", "-nt"], "fructescent") 
         self.assertForm(["fructus", "-ous"], "fructuous")

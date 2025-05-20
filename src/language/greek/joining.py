@@ -18,3 +18,10 @@ def get_joined_form(form, addition):
         form = form[:-1] + "s"
 
     return form + addition
+
+# Returns a joining fowel for the given morphs and the form to be added
+def joining_vowel(first, second, addition):
+    if not helpers.is_vowel(addition[0], y_is_vowel=True):
+        return "o"
+    else:
+        return ""

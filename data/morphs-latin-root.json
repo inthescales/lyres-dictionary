@@ -3262,14 +3262,21 @@
         "origin": "latin"
     }, {
         "key": "lacus",
-        "form-stem": "lacustr",
-        "form-joiner": "",
+        "form-stem": "lac",
         "type": "noun",
         "declension": 4,
         "gloss": "lake",
         "tags": ["count", "concrete", "terrain"],
+        "origin": "latin"
+    }, {
+        "key": "lacustris",
+        "form-stem": "lacustr",
+        "type": "noun",
+        "declension": 3,
+        "gloss": "lake",
+        "tags": ["count", "concrete", "terrain"],
         "origin": "latin",
-        "notes": "Form ending in -tr is irregular"
+        "notes": "This is a fabricated root, formed in English in the 1800s by analogy with palustrine. Stem is inconsistent (lacustral, but lacustrian). Note that 'palustris' in Latin is an adjective. TODO: Something"
     }, {
         "key": "laedere",
         "form-stem-present": "lid",
