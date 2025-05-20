@@ -5,7 +5,7 @@ from src.generation.former import Former_Config
 from src.generation.generator import word_for_keys
 import src.generation.composer as composer
 
-import src.evolutor.language.mne_affixation as mne_affixation
+import src.language.modern_english.joining as mne_join
 
 class EvolutorAffixTests(unittest.TestCase):
     def setUp(self):
@@ -188,7 +188,7 @@ class EvolutorAffixTests(unittest.TestCase):
             print(form + " != " + composed)
 
     def assertJoined(self, strings, y_to_i, target):
-        joined = mne_affixation.get_joined_form(strings[0], strings[1], y_to_i=y_to_i)
+        joined = mne_join.get_joined_form(strings[0], strings[1], y_to_i=y_to_i)
         if joined != target:
             print(joined + " !+ " + target)
 

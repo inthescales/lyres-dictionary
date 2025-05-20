@@ -5,7 +5,8 @@ import src.generation.former as former
 import src.utils.helpers as helpers
 import src.utils.inflection as inflection
 
-import src.language.modern_english.joining as mne_affixation
+import src.language.greek.joining as grk_join
+import src.language.modern_english.joining as mne_join
 
 from src.generation.former import Former_Config
 
@@ -236,20 +237,8 @@ def get_joined_form(language, last_morph, morph, original, proposed):
 
     # Language-specific phonotactics
     if language == "greek":
-        if form[-1] in ["c", "g", "k"] and addition[0] == "s":
-            form = form[:-1]
-            addition = "x" + addition[1:]
-
-        if form[-1] in ["c", "k"] and addition[0] == "m":
-            form = form[:-1] + "g"
-            addition = addition
+        return grk_join.get_joined_form(form, addition)
         
-        if form[-1] == "p" and addition[0] == "m":
-            form = form[:-1] + "m"
-        
-        if form[-1] == "t" and addition in ["ia", "y"] and form[-2] not in ["n", "r", "s", "u"]:
-            form = form[:-1] + "s"
-    
     if language == "old-english":
         if morph.is_suffix():
             y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
@@ -281,9 +270,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
 
             dash_split = form.split("-")
             if len(dash_split) > 1:
-                return "-".join(dash_split[:-1]) + "-" + mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
+                return "-".join(dash_split[:-1]) + "-" + mne_join.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
             else:
-                return mne_affixation.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
+                return mne_join.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
         
     return form + addition
 

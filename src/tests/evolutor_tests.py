@@ -2,7 +2,7 @@ import unittest
 
 import src.evolutor.evolutor as evolutor
 
-import src.evolutor.language.oe_phonology as oe_phonology
+import src.language.old_english.phonology as oe_phonology
 
 from src.evolutor.engine.config import Config
 
