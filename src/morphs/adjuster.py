@@ -1,4 +1,4 @@
-import src.evolutor.language.oe_morphology as oe_morphology
+import src.language.old_english.morphology as oe_morphology
 
 # Makes automatic adjustments to morphs while importing data
 def adjust_morph(morph):

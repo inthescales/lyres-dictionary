@@ -1,5 +1,5 @@
-import src.evolutor.language.oe_orthography as orthography
-import src.evolutor.language.mne_affixation as mne_affixation
+import src.language.old_english.orthography as orthography
+import src.language.modern_english.joining as mne_affixation
 import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import often, even, occ, rarely

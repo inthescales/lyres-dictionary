@@ -1,4 +1,4 @@
-import src.evolutor.language.oe_i_mutation as i_mutation
+import src.language.old_english.i_mutation as i_mutation
 
 def get_i_mutated(phonemes, config):
     return i_mutation.get_i_mutated(phonemes, config)

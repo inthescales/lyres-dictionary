@@ -5,7 +5,7 @@ import src.generation.former as former
 import src.utils.helpers as helpers
 import src.utils.inflection as inflection
 
-import src.evolutor.language.mne_affixation as mne_affixation
+import src.language.modern_english.joining as mne_affixation
 
 from src.generation.former import Former_Config
 

@@ -1,7 +1,7 @@
 from src.evolutor.engine.phoneme import Phoneme
 
-import src.evolutor.language.oe_morphology as morphology
-import src.evolutor.language.oe_orthography as orth
+import src.language.old_english.morphology as morphology
+import src.language.old_english.orthography as orth
 
 class TrieNode:
     def __init__(self, graph, children=[]):

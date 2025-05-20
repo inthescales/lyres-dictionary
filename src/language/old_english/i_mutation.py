@@ -1,4 +1,4 @@
-import src.evolutor.language.oe_orthography as orth
+import src.language.old_english.orthography as orth
 
 from src.evolutor.engine.phoneme import Phoneme
 from src.evolutor.engine.transform_rig import RigState, Rig

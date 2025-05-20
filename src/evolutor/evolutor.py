@@ -1,11 +1,12 @@
-import src.evolutor.language.oe_read as oe_read
-import src.evolutor.language.oe_morphology as oe_morphology
-import src.evolutor.language.oe_phonology as oe_phonology
-import src.evolutor.language.oe_participles as oe_participles
-import src.evolutor.language.me_phonology as me_phonology
-import src.evolutor.language.mne_write as mne_write
+import src.language.old_english.read as oe_read
+import src.language.old_english.morphology as oe_morphology
+import src.language.old_english.phonology as oe_phonology
+import src.language.old_english.participles as oe_participles
+import src.language.middle_english.phonology as me_phonology
+import src.language.modern_english.write as mne_write
 
 from src.evolutor.engine.hinges import often, even, occ
+from src.utils.logging import Logger
 
 # Functions to be used externally ==================================
 
@@ -83,7 +84,7 @@ def get_irregular_form(cited_form, config):
     # e.g. 'hōn' -> 'hang', 'gōn' -> 'gang'
     if cited_form[-3:] == "|ōn":
         if config.verbose:
-            print("- Using contracted class 7 strong verb irregular form in '-ang'" + config.separator)
+            Logger.trace("- Using contracted class 7 strong verb irregular form in '-ang'" + config.separator)
 
         # HACK: This doesn't represent a historical form, but is devised such that phonetic evolution will
         # always produce a modern form in '-ang'.

@@ -2,7 +2,7 @@ import os
 import json
 
 import src.morphs.expressions as expressions  
-import src.morphs.morph_adjuster as adjuster
+import src.morphs.adjuster as adjuster
 
 from src.utils.logging import Logger
 

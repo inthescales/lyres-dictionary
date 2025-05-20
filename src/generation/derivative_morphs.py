@@ -97,3 +97,10 @@ def from_past_participle(morph, participle_form):
     #    new_dict["tags"] += ["non-final"]
 
     return Morph(new_dict)
+
+    # My plan for tomorrow:
+    # Move this into transform
+    # Make weak participles also use a pseudoparticiple if possible
+    # Transform calls to a former-level file: give me a participle
+    # Participle provider calls into language-specific code for OE to generate participle
+    # 
