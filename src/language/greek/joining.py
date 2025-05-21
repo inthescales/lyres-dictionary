@@ -1,3 +1,5 @@
+import src.utils.helpers as helpers
+
 # Returns a string concatenating the given form and addition strings, applying
 # typical Greek sound change rules.
 def get_joined_form(form, addition):

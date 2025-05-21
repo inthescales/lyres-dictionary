@@ -10,6 +10,7 @@ def joining_vowel(first, second, addition):
 
     # For verb suffixes using the present participle stem
     if first.get_type() == "verb" \
+        and "derive-participle" in second.morph \
         and second.morph["derive-participle"] == "present" \
         and not helpers.is_vowel(addition[0], y_is_vowel=True):
 

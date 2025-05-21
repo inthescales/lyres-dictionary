@@ -60,7 +60,15 @@ def get_form(word, former_config=None):
             else:
                 last_morph = None
 
-            form = get_joined_form(word.get_origin(), last_morph, morph, form, addition)
+            # Apply joining rules
+            # If this word is a compound, apply them only to the final chunk
+            if "-" not in form:
+                form = get_joined_form(word.get_origin(), last_morph, morph, form, addition)
+            else:
+                # Handles cases like "three-starred", where treating 'three-star' as a single unit throws off the syllable count
+                # TODO: Handle cases of compounds other than those separated by dashes, such as compound morphs
+                chunks = form.split("-")
+                form = "-".join(chunks[:-1]) + "-" + get_joined_form(word.get_origin(), last_morph, morph, chunks[-1], addition)
 
     return form
     
@@ -216,6 +224,8 @@ def get_joined_form(language, last_morph, morph, original, proposed):
 
     if len(form) == 0:
         return addition
+    elif len(addition) == 0:
+        return form
 
     # Add joining vowel if needed
     if last_morph != None:
@@ -232,53 +242,23 @@ def get_joined_form(language, last_morph, morph, original, proposed):
         elif letter in ["a", "i", "u"]:
             addition = "-" + addition
 
+    # Cut sounds if indicated
     elif form[-1] == "/" or addition[0] == "/":
         form = form[:-1]
         addition = addition[1:]
 
-    # Language-specific phonotactics
+    # Language-specific joining rules
     if language == "greek":
         return grk_join.get_joined_form(form, addition)
-        
     if language == "old-english":
+        # TODO: Move the suffix and y-to-i checks into language file
         if morph.is_suffix():
             y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
+            return mne_join.get_joined_form(form, addition, y_to_i=y_to_i)
 
-            # HACK: This dash-splitting was necessary for words like 'three-starred', since the process of doubling the final 'r'
-            # uses syllable count, and the compounded value of 'form' threw off the syllable count. This will work for compounds
-            # separated by dashes like this, but it won't work for other compounds.
-            #
-            # TODO: Do something smarter here, like having the ability to reference the last chunk added and use that chunk's
-            # syllable count
-
-            # Proposal:
-            # Recognize two types of joining - single-unit and compound
-            # The usual type is single-unit, which is used for prefixes and suffixes
-            # The compound type is used for affixes that are specially marked as representing compounds,
-            # as the numerical prefixes ('three-'), and others, typically also using hyphens ('well-')
-            # Compound morphs ('midden-geard') will be treated as compound if their subsections are
-            # formed separately, but as a single unit if slurred ('leman')
-            # In single-unit-mode, syllable counts include the whole word. In compound mode, they
-            # only count the first chunk, if joining to a prefix, or the last chunk if a suffix.
-
-            # Should just be able to check the relevant morph I think, since compound morphs are
-            # still contained within one morph. For unslurred compounds I'd need to break the raw
-            # and regenerate (if seed is observed I think this will work?). For slurred, just compute
-            # the form normally
-
-            # Wait, but how will this work with the get_joined_form inputs? Do I need to add a parameter
-            # like "effective chunk"? Or could I just pass in effective syllable count?
-
-            dash_split = form.split("-")
-            if len(dash_split) > 1:
-                return "-".join(dash_split[:-1]) + "-" + mne_join.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
-            else:
-                return mne_join.get_joined_form(dash_split[-1], addition, y_to_i=y_to_i)
-        
     return form + addition
 
 def get_joining_vowel(language, first, second, form, addition):
-
     # If either morph rejects joining vowels, don't use one
     if first.has_tag("no-tail-joiner") or second.has_tag("no-head-joiner"):
         return ""
@@ -291,14 +271,13 @@ def get_joining_vowel(language, first, second, form, addition):
     if first.is_prefix():
         return None
 
+    #  Get vowel by language
     if language == "latin":
         return lat_join.joining_vowel(first, second, addition)
-
     elif language == "greek":
         return grk_join.joining_vowel(first, second, addition)
-    
     elif language == "old-english":
         return None
-
-    Logger.error("Invalid language, or language '" + language + "' failed to pick a joining vowel")
-    return ""
+    else:
+        Logger.error("Invalid language, or language '" + language + "' failed to pick a joining vowel")
+        return None
