@@ -1,6 +1,6 @@
 import unittest
 
-import src.evolutor.evolutor as evolutor
+import src.evolutor.participles as participle
 
 from src.evolutor.engine.config import Config
 
@@ -33,7 +33,7 @@ class PastParticipleTests(unittest.TestCase):
             nonlocal total, failures
 
             config = Config(verbose=False, locked=True, overrides=overrides)
-            form = evolutor.oe_form_to_ne_participle(raw, verb_class, config)
+            form = participle.oe_form_to_ne_participle(raw, verb_class, config)
             total += 1
             if not form == target:
                 failures.append([form, target])

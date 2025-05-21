@@ -923,10 +923,10 @@ class EvolutorTests(unittest.TestCase):
         check("bysiġ", "busy", overrides=[["SVC:y->i/e/u", "u"]])
 
         # Final /ls/ is spelled 'lce'
-        check("ġe-miltsi|an", "milce")
+        check("ġe-miltsi|an", "milce") #*
 
         # ...while final /lz/ is spelled 'lse'
-        check("halsi|an", "halse")
+        check("halsi|an", "halse") #*
 
         # Incorporated suffixes --------------------------
 
@@ -967,7 +967,7 @@ class EvolutorTests(unittest.TestCase):
         # ts -> s
         check("blets|ian", "bless")
         check("betst", "best")
-        check("ġe-miltsi|an", "milce")
+        check("ġe-miltsi|an", "milce") #*
 
         # hþ -> þ
         check("fyrhþ", "frith")
@@ -997,9 +997,15 @@ class EvolutorTests(unittest.TestCase):
 
         # ... but 'bury' is an exceptional case, since it's form and pronunciation diverged in an unusual way
 
-        check("byrġ|an", "burry", overrides=[["SVC:y->i/e/u", "u"]])
+        check("byrġ|an", "burry", overrides=[["SVC:y->i/e/u", "u"]]) #*
 
         # Need more evidence
+
+        # Irregular indicative forms for contracted vowels in -ōn
+
+        check("f|ōn", "fang")
+        check("g|ōn", "gang")
+        check("h|ōn", "hang")
     
         return [total, failures]
 

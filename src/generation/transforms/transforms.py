@@ -26,6 +26,7 @@ from src.utils.logging import Logger
 
 # For alternate and participle forms
 import src.evolutor.evolutor as evolutor
+import src.evolutor.participles as participle
 from src.evolutor.engine.config import Config
 
 def transform_word(word, morphothec, is_single):
@@ -48,7 +49,7 @@ def transform_word(word, morphothec, is_single):
             form = former.form(root_morph, env, config)
             if form != root_morph.morph["form-canon"]:
                 alternate_form = form
-        
+    
     # Generate a participle form if possible
     past_participle_form = None
     if "form-raw" in root_morph.morph and "verb-class" in root_morph.morph:
@@ -56,7 +57,8 @@ def transform_word(word, morphothec, is_single):
         form = root_morph.morph["form-raw"]
         if isinstance(form, list):
             form = random.choice(form)
-        past_participle_form = evolutor.get_participle_form(form, root_morph.morph["verb-class"], config)
+
+        past_participle_form = participle.oe_form_to_ne_participle(form, root_morph.morph["verb-class"], config)
 
     context = TransformContext(morphothec, alternate_form, past_participle_form)
 
