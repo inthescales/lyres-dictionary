@@ -2,23 +2,26 @@ import re
 
 # Summary of import reading process
 class ImportSummary:
-    def __init__(self, imports, terms, bodylines, order_changed, errors):
+    def __init__(self, imports, bodylines, changes_made, errors):
         self.imports = imports
-        self.terms = terms
         self.bodylines = bodylines
-        self.order_changed = order_changed
+        self.changes_made = changes_made
         self.errors = errors
 
 # Returns a dictionary representing an import found in the file
-def get_import(filepath, alias=None, items=None, comment="None"):
-    return { "filepath": filepath, "alias": alias, "items": items, "comment": comment }
+def get_import(filepath, alias=None, items=None, terms=None, comment="None"):
+    return { "filepath": filepath, "alias": alias, "items": items, "terms": terms, "comment": comment}
 
 # Returns the name that should be used for the import, e.g. when looking for usages or printing errors
-def get_name(imp):
-    if imp["alias"] != None:
-        return imp["alias"]
+def get_imp_name(imp):
+    return get_name(imp["filepath"], imp["alias"])
 
-    return imp["filepath"]
+# Returns the name that should be used based on the given path and alias
+def get_name(path, alias):
+    if alias != None:
+        return alias
+
+    return path
 
 # Returns the category of the import, for ordering and formatting
 def get_category(imp):
@@ -57,8 +60,7 @@ def read_imports(file):
     with open(file, "r") as file_data:
         imports = []
         non_imports = []
-        terms = []
-        order_changed = False
+        changes_made = False
         errors = []
 
         import_regex = re.compile("import ([\\w._]+)( as ([\\w.]+))?(\\s*#\\s*(.*))?")
@@ -77,61 +79,64 @@ def read_imports(file):
                 alias = import_match.group(3)
                 comment = import_match.group(5)
 
-                new_import = get_import(path, alias=alias, comment=comment)
-                terms.append([get_name(new_import), [get_name(new_import) + "."]])
+                new_import = get_import(path, alias=alias, terms=[get_name(path, alias) + "."], comment=comment)
 
             elif from_match != None:
                 path = from_match.group(1)
                 items = [x.strip() for x in from_match.group(2).split(",")]
                 comment = from_match.group(4)
 
-                new_import = get_import(path, items=items, comment=comment)
-                terms += [[i, [i + ".", i + "("]] for i in items]
+                terms = [t for i in items for t in [i + ".", i + "("]]
+                new_import = get_import(path, items=items, terms=terms, comment=comment)
 
             elif not is_blank or len(non_imports) > 0:
                 new_import = None
                 non_imports.append(line)
+            else:
+                new_import = None
 
             # Process new import
             if new_import != None:
-                imports.append(new_import)
+                if new_import not in imports:
+                    imports.append(new_import)
+                else:
+                    changes_made = True
 
-                if last != None and not order_changed and get_sort_key(new_import) < get_sort_key(last):
-                    order_changed = True
+                if last != None and not changes_made and get_sort_key(new_import) < get_sort_key(last):
+                    changes_made = True
 
                 # if len(non_imports) > 0:
                 #     errors.append("ERROR: import in body:\n" + line.strip())
 
                 last = new_import
 
-            new_import = None
-
         imports = sorted(imports, key=get_sort_key)
-        unused = find_unused(terms, non_imports)
-
+        unused = find_unused(imports, non_imports)
+        
         if len(unused) > 0:
-            names = "\n  - ".join([x.strip() for x in unused])
+            names = "\n  - ".join([get_imp_name(x) for x in unused])
             errors.append("ERROR: " + str(len(unused)) + " unused imports:\n  - " + names)
 
-        return ImportSummary(imports, terms, non_imports, order_changed, errors)
+        return ImportSummary(imports, non_imports, changes_made, errors)
 
 # Verify that all imports are used at least once
-def find_unused(terms, lines):
+def find_unused(imports, lines):
     errors = []
 
     found = []
     for line in lines:
-        for term in terms:
-            if term[0] in found:
+        for imp in imports:
+            if imp in found:
                 continue
 
-            for form in term[1]:
+            terms = imp["terms"]
+            for term in terms:
                 code = line.split("#")[0]
-                if form in code:
-                    found.append(term[0])
+                if term in code:
+                    found.append(imp)
                     break
 
-    return [i[0] for i in terms if i[0] not in found]
+    return [i for i in imports if i not in found]
 
 # Rewrite the file with its imports in order, per the summary
 def write_ordered(file, summary):
@@ -168,7 +173,7 @@ def lint_imports(file):
         print(str(len(errors)) + " errors found in file '" + file + "':")
         for error in errors:
             print("- " + error)
-    elif summary.order_changed:
+    elif summary.changes_made:
         write_ordered(file, summary)
 
     return len(errors) == 0
