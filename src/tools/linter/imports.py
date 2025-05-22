@@ -1,44 +1,40 @@
 import re
 
-def get_comment(text):
-    return ["comment", text]
+class ImportSummary:
+    def __init__(self, imports, terms, bodylines, errors):
+        self.imports = imports
+        self.terms = terms
+        self.bodylines = bodylines
+        self.errors = errors
 
 def get_import(filepath, alias=None, items=None, comment="None"):
-    infodict = { "filepath": filepath, "alias": alias, "items": items, "comment": comment }
-    return ["import", infodict]
-
-def write_comment(comment):
-    return comment[1]
+    return { "filepath": filepath, "alias": alias, "items": items, "comment": comment }
 
 def write_import(_import):
-    infodict = _import[1]
+    infodict = _import
 
     if infodict["items"] == None:
-        edited = "import " + infodict["filepath"]    
+        output = "import " + infodict["filepath"]    
         if infodict["alias"] != None:
-            edited += " as " + infodict["alias"]
+            output += " as " + infodict["alias"]
     else:
-        edited = "from " + infodict["filepath"] + " import " + ", ".join(infodict["items"])
+        output = "from " + infodict["filepath"] + " import " + ", ".join(infodict["items"])
 
     if infodict["comment"] != None:
-        edited += " # " + comment
+        output += " # " + comment
 
-    return edited
+    return output
 
-def order_error():
-    print("ERROR: import after non-import:")
-    print(line)
-    exit(1)
-
-def lint_imports(file):
-    edited = ""
-
+def read_imports(file):
     with open(file, "r") as file_data:
         dotless_imports = []
         imports = []
         named_imports = []
         item_imports = []
         non_imports = []
+
+        terms = []
+        errors = []
 
         import_regex = re.compile("import ([\\w._]+)( as ([\\w.]+))?(\\s*#\\s*(.*))?")
         from_regex = re.compile("from ([\\w._]+) import ([\\w_,\\s]+)(\\s*#\\s*(.*))?")
@@ -58,13 +54,17 @@ def lint_imports(file):
                 new_import = get_import(path, alias=alias, comment=comment)
                 if "." not in path:
                     dotless_imports.append(new_import)
+                    terms.append([path, [path + "."]])
                 elif alias != None:
                     named_imports.append(new_import)
+                    terms.append([alias, [alias + "."]])
                 else:
                     imports.append(new_import)
+                    terms.append([path, [path]])
 
-                if len(non_imports) > 0:
-                    order_error()
+                # if len(non_imports) > 0:
+                #     errors.append("ERROR: import in body: " + line.strip())
+
                 continue
 
             elif from_match != None:
@@ -72,44 +72,71 @@ def lint_imports(file):
                 items = [x.strip() for x in from_match.group(2).split(",")]
                 comment = from_match.group(4)
                 item_imports.append(get_import(path, items=items, comment=comment))
-                if len(non_imports) > 0:
-                    order_error()
+                terms += [[i, [i + ".", i + "("]] for i in items]
+
+                # if len(non_imports) > 0:
+                #     errors.append("ERROR: import in body:\n" + line.strip())
+
                 continue
 
-            # comment_match = comment_regex.match(line)
-            # elif comment_match != None:
-            #     comments += get_comment(comment_match.group(1))
-            #     continue
-
             elif not is_blank or len(non_imports) > 0:
-                non_imports += line
+                non_imports.append(line)
 
-        if len(dotless_imports) > 0:
-            for dotless in dotless_imports:
-                edited += write_import(dotless) + "\n"
+        all_imports = [dotless_imports, imports, named_imports, item_imports]
 
-            edited += "\n"
+        return ImportSummary(all_imports, terms, non_imports, errors)
 
-        if len(imports) > 0:
-            for internal in imports:
-                edited += write_import(internal) + "\n"
+def verify_imports(summary):
+    errors = []
 
-            edited += "\n"
+    found = []
+    for line in summary.bodylines:
+        for term in summary.terms:
+            if term[0] in found:
+                continue
 
-        if len(named_imports) > 0:
-            for named in named_imports:
-                edited += write_import(named) + "\n"
+            for form in term[1]:
+                code = line.split("#")[0]
+                if form in code:
+                    found.append(term[0])
+                    break
 
-            edited += "\n"
+    if len(found) != len(summary.terms):
+        diff = len(summary.terms) - len(found)
+        errors.append("ERROR: " + str(diff) + " unused imports: " + ", ".join([x[0].strip() for x in summary.terms if x[0] not in found]))
 
-        if len(item_imports) > 0:
-            for item in item_imports:
-                edited += write_import(item) + "\n"
+    return errors
 
-            edited += "\n"
+def write_ordered(file, summary):
+    ordered = ""
 
-        for non_import in non_imports:
-            edited += non_import
+    for import_type in summary.imports:
+        if len(import_type) > 0:
+            for imp in import_type:
+                ordered += write_import(imp) + "\n"
+
+            ordered += "\n"
+
+    for line in summary.bodylines:
+        ordered += line
 
     with open(file, "w") as f:
-        f.write(edited)
+        f.write(ordered)
+
+def lint_imports(file):
+    ordered = ""
+    errors = []
+
+    summary = read_imports(file)
+
+    errors = summary.errors
+    errors += verify_imports(summary)
+
+    if len(errors) > 0:
+        print(str(len(errors)) + " errors found in file '" + file + "':")
+        for error in errors:
+            print("- " + error)
+    else:
+        write_ordered(file, summary)
+
+    return len(errors) == 0
