@@ -1,33 +1,23 @@
 import random
 
-import src.models
-
-import src.generation.derivative_morphs as derivative_morph
+import src.evolutor.participles as participle
 import src.generation.former as former
 import src.utils.helpers as helpers
 
+from src.evolutor.engine.config import Config
 from src.generation.transforms.transform_context import TransformContext
 from src.generation.transforms.transform_result import TransformResult
-from src.generation.transforms.type.add_suffix import AddSuffixTransform
-from src.generation.transforms.type.add_preposition import AddPrepositionTransform
-from src.generation.transforms.type.add_prefix import AddPrefixTransform
 from src.generation.transforms.type.add_modern_prefix import AddModernPrefixTransform
-from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
-from src.generation.transforms.type.numerical_circumfix import NumericalCircumfixTransform
+from src.generation.transforms.type.add_prefix import AddPrefixTransform
+from src.generation.transforms.type.add_preposition import AddPrepositionTransform
+from src.generation.transforms.type.add_suffix import AddSuffixTransform
 from src.generation.transforms.type.alternate_form import AlternateFormTransform
-from src.generation.transforms.type.alternate_gloss import AlternateGlossTransform
 from src.generation.transforms.type.alternate_form_and_gloss import AlternateFormAndGlossTransform
+from src.generation.transforms.type.alternate_gloss import AlternateGlossTransform
+from src.generation.transforms.type.numerical_circumfix import NumericalCircumfixTransform
 from src.generation.transforms.type.past_participle import PastParticipleTransform
-
-from src.models.word import Word
-from src.models.morph import Morph
-from src.morphs.morphothec import Morphothec
+from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
 from src.utils.logging import Logger
-
-# For alternate and participle forms
-import src.evolutor.evolutor as evolutor
-import src.evolutor.participles as participle
-from src.evolutor.engine.config import Config
 
 def transform_word(word, morphothec, is_single):
     bag = []

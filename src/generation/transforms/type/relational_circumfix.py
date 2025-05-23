@@ -2,7 +2,6 @@ import random
 
 from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
-from src.utils.logging import Logger
 
 relational_suffixes = {
     "latin": ["-ate", "-al", "-al", "-ary", "-ify"],

@@ -40,7 +40,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             recurse = True
 
     if not recurse:
-        lint(file)
+        lint(path)
     else:
         files = find_files(path)
         for file in files:

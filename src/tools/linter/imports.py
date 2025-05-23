@@ -79,7 +79,7 @@ def read_imports(file):
                 alias = import_match.group(3)
                 comment = import_match.group(5)
 
-                terms = [(get_name(path, alias), [get_name(path, alias) + "."])]
+                terms = [(get_name(path, alias), [get_name(path, alias)])]
                 new_import = get_import(path, alias=alias, terms=terms, comment=comment)
 
             elif from_match != None:
@@ -87,7 +87,7 @@ def read_imports(file):
                 items = [x.strip() for x in from_match.group(2).split(",")]
                 comment = from_match.group(4)
 
-                terms = [(i, [i + ".", i + "("]) for i in items]
+                terms = [(i, [i]) for i in items]
                 new_import = get_import(path, items=items, terms=terms, comment=comment)
 
             elif not is_blank or len(non_imports) > 0:

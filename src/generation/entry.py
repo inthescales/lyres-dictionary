@@ -1,10 +1,10 @@
-import src.generation.generator as generator
 import src.generation.composer as composer
+import src.generation.generator as generator
 import src.generation.metadata as metadata
 import src.utils.validator as validator
 
 from src.morphs.morphothec import Morphothec
- 
+
 # Generating operations
 
 def generate_entry():

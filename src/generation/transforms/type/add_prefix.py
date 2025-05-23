@@ -2,7 +2,6 @@ import random
 
 from src.generation.transforms.transform_result import TransformResult
 from src.models.morph import Morph
-from src.utils.logging import Logger
 
 prefix_filter = { "and": [ { "has-type": "prefix" }, { "not": { "has-tag": "numerical" } }] }
 

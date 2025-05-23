@@ -1,7 +1,8 @@
 import random
 
-from src.generation.transforms.transform_result import TransformResult
 import src.generation.derivative_morphs as derivative_morph
+
+from src.generation.transforms.transform_result import TransformResult
 
 class PastParticipleTransform:
     name = "past participle"
