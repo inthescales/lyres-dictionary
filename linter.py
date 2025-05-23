@@ -39,15 +39,20 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         if opt in ["-r", "--recursive"]:
             recurse = True
 
-    if not recurse:
-        success = lint(path)
-    else:
-        success = True
+    if recurse:
         files = find_files(path)
-        for file in files:
-            success = success and lint(file)
+    else:
+        files = [path]
+
+    print("Linting " + str(len(files)) + " files")
+
+    success = True
+    for file in files:
+        success = success and lint(file)
 
     if success:
+        print("Linter passed")
         sys.exit(0)
     else:
+        print("Linter failed")
         sys.exit(1)

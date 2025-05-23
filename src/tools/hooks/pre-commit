@@ -22,7 +22,7 @@ validate_success=$?
 
 # Don't commit if morph validation fails
 if [ $validate_success -eq 0 ]; then
-	exit 0
+	true
 else
 	echo "=== DID NOT COMMIT ==="
 	echo ""
