@@ -1,5 +1,5 @@
-from src.tools.morphs.schemas.tags import tags as valid_tags
 from src.tools.morphs.schemas.properties import properties as valid_properties
+from src.tools.morphs.schemas.tags import tags as valid_tags
 from src.tools.morphs.schemas.types import morph_types as valid_morph_types
 
 # Placeholder types =================================

@@ -9,8 +9,8 @@ class ImportSummary:
         self.errors = errors
 
 # Returns a dictionary representing an import found in the file
-def get_import(filepath, alias=None, items=None, terms=None, comment="None"):
-    return { "filepath": filepath, "alias": alias, "items": items, "terms": terms, "comment": comment}
+def get_import(filepath, alias=None, items=None, item_aliases=None, terms=None, comment="None"):
+    return { "filepath": filepath, "alias": alias, "items": items, "item_aliases": item_aliases, "terms": terms, "comment": comment}
 
 # Returns the name that should be used for the import, e.g. when looking for usages or printing errors
 def get_imp_name(imp):
@@ -33,7 +33,10 @@ def get_category(imp):
     elif imp["alias"] != None:
         return 2
     elif imp["items"] != None:
-        return 3
+        if imp["item_aliases"] == None:
+            return 3
+        else:
+            return 4
 
     return 1_000_000
 
@@ -49,6 +52,8 @@ def write_import(imp):
             output += " as " + imp["alias"]
     else:
         output = "from " + imp["filepath"] + " import " + ", ".join(imp["items"])
+        if imp["item_aliases"] != None:
+            output += " as " + ", ".join(imp["item_aliases"])
 
     if imp["comment"] != None:
         output += " # " + comment
@@ -64,7 +69,7 @@ def read_imports(file):
         errors = []
 
         import_regex = re.compile("import ([\\w._]+)( as ([\\w.]+))?(\\s*#\\s*(.*))?")
-        from_regex = re.compile("from ([\\w._]+) import ([\\w_,\\s]+)(\\s*#\\s*(.*))?")
+        from_regex = re.compile("from ([\\w._]+) import ([\\w_,\\s]+?)( as ([\\w.]+))?(\\s*#\\s*(.*))?$")
         blank_regex = re.compile("^\\s*$")
         comment_regex = re.compile("\\s*#\\s*(.*)")
 
@@ -85,10 +90,20 @@ def read_imports(file):
             elif from_match != None:
                 path = from_match.group(1)
                 items = [x.strip() for x in from_match.group(2).split(",")]
-                comment = from_match.group(4)
 
-                terms = [(i, [i]) for i in items]
-                new_import = get_import(path, items=items, terms=terms, comment=comment)
+                if from_match.group(4) != None:
+                    aliases = [x.strip() for x in from_match.group(4).split(",")]
+                else:
+                    aliases = None
+
+                comment = from_match.group(6)
+
+                if aliases != None:
+                    terms = [(i, [a]) for i, a in zip(items, aliases)]
+                else:
+                    terms = [(i, [i]) for i in items]
+                
+                new_import = get_import(path, items=items, item_aliases=aliases, terms=terms, comment=comment)
 
             elif not is_blank or len(non_imports) > 0:
                 new_import = None
@@ -141,6 +156,7 @@ def find_unused(imports, lines):
                         found[imp["filepath"]].add(item[0])
                         break
 
+
     unused = []
     for imp in imports:
         if imp["items"] == None and found[imp["filepath"]] == set():
@@ -175,6 +191,7 @@ def write_ordered(file, summary):
 
 # Performs linting actions related to imports
 def lint_imports(file):
+
     ordered = ""
     errors = []
 
@@ -185,7 +202,7 @@ def lint_imports(file):
         print(str(len(errors)) + " errors found in file '" + file + "':")
         for error in errors:
             print("- " + error)
-    elif summary.changes_made:
+    elif summary.changes_made and len(errors) == 0:
         write_ordered(file, summary)
 
     return len(errors) == 0

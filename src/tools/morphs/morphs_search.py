@@ -1,9 +1,9 @@
+import json
+
 import src.tools.morphs.morphs_files as file_tool
 
-from src.tools.morphs.hardcoded.search import matches as matches_hardcoded
 from src.morphs.expressions import evaluate_expression
-
-import json
+from src.tools.morphs.hardcoded.search import matches as matches_hardcoded
 
 def get_matches(morphs, matches):
     matches_found = []

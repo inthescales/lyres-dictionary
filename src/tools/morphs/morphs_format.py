@@ -1,10 +1,10 @@
 import json
 
-from collections import OrderedDict
-
+import src.tools.morphs.morphs_files as file_tool
 import src.tools.morphs.sort_alphabetical as alphabetical
 import src.tools.morphs.sort_numerical as numerical
-import src.tools.morphs.morphs_files as file_tool
+
+from collections import OrderedDict
 
 from src.tools.morphs.schemas.properties import properties as properties_list
 from src.tools.morphs.schemas.tags import tags as tags_list

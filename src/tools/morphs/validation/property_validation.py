@@ -1,6 +1,7 @@
-from src.tools.morphs.schemas.properties import properties as valid_properties
 from src.tools.morphs.schemas.languages import valid_languages
 from src.tools.morphs.schemas.types import morph_types, root_types
+
+from src.tools.morphs.schemas.properties import properties as valid_properties
 
 # Checks that the morphs
 def validate_properties(morph):

@@ -3,7 +3,6 @@ import src.tools.morphs.morphs_files as file_tool
 from src.tools.morphs.validation.expression_validation import validate_expression
 from src.tools.morphs.validation.property_validation import validate_properties
 from src.tools.morphs.schemas.tags import tags as valid_tags
-from src.tools.morphs.schemas.tags import tag_dependency_map as tag_dependencies
 
 def validate_morph(morph):
     errors = []
@@ -35,6 +34,9 @@ def validate_morph(morph):
 
     # Check tag dependencies
     # TODO: Reenable this after having a chance to revise tags
+
+    # from src.tools.morphs.schemas.tags import tag_dependency_map as tag_dependencies
+    
     # if "tags" in morph:
     #     for tag in morph["tags"]:
     #         if tag in tag_dependencies:
