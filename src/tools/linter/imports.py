@@ -26,7 +26,7 @@ def get_name(path, alias):
 # Returns the category of the import, for ordering and formatting
 def get_category(imp):
     if imp["alias"] == None and imp["items"] == None:
-        if "." not in name:
+        if "." not in get_imp_name(imp):
             return 0
         else:
             return 1
@@ -79,14 +79,15 @@ def read_imports(file):
                 alias = import_match.group(3)
                 comment = import_match.group(5)
 
-                new_import = get_import(path, alias=alias, terms=[get_name(path, alias) + "."], comment=comment)
+                terms = [(get_name(path, alias), [get_name(path, alias) + "."])]
+                new_import = get_import(path, alias=alias, terms=terms, comment=comment)
 
             elif from_match != None:
                 path = from_match.group(1)
                 items = [x.strip() for x in from_match.group(2).split(",")]
                 comment = from_match.group(4)
 
-                terms = [t for i in items for t in [i + ".", i + "("]]
+                terms = [(i, [i + ".", i + "("]) for i in items]
                 new_import = get_import(path, items=items, terms=terms, comment=comment)
 
             elif not is_blank or len(non_imports) > 0:
@@ -112,9 +113,9 @@ def read_imports(file):
 
         imports = sorted(imports, key=get_sort_key)
         unused = find_unused(imports, non_imports)
-        
+
         if len(unused) > 0:
-            names = "\n  - ".join([get_imp_name(x) for x in unused])
+            names = "\n  - ".join([x for x in unused])
             errors.append("ERROR: " + str(len(unused)) + " unused imports:\n  - " + names)
 
         return ImportSummary(imports, non_imports, changes_made, errors)
@@ -123,20 +124,28 @@ def read_imports(file):
 def find_unused(imports, lines):
     errors = []
 
-    found = []
+    found = {}
+    for imp in imports:
+        found[imp["filepath"]] = set()
+
     for line in lines:
         for imp in imports:
-            if imp in found:
-                continue
+            items = imp["terms"]
+            for item in items:
+                for term in item[1]:
+                    code = line.split("#")[0]
+                    if term in code:
+                        found[imp["filepath"]].add(item[0])
+                        break
 
-            terms = imp["terms"]
-            for term in terms:
-                code = line.split("#")[0]
-                if term in code:
-                    found.append(imp)
-                    break
+    unused = []
+    for imp in imports:
+        if imp["items"] == None and found[imp["filepath"]] == set():
+            unused.append(get_imp_name(imp))
+        if imp["items"] != None and set(imp["items"]) - found[imp["filepath"]] != set():
+            unused += list(set(imp["items"]) - found[imp["filepath"]])
 
-    return [i for i in imports if i not in found]
+    return unused
 
 # Rewrite the file with its imports in order, per the summary
 def write_ordered(file, summary):
