@@ -121,6 +121,9 @@ def read_imports(file):
         return ImportSummary(imports, non_imports, changes_made, errors)
 
 # Verify that all imports are used at least once
+# TODO: A more rigorous implementation would use an AST to look for instances.
+# The current implementation only checks strings, but it's caught between either
+# checking for the bare string, which might match unrelated text of the same form
 def find_unused(imports, lines):
     errors = []
 

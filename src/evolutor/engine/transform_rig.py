@@ -1,7 +1,5 @@
 from src.evolutor.engine.syllable import SyllableData
 
-import sys
-
 class RigState:
     def __init__(self, phonemes, index):
         self.prev = None

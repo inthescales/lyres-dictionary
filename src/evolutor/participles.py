@@ -1,7 +1,6 @@
 import src.evolutor.evolutor as evolutor
-
-import src.language.old_english.participles as oe_participles
 import src.language.modern_english.participles as mne_participles
+import src.language.old_english.participles as oe_participles
 
 from src.evolutor.engine.hinges import often
 

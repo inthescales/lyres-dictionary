@@ -1,10 +1,8 @@
-import src.language.old_english.read as oe_read
-import src.language.old_english.morphology as oe_morphology
-import src.language.old_english.phonology as oe_phonology
 import src.language.middle_english.phonology as me_phonology
 import src.language.modern_english.write as mne_write
-
-from src.utils.logging import Logger
+import src.language.old_english.morphology as oe_morphology
+import src.language.old_english.phonology as oe_phonology
+import src.language.old_english.read as oe_read
 
 # Functions to be used externally ==================================
 
