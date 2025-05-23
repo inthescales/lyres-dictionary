@@ -1,8 +1,9 @@
 import unittest
 
-from src.morphs.morphothec import Morphothec
-from src.generation.generator import word_for_keys
 import src.generation.composer as composer
+
+from src.generation.generator import word_for_keys
+from src.morphs.morphothec import Morphothec
 
 class GlossTests(unittest.TestCase):
     def setUp(self):

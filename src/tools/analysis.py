@@ -1,9 +1,9 @@
 import time
 
+import src.generation.generator as generator
+
 from datetime import datetime
 from pathlib import Path
-
-import src.generation.generator as generator
 from src.morphs.morphothec import Morphothec
 
 log_dir = "logs"

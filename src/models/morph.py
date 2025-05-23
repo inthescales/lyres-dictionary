@@ -3,7 +3,6 @@ import random
 import src.generation.former as former
 
 from src.morphs.expressions import evaluate_expression
-from src.morphs.morphothec import Morphothec
 from src.morphs.requirements import meets_requirements
 
 class Morph:

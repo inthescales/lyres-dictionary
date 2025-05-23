@@ -1,10 +1,8 @@
-import sys
+import src.generation.composer as composer
 
+from src.models.environment import Environment
 from src.models.morph import Morph
 from src.models.word import Word
-from src.models.environment import Environment
-
-import src.generation.composer as composer
 from src.morphs.morphothec import Morphothec
 
 morphothec = Morphothec("data/")

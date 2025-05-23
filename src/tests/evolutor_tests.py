@@ -2,8 +2,6 @@ import unittest
 
 import src.evolutor.evolutor as evolutor
 
-import src.language.old_english.phonology as oe_phonology
-
 from src.evolutor.engine.config import Config
 
 total = 0

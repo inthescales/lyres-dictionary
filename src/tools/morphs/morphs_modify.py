@@ -1,6 +1,3 @@
-import getopt
-import sys
-
 import src.tools.morphs.morphs_files as file_tool
 import src.tools.morphs.morphs_format as format
 

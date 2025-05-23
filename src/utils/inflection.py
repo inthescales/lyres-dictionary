@@ -1,7 +1,5 @@
 import lemminflect
 
-import src.utils.helpers as helpers
-
 # Returns an inflected form of the given word according to the mode
 def inflect(word, mode):
     words = word.split(" ")    

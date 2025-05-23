@@ -1,11 +1,11 @@
 import unittest
 
-from src.morphs.morphothec import Morphothec
+import src.generation.composer as composer
+import src.language.modern_english.joining as mne_join
+
 from src.generation.former import Former_Config
 from src.generation.generator import word_for_keys
-import src.generation.composer as composer
-
-import src.language.modern_english.joining as mne_join
+from src.morphs.morphothec import Morphothec
 
 class EvolutorAffixTests(unittest.TestCase):
     def setUp(self):
