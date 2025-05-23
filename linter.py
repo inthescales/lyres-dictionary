@@ -46,13 +46,16 @@ if __name__ == '__main__' and len(sys.argv) > 0:
 
     print("Linting " + str(len(files)) + " files")
 
-    success = True
+    result = 0
     for file in files:
-        success = success and lint(file)
+        result = max(result, lint(file))
 
-    if success:
+    if result == 0:
         print("Linting succeeded" + "\n")
         sys.exit(0)
-    else:
-        print("Linting found errors" + "\n")
+    elif result == 1:
+        print("Linter made code changes" + "\n")
         sys.exit(1)
+    elif result == 2:
+        print("Linting found errors" + "\n")
+        sys.exit(2)
