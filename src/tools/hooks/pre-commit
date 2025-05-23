@@ -28,3 +28,16 @@ else
 	echo ""
 	exit 1
 fi
+
+# Run linter
+python3 linter.py -r src
+linter_success=$?
+
+# Don't commit if linter shows errors or edits code
+if [ $linter_success -eq 0 ]; then
+	exit 0
+else
+	echo "=== DID NOT COMMIT ==="
+	echo ""
+	exit 1
+fi

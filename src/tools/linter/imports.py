@@ -204,5 +204,6 @@ def lint_imports(file):
             print("- " + error)
     elif summary.changes_made and len(errors) == 0:
         write_ordered(file, summary)
+        return False
 
     return len(errors) == 0

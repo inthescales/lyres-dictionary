@@ -5,7 +5,7 @@ import sys
 from src.tools.linter.imports import lint_imports
 
 def lint(file):
-    lint_imports(file)
+    return lint_imports(file)
 
 def find_files(root):
     res = []
@@ -40,9 +40,14 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             recurse = True
 
     if not recurse:
-        
-        lint(path)
+        success = lint(path)
     else:
+        success = True
         files = find_files(path)
         for file in files:
-            lint(file)
+            success = success and lint(file)
+
+    if success:
+        sys.exit(0)
+    else:
+        sys.exit(1)
