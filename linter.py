@@ -51,8 +51,8 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         success = success and lint(file)
 
     if success:
-        print("Linter passed")
+        print("Linting succeeded\n")
         sys.exit(0)
     else:
-        print("Linter failed")
+        print("Linting found errors\n")
         sys.exit(1)
