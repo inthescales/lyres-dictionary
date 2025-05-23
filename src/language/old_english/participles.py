@@ -1,7 +1,7 @@
 import src.language.old_english.orthography as orthography
 import src.utils.helpers as helpers
 
-from src.evolutor.engine.hinges import often, even, occ, rarely
+from src.evolutor.engine.hinges import occ, rarely
 
 # Unhandled cases:
 # - Weak verbs with infinitive in'-ēaġan', pp. in '-ēad', or '-ēoġan' / '-ēod' (not relevant to MnE)

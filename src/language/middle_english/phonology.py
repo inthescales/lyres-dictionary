@@ -1,8 +1,6 @@
-import random
-
+from src.evolutor.engine.hinges import often, occ, hinge
 from src.evolutor.engine.phoneme import Phoneme
-from src.evolutor.engine.transform_rig import RigState, Rig
-from src.evolutor.engine.hinges import often, even, occ, hinge
+from src.evolutor.engine.transform_rig import Rig
 
 def from_oe_phonemes(oe_phonemes, config):
     phonemes = oe_phonemes

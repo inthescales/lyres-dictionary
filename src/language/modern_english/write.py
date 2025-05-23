@@ -1,8 +1,7 @@
-from random import Random
-
 import src.utils.helpers as helpers
 
-from src.evolutor.engine.hinges import often, even, occ, hinge
+from random import Random
+from src.evolutor.engine.hinges import often, even, hinge
 
 def from_me_phonemes(phonemes, config):
     random = Random(config.seed)

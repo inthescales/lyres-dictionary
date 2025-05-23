@@ -1,7 +1,7 @@
 import src.language.old_english.orthography as orth
 
 from src.evolutor.engine.phoneme import Phoneme
-from src.evolutor.engine.transform_rig import RigState, Rig
+from src.evolutor.engine.transform_rig import Rig
 
 def i_mutation(state):
     if state.current.is_vowel() and state.syllable_data.following_syllable_count == 0:
