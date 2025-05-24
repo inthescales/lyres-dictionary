@@ -19,12 +19,7 @@ from src.generation.transforms.type.past_participle import PastParticipleTransfo
 from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
 from src.utils.logging import Logger
 
-def transform_word(word, morphothec, is_single):
-    bag = []
-
-    # Prepare transform context
-
-    language = word.get_origin()
+def get_context(word, morphothec, is_single):
     root_morph = word.root_morph()
 
     # See if an alternate form is available
@@ -50,7 +45,12 @@ def transform_word(word, morphothec, is_single):
 
         past_participle_form = participle.oe_form_to_ne_participle(form, root_morph.morph["verb-class"], config)
 
-    context = TransformContext(morphothec, alternate_form, past_participle_form)
+    return TransformContext(morphothec, alternate_form, past_participle_form)
+
+def transform_word(word, morphothec, is_single):
+    # Get transform context
+
+    context = get_context(word, morphothec, is_single)
 
     # List all transforms
 
