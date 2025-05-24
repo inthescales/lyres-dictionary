@@ -7,6 +7,8 @@ touched=$(git diff --cached --name-only --diff-filter=ACMR)
 touched_morphs=$(grep "data/*.json$" $touched)
 touched_code=$(grep "src/*.py$" $touched)
 
+success=1
+
 # Run morph checks
 if [[ -n $touched_morphs ]]; then
 	# Morph formatting
@@ -15,13 +17,8 @@ if [[ -n $touched_morphs ]]; then
 
 	# Don't commit if formatting altered any files
 	if [ $files_changed -eq 0 ]; then
-		true
+		success=0
 	else
-		echo ""
-		echo "=== DID NOT COMMIT ==="
-		echo ""
-		exit 1
-	fi
 
 	# Morph validation
 	python3 morphs.py validate $touched_morphs
@@ -29,12 +26,8 @@ if [[ -n $touched_morphs ]]; then
 
 	# Don't commit if morph validation fails
 	if [ $validate_success -eq 0 ]; then
-		true
+		success=0
 	else
-		echo "=== DID NOT COMMIT ==="
-		echo ""
-		exit 1
-	fi
 else
 	echo "No morph files changed"
 	echo ""
@@ -47,13 +40,21 @@ if [[ -n $touched_code ]]; then
 
 	# Don't commit if linter shows errors or edits code
 	if [ $linter_success -eq 0 ]; then
-		exit 0
+		success=0
 	else
-		echo "=== DID NOT COMMIT ==="
-		echo ""
-		exit 1
-	fi
 else
 	echo "No code files changed"
 	echo ""
+fi
+
+if [[ success == 0 ]]; then
+	RED='\033[0;31m'
+	NC='\033[0m' # No Color
+
+	echo ""
+	echo "${RED}=== DID NOT COMMIT ===${NC}"
+	echo ""
+	exit 1
+else
+	exit 0
 fi
