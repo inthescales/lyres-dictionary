@@ -1,5 +1,8 @@
 import src.utils.helpers as helpers
 
+def should_join(first, second):
+    return second.is_suffix()
+
 # Returns a string concatenating the given form and addition strings, with typical
 # modern English spelling changes applied.
 def get_joined_form(form, addition, y_to_i=False):

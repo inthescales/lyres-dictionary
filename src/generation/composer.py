@@ -214,10 +214,7 @@ def get_definition(word):
 
     return definition
 
-def get_joined_form(language, last_morph, morph, original, proposed):
-    form = original
-    addition = proposed
-
+def get_joined_form(language, last_morph, morph, form, addition):
     if len(form) == 0:
         return addition
     elif len(addition) == 0:
@@ -246,11 +243,9 @@ def get_joined_form(language, last_morph, morph, original, proposed):
     # Language-specific joining rules
     if language == "greek":
         return grk_join.get_joined_form(form, addition)
-    if language == "old-english":
-        # TODO: Move the suffix and y-to-i checks into language file
-        if morph.is_suffix():
-            y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
-            return mne_join.get_joined_form(form, addition, y_to_i=y_to_i)
+    if language == "old-english" and mne_join.should_join(last_morph, morph):
+        y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
+        return mne_join.get_joined_form(form, addition, y_to_i=y_to_i)
 
     return form + addition
 
