@@ -54,11 +54,14 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         result = max(result, lint(file))
 
     if result == 0:
-        print(color_text(Color.green, "Linting succeeded" + "\n"))
+        print(color_text(Color.green, "Linter succeeded"))
+        print()
         sys.exit(0)
     elif result == 1:
-        print(color_text(Color.yellow, "Linter made code changes" + "\n"))
+        print(color_text(Color.yellow, "Linter made code changes"))
+        print()
         sys.exit(1)
     elif result == 2:
-        print(color_text(Color.red, "Linting found errors" + "\n"))
+        print(color_text(Color.red, "Linter found errors"))
+        print()
         sys.exit(2)

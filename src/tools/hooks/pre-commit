@@ -3,9 +3,9 @@
 echo ""
 
 # Find changed files by type
-touched=$(git diff --cached --name-only --diff-filter=ACMR)
-touched_morphs=$(grep "data/*.json$" $touched)
-touched_code=$(grep "src/*.py$" $touched)
+touched=$(git diff --cached --name-only --diff-filter=ACMR | tr ' ' '\n')
+touched_morphs=$(grep "^data/.*\.json" <<< "${touched}")
+touched_code=$(grep "^src/.*\.py" <<< "${touched}" | tr '\n' ' ')
 
 success=1
 
@@ -16,7 +16,7 @@ if [[ -n $touched_morphs ]]; then
 	files_changed=$?
 
 	# Don't commit if formatting altered any files
-	if [ $files_changed -eq 0 ]; then
+	if [ $files_changed -ne 0 ]; then
 		success=0
 	fi
 
@@ -25,7 +25,7 @@ if [[ -n $touched_morphs ]]; then
 	validate_success=$?
 
 	# Don't commit if morph validation fails
-	if [ $validate_success -eq 0 ]; then
+	if [ $validate_success -ne 0 ]; then
 		success=0
 	fi
 else
@@ -39,7 +39,7 @@ if [[ -n $touched_code ]]; then
 	linter_success=$?
 
 	# Don't commit if linter shows errors or edits code
-	if [ $linter_success -eq 0 ]; then
+	if [ $linter_success -ne 0 ]; then
 		success=0
 	fi
 else
@@ -47,11 +47,10 @@ else
 	echo ""
 fi
 
-if [[ success == 0 ]]; then
-	RED='\033[0;31m'
+if [[ $success -eq 0 ]]; then
+	RED='\033[91m'
 	NC='\033[0m' # No Color
 
-	echo ""
 	echo "${RED}=== DID NOT COMMIT ===${NC}"
 	echo ""
 	exit 1
