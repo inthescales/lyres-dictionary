@@ -34,6 +34,8 @@ def get_part_tag(word):
 
     return "(" + abbrev + ")"
 
+# Compose forms =======================
+
 def get_form(word, former_config=None):
     form = ""
     
@@ -67,152 +69,6 @@ def get_form(word, former_config=None):
                 form = "-".join(chunks[:-1]) + "-" + get_joined_form(word.get_origin(), last_morph, morph, chunks[-1], addition)
 
     return form
-    
-def get_definition(word):
-    morph = None
-    
-    prefix_stack = []
-
-    def pop_prefix(last_morph, definition):
-
-        top, env = prefix_stack.pop()
-
-        return build_def(top, last_morph, env, definition)
-
-    def build_def(morph, last_morph, env, definition):
-        part = former.gloss(morph, env)
-
-        if last_morph is None:
-            definition = part
-            
-            # Adjectives don't get inflected, so proactively strip their brackets
-            if morph.is_root() and morph.get_type() == "adj":
-                definition = definition.replace("[","").replace("]", "")
-        else:
-            words = part.split(" ")
-            for (index, word) in enumerate(words):
-                bracketed = False
-                if word[0] == "[" and word[-1] == "]" and word[1] == "%":
-                    # Substitution points may be bracketed – preserve existing brackets
-                    bracketed = True
-                    word = word[1:-1]
-
-                if word == "%@":
-                    words[index] = definition
-                elif word == "%part":
-                    words[index] = inflection.inflect(definition, "part")
-                elif word == "%ppart":
-                    words[index] = inflection.inflect(definition, "ppart")
-                elif word == "%3sg":
-                    words[index] = inflection.inflect(definition, "3sg")
-                elif word == "%inf":
-                    words[index] = inflection.inflect("to " + definition, "inf")
-                elif word == "%sg":
-                    if last_morph.has_tag("count"):
-                        inflected = inflection.inflect(definition, "sg")
-                        article = helpers.indefinite_article_for(inflected)
-                        words[index] = article + " " + inflected
-                    elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-                        words[index] = inflection.inflect(definition, "mass")
-                    elif last_morph.has_tag("singleton"):
-                        article = "the"
-                        words[index] = article + " " +inflection.inflect(definition, "singleton")
-                    else:
-                        words[index] = definition
-                elif word == "%!sg":
-                    if last_morph.has_tag("count"):
-                        words[index] = inflection.inflect(definition, "sg")
-                    elif last_morph.has_tag("mass"):
-                        words[index] = inflection.inflect(definition, "mass")
-                    elif last_morph.has_tag("singleton"):
-                        words[index] = inflection.inflect(definition, "singleton")
-                    else:
-                        words[index] = definition
-                elif word == "%pl":
-                    if last_morph.has_tag("count"):
-                        words[index] = inflection.inflect(definition, "pl")
-                    elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-                        words[index] = inflection.inflect(definition, "mass")
-                    elif last_morph.has_tag("singleton"):
-                        article = "the"
-                        words[index] = article + " " +inflection.inflect(definition, "singleton")
-                    else:
-                        words[index] = definition
-                elif word == "%!pl":
-                    words[index] = inflection.inflect(definition, "pl")
-                elif "%(" in word and ")" in word:
-                    open_index = word.index("%(")
-                    close_index = word.index(")")
-
-                    head = word[:open_index]
-                    ref_property = word[open_index + 2:close_index]
-                    tail = word[close_index + 1:]
-
-                    if ref_property in last_morph.morph:
-                        # Choose one at random if list
-                        if isinstance(last_morph.morph[ref_property], list):
-                            random = Random(morph.seed)
-                            value = random.choice(last_morph.morph[ref_property])
-                        else:
-                            value = last_morph.morph[ref_property]
-
-                        # If this is a kind of gloss, and is a single word, add brackets
-                        if ref_property.startswith("gloss") and not " " in value and morph.get_type() in ["noun", "verb"]:
-                            value = "[" + value + "]"
-
-                        words[index] = head + value + tail
-                    else:
-                        Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
-
-                if bracketed:
-                    words[index] = "[" + words[index] + "]"
-
-
-            definition = " ".join(words)
-
-        return definition
-
-    definition = ""
-
-    for index, morph in enumerate(word.morphs):
-
-        addition = ""
-
-        env = word.environment_for_index(index)
-        last_morph = env.prev
-        next_morph = env.next
-
-        # Stack prepositions and prefixes for proper definition ordering
-        if morph.get_type() == "prep" or morph.get_type() == "prefix":
-            prefix_stack.append([morph, env])
-        else:
-            definition = build_def(morph, last_morph, env, definition)
-
-            if index != 0:
-                if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
-                    definition = pop_prefix(morph, definition)
-
-    while len(prefix_stack) > 0:
-        definition = pop_prefix(word.last_morph(), definition)
-
-
-    # Make modifications to outermost gloss
-    if not morph.has_tag("fixed-gloss"):
-        if word.get_type() == "verb":
-            return "to " + inflection.inflect(definition, "inf")
-        elif word.get_type() == "noun":
-            inflected = inflection.inflect(definition, "sg")
-
-            if morph.has_tag("count"):
-                return helpers.indefinite_article_for(inflected) + " " +  inflected
-            elif morph.has_tag("mass") or morph.has_tag("uncountable"):
-                return inflected
-            elif morph.has_tag("singleton"):
-                return "the " + inflected
-            else:
-                return inflected
-
-    return definition
 
 def get_joined_form(language, last_morph, morph, form, addition):
     if len(form) == 0:
@@ -272,3 +128,146 @@ def get_joining_vowel(language, first, second, form, addition):
     else:
         Logger.error("Invalid language, or language '" + language + "' failed to pick a joining vowel")
         return None
+
+# Compose definitions ====================
+
+def build_def(morph, last_morph, env, definition):
+    part = former.gloss(morph, env)
+
+    if last_morph is None:
+        return part
+
+    words = part.split(" ")
+    for (index, word) in enumerate(words):
+        bracketed = False
+        if word[0] == "[" and word[-1] == "]" and word[1] == "%":
+            # Substitution points may be bracketed – preserve existing brackets
+            bracketed = True
+            word = word[1:-1]
+
+        if word == "%@":
+            words[index] = definition
+        elif word == "%part":
+            words[index] = inflection.inflect(definition, "part")
+        elif word == "%ppart":
+            words[index] = inflection.inflect(definition, "ppart")
+        elif word == "%3sg":
+            words[index] = inflection.inflect(definition, "3sg")
+        elif word == "%inf":
+            words[index] = inflection.inflect("to " + definition, "inf")
+        elif word == "%sg":
+            if last_morph.has_tag("count"):
+                inflected = inflection.inflect(definition, "sg")
+                article = helpers.indefinite_article_for(inflected)
+                words[index] = article + " " + inflected
+            elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
+                words[index] = inflection.inflect(definition, "mass")
+            elif last_morph.has_tag("singleton"):
+                article = "the"
+                words[index] = article + " " +inflection.inflect(definition, "singleton")
+            else:
+                words[index] = definition
+        elif word == "%!sg":
+            if last_morph.has_tag("count"):
+                words[index] = inflection.inflect(definition, "sg")
+            elif last_morph.has_tag("mass"):
+                words[index] = inflection.inflect(definition, "mass")
+            elif last_morph.has_tag("singleton"):
+                words[index] = inflection.inflect(definition, "singleton")
+            else:
+                words[index] = definition
+        elif word == "%pl":
+            if last_morph.has_tag("count"):
+                words[index] = inflection.inflect(definition, "pl")
+            elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
+                words[index] = inflection.inflect(definition, "mass")
+            elif last_morph.has_tag("singleton"):
+                article = "the"
+                words[index] = article + " " +inflection.inflect(definition, "singleton")
+            else:
+                words[index] = definition
+        elif word == "%!pl":
+            words[index] = inflection.inflect(definition, "pl")
+        elif "%(" in word and ")" in word:
+            open_index = word.index("%(")
+            close_index = word.index(")")
+
+            head = word[:open_index]
+            ref_property = word[open_index + 2:close_index]
+            tail = word[close_index + 1:]
+
+            if ref_property in last_morph.morph:
+                # Choose one at random if list
+                if isinstance(last_morph.morph[ref_property], list):
+                    random = Random(morph.seed)
+                    value = random.choice(last_morph.morph[ref_property])
+                else:
+                    value = last_morph.morph[ref_property]
+
+                # If this is a kind of gloss, and is a single word, add brackets
+                if ref_property.startswith("gloss") and not " " in value and morph.get_type() in ["noun", "verb"]:
+                    value = "[" + value + "]"
+
+                words[index] = head + value + tail
+            else:
+                Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
+
+        if bracketed:
+            words[index] = "[" + words[index] + "]"
+
+    definition = " ".join(words)
+    return definition
+
+def get_definition(word):
+    morph = None
+    
+    prefix_stack = []
+
+    def pop_prefix(last_morph, definition):
+
+        top, env = prefix_stack.pop()
+
+        return build_def(top, last_morph, env, definition)
+
+    definition = ""
+
+    for index, morph in enumerate(word.morphs):
+
+        addition = ""
+
+        env = word.environment_for_index(index)
+        last_morph = env.prev
+        next_morph = env.next
+
+        # Stack prepositions and prefixes for proper definition ordering
+        if morph.get_type() == "prep" or morph.get_type() == "prefix":
+            prefix_stack.append([morph, env])
+        else:
+            definition = build_def(morph, last_morph, env, definition)
+
+            if index != 0:
+                if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
+                    definition = pop_prefix(morph, definition)
+
+    while len(prefix_stack) > 0:
+        definition = pop_prefix(word.last_morph(), definition)
+
+    # Make modifications to outermost gloss
+    if not morph.has_tag("fixed-gloss"):
+        if word.get_type() == "verb":
+            return "to " + inflection.inflect(definition, "inf")
+        elif word.get_type() == "noun":
+            inflected = inflection.inflect(definition, "sg")
+
+            if morph.has_tag("count"):
+                return helpers.indefinite_article_for(inflected) + " " +  inflected
+            elif morph.has_tag("mass") or morph.has_tag("uncountable"):
+                return inflected
+            elif morph.has_tag("singleton"):
+                return "the " + inflected
+            else:
+                return inflected
+        elif word.get_type() == "adj":
+            definition = definition.replace("[","").replace("]", "")
+
+    return definition
