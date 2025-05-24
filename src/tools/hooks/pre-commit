@@ -2,42 +2,58 @@
 
 echo ""
 
-# Run formatting
-python3 morphs.py format
-files_changed=$?
+# Find changed files by type
+touched=$(git diff --cached --name-only --diff-filter=ACMR)
+touched_morphs=$(grep "data/*.json$" $touched)
+touched_code=$(grep "src/*.py$" $touched)
 
-# Don't commit if formatting altered any files
-if [ $files_changed -eq 0 ]; then
-	true
+# Run morph checks
+if [[ -n $touched_morphs ]]; then
+	# Morph formatting
+	python3 morphs.py format $touched_morphs
+	files_changed=$?
+
+	# Don't commit if formatting altered any files
+	if [ $files_changed -eq 0 ]; then
+		true
+	else
+		echo ""
+		echo "=== DID NOT COMMIT ==="
+		echo ""
+		exit 1
+	fi
+
+	# Morph validation
+	python3 morphs.py validate $touched_morphs
+	validate_success=$?
+
+	# Don't commit if morph validation fails
+	if [ $validate_success -eq 0 ]; then
+		true
+	else
+		echo "=== DID NOT COMMIT ==="
+		echo ""
+		exit 1
+	fi
 else
+	echo "No morph files changed"
 	echo ""
-	echo "=== DID NOT COMMIT ==="
-	echo ""
-	exit 1
-fi
-
-# Run validation
-python3 morphs.py validate
-validate_success=$?
-
-# Don't commit if morph validation fails
-if [ $validate_success -eq 0 ]; then
-	true
-else
-	echo "=== DID NOT COMMIT ==="
-	echo ""
-	exit 1
 fi
 
 # Run linter
-python3 linter.py -r src
-linter_success=$?
+if [[ -n $touched_code ]]; then
+	python3 linter.py $touched_code
+	linter_success=$?
 
-# Don't commit if linter shows errors or edits code
-if [ $linter_success -eq 0 ]; then
-	exit 0
+	# Don't commit if linter shows errors or edits code
+	if [ $linter_success -eq 0 ]; then
+		exit 0
+	else
+		echo "=== DID NOT COMMIT ==="
+		echo ""
+		exit 1
+	fi
 else
-	echo "=== DID NOT COMMIT ==="
+	echo "No code files changed"
 	echo ""
-	exit 1
 fi

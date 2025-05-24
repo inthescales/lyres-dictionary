@@ -33,17 +33,19 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         sys.exit(2)
 
     recurse = False
-    path = sys.argv[-1]
+    paths = params
     
     # Process args
     for opt, arg in opts:
         if opt in ["-r", "--recursive"]:
             recurse = True
 
-    if recurse:
-        files = find_files(path)
-    else:
-        files = [path]
+    files = []
+    for path in paths:
+        if recurse:
+            files += find_files(path)
+        else:
+            files += [path]
 
     print("Linting " + str(len(files)) + " files")
 
