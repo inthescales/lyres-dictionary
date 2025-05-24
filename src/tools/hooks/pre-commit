@@ -18,7 +18,7 @@ if [[ -n $touched_morphs ]]; then
 	# Don't commit if formatting altered any files
 	if [ $files_changed -eq 0 ]; then
 		success=0
-	else
+	fi
 
 	# Morph validation
 	python3 morphs.py validate $touched_morphs
@@ -27,7 +27,7 @@ if [[ -n $touched_morphs ]]; then
 	# Don't commit if morph validation fails
 	if [ $validate_success -eq 0 ]; then
 		success=0
-	else
+	fi
 else
 	echo "No morph files changed"
 	echo ""
@@ -41,7 +41,7 @@ if [[ -n $touched_code ]]; then
 	# Don't commit if linter shows errors or edits code
 	if [ $linter_success -eq 0 ]; then
 		success=0
-	else
+	fi
 else
 	echo "No code files changed"
 	echo ""
