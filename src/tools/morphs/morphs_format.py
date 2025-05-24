@@ -6,6 +6,7 @@ import src.tools.morphs.sort_numerical as numerical
 
 from collections import OrderedDict
 
+from src.utils.terminal import Color, color_text
 from src.tools.morphs.schemas.properties import properties as properties_list
 from src.tools.morphs.schemas.tags import tags as tags_list
 
@@ -222,8 +223,8 @@ def format_morphs(files, test):
             changed += 1
 
     if changed > 0:
-        print(str(changed) + " files changed")
+        print(color_text(Color.yellow, str(changed) + " files changed"))
     else:
-        print("0 files changed")
+        print(color_text(Color.green, "0 files changed"))
 
     return changed

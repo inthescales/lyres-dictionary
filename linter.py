@@ -2,6 +2,7 @@ import getopt
 import os
 import sys
 
+from src.utils.terminal import Color, color_text
 from src.tools.linter.imports import lint_imports
 
 def lint(file):
@@ -51,11 +52,11 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         result = max(result, lint(file))
 
     if result == 0:
-        print("Linting succeeded" + "\n")
+        print(color_text(Color.green, "Linting succeeded" + "\n"))
         sys.exit(0)
     elif result == 1:
-        print("Linter made code changes" + "\n")
+        print(color_text(Color.yellow, "Linter made code changes" + "\n"))
         sys.exit(1)
     elif result == 2:
-        print("Linting found errors" + "\n")
+        print(color_text(Color.red, "Linting found errors" + "\n"))
         sys.exit(2)

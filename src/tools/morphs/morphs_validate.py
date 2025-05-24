@@ -2,6 +2,8 @@ import src.tools.morphs.morphs_files as file_tool
 
 from src.tools.morphs.validation.expression_validation import validate_expression
 from src.tools.morphs.validation.property_validation import validate_properties
+from src.utils.terminal import Color, color_text
+
 from src.tools.morphs.schemas.tags import tags as valid_tags
 
 def validate_morph(morph):
@@ -68,8 +70,8 @@ def validate_morphs(files):
             fail_count += 1
 
     if fail_count == 0:
-        print("Validation succeeded")
+        print(color_text(Color.green, "Validation succeeded"))
         return 0
     else:
-        print("Validation failed on " + str(fail_count) + " morphs")
+        print(color_text(Color.red, "Validation failed on " + str(fail_count) + " morphs"))
         return 1
