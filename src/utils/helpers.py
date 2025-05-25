@@ -2,6 +2,12 @@ import random
 
 from src.utils.logging import Logger
 
+def list_if_not(val):
+    if isinstance(val, list):
+        return val
+    else:
+        return [val]
+
 # Probability
 
 # If passed a list, return one element at random.

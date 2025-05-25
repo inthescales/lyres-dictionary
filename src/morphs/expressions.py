@@ -175,11 +175,7 @@ def evaluate_suffix_template(template, form):
 
         return False
 
-    templates = None
-    if isinstance(template, list):
-        templates = template
-    elif isinstance(template, str):
-        templates = [template]
+    templates = helpers.list_if_not(template)
 
     if templates != None:
         for template in templates:

@@ -44,10 +44,7 @@ def form(morph, env, config=Former_Config()):
                 forms = [morph_dict["form-raw"]]
 
             if config.include_alt_forms and "form-raw-alt" in morph_dict:
-                if isinstance(morph_dict["form-raw-alt"], list):
-                    forms += morph_dict["form-raw-alt"]
-                else:
-                    forms += [morph_dict["form-raw-alt"]]
+                forms += helpers.list_if_not(morph_dict["form-raw-alt"])
 
             random = Random(morph.seed)
             raw_form = random.choice(forms)
