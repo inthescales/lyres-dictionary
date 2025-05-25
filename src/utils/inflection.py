@@ -1,5 +1,12 @@
 import lemminflect
 
+singular = "sg"
+plural = "pl"
+past_participle = "ppart"
+present_participle = "part"
+third_singular = "3sg"
+infinitive = "inf"
+
 # Returns an inflected form of the given word according to the mode
 def inflect(word, mode):
     words = word.split(" ")    
