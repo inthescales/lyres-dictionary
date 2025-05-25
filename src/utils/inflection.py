@@ -1,5 +1,7 @@
 import lemminflect
 
+from src.utils.logging import Logger
+
 singular = "sg"
 plural = "pl"
 past_participle = "ppart"
@@ -7,9 +9,9 @@ present_participle = "part"
 third_singular = "3sg"
 infinitive = "inf"
 
-# Returns an inflected form of the given word according to the mode
-def inflect(word, mode):
-    words = word.split(" ")    
+# Inflect the words in a gloss as indicated
+def inflect_gloss(gloss, mode):
+    words = gloss.split(" ")
     for i, word in enumerate(words):
         final_punctuation = None
 
@@ -23,33 +25,43 @@ def inflect(word, mode):
                 final_punctuation = word[-1]
                 word = word[0:-1]
 
-            words[i] = word[1:-1]
+            word = word[1:-1]
         elif len(words) > 1:
             continue
 
-        # Local overrides for forms the 3rd party library does wrong
-        override = override_inflection(words[i], mode)
+        words[i] = inflect(word, mode)
 
-        if override != None:
-            words[i] = override          
-        elif mode == infinitive:
-            pass
-        elif mode == third_singular:
-            words[i] = lemminflect.getInflection(words[i], tag='VBZ')[0]
-        elif mode == present_participle:
-            words[i] = lemminflect.getInflection(words[i], tag='VBG')[0]
-        elif mode == past_participle:
-            words[i] = lemminflect.getInflection(words[i], tag='VBN')[0]
-        elif mode == singular:
-            words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
-        elif mode == plural:
-            words[i] = lemminflect.getInflection(words[i], tag='NNS')[0]
-        
         # Add back stripped final punctuation
         if final_punctuation:
             words[i] += final_punctuation
-    
+
     return " ".join(words)
+
+# Returns an inflected form of the given word according to the mode
+def inflect(word, mode):
+    override_form = override_inflection(word, mode)
+    if override_form != None:
+        return override_form
+
+    if mode == infinitive:
+        return word
+    
+    if mode == third_singular:
+        return lemminflect.getInflection(word, tag='VBZ')[0]
+
+    if mode == present_participle:
+        return lemminflect.getInflection(word, tag='VBG')[0]
+
+    if mode == past_participle:
+        return lemminflect.getInflection(word, tag='VBN')[0]
+
+    if mode == singular:
+        return lemminflect.getInflection(word, tag='NN')[0]
+
+    if mode == plural:
+        return lemminflect.getInflection(word, tag='NNS')[0]
+    
+    Logger.error("unrecognized inflection mode '" + mode + "'")
 
 # Custom overrides for words the inflection library gets wrong
 def override_inflection(word, mode):

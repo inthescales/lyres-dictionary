@@ -142,39 +142,39 @@ def sub_inflection(gloss, wrapped, morph, last_morph):
         if code == "%@":
             value = wrapped
         elif code == "%inf":
-            value = inflection.inflect("to " + wrapped, inflection.infinitive)
+            value = inflection.inflect_gloss("to " + wrapped, inflection.infinitive)
         elif code == "%3sg":
-            value = inflection.inflect(wrapped, inflection.third_singular)
+            value = inflection.inflect_gloss(wrapped, inflection.third_singular)
         elif code == "%part":
-            value = inflection.inflect(wrapped, inflection.present_participle)
+            value = inflection.inflect_gloss(wrapped, inflection.present_participle)
         elif code == "%ppart":
-            value = inflection.inflect(wrapped, inflection.past_participle)
+            value = inflection.inflect_gloss(wrapped, inflection.past_participle)
         elif code == "%sg":
             if last_morph.has_tag("count"):
-                inflected = inflection.inflect(wrapped, inflection.singular)
+                inflected = inflection.inflect_gloss(wrapped, inflection.singular)
                 article = helpers.indefinite_article_for(inflected)
                 value = article + " " + inflected
             elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-                value = inflection.inflect(wrapped, inflection.singular)
+                value = inflection.inflect_gloss(wrapped, inflection.singular)
             elif last_morph.has_tag("singleton"):
                 article = "the"
-                value = article + " " + inflection.inflect(wrapped, inflection.singular)
+                value = article + " " + inflection.inflect_gloss(wrapped, inflection.singular)
             else:
                 # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
                 value = wrapped
         elif code == "%!sg":
-            value = inflection.inflect(wrapped, inflection.singular)
+            value = inflection.inflect_gloss(wrapped, inflection.singular)
         elif code == "%pl":
             if last_morph.has_tag("count"):
-                value = inflection.inflect(wrapped, inflection.plural)
+                value = inflection.inflect_gloss(wrapped, inflection.plural)
             elif last_morph.has_tag("singleton"):
                 article = "the"
-                value = article + " " +inflection.inflect(wrapped, inflection.singular)
+                value = article + " " +inflection.inflect_gloss(wrapped, inflection.singular)
             else:
                 # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
                 value = wrapped
         elif code == "%!pl":
-            value = inflection.inflect(wrapped, inflection.plural)
+            value = inflection.inflect_gloss(wrapped, inflection.plural)
         else:
             Logger.error("unrecognized inflection code '" + code + "'")
 
@@ -250,9 +250,9 @@ def get_definition(word):
     # Make modifications to outermost gloss
     if not morph.has_tag("fixed-gloss"):
         if word.get_type() == "verb":
-            return "to " + inflection.inflect(definition, inflection.infinitive)
+            return "to " + inflection.inflect_gloss(definition, inflection.infinitive)
         elif word.get_type() == "noun":
-            inflected = inflection.inflect(definition, inflection.singular)
+            inflected = inflection.inflect_gloss(definition, inflection.singular)
 
             if morph.has_tag("count"):
                 return helpers.indefinite_article_for(inflected) + " " +  inflected

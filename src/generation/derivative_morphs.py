@@ -58,7 +58,7 @@ def from_past_participle(morph, participle_form):
     new_dict["form-final"] = participle_form
     new_dict["type"] = "adj"
     gloss = helpers.one_or_random(morph.morph["gloss"], seed=morph.seed)
-    new_dict["gloss"] = inflection.inflect(gloss, "ppart")
+    new_dict["gloss"] = inflection.inflect_gloss(gloss, "ppart")
     new_dict["tags"] = ["past-participle"]
     new_dict["origin"] = morph.morph["origin"]
 
