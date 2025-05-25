@@ -133,50 +133,59 @@ def get_joining_vowel(language, first, second, form, addition):
 
 # Compose definitions ====================
 
-def sub_infl(word, wrapped, morph, last_morph):
-    if word == "%@":
-        return wrapped
-    elif word == "%inf":
-        return inflection.inflect("to " + wrapped, inflection.infinitive)
-    elif word == "%3sg":
-        return inflection.inflect(wrapped, inflection.third_singular)
-    elif word == "%part":
-        return inflection.inflect(wrapped, inflection.present_participle)
-    elif word == "%ppart":
-        return inflection.inflect(wrapped, inflection.past_participle)
-    elif word == "%sg":
-        if last_morph.has_tag("count"):
-            inflected = inflection.inflect(wrapped, inflection.singular)
-            article = helpers.indefinite_article_for(inflected)
-            return article + " " + inflected
-        elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-            return inflection.inflect(wrapped, inflection.singular)
-        elif last_morph.has_tag("singleton"):
-            article = "the"
-            return article + " " + inflection.inflect(wrapped, inflection.singular)
-        else:
-            # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
-            return wrapped
-    elif word == "%!sg":
-        return inflection.inflect(wrapped, inflection.singular)
-    elif word == "%pl":
-        if last_morph.has_tag("count"):
-            return inflection.inflect(wrapped, inflection.plural)
-        elif last_morph.has_tag("singleton"):
-            article = "the"
-            return article + " " +inflection.inflect(wrapped, inflection.singular)
-        else:
-            # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
-            return wrapped
-    elif word == "%!pl":
-        return inflection.inflect(wrapped, inflection.plural)
+def sub_inflection(gloss, wrapped, morph, last_morph):
+    subbed = gloss
+    while "%" in subbed:
+        match = re.search(r'%([\w\@\!\']*)', subbed)
+        code = match.group()
 
-    return word
+        if code == "%@":
+            value = wrapped
+        elif code == "%inf":
+            value = inflection.inflect("to " + wrapped, inflection.infinitive)
+        elif code == "%3sg":
+            value = inflection.inflect(wrapped, inflection.third_singular)
+        elif code == "%part":
+            value = inflection.inflect(wrapped, inflection.present_participle)
+        elif code == "%ppart":
+            value = inflection.inflect(wrapped, inflection.past_participle)
+        elif code == "%sg":
+            if last_morph.has_tag("count"):
+                inflected = inflection.inflect(wrapped, inflection.singular)
+                article = helpers.indefinite_article_for(inflected)
+                value = article + " " + inflected
+            elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
+                value = inflection.inflect(wrapped, inflection.singular)
+            elif last_morph.has_tag("singleton"):
+                article = "the"
+                value = article + " " + inflection.inflect(wrapped, inflection.singular)
+            else:
+                # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
+                value = wrapped
+        elif code == "%!sg":
+            value = inflection.inflect(wrapped, inflection.singular)
+        elif code == "%pl":
+            if last_morph.has_tag("count"):
+                value = inflection.inflect(wrapped, inflection.plural)
+            elif last_morph.has_tag("singleton"):
+                article = "the"
+                value = article + " " +inflection.inflect(wrapped, inflection.singular)
+            else:
+                # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
+                value = wrapped
+        elif code == "%!pl":
+            value = inflection.inflect(wrapped, inflection.plural)
+        else:
+            Logger.error("unrecognized inflection code '" + code + "'")
 
-def sub_properties(word, morph, last_morph):
-    subbed = word
+        subbed = subbed.replace(code, value)
+
+    return subbed
+
+def sub_properties(gloss, morph, last_morph):
+    subbed = gloss
     while "&" in subbed:
-        match = re.search(r'&\((.*?)\)', word)
+        match = re.search(r'&\((.*?)\)', subbed)
 
         ref_property = match.group(1)
         if not ref_property in last_morph.morph:
@@ -199,28 +208,10 @@ def build_def(morph, last_morph, env, wrapped):
     if last_morph is None:
         return gloss
 
+    gloss = sub_inflection(gloss, wrapped, morph, last_morph)
     gloss = sub_properties(gloss, morph, last_morph)
 
-    words = gloss.split(" ")
-    for (index, word) in enumerate(words):
-        bracketed = False
-        if word[0] == "[" and word[-1] == "]" and word[1] == "%":
-            # Substitution points may be bracketed – preserve existing brackets
-            # TODO: Add closing %s so that I can just use text substitution
-            bracketed = True
-            word = word[1:-1]
-        
-        if "%" in word:    
-            new_word = sub_infl(word, wrapped, morph, last_morph)
-        else:
-            new_word = word
-
-        if bracketed:
-            new_word = "[" + new_word + "]"
-
-        out_words.append(new_word)
-
-    return " ".join(out_words)
+    return gloss
 
 def get_definition(word):
     morph = None
