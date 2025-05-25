@@ -131,7 +131,7 @@ def get_joining_vowel(language, first, second, form, addition):
 
 # Compose definitions ====================
 
-def find_infl(word, wrapped, last_morph, seed):
+def find_infl(word, wrapped, morph, last_morph, seed):
     if word == "%@":
         return wrapped
     elif word == "%part":
@@ -184,14 +184,8 @@ def find_infl(word, wrapped, last_morph, seed):
         tail = word[close_index + 1:]
 
         if ref_property in last_morph.morph:
-            # Choose one at random if list
-            # TODO: Add a helper for this
-            if isinstance(last_morph.morph[ref_property], list):
-                random = Random(morph.seed)
-                value = random.choice(last_morph.morph[ref_property])
-            else:
-                value = last_morph.morph[ref_property]
-
+            value = helpers.one_or_random(last_morph.morph[ref_property], seed=morph.seed)
+            
             # If this is a kind of gloss, and is a single word, add brackets
             if ref_property.startswith("gloss") and not " " in value:
                 value = "[" + value + "]"
@@ -219,7 +213,7 @@ def build_def(morph, last_morph, env, wrapped):
             word = word[1:-1]
         
         if "%" in word:    
-            new_word = find_infl(word, wrapped, last_morph, morph.seed)
+            new_word = find_infl(word, wrapped, morph, last_morph, morph.seed)
         else:
             new_word = word
 

@@ -2,7 +2,20 @@ import random
 
 from src.utils.logging import Logger
 
-# Bag probability
+# Probability
+
+# If passed a list, return one element at random.
+# If passed a non-list, return the value back again
+def one_or_random(val, seed=None):
+    if seed != None:
+        randinst = random.Random(seed)
+    else:
+        randinst = random.Random()
+
+    if isinstance(val, list):
+        return randinst.choice(val)
+    else:
+        return val
 
 # Given an array of [content, weight] tuples, returns a content item at random
 # based on the weights.
@@ -24,7 +37,7 @@ def choose_bag(bag):
     Logger.error("BAG ERROR")
     return nil
 
-# Morph dictionary handling
+# Morph Dictionaries
 
 # Returns true if the given morph dictionary contains the given tag.
 # Morphs have their own way of doing this — this is for dictionary data
