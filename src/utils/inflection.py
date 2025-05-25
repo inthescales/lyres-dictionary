@@ -32,23 +32,18 @@ def inflect(word, mode):
 
         if override != None:
             words[i] = override          
-        elif mode == "ppart":
-            words[i] = lemminflect.getInflection(words[i], tag='VBN')[0]
-        elif mode == "part":
-            words[i] = lemminflect.getInflection(words[i], tag='VBG')[0]
-        elif mode == "3sg":
-            words[i] = lemminflect.getInflection(words[i], tag='VBZ')[0]
-        elif mode == "inf":
-            # do nothing
+        elif mode == infinitive:
             pass
-        elif mode == "sg":
+        elif mode == third_singular:
+            words[i] = lemminflect.getInflection(words[i], tag='VBZ')[0]
+        elif mode == present_participle:
+            words[i] = lemminflect.getInflection(words[i], tag='VBG')[0]
+        elif mode == past_participle:
+            words[i] = lemminflect.getInflection(words[i], tag='VBN')[0]
+        elif mode == singular:
             words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
-        elif mode == "pl":
+        elif mode == plural:
             words[i] = lemminflect.getInflection(words[i], tag='NNS')[0]
-        elif mode == "mass":
-            words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
-        elif mode == "singleton":
-            words[i] = lemminflect.getInflection(words[i], tag='NN')[0]
         
         # Add back stripped final punctuation
         if final_punctuation:

@@ -53,6 +53,30 @@ def has_tag(morph, tag):
 
     return tag in morph["tags"]
 
+# Strings
+
+def chunk_punctuation(string):
+    word_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-'%"
+    state = string[0] in word_chars
+    chunks = [""]
+
+    for char in string:
+        print(state % 2)
+        if state % 2 == 0:
+            if char not in word_chars:
+                chunks[-1] += char
+            else:
+                chunks.append(char)
+                state = 1
+        else:
+            if char in word_chars:
+                chunks[-1] += char
+            else:
+                chunks.append(char)
+                state = 0
+
+    return chunks
+
 # Language
 
 def is_vowel(letter, y_is_vowel=False):

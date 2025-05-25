@@ -134,47 +134,40 @@ def get_joining_vowel(language, first, second, form, addition):
 def find_infl(word, wrapped, morph, last_morph, seed):
     if word == "%@":
         return wrapped
+    elif word == "%inf":
+        return inflection.inflect("to " + wrapped, inflection.infinitive)
+    elif word == "%3sg":
+        return inflection.inflect(wrapped, inflection.third_singular)
     elif word == "%part":
         return inflection.inflect(wrapped, inflection.present_participle)
     elif word == "%ppart":
         return inflection.inflect(wrapped, inflection.past_participle)
-    elif word == "%3sg":
-        return inflection.inflect(wrapped, inflection.third_singular)
-    elif word == "%inf":
-        return inflection.inflect("to " + wrapped, inflection.infinitive)
     elif word == "%sg":
         if last_morph.has_tag("count"):
-            inflected = inflection.inflect(wrapped, "sg")
+            inflected = inflection.inflect(wrapped, inflection.singular)
             article = helpers.indefinite_article_for(inflected)
             return article + " " + inflected
         elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-            return inflection.inflect(wrapped, "mass")
+            return inflection.inflect(wrapped, inflection.singular)
         elif last_morph.has_tag("singleton"):
             article = "the"
-            return article + " " +inflection.inflect(wrapped, "singleton")
+            return article + " " + inflection.inflect(wrapped, inflection.singular)
         else:
+            # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
             return wrapped
     elif word == "%!sg":
-        if last_morph.has_tag("count"):
-            return inflection.inflect(wrapped, "sg")
-        elif last_morph.has_tag("mass"):
-            return inflection.inflect(wrapped, "mass")
-        elif last_morph.has_tag("singleton"):
-            return inflection.inflect(wrapped, "singleton")
-        else:
-            return wrapped
+        return inflection.inflect(wrapped, inflection.singular)
     elif word == "%pl":
         if last_morph.has_tag("count"):
-            return inflection.inflect(wrapped, "pl")
-        elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-            return inflection.inflect(wrapped, "mass")
+            return inflection.inflect(wrapped, inflection.plural)
         elif last_morph.has_tag("singleton"):
             article = "the"
-            return article + " " +inflection.inflect(wrapped, "singleton")
+            return article + " " +inflection.inflect(wrapped, inflection.singular)
         else:
+            # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
             return wrapped
     elif word == "%!pl":
-        return inflection.inflect(wrapped, "pl")
+        return inflection.inflect(wrapped, inflection.plural)
     elif "%(" in word and ")" in word:
         open_index = word.index("%(")
         close_index = word.index(")")
@@ -185,7 +178,7 @@ def find_infl(word, wrapped, morph, last_morph, seed):
 
         if ref_property in last_morph.morph:
             value = helpers.one_or_random(last_morph.morph[ref_property], seed=morph.seed)
-            
+
             # If this is a kind of gloss, and is a single word, add brackets
             if ref_property.startswith("gloss") and not " " in value:
                 value = "[" + value + "]"
