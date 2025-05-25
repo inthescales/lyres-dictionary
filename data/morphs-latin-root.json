@@ -4816,7 +4816,7 @@
         "type": "verb",
         "conjugation": 3,
         "gloss": "[spread] out",
-        "gloss-relative": "[spread]",
+        "gloss-relative": "spread",
         "tags": ["intransitive", "motion"],
         "origin": "latin",
         "notes": "Actual perfect form is 'pass', but I've gone with 'pans' in imitation of 'expansion'."

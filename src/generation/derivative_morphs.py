@@ -69,7 +69,7 @@ def from_past_participle(morph, participle_form):
     if "form-participle-canon" in morph.morph:
         canon_participles = morph.morph["form-participle-canon"]
     if not morph.has_tag("obscure") and not morph.has_tag("speculative") \
-        and canon_form == original_gloss \
+        and canon_form == morph.morph["gloss"] \
         and canon_participles \
         and participle_form not in canon_participles:
         # NOTE: My other idea for the last condition above was:
