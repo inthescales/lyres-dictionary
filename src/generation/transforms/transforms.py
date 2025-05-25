@@ -39,10 +39,7 @@ def get_context(word, morphothec, is_single):
     past_participle_form = None
     if "form-raw" in root_morph.morph and "verb-class" in root_morph.morph:
         config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])
-        form = root_morph.morph["form-raw"]
-        if isinstance(form, list):
-            form = random.choice(form)
-
+        form = helpers.one_or_random(root_morph.morph["form-raw"], seed=root_morph.seed)
         past_participle_form = participle.oe_form_to_ne_participle(form, root_morph.morph["verb-class"], config)
 
     return TransformContext(morphothec, alternate_form, past_participle_form)

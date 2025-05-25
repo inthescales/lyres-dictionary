@@ -1,3 +1,5 @@
+import src.utils.helpers as helpers
+
 from random import Random
 
 from src.evolutor import evolutor
@@ -149,9 +151,7 @@ def form(morph, env, config=Former_Config()):
                 # If there's no final form, use stem
                 form = morph_dict["form-stem"]
     
-    if isinstance(form, list):
-        random = Random(morph.seed)
-        form = random.choice(form)
+    form = helpers.one_or_random(form, seed=morph.seed)
     
     return form
 
@@ -167,11 +167,7 @@ def gloss(morph, env):
             return morph_dict["gloss-relative"]
     
     if "gloss" in morph_dict:
-        if type(morph_dict["gloss"]) is list:
-            random = Random(morph.seed)
-            gloss = random.choice(morph_dict["gloss"])
-        else:
-            gloss = morph_dict["gloss"]
+        gloss = helpers.one_or_random(morph_dict["gloss"], seed=morph.seed)
         if morph_dict["type"] in ["noun", "verb"] and len(gloss.split(" ")) == 1:
             return "[" + gloss + "]"
         else:

@@ -1,5 +1,6 @@
 import random
 
+import src.utils.helpers as helpers
 import src.utils.inflection as inflection
 
 from src.models.morph import Morph
@@ -24,14 +25,10 @@ def with_alternate_gloss(morph):
     new_dict["form-raw"] = morph.morph["form-raw"]
     if "form-canon" in morph.morph:
         new_dict["form-canon"] = morph.morph["form-canon"]
+    new_dict["gloss"] = helpers.one_or_random(morph.morph["gloss-alt"], seed=morph.seed)
     if "tags" in morph.morph:
         new_dict["tags"] = morph.tags()
     new_dict["origin"] = morph.morph["origin"]
-
-    if isinstance(morph.morph["gloss-alt"], list):
-        new_dict["gloss"] = random.choice(morph.morph["gloss-alt"])
-    elif isinstance(morph.morph["gloss-alt"], str):
-        new_dict["gloss"] = morph.morph["gloss-alt"]
 
     if "verb-class" in morph.morph:
         new_dict["verb-class"] = morph.morph["verb-class"]
@@ -44,14 +41,10 @@ def with_alternate_form_and_gloss(morph, form):
     new_dict["type"] = morph.morph["type"]
     new_dict["form-stem"] = form
     new_dict["form-final"] = form
+    new_dict["gloss"] = helpers.one_or_random(morph.morph["gloss-alt"], seed=morph.seed)
     new_dict["origin"] = morph.morph["origin"]
     if "tags" in morph.morph:
         new_dict["tags"] = morph.tags()
-    
-    if isinstance(morph.morph["gloss-alt"], list):
-        new_dict["gloss"] = random.choice(morph.morph["gloss-alt"])
-    elif isinstance(morph.morph["gloss-alt"], str):
-        new_dict["gloss"] = morph.morph["gloss-alt"]
 
     if "verb-class" in morph.morph:
         new_dict["verb-class"] = morph.morph["verb-class"]
@@ -64,15 +57,10 @@ def from_past_participle(morph, participle_form):
     new_dict["form-stem"] = participle_form
     new_dict["form-final"] = participle_form
     new_dict["type"] = "adj"
+    gloss = helpers.one_or_random(morph.morph["gloss"], seed=morph.seed)
+    new_dict["gloss"] = inflection.inflect(gloss, "ppart")
     new_dict["tags"] = ["past-participle"]
     new_dict["origin"] = morph.morph["origin"]
-
-    original_gloss = morph.morph["gloss"]
-    if isinstance(original_gloss, list):
-        new_dict["gloss"] = random.choice(original_gloss)
-    else:
-        new_dict["gloss"] = original_gloss
-    new_dict["gloss"] = inflection.inflect(new_dict["gloss"], "ppart")
 
     canon_form = None
     canon_participles = None
