@@ -7,7 +7,7 @@ from src.morphs.morphothec import Morphothec
 
 class GlossTests(unittest.TestCase):
     def setUp(self):
-        self.morphothec = Morphothec(["src/tests/test data/gloss_test_morphs.json"])
+        self.morphothec = Morphothec(["src/tests/test_data/gloss_test_morphs.json"])
 
     def testSuffixation(self):
         # Single suffixes

@@ -1000,7 +1000,7 @@
                     "has-property": "gloss-animal"
                 }
             },
-            "gloss": "%(gloss-animal)"
+            "gloss": "&(gloss-animal)"
         }],
         "tags": ["no-length"],
         "origin": "old-english",
@@ -1073,7 +1073,7 @@
                     "has-property": "gloss-tool"
                 }
             },
-            "gloss": "%(gloss-tool)"
+            "gloss": "&(gloss-tool)"
         }],
         "tags": ["no-length"],
         "origin": "old-english",

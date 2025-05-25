@@ -1,3 +1,5 @@
+import re
+
 import src.generation.former as former
 import src.language.greek.joining as grk_join
 import src.language.latin.joining as lat_join
@@ -131,7 +133,7 @@ def get_joining_vowel(language, first, second, form, addition):
 
 # Compose definitions ====================
 
-def find_infl(word, wrapped, morph, last_morph, seed):
+def sub_infl(word, wrapped, morph, last_morph):
     if word == "%@":
         return wrapped
     elif word == "%inf":
@@ -168,26 +170,27 @@ def find_infl(word, wrapped, morph, last_morph, seed):
             return wrapped
     elif word == "%!pl":
         return inflection.inflect(wrapped, inflection.plural)
-    elif "%(" in word and ")" in word:
-        open_index = word.index("%(")
-        close_index = word.index(")")
-
-        head = word[:open_index]
-        ref_property = word[open_index + 2:close_index]
-        tail = word[close_index + 1:]
-
-        if ref_property in last_morph.morph:
-            value = helpers.one_or_random(last_morph.morph[ref_property], seed=morph.seed)
-
-            # If this is a kind of gloss, and is a single word, add brackets
-            if ref_property.startswith("gloss") and not " " in value:
-                value = "[" + value + "]"
-
-            return head + value + tail
-        else:
-            Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
 
     return word
+
+def sub_properties(word, morph, last_morph):
+    subbed = word
+    while "&" in subbed:
+        match = re.search(r'&\((.*?)\)', word)
+
+        ref_property = match.group(1)
+        if not ref_property in last_morph.morph:
+            Logger.error("referred to missing property '" + ref_property + "' in morph " + last_morph.morph["key"])
+
+        value = helpers.one_or_random(last_morph.morph[ref_property], seed=morph.seed)
+
+        # If the gloss is a single word, add brackets
+        if not " " in value:
+            value = "[" + value + "]"
+
+        subbed = subbed.replace(match.group(), value)
+
+    return subbed
 
 def build_def(morph, last_morph, env, wrapped):
     gloss = former.gloss(morph, env)
@@ -195,6 +198,8 @@ def build_def(morph, last_morph, env, wrapped):
 
     if last_morph is None:
         return gloss
+
+    gloss = sub_properties(gloss, morph, last_morph)
 
     words = gloss.split(" ")
     for (index, word) in enumerate(words):
@@ -206,7 +211,7 @@ def build_def(morph, last_morph, env, wrapped):
             word = word[1:-1]
         
         if "%" in word:    
-            new_word = find_infl(word, wrapped, morph, last_morph, morph.seed)
+            new_word = sub_infl(word, wrapped, morph, last_morph)
         else:
             new_word = word
 

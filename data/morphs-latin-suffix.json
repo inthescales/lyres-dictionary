@@ -334,7 +334,7 @@
                     "has-property": "gloss-tool"
                 }
             },
-            "gloss": "%(gloss-tool)"
+            "gloss": "&(gloss-tool)"
         }],
         "origin": "latin"
     }, {
@@ -535,7 +535,7 @@
         "derive-from": "verb",
         "derive-to": "verb",
         "derive-participle": "present",
-        "gloss": "[become] %(gloss-state)",
+        "gloss": "[become] &(gloss-state)",
         "suffixes": ["-nt", "-nce", "-ate"],
         "requires": {
             "follows": {
@@ -632,7 +632,7 @@
                     "has-property": "gloss-state"
                 }
             },
-            "gloss": "%(gloss-state)"
+            "gloss": "&(gloss-state)"
         }],
         "origin": "latin"
     }, {

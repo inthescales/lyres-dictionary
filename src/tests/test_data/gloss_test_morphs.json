@@ -265,7 +265,7 @@
                     "has-property": "gloss-tool"
                 }
             },
-            "gloss": "%(gloss-tool)"
+            "gloss": "&(gloss-tool)"
         }],
         "tags": ["transitive", "no-gen"],
         "origin": "latin"
