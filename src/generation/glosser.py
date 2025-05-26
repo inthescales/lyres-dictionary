@@ -1,25 +1,32 @@
 import src.utils.helpers as helpers
 import src.utils.inflection as inflection
 
-# Get a morph's gloss, based on its environment
+# Get a morph's gloss based on its environment
 def gloss(morph, env):
     morph_dict = morph.morph
 
-    # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
-    if env.prev and ((env.prev.get_type() == "noun" and env.anteprev and env.anteprev.get_type() == "prep" ) or (morph.get_type() == "verb" and env.prev.get_type() == "prep")) and "gloss-relative" in morph_dict:
+    # Check for special 'gloss-relative' glosses where prepositions are involved
+    if env.prev \
+        and ( \
+            (env.prev.get_type() == "noun" and env.anteprev and env.anteprev.get_type() == "prep" ) \
+            or (morph.get_type() == "verb" and env.prev.get_type() == "prep") \
+        ) \
+        and "gloss-relative" in morph_dict:
         if morph.get_type() == "verb" and len(morph_dict["gloss-relative"].split(" ")) == 1:
             return "[" + morph_dict["gloss-relative"] + "]"
         else:
             return morph_dict["gloss-relative"]
     
+    # Check for a basic gloss
     if "gloss" in morph_dict:
         gloss = helpers.one_or_random(morph_dict["gloss"], seed=morph.seed)
         if morph_dict["type"] in ["noun", "verb"] and len(gloss.split(" ")) == 1:
             return "[" + gloss + "]"
         else:
             return gloss
-    else:
         
+    else:
+        # Use special linking or final glosses if present
         if env.next:
             if "gloss-link" in morph_dict:
                 return morph_dict["gloss-link"]
@@ -27,6 +34,7 @@ def gloss(morph, env):
             if "gloss-final" in morph_dict:
                 return morph_dict["gloss-final"]
         
+        # Use special gloss based on the type of a neighbor
         if morph.get_type() == "prep" or morph.get_type() == "prefix":
             relative = env.next
         else:
