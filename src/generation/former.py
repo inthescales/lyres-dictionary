@@ -61,51 +61,11 @@ def form(morph, env, config=Former_Config()):
     # Get the proper form of the morph
     elif env.next != None:
 
-        # Follow special assimilation rules if there are any
+        # Apply assimilation rules if there are any
         if "form-assimilation" in morph_dict:
-
+            # TODO: Add some kind of "base form" method?"
             next_form = env.next.as_dict(env.next_env(env.next))["form"]
-            next_letter = next_form[0]
-
-            assimilation_map = {}
-            matched_case = None
-            star_case = None
-
-            for case, sounds in morph_dict["form-assimilation"].items():
-                for sound in sounds:
-                    if sound == "*":
-                        star_case = case
-                    elif sound not in assimilation_map:
-                        if sound not in assimilation_map:
-                            assimilation_map[sound] = case
-                        else:
-                            Logger.error("Repeated assimilation sound for key " + morph_dict["key"])
-
-            for key in reversed(sorted(list(assimilation_map.keys()), key=len)):
-                if next_form.startswith(key):
-                    matched_case = assimilation_map[key]
-                    break
-
-            if matched_case:
-                case = matched_case
-            elif star_case:
-                case = star_case
-
-            if case == "form-stem":
-                form = morph_dict["form-stem"]
-            elif case == "form-stem-assim":
-                form = morph_dict["form-stem-assim"]
-            elif case == "cut":
-                form = morph_dict["form-stem"] + "/"
-            elif case == "double":
-                form = morph_dict["form-stem-assim"] + next_letter
-            elif case == "nasal":
-                if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-                    form = morph_dict["form-stem-assim"] + 'm'
-                else:
-                    form = morph_dict["form-stem-assim"] + 'n'
-            else:
-                form = case
+            form = apply_assimilation(morph, next_form)
 
         # Default rules
         else:
@@ -141,3 +101,46 @@ def form(morph, env, config=Former_Config()):
     form = helpers.one_or_random(form, seed=morph.seed)
     
     return form
+
+# Get the relevant form from an assimilation dict, based on the following form
+def apply_assimilation(morph, following):
+    next_letter = following[0]
+
+    assimilation_map = {}
+    matched_case = None
+    star_case = None
+
+    for case, sounds in morph.morph["form-assimilation"].items():
+        for sound in sounds:
+            if sound == "*":
+                star_case = case
+            elif sound not in assimilation_map:
+                assimilation_map[sound] = case
+            else:
+                Logger.error("Repeated assimilation sound for key " + morph.morph["key"])
+
+    for key in reversed(sorted(list(assimilation_map.keys()), key=len)):
+        if following.startswith(key):
+            matched_case = assimilation_map[key]
+            break
+
+    if matched_case:
+        case = matched_case
+    elif star_case:
+        case = star_case
+
+    if case == "form-stem":
+        return morph.morph["form-stem"]
+    elif case == "form-stem-assim":
+        return morph.morph["form-stem-assim"]
+    elif case == "cut":
+        return morph.morph["form-stem"] + "/"
+    elif case == "double":
+        return morph.morph["form-stem-assim"] + next_letter
+    elif case == "nasal":
+        if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
+            return morph.morph["form-stem-assim"] + 'm'
+        else:
+            return morph.morph["form-stem-assim"] + 'n'
+    else:
+        return case
