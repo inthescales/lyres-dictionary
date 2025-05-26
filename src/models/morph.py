@@ -68,7 +68,7 @@ class Morph:
         return self.morph["type"] in ["noun", "verb", "adj"]
 
     def is_prefix(self):
-        return self.morph["type"] in ["prefix", "prep", "number"]
+        return self.morph["type"] in ["prefix", "prep"]
 
     def is_suffix(self):
         return self.morph["type"] == "suffix"

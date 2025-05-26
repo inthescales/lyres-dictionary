@@ -9,34 +9,6 @@ present_participle = "part"
 third_singular = "3sg"
 infinitive = "inf"
 
-# Inflect the words in a gloss as indicated
-def inflect_gloss(gloss, mode):
-    words = gloss.split(" ")
-    for i, word in enumerate(words):
-        final_punctuation = None
-
-        # Strip punctuation
-        if word[0] == "[" \
-            and (
-                word[-1] == "]"
-                or (word[-1] in [",", ";"] and word[-2] == "]")
-            ):
-            if word[-1] != "]":
-                final_punctuation = word[-1]
-                word = word[0:-1]
-
-            word = word[1:-1]
-        elif len(words) > 1:
-            continue
-
-        words[i] = inflect(word, mode)
-
-        # Add back stripped final punctuation
-        if final_punctuation:
-            words[i] += final_punctuation
-
-    return " ".join(words)
-
 # Returns an inflected form of the given word according to the mode
 def inflect(word, mode):
     override_form = override_inflection(word, mode)

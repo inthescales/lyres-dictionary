@@ -151,39 +151,3 @@ def form(morph, env, config=Former_Config()):
     form = helpers.one_or_random(form, seed=morph.seed)
     
     return form
-
-def gloss(morph, env):
-    
-    morph_dict = morph.morph
-
-    # Special case for prep-relative-to-noun cases (e.g. sub-limin-al)
-    if env.prev and ((env.prev.get_type() == "noun" and env.anteprev and env.anteprev.get_type() == "prep" ) or (morph.get_type() == "verb" and env.prev.get_type() == "prep")) and "gloss-relative" in morph_dict:
-        if morph.get_type() == "verb" and len(morph_dict["gloss-relative"].split(" ")) == 1:
-            return "[" + morph_dict["gloss-relative"] + "]"
-        else:
-            return morph_dict["gloss-relative"]
-    
-    if "gloss" in morph_dict:
-        gloss = helpers.one_or_random(morph_dict["gloss"], seed=morph.seed)
-        if morph_dict["type"] in ["noun", "verb"] and len(gloss.split(" ")) == 1:
-            return "[" + gloss + "]"
-        else:
-            return gloss
-    else:
-        
-        if env.next:
-            if "gloss-link" in morph_dict:
-                return morph_dict["gloss-link"]
-        else:
-            if "gloss-final" in morph_dict:
-                return morph_dict["gloss-final"]
-        
-        if morph.get_type() == "prep" or morph.get_type() == "prefix":
-            relative = env.next
-        else:
-            relative = env.prev
-        
-        if relative and "gloss-" + relative.get_type() in morph_dict:
-            return morph_dict["gloss-" + relative.get_type()]
-    
-    Logger.error("failed to find gloss for " + morph_dict["key"] + ", joining to " + relative.get_key())

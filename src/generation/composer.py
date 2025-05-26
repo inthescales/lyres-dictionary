@@ -1,6 +1,7 @@
 import re
 
 import src.generation.former as former
+import src.generation.glosser as glosser
 import src.language.greek.joining as grk_join
 import src.language.latin.joining as lat_join
 import src.language.modern_english.joining as mne_join
@@ -133,6 +134,7 @@ def get_joining_vowel(language, first, second, form, addition):
 
 # Compose definitions ====================
 
+# Applies inflections to the wrapped morph's gloss text, indicated by '%inflectioncode'
 def sub_inflection(gloss, wrapped, morph, last_morph):
     subbed = gloss
     while "%" in subbed:
@@ -142,39 +144,39 @@ def sub_inflection(gloss, wrapped, morph, last_morph):
         if code == "%@":
             value = wrapped
         elif code == "%inf":
-            value = inflection.inflect_gloss("to " + wrapped, inflection.infinitive)
+            value = glosser.inflect_gloss("to " + wrapped, inflection.infinitive)
         elif code == "%3sg":
-            value = inflection.inflect_gloss(wrapped, inflection.third_singular)
+            value = glosser.inflect_gloss(wrapped, inflection.third_singular)
         elif code == "%part":
-            value = inflection.inflect_gloss(wrapped, inflection.present_participle)
+            value = glosser.inflect_gloss(wrapped, inflection.present_participle)
         elif code == "%ppart":
-            value = inflection.inflect_gloss(wrapped, inflection.past_participle)
+            value = glosser.inflect_gloss(wrapped, inflection.past_participle)
         elif code == "%sg":
             if last_morph.has_tag("count"):
-                inflected = inflection.inflect_gloss(wrapped, inflection.singular)
+                inflected = glosser.inflect_gloss(wrapped, inflection.singular)
                 article = helpers.indefinite_article_for(inflected)
                 value = article + " " + inflected
             elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
-                value = inflection.inflect_gloss(wrapped, inflection.singular)
+                value = glosser.inflect_gloss(wrapped, inflection.singular)
             elif last_morph.has_tag("singleton"):
                 article = "the"
-                value = article + " " + inflection.inflect_gloss(wrapped, inflection.singular)
+                value = article + " " + glosser.inflect_gloss(wrapped, inflection.singular)
             else:
                 # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
                 value = wrapped
         elif code == "%!sg":
-            value = inflection.inflect_gloss(wrapped, inflection.singular)
+            value = glosser.inflect_gloss(wrapped, inflection.singular)
         elif code == "%pl":
             if last_morph.has_tag("count"):
-                value = inflection.inflect_gloss(wrapped, inflection.plural)
+                value = glosser.inflect_gloss(wrapped, inflection.plural)
             elif last_morph.has_tag("singleton"):
                 article = "the"
-                value = article + " " +inflection.inflect_gloss(wrapped, inflection.singular)
+                value = article + " " +glosser.inflect_gloss(wrapped, inflection.singular)
             else:
                 # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
                 value = wrapped
         elif code == "%!pl":
-            value = inflection.inflect_gloss(wrapped, inflection.plural)
+            value = glosser.inflect_gloss(wrapped, inflection.plural)
         else:
             Logger.error("unrecognized inflection code '" + code + "'")
 
@@ -182,6 +184,7 @@ def sub_inflection(gloss, wrapped, morph, last_morph):
 
     return subbed
 
+# Substitutes references to a wrapped morph's properties, indicated by '&(property-name)'
 def sub_properties(gloss, morph, last_morph):
     subbed = gloss
     while "&" in subbed:
@@ -201,8 +204,9 @@ def sub_properties(gloss, morph, last_morph):
 
     return subbed
 
-def build_def(morph, last_morph, env, wrapped):
-    gloss = former.gloss(morph, env)
+# Populates the morph's gloss with data from the environment
+def populate_gloss(morph, last_morph, env, wrapped):
+    gloss = glosser.gloss(morph, env)
     out_words = []
 
     if last_morph is None:
@@ -213,56 +217,56 @@ def build_def(morph, last_morph, env, wrapped):
 
     return gloss
 
+# Makes modifications to final definition text so that it can stand on its own
+def finalize_definition(word, definition):
+    if word.get_type() == "verb":
+        return "to " + glosser.inflect_gloss(definition, inflection.infinitive)
+    elif word.get_type() == "noun":
+        last_morph = word.last_morph()
+        inflected = glosser.inflect_gloss(definition, inflection.singular)
+
+        if last_morph.has_tag("count"):
+            return helpers.indefinite_article_for(inflected) + " " +  inflected
+        elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
+            return inflected
+        elif last_morph.has_tag("singleton"):
+            return "the " + inflected
+        else:
+            return inflected
+    elif word.get_type() == "adj":
+        return definition.replace("[","").replace("]", "")
+
+# Gets the final definition for the word
 def get_definition(word):
-    morph = None
-    
     prefix_stack = []
 
+    # Returns the populated gloss of the topmost prefix in the stack
     def pop_prefix(last_morph, definition):
-
         top, env = prefix_stack.pop()
+        return populate_gloss(top, last_morph, env, definition)
 
-        return build_def(top, last_morph, env, definition)
-
+    morph = None
     definition = ""
-
     for index, morph in enumerate(word.morphs):
-
-        addition = ""
-
         env = word.environment_for_index(index)
-        last_morph = env.prev
-        next_morph = env.next
 
         # Stack prepositions and prefixes for proper definition ordering
-        if morph.get_type() == "prep" or morph.get_type() == "prefix":
+        if morph.is_prefix():
             prefix_stack.append([morph, env])
         else:
-            definition = build_def(morph, last_morph, env, definition)
+            definition = populate_gloss(morph, env.prev, env, definition)
 
-            if index != 0:
-                if len(prefix_stack) > 0 and (morph.get_type() == "verb" or morph.get_type() == "adj" or morph.get_type() == "noun"):
-                    definition = pop_prefix(morph, definition)
+            # TODO: This logic seems to mostly reflect verbal prefixes, but is apparently
+            # necessary for relational circumfixes. Reconsider.
+            if len(prefix_stack) > 0 and morph.is_root():
+                definition = pop_prefix(morph, definition)
 
+    # Apply prefixes in reverse order
     while len(prefix_stack) > 0:
         definition = pop_prefix(word.last_morph(), definition)
 
-    # Make modifications to outermost gloss
+    # Finalize
     if not morph.has_tag("fixed-gloss"):
-        if word.get_type() == "verb":
-            return "to " + inflection.inflect_gloss(definition, inflection.infinitive)
-        elif word.get_type() == "noun":
-            inflected = inflection.inflect_gloss(definition, inflection.singular)
-
-            if morph.has_tag("count"):
-                return helpers.indefinite_article_for(inflected) + " " +  inflected
-            elif morph.has_tag("mass") or morph.has_tag("uncountable"):
-                return inflected
-            elif morph.has_tag("singleton"):
-                return "the " + inflected
-            else:
-                return inflected
-        elif word.get_type() == "adj":
-            definition = definition.replace("[","").replace("]", "")
+        definition = finalize_definition(word, definition)
 
     return definition
