@@ -11,6 +11,7 @@ class Former_Config():
         self.include_alt_forms = include_alt_forms
         self.canon_lock = canon_lock
 
+# Returns the form that the morph should have in the given environment
 def form(morph, env, config=Former_Config()):
     form = ""
 
@@ -20,49 +21,42 @@ def form(morph, env, config=Former_Config()):
         next_morph = env.next.morph
     else:
         next_morph = None
-        
-    if env.prev:
-        last_morph = env.prev.morph
-    else:
-        last_morph = None
 
     # Rules including sound evolution
     # Affixes always use canonical forms, if present
     if "form-raw" in morph_dict \
         and not ("form-stem" in morph_dict and morph.is_affix()):
 
-        if morph_dict["origin"] == "old-english":
-            # If canon-locked, use canon form
-            if "form-canon" in morph_dict and config.canon_lock:
-                return morph_dict["form-canon"]
+        # If canon-locked, use canon form if any
+        if "form-canon" in morph_dict and config.canon_lock:
+            return morph_dict["form-canon"]
 
-            # Decide which form to use
-            forms = []
-            if type(morph_dict["form-raw"]) == list:
-                forms = morph_dict["form-raw"]
-            else:
-                forms = [morph_dict["form-raw"]]
+        # Decide which form to use
+        forms = helpers.list_if_not(morph_dict["form-raw"])
+        if "form-raw-alt" in morph_dict and config.include_alt_forms:
+            forms += helpers.list_if_not(morph_dict["form-raw-alt"])
 
-            if config.include_alt_forms and "form-raw-alt" in morph_dict:
-                forms += helpers.list_if_not(morph_dict["form-raw-alt"])
+        random = Random(morph.seed)
+        raw_form = random.choice(forms)
 
-            random = Random(morph.seed)
-            raw_form = random.choice(forms)
+        # Sub-function for processing
+        def process(form):
+            # Common morphs already typically use canon-lock. Turning this off for more alternate forms
+            # if morph.has_tag("obscure") or morph.has_tag("speculative"):
+            #     locked = False
+            # else:
+            #     locked = True
+            locked = False
 
-            # Sub-function for processing
-            def process(form):
-                locked = True
-                if morph.has_tag("obscure") or morph.has_tag("speculative"):
-                    locked = False
-                config = Config(locked=locked, seed=morph.seed)
-                return evolutor.oe_form_to_ne_form(form, config) 
+            config = Config(locked=locked, seed=morph.seed)
+            return evolutor.oe_form_to_ne_form(form, config) 
 
-            # Process, dividing into chunks if needed
-            if not "-" in raw_form:
-                form = process(raw_form)
-            else:
-                split_form = raw_form.split("-")
-                form = "".join([process(f) for f in split_form])
+        # Process, dividing into chunks in the case of compounds
+        if not "-" in raw_form:
+            form = process(raw_form)
+        else:
+            split_form = raw_form.split("-")
+            form = "".join([process(f) for f in split_form])
 
     # Get the proper form of the morph
     elif env.next != None:
@@ -137,16 +131,12 @@ def form(morph, env, config=Former_Config()):
             else:
                 form = morph_dict["form-final"]
 
-    # The final morph form
     else:
-        if morph_dict["type"] == "prep":
-            form = morph_dict["form-stem"]
+        if "form-final" in morph_dict:
+            form = morph_dict["form-final"]
         else:
-            if "form-final" in morph_dict:
-                form = morph_dict["form-final"]
-            else:
-                # If there's no final form, use stem
-                form = morph_dict["form-stem"]
+            # If there's no final form, use stem
+            form = morph_dict["form-stem"]
     
     form = helpers.one_or_random(form, seed=morph.seed)
     

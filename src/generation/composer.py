@@ -73,6 +73,7 @@ def get_form(word, former_config=None):
 
     return form
 
+# Add the two forms, applying any special rules of interaction
 def get_joined_form(language, last_morph, morph, form, addition):
     if len(form) == 0:
         return addition
@@ -108,6 +109,7 @@ def get_joined_form(language, last_morph, morph, form, addition):
 
     return form + addition
 
+# Get any joining vowel needed to combine the two forms
 def get_joining_vowel(language, first, second, form, addition):
     # If either morph rejects joining vowels, don't use one
     if first.has_tag("no-tail-joiner") or second.has_tag("no-head-joiner"):
