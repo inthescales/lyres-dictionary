@@ -59,6 +59,7 @@ class Morph:
         return self.morph["key"]
         
     def get_type(self):
+        # TODO: There should be a way to get the base type vs effective type
         if self.morph["type"] == "suffix":
             return self.morph["derive-to"]
         else:

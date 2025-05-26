@@ -53,14 +53,13 @@ def form(morph, env, config=Former_Config()):
 
         # Process, dividing into chunks in the case of compounds
         if not "-" in raw_form:
-            form = process(raw_form)
+            return process(raw_form)
         else:
             split_form = raw_form.split("-")
-            form = "".join([process(f) for f in split_form])
+            return "".join([process(f) for f in split_form])
 
-    # Get the proper form of the morph
-    elif env.next != None:
-
+    # Stem or final form based on whether another morph follows
+    if env.next != None:
         # Apply assimilation rules if there are any
         if "form-assimilation" in morph_dict:
             # TODO: Add some kind of "base form" method?"
@@ -69,27 +68,21 @@ def form(morph, env, config=Former_Config()):
 
         # Default rules
         else:
-            # Usually we'll use stem form
+            # Usually use stem form
             if "form-stem" in morph_dict:
                 form = morph_dict["form-stem"]
 
-            # TODO: Make this more generalizable between languages
-            
-            # Verbs or verbal derivations need to take participle form into account
-            elif morph_dict["type"] == "verb" or (morph_dict["type"] == "suffix" and morph_dict["derive-to"] == "verb"):
+            # Latin verbs and verbal derivations need to take participle form into account
+            elif morph.morph["origin"] == "latin" and morph.get_type() == "verb":
                 if next_morph and "derive-participle" in next_morph:
                     if next_morph["derive-participle"] == "present":
                         form = morph_dict["form-stem-present"]
                     elif next_morph["derive-participle"] == "perfect":
                         form = morph_dict["form-stem-perfect"]
-                elif "form-stem-verb" in morph_dict:
-                    form = morph_dict["form-stem-verb"]
                 else:
-                    form = morph_dict["form-stem-perfect"]
-
-            # Use final form if nothing overrides
+                    Logger.error("Latin suffix joins to verb but doesn't specify 'derive-participle'")
             else:
-                form = morph_dict["form-final"]
+                Logger.error("no stem form found in non-final morph")
 
     else:
         if "form-final" in morph_dict:
