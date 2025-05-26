@@ -33,11 +33,9 @@ class Morph:
         self.morph = self.base.copy()
         self.morph["exception"] = ""
 
+        # Apply all exceptions for which the requirements are met
         if "exception" in self.base:
             for exception in self.base["exception"]:
-                # Assume there's a match, and negate that if it doesn't meet a requirement
-                # Match the first case that we fill
-                match = True
                 case = exception["case"]
                 
                 if "precedes" in case:
@@ -66,7 +64,7 @@ class Morph:
             return self.morph["type"]
         
     def is_root(self):
-        return self.morph["type"] in ["noun", "verb", "adj"]
+        return self.morph["type"] in ["noun", "verb", "adj", "number"]
 
     def is_prefix(self):
         return self.morph["type"] in ["prefix", "prep"]
