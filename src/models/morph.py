@@ -1,6 +1,7 @@
 import random
 
 import src.generation.former as former
+import src.utils.helpers as helpers
 
 from src.morphs.expressions import evaluate_expression
 from src.morphs.requirements import meets_requirements
@@ -29,6 +30,11 @@ class Morph:
         dict_["final"] = env.is_final()
         return dict_
 
+    # Expression processing ==========
+
+    def meets_requirements(self, env, filter_frequency=True):
+        return meets_requirements(self, env, filter_frequency)
+
     def refresh(self, env):
         self.morph = self.base.copy()
         self.morph["exception"] = ""
@@ -52,6 +58,8 @@ class Morph:
         for key, value in override.items():
             if key != "case":
                 self.morph[key] = value
+
+    # Data provision ==========
         
     def get_key(self):
         return self.morph["key"]
@@ -62,25 +70,68 @@ class Morph:
             return self.morph["derive-to"]
         else:
             return self.morph["type"]
-        
-    def is_root(self):
-        return self.morph["type"] in ["noun", "verb", "adj", "number"]
 
-    def is_prefix(self):
-        return self.morph["type"] in ["prefix", "prep"]
+    def get_base_type(self):
+        return self.morph["type"]
 
-    def is_suffix(self):
-        return self.morph["type"] == "suffix"
+    # Form -----
+
+    def has_raw_form(self):
+        return "form-raw" in self.morph
+
+    def get_raw_form(self):
+        if "form-raw" in self.morph:
+            return self.morph["form-raw"]
+
+    def get_all_raw_forms(self, include_alt):
+        forms = helpers.list_if_not(self.morph["form-raw"])
+        if "form-raw-alt" in self.morph and include_alt:
+            forms += helpers.list_if_not(self.morph["form-raw-alt"])
+
+        return forms
+
+    def has_canon_form(self):
+        return "form-canon" in self.morph
+
+    def get_canon_form(self):
+        return self.morph["form-canon"]
+
+    def has_stem_form(self):
+        return "form-stem" in self.morph
+
+    def get_stem_form(self):
+        return self.morph["form-stem"]
+
+    def has_final_form(self):
+        return "form-final" in self.morph
+
+    def get_final_form(self):
+        return self.morph["form-final"]
     
-    def is_affix(self):
-        return self.is_prefix() or self.is_suffix()
+    def has_form_assimilation(self):
+        return "form-assimilation" in self.morph
 
-    def final(self):
-        return self.has_tag("final")
+    def get_assimilation_map(self):
+        assimilation_map = {}
+        for case, sounds in self.morph["form-assimilation"].items():
+            for sound in sounds:
+                if sound not in assimilation_map:
+                    assimilation_map[sound] = case
+                else:
+                    Logger.error("Repeated assimilation sound for key " + morph.get_key())
 
-    def final_ok(self):
-        has_form = "form-final" in self.morph or "form" in self.morph or "form-raw" in self.morph
-        return not self.has_tag("non-final") and has_form
+        return assimilation_map
+
+    def get_latin_present_stem(self):
+        return self.morph["form-stem-present"]
+
+    def get_latin_perfect_stem(self):
+        return self.morph["form-stem-perfect"]
+
+    def get_latin_suffix_stem_type(self):
+        return self.morph["derive-participle"]
+
+    # Other -----
         
     def suffixes(self):
         if "suffixes" not in self.morph:
@@ -101,5 +152,26 @@ class Morph:
 
         return False
 
-    def meets_requirements(self, env, filter_frequency=True):
-        return meets_requirements(self, env, filter_frequency)
+    def get_origin(self):
+        return self.morph["origin"]
+
+    # Syntheses
+    
+    def is_root(self):
+        return self.morph["type"] in ["noun", "verb", "adj", "number"]
+
+    def is_prefix(self):
+        return self.morph["type"] in ["prefix", "prep"]
+
+    def is_suffix(self):
+        return self.morph["type"] == "suffix"
+    
+    def is_affix(self):
+        return self.is_prefix() or self.is_suffix()
+
+    def final(self):
+        return self.has_tag("final")
+
+    def final_ok(self):
+        has_form = "form-final" in self.morph or "form" in self.morph or "form-raw" in self.morph
+        return not self.has_tag("non-final") and has_form
