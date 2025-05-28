@@ -241,10 +241,12 @@
         "origin": "greek"
     }, {
         "key": "pan-/number",
-        "form-stem": "pan",
-        "form-stem-assim": "pa",
         "form-assimilation": {
-            "nasal": ["*"]
+            "base": "pan",
+            "stem": "pa",
+            "case": {
+                "nasal": ["*"]
+            }
         },
         "type": "prefix",
         "derive-from": "noun",

@@ -96,20 +96,26 @@ def apply_assimilation(morph, following):
     if matched_case:
         case = matched_case
     else:
-        case = assimilation_map["*"]
-
-    if case == "form-stem":
-        return morph.get_stem_form()
-    elif case == "form-stem-assim":
-        return morph.morph["form-stem-assim"]
-    elif case == "cut":
-        return morph.get_stem_form() + "/"
-    elif case == "double":
-        return morph.morph["form-stem-assim"] + next_letter
-    elif case == "nasal":
-        if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
-            return morph.morph["form-stem-assim"] + 'm'
+        if "*" in assimilation_map:
+            case = assimilation_map["*"]
         else:
-            return morph.morph["form-stem-assim"] + 'n'
+            Logger.trace("used default assimilation form '" + morph.get_assimilation_base() + " for morph " + morph.get_key() + "' followed by form '" + following + "'")
+            return morph.get_assimilation_base()
+
+    if case == "&base":
+        return morph.get_assimilation_base()
+    elif case == "&stem":
+        return morph.get_assimilation_stem()
+    elif case == "&cut":
+        return morph.get_assimilation_base() + "/"
+    elif case == "&geminate":
+        return morph.get_assimilation_stem() + next_letter
+    elif case == "&nasal":
+        if next_letter == 'm' or next_letter == 'p' or next_letter == 'b':
+            return morph.get_assimilation_stem() + 'm'
+        else:
+            return morph.get_assimilation_stem() + 'n'
+    elif "&" in case:
+        Logger.error("unrecognized assimilation code '" + case + "' in morph '" + morph.get_key() + "'")
     else:
         return case

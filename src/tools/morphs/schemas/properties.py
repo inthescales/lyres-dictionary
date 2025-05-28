@@ -2,9 +2,8 @@ properties = [
     "key",
     "form",
     "form-stem",
-    "form-stem-present",          #Present participle stem for Latin verbs
+    "form-stem-present",          # Present participle stem for Latin verbs
     "form-stem-perfect",          # Perfect participle stem for Latin verbs
-    "form-stem-assim",            # Stem for assimilating prefixes
     "form-final",
     "form-raw",                   # Original form, before historical changes
     "form-raw-alt",               # Nonstandard raw forms (e.g. rare or dialectal)
@@ -13,7 +12,7 @@ properties = [
     "form-participle-canon",      # Accepted modern participle forms.
     "form-joiner",                # Joining vowel override for this morph
     "form-joiner-present",        # Joining vowel(s) used for Latin present participles
-    "form-assimilation",          # Assimilation rules
+    "form-assimilation",          # Forms determined by assimilation rules
     "type",
     "declension",                 # Noun declension (used in Latin)
     "conjugation",                # Verb conjugation (used in Latin)

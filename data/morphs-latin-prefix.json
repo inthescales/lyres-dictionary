@@ -1,13 +1,15 @@
 [
     {
         "key": "ab-",
-        "form-stem": "ab",
-        "form-stem-assim": "a",
         "form-assimilation": {
-            "form-stem": ["*"],
-            "form-stem-assim": ["b", "p", "m", "v"],
-            "abs": ["c", "q", "t"],
-            "au": ["f"]
+            "base": "ab",
+            "stem": "a",
+            "case": {
+                "&base": ["*"],
+                "&stem": ["b", "p", "m", "v"],
+                "abs": ["c", "q", "t"],
+                "au": ["f"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -21,13 +23,15 @@
         "origin": "latin"
     }, {
         "key": "ad-",
-        "form-stem": "ad",
-        "form-stem-assim": "a",
         "form-assimilation": {
-            "form-stem": ["a", "d", "e", "j", "m", "o", "v", "*"],
-            "form-stem-assim": ["sc", "sp", "st"],
-            "double": ["b", "c", "f", "g", "l", "n", "p", "r", "s", "t"],
-            "ac": ["q"]
+            "base": "ad",
+            "stem": "a",
+            "case": {
+                "&base": ["a", "d", "e", "j", "m", "o", "v", "*"],
+                "&stem": ["sc", "sp", "st"],
+                "&geminate": ["b", "c", "f", "g", "l", "n", "p", "r", "s", "t"],
+                "ac": ["q"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -71,12 +75,14 @@
         "origin": "latin"
     }, {
         "key": "com-",
-        "form-stem": "com",
-        "form-stem-assim": "co",
         "form-assimilation": {
-            "form-stem-assim": ["a", "e", "h", "i", "o"],
-            "double": ["l", "r"],
-            "nasal": ["*"]
+            "base": "com",
+            "stem": "co",
+            "case": {
+                "&stem": ["a", "e", "h", "i", "o"],
+                "&geminate": ["l", "r"],
+                "&nasal": ["*"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -90,12 +96,14 @@
         "origin": "latin"
     }, {
         "key": "com-intensive",
-        "form-stem": "com",
-        "form-stem-assim": "co",
         "form-assimilation": {
-            "form-stem-assim": ["a", "e", "i", "u", "o", "h"],
-            "double": ["l", "r"],
-            "nasal": ["*"]
+            "base": "com",
+            "stem": "co",
+            "case": {
+                "&stem": ["a", "e", "h", "i", "o"],
+                "&geminate": ["l", "r"],
+                "&nasal": ["*"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -123,12 +131,14 @@
         "origin": "latin"
     }, {
         "key": "dis-",
-        "form-stem": "dis",
-        "form-stem-assim": "di",
         "form-assimilation": {
-            "form-stem": ["*"],
-            "form-stem-assim": ["d", "g", "l", "r", "v"],
-            "double": ["f"]
+            "base": "dis",
+            "stem": "di",
+            "case": {
+                "&base": ["*"],
+                "&stem": ["d", "g", "l", "r", "v"],
+                "&geminate": ["f"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -143,13 +153,15 @@
         "notes": "Assimilation concerns: digress vs disgregate? The common digress and digest make me lean that way."
     }, {
         "key": "ex-",
-        "form-stem": "ex",
-        "form-stem-assim": "e",
         "form-assimilation": {
-            "form-stem": ["a", "c", "e", "h", "i", "o", "p", "q", "t", "*"],
-            "form-stem-assim": ["b", "d", "g", "j", "l", "m", "n", "r", "v"],
-            "cut": ["s", "x"],
-            "double": ["f"]
+            "base": "ex",
+            "stem": "e",
+            "case": {
+                "&base": ["a", "c", "e", "h", "i", "o", "p", "q", "t", "*"],
+                "&stem": ["b", "d", "g", "j", "l", "m", "n", "r", "v"],
+                "&cut": ["s", "x"],
+                "&geminate": ["f"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -164,11 +176,13 @@
         "notes": "execute vs exsanguinate"
     }, {
         "key": "in-",
-        "form-stem": "in",
-        "form-stem-assim": "i",
         "form-assimilation": {
-            "double": ["l", "r"],
-            "nasal": ["*"]
+            "base": "in",
+            "stem": "i",
+            "case": {
+                "&geminate": ["l", "r"],
+                "&nasal": ["*"]
+            }
         },
         "type": "prep",
         "derive-from": ["verb", "noun"],
@@ -239,12 +253,14 @@
         "origin": "latin"
     }, {
         "key": "ob-",
-        "form-stem": "ob",
-        "form-stem-assim": "o",
         "form-assimilation": {
-            "form-stem": ["*"],
-            "form-stem-assim": ["m"],
-            "double": ["c", "p", "f"]
+            "base": "ob",
+            "stem": "o",
+            "case": {
+                "&base": ["*"],
+                "&stem": ["m"],
+                "&geminate": ["c", "p", "f"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -315,10 +331,13 @@
         "origin": "latin"
     }, {
         "key": "se-",
-        "form-stem": "se",
         "form-assimilation": {
-            "form-stem": ["*"],
-            "sed": ["a", "e", "i", "o", "u"]
+            "base": "se",
+            "stem": "se",
+            "case": {
+                "&base": ["*"],
+                "sed": ["a", "e", "i", "o", "u"]
+            }
         },
         "type": "prep",
         "derive-from": "verb",
@@ -327,11 +346,13 @@
         "origin": "latin"
     }, {
         "key": "sub-",
-        "form-stem": "sub",
-        "form-stem-assim": "su",
         "form-assimilation": {
-            "form-stem": ["*"],
-            "double": ["c", "f", "g", "p", "m", "r"]
+            "base": "sub",
+            "stem": "su",
+            "case": {
+                "&base": ["*"],
+                "&geminate": ["c", "f", "g", "p", "m", "r"]
+            }
         },
         "type": "prep",
         "derive-from": ["verb", "noun"],

@@ -140,6 +140,12 @@ def validate_properties(morph):
                     { "key": "form-stem" }
                 ]},
                 { "key": "conjugation", "values": [0, 1, 2, 3, 4] },
+            ],
+            "prefix": [
+                { "any": [
+                    { "key": "form-stem" },
+                    { "key": "form-assimilation" }
+                ]}
             ]
         },
         "greek": {
@@ -181,6 +187,16 @@ def validate_properties(morph):
         requirements = origin_type_requirements[morph["origin"]][morph["type"]]
         category = " ".join(morph["origin"].split("-")) + " " + morph["type"]
         evaluate_requirements(requirements, morph, category)
+
+    # Properties required within form assimilation blocks
+    if "form-assimilation" in morph:
+        assimilation_requirements = [
+            { "key": "base" },
+            { "key": "stem" },
+            { "key": "case" }
+        ]
+
+        evaluate_requirements(assimilation_requirements, morph["form-assimilation"], "assimilating forms")
 
     # Check key whitelist
     for key in morph:

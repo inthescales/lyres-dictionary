@@ -107,13 +107,22 @@ class Morph:
 
     def get_final_form(self):
         return self.morph["form-final"]
-    
+
     def has_form_assimilation(self):
         return "form-assimilation" in self.morph
 
+    def get_assimilation_base(self):
+        return self.morph["form-assimilation"]["base"]
+
+    def get_assimilation_stem(self):
+        if "stem" not in self.morph["form-assimilation"]:
+            print(self.morph["form-assimilation"])
+            exit(0)
+        return self.morph["form-assimilation"]["stem"]
+
     def get_assimilation_map(self):
         assimilation_map = {}
-        for case, sounds in self.morph["form-assimilation"].items():
+        for case, sounds in self.morph["form-assimilation"]["case"].items():
             for sound in sounds:
                 if sound not in assimilation_map:
                     assimilation_map[sound] = case

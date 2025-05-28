@@ -166,8 +166,8 @@ def should_indent_dict(element, tag_stack):
 def should_format(element, key, tag_stack):
     stacksize = len(tag_stack)
 
-    # Children in assimilation specifiers
-    if "form-assimilation" in tag_stack:
+    # Assimilation case lists
+    if "form-assimilation" in tag_stack and "case" in tag_stack:
         return False
 
     # Lists appearing in top-level morph keys
