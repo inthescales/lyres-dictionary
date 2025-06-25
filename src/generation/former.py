@@ -16,7 +16,7 @@ def form(morph, env, config=Former_Config()):
     form = ""
 
     # Rules including sound evolution
-    # Affixes always use canonical forms, if present
+    # Affixes always use fixed forms, if present
     if morph.has_raw_form() and not (morph.has_stem_form() and morph.is_affix()):
 
         # If canon-locked, use canon form if any
@@ -76,6 +76,7 @@ def form(morph, env, config=Former_Config()):
             # If there's no final form, use stem
             # TODO: require a final form after I add a basic 'form' property
             form = morph.get_stem_form()
+            Logger.trace("using stem form as final for morph '" + morph.get_key() + "'")
     
     form = helpers.one_or_random(form, seed=morph.seed)
     
