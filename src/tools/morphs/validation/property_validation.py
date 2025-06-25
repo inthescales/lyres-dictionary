@@ -1,5 +1,6 @@
 from src.tools.morphs.schemas.languages import valid_languages
-from src.tools.morphs.schemas.types import morph_types, root_types
+from src.tools.morphs.schemas.types import root_types
+from src.tools.morphs.validation.type_validation import Dict, Meta, schemata, String, valueset_type, ValueSet
 
 from src.tools.morphs.schemas.properties import properties as valid_properties
 
@@ -93,11 +94,16 @@ def validate_properties(morph):
 
     # Properties required by all morphs
     universal_requirements = [
-        { "key": "key" },
-        { "key": "type", "values": morph_types},
-        { "key": "origin", "values": valid_languages }
+        Dict({ "key": String() }, restrict=False),
+        Dict({ "type": String(valueset_type) }, restrict=False),
+        Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False)
     ]
-    evaluate_requirements(universal_requirements, morph)
+    for requirement in universal_requirements:
+        errors += new_val(morph, requirement)
+
+    # Example of checking for noun countability
+    # if morph["type"] == "noun":
+    #     errors += new_val(morph, Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False))
 
     # Properties required by morphs of a certain type
     type_requirements = {
@@ -204,3 +210,8 @@ def validate_properties(morph):
             errors.append("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
 
     return errors
+
+def new_val(value, expected):
+    meta = Meta("root", value, schemata)
+    errors = expected.get_errors(value, meta)
+    return [err.text for err in errors]

@@ -54,10 +54,22 @@ class Collection(Type):
 class Array(Collection):
     name = "list"
 
+    def __init__(self, subtype, require_all=True):
+        Collection.__init__(self, subtype)
+        self.require_all = require_all
+
     def get_errors(self, value, meta):
         if type(value) != list:
             return [TypeError("invalid value type for key '" + meta.key + "' in dict '" + str(meta.context) + "'. Expected type " + type_name(self))]
 
+        # Check that at least one element matches if all aren't required
+        if not self.require_all:
+            if not any([len(self.subtype.get_errors(child, meta)) == 0 for child in value]):
+                return [TypeError("no children at key '" + meta.key + "' in dict '" + str(meta.context) + "' have required type " + type_name(self.subtype))]
+            else:
+                return []
+
+        # Or check that all elements match
         errors = []
         for item in value:
             child_errors = self.subtype.get_errors(item, meta)
@@ -65,7 +77,6 @@ class Array(Collection):
                 if issubclass(type(self.subtype), Primitive):
                     errors.append(TypeError("invalid list member '" + str(item) + "' for key '" + meta.key + "' in dict '" + str(meta.context) + "'. List entries should be " + type_name(self.subtype, True)))
                 else:
-                    print("HERE")
                     errors += child_errors
 
         return errors
@@ -107,7 +118,8 @@ class Dict(Type):
         # Check that all required keys are present
         missing_keys = [key for key, exp in self.reference.items() if type(exp) != Opt and key not in value.keys()]
         if len(missing_keys) > 0:
-            errors.append(TypeError("missing keys '" + str(missing_keys) + "' for dictionary in expression '" + str(meta.context) + "'"))
+            for key in missing_keys:
+                errors.append(TypeError("missing required key '" + str(key) + "' for dictionary '" + str(meta.context) + "'"))
 
         # If restricted, check that no keys outside the spec are present
         if self.restrict:
