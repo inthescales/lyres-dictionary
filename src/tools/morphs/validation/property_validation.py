@@ -216,7 +216,7 @@ def new_val(value, expected):
         context = "in morph with key '" + value["key"] + "'"
     else:
         context = "in morph without key " + str(value)
-        
-    meta = Meta(context, schemata)
+
+    meta = Meta(context, schemata, context_override=True)
     errors = expected.get_errors(value, meta)
     return [err.text for err in errors]

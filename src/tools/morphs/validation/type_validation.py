@@ -24,7 +24,7 @@ class Primitive(Type):
         if type(value) != self.type:
             errors.append(TypeError("invalid value type " + meta.context + ". Expected type " + self.name))
         elif self.valueset != None and value not in self.valueset.values:
-            errors.append(TypeError("invalid " + self.valueset.name + " '" + value + "' found in dict " + str(meta.context) + "."))
+            errors.append(TypeError("invalid " + self.valueset.name + " '" + value + "' " + str(meta.context) + "."))
 
         return errors
 
@@ -186,12 +186,16 @@ class ValueSet:
         self.values = values
 
 class Meta:
-    def __init__(self, context, schemata):
+    def __init__(self, context, schemata, context_override=False):
         self.context = context
         self.schemata = schemata
+        self.context_override = context_override
 
     def new(self, new_context):
-        return Meta(new_context, self.schemata)
+        if self.context_override:
+            return self
+        else:
+            return Meta(new_context, self.schemata)
 
 class TypeError:
     def __init__(self, text):
