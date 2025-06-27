@@ -6,19 +6,20 @@ from src.utils.terminal import Color, color_text
 
 from src.tools.morphs.schemas.tags import tags as valid_tags
 
+# Validate a single morph
 def validate_morph(morph):
     errors = []
 
     # Validate properties
     errors += validate_properties(morph)
 
-    # Validate requirements
+    # Validate requirement expressions
     if "requires" in morph:
         for referent in ["follows", "precedes"]:
             if referent in morph["requires"]:
                 errors += validate_expression(morph["requires"][referent])
 
-    # Validate exceptions
+    # Validate exception expressions
     if "exception" in morph:
         for exception in morph["exception"]:
             if not "case" in exception:
@@ -58,6 +59,7 @@ def validate_morph(morph):
 
     return len(errors) == 0
 
+# Validate all morphs from the given files
 def validate_morphs(files):
     # Read in morphs
     morphs = []
