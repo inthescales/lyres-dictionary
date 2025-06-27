@@ -212,6 +212,11 @@ def validate_properties(morph):
     return errors
 
 def new_val(value, expected):
-    meta = Meta("root", value, schemata)
+    if "key" in value:
+        context = "in morph with key '" + value["key"] + "'"
+    else:
+        context = "in morph without key " + str(value)
+        
+    meta = Meta(context, schemata)
     errors = expected.get_errors(value, meta)
     return [err.text for err in errors]

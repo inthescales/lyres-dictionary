@@ -22,7 +22,7 @@ class Primitive(Type):
         errors = []
 
         if type(value) != self.type:
-            errors.append(TypeError("invalid value type for key '" + meta.key + "' in dict " + str(meta.context) + ". Expected type " + self.name))
+            errors.append(TypeError("invalid value type " + meta.context + ". Expected type " + self.name))
         elif self.valueset != None and value not in self.valueset.values:
             errors.append(TypeError("invalid " + self.valueset.name + " '" + value + "' found in dict " + str(meta.context) + "."))
 
@@ -60,22 +60,24 @@ class Array(Collection):
 
     def get_errors(self, value, meta):
         if type(value) != list:
-            return [TypeError("invalid value type for key '" + meta.key + "' in dict '" + str(meta.context) + "'. Expected type " + type_name(self))]
+            return [TypeError("invalid value type " + meta.context + ". Expected type " + type_name(self))]
+
+        child_meta = meta.new("in list " + meta.context)
 
         # Check that at least one element matches if all aren't required
         if not self.require_all:
-            if not any([len(self.subtype.get_errors(child, meta)) == 0 for child in value]):
-                return [TypeError("no children at key '" + meta.key + "' in dict '" + str(meta.context) + "' have required type " + type_name(self.subtype))]
+            if not any([len(self.subtype.get_errors(child, child_meta)) == 0 for child in value]):
+                return [TypeError("no children in list " + str(value) + " have required type " + type_name(self.subtype))]
             else:
                 return []
 
         # Or check that all elements match
         errors = []
         for item in value:
-            child_errors = self.subtype.get_errors(item, meta)
+            child_errors = self.subtype.get_errors(item, child_meta)
             if len(child_errors) > 0:
                 if issubclass(type(self.subtype), Primitive):
-                    errors.append(TypeError("invalid list member '" + str(item) + "' for key '" + meta.key + "' in dict '" + str(meta.context) + "'. List entries should be " + type_name(self.subtype, True)))
+                    errors.append(TypeError("invalid list member '" + str(item) + "' in list " + meta.context + ". List entries should be " + type_name(self.subtype, True) + "."))
                 else:
                     errors += child_errors
 
@@ -92,7 +94,7 @@ class one_or_more(Collection):
         errors = []
         child_errors = self.subtype.get_errors(value, meta)
         if len(child_errors) > 0 and issubclass(type(self.subtype), Primitive):
-            errors.append(TypeError("invalid value '" + str(value) + "' for key '" + meta.key + "' in dict '" + str(meta.context) + "'. Expected type " + type_name(self)))
+            errors.append(TypeError("invalid value '" + str(value) + "'" + meta.context + ". Expected type " + type_name(self)))
         else:
             errors += child_errors
 
@@ -113,7 +115,7 @@ class Dict(Type):
 
         # Check that value is a dict
         if type(value) != dict:
-            return TypeError("invalid value type for key '" + meta.key + "' in dict '" + str(meta.context) + "'. Expected dictionary with reference key '" + self.reference + "'")
+            return TypeError("invalid value type " + meta.context + "'. Expected dictionary with reference key '" + self.reference + "'")
 
         # Check that all required keys are present
         missing_keys = [key for key, exp in self.reference.items() if type(exp) != Opt and key not in value.keys()]
@@ -130,8 +132,8 @@ class Dict(Type):
         # Check that values have the expected types
         for key, exp in self.reference.items():
             if key in value:
-                new_meta = Meta(key, value, meta.schemata)
-                errors += exp.get_errors(value[key], new_meta)
+                child_meta = meta.new("for key '" + key + "' in dict '" + str(value) + "'") # Meta(key, value, meta.schemata)
+                errors += exp.get_errors(value[key], child_meta)
 
         return errors
 
@@ -146,7 +148,7 @@ class Schema(Type):
 
         child_errors = meta.schemata[self.schema_key].get_errors(value, meta)
         if len(child_errors) > 0 and all([isinstance(err, WeakError) for err in child_errors]):
-            return [TypeError("invalid value for key '" + meta.key + "' in dict '" + str(meta.context) + "'. Expected schema of type '" + self.schema_key + "'")]
+            return [TypeError("invalid value '" + str(value) + "' " + meta.context + ". Expected value of schema type '" + self.schema_key + "'")]
         else:
             return child_errors
 
@@ -174,7 +176,7 @@ class Any(Type):
             if type(option) == Dict and option.key_match(value, meta):
                 return option.get_errors(value, meta)
 
-        return [WeakError("no cases match in 'any' with key '" + meta.key + "' in expression '" + str(meta.context) + "'.")]
+        return [WeakError("no cases match in 'any' " + meta.context + ".")]
 
 # Other Types ----------------------------
 
@@ -184,10 +186,12 @@ class ValueSet:
         self.values = values
 
 class Meta:
-    def __init__(self, key, context, schemata):
-        self.key = key
+    def __init__(self, context, schemata):
         self.context = context
         self.schemata = schemata
+
+    def new(self, new_context):
+        return Meta(new_context, self.schemata)
 
 class TypeError:
     def __init__(self, text):

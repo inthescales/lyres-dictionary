@@ -4,6 +4,6 @@ from src.tools.morphs.validation.type_validation import Meta, schemata
 def validate_expression(expression):
     errors = []
 
-    meta = Meta("root", expression, schemata)
+    meta = Meta(" in expression " + str(expression), schemata)
     errors = schemata["expression"].get_errors(expression, meta)
     return [err.text for err in errors]
