@@ -22,9 +22,9 @@ class Primitive(Type):
         errors = []
 
         if type(value) != self.type:
-            errors.append(TypeError("invalid value type " + meta.context + ". Expected type " + self.name))
+            errors.append(TypeError("invalid value '" + str(value) + "' " + meta.context + ". Expected type " + self.name))
         elif self.valueset != None and value not in self.valueset.values:
-            errors.append(TypeError("invalid " + self.valueset.name + " '" + value + "' " + str(meta.context) + "."))
+            errors.append(TypeError("invalid " + self.valueset.name + " '" + str(value) + "' " + str(meta.context) + "."))
 
         return errors
 
@@ -67,7 +67,7 @@ class Array(Collection):
         # Check that at least one element matches if all aren't required
         if not self.require_all:
             if not any([len(self.subtype.get_errors(child, child_meta)) == 0 for child in value]):
-                return [TypeError("no children in list " + str(value) + " have required type " + type_name(self.subtype))]
+                return [TypeError("list " + meta.context + " must contain an element of type " + type_name(self.subtype))]
             else:
                 return []
 
@@ -121,13 +121,13 @@ class Dict(Type):
         missing_keys = [key for key, exp in self.reference.items() if type(exp) != Opt and key not in value.keys()]
         if len(missing_keys) > 0:
             for key in missing_keys:
-                errors.append(TypeError("missing required key '" + str(key) + "' for dictionary '" + str(meta.context) + "'"))
+                errors.append(TypeError("missing required key '" + str(key) + "' " + meta.context))
 
         # If restricted, check that no keys outside the spec are present
         if self.restrict:
             extra_keys = [key for key in value.keys() if key not in self.reference.keys()]
             if len(extra_keys) > 0:
-                errors.append(TypeError("unrecognized keys " + str(extra_keys) + " found for dictionary '" + str(self.reference) + "' in expression '" + str(meta.context) + "'"))
+                errors.append(TypeError("unrecognized keys " + str(extra_keys) + " found in dictionary " + str(meta.context) + ""))
 
         # Check that values have the expected types
         for key, exp in self.reference.items():
@@ -173,8 +173,12 @@ class Any(Type):
     def get_errors(self, value, meta):
         # If we have a key match, assume that that was the intended expansion
         for option in self.items:
+            errors = option.get_errors(value, meta)
+
             if type(option) == Dict and option.key_match(value, meta):
-                return option.get_errors(value, meta)
+                return errors
+            elif len(errors) == 0:
+                return []
 
         return [WeakError("no cases match in 'any' " + meta.context + ".")]
 

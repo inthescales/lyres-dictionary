@@ -1,6 +1,5 @@
 from src.tools.morphs.schemas.languages import valid_languages
-from src.tools.morphs.schemas.types import root_types
-from src.tools.morphs.validation.type_validation import Dict, Meta, schemata, String, valueset_type, ValueSet
+from src.tools.morphs.validation.type_validation import Any, Array, Dict, Integer, Meta, one_or_more, schemata, String, valueset_type, ValueSet
 
 from src.tools.morphs.schemas.properties import properties as valid_properties
 
@@ -101,98 +100,99 @@ def validate_properties(morph):
     for requirement in universal_requirements:
         errors += new_val(morph, requirement)
 
-    # Example of checking for noun countability
-    # if morph["type"] == "noun":
-    #     errors += new_val(morph, Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False))
-
-    # Properties required by morphs of a certain type
+    # Properties required by all morphs of a certain type
     type_requirements = {
         "noun": [
-            { "tags": ["count", "mass", "singleton", "uncountable"] },
-            { "tags": ["concrete", "abstract"] }
+            Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False),
+            Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)
         ],
         "suffix": [
-            { "key": "derive-from", "values": { "one-or-many": root_types } },
-            { "key": "derive-to", "values": root_types }
+            Dict({ "derive-from": one_or_more(String(valueset_type)) }, restrict=False),
+            Dict({ "derive-to": String(valueset_type) }, restrict=False),
         ],
         "prep": [
-            { "key": "derive-from", "values": { "one-or-many": root_types }  },
+            Dict({ "derive-from": one_or_more(String(valueset_type)) }, restrict=False),
         ],
         "prefix": [
-            { "key": "derive-from", "values": { "one-or-many": root_types }  },
+            Dict({ "derive-from": one_or_more(String(valueset_type)) }, restrict=False),
         ]
     }
     if "type" in morph and morph["type"] in type_requirements:
-        evaluate_requirements(type_requirements[morph["type"]], morph, morph["type"])
+        for requirement in type_requirements[morph["type"]]:
+            errors += new_val(morph, requirement)
 
-    # Properties required by morphs of a certain type and origin
+    # Properties required by all morphs of a certain type and origin
     origin_type_requirements = {
         "latin": {
             "noun": [
-                { "key": "form-stem" },
-                { "key": "declension", "values": [0, 1, 2, 3, 4, 5] },
+                Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                Dict({ "declension": Integer(ValueSet("Latin noun declension", [0, 1, 2, 3, 4, 5])) }, restrict=False),
             ],
             "adj": [
-                { "key": "form-stem" },
-                { "key": "declension", "values": [0, 12, 3] },
+                Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                Dict({ "declension": Integer(ValueSet("Latin adjective declension", [0, 12, 3])) }, restrict=False),
             ],
             "verb": [
-                { "any": [
-                    { "key": "form-stem-present" },
-                    { "key": "form-stem" }
-                ]},
-                { "any": [
-                    { "key": "form-final" },
-                    { "key": "form-stem" }
-                ]},
-                { "key": "conjugation", "values": [0, 1, 2, 3, 4] },
+                Any([
+                    Dict({ "form-stem-present": one_or_more(String()) }, restrict=False),
+                    Dict({ "form-stem":one_or_more(String()), "form-final": one_or_more(String()) }, restrict=False)
+                ]),
+                Dict({ "conjugation": Integer(ValueSet("Latin verb conjugation", [0, 1, 2, 3, 4])) }, restrict=False),
             ],
             "prefix": [
-                { "any": [
-                    { "key": "form-stem" },
-                    { "key": "form-assimilation" }
-                ]}
+                Dict({ "form-stem": one_or_more(String()) }, restrict=False)
+            ],
+            "prep": [
+                Any([
+                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                    Dict({ "form-assimilation": Dict({ "base": String(), "stem": String(), "case": Dict({}, restrict=False) }) }, restrict=False)
+                ])
             ]
         },
         "greek": {
             "noun": [
-                { "key": "form-stem" },
+                Dict({ "form-stem": one_or_more(String()) }, restrict=False),
             ],
             "adj": [
-                { "key": "form-stem" },
+                Dict({ "form-stem": one_or_more(String()) }, restrict=False),
             ],
             "verb": [
-                { "key": "form-stem" },
+                Dict({ "form-stem": one_or_more(String()) }, restrict=False),
             ]
         },
         "old-english": {
             "noun": [
-                { "any": [
-                    { "key": "form-stem" },
-                    { "key": "form-raw" },
-                ]}
+                Any([
+                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                    Dict({ "form-raw": one_or_more(String()) }, restrict=False)
+                ])
             ],
             "adj": [
-                { "any": [
-                    { "key": "form-stem" },
-                    { "key": "form-raw" },
-                ]}
+                Any([
+                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                    Dict({ "form-raw": one_or_more(String()) }, restrict=False)
+                ])
             ],
             "verb": [
-                { "any": [
-                    { "key": "form-stem" },
-                    { "key": "form-raw" },
-                ]},
-                { "key": "verb-class", "values": [1, 2, 3, 4, 5, 6, 7, "weak", "preterite-present"] }
+                Any([
+                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                    Dict({ "form-raw": one_or_more(String()) }, restrict=False)
+                ]),
+                Dict(
+                    { "verb-class": Any([
+                        Integer(ValueSet("verb class", [1, 2, 3, 4, 5, 6, 7])),
+                        String(ValueSet("verb class", ["weak", "preterite-present"]))
+                    ])},
+                    restrict=False
+                )
             ]
         }
     }
 
     if "origin" in morph and morph["origin"] in origin_type_requirements \
         and "type" in morph and morph["type"] in origin_type_requirements[morph["origin"]]:
-        requirements = origin_type_requirements[morph["origin"]][morph["type"]]
-        category = " ".join(morph["origin"].split("-")) + " " + morph["type"]
-        evaluate_requirements(requirements, morph, category)
+            for requirement in origin_type_requirements[morph["origin"]][morph["type"]]:
+                errors += new_val(morph, requirement)
 
     # Properties required within form assimilation blocks
     if "form-assimilation" in morph:
@@ -211,12 +211,9 @@ def validate_properties(morph):
 
     return errors
 
-def new_val(value, expected):
-    if "key" in value:
-        context = "in morph with key '" + value["key"] + "'"
-    else:
-        context = "in morph without key " + str(value)
-
+def new_val(value, expected, context="in morph"):
+    if type(expected) == Dict and len(expected.reference.keys()) == 1:
+        context = "in property '" + list(expected.reference.keys())[0] + "'"
     meta = Meta(context, schemata, context_override=True)
     errors = expected.get_errors(value, meta)
     return [err.text for err in errors]
