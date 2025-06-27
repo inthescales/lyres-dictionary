@@ -133,20 +133,26 @@ def validate_properties(morph):
                 Dict({ "declension": Integer(ValueSet("Latin adjective declension", [0, 12, 3])) }, restrict=False),
             ],
             "verb": [
-                Any([
-                    Dict({ "form-stem-present": one_or_more(String()) }, restrict=False),
-                    Dict({ "form-stem":one_or_more(String()), "form-final": one_or_more(String()) }, restrict=False)
-                ]),
+                Any(
+                    [
+                        Dict({ "form-stem-present": one_or_more(String()) }, restrict=False),
+                        Dict({ "form-stem":one_or_more(String()), "form-final": one_or_more(String()) }, restrict=False)
+                    ],
+                    custom_error="Latin verbs require one of the following form properties: 'form-stem', 'form-stem-present'"
+                ),
                 Dict({ "conjugation": Integer(ValueSet("Latin verb conjugation", [0, 1, 2, 3, 4])) }, restrict=False),
             ],
             "prefix": [
                 Dict({ "form-stem": one_or_more(String()) }, restrict=False)
             ],
             "prep": [
-                Any([
-                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
-                    Dict({ "form-assimilation": Dict({ "base": String(), "stem": String(), "case": Dict({}, restrict=False) }) }, restrict=False)
-                ])
+                Any(
+                    [
+                        Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                        Dict({ "form-assimilation": Dict({ "base": String(), "stem": String(), "case": Dict({}, restrict=False) }) }, restrict=False)
+                    ],
+                    custom_error="Latin prepositions require one of the following form properties: 'form-stem', 'form-assimilation'"
+                )
             ]
         },
         "greek": {
@@ -162,27 +168,39 @@ def validate_properties(morph):
         },
         "old-english": {
             "noun": [
-                Any([
-                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
-                    Dict({ "form-raw": one_or_more(String()) }, restrict=False)
-                ])
+                Any(
+                    [
+                        Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                        Dict({ "form-raw": one_or_more(String()) }, restrict=False)
+                    ],
+                    custom_error="Old English nouns require one of the following form properties: 'form-stem', 'form-raw'"
+                )
             ],
             "adj": [
-                Any([
-                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
-                    Dict({ "form-raw": one_or_more(String()) }, restrict=False)
-                ])
+                Any(
+                    [
+                        Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                        Dict({ "form-raw": one_or_more(String()) }, restrict=False)
+                    ],
+                    custom_error="Old English adjectives require one of the following form properties: 'form-stem', 'form-raw'"
+                )
             ],
             "verb": [
-                Any([
-                    Dict({ "form-stem": one_or_more(String()) }, restrict=False),
-                    Dict({ "form-raw": one_or_more(String()) }, restrict=False)
-                ]),
+                Any(
+                    [
+                        Dict({ "form-stem": one_or_more(String()) }, restrict=False),
+                        Dict({ "form-raw": one_or_more(String()) }, restrict=False)
+                    ],
+                    custom_error="Old English verbs require one of the following form properties: 'form-stem', 'form-raw'"
+                ),
                 Dict(
-                    { "verb-class": Any([
-                        Integer(ValueSet("verb class", [1, 2, 3, 4, 5, 6, 7])),
-                        String(ValueSet("verb class", ["weak", "preterite-present"]))
-                    ])},
+                    { "verb-class": Any(
+                            [
+                            Integer(ValueSet("verb class", [1, 2, 3, 4, 5, 6, 7])),
+                            String(ValueSet("verb class", ["weak", "preterite-present"]))
+                        ],
+                        custom_error="property 'verb-class' is required for all Old English verbs"
+                    )},
                     restrict=False
                 )
             ]
@@ -211,9 +229,13 @@ def validate_properties(morph):
 
     return errors
 
-def new_val(value, expected, context="in morph"):
+def new_val(value, expected, context="in morph", custom_error=None):
     if type(expected) == Dict and len(expected.reference.keys()) == 1:
         context = "in property '" + list(expected.reference.keys())[0] + "'"
     meta = Meta(context, schemata, context_override=True)
     errors = expected.get_errors(value, meta)
-    return [err.text for err in errors]
+
+    if custom_error != None:
+        return [custom_error]
+    else:
+        return [err.text for err in errors]

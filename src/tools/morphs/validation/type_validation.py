@@ -167,8 +167,9 @@ class Opt(Type):
 class Any(Type):
     name = "any"
 
-    def __init__(self, items):
+    def __init__(self, items, custom_error=None):
         self.items = items
+        self.custom_error = custom_error
 
     def get_errors(self, value, meta):
         # If we have a key match, assume that that was the intended expansion
@@ -180,7 +181,10 @@ class Any(Type):
             elif len(errors) == 0:
                 return []
 
-        return [WeakError("no cases match in 'any' " + meta.context + ".")]
+        if self.custom_error != None:
+            return [TypeError(self.custom_error)]
+        else:
+            return [WeakError("no cases match in 'any' " + meta.context + ".")]
 
 # Other Types ----------------------------
 
