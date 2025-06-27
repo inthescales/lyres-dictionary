@@ -121,7 +121,7 @@ class Dict(Type):
         missing_keys = [key for key, exp in self.reference.items() if type(exp) != Opt and key not in value.keys()]
         if len(missing_keys) > 0:
             for key in missing_keys:
-                errors.append(TypeError("missing required key '" + str(key) + "' " + meta.context))
+                errors.append(TypeError("missing required key '" + str(key) + "' " + meta.missing_value_context))
 
         # If restricted, check that no keys outside the spec are present
         if self.restrict:
@@ -194,10 +194,14 @@ class ValueSet:
         self.values = values
 
 class Meta:
-    def __init__(self, context, schemata, context_override=False):
+    def __init__(self, context, schemata, missing_value_context=None, context_override=False):
         self.context = context
+        self.missing_value_context = missing_value_context
         self.schemata = schemata
         self.context_override = context_override
+
+        if self.missing_value_context == None:
+            self.missing_value_context = self.context
 
     def new(self, new_context):
         if self.context_override:

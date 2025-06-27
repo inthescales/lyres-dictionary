@@ -3,7 +3,17 @@ from src.tools.morphs.validation.type_validation import Any, Array, Dict, Intege
 
 from src.tools.morphs.schemas.properties import properties as valid_properties
 
-# Checks that the morphs
+def check_values(value, expected, context="in morph", custom_error=None):
+    if type(expected) == Dict and len(expected.reference.keys()) == 1:
+        context = "in property '" + list(expected.reference.keys())[0] + "'"
+    meta = Meta(context, schemata, missing_value_context="in morph", context_override=True)
+    errors = expected.get_errors(value, meta)
+
+    if custom_error != None:
+        return [custom_error]
+    else:
+        return [err.text for err in errors]
+
 def validate_properties(morph):
     errors = []
 
@@ -14,7 +24,7 @@ def validate_properties(morph):
         Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False)
     ]
     for requirement in universal_requirements:
-        errors += validate_morph(morph, requirement)
+        errors += check_values(morph, requirement)
 
     # Properties required by all morphs of a certain type
     type_requirements = {
@@ -35,7 +45,7 @@ def validate_properties(morph):
     }
     if "type" in morph and morph["type"] in type_requirements:
         for requirement in type_requirements[morph["type"]]:
-            errors += validate_morph(morph, requirement)
+            errors += check_values(morph, requirement)
 
     # Properties required by all morphs of a certain type and origin
     origin_type_requirements = {
@@ -54,7 +64,7 @@ def validate_properties(morph):
                         Dict({ "form-stem-present": one_or_more(String()) }, restrict=False),
                         Dict({ "form-stem":one_or_more(String()), "form-final": one_or_more(String()) }, restrict=False)
                     ],
-                    custom_error="Latin verbs require one of the following form properties: 'form-stem', 'form-stem-present'"
+                    custom_error="missing required form property: 'form-stem', 'form-stem-present'"
                 ),
                 Dict({ "conjugation": Integer(ValueSet("Latin verb conjugation", [0, 1, 2, 3, 4])) }, restrict=False),
             ],
@@ -67,7 +77,7 @@ def validate_properties(morph):
                         Dict({ "form-stem": one_or_more(String()) }, restrict=False),
                         Dict({ "form-assimilation": Dict({ "base": String(), "stem": String(), "case": Dict({}, restrict=False) }) }, restrict=False)
                     ],
-                    custom_error="Latin prepositions require one of the following form properties: 'form-stem', 'form-assimilation'"
+                    custom_error="missing required form property: 'form-stem', 'form-assimilation'"
                 )
             ]
         },
@@ -89,7 +99,7 @@ def validate_properties(morph):
                         Dict({ "form-stem": one_or_more(String()) }, restrict=False),
                         Dict({ "form-raw": one_or_more(String()) }, restrict=False)
                     ],
-                    custom_error="Old English nouns require one of the following form properties: 'form-stem', 'form-raw'"
+                    custom_error="missing required form property: 'form-stem', 'form-raw'"
                 )
             ],
             "adj": [
@@ -98,7 +108,7 @@ def validate_properties(morph):
                         Dict({ "form-stem": one_or_more(String()) }, restrict=False),
                         Dict({ "form-raw": one_or_more(String()) }, restrict=False)
                     ],
-                    custom_error="Old English adjectives require one of the following form properties: 'form-stem', 'form-raw'"
+                    custom_error="missing required form property: 'form-stem', 'form-raw'"
                 )
             ],
             "verb": [
@@ -107,7 +117,7 @@ def validate_properties(morph):
                         Dict({ "form-stem": one_or_more(String()) }, restrict=False),
                         Dict({ "form-raw": one_or_more(String()) }, restrict=False)
                     ],
-                    custom_error="Old English verbs require one of the following form properties: 'form-stem', 'form-raw'"
+                    custom_error="missing required form property: 'form-stem', 'form-raw'"
                 ),
                 Dict(
                     { "verb-class": Any(
@@ -115,7 +125,7 @@ def validate_properties(morph):
                             Integer(ValueSet("verb class", [1, 2, 3, 4, 5, 6, 7])),
                             String(ValueSet("verb class", ["weak", "preterite-present"]))
                         ],
-                        custom_error="property 'verb-class' is required for all Old English verbs"
+                        custom_error="missing required property 'verb-class'"
                     )},
                     restrict=False
                 )
@@ -126,7 +136,7 @@ def validate_properties(morph):
     if "origin" in morph and morph["origin"] in origin_type_requirements \
         and "type" in morph and morph["type"] in origin_type_requirements[morph["origin"]]:
             for requirement in origin_type_requirements[morph["origin"]][morph["type"]]:
-                errors += validate_morph(morph, requirement)
+                errors += check_values(morph, requirement)
 
     # Check key whitelist
     for key in morph:
@@ -134,14 +144,3 @@ def validate_properties(morph):
             errors.append("Invalid morph property '" + key + "' found in morph '" + morph["key"] + "'")
 
     return errors
-
-def validate_morph(value, expected, context="in morph", custom_error=None):
-    if type(expected) == Dict and len(expected.reference.keys()) == 1:
-        context = "in property '" + list(expected.reference.keys())[0] + "'"
-    meta = Meta(context, schemata, context_override=True)
-    errors = expected.get_errors(value, meta)
-
-    if custom_error != None:
-        return [custom_error]
-    else:
-        return [err.text for err in errors]

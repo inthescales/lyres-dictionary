@@ -32,7 +32,7 @@ def validate_morph(morph):
     if "tags" in morph:
         for tag in morph["tags"]:
             if not tag in valid_tags:
-                errors.append("Invalid morph tag '" + tag + "' found on morph '" + morph["key"] + "'")
+                errors.append("Invalid morph tag '" + str(tag) + "' found on morph '" + morph["key"] + "'")
 
     # Check tag dependencies
     # TODO: Reenable this after having a chance to revise tags
