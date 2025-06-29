@@ -1,22 +1,26 @@
+import src.generation.forming.oe_form as oe_form
 import src.utils.helpers as helpers
 
 from random import Random
-
 from src.evolutor import evolutor
 from src.evolutor.engine.config import Config
 from src.utils.logging import Logger
 
 class Former_Config():
-    def __init__(self, include_alt_forms=False, canon_lock=True):
+    def __init__(self, include_alt_forms=False, canon_lock=True, seed=0):
         self.include_alt_forms = include_alt_forms
         self.canon_lock = canon_lock
+        self.seed = seed
 
 # Returns the form that the morph should have in the given environment
-def form(morph, env, config=Former_Config()):
+def form(morph, env, config=None):
     form = ""
 
-    # Rules including sound evolution
-    # Affixes always use fixed forms, if present
+    if config == None:
+        config = Former_Config(seed=morph.seed)
+
+    Rules including sound evolution
+    Affixes always use fixed forms, if present
     if morph.has_raw_form() and not (morph.has_stem_form() and morph.is_affix()):
 
         # If canon-locked, use canon form if any

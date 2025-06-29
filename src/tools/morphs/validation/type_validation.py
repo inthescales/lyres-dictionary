@@ -11,12 +11,21 @@ class Type:
     def is_valid(self, value, meta):
         return self.get_errors(value, meta)
 
+    def __str__(self):
+        return "Type(" + str(self.value) + ")"
+
 class Primitive(Type):
     name = "generic primitive"
 
     def __init__(self, type, valueset=None):
         self.type = type
         self.valueset = valueset
+
+    def __str__(self):
+        if self.valueset != None:
+            return "Primitive(" + str(self.valueset.name) + ")"
+        else:
+            return "Primitive()"
 
     def get_errors(self, value, meta):
         errors = []
@@ -34,10 +43,19 @@ class Bool(Primitive):
     def __init__(self, valueset=None):
         Primitive.__init__(self, bool, valueset)
 
+    def __str__(self):
+        return "Bool()"
+
 class Integer(Primitive):
     name = "integer"
     def __init__(self, valueset=None):
         Primitive.__init__(self, int, valueset)
+
+    def __str__(self):
+        if self.valueset != None:
+            return "Integer(" + str(self.valueset.name) + ")"
+        else:
+            return "Integer()"
 
 class String(Primitive):
     name = "string"
@@ -45,11 +63,20 @@ class String(Primitive):
     def __init__(self, valueset=None):
         Primitive.__init__(self, str, valueset)
 
+    def __str__(self):
+        if self.valueset != None:
+            return "String(" + self.valueset.name + ")"
+        else:
+            return "String()"
+
 class Collection(Type):
     name = "generic collection"
 
     def __init__(self, subtype):
         self.subtype = subtype
+
+    def __str__(self):
+        return "Collection(" + str(self.subtype) + ")"
 
 class Array(Collection):
     name = "list"
@@ -57,6 +84,9 @@ class Array(Collection):
     def __init__(self, subtype, require_all=True):
         Collection.__init__(self, subtype)
         self.require_all = require_all
+
+    def __str__(self):
+        return "Array(" + str(self.subtype) + ")"
 
     def get_errors(self, value, meta):
         # Check that the value is a list
@@ -88,6 +118,9 @@ class Array(Collection):
 class One_Or_More(Collection):
     name = "one-or-list"
 
+    def __str__(self):
+        return "One-Or-More(" + str(self.subtype) + ")"
+
     def get_errors(self, value, meta):
         if type(value) == list:
             return Array(self.subtype).get_errors(value, meta)
@@ -107,6 +140,9 @@ class Dict(Type):
     def __init__(self, reference, restrict=True):
         self.reference = reference
         self.restrict = restrict
+
+    def __str__(self):
+        return "Dict(" + str(self.reference) + ")"
 
     def key_match(self, value, meta):
         return type(value) == dict and all([type(exp) == Opt or key in value.keys() for key, exp in self.reference.items()])
@@ -146,6 +182,9 @@ class Schema(Type):
         self.schema_key = schema_key
         self.name = "schema with key '" + self.schema_key + "'"
 
+    def __str__(self):
+        return "Schema(" + str(self.schema_key) + ")"
+
     def get_errors(self, value, meta):
         # Check that the given schema key is valid
         if self.schema_key not in meta.schemata:
@@ -166,6 +205,9 @@ class Opt(Type):
     def __init__(self, base_type):
         self.base_type = base_type
 
+    def __str__(self):
+        return "Opt(" + str(self.base_type) + ")"
+
     def get_errors(self, value, meta):
         if value == None:
             return []
@@ -180,15 +222,22 @@ class Any(Type):
         self.items = items
         self.custom_error = custom_error
 
+    def __str__(self):
+        return "Any(" + str(self.items) + ")"
+
     def get_errors(self, value, meta):
         # If we have a key match, assume that that was the intended expansion
         for option in self.items:
             errors = option.get_errors(value, meta)
 
-            if type(option) == Dict and option.key_match(value, meta):
-                return errors
-            elif len(errors) == 0:
+            if len(errors) == 0:
                 return []
+            elif type(option) == Dict and option.key_match(value, meta):
+                return errors
+            elif type(option) == Schema and option.schema_key in meta.schemata:
+                schema_type = meta.schemata[option.schema_key]
+                if type(schema_type) == Dict and schema_type.key_match(value, meta):
+                    return errors
 
         if self.custom_error != None:
             return [TypeError(self.custom_error)]
@@ -205,11 +254,12 @@ class ValueSet:
 
 # Validation metadata
 class Meta:
-    def __init__(self, context, schemata, missing_value_context=None, context_override=False):
+    def __init__(self, context, schemata, missing_value_context=None, context_override=False, ident=None):
         self.context = context
         self.missing_value_context = missing_value_context
         self.schemata = schemata
         self.context_override = context_override
+        self.ident = ident
 
         if self.missing_value_context == None:
             self.missing_value_context = self.context
@@ -218,7 +268,7 @@ class Meta:
         if self.context_override:
             return self
         else:
-            return Meta(new_context, self.schemata)
+            return Meta(new_context, self.schemata, ident=self.ident)
 
 # General error type for indicating type validation errors
 class TypeError:

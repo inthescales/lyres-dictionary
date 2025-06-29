@@ -1,3 +1,6 @@
+import src.tools.morphs.validation.form_mne_validation as modern_english
+import src.tools.morphs.validation.form_oe_validation as old_english
+
 from src.tools.morphs.schemas.languages import valid_languages
 from src.tools.morphs.validation.type_validation import Any, Array, Dict, Integer, Meta, One_Or_More, String, ValueSet, ValueSets
 
@@ -80,7 +83,8 @@ origin_type_requirements = {
             Any(
                 [
                     Dict({ "form-stem": One_Or_More(String()) }, restrict=False),
-                    Dict({ "form-raw": One_Or_More(String()) }, restrict=False)
+                    Dict({ "form-raw": One_Or_More(String()) }, restrict=False),
+                    Dict({ "form-oe": old_english.schema_head }, restrict=False)
                 ],
                 custom_error="missing required form property: 'form-stem', 'form-raw'"
             )
@@ -89,7 +93,8 @@ origin_type_requirements = {
             Any(
                 [
                     Dict({ "form-stem": One_Or_More(String()) }, restrict=False),
-                    Dict({ "form-raw": One_Or_More(String()) }, restrict=False)
+                    Dict({ "form-raw": One_Or_More(String()) }, restrict=False),
+                    Dict({ "form-oe": old_english.schema_head }, restrict=False)
                 ],
                 custom_error="missing required form property: 'form-stem', 'form-raw'"
             )
@@ -98,7 +103,8 @@ origin_type_requirements = {
             Any(
                 [
                     Dict({ "form-stem": One_Or_More(String()) }, restrict=False),
-                    Dict({ "form-raw": One_Or_More(String()) }, restrict=False)
+                    Dict({ "form-raw": One_Or_More(String()) }, restrict=False),
+                    Dict({ "form-oe": old_english.schema_head }, restrict=False)
                 ],
                 custom_error="missing required form property: 'form-stem', 'form-raw'"
             ),
@@ -118,12 +124,20 @@ origin_type_requirements = {
 
 # Execution ==============================================
 
+schemata = old_english.schemata | modern_english.schemata
+
 # Check the given value dict against the expected type tree
 def check_values(value, expected, custom_error=None):
     context = "in morph"
     if type(expected) == Dict and len(expected.reference.keys()) == 1:
         context = "in property '" + list(expected.reference.keys())[0] + "'"
-    meta = Meta(context, {}, missing_value_context="in morph", context_override=True)
+
+    if "key" in value:
+        morph_id = value["key"]
+    else:
+        morph_id = "nokey"
+    
+    meta = Meta(context, schemata, missing_value_context="in morph", context_override=True, ident=morph_id)
     errors = expected.get_errors(value, meta)
 
     if custom_error != None:

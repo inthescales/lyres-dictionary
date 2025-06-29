@@ -1,6 +1,7 @@
 properties = [
     "key",
     "form",
+    "form-oe",                    # Complex form property for Old English words
     "form-stem",
     "form-stem-present",          # Present participle stem for Latin verbs
     "form-stem-perfect",          # Perfect participle stem for Latin verbs

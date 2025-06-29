@@ -32,5 +32,5 @@ def validate_expression(expression):
 
     schemata = { "expression": expression_schema }
     meta = Meta(" in expression " + str(expression), schemata)
-    errors = schemata["expression"].get_errors(expression, meta)
+    errors = expression_schema.get_errors(expression, meta)
     return [err.text for err in errors]
