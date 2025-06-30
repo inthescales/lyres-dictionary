@@ -1,5 +1,5 @@
-import src.tools.morphs.validation.form_mne_validation as modern_english
-import src.tools.morphs.validation.form_oe_validation as old_english
+import src.tools.morphs.validation.formsets.mne_formset_validation as modern_english
+import src.tools.morphs.validation.formsets.oe_formset_validation as old_english
 
 from src.tools.morphs.schemas.languages import valid_languages
 from src.tools.morphs.validation.type_validation import Any, Array, Dict, Integer, Meta, One_Or_More, String, ValueSet, ValueSets
