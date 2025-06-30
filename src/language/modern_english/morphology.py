@@ -1,13 +1,12 @@
 import src.language.modern_english.joining as joining
 
 def default_plural(lemma):
-	print(lemma)
 	if lemma[-2:] == "ss":
 		return joining.get_joined_form(lemma, "es")
 	elif lemma[-1] == "s":
 		return joining.get_joined_form(lemma, "es")
 	else:
-		return joining.get_joined_form(lemma + "s")
+		return joining.get_joined_form(lemma, "s")
 
 def default_comparative(lemma):
 	if lemma[-1] == "e":

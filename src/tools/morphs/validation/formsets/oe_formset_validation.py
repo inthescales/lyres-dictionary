@@ -7,7 +7,7 @@ from src.tools.morphs.validation.type_validation import Any, Dict, One_Or_More, 
 
 schema_head = Any([
 		One_Or_More(String()),
-		Schema("paradigm-oe"),
+		One_Or_More(Schema("paradigm-oe")),
 		Schema("metaform"),
 		Schema("multiform"),
 	],

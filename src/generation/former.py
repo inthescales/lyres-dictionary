@@ -1,7 +1,9 @@
-import src.generation.forming.oe_form as oe_form
 import src.utils.helpers as helpers
 
 from random import Random
+
+# import src.generation.forming.oe_formset as oe_formset
+
 from src.evolutor import evolutor
 from src.evolutor.engine.config import Config
 from src.utils.logging import Logger
@@ -52,7 +54,7 @@ def form(morph, env, config=None):
             return "".join([process(f) for f in split_form])
 
     # if morph.get_origin() == "old-english":
-    #     form = oe_form.read(morph.morph["form-oe"], morph.morph["type"])
+    #     form = oe_formset.read(morph.morph["form-oe"], morph.morph["type"])
     #     print(form)
     #     exit(0)
 

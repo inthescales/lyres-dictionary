@@ -1,7 +1,8 @@
 [
     {
         "key": "æce",
-        "form-oe": { "form": "æċe", "canon": "ache" },
+        "form-raw": "æċe",
+        "form-canon": "ache",
         "type": "noun",
         "gloss": "ache",
         "tags": ["count", "abstract", "body-state"],
