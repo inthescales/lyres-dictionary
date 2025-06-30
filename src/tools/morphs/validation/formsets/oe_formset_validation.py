@@ -6,47 +6,22 @@ from src.tools.morphs.validation.type_validation import Any, Dict, One_Or_More, 
 # Schemata =====================================
 
 schema_head = Any([
-		One_Or_More(String()),
-		One_Or_More(Schema("paradigm-oe")),
 		Schema("metaform"),
 		Schema("multiform"),
 	],
 	custom_error="invalid form structure. Expected one-or-list of strings or schema of type 'multiform', 'metaform', or 'paradigm'"
 )
-schema_multiform = Dict({
-	"main": Any([
-			One_Or_More(String()),
-			One_Or_More(Schema("paradigm-oe")),
-			One_Or_More(Schema("metaform"))
-		],
-		custom_error="invalid main form. Expected one-or-list of strings or schemas of type 'paradigm-oe' or 'metaform'"
-	)
-	"alt": Any([
-			One_Or_More(String()),
-			One_Or_More(Schema("paradigm-oe")),
-			One_Or_More(Schema("metaform"))
-		],
-		custom_error="invalid alternate forms. Expected one-or-list of strings or schemas of type 'paradigm-oe' or 'metaform'"
-	)
-})
-schema_metaform = Dict({
-	"form": One_Or_More(Any([
-			String(),
-			Schema("paradigm-oe")
-		],
-		custom_error="invalid 'form' structure. Expected one-or-list of strings or schemas of type 'paradigm-oe'"
-	)),
-	"canon": Opt(One_Or_More(Any([
-			String(),
-			Schema("paradigm-mne"),
-			Schema("canonset")
-		],
-		custom_error="invalid 'canon' structure. Expected one-or-list of strings or schemas of type 'paradigm-oe' or 'canonset'"
-	))),
-	"dialect": Opt(String(ValueSet("old english dialect", dialects.old_english)))
-})
-schema_paradigm = Any(
-	[
+schema_multiform = Dict({ "main": One_Or_More(Schema("metaform")), "alt": One_Or_More(Schema("metaform")) })
+schema_metaform = Any([
+	One_Or_More(Schema("paradigm-oe")),
+	Dict({
+		"form": One_Or_More(Schema("paradigm-oe")),
+		"canon": Opt(One_Or_More(Schema("canonset"))),
+		"dialect": Opt(String(ValueSet("old english dialect", dialects.old_english)))
+	})
+])
+schema_paradigm = Any([
+		String(),
 		Schema("paradigm-oe-base"),
 		Schema("paradigm-oe-verb")
 	],
@@ -62,12 +37,7 @@ schema_paradigm_verb = Dict({
 	"past-participle": Opt(One_Or_More(String()))
 })
 schema_canonset = Dict({
-	"form": One_Or_More(Any([
-			String(),
-			Schema("paradigm-mne")
-		],
-		custom_error="invalid 'canonset' structure. Expected one-or-list of strings or a schema of type 'paradigm-mne'"
-	)),
+	"form": One_Or_More(Schema("paradigm-mne")),
 	"dialect": Opt(String(ValueSet("middle english dialect", dialects.middle_english)))
 })
 
