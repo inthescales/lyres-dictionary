@@ -1,3 +1,5 @@
+import src.language.modern_english.morphology as mne_morphology
+
 from src.utils.logging import Logger
 
 # Structures ===========================
@@ -40,12 +42,12 @@ def read_paradigm(struct, morph_type):
 
 def paradigm_from_string(string, morph_type, use_defaults):
 	if morph_type == "noun":
-		plural = default_plural(string)
+		plural = mne_morphology.default_plural(string)
 		return Paradigm_MnE_N(string, plural)
 	elif morph_type == "adj":
 		if use_defaults:
-			comp = default_comparative(string)
-			sup = default_superlative(string)
+			comp = mne_morphology.default_comparative(string)
+			sup = mne_morphology.default_superlative(string)
 		else:
 			comp = None
 			sup = None
@@ -60,7 +62,7 @@ def read_noun(struct):
 	if "plural" in struct:
 		plural = struct["plural"]
 	else:
-		plural = default_plural(lemma)
+		plural = mne_morphology.default_plural(lemma)
 
 	return Paradigm_MnE_N(lemma, plural)
 
@@ -70,14 +72,14 @@ def read_adj(struct, use_defaults):
 	if "comparative" in struct:
 		comp = struct["comparative"]
 	elif use_defaults:
-		comp = default_comparative(lemma)
+		comp = mne_morphology.default_comparative(lemma)
 	else:
 		comp = None
 
 	if "superlative" in struct:
 		sup = struct["superlative"]
 	elif use_defaults:
-		sup = default_superlative(lemma)
+		sup = mne_morphology.default_superlative(lemma)
 	else:
 		sup = None
 
@@ -94,44 +96,6 @@ def read_verb(struct):
 	if "past-participle" in struct:
 		ppart = struct["past-participle"]
 	else:
-		ppart = default_past_participle(lemma)
+		ppart = mne_morphology.default_past_participle(lemma)
 
 	return Paradigm_MnE_V(lemma, past, ppart)
-
-# Helpers ============================
-
-# TODO: Make these use MnE joining rules (e.g. doubling consonants)
-# TODO: Move to MnE morphology file
-
-def default_plural(lemma):
-	print(lemma)
-	if lemma[-2:] == "ss":
-		return lemma + "es"
-	elif lemma[-1] == "s":
-		return lemma + "ses"
-	else:
-		return lemma + "s"
-
-def default_comparative(lemma):
-	if lemma[-1] == "e":
-		return lemma + "r"
-	else:
-		return lemma + "er"
-
-def default_superlative(lemma):
-	if lemma[-1] == "e":
-		return lemma + "st"
-	else:
-		return lemma + "est"
-
-def default_past(lemma):
-	if lemma[-1] == "e":
-		return lemma + "d"
-	else:
-		return lemma + "ed"
-
-def default_past_participle(lemma):
-	if lemma[-1] == "e":
-		return lemma + "d"
-	else:
-		return lemma + "ed"
