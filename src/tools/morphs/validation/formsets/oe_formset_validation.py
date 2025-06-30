@@ -11,9 +11,24 @@ schema_head = Any([
 		Schema("metaform"),
 		Schema("multiform"),
 	],
-	custom_error="invalid Old English form structure. Expected one-or-list of strings or schema of type 'multiform', 'metaform', or 'paradigm'"
+	custom_error="invalid form structure. Expected one-or-list of strings or schema of type 'multiform', 'metaform', or 'paradigm'"
 )
-schema_multiform = Dict({ "main": Schema("metaform"), "alt": One_Or_More(Schema(",etaform")) })
+schema_multiform = Dict({
+	"main": Any([
+			One_Or_More(String()),
+			One_Or_More(Schema("paradigm-oe")),
+			One_Or_More(Schema("metaform"))
+		],
+		custom_error="invalid main form. Expected one-or-list of strings or schemas of type 'paradigm-oe' or 'metaform'"
+	)
+	"alt": Any([
+			One_Or_More(String()),
+			One_Or_More(Schema("paradigm-oe")),
+			One_Or_More(Schema("metaform"))
+		],
+		custom_error="invalid alternate forms. Expected one-or-list of strings or schemas of type 'paradigm-oe' or 'metaform'"
+	)
+})
 schema_metaform = Dict({
 	"form": One_Or_More(Any([
 			String(),
