@@ -108,16 +108,7 @@ origin_type_requirements = {
                 ],
                 custom_error="missing required form property: 'form-stem', 'form-raw'"
             ),
-            Dict(
-                { "verb-class": Any(
-                        [
-                        Integer(ValueSet("verb class", [1, 2, 3, 4, 5, 6, 7])),
-                        String(ValueSet("verb class", ["weak", "preterite-present"]))
-                    ],
-                    custom_error="missing required property 'verb-class'"
-                )},
-                restrict=False
-            )
+            Dict({ "verb-class": ValueSet("verb class", [1, 2, 3, 4, 5, 6, 7, "weak", "preterite-present"]) }, restrict=False)
         ]
     }
 }

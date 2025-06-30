@@ -14,6 +14,22 @@ class Type:
     def __str__(self):
         return "Type(" + str(self.value) + ")"
 
+# A node that only accepts values from a specific list.
+# Can also be passed in to primitive types
+class ValueSet(Type):
+    def __init__(self, name, values):
+        self.name = name
+        self.values = values
+
+    def __str__(self):
+        return "ValueSet(" + str(values) + ")"
+
+    def get_errors(self, value, meta):
+        if value not in self.values:
+            return [TypeError("invalid " + self.name + " '" + str(value) + "' " + str(meta.context) + ".")]
+        else:
+            return []
+
 class Primitive(Type):
     name = "generic primitive"
 
@@ -245,12 +261,6 @@ class Any(Type):
             return [WeakError("no cases match in 'any' " + meta.context + ".")]
 
 # Other Types ----------------------------
-
-# Represents a list of acceptable values for a certain node.
-class ValueSet:
-    def __init__(self, name, values):
-        self.name = name
-        self.values = values
 
 # Validation metadata
 class Meta:
