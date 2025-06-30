@@ -19,8 +19,8 @@ def form(morph, env, config=None):
     if config == None:
         config = Former_Config(seed=morph.seed)
 
-    Rules including sound evolution
-    Affixes always use fixed forms, if present
+    # Rules including sound evolution
+    # Affixes always use fixed forms, if present
     if morph.has_raw_form() and not (morph.has_stem_form() and morph.is_affix()):
 
         # If canon-locked, use canon form if any
@@ -50,6 +50,11 @@ def form(morph, env, config=None):
         else:
             split_form = raw_form.split("-")
             return "".join([process(f) for f in split_form])
+
+    # if morph.get_origin() == "old-english":
+    #     form = oe_form.read(morph.morph["form-oe"], morph.morph["type"])
+    #     print(form)
+    #     exit(0)
 
     # Stem or final form based on whether another morph follows
     if env.next != None:
