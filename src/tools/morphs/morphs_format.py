@@ -170,6 +170,10 @@ def should_format(element, key, tag_stack):
     if "form-assimilation" in tag_stack and "case" in tag_stack:
         return False
 
+    # Lists in formsets
+    if "form-oe" in tag_stack and type(element) == list:
+        return False
+
     # Lists appearing in top-level morph keys
     if key:
         if key in [
@@ -179,7 +183,7 @@ def should_format(element, key, tag_stack):
         ] \
         or ( \
             key.startswith("form-") \
-            and not key == "form-assimilation" \
+            and not key in ["form-assimilation", "form-oe"] \
         ) \
         or (key == "gloss" or key.startswith("gloss-")):
             return False
