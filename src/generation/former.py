@@ -1,8 +1,7 @@
+import src.generation.forming.oe_formset as oe_formset
 import src.utils.helpers as helpers
 
 from random import Random
-
-# import src.generation.forming.oe_formset as oe_formset
 
 from src.evolutor import evolutor
 from src.evolutor.engine.config import Config
@@ -21,9 +20,28 @@ def form(morph, env, config=None):
     if config == None:
         config = Former_Config(seed=morph.seed)
 
+    # Read an Old English formset
+    if morph.get_origin() == "old-english" and "form-oe" in morph.morph:
+        formset = oe_formset.read(morph.morph["form-oe"], morph.morph["type"])
+        
+        # If canon-locked, use a random canon form if any
+        canon_forms = [form for form in formset.all if form.canon != None]
+        if len(canon_forms) > 0 and config.canon_lock:
+            canonset = helpers.one_or_random(canon_forms).canon
+            return helpers.one_or_random(canonset.paradigm).lemma
+
+        # Otherwise choose a raw form and evolve it
+        if not config.include_alt_forms or formset.alt == None:
+            paradigm = helpers.one_or_random(formset.main.paradigm, seed=morph.seed)
+        else:
+            metaform = helpers.one_or_random(formset.all, seed=morph.seed)
+            paradigm = helpers.one_or_random(metaform.paradigm, seed=morph.seed)
+
+        return evolve_chunks(paradigm.lemma, morph)
+
     # Rules including sound evolution
     # Affixes always use fixed forms, if present
-    if morph.has_raw_form() and not (morph.has_stem_form() and morph.is_affix()):
+    elif morph.has_raw_form() and not (morph.has_stem_form() and morph.is_affix()):
 
         # If canon-locked, use canon form if any
         if morph.has_canon_form() and config.canon_lock:
@@ -34,29 +52,7 @@ def form(morph, env, config=None):
         random = Random(morph.seed)
         raw_form = random.choice(forms)
 
-        # Sub-function for processing
-        def process(form):
-            # Common morphs already typically use canon-lock. Turning this off for more alternate forms
-            # if morph.has_tag("obscure") or morph.has_tag("speculative"):
-            #     locked = False
-            # else:
-            #     locked = True
-            locked = False
-
-            config = Config(locked=locked, seed=morph.seed)
-            return evolutor.oe_form_to_ne_form(form, config) 
-
-        # Process, dividing into chunks in the case of compounds
-        if not "-" in raw_form:
-            return process(raw_form)
-        else:
-            split_form = raw_form.split("-")
-            return "".join([process(f) for f in split_form])
-
-    # if morph.get_origin() == "old-english":
-    #     form = oe_formset.read(morph.morph["form-oe"], morph.morph["type"])
-    #     print(form)
-    #     exit(0)
+        return evolve_chunks(raw_form, morph)
 
     # Stem or final form based on whether another morph follows
     if env.next != None:
@@ -92,6 +88,8 @@ def form(morph, env, config=None):
     form = helpers.one_or_random(form, seed=morph.seed)
     
     return form
+
+# Assimilation -------------------------
 
 # Get the relevant form from an assimilation dict, based on the following form
 def apply_assimilation(morph, following):
@@ -131,3 +129,25 @@ def apply_assimilation(morph, following):
         Logger.error("unrecognized assimilation code '" + case + "' in morph '" + morph.get_key() + "'")
     else:
         return case
+
+# Evolution --------------------------
+
+# Divide a form into chunks by '-' and evolve each chunk separately
+def evolve_chunks(form, morph):
+    if not "-" in form:
+        return evolve(form, morph)
+    else:
+        split_form = form.split("-")
+        return "".join([evolve(f, morph) for f in split_form])
+
+# Evolve a historical form into a modern form
+def evolve(form, morph):
+    # Common morphs already typically use canon-lock. Turning this off for more alternate forms
+    # if morph.has_tag("obscure") or morph.has_tag("speculative"):
+    #     locked = False
+    # else:
+    #     locked = True
+    locked = False
+
+    config = Config(locked=locked, seed=morph.seed)
+    return evolutor.oe_form_to_ne_form(form, config) 

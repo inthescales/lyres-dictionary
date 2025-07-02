@@ -13,13 +13,15 @@ schema_head = Any([
 )
 schema_multiform = Dict({ "main": One_Or_More(Schema("metaform")), "alt": One_Or_More(Schema("metaform")) })
 schema_metaform = Any([
-	One_Or_More(Schema("paradigm-oe")),
-	Dict({
-		"form": One_Or_More(Schema("paradigm-oe")),
-		"canon": Opt(One_Or_More(Schema("canonset"))),
-		"dialect": Opt(String(ValueSet("old english dialect", dialects.old_english)))
-	})
-])
+		One_Or_More(Schema("paradigm-oe")),
+		Dict({
+			"form": One_Or_More(Schema("paradigm-oe")),
+			"canon": Opt(One_Or_More(Schema("canonset"))),
+			"dialect": Opt(String(ValueSet("old english dialect", dialects.old_english)))
+		})
+	],
+	custom_error="invalid 'metaform' structure. Expected a metaform dictionary or one or more 'paradigm' schemas"
+)
 schema_paradigm = Any([
 		String(),
 		Schema("paradigm-oe-base"),
@@ -36,10 +38,15 @@ schema_paradigm_verb = Dict({
 	"past": Opt(One_Or_More(String())),
 	"past-participle": Opt(One_Or_More(String()))
 })
-schema_canonset = Dict({
-	"form": One_Or_More(Schema("paradigm-mne")),
-	"dialect": Opt(String(ValueSet("middle english dialect", dialects.middle_english)))
-})
+schema_canonset = Any([
+		One_Or_More(String()),
+		Dict({
+			"form": One_Or_More(Schema("paradigm-mne")),
+			"dialect": Opt(String(ValueSet("middle english dialect", dialects.middle_english)))
+		})
+	],
+	custom_error="invalid 'canonset' structure. Expected one-or-list of strings, or a dictionary"
+)
 
 schemata = {
 	"formset": schema_head,

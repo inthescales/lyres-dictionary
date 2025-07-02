@@ -17,6 +17,11 @@ class Formset_OE():
 		self.main = main
 		self.alt = alt
 
+		if alt != None:
+			self.all = [main] + alt
+		else:
+			self.all = [main]
+
 	def __str__(self):
 		return "type: " + self.type + "\nmain: " + str(self.main) + "\nalt: " + str(self.alt)
 
@@ -54,6 +59,8 @@ class Paradigm_OE_V():
 		self.infinitive = infinitive
 		self.past = past
 		self.past_participle = past_participle
+
+		self.lemma = infinitive
 
 	def __str__(self):
 		return "infinitive: " + str(self.infinitive) + ", past: " + str(self.past) + ", past-participle: " + str(self.past_participle)

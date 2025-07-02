@@ -4,8 +4,6 @@ import src.generation.forming.mne_formset as mne_formset
 import src.generation.forming.oe_formset as oe_formset
 
 class FormsetParsingTests(unittest.TestCase):
-    # assertTrue/False/Equal
-
     def test_oe_formsets(self):
         from_string = oe_formset.read("form", "noun")
         self.assertEqual(from_string.main.paradigm.lemma, "form")
