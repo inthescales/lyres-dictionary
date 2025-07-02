@@ -2,6 +2,7 @@ from src.tools.morphs.validation.type_validation import Any, Dict, One_Or_More, 
 
 schema_paradigm = Any(
     [
+        One_Or_More(String()),
         Schema("paradigm-mne-noun"),
         Schema("paradigm-mne-adj"),
         Schema("paradigm-mne-verb"),

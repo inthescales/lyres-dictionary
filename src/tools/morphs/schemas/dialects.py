@@ -15,3 +15,8 @@ middle_english = [
 	"southern",
 	"kentish"
 ]
+
+modern_english = [
+	"standard",
+	"dialect" 			# Unspecified nonstandard dialect
+]

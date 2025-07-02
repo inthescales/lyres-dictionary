@@ -37,12 +37,13 @@ class Metaform():
 
 # A canon form (one or more MnE paradigms) and related metadata
 class Canonset():
-	def __init__(self, dialect, paradigm):
-		self.dialect = dialect
+	def __init__(self, paradigm, dialect_source, dialect_range):
 		self.paradigm = paradigm
+		self.source_dialect = dialect_source
+		self.dialect_range = dialect_range
 
 	def __str__(self):
-		return "dialect: " + self.dialect + "\nparadigm: " + str(self.paradigm)
+		return "paradigm: " + str(self.paradigm) + "\nsource dialect: " + str(self.source) + "\nrange: " + str(self.range)
 
 # Paradigm for Old English nouns and adjectives
 class Paradigm_OE_B():
@@ -179,7 +180,7 @@ def read_canonset(value, morph_type):
 		else:
 			# Create canonset from paradigm dict
 			paradigm = mne_formset.read_paradigm(value, morph_type)
-			return Canonset(default_me_dialect, paradigm)
+			return Canonset(paradigm, default_me_dialect, default_mne_dialect)
 	elif (type(value) == list) and (type(value[0]) == dict):
 		if "form" in value[0]:
 			# Create list of canonsets from list of canonset dicts
@@ -187,14 +188,14 @@ def read_canonset(value, morph_type):
 		else:
 			# Create a canonset with multiple paradigms from a list of paradigm dicts
 			paradigms = [mne_formset.read_paradigm(d, morph_type) for d in value]
-			return Canonset(default_me_dialect, paradigms)
+			return Canonset(paradigms, default_me_dialect, default_mne_dialect)
 	elif type(value) == str:
 		# Create a single canonset from a single string
-		return Canonset(default_me_dialect, mne_formset.paradigm_from_string(value, morph_type, use_defaults=True))
+		return Canonset(mne_formset.paradigm_from_string(value, morph_type, use_defaults=True), default_me_dialect, default_mne_dialect)
 	elif (type(value) == list) and (type(value[0]) == str):
 		# Create a canonset with multiple paradigms from a list of strings
 		canon_forms = [mne_formset.paradigm_from_string(s, morph_type, use_defaults=True) for s in value]
-		return Canonset(default_me_dialect, canon_forms)
+		return Canonset(canon_forms, default_me_dialect, default_mne_dialect)
 	else:
 		Logger.error("couldn't read canonset: " + str(value))
 
@@ -202,17 +203,26 @@ def read_canonset(value, morph_type):
 def read_canonset_dict(value, morph_type):
 	form = mne_formset.read_paradigm(value["form"], morph_type)
 
-	if "dialect" in value:
-		dialect = value["dialect"]
+	if "dialect-source" in value:
+		source = value["dialect-source"]
 	else:
-		dialect = default_me_dialect
+		source = default_me_dialect
 
-	return Canonset(dialect, form)
+	if "dialect-range" in value:
+		if type(value["dialect-range"]) == list:
+			dialect_range = value["dialect-range"]
+		else:
+			dialect_range = [value["dialect-range"]]
+	else:
+		source = default_mne_dialect
+
+	return Canonset(form, source, dialect_range)
 
 # Helpers ============================
 
 default_oe_dialect = "unspecified"
 default_me_dialect = "unspecified"
+default_mne_dialect = ["standard"]
 
 def default_oblique(lemma):
 	if not helpers.is_vowel(lemma[-1], y_is_vowel=True):

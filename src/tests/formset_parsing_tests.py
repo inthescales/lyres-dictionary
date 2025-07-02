@@ -54,8 +54,11 @@ class FormsetParsingTests(unittest.TestCase):
         from_paradigm_list = oe_formset.read_canonset([{ "lemma": "first"}, { "lemma": "second" }], "noun")
         self.assertEqual([p.lemma for p in from_paradigm_list.paradigm], ["first", "second"])
 
-        full_dict = oe_formset.read_canonset({ "form": "form", "dialect": "midlands"}, "noun")
-        self.assertEqual([full_dict.paradigm.lemma, full_dict.dialect], ["form", "midlands"])
+        full_dict = oe_formset.read_canonset({ "form": "form", "dialect-source": "midlands", "dialect-range": "dialect"}, "noun")
+        self.assertEqual([full_dict.paradigm.lemma, full_dict.source_dialect, full_dict.dialect_range], ["form", "midlands", ["dialect"]])
+
+        range_list = oe_formset.read_canonset({ "form": "form", "dialect-range": ["standard", "dialect"] }, "noun")
+        self.assertEqual(range_list.dialect_range, ["standard", "dialect"])
 
     def test_oe_paradigm(self):
         from_string = oe_formset.read_paradigm("form", "noun")

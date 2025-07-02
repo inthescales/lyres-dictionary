@@ -42,7 +42,8 @@ schema_canonset = Any([
 		One_Or_More(String()),
 		Dict({
 			"form": One_Or_More(Schema("paradigm-mne")),
-			"dialect": Opt(String(ValueSet("middle english dialect", dialects.middle_english)))
+			"dialect-source": Opt(String(ValueSet("middle english dialect", dialects.middle_english))),
+			"dialect-range": Opt(One_Or_More(String(ValueSet("modern english dialect", dialects.modern_english))))
 		})
 	],
 	custom_error="invalid 'canonset' structure. Expected one-or-list of strings, or a dictionary"
