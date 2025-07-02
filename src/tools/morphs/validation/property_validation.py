@@ -8,11 +8,23 @@ from src.tools.morphs.schemas.properties import properties as valid_properties
 
 # Requirement definitions =================================
 
+gloss_requirement = Any([
+    Dict({ "gloss": One_Or_More(String()) }, restrict=False),
+    Dict({ "gloss-link": One_Or_More(String()), "gloss-final": One_Or_More(String()) }, restrict=False),
+    Dict({ "gloss-adj": One_Or_More(String()) }, restrict=False),
+    Dict({ "gloss-noun": One_Or_More(String()) }, restrict=False),
+    Dict({ "gloss-number": One_Or_More(String()) }, restrict=False),
+    Dict({ "gloss-verb": One_Or_More(String()) }, restrict=False),
+    ],
+    custom_error="no valid form property found"
+)
+
 # Properties required by all morphs
 universal_requirements = [
     Dict({ "key": String() }, restrict=False),
     Dict({ "type": String(ValueSets.type) }, restrict=False),
-    Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False)
+    Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False),
+    gloss_requirement
 ]
 
 # Properties required by all morphs of a certain type
