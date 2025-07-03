@@ -168,7 +168,7 @@ class Dict(Type):
 
         # Check that value is a dictionary
         if type(value) != dict:
-            return [TypeError("invalid value type " + meta.context + "'. Expected dictionary with reference key '" + str(self.reference) + "'")]
+            return [TypeError("invalid value type " + meta.context + ". Expected dictionary with reference key '" + str(self.reference) + "'")]
 
         # Check that all required keys are present
         missing_keys = [key for key, exp in self.reference.items() if type(exp) != Opt and key not in value.keys()]
@@ -259,6 +259,23 @@ class Any(Type):
             return [TypeError(self.custom_error)]
         else:
             return [WeakError("no cases match in 'any' " + meta.context + ".")]
+
+# Node where each of a list of child nodes must succeed
+class All(Type):
+    name = "any"
+
+    def __init__(self, items):
+        self.items = items
+
+    def __str__(self):
+        return "All(" + str(self.items) + ")"
+
+    def get_errors(self, value, meta):
+        errors = []
+        for option in self.items:
+            errors += option.get_errors(value, meta)
+
+        return errors
 
 # Other Types ----------------------------
 

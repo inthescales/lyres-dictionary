@@ -451,6 +451,7 @@ def from_oe_phonemes(oe_phonemes, config):
 
     # Break up two heterorganic consonants by inserting another consonant
     def dissimilating_insertion(state):
+        # TODO: Insert voiceless consonant if followed by a voiceless consonant, e.g. 'empty'
         if state.joined in ["ml", "mr"]:
             return [state.capture[0], Phoneme("b", template=state.capture[0]), state.capture[1]]
         elif state.joined in ["nl", "nr"]:

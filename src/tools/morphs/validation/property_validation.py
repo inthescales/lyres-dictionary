@@ -2,7 +2,7 @@ import src.tools.morphs.validation.formsets.mne_formset_validation as modern_eng
 import src.tools.morphs.validation.formsets.oe_formset_validation as old_english
 
 from src.tools.morphs.schemas.languages import valid_languages
-from src.tools.morphs.validation.type_validation import Any, Array, Dict, Integer, Meta, One_Or_More, String, ValueSet, ValueSets
+from src.tools.morphs.validation.type_validation import All, Any, Array, Dict, Integer, Meta, One_Or_More, String, ValueSet, ValueSets
 
 from src.tools.morphs.schemas.properties import properties as valid_properties
 
@@ -16,22 +16,44 @@ gloss_requirement = Any([
     Dict({ "gloss-number": One_Or_More(String()) }, restrict=False),
     Dict({ "gloss-verb": One_Or_More(String()) }, restrict=False),
     ],
-    custom_error="no valid form property found"
+    custom_error="no valid gloss property found"
 )
+
+# ----------------------------------------------------
 
 # Properties required by all morphs
 universal_requirements = [
     Dict({ "key": String() }, restrict=False),
     Dict({ "type": String(ValueSets.type) }, restrict=False),
     Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False),
-    gloss_requirement
+    Any([
+            gloss_requirement,
+            Dict(
+                { "senses": Array(
+                    All([
+                        Dict({ "tags": Array(String(ValueSets.tag)) }, restrict=False),
+                        gloss_requirement
+                    ])
+                )},
+                restrict=False
+            )
+        ],
+        custom_error="must have either a gloss or a list of senses"
+    )
 ]
 
 # Properties required by all morphs of a certain type
 type_requirements = {
     "noun": [
-        Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False),
-        Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)
+        Any([
+            All([
+                Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False),
+                Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)
+            ]),
+            Dict({ "senses": Array(Dict({}, restrict=False)) }, restrict=False)
+        ],
+        custom_error="all nouns must have either a list of tags or a list of senses"
+        )
     ],
     "suffix": [
         Dict({ "derive-from": One_Or_More(String(ValueSets.type)) }, restrict=False),

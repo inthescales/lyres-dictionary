@@ -34,6 +34,7 @@ properties = [
     "gloss-state",                # Adjective gloss associated with a stative verb
     "gloss-tool",                 # Verb gloss associated with a tool noun
     "gloss-animal",               # Verb gloss associated with an animal noun
+    "senses",                     # List of senses
     "suffixes",                   # Valid suffixes that can follow this morph
     "requires",
     "exception",
