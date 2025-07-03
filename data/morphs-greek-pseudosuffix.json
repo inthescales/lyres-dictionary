@@ -51,11 +51,24 @@
                 "gloss": "[rule] or [oversee] %pl"
             }, {
                 "case": {
-                    "precedes": {
+                    "follows": {
                         "has-tag": "cardinal"
+                    },
+                    "precedes": {
+                        "has-key": "greek-silent-agent"
                     }
                 },
-                "gloss": "rule by %@"
+                "gloss": "[command] %pl people"
+            }, {
+                "case": {
+                    "follows": {
+                        "has-tag": "cardinal"
+                    },
+                    "precedes": {
+                        "has-key": ["-ic-character", "-y-passthrough"]
+                    }
+                },
+                "gloss": "rule by %@ rulers"
             }
         ],
         "tags": ["mass", "abstract", "no-length", "non-final", "suffix-only"],

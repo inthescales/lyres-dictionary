@@ -8,15 +8,17 @@ from src.morphs.requirements import meets_requirements
 
 class Morph:
     
-    def __init__(self, base_dict):
+    def __init__(self, base_dict, sense=None):
         self.base = base_dict
         self.morph = self.base.copy()
         self.seed = random.randint(0, 100)
+
+        self.sense = self.choose_sense(sense)
     
     # TODO: Maybe move this to morphothec
     @classmethod
-    def with_key(self, key, morphothec):
-        return Morph(morphothec.morph_for_key[key])
+    def with_key(self, key, morphothec, sense=None):
+        return Morph(morphothec.morph_for_key[key], sense)
 
     def __eq__(self, other):
         if other is None:
@@ -58,6 +60,9 @@ class Morph:
         for key, value in override.items():
             if key != "case":
                 self.morph[key] = value
+
+                # TODO: Only apply exceptions to listed senses
+                self.sense[key] = value
 
     # Data provision ==========
         
@@ -147,22 +152,58 @@ class Morph:
             return None
         else:
             return self.morph["suffixes"]
-        
+
     def tags(self):
-        if "tags" in self.morph:
-            return self.morph["tags"]
+        if "tags" in self.sense:
+            return self.sense["tags"]
         else:
             return []
 
     def has_tag(self, target):
-        if "tags" in self.morph:
-            if target in self.morph["tags"]:
+        if "tags" in self.sense:
+            if target in self.sense["tags"]:
                 return True
 
         return False
 
     def get_origin(self):
         return self.morph["origin"]
+
+    # Senses -------------------
+
+    # Get the sense with the given identifier (string or integer index), if any
+    def get_sense(self, ident):
+        if type(ident) == str:
+            return next(filter(lambda x: x.id == ident, self.all_senses))
+        elif type(ident) == int:
+            return self.all_senses[ident]
+        else:
+            Logger.error("Invalid sense ID " + str(ident))
+
+    # Get all senses
+    def all_senses(self):
+        if "senses" not in self.morph:
+            return [self.default_sense()]
+        else:
+            return self.morph.senses
+
+    # The sense to be used if the morph has only a single sense
+    def default_sense(self):
+        return self.morph
+
+    # Pick a sense according to rules and randomness
+    def random_sense():
+        return random.Random(self.seed).choice(self.all_senses())
+
+    # Choose the sense to be used as the main one for this morph
+    def choose_sense(self, ident):
+        if "senses" in self.morph:
+            if ident != None:
+                return self.get_sense(ident)
+            else:
+                return self.random_sense()
+        else:
+            return self.default_sense()
 
     # Syntheses
     
