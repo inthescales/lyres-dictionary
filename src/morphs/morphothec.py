@@ -103,7 +103,7 @@ class Morphothec:
                     Logger.error("morphothec validation found " + str(errors) + " errors")
                     exit(0)
 
-    # Filtering for morphs
+    # Filtering ==================================
 
     def filter(self, language, expression):
         selected = []
@@ -153,6 +153,8 @@ class Morphothec:
         
         return selected
 
+    # Meta information ============================
+
     def root_count(self, language=None, type=None, expression=None):
         if language != None:
             languages = [language]
@@ -173,6 +175,6 @@ class Morphothec:
 
         return count
 
-# Global instance
+# Global instance =========================
 
 Morphothec.active = Morphothec("data/")

@@ -20,7 +20,7 @@ def gloss(morph, env):
     # Check for a basic gloss
     if "gloss" in morph_dict:
         gloss = helpers.one_or_random(morph_dict["gloss"], seed=morph.seed)
-        if morph_dict["type"] in ["noun", "verb"] and len(gloss.split(" ")) == 1:
+        if morph.get_type() in ["noun", "verb"] and len(gloss.split(" ")) == 1:
             return "[" + gloss + "]"
         else:
             return gloss

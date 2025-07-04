@@ -17,7 +17,15 @@ class Morph:
     
     # TODO: Maybe move this to morphothec
     @classmethod
-    def with_key(self, key, morphothec, sense=None):
+    def with_key(self, key, morphothec):
+        # Parse sense indicator
+        if ":" in key:
+            key, sense = key.split(":")
+            if sense.isdigit():
+                sense = int(sense)
+        else:
+            sense = None
+
         return Morph(morphothec.morph_for_key[key], sense)
 
     def __eq__(self, other):
@@ -174,9 +182,9 @@ class Morph:
     # Get the sense with the given identifier (string or integer index), if any
     def get_sense(self, ident):
         if type(ident) == str:
-            return next(filter(lambda x: x.id == ident, self.all_senses))
-        elif type(ident) == int and ident < len(self.all_senses):
-            return self.all_senses[ident]
+            return next(filter(lambda x: ("id" in x and x["id"] == ident), self.all_senses()))
+        elif type(ident) == int and ident < len(self.all_senses()):
+            return self.all_senses()[ident]
         else:
             Logger.error("Invalid sense ID " + str(ident))
 
@@ -192,7 +200,7 @@ class Morph:
         return self.morph
 
     # Pick a sense according to rules and randomness
-    def random_sense():
+    def random_sense(self):
         return random.Random(self.seed).choice(self.all_senses())
 
     # Choose the sense to be used as the main one for this morph
