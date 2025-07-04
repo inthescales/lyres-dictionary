@@ -236,7 +236,7 @@ def finalize_definition(word, definition):
         else:
             return inflected
     elif word.get_type() == "adj":
-        return definition.replace("[","").replace("]", "")
+        return strip_brackets(definition)
 
 # Gets the final definition for the word
 def get_definition(word):
@@ -272,3 +272,8 @@ def get_definition(word):
         definition = finalize_definition(word, definition)
 
     return definition
+
+# Helpers ============================
+
+def strip_brackets(string):
+    return string.replace("[","").replace("]", "")

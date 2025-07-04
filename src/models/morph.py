@@ -61,8 +61,8 @@ class Morph:
             if key != "case":
                 self.morph[key] = value
 
-                # TODO: Only apply exceptions to listed senses
-                self.sense[key] = value
+                if "senses" not in self.morph:
+                    self.sense[key] = value
 
     # Data provision ==========
         
@@ -185,7 +185,7 @@ class Morph:
         if "senses" not in self.morph:
             return [self.default_sense()]
         else:
-            return self.morph.senses
+            return self.morph["senses"]
 
     # The sense to be used if the morph has only a single sense
     def default_sense(self):
