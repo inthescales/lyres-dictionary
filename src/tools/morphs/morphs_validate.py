@@ -1,6 +1,6 @@
 import src.tools.morphs.morphs_files as file_tool
 
-from src.tools.morphs.validation.expression_validation import validate_expression
+from src.tools.morphs.validation.expression_validation import validate_expressions
 from src.tools.morphs.validation.property_validation import validate_properties
 from src.utils.terminal import Color, color_text
 
@@ -13,21 +13,8 @@ def validate_morph(morph):
     # Validate properties
     errors += validate_properties(morph)
 
-    # Validate requirement expressions
-    if "requires" in morph:
-        for referent in ["follows", "precedes"]:
-            if referent in morph["requires"]:
-                errors += validate_expression(morph["requires"][referent])
-
-    # Validate exception expressions
-    if "exception" in morph:
-        for exception in morph["exception"]:
-            if not "case" in exception:
-                errors.append("Exception missing 'case': " + str(exception))
-
-            for referent in ["follows", "precedes"]:
-                if referent in exception["case"]:
-                    errors += validate_expression(exception["case"][referent])
+    # Validate expressions
+    errors += validate_expressions(morph)
 
     # Check tag whitelist
     if "tags" in morph:

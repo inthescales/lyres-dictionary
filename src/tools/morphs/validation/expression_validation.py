@@ -1,4 +1,4 @@
-from src.tools.morphs.validation.type_validation import Any, Array, Bool, Dict, Integer, Meta, One_Or_More, Schema, String, ValueSets
+from src.tools.morphs.validation.type_validation import Any, Array, Bool, Dict, Integer, Meta, Opt, One_Or_More, Schema, String, ValueSets
 
                                       # ARGUMENT TYPE                        EVALUATION RESULT
 expression_schema = Any([
@@ -26,11 +26,20 @@ expression_schema = Any([
     ]
 )
 
-# Validate the structure and value types of an expression (as in morph requirements and exceptions)
-def validate_expression(expression):
+expression_specifier = Dict({ "follows": Opt(expression_schema), "precedes": Opt(expression_schema) })
+
+morph_expressions = Dict({
+        "requires": Opt(expression_specifier),
+        "exception": Opt(Array(Dict({ "case": expression_specifier }, restrict=False)))
+    }
+    , restrict=False
+)
+
+def validate_expressions(morph):
     errors = []
 
     schemata = { "expression": expression_schema }
-    meta = Meta(" in expression " + str(expression), schemata)
-    errors = expression_schema.get_errors(expression, meta)
+    meta = Meta(" in morph", schemata)
+    errors = morph_expressions.get_errors(morph, meta)
+
     return [err.text for err in errors]

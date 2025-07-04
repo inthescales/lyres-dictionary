@@ -256,6 +256,7 @@ class Any(Type):
                     return errors
 
         if self.custom_error != None:
+            # TODO: Consider appending dict printout here
             return [TypeError(self.custom_error)]
         else:
             return [WeakError("no cases match in 'any' " + meta.context + ".")]
