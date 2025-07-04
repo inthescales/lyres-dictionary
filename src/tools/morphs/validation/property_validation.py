@@ -2,8 +2,10 @@ import src.tools.morphs.validation.formsets.mne_formset_validation as modern_eng
 import src.tools.morphs.validation.formsets.oe_formset_validation as old_english
 
 from src.tools.morphs.schemas.languages import valid_languages
-from src.tools.morphs.validation.type_validation import All, Any, Array, Dict, Integer, Meta, One_Or_More, String, ValueSet, ValueSets
+from src.tools.morphs.schemas.periods import periods_for
+from src.tools.morphs.validation.type_validation import All, Any, Array, Dict, Integer, Meta, One_Or_More, Opt, String, ValueSet, ValueSets
 
+from src.tools.morphs.schemas.languages import valid_languages as all_languages
 from src.tools.morphs.schemas.properties import properties as valid_properties
 
 # Requirement definitions =================================
@@ -22,25 +24,36 @@ gloss_requirement = Any([
 # ----------------------------------------------------
 
 # Properties required by all morphs
-universal_requirements = [
-    Dict({ "key": String() }, restrict=False),
-    Dict({ "type": String(ValueSets.type) }, restrict=False),
-    Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False),
-    Any([
-            gloss_requirement,
-            Dict(
-                { "senses": Array(
-                    All([
-                        Dict({ "tags": Array(String(ValueSets.tag)) }, restrict=False),
-                        gloss_requirement
-                    ])
-                )},
-                restrict=False
-            )
-        ],
-        custom_error="must have either a gloss or a list of senses"
-    )
-]
+def make_universal_requirements(language):
+    periods = periods_for(language)
+
+    return [
+        Dict({ "key": String() }, restrict=False),
+        Dict({ "type": String(ValueSets.type) }, restrict=False),
+        Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False),
+        Any([
+                gloss_requirement,
+                Dict(
+                    { "senses": Array(
+                        All([
+                            Dict({
+                                "id": Opt(Any([String(), Integer()], custom_error="invalid sense ID")),
+                                "period": Opt(String(ValueSet("period", periods))),
+                                "tags": Array(String(ValueSets.tag)) 
+                            }, restrict=False),
+                            gloss_requirement
+                        ])
+                    )},
+                    restrict=False
+                )
+            ],
+            custom_error="must have either a gloss or a list of senses"
+        )
+    ]
+
+universal_requirements = {}
+for language in all_languages:
+    universal_requirements[language] = make_universal_requirements(language)
 
 # Properties required by all morphs of a certain type
 type_requirements = {
@@ -175,8 +188,12 @@ def validate_properties(morph):
     errors = []
 
     # Check universal requirements
-    for requirement in universal_requirements:
-        errors += check_values(morph, requirement)
+    if "origin" in morph:
+        for requirement in universal_requirements[morph["origin"]]:
+            errors += check_values(morph, requirement)
+    else:
+        for requirement in make_universal_requirements(None):
+            errors += check_values(morph, requirement)
 
     # Check type requirements
     if "type" in morph and morph["type"] in type_requirements:

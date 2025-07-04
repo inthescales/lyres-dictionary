@@ -175,7 +175,7 @@ class Morph:
     def get_sense(self, ident):
         if type(ident) == str:
             return next(filter(lambda x: x.id == ident, self.all_senses))
-        elif type(ident) == int:
+        elif type(ident) == int and ident < len(self.all_senses):
             return self.all_senses[ident]
         else:
             Logger.error("Invalid sense ID " + str(ident))
