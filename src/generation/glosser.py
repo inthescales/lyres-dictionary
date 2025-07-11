@@ -3,7 +3,7 @@ import src.utils.inflection as inflection
 
 # Get a morph's gloss based on its environment
 def gloss(morph, env):
-    morph_dict = morph.sense
+    morph_dict = morph.sense.dict
 
     # Check for special 'gloss-relative' glosses where prepositions are involved
     if env.prev \

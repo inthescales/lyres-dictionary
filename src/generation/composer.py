@@ -202,6 +202,7 @@ def sub_properties(gloss, morph, last_morph):
         if not " " in value:
             value = "[" + value + "]"
 
+        subbed = strip_brackets(subbed)
         subbed = subbed.replace(match.group(), value)
 
     return subbed
@@ -257,7 +258,6 @@ def get_definition(word):
             prefix_stack.append([morph, env])
         else:
             definition = populate_gloss(morph, env.prev, env, definition)
-
             # TODO: This logic seems to mostly reflect verbal prefixes, but is apparently
             # necessary for relational circumfixes. Reconsider.
             if len(prefix_stack) > 0 and morph.is_root():

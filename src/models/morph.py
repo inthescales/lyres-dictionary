@@ -5,14 +5,24 @@ import src.utils.helpers as helpers
 
 from src.morphs.expressions import evaluate_expression
 from src.morphs.requirements import meets_requirements
+from src.tools.morphs.schemas.periods import periods_for, default_period_for # TODO: move this to language model?
+
+class Sense:
+    def __init__(self, sdict, language):
+        self.dict = sdict
+
+        if "period" in sdict:
+            self.period = sdict["period"]
+        else:
+            self.period = default_period_for(language)
 
 class Morph:
-    
     def __init__(self, base_dict, sense=None):
         self.base = base_dict
         self.morph = self.base.copy()
         self.seed = random.randint(0, 100)
 
+        # TODO: Consider a lens system rather than storing the sense in the morph itself
         self.sense = self.choose_sense(sense)
     
     # TODO: Maybe move this to morphothec
@@ -70,7 +80,7 @@ class Morph:
                 self.morph[key] = value
 
                 if "senses" not in self.morph:
-                    self.sense[key] = value
+                    self.sense.dict[key] = value
 
     # Data provision ==========
         
@@ -162,14 +172,14 @@ class Morph:
             return self.morph["suffixes"]
 
     def tags(self):
-        if "tags" in self.sense:
-            return self.sense["tags"]
+        if "tags" in self.sense.dict:
+            return self.sense.dict["tags"]
         else:
             return []
 
     def has_tag(self, target):
-        if "tags" in self.sense:
-            if target in self.sense["tags"]:
+        if "tags" in self.sense.dict:
+            if target in self.sense.dict["tags"]:
                 return True
 
         return False
@@ -182,9 +192,9 @@ class Morph:
     # Get the sense with the given identifier (string or integer index), if any
     def get_sense(self, ident):
         if type(ident) == str:
-            return next(filter(lambda x: ("id" in x and x["id"] == ident), self.all_senses()))
+            return Sense(next(filter(lambda x: ("id" in x and x["id"] == ident), self.all_senses())), self.get_origin())
         elif type(ident) == int and ident < len(self.all_senses()):
-            return self.all_senses()[ident]
+            return Sense(self.all_senses()[ident], self.get_origin())
         else:
             Logger.error("Invalid sense ID " + str(ident))
 
@@ -193,15 +203,34 @@ class Morph:
         if "senses" not in self.morph:
             return [self.default_sense()]
         else:
-            return self.morph["senses"]
+            return [Sense(s, self.get_origin()) for s in self.morph["senses"]]
 
     # The sense to be used if the morph has only a single sense
     def default_sense(self):
-        return self.morph
+        return Sense(self.morph, self.get_origin())
 
     # Pick a sense according to rules and randomness
     def random_sense(self):
-        return random.Random(self.seed).choice(self.all_senses())
+        senses = self.all_senses()
+        periods = periods_for(self.get_origin())
+
+        sense_periods = []
+        for sense in senses:
+            if sense.period not in sense_periods:
+                sense_periods.append(sense.period)
+
+        latest_period = periods[0]
+        for period in periods:
+            if period in sense_periods:
+                latest_period = period
+
+        rand = random.Random(self.seed)
+        latest_senses = [s for s in senses if s.period == latest_period]
+        old_senses = [s for s in senses if s not in latest_senses]
+        if rand.randint(0, 4) > 0 or len(old_senses) == 0:
+            return rand.choice(latest_senses)
+        else:
+            return rand.choice(old_senses)
 
     # Choose the sense to be used as the main one for this morph
     def choose_sense(self, ident):
