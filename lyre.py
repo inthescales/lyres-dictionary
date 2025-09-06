@@ -2,10 +2,9 @@ import getopt
 import random
 import sys
 
-import botbuddy
-
 import src.generation.entry as entry
 import src.evolutor.evolutor as evolutor
+import src.utils.publish as publisher
 
 from src.evolutor.engine.config import Config
 from src.tools.analysis import analyze
@@ -36,7 +35,7 @@ def test_evolution(form, language):
 
 # Process command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
-        # Error cases
+    # Error cases
     def error_mode_conflict():
         print("> Error: enter only one mode. Modes: test, publish, analyze")
         sys.exit(1)
@@ -95,8 +94,8 @@ if __name__ == '__main__' and len(sys.argv) > 0:
 
     # Output
     if mode == "publish":
-        botbuddy.post(generate_entry)
-
+        publisher.publish(generate_entry)
+    
     elif mode == "test":
         if keys != None:
             test_with_keys(keys)
