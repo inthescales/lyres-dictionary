@@ -79,25 +79,33 @@
         "origin": "old-english"
     }, {
         "key": "ǣled",
-        "form-raw": "ǣled",
+        "form-oe": "ǣled",
         "type": "noun",
         "gloss": "fire",
         "tags": ["mass", "concrete", "luminous", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ælmesse",
-        "form-raw": "ælmesse",
-        "form-raw-alt": "ælmysse",
-        "form-canon": "alms",
+        "form-oe": {
+            "main": {
+                "form": "ælmesse",
+                "canon": "alms"
+            },
+            "alt": "ælmysse"
+        },
         "type": "noun",
         "gloss": "alms",
         "tags": ["mass", "concrete"],
         "origin": "old-english"
     }, {
         "key": "ǣmerġe",
-        "form-raw": "ǣmerġe",
-        "form-raw-alt": ["ǣmyrġe"],
-        "form-canon": "ember",
+        "form-oe": {
+            "main": {
+                "form": "ǣmerġe",
+                "canon": "ember"
+            },
+            "alt": "ǣmyrġe"
+        },
         "type": "noun",
         "gloss": "ember",
         "tags": ["count", "concrete", "luminous"],
@@ -105,42 +113,54 @@
         "notes": "Wiktionary: 'The b is intrusive and was added in English for ease of pronunciation when the vowel of the second syllable (y) disappeared.'"
     }, {
         "key": "ængel",
-        "form-raw": "ængel",
-        "form-raw-alt": "engel",
-        "form-canon": "angel",
+        "form-oe": {
+            "main": {
+                "form": "æangel",
+                "canon": "angel"
+            },
+            "alt": "engel"
+        },
         "type": "noun",
         "gloss": "angel",
         "tags": ["count", "concrete", "living", "person", "divine"],
         "origin": "old-english"
     }, {
         "key": "æppel",
-        "form-raw": "æppel",
-        "form-canon": "apple",
+        "form-oe": {
+            "form": "æppel",
+            "canon": "apple"
+        },
         "type": "noun",
         "gloss": "apple",
         "tags": ["count", "concrete", "bodypart", "bodypart-plant", "food"],
         "origin": "old-english"
     }, {
         "key": "ǣr",
-        "form-raw": "ǣr",
-        "form-canon": "ere",
+        "form-oe": {
+            "form": "ǣr",
+            "canon": "ere"
+        },
         "type": "adj",
         "gloss": "before",
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "ærc",
-        "form-raw": "ærc",
-        "form-canon": "ark",
+        "form-oe": {
+            "form": "ærc",
+            "canon": "ark"
+        },
         "type": "noun",
         "gloss": "[chest] or [cabinet]",
         "gloss-tool": "[store] away",
-        "tags": ["count", "concrete", "man-made", "tool", "vessel"],
+        "tags": ["count", "concrete", "man-made", "tool", "vessel", "obscure"],
         "origin": "old-english"
     }, {
         "key": "ǣrende",
-        "form-raw": "ǣrende",
-        "form-canon": "errand",
+        "form-oe": {
+            "form": "ǣrende",
+            "canon": "errand"
+        },
         "type": "noun",
         "gloss": "errand",
         "gloss-alt": "message",
