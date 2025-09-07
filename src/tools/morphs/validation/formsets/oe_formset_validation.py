@@ -6,7 +6,7 @@ from src.tools.morphs.validation.type_validation import Any, Dict, One_Or_More, 
 # Schemata =====================================
 
 schema_head = Any([
-		Schema("metaform"),
+		One_Or_More(Schema("metaform")),
 		Schema("multiform"),
 	],
 	custom_error="invalid form structure. Expected one-or-list of strings or schema of type 'multiform', 'metaform', or 'paradigm'"

@@ -31,7 +31,7 @@ def form(morph, env, config=None):
             return helpers.one_or_random(canonset.paradigm).lemma
 
         # Otherwise choose a raw form and evolve it
-        if not config.include_alt_forms or formset.alt == None:
+        if formset.main != None and (not config.include_alt_forms or formset.alt == None):
             paradigm = helpers.one_or_random(formset.main.paradigm, seed=morph.seed)
         else:
             metaform = helpers.one_or_random(formset.all, seed=morph.seed)

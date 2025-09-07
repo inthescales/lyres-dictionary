@@ -5,9 +5,11 @@ from src.utils.logging import Logger
 # Structures ===========================
 
 class Paradigm_MnE_N():
-	def __init__(self, lemma, plural):
-		self.lemma = lemma
+	def __init__(self, singular, plural):
+		self.singular = singular
 		self.plural = plural
+
+		self.lemma = self.singular
 
 	def __str__(self):
 		return "lemma: " + self.lemma + ", plural: " + self.plural
@@ -72,17 +74,19 @@ def paradigm_from_string(string, morph_type, use_defaults):
 
 		return Paradigm_MnE_A(string, comp, sup)
 	else:
-		Logger.error("cannot read modern english verb paradigm from a single string")
+		past = mne_morphology.default_past(string)
+		past_participle = mne_morphology.default_past_participle(string)
+		return Paradigm_MnE_V(string, past, past_participle)
 
 def read_noun(value):
-	lemma = value["lemma"]
+	singular = value["lemma"]
 
 	if "plural" in value:
 		plural = value["plural"]
 	else:
-		plural = mne_morphology.default_plural(lemma)
+		plural = mne_morphology.default_plural(singular)
 
-	return Paradigm_MnE_N(lemma, plural)
+	return Paradigm_MnE_N(singular, plural)
 
 def read_adj(value, use_defaults):
 	lemma = value["lemma"]

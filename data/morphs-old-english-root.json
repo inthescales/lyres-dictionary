@@ -2,55 +2,80 @@
     {
         "key": "æċe",
         "form-oe": {
-            "form": ["æċe", "aċe", "eċe"],
+            "form": ["aċe", "æċe", "eċe"],
             "canon": "ache"
         },
         "type": "noun",
         "gloss": "ache",
         "tags": ["count", "abstract", "body-state"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Modern spelling derives from 'ace' or 'æce' form. Pronunciation taken from verb form."
     }, {
         "key": "æċed",
-        "form-raw": "æċed",
+        "form-oe": [
+            "æċed",
+            "eċed",
+            "æċċed"
+        ],
         "type": "noun",
         "gloss": "vinegar",
         "tags": ["mass", "concrete", "fluid", "liquid", "man-made", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "ǣdre-channel",
-        "form-raw": "ǣdre",
-        "type": "noun",
-        "gloss": "[river] or [channel]",
-        "tags": ["count", "concrete", "liquid", "terrain", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "ǣdre-quick",
-        "form-raw": "ǣdre",
+        "key": "ǣdre-adj",
+        "form-oe": "ǣdre",
         "type": "adj",
         "gloss": "[quick] or [instant]",
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
-        "key": "ǣdre-vein",
-        "form-raw": "ǣdre",
+        "key": "ǣdre-n",
+        "form-oe": "ǣdre",
         "type": "noun",
-        "gloss": "blood [vessel]",
-        "tags": ["count", "concrete", "bodypart", "speculative"],
+        "senses": [
+            {
+                "gloss": "[river] or [channel]",
+                "tags": ["count", "concrete", "liquid", "terrain", "speculative"]
+            }, {
+                "gloss": "kidney",
+                "tags": ["count", "concrete", "bodypart", "speculative"]
+            }, {
+                "period": "middle",
+                "gloss": ["blood [vessel]"],
+                "tags": ["count", "concrete", "bodypart", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "ǣfen",
-        "form-raw": "ǣfen",
-        "form-canon": "even",
+        "form-oe": {
+            "main": {
+                "form": ["ǣfen", "ēven"],
+                "canon": "even"
+            },
+            "alt": "ǣfern"
+        },
         "type": "noun",
         "gloss": "evening",
         "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
         "origin": "old-english"
     }, {
         "key": "ælde",
-        "form-raw": "ælde",
+        "form-oe": [
+            {
+                "form": "ælde",
+                "dialect": "northumbrian"
+            }, {
+                "form": "ielde",
+                "dialect": "west-saxon"
+            }, {
+                "form": "elde",
+                "dialect": "anglian"
+            }
+        ],
         "type": "noun",
-        "gloss": "men",
-        "tags": ["mass", "concrete", "living", "person", "gendered", "poetic", "speculative"],
+        "gloss": "men, mankind",
+        "tags": ["uncountable", "concrete", "living", "person", "gendered", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ǣled",
@@ -219,6 +244,22 @@
         "gloss": "oak [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree"],
         "origin": "old-english"
+    }, {
+        "key": "acan",
+        "form-oe": {
+            "form": {
+                "infinitive": "ac|an",
+                "past": "ōc",
+                "past-participle": ["ġe-æc+en", "ġe-ac+en"]
+            },
+            "canon": "ache"
+        },
+        "type": "verb",
+        "verb-class": 6,
+        "gloss": "ache",
+        "tags": ["intransitive"],
+        "origin": "old-english",
+        "notes": "Original spelling 'ake', modern spelling based on misconception"
     }, {
         "key": "ād",
         "form-raw": "ād",

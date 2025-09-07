@@ -8,19 +8,26 @@ from src.utils.logging import Logger
 # A formset represents a set of linked forms sufficient to represent a morph
 # in any way that would be needed (for example, an OE verb in present, past,
 # and past-participle forms). It also includes any canonical modern forms derived
-# from those forms, some metadata.
+# from those forms, and some metadata.
 # Most form properties are represented as lists to accommodate the possibility
 # of alternate forms.
 class Formset_OE():
-	def __init__(self, type, main, alt):
-		self.type = type
+	def __init__(self, mtype, main=None, alt=None, all_forms=None):
+		self.mtype = mtype
 		self.main = main
 		self.alt = alt
+		self.all = all_forms
 
-		if alt != None:
-			self.all = [main] + alt
-		else:
+		# Initialize with either main and alt, or else a single list of all forms
+		if (main == None and all_forms == None):
+			Logger.error("Invalid formset initialization. Must provide 'main' or 'all' value")
+		elif ((main != None or alt != None) and all_forms != None):
+			Logger.error("Invalid formset initialization. Cannot have both 'all'and 'main' or 'alt'")
+
+		if all_forms == None:
 			self.all = [main]
+			if alt != None:			
+				self.all += alt
 
 	def __str__(self):
 		return "type: " + self.type + "\nmain: " + str(self.main) + "\nalt: " + str(self.alt)
@@ -73,6 +80,10 @@ def read(value, morph_type):
 	if type(value == dict) and "main" in value and "alt" in value:
 		# Read a multiform dict
 		return read_multiform(value, morph_type)
+	if type(value) == list and all([type(el) == dict and "form" in el for el in value]):
+		# Read a list of metaforms
+		metaforms = [read_metaform(f, morph_type) for f in value]
+		return Formset_OE(morph_type, all_forms=metaforms)
 	else:
 		# Return a formset with a single main metaform
 		metaform = read_metaform(value, morph_type)
@@ -83,7 +94,6 @@ def read(value, morph_type):
 # Read a multiform (one or more metaforms)
 def read_multiform(value, morph_type):
 	main = read_metaform(value["main"], morph_type)
-
 	if type(value["alt"]) == list:
 		alt = [read_metaform(a, morph_type) for a in value["alt"]]
 	else:
@@ -101,7 +111,7 @@ def read_metaform(value, morph_type):
 			# Read a paradigm dict
 			paradigm = read_paradigm(value, morph_type)
 			return Metaform(paradigm, None, default_oe_dialect)
-	if type(value) == str:
+	elif type(value) == str:
 		# Expand a single string into a paradigm
 		paradigm = paradigm_from_string(value, morph_type)
 		return Metaform(paradigm, None, default_oe_dialect)
@@ -234,5 +244,5 @@ def paradigm_from_string(string, morph_type):
 	if morph_type in ["noun", "adj"]:
 		return Paradigm_OE_B(string, default_oblique(string))
 	else:
-		Logger.error("cannot generate paradigm from string with type " + morph_type)
+		Logger.error("cannot generate paradigm from string with type " + str(morph_type))
 

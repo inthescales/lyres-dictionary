@@ -18,6 +18,12 @@ class FormsetParsingTests(unittest.TestCase):
         from_paradigm_list = oe_formset.read([{ "lemma": "first"}, { "lemma": "second" }], "noun")
         self.assertEqual([p.lemma for p in from_paradigm_list.main.paradigm], ["first", "second"])
 
+        from_metaform_list = oe_formset.read([
+            { "form": "first", "dialect": "firstian" },
+            { "form": "second", "dialect": "secundian" }
+        ], "noun")
+        self.assertEqual([m.paradigm.lemma for m in from_metaform_list.all], ["first", "second"])
+
     def test_oe_multiform(self):
         string = oe_formset.read_multiform({"main": "mainform", "alt": "altform" }, "noun")
         self.assertEqual([string.main.paradigm.lemma] + [p.lemma for p in [a.paradigm for a in string.alt]], ["mainform", "altform"])
