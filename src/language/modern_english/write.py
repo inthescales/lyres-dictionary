@@ -171,7 +171,7 @@ def from_me_phonemes(phonemes, config):
                     result += "y"
                 else:
                     result += even("Orth:iː#->ie/ye", config)
-        elif phone.value == "eː" and next1 and next2 and next1.value + next2.value in ["nd", "ld"]:
+        elif phone.value == "eː" and prev and next1 and next2 and next1.value + next2.value in ["nd", "ld"]:
             result += "ie"
         elif phone.value == "eː":
             result += "ee"
