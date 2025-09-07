@@ -12,11 +12,7 @@
         "notes": "Modern spelling derives from 'ace' or 'æce' form. Pronunciation taken from verb form."
     }, {
         "key": "æċed",
-        "form-oe": [
-            "æċed",
-            "eċed",
-            "æċċed"
-        ],
+        "form-oe": ["æċed", "eċed", "æċċed"],
         "type": "noun",
         "gloss": "vinegar",
         "tags": ["mass", "concrete", "fluid", "liquid", "man-made", "speculative"],

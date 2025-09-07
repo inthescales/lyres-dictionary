@@ -183,7 +183,8 @@ def should_format(element, key, tag_stack):
         ] \
         or ( \
             key.startswith("form-") \
-            and not key in ["form-assimilation", "form-oe"] \
+            and key != "form-assimilation" \
+            and not (key == "form-oe" and (type(element) != list or type(element[0]) != str))
         ) \
         or (key == "gloss" or key.startswith("gloss-")):
             return False
