@@ -252,7 +252,7 @@ def from_me_phonemes(phonemes, config):
             elif not next2:
                 # See evolutor tests for discussion
                 if next1.value in ["m", "n", "w"] \
-                    and prev and prev.value not in ["v", "w"] \
+                    and prev and prev.value not in ["tʃ", "v", "w"] \
                     and not would_have_inserted_lengthening_e:
                     # Words ending in 'm', 'n', or 'w' usually take 'o'
                     result += "o"
@@ -374,7 +374,7 @@ def from_me_phonemes(phonemes, config):
         elif phone.value == "ʃ":
             result += "sh"
         elif phone.value == "tʃ":
-            if is_final and prev and prev.is_vowel() and prev.is_short():
+            if prev and prev.is_vowel() and prev.is_short():
                 result += "tch"
             else:
                 result += "ch"

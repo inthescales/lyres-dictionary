@@ -820,6 +820,10 @@ class EvolutorTests(unittest.TestCase):
         # stylistic decision
         check("morgen", "morwen") #*
 
+        # ...also based on these few examples, 'tʃ' also seems to take an 'e'
+        check("cyċen", "kitchen")
+        check("twyċen", "twitchen")
+
         # ... and we also want to use 'e' if the preceding syllable has a vowel that requires a lengthening 'e'
         check("open", "open")
         check("tācen", "token")
