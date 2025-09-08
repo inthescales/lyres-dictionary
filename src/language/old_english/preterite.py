@@ -1,31 +1,27 @@
 import src.language.old_english.orthography as orthography
 import src.utils.helpers as helpers
 
-from src.evolutor.engine.hinges import occ, rarely
+from src.evolutor.engine.hinges import even, rarely
 
 # Unhandled cases:
-# - Weak verbs with infinitive in'-ēaġan', pp. in '-ēad', or '-ēoġan' / '-ēod' (not relevant to MnE)
-# - Cases where 'g' or 'ġ' change their palatalization (I don't know this to be reflected in MnE)
-# - 'ċġ' digraph appears to become 'ġ' in participles of words like 'seċġan', 'leċġan'. I can
-#   get away without a rule for it because I do a similar change in phonetic processing, but
-#   it may be necessary to process this here at some point. Note that this change happens even
-#   for weak verbs.
+# - 
 
 # TODOs:
-# - Cases where a verb uses a different verb class' participle-formation method
-# - Cases where past participles are formed from preterite forms
+# - Cases where a verb uses a different verb class' preterite-formation method
 
-# Strong participles ==============================================
+# TODO: Consider doing preterites and participles by directly manipulating modern forms
+
+# Strong past forms ==============================================
 
 # Mapping from strong verb class to pairs of infinitive and past participle vowels.
 # For predicting past participle forms based on the form of the infinitive.
 vowel_map = {
-    1: { "ī": "i" },
-    2: { "ēo": "o", "ū": "o" },
-    3: { "e": "o", "eo": "o", "i": "u", "ie": "o", "y": "u" }, # 'y' -> 'u' as in 'byrnan' -> 'ġeburnen'
-    4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
-    5: { "e": "e", "i": "e", "ie": "ie"}, # 'ġiefan' -> 'ġefen' (acc. Wiktionary)?
-    6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
+    1: { "ī": "ā" },
+    # 2: { "ēo": "o", "ū": "o" },
+    # 3: { "e": "o", "eo": "o", "i": "u", "ie": "o", "y": "u" }, # 'y' -> 'u' as in 'byrnan' -> 'ġeburnen'
+    # 4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
+    # 5: { "e": "e", "i": "e", "ie": "ie"}, # 'ġiefan' -> 'ġefen' (acc. Wiktionary)?
+    # 6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
 }
 
 verner_map = {
@@ -34,39 +30,46 @@ verner_map = {
     "þ": "d"
 }
 
-# Get a pseudo-past-participle form for the given form, treating it as the given verb class
+# Get a pseudo-preterite form for the given form, treating it as the given verb class
 #
-# NOTE: this does *not* necessarily produce historical Old English participles. Rather, it produces
-# an alternative form that should convert properly into a modern-style participle. For example, it
-# doesn't make changes in 'c' palatalization when surrounding vowels change
+# NOTE: this does *not* necessarily produce historical Old English preterites. Rather, it produces
+# an alternative form that should convert properly into a modern-style past tense form.
 #
 # NOTE: The following cases are *not* handled by this function:
 # - Weak verbs with participle forms in -'ht' (forming modern 'taught', 'sought', etc.)
 #   As far as I can tell, these aren't predictable from the perspective of recorded OE.
 #   TODO: Make a hinge for these if possible.
-def get_strong_pseudoparticiple(form, verb_class, config):
+def get_strong_pseudopreterite(form, verb_class, config):
     if verb_class == "preterite-present":
         return None
 
     # If this is a contracted form, call the separate function for that
     if is_contracted(form):
-        return get_strong_pseudoparticiple_contracted(form, verb_class)
+        return get_strong_pseudopreterite_contracted(form, verb_class)
 
     # Remove inflectional ending, if any
     form = form.split("|")[0]
     if form[-1] == "i":
         form = form[:-1]
 
-    # Determine whether the '-en' suffix should be added
-    if (verb_class == 3 and not occ("PPart:use-class-3-suffix", config)):
-        suffix = ""
-    else:
-        suffix = "+en"
+    # Class 1 verbs have two forms: one with a long vowel (ride -> rode) and one with shortened
+    # (bite -> bit)
+    if verb_class == 1:
+        if form[-1] in ["s", "f", "þ"]:
+            # Stems with final fricatives always take the long 'a'
+            vowel = "ā"
+        else:
+            vowel = even("Pret:class-1-vowel", config)
+        vowel_map[1]["ī"] = vowel # TODO: Fix this hack
 
+    if not helpers.is_vowel(form[-1], y_is_vowel=True):
+        # Add a final vowel to ensure that fricatives become voiced when appropriate. Otherwise
+        # we end up with mistakes like 'drīfan' -> *'drofe' (instead of 'drove')
+        form += "e"
 
     # Class 7 verbs don't involve vowel changes
     if verb_class == 7:
-        return form + suffix
+        return form
 
     if not verb_class in vowel_map:
         return None
@@ -94,40 +97,24 @@ def get_strong_pseudoparticiple(form, verb_class, config):
     if rarely("PPart:verners-law", config):
         form = apply_verner(form)
 
-    return form + suffix
+    return form
 
 def is_contracted(form):
     return form[-2:] in ["on", "ōn"] or form[-4:] == "ē|an"
 
 # Get a pseudoparticiple for a verb in a contracted form (e.g. 'lēon', 'þēon')
-def get_strong_pseudoparticiple_contracted(form, verb_class):
+def get_strong_pseudopreterite_contracted(form, verb_class):
     if verb_class == "weak":
         return form[0:-2]
+    elif form[-4:] == "ē|on":
+        return None
 
-    if form[-4:] in ["ē|on", "ē|an"]:
+    if form[-4:] == "ē|an":
         stem = form[0:-4]
     elif form[-2:] in ["on", "ōn"]:
         stem = form[0:-3]
 
-    # Contracted forms in '-ēon' formerly ended in -'han'. The 'h' was later elided, but
-    # changed to 'g' in the past participle under Verner's Law.
-    if verb_class in [1, 5]:
-        # TODO: Handle cases where class 1 verbs are given class 2-style endings, as in 'tēon' -> 'togen'
-        return stem + "iġ+en"
-    elif verb_class == 2:
-        return stem + "og+en"
-    elif verb_class == 6:
-        # Class 6 strong verbs in '-ēan' show various participle forms: '-agen', '-æġen', '-eġen'.
-        # Of these, '-agen' seems to be the most regular for its class, but I believe '-eġen' best
-        # represents reflexes in modern English.
-        return stem + "eġ+en"
-    elif verb_class == 7:
-        # Also appeared as '-ongen' in OE
-        # HACK: '-æng' spelling is constructed, with intent of consistently giving '-ang' forms in MnE.
-        # TODO: Find a more elegant way to do this.
-        return stem + "æng+en"
-    else:
-        return None
+    return None
 
 # Verner's Law ==================================================
 
