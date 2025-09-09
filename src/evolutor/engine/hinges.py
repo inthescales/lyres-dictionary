@@ -47,6 +47,7 @@ def hinge(id, odds, config):
         "Orth:uːn->ow/ou": [["ow", "ou"], "ow"],
         "Orth:uːr->ou/owe": [["ou", "owe"], "ou"],
         "Pret:class-1-vowel": [["ā", "i"], "ā"],
+        "Pret:class-3a-vowel": [["a", "u"], "a"],
         "PPart:use-strong": [[True, False], True],
         "PPart:use-class-3-suffix": [[True, False], False],
         "PPart:contract-weak": [[True, False], True],

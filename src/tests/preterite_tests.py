@@ -51,4 +51,72 @@ class PreteriteTests(unittest.TestCase):
         check("bīt|an", 1, "bit", overrides=[["Pret:class-1-vowel", "i"]])
         check("slīd|an", 1, "slid", overrides=[["Pret:class-1-vowel", "i"]])
 
+        # Class 2
+
+        # As class 4
+
+        # check("frēos|an", 2, "froze") # TODO: Need a way to spell with a 'z' by analogy with lemma
+        check("ċēos|an", 2, "chose")
+        check("clēof|an", 2, "clove")
+
+        # As class 7
+
+        check("flēog|an", 2, "flew")
+
+        # Class 3 — i + m/n
+
+        check("be-ginn|an", 3, "began")
+        check("drinc|an", 3, "drank")
+        check("sing|an", 3, "sang")
+        check("swimm|an", 3, "swam")
+
+        # -nd ----
+
+        check("find|an", 3, "found")
+        check("grind|an", 3, "ground")
+
+        # Class 4 — e + nasal/liquid
+
+        check("ber|an", 4, "bore")
+        check("stel|an", 4, "stole")
+        check("ter|an", 4, "tore")
+
+        check("brec|an", 4, "broke") # Assimilated from class 5
+
+        # Class 5 — e + other
+
+        check("bidd|an", 5, "bade")
+        check("et|an", 5, "ate")
+        check("liċġ|an", 5, "lay")
+
+        # Some class 5 verbs use class 4 preterite forms
+
+        check("spec|an", 4, "spoke")
+        check("wef|an", 4, "wove")
+        # check("tred|an", 4, "trode") # This form was attested as late as the 19th century. Don't know why the vowel is short now.
+
+        # Class 6 — various
+
+        check("drag|an", 6, "drew")
+        check("slē|an", 6, "slew")
+        check("for-sac|an", 6, "forsook")
+        check("sweri|an", 6, "swore")
+
+        # Class 7 — -ow et al.
+
+        # -ow
+
+        check("grōw|an", 7, "grew")
+        check("cnāw|an", 7, "knew")
+
+        # contracted in -ōn
+
+        # check("h|ōn", 7, "hung") # TODO: Fix this, 'cause right now it gets hung up in evolutor.process(...)
+
+        # others
+
+        # De-gemination in participles for clasess 5 and 6 -----------------------------
+
+        check("liċġ|an", 5, "lay")
+
         return [total, failures]

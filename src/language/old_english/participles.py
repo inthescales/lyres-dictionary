@@ -63,7 +63,6 @@ def get_strong_pseudoparticiple(form, verb_class, config):
     else:
         suffix = "+en"
 
-
     # Class 7 verbs don't involve vowel changes
     if verb_class == 7:
         return form + suffix
@@ -86,7 +85,7 @@ def get_strong_pseudoparticiple(form, verb_class, config):
             if len(clusters[i]) == 2:
                 if clusters[i][0] == clusters[i][1] and clusters[i][0] in orthography.consonants:
                     clusters[i] = clusters[i][0]
-                elif clusters[i][0:1] == "ċġ":
+                elif clusters[i][0:2] == "ċġ":
                     clusters[i] = "ġ"
 
     form = "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:])

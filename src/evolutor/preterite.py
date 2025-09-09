@@ -17,12 +17,14 @@ def get_preterite_form(oe_form, verb_class, config):
         if pseudopreterite == None:
             return None
         
-        # MnE preterites always use certain long vowel spellings.
+        # MnE preterites always resolve certain hinges in consistent ways.
         # Override, unless the config already does
-        if not any([over[0] == "Orth:ɔː->oa/oCV" for over in config.overrides]):
-            new_config = copy.deepcopy(config)
-            new_config.overrides = [["Orth:ɔː->oa/oCV", "oCV"]]
-            config = new_config
+        overrides = [["Orth:ɔː->oa/oCV", "oCV"], ["HL:ng", False], ["Orth:ɛ/iu->ew/ue", "ew"]]
+        new_config = copy.deepcopy(config)
+        for over in overrides:
+            if not any([conf_over[0] == over[0] for conf_over in config.overrides]):
+                new_config.overrides.append(over)
+        config = new_config
 
         preterite_form = evolutor.oe_form_to_ne_form(pseudopreterite, config)
     else:
