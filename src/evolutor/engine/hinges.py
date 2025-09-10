@@ -46,9 +46,9 @@ def hinge(id, odds, config):
         "Orth:ɔː->oa/oCV": [["oa", "oCV"], "oa"],
         "Orth:uːn->ow/ou": [["ow", "ou"], "ow"],
         "Orth:uːr->ou/owe": [["ou", "owe"], "ou"],
+        "PPart:use-strong": [[True, False], True], # TODO: Rename as this is used for preterite also
         "Pret:class-1-vowel": [["ā", "i"], "ā"],
         "Pret:class-3a-vowel": [["a", "u"], "a"],
-        "PPart:use-strong": [[True, False], True],
         "PPart:use-class-3-suffix": [[True, False], False],
         "PPart:contract-weak": [[True, False], True],
         "PPart:verners-law": [[True, False], False]
