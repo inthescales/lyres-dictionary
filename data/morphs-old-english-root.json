@@ -164,7 +164,7 @@
         "origin": "old-english"
     }, {
         "key": "ǣrendian",
-        "form-raw": "ǣrendi|an",
+        "form-oe": "ǣrendi|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": "negotiate",
@@ -173,14 +173,14 @@
         "notes": "Wanted the gloss 'negotiate for' but the preposition makes it come out funny. Simplifying for now."
     }, {
         "key": "ærn",
-        "form-raw": "ærn",
+        "form-oe": "ærn",
         "type": "noun",
         "gloss": "house",
         "tags": ["count", "concrete", "man-made", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ǣrnan",
-        "form-raw": "ǣrn|an",
+        "form-oe": "ǣrn|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["gallop", "run"],
@@ -189,23 +189,30 @@
         "notes": "This was in Bright, but I can't find it in Bosworth or Wiktionary"
     }, {
         "key": "ǣs",
-        "form-raw": "ǣs",
+        "form-oe": "ǣs",
         "type": "noun",
         "gloss": ["prey", "carrion"],
         "tags": ["mass", "concrete", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "æsċ",
-        "form-raw": "æsċ",
-        "form-canon": "ash",
+        "form-oe": {
+            "form": "æsċ",
+            "canon": "ash"
+        },
         "type": "noun",
         "gloss": "ash [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree"],
         "origin": "old-english"
     }, {
         "key": "æsċe",
-        "form-raw": "æsċe",
-        "form-raw-alt": ["asċe"],
+        "form-oe": {
+            "main": {
+                "form": "æsċe",
+                "canon": "ash"
+            },
+            "alt": ["asċe"]
+        },
         "form-canon": "ash",
         "type": "noun",
         "gloss": "ash",
@@ -213,8 +220,10 @@
         "origin": "old-english"
     }, {
         "key": "æsp",
-        "form-raw": "æspe",
-        "form-canon": "asp",
+        "form-oe": {
+            "form": "æspe",
+            "canon": "asp"
+        },
         "type": "noun",
         "gloss": "asp [tree]",
         "tags": ["count", "concrete", "living", "tree"],
@@ -222,7 +231,7 @@
         "notes": "Alternate form 'æps'"
     }, {
         "key": "æstel",
-        "form-raw": "æstel",
+        "form-oe": "æstel",
         "type": "noun",
         "gloss": "bookmark",
         "gloss-tool": "[mark] a place in a text",
@@ -230,12 +239,12 @@
         "origin": "old-english"
     }, {
         "key": "æþele",
-        "form-raw": "æþele",
+        "form-oe": "æþele",
         "type": "adj",
-        "gloss": "noble",
-        "gloss-alt": ["glourious"],
+        "gloss": "noble, excellent",
         "tags": ["speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Some other related senses, see Hall-concise"
     }, {
         "key": "abbod",
         "form-raw": "abbod",

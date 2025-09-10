@@ -243,6 +243,8 @@ def default_oblique(lemma):
 def paradigm_from_string(string, morph_type):
 	if morph_type in ["noun", "adj"]:
 		return Paradigm_OE_B(string, default_oblique(string))
+	elif morph_type == "verb":
+		return Paradigm_OE_V(string, None, None)
 	else:
 		Logger.error("cannot generate paradigm from string with type " + str(morph_type))
 
