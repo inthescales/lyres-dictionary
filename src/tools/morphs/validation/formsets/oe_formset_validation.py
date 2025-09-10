@@ -40,6 +40,7 @@ schema_paradigm_verb = Dict({
 })
 schema_canonset = Any([
 		One_Or_More(String()),
+		One_Or_More(Schema("paradigm-mne")),
 		Dict({
 			"form": One_Or_More(Schema("paradigm-mne")),
 			"dialect-source": Opt(String(ValueSet("middle english dialect", dialects.middle_english))),

@@ -113,7 +113,7 @@ def read_verb(value):
 	if "past" in value:
 		past = value["past"]
 	else:
-		past = default_past(lemma)
+		past = mne_morphology.default_past(lemma)
 
 	if "past-participle" in value:
 		ppart = value["past-participle"]

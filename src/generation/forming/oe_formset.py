@@ -224,7 +224,7 @@ def read_canonset_dict(value, morph_type):
 		else:
 			dialect_range = [value["dialect-range"]]
 	else:
-		source = default_mne_dialect
+		dialect_range = [default_mne_dialect]
 
 	return Canonset(form, source, dialect_range)
 

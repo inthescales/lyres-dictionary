@@ -317,9 +317,13 @@
         "origin": "old-english"
     }, {
         "key": "āgan",
-        "form-raw": "āg|an",
-        "form-canon": "own",
-        "form-participle-canon": ["owned"],
+        "form-oe": {
+            "form": "āg|an",
+            "canon": {
+                "lemma": "own",
+                "past-participle": ["owned"]
+            }
+        },
         "type": "verb",
         "verb-class": "preterite-present",
         "gloss": "own",
@@ -620,9 +624,13 @@
         "notes": "TODO: unpack these meanings for semantics like poison/liquid. Alt. meanings 'murderer', 'cause of death'"
     }, {
         "key": "bannan",
-        "form-raw": "bann|an",
-        "form-canon": "ban",
-        "form-participle-canon": ["banned"],
+        "form-oe": {
+            "form": "bann|an",
+            "canon": {
+                "lemma": "ban",
+                "past-participle": ["banned"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "[summon], [gather] together",
@@ -661,9 +669,13 @@
         "origin": "old-english"
     }, {
         "key": "baþian",
-        "form-raw": "baþi|an",
-        "form-canon": "bathe",
-        "form-participle-canon": ["bathed"],
+        "form-oe": {
+            "form": "baþi|an",
+            "canon": {
+                "lemma": "bathe",
+                "past-participle": ["bathed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "bathe",
@@ -734,9 +746,13 @@
         "origin": "old-english"
     }, {
         "key": "bēatan",
-        "form-raw": "bēat|an",
-        "form-canon": "beat",
-        "form-participle-canon": ["beaten"],
+        "form-oe": {
+            "form": "bēat|an",
+            "canon": {
+                "lemma": "beat",
+                "past-participle": ["beaten"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "beat",
@@ -855,9 +871,13 @@
         "origin": "old-english"
     }, {
         "key": "bēodan",
-        "form-raw": "bēod|an",
-        "form-canon": "bede",
-        "form-participle-canon": ["bode", "boden"],
+        "form-oe": {
+            "form": "bēod|an",
+            "canon": {
+                "lemma": "bede",
+                "past-participle": ["bode", "boden"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["pray", "request"],
@@ -931,9 +951,13 @@
         "origin": "old-english"
     }, {
         "key": "beran",
-        "form-raw": "ber|an",
-        "form-canon": "bear",
-        "form-participle-canon": ["born", "borne", "beared"],
+        "form-oe": {
+            "form": "ber|an",
+            "canon": {
+                "lemma": "bear",
+                "past-participle": ["born", "borne", "beared"]
+            }
+        },
         "type": "verb",
         "verb-class": 4,
         "gloss": "bear",
@@ -951,9 +975,13 @@
         "notes": "Chosen form is Anglian, alternates WS"
     }, {
         "key": "berstan",
-        "form-raw": "berst|an",
-        "form-canon": "burst",
-        "form-participle-canon": ["burst"],
+        "form-oe": {
+            "form": "berst|an",
+            "canon": {
+                "lemma": "burst",
+                "past-participle": ["burst"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "burst",
@@ -996,9 +1024,13 @@
         "notes": "Not sure if alt. form may have been more common in OE, but based on the 'ċġ' -> /j/ evolution I'm guessing the chosen form influence MnE more."
     }, {
         "key": "bīdan",
-        "form-raw": "bīd|an",
-        "form-canon": "bide",
-        "form-participle-canon": ["bidden", "bided"],
+        "form-oe": {
+            "form": "bīd|an",
+            "canon": {
+                "lemma": "bide",
+                "past-participle": ["bidden", "bided"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "[wait] for",
@@ -1006,9 +1038,13 @@
         "origin": "old-english"
     }, {
         "key": "biddan",
-        "form-raw": "bidd|an",
-        "form-canon": "bid",
-        "form-participle-canon": ["bidden"],
+        "form-oe": {
+            "form": "bidd|an",
+            "canon": {
+                "lemma": "bid",
+                "past-participle": ["bidden"]
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": "[ask] for",
@@ -1032,9 +1068,13 @@
         "origin": "old-english"
     }, {
         "key": "bindan",
-        "form-raw": "bind|an",
-        "form-canon": "bind",
-        "form-participle-canon": ["bound", "binded"],
+        "form-oe": {
+            "form": "bind|an",
+            "canon": {
+                "lemma": "bind",
+                "past-participle": ["bound", "binded"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "bind",
@@ -1096,9 +1136,13 @@
         "origin": "old-english"
     }, {
         "key": "blinnan",
-        "form-raw": "blinn|an",
-        "form-canon": "blin",
-        "form-participle-canon": ["blun", "blinned"],
+        "form-oe": {
+            "form": "blinn|an",
+            "canon": {
+                "lemma": "blin",
+                "past-participle": ["blun", "blinned"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "[cease] or [abate]",
@@ -1131,9 +1175,13 @@
         "origin": "old-english"
     }, {
         "key": "brecan",
-        "form-raw": "brec|an",
-        "form-canon": "break",
-        "form-participle-canon": ["broken"],
+        "form-oe": {
+            "form": "brec|an",
+            "canon": {
+                "lemma": "break",
+                "past-participle": ["broken"]
+            }
+        },
         "type": "verb",
         "verb-class": 4,
         "gloss": "break",
@@ -1141,9 +1189,13 @@
         "origin": "old-english"
     }, {
         "key": "breġdan",
-        "form-raw": "breġd|an",
-        "form-canon": "braid",
-        "form-participle-canon": ["braided"],
+        "form-oe": {
+            "form": "breġd|an",
+            "canon": {
+                "lemma": "braid",
+                "past-participle": ["braided"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "braid",
@@ -1216,9 +1268,13 @@
         "origin": "old-english"
     }, {
         "key": "brūcan",
-        "form-raw": "brūc|an",
-        "form-canon": "brook",
-        "form-participle-canon": ["brooked"],
+        "form-oe": {
+            "form": "brūc|an",
+            "canon": {
+                "lemma": "brook",
+                "past-participle": ["brooked"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "[endure] or [tolerate]",
@@ -1303,9 +1359,13 @@
         "origin": "old-english"
     }, {
         "key": "byrġan",
-        "form-raw": "byrġ|an",
-        "form-canon": "bury",
-        "form-participle-canon": ["buried"],
+        "form-oe": {
+            "form": "byrġ|an",
+            "canon": {
+                "lemma": "bury",
+                "past-participle": ["buried"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "bury",
@@ -1481,9 +1541,13 @@
         "notes": "Is related to MnE 'chide', but sense is different enough I'll leave it speculative"
     }, {
         "key": "ċīdan",
-        "form-raw": "ċīd|an",
-        "form-canon": "chide",
-        "form-participle-canon": ["chided"],
+        "form-oe": {
+            "form": "ċīd|an",
+            "canon": {
+                "lemma": "chide",
+                "past-participle": ["chided"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[scold], [find] fault",
@@ -1696,9 +1760,13 @@
         "origin": "old-english"
     }, {
         "key": "cwacian",
-        "form-raw": "cwaci|an",
-        "form-canon": "quake",
-        "form-participle-canon": ["quaked"],
+        "form-oe": {
+            "form": "cwaci|an",
+            "canon": {
+                "lemma": "quake",
+                "past-participle": ["quaked"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[shake] or [quiver]",
@@ -1735,9 +1803,13 @@
         "origin": "old-english"
     }, {
         "key": "cwelan",
-        "form-raw": "cwel|an",
-        "form-canon": "queal",
-        "form-participle-canon": ["quealed"],
+        "form-oe": {
+            "form": "cwel|an",
+            "canon": {
+                "lemma": "queal",
+                "past-participle": ["quealed"]
+            }
+        },
         "type": "verb",
         "verb-class": 4,
         "gloss": "faint",
@@ -1745,9 +1817,13 @@
         "origin": "old-english"
     }, {
         "key": "cwellan",
-        "form-raw": "cwell|an",
-        "form-canon": "quell",
-        "form-participle-canon": ["quelled"],
+        "form-oe": {
+            "form": "cwell|an",
+            "canon": {
+                "lemma": "quell",
+                "past-participle": ["quelled"]
+            }
+        },
         "type": "verb",
         "verb-class": 4,
         "gloss": "[subdue] or [silence]",
@@ -1756,9 +1832,13 @@
         "origin": "old-english"
     }, {
         "key": "cwem|an",
-        "form-raw": "cwem|an",
-        "form-canon": "queme",
-        "form-participle-canon": ["quemed"],
+        "form-oe": {
+            "form": "cwem|an",
+            "canon": {
+                "lemma": "queme",
+                "past-participle": ["quemed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[please] or [satisfy]",
@@ -1796,9 +1876,13 @@
         "notes": "Original sense of 'woman' generally"
     }, {
         "key": "cweþan",
-        "form-raw": "cweþ|an",
-        "form-canon": "quethe",
-        "form-participle-canon": ["quoth", "quethen", "quethed"],
+        "form-oe": {
+            "form": "cweþ|an",
+            "canon": {
+                "lemma": "quethe",
+                "past-participle": ["quoth", "quethen", "quethed"]
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": "say",
@@ -1869,9 +1953,13 @@
         "notes": "Alt. meanings I don't feel like including right now. 'gendered' tag just because I don't want to add gender suffixes."
     }, {
         "key": "cȳþan",
-        "form-raw": "cȳþ|an",
-        "form-canon": "kithe",
-        "form-participle-canon": ["kithed"],
+        "form-oe": {
+            "form": "cȳþ|an",
+            "canon": {
+                "lemma": "kithe",
+                "past-participle": ["kithed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[announce], [make] known",
@@ -1930,9 +2018,13 @@
         "origin": "old-english"
     }, {
         "key": "dēman",
-        "form-raw": "dēm|an",
-        "form-canon": "deem",
-        "form-participle-canon": ["deemed"],
+        "form-oe": {
+            "form": "dēm|an",
+            "canon": {
+                "lemma": "deem",
+                "past-participle": ["deemed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "judge",
@@ -2034,9 +2126,13 @@
         "notes": "Combining the modern sense with OE glosses of unclear relation. TODO: Separate senses for tagging 'man-made', 'mind-state', 'activity'"
     }, {
         "key": "drenċan",
-        "form-raw": "drenċ|an",
-        "form-canon": "drench",
-        "form-participle-canon": ["drenched"],
+        "form-oe": {
+            "form": "drenċ|an",
+            "canon": {
+                "lemma": "drench",
+                "past-participle": ["drenched"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "soak",
@@ -2045,9 +2141,13 @@
         "origin": "old-english"
     }, {
         "key": "drēogan",
-        "form-raw": "drēog|an",
-        "form-canon": "dree",
-        "form-participle-canon": ["dreed"],
+        "form-oe": {
+            "form": "drēog|an",
+            "canon": {
+                "lemma": "dree",
+                "past-participle": ["dreed"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["[perform] a duty", "[endure] or [undergo]"],
@@ -2055,9 +2155,13 @@
         "origin": "old-english"
     }, {
         "key": "drēopan",
-        "form-raw": "drēop|an",
-        "form-canon": "dreep",
-        "form-participle-canon": ["dreeped"],
+        "form-oe": {
+            "form": "drēop|an",
+            "canon": {
+                "lemma": "dreep",
+                "past-participle": ["dreeped"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "[fall] in drops, [drip]",
@@ -2077,9 +2181,13 @@
         "origin": "old-english"
     }, {
         "key": "drincan",
-        "form-raw": "drinc|an",
-        "form-canon": "drink",
-        "form-participle-canon": ["drunk", "drunken", "drank", "drinked"],
+        "form-oe": {
+            "form": "drinc|an",
+            "canon": {
+                "lemma": "drink",
+                "past-participle": ["drunk", "drunken", "drank", "drinked"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "drink",
@@ -2146,9 +2254,13 @@
         "origin": "old-english"
     }, {
         "key": "dugan",
-        "form-raw": "dug|an",
-        "form-canon": "dow",
-        "form-participle-canon": ["dowed", "dought"],
+        "form-oe": {
+            "form": "dug|an",
+            "canon": {
+                "lemma": "dow",
+                "past-participle": ["dowed", "dought"]
+            }
+        },
         "type": "verb",
         "verb-class": "preterite-present",
         "gloss": "[be] of use or [have] value",
@@ -2227,9 +2339,13 @@
         "origin": "old-english"
     }, {
         "key": "dwīnan",
-        "form-raw": "dwīn|an",
-        "form-canon": "dwine",
-        "form-participle-canon": ["dwined"],
+        "form-oe": {
+            "form": "dwīn|an",
+            "canon": {
+                "lemma": "dwine",
+                "past-participle": ["dwined"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[decline] or [fade]", "[waste] away"],
@@ -2339,9 +2455,13 @@
         "origin": "old-english"
     }, {
         "key": "ebbian",
-        "form-raw": "ebbi|an",
-        "form-canon": "ebb",
-        "form-participle-canon": ["ebbed"],
+        "form-oe": {
+            "form": "ebbi|an",
+            "canon": {
+                "lemma": "ebb",
+                "past-participle": ["ebbed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "ebb",
@@ -2369,9 +2489,13 @@
         "notes": "'blade' gloss is my extension, but fits OE usage fairly well"
     }, {
         "key": "eċġan",
-        "form-raw": "eċġ|an",
-        "form-canon": "edge",
-        "form-participle-canon": ["edged"],
+        "form-oe": {
+            "form": "eċġ|an",
+            "canon": {
+                "lemma": "edge",
+                "past-participle": ["edged"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "sharpen",
@@ -2615,9 +2739,13 @@
         "notes": "This is my extension"
     }, {
         "key": "faran",
-        "form-raw": "far|an",
-        "form-canon": "fare",
-        "form-participle-canon": ["fared", "faren"],
+        "form-oe": {
+            "form": "far|an",
+            "canon": {
+                "lemma": "fare",
+                "past-participle": ["fared", "faren"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "travel",
@@ -2636,9 +2764,13 @@
         "notes": "Also 'travel companions', 'followers of a teacher', 'vehicle'"
     }, {
         "key": "feallan",
-        "form-raw": "feall|an",
-        "form-canon": "fall",
-        "form-participle-canon": ["fallen", "fell"],
+        "form-oe": {
+            "form": "feall|an",
+            "canon": {
+                "lemma": "fall",
+                "past-participle": ["fallen", "fell"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "fall",
@@ -2673,9 +2805,13 @@
         "notes": "Unable to find class for this. Will assume it is weak, as it may be related to 'feċċan'"
     }, {
         "key": "fēdan",
-        "form-raw": "fēd|an",
-        "form-canon": "feed",
-        "form-participle-canon": ["fed"],
+        "form-oe": {
+            "form": "fēd|an",
+            "canon": {
+                "lemma": "feed",
+                "past-participle": ["fed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "feed",
@@ -2714,9 +2850,13 @@
         "notes": "Form influenced by Anglo-French 'fee'. Alt. meaning 'money', but needs countability distinction"
     }, {
         "key": "feohtan",
-        "form-raw": "feoht|an",
-        "form-canon": "fight",
-        "form-participle-canon": ["fought"],
+        "form-oe": {
+            "form": "feoht|an",
+            "canon": {
+                "lemma": "fight",
+                "past-participle": ["fought"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "fight",
@@ -2762,9 +2902,13 @@
         "notes": "er -> re metathesis occurred by middle english"
     }, {
         "key": "fēsian",
-        "form-raw": "fēsi|an",
-        "form-canon": "feeze",
-        "form-participle-canon": ["feezed"],
+        "form-oe": {
+            "form": "fēsi|an",
+            "canon": {
+                "lemma": "feeze",
+                "past-participle": ["feezed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["frighten", "[frighten] away"],
@@ -2846,9 +2990,13 @@
         "notes": "Chosen form is, I believe, Anglian (shows smoothing)."
     }, {
         "key": "flēon",
-        "form-raw": "flē|on",
-        "form-canon": "flee",
-        "form-participle-canon": ["fled", "flown"],
+        "form-oe": {
+            "form": "flē|on",
+            "canon": {
+                "lemma": "flee",
+                "past-participle": ["fled", "flown"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "flee",
@@ -2886,9 +3034,13 @@
         "notes": "Also senses 'fighting', 'contest', but I want to have the 'man-made' tag for now."
     }, {
         "key": "flītan",
-        "form-raw": "flīt|an",
-        "form-canon": "flite",
-        "form-participle-canon": ["flitten", "flited"],
+        "form-oe": {
+            "form": "flīt|an",
+            "canon": {
+                "lemma": "flite",
+                "past-participle": ["flitten", "flited"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[strive] or [contend]", "quarrel", "debate", "scold", "complain"],
@@ -2951,9 +3103,13 @@
         "notes": "Consider making 'singleton'?"
     }, {
         "key": "folgian",
-        "form-raw": "folg|an",
-        "form-canon": "follow",
-        "form-participle-canon": ["followed"],
+        "form-oe": {
+            "form": "folg|an",
+            "canon": {
+                "lemma": "follow",
+                "past-participle": ["followed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "follow",
@@ -2961,9 +3117,13 @@
         "origin": "old-english"
     }, {
         "key": "fōn",
-        "form-raw": "f|ōn",
-        "form-canon": "fang",
-        "form-participle-canon": ["fanged"],
+        "form-oe": {
+            "form": "f|ōn",
+            "canon": {
+                "lemma": "fang",
+                "past-participle": ["fanged"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "[sieze] or [capture]",
@@ -2979,9 +3139,13 @@
         "notes": "Various meanings. This gloss captures the general thrust."
     }, {
         "key": "framian",
-        "form-raw": "frami|an",
-        "form-canon": "frame",
-        "form-participle-canon": ["framed"],
+        "form-oe": {
+            "form": "frami|an",
+            "canon": {
+                "lemma": "frame",
+                "past-participle": ["framed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[set] in a frame or border",
@@ -3054,9 +3218,13 @@
         "origin": "old-english"
     }, {
         "key": "frēosan",
-        "form-raw": "frēos|an",
-        "form-canon": "freeze",
-        "form-participle-canon": ["frozen"],
+        "form-oe": {
+            "form": "frēos|an",
+            "canon": {
+                "lemma": "freeze",
+                "past-participle": ["frozen"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "freeze",
@@ -3132,9 +3300,13 @@
         "origin": "old-english"
     }, {
         "key": "fyllan",
-        "form-raw": "fyll|an",
-        "form-canon": "fill",
-        "form-participle-canon": ["filled"],
+        "form-oe": {
+            "form": "fyll|an",
+            "canon": {
+                "lemma": "fill",
+                "past-participle": ["filled"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "fill",
@@ -3191,9 +3363,13 @@
         "origin": "old-english"
     }, {
         "key": "galan",
-        "form-raw": "gal|an",
-        "form-canon": "gale",
-        "form-participle-canon": ["galen", "galed"],
+        "form-oe": {
+            "form": "gal|an",
+            "canon": {
+                "lemma": "gale",
+                "past-participle": ["galen", "galed"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": ["sing", "[cry] or [scream]", "call", "enchant", "[cast] (of spells)"],
@@ -3260,9 +3436,13 @@
         "notes": "Straddles modern usage"
     }, {
         "key": "gangan",
-        "form-raw": "gang|an",
-        "form-canon": "gang",
-        "form-participle-canon": ["ganged"],
+        "form-oe": {
+            "form": "gang|an",
+            "canon": {
+                "lemma": "gang",
+                "past-participle": ["ganged"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "go",
@@ -3289,9 +3469,13 @@
         "origin": "old-english"
     }, {
         "key": "ġe-bǣran",
-        "form-raw": "ġe-bǣr|an",
-        "form-canon": "bear",
-        "form-participle-canon": ["born", "borne"],
+        "form-oe": {
+            "form": "ġe-bǣr|an",
+            "canon": {
+                "lemma": "bear",
+                "past-participle": ["born", "borne"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[behave] or [conduct] (oneself)",
@@ -3429,9 +3613,13 @@
         "origin": "old-english"
     }, {
         "key": "ġeornian",
-        "form-raw": "ġeorni|an",
-        "form-canon": "yearn",
-        "form-participle-canon": ["yearned"],
+        "form-oe": {
+            "form": "ġeorni|an",
+            "canon": {
+                "lemma": "yearn",
+                "past-participle": ["yearned"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "yearn",
@@ -3514,9 +3702,13 @@
         "origin": "old-english"
     }, {
         "key": "ġiellan",
-        "form-raw": "ġiell|an",
-        "form-canon": "yell",
-        "form-participle-canon": ["yelled"],
+        "form-oe": {
+            "form": "ġiell|an",
+            "canon": {
+                "lemma": "yell",
+                "past-participle": ["yelled"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "yell",
@@ -3678,9 +3870,13 @@
         "origin": "old-english"
     }, {
         "key": "grafan",
-        "form-raw": "graf|an",
-        "form-canon": "grave",
-        "form-participle-canon": ["graven"],
+        "form-oe": {
+            "form": "graf|an",
+            "canon": {
+                "lemma": "grave",
+                "past-participle": ["graven"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": ["dig", "[carve] or [cut]", "engrave", "[shape] by carving or chiseling", "[entomb], [bury]"],
@@ -3730,9 +3926,13 @@
         "notes": "Fix tags with nightmare with senses"
     }, {
         "key": "grimman",
-        "form-raw": "grimm|an",
-        "form-canon": "grim",
-        "form-participle-canon": ["grimmed"],
+        "form-oe": {
+            "form": "grimm|an",
+            "canon": {
+                "lemma": "grim",
+                "past-participle": ["grimmed"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["[be] angry", "[look] fierce"],
@@ -3932,9 +4132,13 @@
         "notes": "'w' added to disambiguate from 'hole'"
     }, {
         "key": "haldan",
-        "form-raw": "hald|an",
-        "form-canon": "hold",
-        "form-participle-canon": ["held"],
+        "form-oe": {
+            "form": "hald|an",
+            "canon": {
+                "lemma": "hold",
+                "past-participle": ["held"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "hold",
@@ -3985,9 +4189,13 @@
         "origin": "old-english"
     }, {
         "key": "hātan-intransitive",
-        "form-raw": "hāt|an",
-        "form-canon": "hote",
-        "form-participle-canon": ["hoten"],
+        "form-oe": {
+            "form": "hāt|an",
+            "canon": {
+                "lemma": "hote",
+                "past-participle": ["hoten"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "[be] named",
@@ -3995,9 +4203,13 @@
         "origin": "old-english"
     }, {
         "key": "hātan-transitive",
-        "form-raw": "hāt|an",
-        "form-canon": "hote",
-        "form-participle-canon": ["hoten"],
+        "form-oe": {
+            "form": "hāt|an",
+            "canon": {
+                "lemma": "hote",
+                "past-participle": ["hoten"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": ["command", "name"],
@@ -4014,9 +4226,13 @@
         "origin": "old-english"
     }, {
         "key": "hēawan",
-        "form-raw": "hēaw|an",
-        "form-canon": "hew",
-        "form-participle-canon": ["hewn", "hewed"],
+        "form-oe": {
+            "form": "hēaw|an",
+            "canon": {
+                "lemma": "hew",
+                "past-participle": ["hewn", "hewed"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "[cut] down",
@@ -4132,9 +4348,13 @@
         "origin": "old-english"
     }, {
         "key": "hladan",
-        "form-raw": "hlad|an",
-        "form-canon": "lade",
-        "form-participle-canon": ["laden", "laded"],
+        "form-oe": {
+            "form": "hlad|an",
+            "canon": {
+                "lemma": "lade",
+                "past-participle": ["laden", "laded"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": ["[fill] or [load]", "[load] up", "[weigh] down or [burden]"],
@@ -4142,9 +4362,13 @@
         "origin": "old-english"
     }, {
         "key": "hlēapan",
-        "form-raw": "hlēap|an",
-        "form-canon": "leap",
-        "form-participle-canon": ["leaped", "leapt"],
+        "form-oe": {
+            "form": "hlēap|an",
+            "canon": {
+                "lemma": "leap",
+                "past-participle": ["leaped", "leapt"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "leap",
@@ -4223,9 +4447,13 @@
         "notes": "Bosworth has the initial 'o' as long, while OED says 'the o is of doubtful length, but probably short'. Going with short for variety, since long produces 'hooker'"
     }, {
         "key": "hogian",
-        "form-raw": "hogi|an",
-        "form-canon": "how",
-        "form-participle-canon": ["howed"],
+        "form-oe": {
+            "form": "hogi|an",
+            "canon": {
+                "lemma": "how",
+                "past-participle": ["howed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[think] about, [consider]"],
@@ -4273,9 +4501,13 @@
         "origin": "old-english"
     }, {
         "key": "hōn",
-        "form-raw": "h|ōn",
-        "form-canon": "hang",
-        "form-participle-canon": ["hung", "hanged"],
+        "form-oe": {
+            "form": "h|ōn",
+            "canon": {
+                "lemma": "hang",
+                "past-participle": ["hung", "hanged"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "hang",
@@ -4482,9 +4714,13 @@
         "origin": "old-english"
     }, {
         "key": "huntian",
-        "form-raw": "hunti|an",
-        "form-canon": "hunt",
-        "form-participle-canon": ["hunted"],
+        "form-oe": {
+            "form": "hunti|an",
+            "canon": {
+                "lemma": "hunt",
+                "past-participle": ["hunted"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "hunt",
@@ -4567,9 +4803,13 @@
         "origin": "old-english"
     }, {
         "key": "hȳdan",
-        "form-raw": "hȳd|an",
-        "form-canon": "hide",
-        "form-participle-canon": ["hidden"],
+        "form-oe": {
+            "form": "hȳd|an",
+            "canon": {
+                "lemma": "hide",
+                "past-participle": ["hidden"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "hide",
@@ -4701,9 +4941,13 @@
         "origin": "old-english"
     }, {
         "key": "lǣdan",
-        "form-raw": "lǣd|an",
-        "form-canon": "lead",
-        "form-participle-canon": ["lead"],
+        "form-oe": {
+            "form": "lǣd|an",
+            "canon": {
+                "lemma": "lead",
+                "past-participle": ["lead"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "lead",
@@ -4735,9 +4979,13 @@
         "origin": "old-english"
     }, {
         "key": "lǣran",
-        "form-raw": "lǣr|an",
-        "form-canon": "lear",
-        "form-participle-canon": ["leared"],
+        "form-oe": {
+            "form": "lǣr|an",
+            "canon": {
+                "lemma": "lear",
+                "past-participle": ["leared"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "teach",
@@ -4754,9 +5002,13 @@
         "notes": "Modern word 'late' based in inflected form, thus having lengthened 'a'."
     }, {
         "key": "lǣtan",
-        "form-raw": "lǣt|an",
-        "form-canon": "let",
-        "form-participle-canon": ["let"],
+        "form-oe": {
+            "form": "lǣt|an",
+            "canon": {
+                "lemma": "let",
+                "past-participle": ["let"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "[let], [allow]",
@@ -4843,9 +5095,13 @@
         "origin": "old-english"
     }, {
         "key": "lēasian",
-        "form-raw": "lēasi|an",
-        "form-canon": "lease",
-        "form-participle-canon": ["leased"],
+        "form-oe": {
+            "form": "lēasi|an",
+            "canon": {
+                "lemma": "lease",
+                "past-participle": ["leased"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[tell] lies, [falsify]"],
@@ -4854,9 +5110,13 @@
         "notes": "needs bitransitivity"
     }, {
         "key": "leċġan",
-        "form-raw": "leċġ|an",
-        "form-canon": "lay",
-        "form-participle-canon": ["lain", "laid", "layed"],
+        "form-oe": {
+            "form": "leċġ|an",
+            "canon": {
+                "lemma": "lay",
+                "past-participle": ["lain", "laid", "layed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[put] down",
@@ -4885,9 +5145,13 @@
         "origin": "old-english"
     }, {
         "key": "lēogan",
-        "form-raw": "lēog|an",
-        "form-canon": "lie",
-        "form-participle-canon": ["lied"],
+        "form-oe": {
+            "form": "lēog|an",
+            "canon": {
+                "lemma": "lie",
+                "past-participle": ["lied"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "lie",
@@ -4931,9 +5195,13 @@
         "origin": "old-english"
     }, {
         "key": "lēosan",
-        "form-raw": "lēos|an",
-        "form-canon": "leese",
-        "form-participle-canon": ["lorn", "leesed"],
+        "form-oe": {
+            "form": "lēos|an",
+            "canon": {
+                "lemma": "leese",
+                "past-participle": ["lorn", "leesed"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "lose",
@@ -4950,9 +5218,13 @@
         "notes": "Attested form is 'leed', which seems to be a ME variation"
     }, {
         "key": "lesan",
-        "form-raw": "les|an",
-        "form-canon": "lease",
-        "form-participle-canon": ["leased"],
+        "form-oe": {
+            "form": "les|an",
+            "canon": {
+                "lemma": "lease",
+                "past-participle": ["leased"]
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": ["gather", "collect", "select"],
@@ -5016,9 +5288,13 @@
         "origin": "old-english"
     }, {
         "key": "linnan",
-        "form-raw": "linn|an",
-        "form-canon": "lin",
-        "form-participle-canon": ["linned", "lun"],
+        "form-oe": {
+            "form": "linn|an",
+            "canon": {
+                "lemma": "lin",
+                "past-participle": ["linned", "lun"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "[stop] or [cease]",
@@ -5056,9 +5332,13 @@
         "origin": "old-english"
     }, {
         "key": "lofian",
-        "form-raw": "lofi|an",
-        "form-canon": "lofe",
-        "form-participle-canon": ["lofed"],
+        "form-oe": {
+            "form": "lofi|an",
+            "canon": {
+                "lemma": "lofe",
+                "past-participle": ["lofed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "praise",
@@ -5067,9 +5347,13 @@
         "origin": "old-english"
     }, {
         "key": "losian",
-        "form-raw": "losi|an",
-        "form-canon": "lose",
-        "form-participle-canon": ["lost"],
+        "form-oe": {
+            "form": "losi|an",
+            "canon": {
+                "lemma": "lose",
+                "past-participle": ["lost"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "lose",
@@ -5098,9 +5382,13 @@
         "origin": "old-english"
     }, {
         "key": "lufian",
-        "form-raw": "lufi|an",
-        "form-canon": "love",
-        "form-participle-canon": ["loved"],
+        "form-oe": {
+            "form": "lufi|an",
+            "canon": {
+                "lemma": "love",
+                "past-participle": ["loved"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "love",
@@ -5128,9 +5416,13 @@
         "origin": "old-english"
     }, {
         "key": "lūtan",
-        "form-raw": "lūt|an",
-        "form-canon": "lout",
-        "form-participle-canon": ["louted"],
+        "form-oe": {
+            "form": "lūt|an",
+            "canon": {
+                "lemma": "lout",
+                "past-participle": ["louted"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["bow", "[bend] or [stoop]", "[make] obeisance"],
@@ -5195,9 +5487,13 @@
         "notes": "Chosen form is WS, alt. is Anglian/Kentish"
     }, {
         "key": "mǣnan",
-        "form-raw": "mǣn|an",
-        "form-canon": "mean",
-        "form-participle-canon": ["meant"],
+        "form-oe": {
+            "form": "mǣn|an",
+            "canon": {
+                "lemma": "mean",
+                "past-participle": ["meant"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "indicate",
@@ -5320,9 +5616,13 @@
         "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
     }, {
         "key": "masian",
-        "form-raw": "masi|an",
-        "form-canon": "maze",
-        "form-participle-canon": ["mazed"],
+        "form-oe": {
+            "form": "masi|an",
+            "canon": {
+                "lemma": "maze",
+                "past-participle": ["mazed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["amaze", "[confuse], [perplex]"],
@@ -5363,9 +5663,13 @@
         "origin": "old-english"
     }, {
         "key": "meltan",
-        "form-raw": "melt|an",
-        "form-canon": "melt",
-        "form-participle-canon": ["melted", "molten"],
+        "form-oe": {
+            "form": "melt|an",
+            "canon": {
+                "lemma": "melt",
+                "past-participle": ["melted", "molten"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "melt",
@@ -5699,9 +6003,13 @@
         "origin": "old-english"
     }, {
         "key": "niman",
-        "form-raw": "nim|an",
-        "form-canon": "nim",
-        "form-participle-canon": ["nimmed", "nom", "nomen", "num", "numb"],
+        "form-oe": {
+            "form": "nim|an",
+            "canon": {
+                "lemma": "nim",
+                "past-participle": ["nimmed", "nom", "nomen", "num", "numb"]
+            }
+        },
         "type": "verb",
         "verb-class": 4,
         "gloss": "take",
@@ -5775,9 +6083,13 @@
         "origin": "old-english"
     }, {
         "key": "pleġan",
-        "form-raw": "pleġ|an",
-        "form-canon": "play",
-        "form-participle-canon": ["played"],
+        "form-oe": {
+            "form": "pleġ|an",
+            "canon": {
+                "lemma": "play",
+                "past-participle": ["played"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "play",
@@ -5825,9 +6137,13 @@
         "origin": "old-english"
     }, {
         "key": "prician",
-        "form-raw": "pric|an",
-        "form-canon": "prick",
-        "form-participle-canon": ["pricked"],
+        "form-oe": {
+            "form": "pric|an",
+            "canon": {
+                "lemma": "prick",
+                "past-participle": ["pricked"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "prick",
@@ -5897,9 +6213,13 @@
         "notes": "Separated from 'rǣd' due to countability difference."
     }, {
         "key": "rǣdan",
-        "form-raw": "rǣd|an",
-        "form-canon": "rede",
-        "form-participle-canon": ["red", "redd"],
+        "form-oe": {
+            "form": "rǣd|an",
+            "canon": {
+                "lemma": "rede",
+                "past-participle": ["red", "redd"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "[advise] or [give] counsel",
@@ -5935,9 +6255,13 @@
         "origin": "old-english"
     }, {
         "key": "rǣran",
-        "form-raw": "rǣr|an",
-        "form-canon": "rear",
-        "form-participle-canon": ["reared"],
+        "form-oe": {
+            "form": "rǣr|an",
+            "canon": {
+                "lemma": "rear",
+                "past-participle": ["reared"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[raise] up",
@@ -6042,9 +6366,13 @@
         "origin": "old-english"
     }, {
         "key": "rīsan",
-        "form-raw": "rīs|an",
-        "form-canon": "rise",
-        "form-participle-canon": ["risen"],
+        "form-oe": {
+            "form": "rīs|an",
+            "canon": {
+                "lemma": "rise",
+                "past-participle": ["risen"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "rise",
@@ -6113,9 +6441,13 @@
         "origin": "old-english"
     }, {
         "key": "rūnian",
-        "form-raw": "rūn|ian",
-        "form-canon": "roun",
-        "form-participle-canon": ["rouned"],
+        "form-oe": {
+            "form": "rūn|ian",
+            "canon": {
+                "lemma": "roun",
+                "past-participle": ["rouned"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "whisper",
@@ -6214,9 +6546,13 @@
         "origin": "old-english"
     }, {
         "key": "sċieppan",
-        "form-raw": "sċiepp|an",
-        "form-canon": "shape",
-        "form-participle-canon": ["shapen", "shaped"],
+        "form-oe": {
+            "form": "sċiepp|an",
+            "canon": {
+                "lemma": "shape",
+                "past-participle": ["shapen", "shaped"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "shape",
@@ -6231,9 +6567,13 @@
         "origin": "old-english"
     }, {
         "key": "sċīnan",
-        "form-raw": "sċīn|an",
-        "form-canon": "shine",
-        "form-participle-canon": ["shone", "shined"],
+        "form-oe": {
+            "form": "sċīn|an",
+            "canon": {
+                "lemma": "shine",
+                "past-participle": ["shone", "shined"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["shine", "[give] out light"],
@@ -6258,9 +6598,13 @@
         "origin": "old-english"
     }, {
         "key": "sċrīfan",
-        "form-raw": "sċrīf|an",
-        "form-canon": "shrive",
-        "form-participle-canon": ["shriven"],
+        "form-oe": {
+            "form": "sċrīf|an",
+            "canon": {
+                "lemma": "shrive",
+                "past-participle": ["shriven"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "absolve",
@@ -6269,9 +6613,13 @@
         "origin": "old-english"
     }, {
         "key": "sċūfan",
-        "form-raw": "sċūf|an",
-        "form-canon": "shove",
-        "form-participle-canon": ["shoved"],
+        "form-oe": {
+            "form": "sċūf|an",
+            "canon": {
+                "lemma": "shove",
+                "past-participle": ["shoved"]
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "shove",
@@ -6366,9 +6714,13 @@
         "notes": "Might have used canon form 'settle', but I feel like that applies more to the verb form"
     }, {
         "key": "settan",
-        "form-raw": "sett|an",
-        "form-canon": "set",
-        "form-participle-canon": ["set"],
+        "form-oe": {
+            "form": "sett|an",
+            "canon": {
+                "lemma": "set",
+                "past-participle": ["set"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[set], [place]",
@@ -6418,9 +6770,13 @@
         "origin": "old-english"
     }, {
         "key": "singan",
-        "form-raw": "sing|an",
-        "form-canon": "sing",
-        "form-participle-canon": ["sung"],
+        "form-oe": {
+            "form": "sing|an",
+            "canon": {
+                "lemma": "sing",
+                "past-participle": ["sung"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "sing",
@@ -6451,9 +6807,13 @@
         "origin": "old-english"
     }, {
         "key": "sittan",
-        "form-raw": "sitt|an",
-        "form-canon": "sit",
-        "form-participle-canon": ["sit"],
+        "form-oe": {
+            "form": "sitt|an",
+            "canon": {
+                "lemma": "sit",
+                "past-participle": ["sit"]
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": "sit",
@@ -6500,9 +6860,13 @@
         "origin": "old-english"
     }, {
         "key": "slīfan",
-        "form-raw": "slīf|an",
-        "form-canon": "slive",
-        "form-participle-canon": ["sliven", "slived"],
+        "form-oe": {
+            "form": "slīf|an",
+            "canon": {
+                "lemma": "slive",
+                "past-participle": ["sliven", "slived"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["cut", "[cut] through", "[split] or [divide]"],
@@ -6521,9 +6885,13 @@
         "origin": "old-english"
     }, {
         "key": "slītan",
-        "form-raw": "slīt|an",
-        "form-canon": "slite",
-        "form-participle-canon": ["slit", "slitten", "slitted"],
+        "form-oe": {
+            "form": "slīt|an",
+            "canon": {
+                "lemma": "slite",
+                "past-participle": ["slit", "slitten", "slitted"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["tear", "[rend] (of garments)", "[split] or [divide]", "[wear] out"],
@@ -6596,9 +6964,13 @@
         "origin": "old-english"
     }, {
         "key": "smiþian",
-        "form-raw": "smiþi|an",
-        "form-canon": "smith",
-        "form-participle-canon": ["smithed"],
+        "form-oe": {
+            "form": "smiþi|an",
+            "canon": {
+                "lemma": "smith",
+                "past-participle": ["smithed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[forge] or [make] from metal",
@@ -6760,9 +7132,13 @@
         "notes": "'rare' instead of 'speculative' because I want it to appear with affixes."
     }, {
         "key": "spellian",
-        "form-raw": "spelli|an",
-        "form-canon": "spell",
-        "form-participle-canon": ["spelled"],
+        "form-oe": {
+            "form": "spelli|an",
+            "canon": {
+                "lemma": "spell",
+                "past-participle": ["spelled"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "spell",
@@ -6771,9 +7147,13 @@
         "origin": "old-english"
     }, {
         "key": "spendan",
-        "form-raw": "spend|an",
-        "form-canon": "spend",
-        "form-participle-canon": ["spent"],
+        "form-oe": {
+            "form": "spend|an",
+            "canon": {
+                "lemma": "spend",
+                "past-participle": ["spent"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "spend",
@@ -6791,9 +7171,13 @@
         "origin": "old-english"
     }, {
         "key": "springan",
-        "form-raw": "spring|an",
-        "form-canon": "spring",
-        "form-participle-canon": ["sprung"],
+        "form-oe": {
+            "form": "spring|an",
+            "canon": {
+                "lemma": "spring",
+                "past-participle": ["sprung"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["spring", "leap", "[burst] forth (as a fluid)"],
@@ -6844,9 +7228,13 @@
         "origin": "old-english"
     }, {
         "key": "standan",
-        "form-raw": "stand|an",
-        "form-canon": "stand",
-        "form-participle-canon": ["stood"],
+        "form-oe": {
+            "form": "stand|an",
+            "canon": {
+                "lemma": "stand",
+                "past-participle": ["stood"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "stand",
@@ -6863,9 +7251,13 @@
         "origin": "old-english"
     }, {
         "key": "stelan",
-        "form-raw": "stel|an",
-        "form-canon": "steal",
-        "form-participle-canon": ["stolen"],
+        "form-oe": {
+            "form": "stel|an",
+            "canon": {
+                "lemma": "steal",
+                "past-participle": ["stolen"]
+            }
+        },
         "type": "verb",
         "verb-class": 4,
         "gloss": "steal",
@@ -6892,9 +7284,13 @@
         "origin": "old-english"
     }, {
         "key": "stingan",
-        "form-raw": "sting|an",
-        "form-canon": "sting",
-        "form-participle-canon": ["stung"],
+        "form-oe": {
+            "form": "sting|an",
+            "canon": {
+                "lemma": "sting",
+                "past-participle": ["stung"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "sting",
@@ -6936,9 +7332,13 @@
         "origin": "old-english"
     }, {
         "key": "strīcan",
-        "form-raw": "strīc|an",
-        "form-canon": "strike",
-        "form-participle-canon": ["stricken"],
+        "form-oe": {
+            "form": "strīc|an",
+            "canon": {
+                "lemma": "strike",
+                "past-participle": ["stricken"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "strike",
@@ -6959,9 +7359,13 @@
         "notes": "Alt. sense in modern usage, 'a strike or blow', 'a shock or sudden pain'"
     }, {
         "key": "styrian",
-        "form-raw": "styr|an",
-        "form-canon": "stir",
-        "form-participle-canon": ["stirred"],
+        "form-oe": {
+            "form": "styr|an",
+            "canon": {
+                "lemma": "stir",
+                "past-participle": ["stirred"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "stir",
@@ -7054,9 +7458,13 @@
         "notes": "Form is not directly attested, but implied in OE 'andswarian' et al., and ME 'swaren'"
     }, {
         "key": "swebban-intransitive",
-        "form-raw": "swebb|an",
-        "form-canon": "sweb",
-        "form-participle-canon": ["swebbed"],
+        "form-oe": {
+            "form": "swebb|an",
+            "canon": {
+                "lemma": "sweb",
+                "past-participle": ["swebbed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[swoon] or [faint]",
@@ -7064,9 +7472,13 @@
         "origin": "old-english"
     }, {
         "key": "swebban-transitive",
-        "form-raw": "sebb|an",
-        "form-canon": "sweb",
-        "form-participle-canon": ["swebbed"],
+        "form-oe": {
+            "form": "sebb|an",
+            "canon": {
+                "lemma": "sweb",
+                "past-participle": ["swebbed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[put] or [lull] to sleep", "kill"],
@@ -7113,9 +7525,13 @@
         "notes": "May have Norse influence, but appears in OE, at least in compounds like 'bāt-sweġen' -> MnE 'bosun'."
     }, {
         "key": "sweltan",
-        "form-raw": "swelt|an",
-        "form-canon": "swelt",
-        "form-participle-canon": ["swelt", "swelted"],
+        "form-oe": {
+            "form": "swelt|an",
+            "canon": {
+                "lemma": "swelt",
+                "past-participle": ["swelt", "swelted"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["die", "faint", "[be] overcome (as with emotion, heat, etc.)"],
@@ -7160,9 +7576,13 @@
         "origin": "old-english"
     }, {
         "key": "swīcan",
-        "form-raw": "swīc|an",
-        "form-canon": "swike",
-        "form-participle-canon": ["swicken"],
+        "form-oe": {
+            "form": "swīc|an",
+            "canon": {
+                "lemma": "swike",
+                "past-participle": ["swicken"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["deceive", "betray"],
@@ -7180,9 +7600,13 @@
         "origin": "old-english"
     }, {
         "key": "swīfan-ME",
-        "form-raw": "swīf|an",
-        "form-canon": "swive",
-        "form-participle-canon": ["swived"],
+        "form-oe": {
+            "form": "swīf|an",
+            "canon": {
+                "lemma": "swive",
+                "past-participle": ["swived"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "[copulate] with",
@@ -7202,9 +7626,13 @@
         "origin": "old-english"
     }, {
         "key": "swincan",
-        "form-raw": "swinc|an",
-        "form-canon": "swink",
-        "form-participle-canon": ["swunk", "swunken", "swonken", "swinkt", "swinked"],
+        "form-oe": {
+            "form": "swinc|an",
+            "canon": {
+                "lemma": "swink",
+                "past-participle": ["swunk", "swunken", "swonken", "swinkt", "swinked"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["[work] hard", "[labor], [toil]"],
@@ -7283,9 +7711,13 @@
         "origin": "old-english"
     }, {
         "key": "tellan",
-        "form-raw": "tell|an",
-        "form-canon": "tell",
-        "form-participle-canon": ["told"],
+        "form-oe": {
+            "form": "tell|an",
+            "canon": {
+                "lemma": "tell",
+                "past-participle": ["told"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "tell",
@@ -7338,9 +7770,13 @@
         "origin": "old-english"
     }, {
         "key": "timbran",
-        "form-raw": "timbr|an",
-        "form-canon": "timber",
-        "form-participle-canon": ["timbered"],
+        "form-oe": {
+            "form": "timbr|an",
+            "canon": {
+                "lemma": "timber",
+                "past-participle": ["timbered"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[build] (from wood)",
@@ -7576,9 +8012,13 @@
         "notes": "OED has MnE 'thig', based on Norse cognate"
     }, {
         "key": "þolian",
-        "form-raw": "þoli|an",
-        "form-canon": "thole",
-        "form-participle-canon": ["tholed"],
+        "form-oe": {
+            "form": "þoli|an",
+            "canon": {
+                "lemma": "thole",
+                "past-participle": ["tholed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "endure",
@@ -7624,9 +8064,13 @@
         "origin": "old-english"
     }, {
         "key": "þrāwan",
-        "form-raw": "þrāw|an",
-        "form-canon": "throw",
-        "form-participle-canon": ["thrown"],
+        "form-oe": {
+            "form": "þrāw|an",
+            "canon": {
+                "lemma": "throw",
+                "past-participle": ["thrown"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "throw",
@@ -7635,9 +8079,13 @@
         "notes": "Original meaning 'twist, turn, writhe, curl'. Strong verb: þreow, past participle þrawen, geþrawen"
     }, {
         "key": "þringan",
-        "form-raw": "þring|an",
-        "form-canon": "thring",
-        "form-participle-canon": ["thrung", "thringed"],
+        "form-oe": {
+            "form": "þring|an",
+            "canon": {
+                "lemma": "thring",
+                "past-participle": ["thrung", "thringed"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["[crowd] about", "[press] or [squeeze]", "push", "[force] one's way"],
@@ -7655,9 +8103,13 @@
         "origin": "old-english"
     }, {
         "key": "þwītan",
-        "form-raw": "þwīt|an",
-        "form-canon": "thwite",
-        "form-participle-canon": ["thwited"],
+        "form-oe": {
+            "form": "þwīt|an",
+            "canon": {
+                "lemma": "thwite",
+                "past-participle": ["thwited"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["whittle", "[pare] down"],
@@ -7695,9 +8147,13 @@
         "notes": "Needs some form of bitransitivity"
     }, {
         "key": "wæcnan",
-        "form-raw": "wæcn|an",
-        "form-canon": "waken",
-        "form-participle-canon": ["wakened"],
+        "form-oe": {
+            "form": "wæcn|an",
+            "canon": {
+                "lemma": "waken",
+                "past-participle": ["wakened"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[wake] up",
@@ -7774,9 +8230,13 @@
         "origin": "old-english"
     }, {
         "key": "wacan",
-        "form-raw": "wac|an",
-        "form-canon": "wake",
-        "form-participle-canon": ["woken", "woke", "waked"],
+        "form-oe": {
+            "form": "wac|an",
+            "canon": {
+                "lemma": "wake",
+                "past-participle": ["woken", "woke", "waked"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "[wake] up",
@@ -7785,9 +8245,13 @@
         "origin": "old-english"
     }, {
         "key": "wacian",
-        "form-raw": "waci|an",
-        "form-canon": "wake",
-        "form-participle-canon": ["woken", "woke", "waked"],
+        "form-oe": {
+            "form": "waci|an",
+            "canon": {
+                "lemma": "wake",
+                "past-participle": ["woken", "woke", "waked"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[be] or [remain] awake",
@@ -7842,9 +8306,13 @@
         "origin": "old-english"
     }, {
         "key": "wanian",
-        "form-raw": "wani|an",
-        "form-canon": "wane",
-        "form-participle-canon": ["waned"],
+        "form-oe": {
+            "form": "wani|an",
+            "canon": {
+                "lemma": "wane",
+                "past-participle": ["waned"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "lessen",
@@ -7886,9 +8354,13 @@
         "origin": "old-english"
     }, {
         "key": "weaxan",
-        "form-raw": "weax|an",
-        "form-canon": "wax",
-        "form-participle-canon": ["waxed"],
+        "form-oe": {
+            "form": "weax|an",
+            "canon": {
+                "lemma": "wax",
+                "past-participle": ["waxed"]
+            }
+        },
         "type": "verb",
         "verb-class": 7,
         "gloss": "grow",
@@ -7905,9 +8377,13 @@
         "origin": "old-english"
     }, {
         "key": "weddian",
-        "form-raw": "wedd|an",
-        "form-canon": "wed",
-        "form-participle-canon": ["wedded"],
+        "form-oe": {
+            "form": "wedd|an",
+            "canon": {
+                "lemma": "wed",
+                "past-participle": ["wedded"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "marry",
@@ -7916,9 +8392,13 @@
         "notes": "Alternate meaning 'pledge, promise'"
     }, {
         "key": "wegan",
-        "form-raw": "weg|an",
-        "form-canon": "weigh",
-        "form-participle-canon": ["weighed"],
+        "form-oe": {
+            "form": "weg|an",
+            "canon": {
+                "lemma": "weigh",
+                "past-participle": ["weighed"]
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": "weigh",
@@ -7941,9 +8421,13 @@
         "notes": "Chosen form is Anglian"
     }, {
         "key": "wēnan",
-        "form-raw": "wēn|an",
-        "form-canon": "ween",
-        "form-participle-canon": ["wend", "went", "weened"],
+        "form-oe": {
+            "form": "wēn|an",
+            "canon": {
+                "lemma": "ween",
+                "past-participle": ["wend", "went", "weened"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[hold] (of an opinion)",
@@ -7960,9 +8444,13 @@
         "notes": "Ancestor of 'wench', but feels distinct enough I want to leave it separate"
     }, {
         "key": "wendan",
-        "form-raw": "wend|an",
-        "form-canon": "wend",
-        "form-participle-canon": ["went", "wended"],
+        "form-oe": {
+            "form": "wend|an",
+            "canon": {
+                "lemma": "wend",
+                "past-participle": ["went", "wended"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[go] by indirect route",
@@ -7971,9 +8459,13 @@
         "origin": "old-english"
     }, {
         "key": "weorpan",
-        "form-raw": "weorp|an",
-        "form-canon": "warp",
-        "form-participle-canon": ["warped"],
+        "form-oe": {
+            "form": "weorp|an",
+            "canon": {
+                "lemma": "warp",
+                "past-participle": ["warped"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "warp",
@@ -7992,9 +8484,13 @@
         "origin": "old-english"
     }, {
         "key": "weorþan",
-        "form-raw": "weorþ|an",
-        "form-canon": "worth",
-        "form-participle-canon": ["worthen", "worth", "worthed"],
+        "form-oe": {
+            "form": "weorþ|an",
+            "canon": {
+                "lemma": "worth",
+                "past-participle": ["worthen", "worth", "worthed"]
+            }
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "become",
@@ -8237,9 +8733,13 @@
         "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
     }, {
         "key": "wōgian",
-        "form-raw": "wōgi|an",
-        "form-canon": "woo",
-        "form-participle-canon": ["wooed"],
+        "form-oe": {
+            "form": "wōgi|an",
+            "canon": {
+                "lemma": "woo",
+                "past-participle": ["wooed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "woo",
@@ -8343,9 +8843,13 @@
         "origin": "old-english"
     }, {
         "key": "wrēġan",
-        "form-raw": "wrēġ|an",
-        "form-canon": "wray",
-        "form-participle-canon": ["wrayed"],
+        "form-oe": {
+            "form": "wrēġ|an",
+            "canon": {
+                "lemma": "wray",
+                "past-participle": ["wrayed"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["accuse", "[stir] up or [incite]"],
@@ -8374,9 +8878,13 @@
         "origin": "old-english"
     }, {
         "key": "wrīġian",
-        "form-raw": "wrīġi|an",
-        "form-canon": "wry",
-        "form-participle-canon": ["wried"],
+        "form-oe": {
+            "form": "wrīġi|an",
+            "canon": {
+                "lemma": "wry",
+                "past-participle": ["wried"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[turn] or [twist]",
@@ -8385,9 +8893,13 @@
         "origin": "old-english"
     }, {
         "key": "wrītan",
-        "form-raw": "wrīt|an",
-        "form-canon": "write",
-        "form-participle-canon": ["written"],
+        "form-oe": {
+            "form": "wrīt|an",
+            "canon": {
+                "lemma": "write",
+                "past-participle": ["written"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "write",
@@ -8433,9 +8945,13 @@
         "notes": "TODO: Split to put quality tag on 'glory, splendor'"
     }, {
         "key": "wunian",
-        "form-raw": "wuni|an",
-        "form-canon": "wone",
-        "form-participle-canon": ["woned"],
+        "form-oe": {
+            "form": "wuni|an",
+            "canon": {
+                "lemma": "wone",
+                "past-participle": ["woned"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[stay] or [dwell] in a place",
@@ -8479,9 +8995,13 @@
         "origin": "old-english"
     }, {
         "key": "wyrġan",
-        "form-raw": "wyrġ|an",
-        "form-canon": "worry",
-        "form-participle-canon": ["worried"],
+        "form-oe": {
+            "form": "wyrġ|an",
+            "canon": {
+                "lemma": "worry",
+                "past-participle": ["worried"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "worry",
