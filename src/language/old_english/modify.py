@@ -1,5 +1,9 @@
 import src.language.old_english.orthography as orthography
 
+# Miscellaneous helpers for modifying OE forms
+
+# ===================================================================
+
 # Returns a degeminated form of the given OE consonant cluster
 def degeminate(form):
     if len(form) == 2:

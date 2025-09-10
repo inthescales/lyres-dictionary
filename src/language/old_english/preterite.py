@@ -33,16 +33,18 @@ def get_strong_pseudopreterite(form, verb_class, config):
 
     # Remove inflectional ending, if any
     form = form.split("|")[0]
-    if form[-1] == "i":
-        form = form[:-1]
 
     # Get clusters
     clusters = helpers.split_clusters(form, lambda char: char in orthography.vowels)
     vowels_index = next(i for i in range(0, len(clusters)) if clusters[i][0] in orthography.vowels)
     vowels = clusters[vowels_index]
 
+    # Whether the new vowel needs to be lengthened
     lengthen = True
 
+    # Handling based on class
+
+    # Class 1:
     if verb_class == 1:
         if form[-1] in ["s", "f", "þ"]:
             # Stems with final fricatives always take the long 'a'
@@ -63,7 +65,7 @@ def get_strong_pseudopreterite(form, verb_class, config):
             vowel = "o"
 
     # Class 3:
-    # TODO: Consider 'n' followed by two other consonants
+    # TODO: Consider case of 'n' followed by two other consonants
     if verb_class == 3:
         if form[-2:] == "nd":
             # As in 'grind' -> 'ground'
@@ -110,13 +112,15 @@ def get_strong_pseudopreterite(form, verb_class, config):
     if verb_class in [5, 6]:
         clusters = [oe_modify.degeminate(cluster) for cluster in clusters]
 
+    # Add a final vowel to ensure that fricatives become voiced when appropriate. Otherwise
+    # we end up with mistakes like 'drīfan' -> *'drofe' (instead of 'drove')
     if lengthen and not helpers.is_vowel(clusters[-1][0], y_is_vowel=True):
-        # Add a final vowel to ensure that fricatives become voiced when appropriate. Otherwise
-        # we end up with mistakes like 'drīfan' -> *'drofe' (instead of 'drove')
         clusters += ["e"]
 
+    # Create a new form from the modified clusters
     form = "".join(clusters[0:vowels_index]) + vowel + "".join(clusters[vowels_index+1:])
 
+    # Apply Verner's law sometimes
     if rarely("PPart:verners-law", config):
         form = oe_modify.apply_verner(form)
 

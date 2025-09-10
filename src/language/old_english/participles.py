@@ -49,8 +49,6 @@ def get_strong_pseudoparticiple(form, verb_class, config):
 
     # Remove inflectional ending, if any
     form = form.split("|")[0]
-    if form[-1] == "i":
-        form = form[:-1]
 
     # Determine whether the '-en' suffix should be added
     if (verb_class == 3 and not occ("PPart:use-class-3-suffix", config)):
