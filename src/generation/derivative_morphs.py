@@ -22,7 +22,10 @@ def with_alternate_gloss(morph):
     new_dict = {}
     new_dict["key"] = morph.morph["key"] + "-adhoc:alt"
     new_dict["type"] = morph.morph["type"]
-    new_dict["form-raw"] = morph.morph["form-raw"]
+    if "form-oe" in morph.morph:
+        new_dict["form-oe"] = morph.morph["form-oe"]
+    else:
+        new_dict["form-raw"] = morph.morph["form-raw"]
     if "form-canon" in morph.morph:
         new_dict["form-canon"] = morph.morph["form-canon"]
     new_dict["gloss"] = helpers.one_or_random(morph.morph["gloss-alt"], seed=morph.seed)

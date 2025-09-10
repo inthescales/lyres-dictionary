@@ -287,7 +287,7 @@
         "notes": "Original spelling 'ake', modern spelling based on misconception"
     }, {
         "key": "ād",
-        "form-raw": "ād",
+        "form-oe": "ād",
         "type": "noun",
         "gloss": "funeral [pyre]",
         "tags": ["count", "concrete", "luminous", "speculative"],
@@ -302,7 +302,7 @@
         "origin": "old-english"
     }, {
         "key": "āfor",
-        "form-raw": "āfor",
+        "form-oe": "āfor",
         "type": "adj",
         "gloss": ["bitter", "fierce"],
         "tags": ["speculative", "homophonic"],
@@ -379,14 +379,14 @@
         "origin": "old-english"
     }, {
         "key": "ār-glory",
-        "form-raw": "ār",
+        "form-oe": "ār",
         "type": "noun",
         "gloss": ["[honor], [glory]", "grace"],
         "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ār-messenger",
-        "form-raw": "ār",
+        "form-oe": "ār",
         "type": "noun",
         "gloss": ["[messenger] or [herald]", "angel", "missionary"],
         "tags": ["count", "concrete", "living", "person", "speculative", "homophonic", "no-gen"],
@@ -394,7 +394,7 @@
         "notes": "'no-gen' because this one bothers me"
     }, {
         "key": "ār-metal",
-        "form-raw": "ār",
+        "form-oe": "ār",
         "type": "noun",
         "gloss": ["bronze", "brass", "copper"],
         "tags": ["mass", "concrete", "metal", "speculative", "homophonic"],
@@ -418,7 +418,7 @@
         "origin": "old-english"
     }, {
         "key": "ārian",
-        "form-raw": "āri|an",
+        "form-oe": "āri|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["pardon", "[show] mercy"],
@@ -426,14 +426,14 @@
         "origin": "old-english"
     }, {
         "key": "arod",
-        "form-raw": "arod",
+        "form-oe": "arod",
         "type": "adj",
         "gloss": ["daring", "quick", "prepared"],
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "asċ-boat",
-        "form-raw": "asċ",
+        "form-oe": "asċ",
         "type": "noun",
         "gloss": ["small [boat]", "sailboat", "rowboat"],
         "tags": ["count", "concrete", "man-made", "vessel", "speculative"],
@@ -469,7 +469,7 @@
         "notes": "Alternate form 'ǣte'"
     }, {
         "key": "atol",
-        "form-raw": "atol",
+        "form-oe": "atol",
         "type": "adj",
         "gloss": "terrible",
         "tags": ["speculative"],
@@ -536,7 +536,7 @@
         "origin": "old-english"
     }, {
         "key": "bǣtan",
-        "form-raw": "bǣt|an",
+        "form-oe": "bǣt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["bridle", "[rein] in, [restrain]"],
@@ -687,7 +687,7 @@
         "origin": "old-english"
     }, {
         "key": "bearo",
-        "form-raw": "bearo",
+        "form-oe": "bearo",
         "type": "noun",
         "gloss": "[forest] or [grove]",
         "tags": ["count", "concrete", "terrain", "speculative"],
@@ -726,7 +726,7 @@
         "origin": "old-english"
     }, {
         "key": "bēdan",
-        "form-raw": "bēd|an",
+        "form-oe": "bēd|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "compel",
@@ -735,7 +735,7 @@
         "notes": "In Bright, but not wiktionary or Bosworth. Who knows?"
     }, {
         "key": "bēhþ",
-        "form-raw": "bēhþ",
+        "form-oe": "bēhþ",
         "type": "noun",
         "gloss": ["[signs] of something", "[proof] of something"],
         "tags": ["uncountable", "abstract"],
@@ -798,7 +798,7 @@
         "origin": "old-english"
     }, {
         "key": "benn",
-        "form-raw": "benn",
+        "form-oe": "benn",
         "type": "noun",
         "gloss": "wound",
         "tags": ["count", "concrete", "speculative", "homophonic"],
@@ -834,7 +834,7 @@
         "notes": "Wiktionary indicates northern form 'bargh'"
     }, {
         "key": "beorgan",
-        "form-raw": "beorg|an",
+        "form-oe": "beorg|an",
         "type": "verb",
         "verb-class": 3,
         "gloss": ["[protect], [defend]", "fortify", "[take] shelter", "[save], [deliver]", "spare"],
@@ -842,7 +842,7 @@
         "origin": "old-english"
     }, {
         "key": "beorn",
-        "form-raw": "beorn",
+        "form-oe": "beorn",
         "type": "noun",
         "gloss": "hero",
         "tags": ["count", "concrete", "living", "person", "poetic"],
@@ -850,7 +850,7 @@
         "notes": "Also gloss 'man'"
     }, {
         "key": "bēot",
-        "form-raw": "bēot",
+        "form-oe": "bēot",
         "type": "noun",
         "gloss": ["promise", "boast"],
         "tags": ["count", "abstract", "man-made", "obscure", "homophonic"],
@@ -858,7 +858,7 @@
         "notes": "Wiktionary indicates a modern descendent of the same form, but I'm suspicious"
     }, {
         "key": "bēotian",
-        "form-raw": "bēoti|an",
+        "form-oe": "bēoti|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": ["vow", "promise", "threaten"],
@@ -956,7 +956,7 @@
         "origin": "old-english"
     }, {
         "key": "bifian",
-        "form-raw": "bifi|an",
+        "form-oe": "bifi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[shake] or [tremble]",
@@ -964,7 +964,7 @@
         "origin": "old-english"
     }, {
         "key": "bil",
-        "form-raw": "bil",
+        "form-oe": "bil",
         "type": "noun",
         "gloss": "sword",
         "gloss-tool": "[fight] with a sword",
@@ -1014,7 +1014,7 @@
         "origin": "old-english"
     }, {
         "key": "blenċan",
-        "form-raw": "blenċ|an",
+        "form-oe": "blenċ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[deceive] or [cheat]",
@@ -1022,7 +1022,7 @@
         "origin": "old-english"
     }, {
         "key": "blīcan",
-        "form-raw": "blīc|an",
+        "form-oe": "blīc|an",
         "type": "verb",
         "verb-class": 1,
         "gloss": "[shine], [glisten]",
@@ -1040,7 +1040,7 @@
         "origin": "old-english"
     }, {
         "key": "bliss",
-        "form-raw": "bliss",
+        "form-oe": "bliss",
         "type": "noun",
         "gloss": "bliss",
         "gloss-alt": "[joy], [delight",
@@ -1084,14 +1084,14 @@
         "origin": "old-english"
     }, {
         "key": "brego",
-        "form-raw": "brego",
+        "form-oe": "brego",
         "type": "noun",
         "gloss": ["lord", "prince", "ruler"],
         "tags": ["count", "concrete", "living", "person", "role", "ruler", "poetic", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "brēoþan",
-        "form-raw": "brēoþ|an",
+        "form-oe": "brēoþ|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": ["[decay] or [waste] away", "[fail], [come] to naught"],
@@ -1108,7 +1108,7 @@
         "origin": "old-english"
     }, {
         "key": "brim",
-        "form-raw": "brim",
+        "form-oe": "brim",
         "type": "noun",
         "gloss": "sea",
         "tags": ["singleton", "concrete", "liquid", "terrain", "shiny"],
@@ -1177,7 +1177,7 @@
         "origin": "old-english"
     }, {
         "key": "būc-vessel",
-        "form-raw": "būc",
+        "form-oe": "būc",
         "type": "noun",
         "gloss": "[jug] or [pitcher]",
         "tags": ["count", "concrete", "man-made", "vessel", "speculative"],
@@ -1286,7 +1286,7 @@
         "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
     }, {
         "key": "carl",
-        "form-raw": "carl",
+        "form-oe": "carl",
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -1359,7 +1359,7 @@
         "notes": "Chosen form is Anglian, alt West Saxon. Bosworth has the vowel long, Wiktionary (and I think OED) have it short. None of these produce the modern form 'chill', but OED suggests the modern form may derive from a backformation from the verb (if I understand correctly). TODO: Add mass form 'coldness'"
     }, {
         "key": "cennan",
-        "form-raw": "cenn|an",
+        "form-oe": "cenn|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[make] known, [declare]", "[bring] forth, [produce]"],
@@ -1367,7 +1367,7 @@
         "origin": "old-english"
     }, {
         "key": "ċeole",
-        "form-raw": "ċeole",
+        "form-oe": "ċeole",
         "type": "noun",
         "gloss": ["throat", "jaw"],
         "tags": ["count", "concrete", "living", "bodypart", "speculative"],
@@ -1383,7 +1383,7 @@
         "notes": "Additional glosses 'man', 'husband', but don't want to gender for now"
     }, {
         "key": "ċīd",
-        "form-raw": "ċīd",
+        "form-oe": "ċīd",
         "type": "noun",
         "gloss": "strife",
         "tags": ["mass", "abstract", "activity", "speculative", "homophonic"],
@@ -1410,7 +1410,7 @@
         "origin": "old-english"
     }, {
         "key": "ċim",
-        "form-raw": "ċim",
+        "form-oe": "ċim",
         "type": "noun",
         "gloss": "[base] or [foundation]",
         "tags": ["count", "concrete", "speculative"],
@@ -1425,14 +1425,14 @@
         "origin": "old-english"
     }, {
         "key": "ċir",
-        "form-raw": "ċir",
+        "form-oe": "ċir",
         "type": "noun",
         "gloss": "[turn] or [time]",
         "tags": ["count", "abstract", "measure", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ċīse",
-        "form-raw": "ċīse",
+        "form-oe": "ċīse",
         "type": "adj",
         "gloss": ["[fastidious] in eating", "selective"],
         "tags": ["speculative"],
@@ -1518,7 +1518,7 @@
         "origin": "old-english"
     }, {
         "key": "cocc",
-        "form-raw": "cocc",
+        "form-oe": "cocc",
         "type": "noun",
         "gloss": "rooster",
         "tags": ["count", "concrete", "living", "animal", "tame", "gendered"],
@@ -1565,7 +1565,7 @@
         "origin": "old-english"
     }, {
         "key": "crumb",
-        "form-raw": "crumb",
+        "form-oe": "crumb",
         "type": "adj",
         "gloss": "crooked",
         "tags": ["speculative", "homophonic"],
@@ -1598,7 +1598,7 @@
         "origin": "old-english"
     }, {
         "key": "cwalm-OE",
-        "form-raw": "cwalm",
+        "form-oe": "cwalm",
         "type": "noun",
         "gloss": ["[plague], [pestilence]", "destruction"],
         "tags": ["mass", "abstract", "speculative", "homophonic"],
@@ -1692,7 +1692,7 @@
         "origin": "old-english"
     }, {
         "key": "cwide",
-        "form-raw": "cwide",
+        "form-oe": "cwide",
         "type": "noun",
         "gloss": "[saying] or [proverb]",
         "gloss-alt": ["sentence"],
@@ -1700,7 +1700,7 @@
         "origin": "old-english"
     }, {
         "key": "cwild",
-        "form-raw": "cwild",
+        "form-oe": "cwild",
         "type": "noun",
         "gloss": ["[plague], [pestilence]", "destruction"],
         "tags": ["mass", "abstract", "speculative"],
@@ -1717,7 +1717,7 @@
         "origin": "old-english"
     }, {
         "key": "cȳme",
-        "form-raw": "cȳme",
+        "form-oe": "cȳme",
         "type": "adj",
         "gloss": "[fine], [beautiful]",
         "tags": ["obscure"],
@@ -1804,7 +1804,7 @@
         "origin": "old-english"
     }, {
         "key": "dēon",
-        "form-raw": "dē|on",
+        "form-oe": "dē|on",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "suck",
@@ -1941,7 +1941,7 @@
         "origin": "old-english"
     }, {
         "key": "drōf",
-        "form-raw": "drōf",
+        "form-oe": "drōf",
         "type": "adj",
         "gloss": ["[troubled], [disturbed]", "turbid"],
         "tags": ["speculative"],
@@ -1968,7 +1968,7 @@
         "origin": "old-english"
     }, {
         "key": "drȳ",
-        "form-raw": "drȳ",
+        "form-oe": "drȳ",
         "type": "noun",
         "gloss": ["wizard", "sorcerer"],
         "tags": ["count", "concrete", "living", "person", "role", "magical", "speculative", "homophonic"],
@@ -1983,7 +1983,7 @@
         "origin": "old-english"
     }, {
         "key": "dryht",
-        "form-raw": "dryht",
+        "form-oe": "dryht",
         "type": "noun",
         "gloss": ["[army] or [troop]", "large [crowd]"],
         "tags": ["count", "concrete", "living", "grouping"],
@@ -2009,7 +2009,7 @@
         "origin": "old-english"
     }, {
         "key": "dun",
-        "form-raw": "dun",
+        "form-oe": "dun",
         "type": "adj",
         "gloss": "grayish-brown",
         "tags": ["color"],
@@ -2024,7 +2024,7 @@
         "origin": "old-english"
     }, {
         "key": "dwæsċan",
-        "form-raw": "dwæsċ|an",
+        "form-oe": "dwæsċ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "extinguish",
@@ -2033,7 +2033,7 @@
         "notes": "Bosworth has this as a short 'æ', Wiktionary as long"
     }, {
         "key": "dwelian",
-        "form-raw": "dweli|an",
+        "form-oe": "dweli|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[err], [go] astray"],
@@ -2051,7 +2051,7 @@
         "notes": "I can't find any actual source for 'dwearg', but it matches Tolkien's 'dwarrow' so I'm keeping it, fuck it"
     }, {
         "key": "dwild",
-        "form-raw": "dwild",
+        "form-oe": "dwild",
         "type": "noun",
         "gloss": ["error", "heresy"],
         "tags": ["count", "abstract", "man-made"],
@@ -2087,7 +2087,7 @@
         "origin": "old-english"
     }, {
         "key": "dwole",
-        "form-raw": "dwole",
+        "form-oe": "dwole",
         "type": "noun",
         "gloss": ["error", "heresy"],
         "tags": ["count", "abstract", "man-made"],
@@ -2110,7 +2110,7 @@
         "origin": "old-english"
     }, {
         "key": "ēad",
-        "form-raw": "ēad",
+        "form-oe": "ēad",
         "type": "noun",
         "gloss": ["happiness", "prosperity"],
         "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
@@ -2135,28 +2135,28 @@
         "origin": "old-english"
     }, {
         "key": "earfoþe-activity",
-        "form-raw": "earfoþe",
+        "form-oe": "earfoþe",
         "type": "noun",
         "gloss": ["labor"],
         "tags": ["mass", "abstract", "activity", "speculative"],
         "origin": "old-english"
     }, {
         "key": "earfoþe-adj",
-        "form-raw": "earfoþe",
+        "form-oe": "earfoþe",
         "type": "adj",
         "gloss": "difficult",
         "tags": ["obscure"],
         "origin": "old-english"
     }, {
         "key": "earfoþe-labor-pains",
-        "form-raw": "earfoþe",
+        "form-oe": "earfoþe",
         "type": "noun",
         "gloss": "labor [pains]",
         "tags": ["mass", "abstract", "body-state", "speculative"],
         "origin": "old-english"
     }, {
         "key": "earfoþe-state",
-        "form-raw": "earfoþe",
+        "form-oe": "earfoþe",
         "type": "noun",
         "gloss": "[hardship] or [suffering]",
         "tags": ["mass", "abstract", "body-state", "mind-state", "speculative"],
@@ -2295,7 +2295,7 @@
         "origin": "old-english"
     }, {
         "key": "fæcele",
-        "form-raw": "fæcele",
+        "form-oe": "fæcele",
         "type": "noun",
         "gloss": "torch",
         "gloss-alt": ["[lamp], [light]"],
@@ -2337,7 +2337,7 @@
         "origin": "old-english"
     }, {
         "key": "fæġnian",
-        "form-raw": "fæġni|an",
+        "form-oe": "fæġni|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[be] glad", "[celebrate], [rejoice]"],
@@ -2384,7 +2384,7 @@
         "notes": "Alternate form of 'fæġnian', but separating for the modern sense"
     }, {
         "key": "fāh",
-        "form-raw": "fāh",
+        "form-oe": "fāh",
         "type": "adj",
         "gloss": ["[guilty] or [criminal]", "hostile"],
         "tags": ["speculative"],
@@ -2416,14 +2416,14 @@
         "notes": "Properly the same morph as the base 'fana', but I want to separate for alt. form usage"
     }, {
         "key": "fang",
-        "form-raw": "fang",
+        "form-oe": "fang",
         "type": "noun",
         "gloss": "[plunder] or [spoils]",
         "tags": ["mass", "concrete", "speculative"],
         "origin": "old-english"
     }, {
         "key": "fang-activity",
-        "form-raw": "fang",
+        "form-oe": "fang",
         "type": "noun",
         "gloss": "plunder",
         "tags": ["mass", "concrete", "activity", "speculative"],
@@ -2460,7 +2460,7 @@
         "origin": "old-english"
     }, {
         "key": "fear",
-        "form-raw": "fear",
+        "form-oe": "fear",
         "type": "noun",
         "gloss": "[bull] or [ox]",
         "gloss-animal": ["[work] hard", "[be] slow-witted"],
@@ -2476,7 +2476,7 @@
         "origin": "old-english"
     }, {
         "key": "feċġan",
-        "form-raw": "feċġ|an",
+        "form-oe": "feċġ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "seize",
@@ -2625,7 +2625,7 @@
         "origin": "old-english"
     }, {
         "key": "fleċġan",
-        "form-raw": "fleċġ|an",
+        "form-oe": "fleċġ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[put] to flight"],
@@ -2712,14 +2712,14 @@
         "notes": "This is a later usage, but want to include it"
     }, {
         "key": "floga",
-        "form-raw": "floga",
+        "form-oe": "floga",
         "type": "noun",
         "gloss": "flying [being]",
         "tags": ["count", "concrete", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "flohta",
-        "form-raw": "flohta",
+        "form-oe": "flohta",
         "type": "noun",
         "gloss": "[agitation] or [excitement]",
         "tags": ["mass", "abstract", "mind-state", "speculative"],
@@ -2727,7 +2727,7 @@
         "notes": "Unattested root, but OED posits it based on Scottish 'flocht'. Related to 'flight'"
     }, {
         "key": "flyht",
-        "form-raw": "flyht",
+        "form-oe": "flyht",
         "type": "noun",
         "gloss": "[power] of flight",
         "tags": ["singleton", "abstract", "quality"],
@@ -2763,7 +2763,7 @@
         "origin": "old-english"
     }, {
         "key": "fram",
-        "form-raw": "fram",
+        "form-oe": "fram",
         "type": "adj",
         "gloss": "[vigorous] or [bold]",
         "tags": ["speculative"],
@@ -2802,7 +2802,7 @@
         "notes": "OED shows more modern usages with both 'frain' and 'frayn' spellings. Needs bitransitivity"
     }, {
         "key": "fremian",
-        "form-raw": "fremi|an",
+        "form-oe": "fremi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[profit] or [benefit]",
@@ -2810,7 +2810,7 @@
         "origin": "old-english"
     }, {
         "key": "fremman",
-        "form-raw": "fremm|an",
+        "form-oe": "fremm|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[perform] or [accomplish]",
@@ -2819,7 +2819,7 @@
         "notes": "Influenced 'frame', in combination with 'framian'."
     }, {
         "key": "fremu",
-        "form-raw": "fremu",
+        "form-oe": "fremu",
         "type": "noun",
         "gloss": ["[advantage] or [benefit]", "[kindness] or good [deeds]"],
         "tags": ["mass", "abstract"],
@@ -2861,7 +2861,7 @@
         "origin": "old-english"
     }, {
         "key": "friþ",
-        "form-raw": "friþ",
+        "form-oe": "friþ",
         "type": "noun",
         "gloss": "peace",
         "tags": ["mass", "abstract", "speculative"],
@@ -2899,14 +2899,14 @@
         "origin": "old-english"
     }, {
         "key": "furh",
-        "form-raw": "furh",
+        "form-oe": "furh",
         "type": "noun",
         "gloss": "pine [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
         "key": "fyhtan",
-        "form-raw": "fyht|an",
+        "form-oe": "fyht|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "moisten",
@@ -2941,7 +2941,7 @@
         "origin": "old-english"
     }, {
         "key": "fyrhþe",
-        "form-raw": "fyrhþe",
+        "form-oe": "fyrhþe",
         "type": "noun",
         "gloss": ["[woodland] area", "game [preserve]"],
         "tags": ["count", "concrete", "living", "terrain", "speculative"],
@@ -3040,7 +3040,7 @@
         "origin": "old-english"
     }, {
         "key": "gār",
-        "form-raw": "gār",
+        "form-oe": "gār",
         "type": "noun",
         "gloss": "spear",
         "gloss-tool": "[stab], as with spear",
@@ -3068,7 +3068,7 @@
         "notes": "no-gen because I don't think I can use this kind of verb well"
     }, {
         "key": "ġe-bǣre",
-        "form-raw": "ġe-bǣre",
+        "form-oe": "ġe-bǣre",
         "type": "noun",
         "gloss": ["[bearing] or [demeanor]"],
         "tags": ["count", "abstract", "speculative"],
@@ -3093,7 +3093,7 @@
         "notes": "Canon-form based on 'bēor'"
     }, {
         "key": "ġe-bind",
-        "form-raw": "ġe-bind",
+        "form-oe": "ġe-bind",
         "type": "noun",
         "gloss": ["binding", "bundle"],
         "tags": ["count", "concrete"],
@@ -3101,7 +3101,7 @@
         "notes": "Would like to add gloss 'that which is bound together into a whole' but not sure how to handle countability'"
     }, {
         "key": "ġe-bland",
-        "form-raw": "ġe-bland",
+        "form-oe": "ġe-bland",
         "type": "noun",
         "gloss": "mixture",
         "tags": ["count", "concrete", "man-made"],
@@ -3109,7 +3109,7 @@
         "notes": "Other sense, but having fun with man-made for now"
     }, {
         "key": "ġe-rōtsian",
-        "form-raw": "ġe-rōtsi|an",
+        "form-oe": "ġe-rōtsi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[make] sad",
@@ -3133,7 +3133,7 @@
         "origin": "old-english"
     }, {
         "key": "ġelāþ",
-        "form-raw": "ġe-lāþ",
+        "form-oe": "ġe-lāþ",
         "type": "adj",
         "gloss": "hostile",
         "tags": ["speculative"],
@@ -3147,7 +3147,7 @@
         "origin": "old-english"
     }, {
         "key": "ġelīþan",
-        "form-raw": "ġe-līþ|an",
+        "form-oe": "ġe-līþ|an",
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[go], [move]", "sail", "[proceed] or [advance]", "[come] to land, [reach] port (of a sea vessel)"],
@@ -3164,7 +3164,7 @@
         "notes": "Chosen form is Anglian. Root is ancestor of modern 'yelp', but labeling speculative due to different meaning. Additional sense of 'a boast'."
     }, {
         "key": "ġemunan",
-        "form-raw": "ġe-mun|an",
+        "form-oe": "ġe-mun|an",
         "type": "verb",
         "verb-class": "preterite-present",
         "gloss": "remember",
@@ -3182,7 +3182,7 @@
         "notes": "TODO: Add exception for 'ġeo' clusters (see Wiktionary for 'ġēol')"
     }, {
         "key": "ġeorn",
-        "form-raw": "ġeorn",
+        "form-oe": "ġeorn",
         "type": "adj",
         "gloss": "eager",
         "tags": ["speculative"],
@@ -3199,7 +3199,7 @@
         "origin": "old-english"
     }, {
         "key": "ġēotan",
-        "form-raw": "ġēot|an",
+        "form-oe": "ġēot|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": ["pour", "[shed] (blood, tears, etc.)", "[cast] metal"],
@@ -3280,7 +3280,7 @@
         "origin": "old-english"
     }, {
         "key": "ġifl",
-        "form-raw": "ġifl",
+        "form-oe": "ġifl",
         "type": "noun",
         "gloss": ["food", "meat"],
         "tags": ["mass", "concrete", "material", "food", "speculative"],
@@ -3288,14 +3288,14 @@
         "notes": "Only listed on Bosworth, so not 100% sure of 'g' palatalization. Needs bitransitivity for 'piece of food' gloss"
     }, {
         "key": "ġifol",
-        "form-raw": "ġifol",
+        "form-oe": "ġifol",
         "type": "adj",
         "gloss": ["generous", "gracious"],
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "gilte",
-        "form-raw": "gilte",
+        "form-oe": "gilte",
         "type": "noun",
         "gloss": "young [sow]",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "speculative"],
@@ -3309,7 +3309,7 @@
         "origin": "old-english"
     }, {
         "key": "ġītsian",
-        "form-raw": "ġītsi|an",
+        "form-oe": "ġītsi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "covet",
@@ -3382,7 +3382,7 @@
         "origin": "old-english"
     }, {
         "key": "gnīdan",
-        "form-raw": "gnīd|an",
+        "form-oe": "gnīd|an",
         "type": "verb",
         "verb-class": 1,
         "gloss": "rub",
@@ -3472,21 +3472,21 @@
         "notes": "This morph is a bit of a mishmash — alt. glosses reflect OE root, while main gloss reflects MnE 'grim', which OED has as a borrowing from a Dutch cognate. Leaving it for evocativeness."
     }, {
         "key": "griþ-count",
-        "form-raw": "griþ",
+        "form-oe": "griþ",
         "type": "noun",
         "gloss": ["[guarantee] of safety", "[place] of safety"],
         "tags": ["count", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "griþ-mass",
-        "form-raw": "griþ",
+        "form-oe": "griþ",
         "type": "noun",
         "gloss": ["protection", "mercy"],
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "grornian",
-        "form-raw": "grorni|an",
+        "form-oe": "grorni|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["mourn", "murmur"],
@@ -3494,14 +3494,14 @@
         "origin": "old-english"
     }, {
         "key": "gryre",
-        "form-raw": "gryre",
+        "form-oe": "gryre",
         "type": "noun",
         "gloss": "[fright], [terror]",
         "tags": ["mass", "abstract", "mind-state", "speculative"],
         "origin": "old-english"
     }, {
         "key": "gryre-adj",
-        "form-raw": "gryre",
+        "form-oe": "gryre",
         "type": "adj",
         "gloss": "terrifying",
         "tags": ["speculative"],
@@ -3518,28 +3518,28 @@
         "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
     }, {
         "key": "gūþ",
-        "form-raw": "gūþ",
+        "form-oe": "gūþ",
         "type": "noun",
         "gloss": "war",
         "tags": ["mass", "abstract", "activity", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ġyċċe",
-        "form-raw": "ġyċċe",
+        "form-oe": "ġyċċe",
         "type": "noun",
         "gloss": "itch",
         "tags": ["count", "abstract", "body-state"],
         "origin": "old-english"
     }, {
         "key": "gyd+en",
-        "form-raw": "gyd+en",
+        "form-oe": "gyd+en",
         "type": "noun",
         "gloss": "goddess",
         "tags": ["count", "concrete", "living", "person", "gendered", "divine", "speculative"],
         "origin": "old-english"
     }, {
         "key": "gyltan",
-        "form-raw": "gylt|an",
+        "form-oe": "gylt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[commit] (of sins)",
@@ -3556,21 +3556,21 @@
         "origin": "old-english"
     }, {
         "key": "hæft-person",
-        "form-raw": "hæft",
+        "form-oe": "hæft",
         "type": "noun",
         "gloss": "[captive] or [prisoner]",
         "tags": ["count", "concrete", "living", "person", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hæft-state",
-        "form-raw": "hæft",
+        "form-oe": "hæft",
         "type": "noun",
         "gloss": "[captivity], [imprisonment]",
         "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hǣman",
-        "form-raw": "hǣm|an",
+        "form-oe": "hǣm|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[copulate] with", "[cohabitate] with"],
@@ -3579,7 +3579,7 @@
         "notes": "Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
     }, {
         "key": "hǣmed",
-        "form-raw": "hǣmed",
+        "form-oe": "hǣmed",
         "type": "adj",
         "gloss": "married",
         "tags": ["speculative"],
@@ -3662,7 +3662,7 @@
         "origin": "old-english"
     }, {
         "key": "halsian",
-        "form-raw": "hals|an",
+        "form-oe": "hals|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[augur], [divine]", "invoke", "exorcise", "conjure", "greet"],
@@ -3686,7 +3686,7 @@
         "origin": "old-english"
     }, {
         "key": "hana",
-        "form-raw": "hana",
+        "form-oe": "hana",
         "type": "noun",
         "gloss": "rooster",
         "tags": ["count", "concrete", "living", "animal", "tame", "gendered", "speculative"],
@@ -3810,7 +3810,7 @@
         "notes": "Not sure how we get the modern vowel."
     }, {
         "key": "heoru",
-        "form-raw": "heoru",
+        "form-oe": "heoru",
         "type": "noun",
         "gloss": "sword",
         "gloss-tool": "[cut] with a sword",
@@ -3864,14 +3864,14 @@
         "origin": "old-english"
     }, {
         "key": "hlin",
-        "form-raw": "hlin",
+        "form-oe": "hlin",
         "type": "noun",
         "gloss": "maple [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hlīsa",
-        "form-raw": "hlīsa",
+        "form-oe": "hlīsa",
         "type": "noun",
         "gloss": ["fame", "glory"],
         "tags": ["mass", "concrete", "quality", "speculative"],
@@ -3895,7 +3895,7 @@
         "origin": "old-english"
     }, {
         "key": "hlynsian",
-        "form-raw": "hlynsi|an",
+        "form-oe": "hlynsi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "resound",
@@ -3903,7 +3903,7 @@
         "origin": "old-english"
     }, {
         "key": "hocor",
-        "form-raw": "hocor",
+        "form-oe": "hocor",
         "type": "noun",
         "gloss": "[mockery], [scorn]",
         "tags": ["mass", "abstract", "activity", "speculative"],
@@ -3983,21 +3983,21 @@
         "origin": "old-english"
     }, {
         "key": "hors",
-        "form-raw": "hors",
+        "form-oe": "hors",
         "type": "noun",
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal"],
         "origin": "old-english"
     }, {
         "key": "hoþma-count",
-        "form-raw": "hoþma",
+        "form-oe": "hoþma",
         "type": "noun",
         "gloss": ["covering", "cloud"],
         "tags": ["count", "concrete", "glooming", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hoþma-mass",
-        "form-raw": "hoþma",
+        "form-oe": "hoþma",
         "type": "noun",
         "gloss": ["darkness"],
         "tags": ["mass", "concrete", "glooming", "speculative"],
@@ -4068,7 +4068,7 @@
         "notes": "Alternate form 'hrēad'"
     }, {
         "key": "hrēosan",
-        "form-raw": "hrēos|an",
+        "form-oe": "hrēos|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": "[fall] down, [collapse]",
@@ -4102,7 +4102,7 @@
         "origin": "old-english"
     }, {
         "key": "hrūse",
-        "form-raw": "hrūse",
+        "form-oe": "hrūse",
         "type": "noun",
         "gloss": "ground",
         "tags": ["singleton", "concrete", "terrain", "place", "speculative", "homophonic"],
@@ -4213,7 +4213,7 @@
         "origin": "old-english"
     }, {
         "key": "hyċġan",
-        "form-raw": "hyċġ|an",
+        "form-oe": "hyċġ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[think] about, [consider]"],
@@ -4231,21 +4231,21 @@
         "origin": "old-english"
     }, {
         "key": "hȳdels",
-        "form-raw": "hȳd+els",
+        "form-oe": "hȳd+els",
         "type": "noun",
         "gloss": ["hiding [place]", "shelter"],
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
         "key": "hyġe",
-        "form-raw": "hyġe",
+        "form-oe": "hyġe",
         "type": "noun",
         "gloss": ["[thought], [mind]", "[desire], [inclinations]"],
         "tags": ["mass", "abstract", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "hyll",
-        "form-raw": "hyll",
+        "form-oe": "hyll",
         "type": "noun",
         "gloss": "hill",
         "tags": ["count", "concrete", "terrain"],
@@ -4288,7 +4288,7 @@
         "origin": "old-english"
     }, {
         "key": "iġil",
-        "form-raw": "iġil",
+        "form-oe": "iġil",
         "type": "noun",
         "gloss": "porcupine",
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
@@ -4328,7 +4328,7 @@
         "origin": "old-english"
     }, {
         "key": "lǣċan",
-        "form-raw": "lǣċ|an",
+        "form-oe": "lǣċ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "play",
@@ -4408,14 +4408,14 @@
         "origin": "old-english"
     }, {
         "key": "lāc",
-        "form-raw": "lāc",
+        "form-oe": "lāc",
         "type": "noun",
         "gloss": ["[play] or [sport]", "[battle] or [strife]", "gifts"],
         "tags": ["mass", "abstract", "activity", "speculative"],
         "origin": "old-english"
     }, {
         "key": "lācan-intransitive",
-        "form-raw": "lāc|an",
+        "form-oe": "lāc|an",
         "type": "verb",
         "verb-class": 7,
         "gloss": "play",
@@ -4425,7 +4425,7 @@
         "notes": "Attested Northern form 'lake'"
     }, {
         "key": "lācan-transitive",
-        "form-raw": "lāc|an",
+        "form-oe": "lāc|an",
         "type": "verb",
         "verb-class": 7,
         "gloss": ["fight", "[fence] (with swords)"],
@@ -4434,7 +4434,7 @@
         "notes": "Attested Northern form 'lake'"
     }, {
         "key": "lācnian",
-        "form-raw": "lācni|an",
+        "form-oe": "lācni|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[give] medical treatment",
@@ -4467,14 +4467,14 @@
         "origin": "old-english"
     }, {
         "key": "lēas-adj",
-        "form-raw": "lēas",
+        "form-oe": "lēas",
         "type": "adj",
         "gloss": ["false", "fictional"],
         "tags": ["speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "lēas-noun",
-        "form-raw": "lēas",
+        "form-oe": "lēas",
         "type": "noun",
         "gloss": "lie",
         "tags": ["count", "abstract", "man-made", "speculative", "homophonic"],
@@ -4547,7 +4547,7 @@
         "origin": "old-english"
     }, {
         "key": "lēon",
-        "form-raw": "lē|on",
+        "form-oe": "lē|on",
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[blame], [fault]", "reproach"],
@@ -4555,7 +4555,7 @@
         "origin": "old-english"
     }, {
         "key": "lēon-2",
-        "form-raw": "lē|on",
+        "form-oe": "lē|on",
         "type": "verb",
         "verb-class": 1,
         "gloss": ["loan", "lend"],
@@ -4574,7 +4574,7 @@
         "origin": "old-english"
     }, {
         "key": "lēoþ",
-        "form-raw": "lēoþ",
+        "form-oe": "lēoþ",
         "type": "noun",
         "gloss": ["song", "poem"],
         "tags": ["count", "abstract", "man-made", "obscure"],
@@ -4653,7 +4653,7 @@
         "origin": "old-english"
     }, {
         "key": "liþ",
-        "form-raw": "liþ",
+        "form-oe": "liþ",
         "type": "noun",
         "gloss": "limb",
         "tags": ["count", "concrete", "bodypart", "obscure"],
@@ -4710,7 +4710,7 @@
         "origin": "old-english"
     }, {
         "key": "lūcan-2",
-        "form-raw": "lūc|an",
+        "form-oe": "lūc|an",
         "type": "verb",
         "verb-class": 2,
         "gloss": ["close", "conclude", "fasten", "lock"],
@@ -4824,7 +4824,7 @@
         "notes": "alternate meaning 'low, common'"
     }, {
         "key": "mǣtan",
-        "form-raw": "mǣt|an",
+        "form-oe": "mǣt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["dream", "[appear] in a dream"],
@@ -4832,7 +4832,7 @@
         "origin": "old-english"
     }, {
         "key": "mamme",
-        "form-raw": "mamme",
+        "form-oe": "mamme",
         "type": "noun",
         "gloss": "[teat], [breast]",
         "tags": ["count", "concrete", "living", "bodypart", "speculative"],
@@ -4860,7 +4860,7 @@
         "notes": "Needs bitransitivity. Wiktionary shows 'māmorian', while Bosworth has 'mamorian'. Canon form, attested in Shakespeare, follows short vowel form."
     }, {
         "key": "mangian",
-        "form-raw": "mangi|an",
+        "form-oe": "mangi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "trade",
@@ -4945,7 +4945,7 @@
         "origin": "old-english"
     }, {
         "key": "meare",
-        "form-raw": "meare",
+        "form-oe": "meare",
         "type": "noun",
         "gloss": "mare",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "gendered"],
@@ -4953,14 +4953,14 @@
         "notes": "Alternate forms mīre, mȳre, mere. History of usage as feminine unclear to me."
     }, {
         "key": "mearh",
-        "form-raw": "mearh",
+        "form-oe": "mearh",
         "type": "noun",
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "speculative"],
         "origin": "old-english"
     }, {
         "key": "mearu",
-        "form-raw": "mearu",
+        "form-oe": "mearu",
         "type": "adj",
         "gloss": "[tender], [delicate]",
         "tags": ["speculative", "homophonic"],
@@ -5015,7 +5015,7 @@
         "notes": "From Latin 'mensa'. Along with French 'mes' influenced MnE 'mess'. TODO: Bring in additional senses from 'mess'. Wiktionar"
     }, {
         "key": "mētan",
-        "form-raw": "mēt|an",
+        "form-oe": "mēt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[draw] or [paint]",
@@ -5041,7 +5041,7 @@
         "origin": "old-english"
     }, {
         "key": "midl",
-        "form-raw": "midl",
+        "form-oe": "midl",
         "type": "noun",
         "gloss": "[bit] or [curb] (of a bridle)",
         "tags": ["count", "concrete", "man-made", "speculative", "no-gen"],
@@ -5081,7 +5081,7 @@
         "origin": "old-english"
     }, {
         "key": "mimor",
-        "form-raw": "mimor",
+        "form-oe": "mimor",
         "type": "adj",
         "gloss": ["mindful", "kept in memory", "known"],
         "tags": ["speculative"],
@@ -5097,7 +5097,7 @@
         "origin": "old-english"
     }, {
         "key": "mirran",
-        "form-raw": "mirr|an",
+        "form-oe": "mirr|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["hinder", "disturb"],
@@ -5140,7 +5140,7 @@
         "origin": "old-english"
     }, {
         "key": "morgen",
-        "form-raw": "morgen",
+        "form-oe": "morgen",
         "type": "noun",
         "gloss": "morning",
         "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
@@ -5210,7 +5210,7 @@
         "origin": "old-english"
     }, {
         "key": "mynd",
-        "form-raw": "mynd",
+        "form-oe": "mynd",
         "type": "noun",
         "gloss": "mind",
         "gloss-alt": ["memory"],
@@ -5218,7 +5218,7 @@
         "origin": "old-english"
     }, {
         "key": "myndgi|an",
-        "form-raw": "myndgi|an",
+        "form-oe": "myndgi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["remember", "remind", "commemorate"],
@@ -5298,14 +5298,14 @@
         "origin": "old-english"
     }, {
         "key": "orf",
-        "form-raw": "orf",
+        "form-oe": "orf",
         "type": "noun",
         "gloss": "cattle",
         "tags": ["mass", "concrete", "living", "animal", "tame", "mammal", "speculative"],
         "origin": "old-english"
     }, {
         "key": "pǣċa",
-        "form-raw": "pǣċa",
+        "form-oe": "pǣċa",
         "type": "noun",
         "gloss": "deceiver",
         "tags": ["count", "concrete", "living", "person", "speculative", "homophonic"],
@@ -5396,7 +5396,7 @@
         "origin": "old-english"
     }, {
         "key": "pric+els",
-        "form-raw": "pric+els",
+        "form-oe": "pric+els",
         "type": "noun",
         "gloss": "sharp [point]",
         "tags": ["count", "concrete"],
@@ -5477,7 +5477,7 @@
         "origin": "old-english"
     }, {
         "key": "ræfnan",
-        "form-raw": "ræfn|an",
+        "form-oe": "ræfn|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[endure], [suffer]",
@@ -5485,7 +5485,7 @@
         "origin": "old-english"
     }, {
         "key": "rǣman",
-        "form-raw": "rǣm|an",
+        "form-oe": "rǣm|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[rise] up", "[wake] from rest"],
@@ -5513,7 +5513,7 @@
         "origin": "old-english"
     }, {
         "key": "rēċels",
-        "form-raw": "rēċ+els",
+        "form-oe": "rēċ+els",
         "type": "noun",
         "gloss": "incense",
         "gloss-tool": "[perfume] with incense",
@@ -5522,7 +5522,7 @@
         "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
     }, {
         "key": "rēċelsian",
-        "form-raw": "rēċ+elsi|an",
+        "form-oe": "rēċ+elsi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[perfume] with incense", "[burn] incense"],
@@ -5559,7 +5559,7 @@
         "notes": "'reng' form is in OED as rare; palatalization is unclear."
     }, {
         "key": "rētan",
-        "form-raw": "rēt|an",
+        "form-oe": "rēt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[cheer] up",
@@ -5567,7 +5567,7 @@
         "origin": "old-english"
     }, {
         "key": "rīm",
-        "form-raw": "rīm",
+        "form-oe": "rīm",
         "type": "noun",
         "gloss": "number",
         "tags": ["count", "abstract", "speculative"],
@@ -5623,7 +5623,7 @@
         "notes": "Alternate meaning 'wooden beam or spar'"
     }, {
         "key": "rōf",
-        "form-raw": "rōf",
+        "form-oe": "rōf",
         "type": "adj",
         "gloss": ["[strong] or [vigorous]", "[brave] or [keen]"],
         "gloss-alt": ["noble", "renowned"],
@@ -5760,7 +5760,7 @@
         "origin": "old-english"
     }, {
         "key": "sċin",
-        "form-raw": "sċin",
+        "form-oe": "sċin",
         "type": "noun",
         "gloss": ["deceptive [appearance]", "[spirit], [phantom]"],
         "tags": ["count", "abstract", "magical", "speculative", "homophonic"],
@@ -5785,7 +5785,7 @@
         "origin": "old-english"
     }, {
         "key": "sċop",
-        "form-raw": "sċop",
+        "form-oe": "sċop",
         "type": "noun",
         "gloss": "poet",
         "tags": ["count", "concrete", "living", "person", "role", "speculative"],
@@ -5814,7 +5814,7 @@
         "origin": "old-english"
     }, {
         "key": "sċyld",
-        "form-raw": "sċyld",
+        "form-oe": "sċyld",
         "type": "noun",
         "gloss": ["guilt", "debt"],
         "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
@@ -5822,21 +5822,21 @@
         "notes": "Should separate the 'state' tag only for the 'guilt' sense but let's play with it for now"
     }, {
         "key": "sċyldiġ",
-        "form-raw": "sċyld+iġ",
+        "form-oe": "sċyld+iġ",
         "type": "adj",
         "gloss": ["guilty", "in debt"],
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "searu-count",
-        "form-raw": "searu",
+        "form-oe": "searu",
         "type": "noun",
         "gloss": ["contrivance", "device", "stratagem"],
         "tags": ["count", "abstract", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "searu-mass",
-        "form-raw": "searu",
+        "form-oe": "searu",
         "type": "noun",
         "gloss": ["[art] or [skill]", "contrivance", "deceit", "artifice"],
         "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
@@ -5863,7 +5863,7 @@
         "notes": "Modern 'seek' may be influenced by Norse, but leaving this for itself"
     }, {
         "key": "seċġ",
-        "form-raw": "seċġ",
+        "form-oe": "seċġ",
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person", "gendered", "poetic", "speculative"],
@@ -5908,14 +5908,14 @@
         "origin": "old-english"
     }, {
         "key": "sibb",
-        "form-raw": "sibb",
+        "form-oe": "sibb",
         "type": "noun",
         "gloss": "family",
         "tags": ["count", "concrete", "living", "grouping", "obscure"],
         "origin": "old-english"
     }, {
         "key": "sibb-peace",
-        "form-raw": "sibb",
+        "form-oe": "sibb",
         "type": "noun",
         "gloss": "peace",
         "tags": ["mass", "abstract", "quality", "speculative"],
@@ -5932,7 +5932,7 @@
         "notes": "A modern usage"
     }, {
         "key": "sīcan",
-        "form-raw": "sīc|an",
+        "form-oe": "sīc|an",
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[sigh] or [groan]", "[long] for"],
@@ -5941,7 +5941,7 @@
         "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving without canon form. Needs bitransitivity"
     }, {
         "key": "siġe",
-        "form-raw": "siġe",
+        "form-oe": "siġe",
         "type": "noun",
         "gloss": "[victory], [success]",
         "tags": ["mass", "abstract", "speculative"],
@@ -6168,7 +6168,7 @@
         "origin": "old-english"
     }, {
         "key": "sneorcan",
-        "form-raw": "sneorc|an",
+        "form-oe": "sneorc|an",
         "type": "verb",
         "verb-class": 3,
         "gloss": "shrivel",
@@ -6176,7 +6176,7 @@
         "origin": "old-english"
     }, {
         "key": "snēowan",
-        "form-raw": "snēow|an",
+        "form-oe": "snēow|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["proceed", "[go] hastily"],
@@ -6185,7 +6185,7 @@
         "notes": "Class seems to bee unclear, following Bosworth"
     }, {
         "key": "snēr",
-        "form-raw": "snēr",
+        "form-oe": "snēr",
         "type": "noun",
         "gloss": "[string] (of a musical instrument)",
         "gloss-tool": "[pluck] (of stringed instruments)",
@@ -6203,21 +6203,21 @@
         "origin": "old-english"
     }, {
         "key": "snytro",
-        "form-raw": "snytro",
+        "form-oe": "snytro",
         "type": "noun",
         "gloss": "[prudence], [wisdom]",
         "tags": ["mass", "abstract", "quality", "speculative"],
         "origin": "old-english"
     }, {
         "key": "sogoþa-count",
-        "form-raw": "sogoþa",
+        "form-oe": "sogoþa",
         "type": "noun",
         "gloss": "hiccup",
         "tags": ["count", "abstract", "body-state", "speculative"],
         "origin": "old-english"
     }, {
         "key": "sogoþa-mass",
-        "form-raw": "sogoþa",
+        "form-oe": "sogoþa",
         "type": "noun",
         "gloss": "heartburn",
         "tags": ["mass", "abstract", "body-state", "speculative"],
@@ -6392,7 +6392,7 @@
         "origin": "old-english"
     }, {
         "key": "stīgan",
-        "form-raw": "stīg|an",
+        "form-oe": "stīg|an",
         "type": "verb",
         "verb-class": 1,
         "gloss": ["climb", "ascend"],
@@ -6505,7 +6505,7 @@
         "origin": "old-english"
     }, {
         "key": "swamian",
-        "form-raw": "swam|an",
+        "form-oe": "swam|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[become] dark",
@@ -6513,7 +6513,7 @@
         "origin": "old-english"
     }, {
         "key": "swamm",
-        "form-raw": "swamm",
+        "form-oe": "swamm",
         "type": "noun",
         "gloss": ["[mushroom], [fungus]", "sponge"],
         "tags": ["count", "concrete", "living", "plant", "speculative"],
@@ -6528,7 +6528,7 @@
         "origin": "old-english"
     }, {
         "key": "swān",
-        "form-raw": "swān",
+        "form-oe": "swān",
         "type": "noun",
         "gloss": ["swineherd", "herder", "peasant", "boy", "youth"],
         "gloss-alt": ["man", "warrior"],
@@ -6537,7 +6537,7 @@
         "notes": "Apparently related to MnE 'swain', OE 'sweġen', but as that apparently shows Norse influence (says OED), I'll consider this separate."
     }, {
         "key": "swarian",
-        "form-raw": "swari|an",
+        "form-oe": "swari|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[answer] or [respond]",
@@ -6576,7 +6576,7 @@
         "notes": "Alt. meaning 'sleep'"
     }, {
         "key": "swēġ",
-        "form-raw": "swēġ",
+        "form-oe": "swēġ",
         "type": "noun",
         "gloss": ["[sound], [noise]"],
         "tags": ["mass", "abstract", "homophonic"],
@@ -6584,7 +6584,7 @@
         "notes": "Needs bitransitivity"
     }, {
         "key": "swēġan",
-        "form-raw": "swēġ|an",
+        "form-oe": "swēġ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[make] noise", "[play] music"],
@@ -6611,7 +6611,7 @@
         "origin": "old-english"
     }, {
         "key": "swenċan",
-        "form-raw": "swenċ|an",
+        "form-oe": "swenċ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[force] to work", "[harass], [vex]"],
@@ -6697,7 +6697,7 @@
         "origin": "old-english"
     }, {
         "key": "swinsian",
-        "form-raw": "swinsi|an",
+        "form-oe": "swinsi|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["sing", "[sound] melodiously", "[make] melody"],
@@ -6705,7 +6705,7 @@
         "origin": "old-english"
     }, {
         "key": "swōgan",
-        "form-raw": "swōg|an",
+        "form-oe": "swōg|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[make] noise", "[roar] or [resound]", "[move] violently, [invade]"],
@@ -6772,7 +6772,7 @@
         "origin": "old-english"
     }, {
         "key": "tēon",
-        "form-raw": "tē|on",
+        "form-oe": "tē|on",
         "type": "verb",
         "verb-class": 2,
         "gloss": ["[pull] or [drag]", "[bring] or [lead]", "educate"],
@@ -6780,7 +6780,7 @@
         "origin": "old-english"
     }, {
         "key": "tēon-2",
-        "form-raw": "tē|on",
+        "form-oe": "tē|on",
         "type": "verb",
         "verb-class": 2,
         "gloss": "accuse",
@@ -6788,7 +6788,7 @@
         "origin": "old-english"
     }, {
         "key": "tīd",
-        "form-raw": "tīd",
+        "form-oe": "tīd",
         "type": "noun",
         "gloss": "time",
         "tags": ["count", "abstract", "measure", "speculative"],
@@ -6854,7 +6854,7 @@
         "origin": "old-english"
     }, {
         "key": "torht",
-        "form-raw": "torht",
+        "form-oe": "torht",
         "type": "adj",
         "gloss": ["[bright], [shiny]", "[bright], [radiant]", "glorious", "resplendent"],
         "tags": ["rare"],
@@ -6878,7 +6878,7 @@
         "origin": "old-english"
     }, {
         "key": "tungol",
-        "form-raw": "tungol",
+        "form-oe": "tungol",
         "type": "noun",
         "gloss": "star",
         "tags": ["count", "concrete", "luminous", "speculative"],
@@ -6908,7 +6908,7 @@
         "notes": "Needs bitransitivity. Alt form may be more standard in OE"
     }, {
         "key": "þæċele",
-        "form-raw": "þæċele",
+        "form-oe": "þæċele",
         "type": "noun",
         "gloss": "torch",
         "gloss-alt": ["[lamp], [light]"],
@@ -6927,7 +6927,7 @@
         "notes": "Other meanings in dialect"
     }, {
         "key": "þeġn",
-        "form-raw": "þeġn",
+        "form-oe": "þeġn",
         "type": "noun",
         "gloss": ["servant", "officer", "official"],
         "tags": ["count", "concrete", "living", "person", "role", "speculative"],
@@ -6981,14 +6981,14 @@
         "origin": "old-english"
     }, {
         "key": "þēod-grouping",
-        "form-raw": "þēod",
+        "form-oe": "þēod",
         "type": "noun",
         "gloss": "[nation] or [people]",
         "tags": ["count", "abstract", "grouping", "speculative"],
         "origin": "old-english"
     }, {
         "key": "þēod-language",
-        "form-raw": "þēod",
+        "form-oe": "þēod",
         "type": "noun",
         "gloss": "language",
         "tags": ["count", "abstract", "man-made", "speculative"],
@@ -7025,7 +7025,7 @@
         "notes": "Original meaning 'customs' or 'good qualities'"
     }, {
         "key": "þiċġan",
-        "form-raw": "þiċġ|an",
+        "form-oe": "þiċġ|an",
         "type": "verb",
         "verb-class": 5,
         "gloss": ["[take] or [receive]", "accept", "[eat] or [drink]", "consume"],
@@ -7060,7 +7060,7 @@
         "origin": "old-english"
     }, {
         "key": "þracu",
-        "form-raw": "þracu",
+        "form-oe": "þracu",
         "type": "noun",
         "gloss": "[power], [force]",
         "tags": ["mass", "abstract", "quality", "speculative"],
@@ -7117,7 +7117,7 @@
         "origin": "old-english"
     }, {
         "key": "þyld",
-        "form-raw": "þyld",
+        "form-oe": "þyld",
         "type": "noun",
         "gloss": ["patience", "endurance"],
         "tags": ["mass", "abstract", "quality", "speculative"],
@@ -7157,7 +7157,7 @@
         "notes": "I speculate form is patterned after 'wake' (see 'wacan' and 'wacian')"
     }, {
         "key": "wǣfels",
-        "form-raw": "wǣf+els",
+        "form-oe": "wǣf+els",
         "type": "noun",
         "gloss": ["covering", "cloak", "garment"],
         "gloss-tool": ["cover", "dress"],
@@ -7165,7 +7165,7 @@
         "origin": "old-english"
     }, {
         "key": "wǣgan",
-        "form-raw": "wǣg|an",
+        "form-oe": "wǣg|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["deceive", "[harass] or [afflict]"],
@@ -7263,7 +7263,7 @@
         "notes": "Chosen form is an Anglian form of my own inference. Seems to work out the same anyway"
     }, {
         "key": "walu",
-        "form-raw": "walu",
+        "form-oe": "walu",
         "type": "noun",
         "gloss": ["[mark] left by a wound", "scar"],
         "tags": ["count", "abstract", "obscure"],
@@ -7279,7 +7279,7 @@
         "origin": "old-english"
     }, {
         "key": "wancol",
-        "form-raw": "wancol",
+        "form-oe": "wancol",
         "type": "adj",
         "gloss": ["[weak] or [unreliable]"],
         "tags": ["obscure"],
@@ -7297,7 +7297,7 @@
         "notes": "OE had transitive meanings 'impair', 'infringe', 'annul'"
     }, {
         "key": "wāse",
-        "form-raw": "wāse",
+        "form-oe": "wāse",
         "type": "noun",
         "gloss": ["mud", "slime"],
         "tags": ["mass", "concrete", "fluid", "liquid", "material", "shiny"],
@@ -7321,7 +7321,7 @@
         "origin": "old-english"
     }, {
         "key": "wearr",
-        "form-raw": "wearr",
+        "form-oe": "wearr",
         "type": "noun",
         "gloss": ["callus", "[knot] of a tree"],
         "tags": ["count", "concrete", "bodypart", "speculative", "homophonic"],
@@ -7339,7 +7339,7 @@
         "origin": "old-english"
     }, {
         "key": "weċġ",
-        "form-raw": "weċġ",
+        "form-oe": "weċġ",
         "type": "noun",
         "gloss": "wedge",
         "gloss-alt": ["ingot"],
@@ -7443,7 +7443,7 @@
         "notes": "Alternate intransitive meaning 'happen'"
     }, {
         "key": "wēpan",
-        "form-raw": "wēp|an",
+        "form-oe": "wēp|an",
         "type": "verb",
         "verb-class": 7,
         "gloss": "negotiate",
@@ -7451,7 +7451,7 @@
         "origin": "old-english"
     }, {
         "key": "wer",
-        "form-raw": "wer",
+        "form-oe": "wer",
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -7500,7 +7500,7 @@
         "origin": "old-english"
     }, {
         "key": "wīġ",
-        "form-raw": "wīġ",
+        "form-oe": "wīġ",
         "type": "noun",
         "gloss": "war",
         "tags": ["mass", "abstract", "activity", "speculative"],
@@ -7564,7 +7564,7 @@
         "notes": "Bright cites this as 'wīse', so I'd guess this is based on an inflected form, but I kind of want to leave it for the goofy alternate form 'wice'"
     }, {
         "key": "wīte",
-        "form-raw": "wīte",
+        "form-oe": "wīte",
         "type": "noun",
         "gloss": "[torment] or [punishment]",
         "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
@@ -7589,21 +7589,21 @@
         "notes": "Other meanings in dialect"
     }, {
         "key": "wlanc-adj",
-        "form-raw": "wlanc",
+        "form-oe": "wlanc",
         "type": "adj",
         "gloss": ["proud", "arrogant"],
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "wlanc-n",
-        "form-raw": "wlanc",
+        "form-oe": "wlanc",
         "type": "noun",
         "gloss": "pride",
         "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english"
     }, {
         "key": "wlātian",
-        "form-raw": "wlāti|an",
+        "form-oe": "wlāti|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[gaze] or [observe]",
@@ -7611,7 +7611,7 @@
         "origin": "old-english"
     }, {
         "key": "wlītan",
-        "form-raw": "wlīt|an",
+        "form-oe": "wlīt|an",
         "type": "verb",
         "verb-class": 1,
         "gloss": "[look], [behold]",
@@ -7619,14 +7619,14 @@
         "origin": "old-english"
     }, {
         "key": "wlite",
-        "form-raw": "wlite",
+        "form-oe": "wlite",
         "type": "noun",
         "gloss": "[aspect] or [appearance]",
         "tags": ["mass", "abstract", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "wlite-good-looks",
-        "form-raw": "wlite",
+        "form-oe": "wlite",
         "type": "noun",
         "gloss": "good [looks]",
         "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
@@ -7664,7 +7664,7 @@
         "origin": "old-english"
     }, {
         "key": "wōl",
-        "form-raw": "wōl",
+        "form-oe": "wōl",
         "type": "noun",
         "gloss": "[plague], [pestilence]",
         "tags": ["mass", "abstract", "speculative", "homophonic"],
@@ -7735,7 +7735,7 @@
         "origin": "old-english"
     }, {
         "key": "wreċċan",
-        "form-raw": "wreċċ|an",
+        "form-oe": "wreċċ|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[awaken] or [arouse]",
@@ -7767,7 +7767,7 @@
         "notes": "Reflexes 'wree' and 'wry' are seen. The two forms here produce them respectively, though predominance of 'wry' may be due to analogy with other words."
     }, {
         "key": "wrīġels",
-        "form-raw": "wrīġ+els",
+        "form-oe": "wrīġ+els",
         "type": "noun",
         "gloss": "[veil] or [covering]",
         "tags": ["count", "concrete", "man-made", "garment", "speculative"],
@@ -7819,7 +7819,7 @@
         "origin": "old-english"
     }, {
         "key": "wuldor",
-        "form-raw": "wuldor",
+        "form-oe": "wuldor",
         "type": "noun",
         "gloss": ["[glory], [splendor]", "[reverence] or [praise]", "worship"],
         "tags": ["mass", "abstract"],
@@ -7846,7 +7846,7 @@
         "origin": "old-english"
     }, {
         "key": "wynn",
-        "form-raw": "wynn",
+        "form-oe": "wynn",
         "type": "noun",
         "gloss": "[joy], [delight]",
         "tags": ["mass", "abstract", "mind-state", "obscure"],
@@ -7863,7 +7863,7 @@
         "notes": "didn't become adjective until early modern english"
     }, {
         "key": "wyrdan",
-        "form-raw": "wyrd|an",
+        "form-oe": "wyrd|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "injure",

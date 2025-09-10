@@ -5,7 +5,7 @@ from src.tools.morphs.hardcoded.modify import modify
 
 # Write groups to the specified filenames
 def write(morphs, filename):
-    asorted = format.sort(morphs)
+    asorted = format.sort(filename, morphs)
     formatted = format.format(asorted)
     file_tool.write_formatted_to(formatted, filename)
 
