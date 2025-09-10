@@ -247,24 +247,30 @@
         "notes": "Some other related senses, see Hall-concise"
     }, {
         "key": "abbod",
-        "form-raw": "abbod",
-        "form-canon": "abbot",
+        "form-oe": {
+            "form": "abbod",
+            "canon": "abbot"
+        },
         "type": "noun",
         "gloss": "abbot",
         "tags": ["count", "concrete", "living", "person", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "abbudisse",
-        "form-raw": "abbudisse",
-        "form-canon": "abbess",
+        "form-oe": {
+            "form": "abbudisse",
+            "canon": "abbess"
+        },
         "type": "noun",
         "gloss": "abbess",
         "tags": ["count", "concrete", "living", "person", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "āc",
-        "form-raw": "āc",
-        "form-canon": "oak",
+        "form-oe": {
+            "form": "āc",
+            "canon": "oak"
+        },
         "type": "noun",
         "gloss": "oak [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree"],
@@ -294,8 +300,10 @@
         "origin": "old-english"
     }, {
         "key": "ādl",
-        "form-raw": "ādl",
-        "form-canon": "addle",
+        "form-oe": {
+            "form": "ādl",
+            "canon": "addle"
+        },
         "type": "noun",
         "gloss": "[disease], [sickness]",
         "tags": ["count", "abstract", "quality", "body-state"],
@@ -319,8 +327,10 @@
         "origin": "old-english"
     }, {
         "key": "age/FAKE",
-        "form-raw": "age",
-        "form-canon": "awe",
+        "form-oe": {
+            "form": "age",
+            "canon": "awe"
+        },
         "type": "noun",
         "gloss": "awe",
         "tags": ["mass", "abstract", "mind-state"],
@@ -401,8 +411,10 @@
         "origin": "old-english"
     }, {
         "key": "ār-oar",
-        "form-raw": "ār",
-        "form-canon": "oar",
+        "form-oe": {
+            "form": "ār",
+            "canon": "oar"
+        },
         "type": "noun",
         "gloss": "oar",
         "gloss-tool": "[row] a boat",
@@ -410,8 +422,10 @@
         "origin": "old-english"
     }, {
         "key": "ār-ore",
-        "form-raw": "ār",
-        "form-canon": "ore",
+        "form-oe": {
+            "form": "ār",
+            "canon": "ore"
+        },
         "type": "noun",
         "gloss": "ore",
         "tags": ["mass", "concrete", "material"],
@@ -451,8 +465,10 @@
         "origin": "old-english"
     }, {
         "key": "assa",
-        "form-raw": "assa",
-        "form-canon": "ass",
+        "form-oe": {
+            "form": "assa",
+            "canon": "ass"
+        },
         "type": "noun",
         "gloss": "donkey",
         "gloss-animal": ["[act] foolish", "[be] stubborn"],
@@ -460,8 +476,10 @@
         "origin": "old-english"
     }, {
         "key": "āte",
-        "form-raw": "āte",
-        "form-canon": "oat",
+        "form-oe": {
+            "form": "āte",
+            "canon": "oat"
+        },
         "type": "noun",
         "gloss": "oats",
         "tags": ["mass", "concrete", "living", "plant", "food"],
@@ -487,8 +505,10 @@
         "notes": "TODO: double-check the chosen form here. Is there another form?"
     }, {
         "key": "āþ",
-        "form-raw": "āþ",
-        "form-canon": "oath",
+        "form-oe": {
+            "form": "āþ",
+            "canon": "oath"
+        },
         "type": "noun",
         "gloss": "oath",
         "gloss-tool": ["[bind] by oath"],
@@ -496,15 +516,19 @@
         "origin": "old-english"
     }, {
         "key": "āþer",
-        "form-raw": "āþer",
-        "form-canon": "other",
+        "form-oe": {
+            "form": "āþer",
+            "canon": "other"
+        },
         "type": "adj",
         "gloss": "different",
         "origin": "old-english"
     }, {
         "key": "bǣl",
-        "form-raw": "bǣl",
-        "form-canon": "bale",
+        "form-oe": {
+            "form": "bǣl",
+            "canon": "bale"
+        },
         "type": "noun",
         "gloss": ["large [fire]", "funeral [pyre]"],
         "gloss-alt": "bonfire",
@@ -512,8 +536,10 @@
         "origin": "old-english"
     }, {
         "key": "bær",
-        "form-raw": "bær",
-        "form-canon": "bare",
+        "form-oe": {
+            "form": "bær",
+            "canon": "bare"
+        },
         "type": "adj",
         "gloss": "naked",
         "origin": "old-english"
@@ -544,8 +570,10 @@
         "origin": "old-english"
     }, {
         "key": "bæþ",
-        "form-raw": "bæþ",
-        "form-canon": "bath",
+        "form-oe": {
+            "form": "bæþ",
+            "canon": "bath"
+        },
         "type": "noun",
         "gloss": "bath",
         "tags": ["count", "concrete", "terrain", "man-made"],
@@ -571,16 +599,20 @@
         "notes": "Chosen form appears to be Anglian"
     }, {
         "key": "bān",
-        "form-raw": "bān",
-        "form-canon": "bone",
+        "form-oe": {
+            "form": "bān",
+            "canon": "bone"
+        },
         "type": "noun",
         "gloss": "bone",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "bana",
-        "form-raw": "bana",
-        "form-canon": "bane",
+        "form-oe": {
+            "form": "bana",
+            "canon": "bane"
+        },
         "type": "noun",
         "gloss": ["harm", "poison", "[death] or [destruction]"],
         "tags": ["mass", "abstract", "obscure"],
@@ -608,8 +640,10 @@
         "notes": "MnE has 'bair' from Scots, as well as an obsolete 'barn'. Leaving without canon form to do what it wants"
     }, {
         "key": "bastard",
-        "form-raw": "bast+ard",
-        "form-canon": "bastard",
+        "form-oe": {
+            "form": "bast+ard",
+            "canon": "bastard"
+        },
         "type": "noun",
         "gloss": "bastard",
         "tags": ["count", "concrete", "living", "person"],
@@ -617,8 +651,10 @@
         "notes": "Not sure how much this actually appears in OE. It's in Bright's, but not Bosworth. Adding it in any case for kicks."
     }, {
         "key": "bāt",
-        "form-raw": "bāt",
-        "form-canon": "boat",
+        "form-oe": {
+            "form": "bāt",
+            "canon": "boat"
+        },
         "type": "noun",
         "gloss": "boat",
         "tags": ["count", "concrete", "man-made", "vessel"],
@@ -670,8 +706,10 @@
         "origin": "old-english"
     }, {
         "key": "bēam",
-        "form-raw": "bēam",
-        "form-canon": "beam",
+        "form-oe": {
+            "form": "bēam",
+            "canon": "beam"
+        },
         "type": "noun",
         "gloss": ["beam", "tree"],
         "tags": ["count", "concrete", "living", "plant", "material"],
@@ -679,8 +717,10 @@
         "notes": "Alt. meaning 'gallows'"
     }, {
         "key": "bearm",
-        "form-raw": "bearm",
-        "form-canon": "barm",
+        "form-oe": {
+            "form": "bearm",
+            "canon": "barm"
+        },
         "type": "noun",
         "gloss": "[bosom], [lap]",
         "tags": ["count", "concrete", "bodypart", "obscure"],
@@ -717,8 +757,10 @@
         "notes": "Wiktionary indicates that modern form 'beckon' is via Anglian 'bēcnan', but I can't make it work. To do with timing of consonant cluster breaking maybe"
     }, {
         "key": "bed",
-        "form-raw": "bed",
-        "form-canon": "bed",
+        "form-oe": {
+            "form": "bed",
+            "canon": "bed"
+        },
         "type": "noun",
         "gloss": "bed",
         "gloss-tool": ["[go] to bed", "[take] to bed"],
@@ -762,8 +804,10 @@
         "origin": "old-english"
     }, {
         "key": "belgan",
-        "form-raw": "belg|an",
-        "form-canon": "bellow",
+        "form-oe": {
+            "form": "belg|an",
+            "canon": "bellow"
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "bellow",
@@ -772,8 +816,10 @@
         "origin": "old-english"
     }, {
         "key": "bellan",
-        "form-raw": "bell|an",
-        "form-canon": "bell",
+        "form-oe": {
+            "form": "bell|an",
+            "canon": "bell"
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "[bellow] or [roar]",
@@ -781,16 +827,20 @@
         "origin": "old-english"
     }, {
         "key": "bēn",
-        "form-raw": "bēn",
-        "form-canon": "bene",
+        "form-oe": {
+            "form": "bēn",
+            "canon": "bene"
+        },
         "type": "noun",
         "gloss": ["prayer", "request", "boon"],
         "tags": ["count", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "benċ",
-        "form-raw": "benċ",
-        "form-canon": "bench",
+        "form-oe": {
+            "form": "benċ",
+            "canon": "bench"
+        },
         "type": "noun",
         "gloss": "bench",
         "gloss-tool": ["[put] on a bench", "[sit] on a bench"],
@@ -817,16 +867,20 @@
         "notes": "Original meaning 'offer, give' and 'proclaim, announce'"
     }, {
         "key": "bēor",
-        "form-raw": "bēor",
-        "form-canon": "beer",
+        "form-oe": {
+            "form": "bēor",
+            "canon": "beer"
+        },
         "type": "noun",
         "gloss": "beer",
         "tags": ["mass", "concrete", "man-made"],
         "origin": "old-english"
     }, {
         "key": "beorg",
-        "form-raw": "beorg",
-        "form-canon": "barrow",
+        "form-oe": {
+            "form": "beorg",
+            "canon": "barrow"
+        },
         "type": "noun",
         "gloss": ["[hill] or [mountain]", "mound"],
         "tags": ["count", "concrete", "terrain", "obscure"],
@@ -867,8 +921,10 @@
         "notes": "Needs bitransitivity. Also sense 'boast'"
     }, {
         "key": "bera",
-        "form-raw": "bera",
-        "form-canon": "bear",
+        "form-oe": {
+            "form": "bera",
+            "canon": "bear"
+        },
         "type": "noun",
         "gloss": "bear",
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
@@ -905,8 +961,10 @@
         "origin": "old-english"
     }, {
         "key": "bētan",
-        "form-raw": "bēt|an",
-        "form-canon": "beet",
+        "form-oe": {
+            "form": "bēt|an",
+            "canon": "beet"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["improve", "atone", "[make] a fire"],
@@ -914,8 +972,10 @@
         "origin": "old-english"
     }, {
         "key": "bī-spell",
-        "form-raw": "bi-spell",
-        "form-canon": "byspell",
+        "form-oe": {
+            "form": "bi-spell",
+            "canon": "byspell"
+        },
         "type": "noun",
         "gloss": ["parable", "example"],
         "gloss-tool": ["[give] a parable", "[speak] in parables", "[give] an example"],
@@ -991,23 +1051,29 @@
         "notes": "There is a northern form 'bizen', apparently influenced by ON as well. Leaving canonless for now."
     }, {
         "key": "bit",
-        "form-raw": "bit",
-        "form-canon": "bit",
+        "form-oe": {
+            "form": "bit",
+            "canon": "bit"
+        },
         "type": "noun",
         "gloss": "small [quantity] of something",
         "tags": ["count", "abstract", "measure"],
         "origin": "old-english"
     }, {
         "key": "biter",
-        "form-raw": "biter",
-        "form-canon": "bitter",
+        "form-oe": {
+            "form": "biter",
+            "canon": "bitter"
+        },
         "type": "adj",
         "gloss": "bitter",
         "origin": "old-english"
     }, {
         "key": "biṡċop",
-        "form-raw": "bisċop",
-        "form-canon": "bishop",
+        "form-oe": {
+            "form": "bisċop",
+            "canon": "bishop"
+        },
         "type": "noun",
         "gloss": "bishop",
         "tags": ["count", "concrete", "living", "person", "role", "ruler"],
@@ -1048,8 +1114,10 @@
         "origin": "old-english"
     }, {
         "key": "blīþe",
-        "form-raw": "blīþe",
-        "form-canon": "blithe",
+        "form-oe": {
+            "form": "blīþe",
+            "canon": "blithe"
+        },
         "type": "adj",
         "gloss": "[indifferent] or [careless]",
         "gloss-alt": ["happy"],
@@ -1099,8 +1167,10 @@
         "origin": "old-english"
     }, {
         "key": "brīdel",
-        "form-raw": "brīdel",
-        "form-canon": "bridle",
+        "form-oe": {
+            "form": "brīdel",
+            "canon": "bridle"
+        },
         "type": "noun",
         "gloss": "bridle",
         "gloss-tool": ["[fit] with a bridle", "restrain"],
@@ -1126,16 +1196,20 @@
         "origin": "old-english"
     }, {
         "key": "broc",
-        "form-raw": "broc",
-        "form-canon": "brock",
+        "form-oe": {
+            "form": "broc",
+            "canon": "brock"
+        },
         "type": "noun",
         "gloss": "badger",
         "tags": ["count", "concrete", "living", "animal", "wild", "obscure"],
         "origin": "old-english"
     }, {
         "key": "brōþor",
-        "form-raw": "brōþor",
-        "form-canon": "brother",
+        "form-oe": {
+            "form": "brōþor",
+            "canon": "brother"
+        },
         "type": "noun",
         "gloss": "brother",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -1153,8 +1227,10 @@
         "origin": "old-english"
     }, {
         "key": "brȳd",
-        "form-raw": "brȳd",
-        "form-canon": "bride",
+        "form-oe": {
+            "form": "brȳd",
+            "canon": "bride"
+        },
         "type": "noun",
         "gloss": "bride",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -1169,8 +1245,10 @@
         "origin": "old-english"
     }, {
         "key": "būc-bodypart",
-        "form-raw": "būc",
-        "form-canon": "bouk",
+        "form-oe": {
+            "form": "būc",
+            "canon": "bouk"
+        },
         "type": "noun",
         "gloss": "[belly], [stomach]",
         "tags": ["count", "concrete", "bodypart", "obscure"],
@@ -1184,8 +1262,10 @@
         "origin": "old-english"
     }, {
         "key": "būr",
-        "form-raw": "būr",
-        "form-canon": "bower",
+        "form-oe": {
+            "form": "būr",
+            "canon": "bower"
+        },
         "type": "noun",
         "gloss": "[chamber], enclosed [place]",
         "tags": ["count", "concrete", "man-made"],
@@ -1304,8 +1384,10 @@
         "notes": "Chosen form is Anglian. Could be 'mass' or 'count'"
     }, {
         "key": "ċeap",
-        "form-raw": "ċeap",
-        "form-canon": "cheap",
+        "form-oe": {
+            "form": "ċeap",
+            "canon": "cheap"
+        },
         "type": "noun",
         "gloss": ["trade", "merchandise", "bargain"],
         "tags": ["mass", "abstract", "speculative"],
@@ -1313,8 +1395,10 @@
         "notes": "Also 'cattle'"
     }, {
         "key": "ċeap-activity",
-        "form-raw": "ċeap",
-        "form-canon": "cheap",
+        "form-oe": {
+            "form": "ċeap",
+            "canon": "cheap"
+        },
         "type": "noun",
         "gloss": "trade",
         "tags": ["mass", "abstract", "activity", "speculative"],
@@ -1322,8 +1406,10 @@
         "notes": "Also 'cattle'"
     }, {
         "key": "ċeapian",
-        "form-raw": "ċeapi|an",
-        "form-canon": "cheap",
+        "form-oe": {
+            "form": "ċeapi|an",
+            "canon": "cheap"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["trade", "buy", "bribe"],
@@ -1331,8 +1417,10 @@
         "origin": "old-english"
     }, {
         "key": "ċeariġ",
-        "form-raw": "ċear+iġ",
-        "form-canon": "chary",
+        "form-oe": {
+            "form": "ċear+iġ",
+            "canon": "chary"
+        },
         "type": "adj",
         "gloss": "[cautious] or [circumspect]",
         "gloss-alt": "sorrowful",
@@ -1374,8 +1462,10 @@
         "origin": "old-english"
     }, {
         "key": "ċeorl",
-        "form-raw": "ċeorl",
-        "form-canon": "churl",
+        "form-oe": {
+            "form": "ċeorl",
+            "canon": "churl"
+        },
         "type": "noun",
         "gloss": "low-class [person]",
         "tags": ["count", "concrete", "living", "person"],
@@ -1402,8 +1492,10 @@
         "origin": "old-english"
     }, {
         "key": "ċild",
-        "form-raw": "ċild",
-        "form-canon": "child",
+        "form-oe": {
+            "form": "ċild",
+            "canon": "child"
+        },
         "type": "noun",
         "gloss": "child",
         "tags": ["count", "concrete", "living", "person"],
@@ -1417,8 +1509,10 @@
         "origin": "old-english"
     }, {
         "key": "ċin",
-        "form-raw": "ċin",
-        "form-canon": "chin",
+        "form-oe": {
+            "form": "ċin",
+            "canon": "chin"
+        },
         "type": "noun",
         "gloss": "chin",
         "tags": ["count", "concrete", "living", "bodypart"],
@@ -1440,16 +1534,20 @@
         "notes": "Sense a bit unclear"
     }, {
         "key": "clǣġ",
-        "form-raw": "clǣġ",
-        "form-canon": "clay",
+        "form-oe": {
+            "form": "clǣġ",
+            "canon": "clay"
+        },
         "type": "noun",
         "gloss": "clay",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
         "key": "clif",
-        "form-raw": "clif",
-        "form-canon": "cliff",
+        "form-oe": {
+            "form": "clif",
+            "canon": "cliff"
+        },
         "type": "noun",
         "gloss": "cliff",
         "tags": ["count", "concrete", "terrain"],
@@ -1465,16 +1563,20 @@
         "origin": "old-english"
     }, {
         "key": "clot",
-        "form-raw": "clot",
-        "form-canon": "clot",
+        "form-oe": {
+            "form": "clot",
+            "canon": "clot"
+        },
         "type": "noun",
         "gloss": "[lump] or accumulated [mass]",
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "clūd",
-        "form-raw": "clūd",
-        "form-canon": "cloud",
+        "form-oe": {
+            "form": "clūd",
+            "canon": "cloud"
+        },
         "type": "noun",
         "gloss": "cloud",
         "tags": ["count", "concrete", "weather", "glooming"],
@@ -1482,16 +1584,20 @@
         "notes": "Alternate meaning 'rock, hill', or general sense of 'accumulated mass'"
     }, {
         "key": "clūd-singleton",
-        "form-raw": "clūd",
-        "form-canon": "cloud",
+        "form-oe": {
+            "form": "clūd",
+            "canon": "cloud"
+        },
         "type": "noun",
         "gloss": "clouds",
         "tags": ["singleton", "concrete", "place", "glooming"],
         "origin": "old-english"
     }, {
         "key": "cnīf",
-        "form-raw": "cnīf",
-        "form-canon": "knife",
+        "form-oe": {
+            "form": "cnīf",
+            "canon": "knife"
+        },
         "type": "noun",
         "gloss": "knife",
         "gloss-tool": "[cut] with a knife",
@@ -1499,8 +1605,10 @@
         "origin": "old-english"
     }, {
         "key": "cniht",
-        "form-raw": "cniht",
-        "form-canon": "knight",
+        "form-oe": {
+            "form": "cniht",
+            "canon": "knight"
+        },
         "type": "noun",
         "gloss": "knight",
         "gloss-alt": "servant",
@@ -1509,8 +1617,10 @@
         "notes": "Additional sense 'boy', but leaving ungendered for now"
     }, {
         "key": "cnotta",
-        "form-raw": "cnotta",
-        "form-canon": "knot",
+        "form-oe": {
+            "form": "cnotta",
+            "canon": "knot"
+        },
         "type": "noun",
         "gloss": "knot",
         "gloss-tool": ["[tie] with a knot"],
@@ -1541,8 +1651,10 @@
         "origin": "old-english"
     }, {
         "key": "cōl",
-        "form-raw": "cōl",
-        "form-canon": "cool",
+        "form-oe": {
+            "form": "cōl",
+            "canon": "cool"
+        },
         "type": "adj",
         "gloss": "cool",
         "origin": "old-english"
@@ -1556,8 +1668,10 @@
         "origin": "old-english"
     }, {
         "key": "cræfte",
-        "form-raw": "cræfte",
-        "form-canon": "craft",
+        "form-oe": {
+            "form": "cræfte",
+            "canon": "craft"
+        },
         "type": "noun",
         "gloss": "[skill], [ability]",
         "gloss-alt": "strength",
@@ -1572,8 +1686,10 @@
         "origin": "old-english"
     }, {
         "key": "culufre",
-        "form-raw": "culufre",
-        "form-canon": "culver",
+        "form-oe": {
+            "form": "culufre",
+            "canon": "culver"
+        },
         "type": "noun",
         "gloss": "dove",
         "tags": ["count", "concrete", "living", "animal", "tame", "wild"],
@@ -1590,8 +1706,10 @@
         "origin": "old-english"
     }, {
         "key": "cwalm",
-        "form-raw": "cwalm",
-        "form-canon": "qualm",
+        "form-oe": {
+            "form": "cwalm",
+            "canon": "qualm"
+        },
         "type": "noun",
         "gloss": ["[feeling] of apprehension or doubt"],
         "tags": ["count", "abstract", "mind-state"],
@@ -1648,8 +1766,10 @@
         "origin": "old-english"
     }, {
         "key": "cwēn",
-        "form-raw": "cwēn",
-        "form-canon": "queen",
+        "form-oe": {
+            "form": "cwēn",
+            "canon": "queen"
+        },
         "type": "noun",
         "gloss": "queen",
         "tags": ["count", "concrete", "living", "person", "gendered", "ruler"],
@@ -1665,8 +1785,10 @@
         "origin": "old-english"
     }, {
         "key": "cwene",
-        "form-raw": "cwene",
-        "form-canon": "quean",
+        "form-oe": {
+            "form": "cwene",
+            "canon": "quean"
+        },
         "type": "noun",
         "gloss": "[woman] (derogatory)",
         "tags": ["count", "concrete", "living", "person", "gendered", "no-gen"],
@@ -1684,8 +1806,10 @@
         "origin": "old-english"
     }, {
         "key": "cwic",
-        "form-raw": "cwic",
-        "form-canon": "quick",
+        "form-oe": {
+            "form": "cwic",
+            "canon": "quick"
+        },
         "type": "adj",
         "gloss": "fast",
         "gloss-alt": "living",
@@ -1734,8 +1858,10 @@
         "origin": "old-english"
     }, {
         "key": "cynn",
-        "form-raw": "cynn",
-        "form-canon": "kin",
+        "form-oe": {
+            "form": "cynn",
+            "canon": "kin"
+        },
         "type": "noun",
         "gloss": "family",
         "tags": ["mass", "abstract", "living", "person", "gendered", "grouping"],
@@ -1753,16 +1879,20 @@
         "origin": "old-english"
     }, {
         "key": "dæġ",
-        "form-raw": "dæġ",
-        "form-canon": "day",
+        "form-oe": {
+            "form": "dæġ",
+            "canon": "day"
+        },
         "type": "noun",
         "gloss": "day",
         "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day", "measure"],
         "origin": "old-english"
     }, {
         "key": "dagn/FAKE",
-        "form-raw": "dagn",
-        "form-canon": "dawn",
+        "form-oe": {
+            "form": "dagn",
+            "canon": "dawn"
+        },
         "type": "noun",
         "gloss": "dawn",
         "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
@@ -1770,15 +1900,19 @@
         "notes": "HACK: Totally fake morph, meant to capture the later 'dawn', in fact derived from OE 'dawian' or a Norse cognate. See OED."
     }, {
         "key": "dēad",
-        "form-raw": "dēad",
-        "form-canon": "dead",
+        "form-oe": {
+            "form": "dēad",
+            "canon": "dead"
+        },
         "type": "adj",
         "gloss": "dead",
         "origin": "old-english"
     }, {
         "key": "dēaþ",
-        "form-raw": "dēaþ",
-        "form-canon": "death",
+        "form-oe": {
+            "form": "dēaþ",
+            "canon": "death"
+        },
         "type": "noun",
         "gloss": "death",
         "tags": ["count", "abstract"],
@@ -1786,8 +1920,10 @@
         "notes": "Could also be mass"
     }, {
         "key": "dēawe",
-        "form-raw": "dēawe",
-        "form-canon": "dew",
+        "form-oe": {
+            "form": "dēawe",
+            "canon": "dew"
+        },
         "type": "noun",
         "gloss": "dew",
         "tags": ["mass", "concrete", "fluid", "liquid"],
@@ -1813,8 +1949,10 @@
         "origin": "old-english"
     }, {
         "key": "dēop",
-        "form-raw": "dēop",
-        "form-canon": "deep",
+        "form-oe": {
+            "form": "dēop",
+            "canon": "deep"
+        },
         "type": "adj",
         "gloss": "deep",
         "origin": "old-english"
@@ -1838,15 +1976,19 @@
         "origin": "old-english"
     }, {
         "key": "dohtiġ",
-        "form-raw": "doht+iġ",
-        "form-canon": "doughty",
+        "form-oe": {
+            "form": "doht+iġ",
+            "canon": "doughty"
+        },
         "type": "adj",
         "gloss": "[brave], [determined]",
         "origin": "old-english"
     }, {
         "key": "dōm",
-        "form-raw": "dōm",
-        "form-canon": "doom",
+        "form-oe": {
+            "form": "dōm",
+            "canon": "doom"
+        },
         "type": "noun",
         "gloss": "judgement",
         "tags": ["mass", "abstract", "man-made", "activity"],
@@ -1870,16 +2012,20 @@
         "notes": "Form evolution is unclear, according to OED. 'dosc' is my assumption based on OED's mention of metathesis"
     }, {
         "key": "draca",
-        "form-raw": "draca",
-        "form-canon": "drake",
+        "form-oe": {
+            "form": "draca",
+            "canon": "drake"
+        },
         "type": "noun",
         "gloss": "dragon",
         "tags": ["count", "concrete", "living", "animal", "wild", "magical"],
         "origin": "old-english"
     }, {
         "key": "drēam",
-        "form-raw": "drēam",
-        "form-canon": "dream",
+        "form-oe": {
+            "form": "drēam",
+            "canon": "dream"
+        },
         "type": "noun",
         "gloss": "dream",
         "gloss-alt": ["music", "revelry", "[frenzy], [ecstasy]"],
@@ -1990,8 +2136,10 @@
         "origin": "old-english"
     }, {
         "key": "dufa",
-        "form-raw": "dufa",
-        "form-canon": "dove",
+        "form-oe": {
+            "form": "dufa",
+            "canon": "dove"
+        },
         "type": "noun",
         "gloss": "dove",
         "tags": ["count", "concrete", "living", "animal", "tame", "wild"],
@@ -2016,8 +2164,10 @@
         "origin": "old-english"
     }, {
         "key": "dūn",
-        "form-raw": "dūn",
-        "form-canon": "down",
+        "form-oe": {
+            "form": "dūn",
+            "canon": "down"
+        },
         "type": "noun",
         "gloss": "hill",
         "tags": ["count", "concrete", "terrain", "obscure"],
@@ -2094,8 +2244,10 @@
         "origin": "old-english"
     }, {
         "key": "dyrne",
-        "form-raw": "dyrne",
-        "form-canon": "dern",
+        "form-oe": {
+            "form": "dyrne",
+            "canon": "dern"
+        },
         "type": "noun",
         "gloss": ["secret", "secret [place]", "obscure [language]"],
         "tags": ["count", "abstract", "man-made", "obscure"],
@@ -2103,8 +2255,10 @@
         "notes": "Also sense 'darkness', 'obscurity'"
     }, {
         "key": "dysiġ",
-        "form-raw": "dys+iġ",
-        "form-canon": "dizzy",
+        "form-oe": {
+            "form": "dys+iġ",
+            "canon": "dizzy"
+        },
         "type": "adj",
         "gloss": "dizzy",
         "origin": "old-english"
@@ -2127,8 +2281,10 @@
         "notes": "Chosen form is Anglian, alt. is WS"
     }, {
         "key": "ealu",
-        "form-raw": "ealu",
-        "form-canon": "ale",
+        "form-oe": {
+            "form": "ealu",
+            "canon": "ale"
+        },
         "type": "noun",
         "gloss": "ale",
         "tags": ["mass", "concrete", "fluid", "liquid", "man-made"],
@@ -2173,8 +2329,10 @@
         "notes": "'arm' is Anglian. Both give same result"
     }, {
         "key": "ebba",
-        "form-raw": "ebba",
-        "form-canon": "ebb",
+        "form-oe": {
+            "form": "ebba",
+            "canon": "ebb"
+        },
         "type": "noun",
         "gloss": "low [tide]",
         "tags": ["mass", "abstract", "bounded", "time", "time-of-day"],
@@ -2199,8 +2357,10 @@
         "origin": "old-english"
     }, {
         "key": "eċġ",
-        "form-raw": "eċġ",
-        "form-canon": "edge",
+        "form-oe": {
+            "form": "eċġ",
+            "canon": "edge"
+        },
         "type": "noun",
         "gloss": ["edge", "blade"],
         "gloss-tool": ["[cut]"],
@@ -2263,32 +2423,40 @@
         "notes": "Chosen form is Mercian/Kentish, alt. is WS. Rare for balance with 'elf'"
     }, {
         "key": "eln-arm",
-        "form-raw": "eln",
-        "form-canon": "ell",
+        "form-oe": {
+            "form": "eln",
+            "canon": "ell"
+        },
         "type": "noun",
         "gloss": "arm",
         "tags": ["count", "concrete", "living", "bodypart", "speculative"],
         "origin": "old-english"
     }, {
         "key": "eln-measure",
-        "form-raw": "eln",
-        "form-canon": "ell",
+        "form-oe": {
+            "form": "eln",
+            "canon": "ell"
+        },
         "type": "noun",
         "gloss": "arm's [length]",
         "tags": ["count", "abstract", "measure", "obscure"],
         "origin": "old-english"
     }, {
         "key": "eorþe",
-        "form-raw": "eorþe",
-        "form-canon": "earth",
+        "form-oe": {
+            "form": "eorþe",
+            "canon": "earth"
+        },
         "type": "noun",
         "gloss": "earth",
         "tags": ["mass", "concrete", "terrain", "material"],
         "origin": "old-english"
     }, {
         "key": "eorþe-singleton",
-        "form-raw": "eorþe",
-        "form-canon": "earth",
+        "form-oe": {
+            "form": "eorþe",
+            "canon": "earth"
+        },
         "type": "noun",
         "gloss": "earth",
         "tags": ["singleton", "concrete", "terrain", "place"],
@@ -2305,16 +2473,20 @@
         "notes": "Alt. glosses are my invention"
     }, {
         "key": "fæder",
-        "form-raw": "fæder",
-        "form-canon": "father",
+        "form-oe": {
+            "form": "fæder",
+            "canon": "father"
+        },
         "type": "noun",
         "gloss": "father",
         "tags": ["count", "concrete", "living", "person", "gendered", "role"],
         "origin": "old-english"
     }, {
         "key": "fǣġe",
-        "form-raw": "fǣġe",
-        "form-canon": "fey",
+        "form-oe": {
+            "form": "fǣġe",
+            "canon": "fey"
+        },
         "type": "adj",
         "gloss": "[strange] or [otherworldly]",
         "gloss-alt": "doomed to die",
@@ -2322,16 +2494,20 @@
         "notes": "Alternate modern form 'fay'."
     }, {
         "key": "fæġen",
-        "form-raw": "fæġen",
-        "form-canon": "fain",
+        "form-oe": {
+            "form": "fæġen",
+            "canon": "fain"
+        },
         "type": "adj",
         "gloss": ["[pleased], [glad]", "willing"],
         "tags": ["obscure"],
         "origin": "old-english"
     }, {
         "key": "fæġer",
-        "form-raw": "fæġer",
-        "form-canon": "fair",
+        "form-oe": {
+            "form": "fæġer",
+            "canon": "fair"
+        },
         "type": "adj",
         "gloss": "beautiful",
         "origin": "old-english"
@@ -2346,8 +2522,10 @@
         "notes": "Needs bitransitivity"
     }, {
         "key": "fær",
-        "form-raw": "fær",
-        "form-canon": "fare",
+        "form-oe": {
+            "form": "fær",
+            "canon": "fare"
+        },
         "type": "noun",
         "gloss": ["journey", "expedition", "way"],
         "tags": ["count", "abstract"],
@@ -2374,8 +2552,10 @@
         "notes": "OE senses of the word that would be come 'fear'. Additional count sense 'ambush, attack'"
     }, {
         "key": "fagnian",
-        "form-raw": "fagni|an",
-        "form-canon": "fawn",
+        "form-oe": {
+            "form": "fagni|an",
+            "canon": "fawn"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[seek] favor with", "[attempt] to please"],
@@ -2391,8 +2571,10 @@
         "origin": "old-english"
     }, {
         "key": "fām",
-        "form-raw": "fām",
-        "form-canon": "foam",
+        "form-oe": {
+            "form": "fām",
+            "canon": "foam"
+        },
         "type": "noun",
         "gloss": "foam",
         "tags": ["mass", "concrete", "material"],
@@ -2407,8 +2589,10 @@
         "origin": "old-english"
     }, {
         "key": "fana-vane",
-        "form-raw": "fana",
-        "form-canon": "vane",
+        "form-oe": {
+            "form": "fana",
+            "canon": "vane"
+        },
         "type": "noun",
         "gloss": "weathervane",
         "tags": ["count", "concrete", "metallic", "man-made"],
@@ -2441,8 +2625,10 @@
         "origin": "old-english"
     }, {
         "key": "faru",
-        "form-raw": "faru",
-        "form-canon": "fare",
+        "form-oe": {
+            "form": "faru",
+            "canon": "fare"
+        },
         "type": "noun",
         "gloss": ["passing", "journey", "voyage", "[course] of action"],
         "tags": ["count", "abstract"],
@@ -2468,8 +2654,10 @@
         "origin": "old-english"
     }, {
         "key": "feax",
-        "form-raw": "feax",
-        "form-canon": "fax",
+        "form-oe": {
+            "form": "feax",
+            "canon": "fax"
+        },
         "type": "noun",
         "gloss": "hair",
         "tags": ["mass", "concrete", "bodypart", "obscure", "speculative"],
@@ -2495,8 +2683,10 @@
         "origin": "old-english"
     }, {
         "key": "fen",
-        "form-raw": "fen",
-        "form-canon": "fen",
+        "form-oe": {
+            "form": "fen",
+            "canon": "fen"
+        },
         "type": "noun",
         "gloss": "marsh",
         "tags": ["count", "concrete", "terrain"],
@@ -2513,8 +2703,10 @@
         "origin": "old-english"
     }, {
         "key": "feoh",
-        "form-raw": "feoh",
-        "form-canon": "fee",
+        "form-oe": {
+            "form": "feoh",
+            "canon": "fee"
+        },
         "type": "noun",
         "gloss": "fee",
         "tags": ["count", "abstract"],
@@ -2532,8 +2724,10 @@
         "origin": "old-english"
     }, {
         "key": "fēond",
-        "form-raw": "fēond",
-        "form-canon": "fiend",
+        "form-oe": {
+            "form": "fēond",
+            "canon": "fiend"
+        },
         "type": "noun",
         "gloss": "wicked [person]",
         "gloss-alt": "enemy",
@@ -2557,8 +2751,10 @@
         "origin": "old-english"
     }, {
         "key": "fersċ",
-        "form-raw": "fersċ",
-        "form-canon": "fresh",
+        "form-oe": {
+            "form": "fersċ",
+            "canon": "fresh"
+        },
         "type": "adj",
         "gloss": "fresh",
         "gloss-alt": "without salt (of water)",
@@ -2609,16 +2805,20 @@
         "notes": "Following Wiktionary in with non-palagal 'g'"
     }, {
         "key": "fisċ",
-        "form-raw": "fisċ",
-        "form-canon": "fish",
+        "form-oe": {
+            "form": "fisċ",
+            "canon": "fish"
+        },
         "type": "noun",
         "gloss": "fish",
         "tags": ["count", "concrete", "living", "animal"],
         "origin": "old-english"
     }, {
         "key": "flǣsċ",
-        "form-raw": "flǣsċ",
-        "form-canon": "flesh",
+        "form-oe": {
+            "form": "flǣsċ",
+            "canon": "flesh"
+        },
         "type": "noun",
         "gloss": "flesh",
         "tags": ["mass", "concrete", "living", "bodypart", "material", "food"],
@@ -2675,8 +2875,10 @@
         "notes": "I'm not positive if these forms represent the same word or not, but they're all pretty similar anyway"
     }, {
         "key": "flit",
-        "form-raw": "flit",
-        "form-canon": "flit",
+        "form-oe": {
+            "form": "flit",
+            "canon": "flit"
+        },
         "type": "noun",
         "gloss": "argument",
         "tags": ["count", "abstract", "man-made", "activity"],
@@ -2694,8 +2896,10 @@
         "origin": "old-english"
     }, {
         "key": "flocc",
-        "form-raw": "flocc",
-        "form-canon": "flock",
+        "form-oe": {
+            "form": "flocc",
+            "canon": "flock"
+        },
         "type": "noun",
         "gloss": "flock",
         "gloss-alt": ["[group] or [band]"],
@@ -2703,8 +2907,10 @@
         "origin": "old-english"
     }, {
         "key": "flōd",
-        "form-raw": "flōd",
-        "form-canon": "flood",
+        "form-oe": {
+            "form": "flōd",
+            "canon": "flood"
+        },
         "type": "noun",
         "gloss": "high [tide]",
         "tags": ["mass", "abstract", "bounded", "time", "time-of-day"],
@@ -2734,8 +2940,10 @@
         "origin": "old-english"
     }, {
         "key": "folc",
-        "form-raw": "folc",
-        "form-canon": "folk",
+        "form-oe": {
+            "form": "folc",
+            "canon": "folk"
+        },
         "type": "noun",
         "gloss": "people",
         "tags": ["count", "concrete", "living", "grouping"],
@@ -2827,15 +3035,19 @@
         "notes": "TODO: Add 'quality' for 'kindness' gloss"
     }, {
         "key": "frēo",
-        "form-raw": "frēo",
-        "form-canon": "free",
+        "form-oe": {
+            "form": "frēo",
+            "canon": "free"
+        },
         "type": "adj",
         "gloss": "free",
         "origin": "old-english"
     }, {
         "key": "frēond",
-        "form-raw": "frēond",
-        "form-canon": "friend",
+        "form-oe": {
+            "form": "frēond",
+            "canon": "friend"
+        },
         "type": "noun",
         "gloss": "friend",
         "tags": ["count", "concrete", "living", "person"],
@@ -2877,23 +3089,29 @@
         "origin": "old-english"
     }, {
         "key": "fugol",
-        "form-raw": "fugol",
-        "form-canon": "fowl",
+        "form-oe": {
+            "form": "fugol",
+            "canon": "fowl"
+        },
         "type": "noun",
         "gloss": "bird",
         "tags": ["count", "concrete", "living", "animal", "tame", "wild"],
         "origin": "old-english"
     }, {
         "key": "fūl",
-        "form-raw": "fūl",
-        "form-canon": "foul",
+        "form-oe": {
+            "form": "fūl",
+            "canon": "foul"
+        },
         "type": "adj",
         "gloss": "foul",
         "origin": "old-english"
     }, {
         "key": "full",
-        "form-raw": "full",
-        "form-canon": "full",
+        "form-oe": {
+            "form": "full",
+            "canon": "full"
+        },
         "type": "adj",
         "gloss": "full",
         "origin": "old-english"
@@ -2924,8 +3142,10 @@
         "origin": "old-english"
     }, {
         "key": "fyrhtan",
-        "form-raw": "fyrht|an",
-        "form-canon": "fright",
+        "form-oe": {
+            "form": "fyrht|an",
+            "canon": "fright"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "frighten",
@@ -2933,8 +3153,10 @@
         "origin": "old-english"
     }, {
         "key": "fyrhto",
-        "form-raw": "fyrhto",
-        "form-canon": "fright",
+        "form-oe": {
+            "form": "fyrhto",
+            "canon": "fright"
+        },
         "type": "noun",
         "gloss": "fear",
         "tags": ["mass", "abstract", "mind-state"],
@@ -2949,16 +3171,20 @@
         "notes": "Relationship with OE/ME 'frith' uncertain"
     }, {
         "key": "fȳst",
-        "form-raw": "fȳst",
-        "form-canon": "fist",
+        "form-oe": {
+            "form": "fȳst",
+            "canon": "fist"
+        },
         "type": "noun",
         "gloss": "fist",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "gāl",
-        "form-raw": "gāl",
-        "form-canon": "gole",
+        "form-oe": {
+            "form": "gāl",
+            "canon": "gole"
+        },
         "type": "adj",
         "gloss": "lascivious",
         "tags": ["obscure"],
@@ -2993,16 +3219,20 @@
         "notes": "ME has 'galder'"
     }, {
         "key": "gamen-count",
-        "form-raw": "gamen",
-        "form-canon": "game",
+        "form-oe": {
+            "form": "gamen",
+            "canon": "game"
+        },
         "type": "noun",
         "gloss": "game",
         "tags": ["count", "concrete", "man-made", "activity"],
         "origin": "old-english"
     }, {
         "key": "gamen-mass",
-        "form-raw": "gamen",
-        "form-canon": "game",
+        "form-oe": {
+            "form": "gamen",
+            "canon": "game"
+        },
         "type": "noun",
         "gloss": "sport",
         "gloss-alt": ["mirth", "jest"],
@@ -3048,8 +3278,10 @@
         "origin": "old-english"
     }, {
         "key": "gāst",
-        "form-raw": "gāst",
-        "form-canon": "ghost",
+        "form-oe": {
+            "form": "gāst",
+            "canon": "ghost"
+        },
         "type": "noun",
         "gloss": "ghost",
         "gloss-alt": ["spirit"],
@@ -3083,8 +3315,10 @@
         "origin": "old-english"
     }, {
         "key": "ġe-bēor",
-        "form-raw": "ġe-bēor",
-        "form-canon": "beer",
+        "form-oe": {
+            "form": "ġe-bēor",
+            "canon": "beer"
+        },
         "type": "noun",
         "gloss": ["drinking [companion]", "drinker"],
         "gloss-alt": ["guest"],
@@ -3117,16 +3351,20 @@
         "origin": "old-english"
     }, {
         "key": "ġearu",
-        "form-raw": "ġearu",
-        "form-canon": "yare",
+        "form-oe": {
+            "form": "ġearu",
+            "canon": "yare"
+        },
         "type": "adj",
         "gloss": "ready",
         "tags": ["obscure"],
         "origin": "old-english"
     }, {
         "key": "ġefāh",
-        "form-raw": "ġe-fāh",
-        "form-canon": "foe",
+        "form-oe": {
+            "form": "ġe-fāh",
+            "canon": "foe"
+        },
         "type": "noun",
         "gloss": "enemy",
         "tags": ["count", "concrete", "living", "person"],
@@ -3140,8 +3378,10 @@
         "origin": "old-english"
     }, {
         "key": "ġelīc",
-        "form-raw": "ġe-līc",
-        "form-canon": "like",
+        "form-oe": {
+            "form": "ġe-līc",
+            "canon": "like"
+        },
         "type": "adj",
         "gloss": "like, similar",
         "origin": "old-english"
@@ -3208,16 +3448,20 @@
         "notes": "Shows up as 'yet' in some modern cases, though I get 'yeet'"
     }, {
         "key": "ġesċeap",
-        "form-raw": "ġe-sċeap",
-        "form-canon": "shape",
+        "form-oe": {
+            "form": "ġe-sċeap",
+            "canon": "shape"
+        },
         "type": "noun",
         "gloss": "shape",
         "tags": ["count", "abstract", "shape"],
         "origin": "old-english"
     }, {
         "key": "ġesund",
-        "form-raw": "ġe-sund",
-        "form-canon": "sound",
+        "form-oe": {
+            "form": "ġe-sund",
+            "canon": "sound"
+        },
         "type": "adj",
         "gloss": "healthy",
         "origin": "old-english"
@@ -3324,40 +3568,50 @@
         "origin": "old-english"
     }, {
         "key": "glæd",
-        "form-raw": "glæd",
-        "form-canon": "glad",
+        "form-oe": {
+            "form": "glæd",
+            "canon": "glad"
+        },
         "type": "adj",
         "gloss": "glad",
         "gloss-alt": ["bright"],
         "origin": "old-english"
     }, {
         "key": "glæs",
-        "form-raw": "glæs",
-        "form-canon": "glass",
+        "form-oe": {
+            "form": "glæs",
+            "canon": "glass"
+        },
         "type": "noun",
         "gloss": "glass",
         "tags": ["mass", "concrete", "material", "shiny"],
         "origin": "old-english"
     }, {
         "key": "glōf",
-        "form-raw": "glōf",
-        "form-canon": "glove",
+        "form-oe": {
+            "form": "glōf",
+            "canon": "glove"
+        },
         "type": "noun",
         "gloss": "glove",
         "tags": ["count", "concrete", "man-made", "garment"],
         "origin": "old-english"
     }, {
         "key": "glōm",
-        "form-raw": "glōm",
-        "form-canon": "gloom",
+        "form-oe": {
+            "form": "glōm",
+            "canon": "gloom"
+        },
         "type": "noun",
         "gloss": "[gloom], [darkness]",
         "tags": ["count", "abstract"],
         "origin": "old-english"
     }, {
         "key": "glome",
-        "form-raw": "glom|e",
-        "form-canon": "gloam",
+        "form-oe": {
+            "form": "glom|e",
+            "canon": "gloam"
+        },
         "type": "noun",
         "gloss": "[gloom], [darkness]",
         "tags": ["mass", "abstract", "obscure"],
@@ -3365,8 +3619,10 @@
         "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
     }, {
         "key": "glome/time",
-        "form-raw": "glom|e",
-        "form-canon": "gloam",
+        "form-oe": {
+            "form": "glom|e",
+            "canon": "gloam"
+        },
         "type": "noun",
         "gloss": "twilight",
         "tags": ["mass", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day", "obscure"],
@@ -3374,8 +3630,10 @@
         "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
     }, {
         "key": "glōm/time",
-        "form-raw": "glōm",
-        "form-canon": "gloom",
+        "form-oe": {
+            "form": "glōm",
+            "canon": "gloom"
+        },
         "type": "noun",
         "gloss": "twilight",
         "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
@@ -3390,24 +3648,30 @@
         "origin": "old-english"
     }, {
         "key": "god",
-        "form-raw": "god",
-        "form-canon": "god",
+        "form-oe": {
+            "form": "god",
+            "canon": "god"
+        },
         "type": "noun",
         "gloss": "god",
         "tags": ["count", "concrete", "living", "person", "role", "ruler", "divine"],
         "origin": "old-english"
     }, {
         "key": "god-uncountable",
-        "form-raw": "god",
-        "form-canon": "god",
+        "form-oe": {
+            "form": "god",
+            "canon": "god"
+        },
         "type": "noun",
         "gloss": "god",
         "tags": ["uncountable", "concrete", "living", "person", "gendered", "divine"],
         "origin": "old-english"
     }, {
         "key": "gold",
-        "form-raw": "gold",
-        "form-canon": "gold",
+        "form-oe": {
+            "form": "gold",
+            "canon": "gold"
+        },
         "type": "noun",
         "gloss": "gold",
         "tags": ["mass", "concrete", "material", "metal"],
@@ -3433,8 +3697,10 @@
         "notes": "This morph may combine two related words"
     }, {
         "key": "grim",
-        "form-raw": "grim",
-        "form-canon": "grim",
+        "form-oe": {
+            "form": "grim",
+            "canon": "grim"
+        },
         "type": "adj",
         "gloss": ["[gloomy] or [forbidding]"],
         "gloss-alt": ["fierce", "cruel", "terrible"],
@@ -3442,8 +3708,10 @@
         "origin": "old-english"
     }, {
         "key": "grīma",
-        "form-raw": "grīma",
-        "form-canon": "grime",
+        "form-oe": {
+            "form": "grīma",
+            "canon": "grime"
+        },
         "type": "noun",
         "gloss": "[mask] or [visor]",
         "gloss-tool": ["[conceal] or [disguise]", "[cover], [protect]"],
@@ -3451,8 +3719,10 @@
         "origin": "old-english"
     }, {
         "key": "grīma-creature",
-        "form-raw": "grīma",
-        "form-canon": "grime",
+        "form-oe": {
+            "form": "grīma",
+            "canon": "grime"
+        },
         "type": "noun",
         "gloss": ["apparition", "goblin", "nightmare"],
         "tags": ["count", "concrete", "living", "magical", "speculative"],
@@ -3508,8 +3778,10 @@
         "origin": "old-english"
     }, {
         "key": "guma",
-        "form-raw": "guma",
-        "form-canon": "groom",
+        "form-oe": {
+            "form": "guma",
+            "canon": "groom"
+        },
         "type": "noun",
         "gloss": "groom",
         "gloss-alt": ["man"],
@@ -3547,8 +3819,10 @@
         "origin": "old-english"
     }, {
         "key": "hæfen",
-        "form-raw": "hæfen",
-        "form-canon": "haven",
+        "form-oe": {
+            "form": "hæfen",
+            "canon": "haven"
+        },
         "type": "noun",
         "gloss": "[place] of safety",
         "gloss-alt": "harbor",
@@ -3587,8 +3861,10 @@
         "notes": "As adj. observed chiefly in compounds, e.g. 'hǣmedwīf', 'hǣmedscip'"
     }, {
         "key": "hænep",
-        "form-raw": "hænep",
-        "form-canon": "hemp",
+        "form-oe": {
+            "form": "hænep",
+            "canon": "hemp"
+        },
         "type": "noun",
         "gloss": "hemp",
         "tags": ["mass", "concrete", "living", "plant", "material"],
@@ -3596,48 +3872,60 @@
         "notes": "Alternate form 'henep'. Assimilated to 'hemp' in ME"
     }, {
         "key": "hærfest/activity",
-        "form-raw": "hærfest",
-        "form-canon": "harvest",
+        "form-oe": {
+            "form": "hærfest",
+            "canon": "harvest"
+        },
         "type": "noun",
         "gloss": "harvest",
         "tags": ["count", "abstract", "activity"],
         "origin": "old-english"
     }, {
         "key": "hærfest/season",
-        "form-raw": "hærfest",
-        "form-canon": "harvest",
+        "form-oe": {
+            "form": "hærfest",
+            "canon": "harvest"
+        },
         "type": "noun",
         "gloss": ["harvest", "autumn"],
         "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"],
         "origin": "old-english"
     }, {
         "key": "hæsel",
-        "form-raw": "hæsel",
-        "form-canon": "hazel",
+        "form-oe": {
+            "form": "hæsel",
+            "canon": "hazel"
+        },
         "type": "noun",
         "gloss": "hazel",
         "tags": ["mass", "concrete", "living", "plant"],
         "origin": "old-english"
     }, {
         "key": "hætt",
-        "form-raw": "hætt",
-        "form-canon": "hat",
+        "form-oe": {
+            "form": "hætt",
+            "canon": "hat"
+        },
         "type": "noun",
         "gloss": "hat",
         "tags": ["count", "concrete", "man-made", "garment"],
         "origin": "old-english"
     }, {
         "key": "haga",
-        "form-raw": "haga",
-        "form-canon": "haw",
+        "form-oe": {
+            "form": "haga",
+            "canon": "haw"
+        },
         "type": "noun",
         "gloss": ["fenced [enclosure]", "yard"],
         "tags": ["count", "concrete", "living", "terrain", "obscure"],
         "origin": "old-english"
     }, {
         "key": "hāl",
-        "form-raw": "hāl",
-        "form-canon": "whole",
+        "form-oe": {
+            "form": "hāl",
+            "canon": "whole"
+        },
         "type": "adj",
         "gloss": ["whole", "healthy"],
         "origin": "old-english",
@@ -3670,16 +3958,20 @@
         "origin": "old-english"
     }, {
         "key": "hām",
-        "form-raw": "hām",
-        "form-canon": "home",
+        "form-oe": {
+            "form": "hām",
+            "canon": "home"
+        },
         "type": "noun",
         "gloss": "home",
         "tags": ["uncountable", "concrete", "place"],
         "origin": "old-english"
     }, {
         "key": "hām/count",
-        "form-raw": "hām",
-        "form-canon": "home",
+        "form-oe": {
+            "form": "hām",
+            "canon": "home"
+        },
         "type": "noun",
         "gloss": "home",
         "tags": ["count", "concrete"],
@@ -3713,8 +4005,10 @@
         "origin": "old-english"
     }, {
         "key": "heard",
-        "form-raw": "heard",
-        "form-canon": "hard",
+        "form-oe": {
+            "form": "heard",
+            "canon": "hard"
+        },
         "type": "adj",
         "gloss": "hard",
         "origin": "old-english"
@@ -3742,16 +4036,20 @@
         "notes": "Raw forms represent inflected form typical of verbs with geminate 'bb'"
     }, {
         "key": "heċġ",
-        "form-raw": "heċġ",
-        "form-canon": "hedge",
+        "form-oe": {
+            "form": "heċġ",
+            "canon": "hedge"
+        },
         "type": "noun",
         "gloss": "hedge",
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "heċġ-fence",
-        "form-raw": "heċġ",
-        "form-canon": "hedge",
+        "form-oe": {
+            "form": "heċġ",
+            "canon": "hedge"
+        },
         "type": "noun",
         "gloss": "fence",
         "tags": ["count", "concrete", "man-made"],
@@ -3767,8 +4065,10 @@
         "notes": "Usage in later times merged with OE root 'helian', with very similar meaning but different verb class"
     }, {
         "key": "helle",
-        "form-raw": "helle",
-        "form-canon": "hell",
+        "form-oe": {
+            "form": "helle",
+            "canon": "hell"
+        },
         "type": "noun",
         "gloss": "hell",
         "tags": ["uncountable", "concrete", "terrain", "place"],
@@ -3784,16 +4084,20 @@
         "origin": "old-english"
     }, {
         "key": "heofon",
-        "form-raw": "heofon",
-        "form-canon": "heaven",
+        "form-oe": {
+            "form": "heofon",
+            "canon": "heaven"
+        },
         "type": "noun",
         "gloss": "heaven",
         "tags": ["mass", "concrete", "place"],
         "origin": "old-english"
     }, {
         "key": "heofon-singleton",
-        "form-raw": "heofon",
-        "form-canon": "heaven",
+        "form-oe": {
+            "form": "heofon",
+            "canon": "heaven"
+        },
         "type": "noun",
         "gloss": "heavens",
         "tags": ["singleton", "concrete", "place"],
@@ -3818,8 +4122,10 @@
         "origin": "old-english"
     }, {
         "key": "hete",
-        "form-raw": "hete",
-        "form-canon": "hate",
+        "form-oe": {
+            "form": "hete",
+            "canon": "hate"
+        },
         "type": "noun",
         "gloss": "hatred",
         "tags": ["mass", "abstract", "mind-state"],
@@ -3847,8 +4153,10 @@
         "origin": "old-english"
     }, {
         "key": "hlēow",
-        "form-raw": "hlēow",
-        "form-canon": "lew",
+        "form-oe": {
+            "form": "hlēow",
+            "canon": "lew"
+        },
         "type": "adj",
         "gloss": "[warm] or [sunny]",
         "tags": ["obscure"],
@@ -3856,8 +4164,10 @@
         "notes": "Chiefly Northern in modern usage"
     }, {
         "key": "hlēowþ",
-        "form-raw": "hlēow+þ",
-        "form-canon": "lewth",
+        "form-oe": {
+            "form": "hlēow+þ",
+            "canon": "lewth"
+        },
         "type": "noun",
         "gloss": "[shelter], [protection]",
         "tags": ["count", "abstract", "obscure"],
@@ -3879,8 +4189,10 @@
         "notes": "A few similar sense I'm leaving out"
     }, {
         "key": "hlūd",
-        "form-raw": "hlūd",
-        "form-canon": "loud",
+        "form-oe": {
+            "form": "hlūd",
+            "canon": "loud"
+        },
         "type": "adj",
         "gloss": "loud",
         "origin": "old-english",
@@ -3922,8 +4234,10 @@
         "notes": "OED: 'later modification of 'hyċġan''"
     }, {
         "key": "hogu",
-        "form-raw": "hogu",
-        "form-canon": "how",
+        "form-oe": {
+            "form": "hogu",
+            "canon": "how"
+        },
         "type": "noun",
         "gloss": ["sorrow", "anxiety", "trouble"],
         "tags": ["count", "abstract", "mind-state", "obscure"],
@@ -3949,8 +4263,10 @@
         "notes": "ME forms 'holm', 'holly'"
     }, {
         "key": "holt",
-        "form-raw": "holt",
-        "form-canon": "holt",
+        "form-oe": {
+            "form": "holt",
+            "canon": "holt"
+        },
         "type": "noun",
         "gloss": "[wood], [woodland]",
         "tags": ["count", "concrete", "living", "terrain", "obscure"],
@@ -3967,16 +4283,20 @@
         "origin": "old-english"
     }, {
         "key": "horn",
-        "form-raw": "horn",
-        "form-canon": "horn",
+        "form-oe": {
+            "form": "horn",
+            "canon": "horn"
+        },
         "type": "noun",
         "gloss": "horn",
         "tags": ["count", "concrete", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "horn-mass",
-        "form-raw": "horn",
-        "form-canon": "horn",
+        "form-oe": {
+            "form": "horn",
+            "canon": "horn"
+        },
         "type": "noun",
         "gloss": "horn",
         "tags": ["mass", "concrete", "material"],
@@ -4032,8 +4352,10 @@
         "origin": "old-english"
     }, {
         "key": "hrafn",
-        "form-raw": "hrafn",
-        "form-canon": "raven",
+        "form-oe": {
+            "form": "hrafn",
+            "canon": "raven"
+        },
         "type": "noun",
         "gloss": "raven",
         "tags": ["count", "concrete", "living", "animal", "wild"],
@@ -4059,8 +4381,10 @@
         "notes": "Chosen form is Anglian/Kentish. 'hrīeman' EWS, 'hrȳman' and 'hrīman' LWS."
     }, {
         "key": "hrēod",
-        "form-raw": "hrēod",
-        "form-canon": "reed",
+        "form-oe": {
+            "form": "hrēod",
+            "canon": "reed"
+        },
         "type": "noun",
         "gloss": "reed",
         "tags": ["count", "concrete", "living", "plant"],
@@ -4076,8 +4400,10 @@
         "origin": "old-english"
     }, {
         "key": "hrēow",
-        "form-raw": "hrēow",
-        "form-canon": "rue",
+        "form-oe": {
+            "form": "hrēow",
+            "canon": "rue"
+        },
         "type": "noun",
         "gloss": "regret",
         "gloss-alt": ["sorrow", "pity"],
@@ -4085,8 +4411,10 @@
         "origin": "old-english"
     }, {
         "key": "hrēowan",
-        "form-raw": "hrēow|an",
-        "form-canon": "rue",
+        "form-oe": {
+            "form": "hrēow|an",
+            "canon": "rue"
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "regret",
@@ -4094,8 +4422,10 @@
         "origin": "old-english"
     }, {
         "key": "hrīm",
-        "form-raw": "hrīm",
-        "form-canon": "rime",
+        "form-oe": {
+            "form": "hrīm",
+            "canon": "rime"
+        },
         "type": "noun",
         "gloss": "frost",
         "tags": ["mass", "concrete", "shiny"],
@@ -4119,8 +4449,10 @@
         "notes": "Seen with 'rout' and 'rowt' spellings"
     }, {
         "key": "hrysċ",
-        "form-raw": "hrysċ",
-        "form-canon": "rush",
+        "form-oe": {
+            "form": "hrysċ",
+            "canon": "rush"
+        },
         "type": "noun",
         "gloss": "rush",
         "tags": ["count", "concrete", "plant"],
@@ -4128,8 +4460,10 @@
         "notes": "Form attested in late OE, but forms like 'risċ' seem to be more common in recorded sources."
     }, {
         "key": "hulu",
-        "form-raw": "hulu",
-        "form-canon": "hull",
+        "form-oe": {
+            "form": "hulu",
+            "canon": "hull"
+        },
         "type": "noun",
         "gloss": "[husk] or [shell]",
         "gloss-alt": ["covering", "chrysalis", "garment"],
@@ -4137,8 +4471,10 @@
         "origin": "old-english"
     }, {
         "key": "hund",
-        "form-raw": "hund",
-        "form-canon": "hound",
+        "form-oe": {
+            "form": "hund",
+            "canon": "hound"
+        },
         "type": "noun",
         "gloss": "dog",
         "gloss-animal": ["pursue"],
@@ -4156,8 +4492,10 @@
         "origin": "old-english"
     }, {
         "key": "hunt/FAKE",
-        "form-raw": "hunt",
-        "form-canon": "hunt",
+        "form-oe": {
+            "form": "hunt",
+            "canon": "hunt"
+        },
         "type": "noun",
         "gloss": "hunt",
         "tags": ["count", "abstract", "activity"],
@@ -4165,8 +4503,10 @@
         "notes": "A FAKE form approximating the modern noun 'hunt', for forming compounds like 'huntsman'. OE had 'huntoþ'"
     }, {
         "key": "hūs",
-        "form-raw": "hūs",
-        "form-canon": "house",
+        "form-oe": {
+            "form": "hūs",
+            "canon": "house"
+        },
         "type": "noun",
         "gloss": "house",
         "tags": ["count", "concrete", "man-made"],
@@ -4180,16 +4520,20 @@
         "origin": "old-english"
     }, {
         "key": "hwǣte",
-        "form-raw": "hwǣte",
-        "form-canon": "wheat",
+        "form-oe": {
+            "form": "hwǣte",
+            "canon": "wheat"
+        },
         "type": "noun",
         "gloss": "wheat",
         "tags": ["mass", "concrete", "living", "plant", "food"],
         "origin": "old-english"
     }, {
         "key": "hwelp",
-        "form-raw": "hwelp",
-        "form-canon": "whelp",
+        "form-oe": {
+            "form": "hwelp",
+            "canon": "whelp"
+        },
         "type": "noun",
         "gloss": "puppy",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal"],
@@ -4206,8 +4550,10 @@
         "notes": "TODO: Add related words like 'behwirfan' with meaning 'barter'"
     }, {
         "key": "hwīt",
-        "form-raw": "hwīt",
-        "form-canon": "white",
+        "form-oe": {
+            "form": "hwīt",
+            "canon": "white"
+        },
         "type": "adj",
         "gloss": "white",
         "origin": "old-english"
@@ -4269,8 +4615,10 @@
         "origin": "old-english"
     }, {
         "key": "īdel",
-        "form-raw": "īdel",
-        "form-canon": "idle",
+        "form-oe": {
+            "form": "īdel",
+            "canon": "idle"
+        },
         "type": "adj",
         "gloss": "vain, useless",
         "origin": "old-english",
@@ -4303,8 +4651,10 @@
         "origin": "old-english"
     }, {
         "key": "īren",
-        "form-raw": "īren",
-        "form-canon": "iron",
+        "form-oe": {
+            "form": "īren",
+            "canon": "iron"
+        },
         "type": "noun",
         "gloss": "iron",
         "tags": ["mass", "concrete", "material", "metal"],
@@ -4312,16 +4662,20 @@
         "notes": "Alternate form of 'īsen'"
     }, {
         "key": "īs",
-        "form-raw": "īs",
-        "form-canon": "ice",
+        "form-oe": {
+            "form": "īs",
+            "canon": "ice"
+        },
         "type": "noun",
         "gloss": "ice",
         "tags": ["mass", "concrete", "material", "shiny"],
         "origin": "old-english"
     }, {
         "key": "īsen",
-        "form-raw": "īsen",
-        "form-canon": "isen",
+        "form-oe": {
+            "form": "īsen",
+            "canon": "isen"
+        },
         "type": "noun",
         "gloss": "iron",
         "tags": ["mass", "concrete", "material", "metal", "obscure"],
@@ -4337,8 +4691,10 @@
         "origin": "old-english"
     }, {
         "key": "lǣċe",
-        "form-raw": "lǣċe",
-        "form-canon": "leech",
+        "form-oe": {
+            "form": "lǣċe",
+            "canon": "leech"
+        },
         "type": "noun",
         "gloss": "doctor",
         "tags": ["count", "concrete", "living", "person", "role", "obscure"],
@@ -4442,16 +4798,20 @@
         "origin": "old-english"
     }, {
         "key": "lār",
-        "form-raw": "lār",
-        "form-canon": "lore",
+        "form-oe": {
+            "form": "lār",
+            "canon": "lore"
+        },
         "type": "noun",
         "gloss": "knowledge",
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "lāþ",
-        "form-raw": "lāþ",
-        "form-canon": "loath",
+        "form-oe": {
+            "form": "lāþ",
+            "canon": "loath"
+        },
         "type": "adj",
         "gloss": "[unwilling] or [disinclined]",
         "gloss-alt": "hated",
@@ -4459,8 +4819,10 @@
         "origin": "old-english"
     }, {
         "key": "lēad",
-        "form-raw": "lēad",
-        "form-canon": "lead",
+        "form-oe": {
+            "form": "lēad",
+            "canon": "lead"
+        },
         "type": "noun",
         "gloss": "lead",
         "tags": ["mass", "concrete", "material", "metal"],
@@ -4502,8 +4864,10 @@
         "origin": "old-english"
     }, {
         "key": "leġer",
-        "form-raw": "leġer",
-        "form-canon": "lair",
+        "form-oe": {
+            "form": "leġer",
+            "canon": "lair"
+        },
         "type": "noun",
         "gloss": "lair",
         "gloss-alt": ["deathbed", "grave", "resting [place]"],
@@ -4531,16 +4895,20 @@
         "origin": "old-english"
     }, {
         "key": "lēoma",
-        "form-raw": "lēoma",
-        "form-canon": "leam",
+        "form-oe": {
+            "form": "lēoma",
+            "canon": "leam"
+        },
         "type": "noun",
         "gloss": "[ray] of light",
         "tags": ["count", "concrete", "luminous", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lēoma-mass",
-        "form-raw": "lēoma",
-        "form-canon": "leam",
+        "form-oe": {
+            "form": "lēoma",
+            "canon": "leam"
+        },
         "type": "noun",
         "gloss": ["light", "radiance"],
         "tags": ["mass", "concrete", "luminous", "obscure"],
@@ -4605,8 +4973,10 @@
         "notes": "Not positive on verb class"
     }, {
         "key": "līċ",
-        "form-raw": "līċ",
-        "form-canon": "lich",
+        "form-oe": {
+            "form": "līċ",
+            "canon": "lich"
+        },
         "type": "noun",
         "gloss": ["corpse", "body"],
         "tags": ["count", "concrete", "obscure"],
@@ -4626,16 +4996,20 @@
         "notes": "'lēfan' Anglian, 'līefan' is EWS, 'līfan' and 'lȳfan' LWS."
     }, {
         "key": "liht",
-        "form-raw": "liht",
-        "form-canon": "light",
+        "form-oe": {
+            "form": "liht",
+            "canon": "light"
+        },
         "type": "noun",
         "gloss": "light",
         "tags": ["mass", "concrete", "luminous"],
         "origin": "old-english"
     }, {
         "key": "lind",
-        "form-raw": "lind",
-        "form-canon": "lind",
+        "form-oe": {
+            "form": "lind",
+            "canon": "lind"
+        },
         "type": "noun",
         "gloss": "linden [tree]",
         "tags": ["count", "concrete", "plant", "tree"],
@@ -4661,8 +5035,10 @@
         "notes": "Appears in 'lithy'"
     }, {
         "key": "lof",
-        "form-raw": "lof",
-        "form-canon": "lofe",
+        "form-oe": {
+            "form": "lof",
+            "canon": "lofe"
+        },
         "type": "noun",
         "gloss": "[praise], [glory]",
         "tags": ["mass", "abstract", "obscure"],
@@ -4670,8 +5046,10 @@
         "notes": "Glossed meaning is from OE. In dialects, meaning is 'offer', 'price'"
     }, {
         "key": "lōf",
-        "form-raw": "lōf",
-        "form-canon": "loof",
+        "form-oe": {
+            "form": "lōf",
+            "canon": "loof"
+        },
         "type": "noun",
         "gloss": "[palm] of the hand",
         "tags": ["singleton", "concrete", "living", "bodypart", "obscure"],
@@ -4700,8 +5078,10 @@
         "origin": "old-english"
     }, {
         "key": "lūcan",
-        "form-raw": "lūc|an",
-        "form-canon": "louk",
+        "form-oe": {
+            "form": "lūc|an",
+            "canon": "louk"
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["[pull] up weeds", "weed"],
@@ -4728,16 +5108,20 @@
         "origin": "old-english"
     }, {
         "key": "lufu",
-        "form-raw": "lufu",
-        "form-canon": "love",
+        "form-oe": {
+            "form": "lufu",
+            "canon": "love"
+        },
         "type": "noun",
         "gloss": "love",
         "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
         "key": "lust",
-        "form-raw": "lust",
-        "form-canon": "lust",
+        "form-oe": {
+            "form": "lust",
+            "canon": "lust"
+        },
         "type": "noun",
         "gloss": "lust",
         "tags": ["mass", "abstract", "mind-state"],
@@ -4762,8 +5146,10 @@
         "origin": "old-english"
     }, {
         "key": "lyttel",
-        "form-raw": "lyttel",
-        "form-canon": "little",
+        "form-oe": {
+            "form": "lyttel",
+            "canon": "little"
+        },
         "type": "adj",
         "gloss": "little",
         "origin": "old-english",
@@ -4778,16 +5164,20 @@
         "origin": "old-english"
     }, {
         "key": "mæġd",
-        "form-raw": "mæġd",
-        "form-canon": "maid",
+        "form-oe": {
+            "form": "mæġd",
+            "canon": "maid"
+        },
         "type": "noun",
         "gloss": "unmarried [woman] or [girl]",
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english"
     }, {
         "key": "mæġd+en",
-        "form-raw": "mæġd+en",
-        "form-canon": "maiden",
+        "form-oe": {
+            "form": "mæġd+en",
+            "canon": "maiden"
+        },
         "type": "noun",
         "gloss": "unmarried [girl]",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -4816,8 +5206,10 @@
         "notes": "TODO: idk what to do with this one"
     }, {
         "key": "mǣne",
-        "form-raw": "mǣne",
-        "form-canon": "mean",
+        "form-oe": {
+            "form": "mǣne",
+            "canon": "mean"
+        },
         "type": "adj",
         "gloss": "[cruel] or [unkind]",
         "origin": "old-english",
@@ -4868,8 +5260,10 @@
         "origin": "old-english"
     }, {
         "key": "mann",
-        "form-raw": "mann",
-        "form-canon": "man",
+        "form-oe": {
+            "form": "mann",
+            "canon": "man"
+        },
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -4877,8 +5271,10 @@
         "notes": "Original sense was 'person'"
     }, {
         "key": "mapul",
-        "form-raw": "mapul",
-        "form-canon": "maple",
+        "form-oe": {
+            "form": "mapul",
+            "canon": "maple"
+        },
         "type": "noun",
         "gloss": "maple [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree"],
@@ -5023,8 +5419,10 @@
         "origin": "old-english"
     }, {
         "key": "mete",
-        "form-raw": "mete",
-        "form-canon": "meat",
+        "form-oe": {
+            "form": "mete",
+            "canon": "meat"
+        },
         "type": "noun",
         "gloss": "meat",
         "gloss-alt": ["food"],
@@ -5032,8 +5430,10 @@
         "origin": "old-english"
     }, {
         "key": "metsian",
-        "form-raw": "metsi|an",
-        "form-canon": "mess",
+        "form-oe": {
+            "form": "metsi|an",
+            "canon": "mess"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[provide] with food",
@@ -5057,16 +5457,20 @@
         "origin": "old-english"
     }, {
         "key": "miht",
-        "form-raw": "miht",
-        "form-canon": "might",
+        "form-oe": {
+            "form": "miht",
+            "canon": "might"
+        },
         "type": "noun",
         "gloss": "strength",
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "milc",
-        "form-raw": "milc",
-        "form-canon": "milk",
+        "form-oe": {
+            "form": "milc",
+            "canon": "milk"
+        },
         "type": "noun",
         "gloss": "milk",
         "tags": ["mass", "concrete", "fluid", "liquid", "food"],
@@ -5074,8 +5478,10 @@
         "notes": "Form 'milc' is Anglian. West-saxon had 'meolc' / 'meoluc'"
     }, {
         "key": "milde",
-        "form-raw": "milde",
-        "form-canon": "mild",
+        "form-oe": {
+            "form": "milde",
+            "canon": "mild"
+        },
         "type": "adj",
         "gloss": "mild",
         "origin": "old-english"
@@ -5088,8 +5494,10 @@
         "origin": "old-english"
     }, {
         "key": "mimorian",
-        "form-raw": "mimori|an",
-        "form-canon": "mimmer",
+        "form-oe": {
+            "form": "mimori|an",
+            "canon": "mimmer"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["remember", "[keep] in memory"],
@@ -5114,8 +5522,10 @@
         "origin": "old-english"
     }, {
         "key": "mōd",
-        "form-raw": "mōd",
-        "form-canon": "mood",
+        "form-oe": {
+            "form": "mōd",
+            "canon": "mood"
+        },
         "type": "noun",
         "gloss": "strong [feeling]",
         "gloss-alt": ["[state] of mind", "[heart], [spirit]", "courage", "pride"],
@@ -5124,16 +5534,20 @@
         "notes": "Gloss chosen based on modern usage, and for ease of compounding (e.g. 'moody' = 'affected by a strong feeling'"
     }, {
         "key": "modor",
-        "form-raw": "modor",
-        "form-canon": "mother",
+        "form-oe": {
+            "form": "modor",
+            "canon": "mother"
+        },
         "type": "noun",
         "gloss": "mother",
         "tags": ["count", "concrete", "living", "person", "gendered", "role"],
         "origin": "old-english"
     }, {
         "key": "mōn",
-        "form-raw": "mōn",
-        "form-canon": "moon",
+        "form-oe": {
+            "form": "mōn",
+            "canon": "moon"
+        },
         "type": "noun",
         "gloss": "moon",
         "tags": ["singleton", "concrete", "terrain", "place", "luminous"],
@@ -5148,8 +5562,10 @@
         "notes": "Same root as 'morn', but leaving canonless for new form"
     }, {
         "key": "morgen/morg",
-        "form-raw": "morge",
-        "form-canon": "morrow",
+        "form-oe": {
+            "form": "morge",
+            "canon": "morrow"
+        },
         "type": "noun",
         "gloss": ["morning", "following [day]"],
         "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
@@ -5157,8 +5573,10 @@
         "notes": "Based on combining form of 'morgen'"
     }, {
         "key": "morgen/morn",
-        "form-raw": "morn",
-        "form-canon": "morn",
+        "form-oe": {
+            "form": "morn",
+            "canon": "morn"
+        },
         "type": "noun",
         "gloss": "morning",
         "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
@@ -5175,8 +5593,10 @@
         "origin": "old-english"
     }, {
         "key": "mōt",
-        "form-raw": "mōt",
-        "form-canon": "moot",
+        "form-oe": {
+            "form": "mōt",
+            "canon": "moot"
+        },
         "type": "noun",
         "gloss": "meeting",
         "tags": ["count", "abstract", "activity"],
@@ -5184,16 +5604,20 @@
         "notes": "form is reconstructed, but 'ġemōt' is attested, and 'mōt' is attested in ME"
     }, {
         "key": "mūs",
-        "form-raw": "mūs",
-        "form-canon": "mouse",
+        "form-oe": {
+            "form": "mūs",
+            "canon": "mouse"
+        },
         "type": "noun",
         "gloss": "mouse",
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
         "origin": "old-english"
     }, {
         "key": "mūþ",
-        "form-raw": "mūþ",
-        "form-canon": "mouth",
+        "form-oe": {
+            "form": "mūþ",
+            "canon": "mouth"
+        },
         "type": "noun",
         "gloss": "mouth",
         "tags": ["count", "concrete", "bodypart", "vessel"],
@@ -5226,8 +5650,10 @@
         "origin": "old-english"
     }, {
         "key": "mynt|an",
-        "form-raw": "mynt|an",
-        "form-canon": "mint",
+        "form-oe": {
+            "form": "mynt|an",
+            "canon": "mint"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[attempt] or [intend]", "[think], [suppose]"],
@@ -5263,8 +5689,10 @@
         "origin": "old-english"
     }, {
         "key": "niht",
-        "form-raw": "niht",
-        "form-canon": "night",
+        "form-oe": {
+            "form": "niht",
+            "canon": "night"
+        },
         "type": "noun",
         "gloss": "night",
         "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day", "measure"],
@@ -5282,8 +5710,10 @@
         "origin": "old-english"
     }, {
         "key": "nōn",
-        "form-raw": "nōn",
-        "form-canon": "noon",
+        "form-oe": {
+            "form": "nōn",
+            "canon": "noon"
+        },
         "type": "noun",
         "gloss": "noon",
         "gloss-alt": ["the ninth [hour] of the day"],
@@ -5291,8 +5721,10 @@
         "origin": "old-english"
     }, {
         "key": "open",
-        "form-raw": "open",
-        "form-canon": "open",
+        "form-oe": {
+            "form": "open",
+            "canon": "open"
+        },
         "type": "adj",
         "gloss": "open",
         "origin": "old-english"
@@ -5322,8 +5754,10 @@
         "notes": "Sense 'seduce' with prefixes 'ā-', 'be-'"
     }, {
         "key": "pæl",
-        "form-raw": "pæl",
-        "form-canon": "pall",
+        "form-oe": {
+            "form": "pæl",
+            "canon": "pall"
+        },
         "type": "noun",
         "gloss": "fine [cloth]",
         "tags": ["mass", "concrete", "material", "obscure"],
@@ -5331,8 +5765,10 @@
         "notes": "Survives in 'pallbearer'"
     }, {
         "key": "pintel",
-        "form-raw": "pintel",
-        "form-canon": "pintle",
+        "form-oe": {
+            "form": "pintel",
+            "canon": "pintle"
+        },
         "type": "noun",
         "gloss": "penis",
         "tags": ["count", "concrete", "bodypart", "sexual", "obscure"],
@@ -5369,16 +5805,20 @@
         "notes": "Alt. form 'pliċġan' seems more standard in OE, following Bosworth, but OED shows a form 'plitch' enduring into the 15th c."
     }, {
         "key": "pott",
-        "form-raw": "pott",
-        "form-canon": "pot",
+        "form-oe": {
+            "form": "pott",
+            "canon": "pot"
+        },
         "type": "noun",
         "gloss": "pot",
         "tags": ["count", "concrete", "man-made"],
         "origin": "old-english"
     }, {
         "key": "prēost",
-        "form-raw": "prēost",
-        "form-canon": "priest",
+        "form-oe": {
+            "form": "prēost",
+            "canon": "priest"
+        },
         "type": "noun",
         "gloss": "priest",
         "tags": ["count", "concrete", "living", "person", "role"],
@@ -5419,8 +5859,10 @@
         "origin": "old-english"
     }, {
         "key": "puca",
-        "form-raw": "puca",
-        "form-canon": "puck",
+        "form-oe": {
+            "form": "puca",
+            "canon": "puck"
+        },
         "type": "noun",
         "gloss": ["evil [spirit]", "goblin"],
         "tags": ["count", "concrete", "living", "magical"],
@@ -5504,8 +5946,10 @@
         "origin": "old-english"
     }, {
         "key": "rāp",
-        "form-raw": "rāp",
-        "form-canon": "rope",
+        "form-oe": {
+            "form": "rāp",
+            "canon": "rope"
+        },
         "type": "noun",
         "gloss": "rope",
         "gloss-tool": ["[tie] with rope", "[catch] with a rope"],
@@ -5531,8 +5975,10 @@
         "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
     }, {
         "key": "recenian",
-        "form-raw": "receni|an",
-        "form-canon": "reckon",
+        "form-oe": {
+            "form": "receni|an",
+            "canon": "reckon"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[count], [calculate]"],
@@ -5574,8 +6020,10 @@
         "origin": "old-english"
     }, {
         "key": "rinc",
-        "form-raw": "rinc",
-        "form-canon": "rink",
+        "form-oe": {
+            "form": "rinc",
+            "canon": "rink"
+        },
         "type": "noun",
         "gloss": "hero",
         "tags": ["count", "concrete", "living", "person", "role", "obscure"],
@@ -5604,16 +6052,20 @@
         "origin": "old-english"
     }, {
         "key": "rocc",
-        "form-raw": "rocc",
-        "form-canon": "rock",
+        "form-oe": {
+            "form": "rocc",
+            "canon": "rock"
+        },
         "type": "noun",
         "gloss": "rock",
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "rōde",
-        "form-raw": "rōde",
-        "form-canon": "rood",
+        "form-oe": {
+            "form": "rōde",
+            "canon": "rood"
+        },
         "type": "noun",
         "gloss": "crucifix",
         "gloss-alt": ["[beam] or [spar]"],
@@ -5631,24 +6083,30 @@
         "origin": "old-english"
     }, {
         "key": "rose",
-        "form-raw": "rose",
-        "form-canon": "rose",
+        "form-oe": {
+            "form": "rose",
+            "canon": "rose"
+        },
         "type": "noun",
         "gloss": "rose",
         "tags": ["count", "concrete", "living", "plant"],
         "origin": "old-english"
     }, {
         "key": "rud",
-        "form-raw": "rud",
-        "form-canon": "rud",
+        "form-oe": {
+            "form": "rud",
+            "canon": "rud"
+        },
         "type": "adj",
         "gloss": "red",
         "tags": ["color", "obscure"],
         "origin": "old-english"
     }, {
         "key": "rūn",
-        "form-raw": "rūn",
-        "form-canon": "roun",
+        "form-oe": {
+            "form": "rūn",
+            "canon": "roun"
+        },
         "type": "noun",
         "gloss": ["[secret] or [mystery]", "written [text]"],
         "tags": ["count", "concrete", "obscure"],
@@ -5665,8 +6123,10 @@
         "origin": "old-english"
     }, {
         "key": "sǣl",
-        "form-raw": "sǣl",
-        "form-canon": "seel",
+        "form-oe": {
+            "form": "sǣl",
+            "canon": "seel"
+        },
         "type": "noun",
         "gloss": ["happiness", "prosperity"],
         "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
@@ -5674,15 +6134,19 @@
         "notes": "'prosperity' isn't quite a 'mind-state' but let's let it ride. Not sure about form, but prefer 'seel' for variety"
     }, {
         "key": "sār",
-        "form-raw": "sār",
-        "form-canon": "sore",
+        "form-oe": {
+            "form": "sār",
+            "canon": "sore"
+        },
         "type": "adj",
         "gloss": "pained",
         "origin": "old-english"
     }, {
         "key": "sċamu",
-        "form-raw": "sċamu",
-        "form-canon": "shame",
+        "form-oe": {
+            "form": "sċamu",
+            "canon": "shame"
+        },
         "type": "noun",
         "gloss": "shame",
         "tags": ["mass", "abstract", "mind-state"],
@@ -5777,8 +6241,10 @@
         "origin": "old-english"
     }, {
         "key": "scinn",
-        "form-raw": "scinn",
-        "form-canon": "skin",
+        "form-oe": {
+            "form": "scinn",
+            "canon": "skin"
+        },
         "type": "noun",
         "gloss": "skin",
         "tags": ["mass", "concrete", "living", "bodypart", "material"],
@@ -5870,8 +6336,10 @@
         "origin": "old-english"
     }, {
         "key": "seolc",
-        "form-raw": "seolc",
-        "form-canon": "silk",
+        "form-oe": {
+            "form": "seolc",
+            "canon": "silk"
+        },
         "type": "noun",
         "gloss": "silk",
         "tags": ["mass", "concrete", "material", "shiny", "garment"],
@@ -5923,8 +6391,10 @@
         "notes": "Not sure about quality since it's not really personal, but let's see"
     }, {
         "key": "sibb-sibling",
-        "form-raw": "sibb",
-        "form-canon": "sib",
+        "form-oe": {
+            "form": "sibb",
+            "canon": "sib"
+        },
         "type": "noun",
         "gloss": "sibling",
         "tags": ["count", "concrete", "living", "person", "grouping"],
@@ -6041,8 +6511,10 @@
         "notes": "Gloss 'sharpen' from Scottish usage"
     }, {
         "key": "slīm",
-        "form-raw": "slīm",
-        "form-canon": "slime",
+        "form-oe": {
+            "form": "slīm",
+            "canon": "slime"
+        },
         "type": "noun",
         "gloss": "slime",
         "tags": ["mass", "concrete", "fluid", "liquid", "material", "shiny"],
@@ -6114,8 +6586,10 @@
         "origin": "old-english"
     }, {
         "key": "smiþ",
-        "form-raw": "smiþ",
-        "form-canon": "smith",
+        "form-oe": {
+            "form": "smiþ",
+            "canon": "smith"
+        },
         "type": "noun",
         "gloss": "smith",
         "tags": ["count", "concrete", "living", "person", "role"],
@@ -6133,16 +6607,20 @@
         "origin": "old-english"
     }, {
         "key": "smoca",
-        "form-raw": "smoca",
-        "form-canon": "smoke",
+        "form-oe": {
+            "form": "smoca",
+            "canon": "smoke"
+        },
         "type": "noun",
         "gloss": "smoke",
         "tags": ["mass", "concrete", "fluid", "gas", "glooming"],
         "origin": "old-english"
     }, {
         "key": "smyrels",
-        "form-raw": "smyr+els",
-        "form-canon": "smerl",
+        "form-oe": {
+            "form": "smyr+els",
+            "canon": "smerl"
+        },
         "type": "noun",
         "gloss": "ointment",
         "gloss-tool": ["anoint", "[smear] with ointment"],
@@ -6150,8 +6628,10 @@
         "origin": "old-english"
     }, {
         "key": "snaw",
-        "form-raw": "snāw",
-        "form-canon": "snow",
+        "form-oe": {
+            "form": "snāw",
+            "canon": "snow"
+        },
         "type": "noun",
         "gloss": "snow",
         "tags": ["mass", "concrete", "material", "shiny"],
@@ -6193,8 +6673,10 @@
         "origin": "old-english"
     }, {
         "key": "snīþan",
-        "form-raw": "snīþ|an",
-        "form-canon": "snithe",
+        "form-oe": {
+            "form": "snīþ|an",
+            "canon": "snithe"
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "cut",
@@ -6235,8 +6717,10 @@
         "origin": "old-english"
     }, {
         "key": "sōð",
-        "form-raw": "sōð",
-        "form-canon": "sooth",
+        "form-oe": {
+            "form": "sōð",
+            "canon": "sooth"
+        },
         "type": "noun",
         "gloss": "truth",
         "tags": ["mass", "abstract"],
@@ -6297,8 +6781,10 @@
         "origin": "old-english"
     }, {
         "key": "sprecel",
-        "form-raw": "sprecel",
-        "form-canon": "spreckle",
+        "form-oe": {
+            "form": "sprecel",
+            "canon": "spreckle"
+        },
         "type": "noun",
         "gloss": "spot",
         "tags": ["count", "concrete", "obscure"],
@@ -6316,8 +6802,10 @@
         "origin": "old-english"
     }, {
         "key": "spring/season",
-        "form-raw": "spring",
-        "form-canon": "spring",
+        "form-oe": {
+            "form": "spring",
+            "canon": "spring"
+        },
         "type": "noun",
         "gloss": "spring",
         "tags": ["singleton", "abstract", "bounded", "luminous", "time", "time-of-year"],
@@ -6336,16 +6824,20 @@
         "notes": "Canon form based on Scottish usage, which I believe is plausible in Midlands as well. Some other similar senses."
     }, {
         "key": "stān",
-        "form-raw": "stān",
-        "form-canon": "stone",
+        "form-oe": {
+            "form": "stān",
+            "canon": "stone"
+        },
         "type": "noun",
         "gloss": "stone",
         "tags": ["mass", "concrete", "material"],
         "origin": "old-english"
     }, {
         "key": "stān-count",
-        "form-raw": "stān",
-        "form-canon": "stone",
+        "form-oe": {
+            "form": "stān",
+            "canon": "stone"
+        },
         "type": "noun",
         "gloss": "stone",
         "tags": ["count", "concrete"],
@@ -6411,8 +6903,10 @@
         "origin": "old-english"
     }, {
         "key": "stōl",
-        "form-raw": "stōl",
-        "form-canon": "stool",
+        "form-oe": {
+            "form": "stōl",
+            "canon": "stool"
+        },
         "type": "noun",
         "gloss": "stool",
         "gloss-alt": ["seat"],
@@ -6421,8 +6915,10 @@
         "origin": "old-english"
     }, {
         "key": "stōw",
-        "form-raw": "stōw",
-        "form-canon": "stow",
+        "form-oe": {
+            "form": "stōw",
+            "canon": "stow"
+        },
         "type": "noun",
         "gloss": "place",
         "tags": ["count", "concrete", "terrain"],
@@ -6451,8 +6947,10 @@
         "notes": "Had some additional senses in OE that got separated into 'stroke'"
     }, {
         "key": "stund",
-        "form-raw": "stund",
-        "form-canon": "stound",
+        "form-oe": {
+            "form": "stund",
+            "canon": "stound"
+        },
         "type": "noun",
         "gloss": "hour",
         "gloss-alt": ["while", "[length] of time"],
@@ -6472,24 +6970,30 @@
         "origin": "old-english"
     }, {
         "key": "sumor",
-        "form-raw": "sumor",
-        "form-canon": "summer",
+        "form-oe": {
+            "form": "sumor",
+            "canon": "summer"
+        },
         "type": "noun",
         "gloss": "summer",
         "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-year"],
         "origin": "old-english"
     }, {
         "key": "sunne",
-        "form-raw": "sunne",
-        "form-canon": "sun",
+        "form-oe": {
+            "form": "sunne",
+            "canon": "sun"
+        },
         "type": "noun",
         "gloss": "sun",
         "tags": ["singleton", "concrete", "place", "luminous"],
         "origin": "old-english"
     }, {
         "key": "supan",
-        "form-raw": "sup|an",
-        "form-canon": "sup",
+        "form-oe": {
+            "form": "sup|an",
+            "canon": "sup"
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "eat",
@@ -6498,8 +7002,10 @@
         "origin": "old-english"
     }, {
         "key": "sūr",
-        "form-raw": "sūr",
-        "form-canon": "sour",
+        "form-oe": {
+            "form": "sūr",
+            "canon": "sour"
+        },
         "type": "adj",
         "gloss": "sour",
         "origin": "old-english"
@@ -6520,8 +7026,10 @@
         "origin": "old-english"
     }, {
         "key": "swan",
-        "form-raw": "swan",
-        "form-canon": "swan",
+        "form-oe": {
+            "form": "swan",
+            "canon": "swan"
+        },
         "type": "noun",
         "gloss": "swan",
         "tags": ["count", "concrete", "living", "animal", "tame", "wild"],
@@ -6566,8 +7074,10 @@
         "origin": "old-english"
     }, {
         "key": "swefn",
-        "form-raw": "swefn",
-        "form-canon": "sweven",
+        "form-oe": {
+            "form": "swefn",
+            "canon": "sweven"
+        },
         "type": "noun",
         "gloss": "dream",
         "gloss-alt": ["vision"],
@@ -6592,8 +7102,10 @@
         "origin": "old-english"
     }, {
         "key": "sweġen",
-        "form-raw": "sweġen",
-        "form-canon": "swain",
+        "form-oe": {
+            "form": "sweġen",
+            "canon": "swain"
+        },
         "type": "noun",
         "gloss": ["young [man]", "squire", "servant [boy]", "rural [laborer]", "lover"],
         "tags": ["count", "concrete", "living", "person", "gendered", "obscure"],
@@ -6639,8 +7151,10 @@
         "origin": "old-english"
     }, {
         "key": "swēte",
-        "form-raw": "swēte",
-        "form-canon": "sweet",
+        "form-oe": {
+            "form": "swēte",
+            "canon": "sweet"
+        },
         "type": "adj",
         "gloss": "sweet",
         "origin": "old-english"
@@ -6677,8 +7191,10 @@
         "notes": "Connection between ME+ sense of 'copulate with' appears a bit uncertain in OED, but leaving here in OE for now"
     }, {
         "key": "swīn",
-        "form-raw": "swīn",
-        "form-canon": "swine",
+        "form-oe": {
+            "form": "swīn",
+            "canon": "swine"
+        },
         "type": "noun",
         "gloss": "pig",
         "gloss-animal": ["[eat] excessively"],
@@ -6713,8 +7229,10 @@
         "origin": "old-english"
     }, {
         "key": "sylfer",
-        "form-raw": "sylfur",
-        "form-canon": "silver",
+        "form-oe": {
+            "form": "sylfur",
+            "canon": "silver"
+        },
         "type": "noun",
         "gloss": "silver",
         "tags": ["mass", "concrete", "material", "metal"],
@@ -6734,8 +7252,10 @@
         "notes": "OE had some intransitive senses"
     }, {
         "key": "tæfl",
-        "form-raw": "tæfl",
-        "form-canon": "tavel",
+        "form-oe": {
+            "form": "tæfl",
+            "canon": "tavel"
+        },
         "type": "noun",
         "gloss": ["board [game]", "board game [piece]", "game [board]"],
         "gloss-tool": "[play] a board game",
@@ -6743,8 +7263,10 @@
         "origin": "old-english"
     }, {
         "key": "talu",
-        "form-raw": "talu",
-        "form-canon": "tale",
+        "form-oe": {
+            "form": "talu",
+            "canon": "tale"
+        },
         "type": "noun",
         "gloss": "story",
         "gloss-alt": ["calculation", "reckoning"],
@@ -6796,16 +7318,20 @@
         "notes": "Not tagging as time since it's not a specific time."
     }, {
         "key": "timber-count",
-        "form-raw": "timber",
-        "form-canon": "timber",
+        "form-oe": {
+            "form": "timber",
+            "canon": "timber"
+        },
         "type": "noun",
         "gloss": "[building] (esp. of wood)",
         "tags": ["count", "concrete", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "timber-mass",
-        "form-raw": "timber",
-        "form-canon": "timber",
+        "form-oe": {
+            "form": "timber",
+            "canon": "timber"
+        },
         "type": "noun",
         "gloss": ["[trees] or [wood]", "[wood] suitable for building"],
         "tags": ["mass", "concrete", "material"],
@@ -6831,24 +7357,30 @@
         "notes": "Historically referred to earlier instruments (timbrel, tabret). Extending sense for effect here."
     }, {
         "key": "tin",
-        "form-raw": "tin",
-        "form-canon": "tin",
+        "form-oe": {
+            "form": "tin",
+            "canon": "tin"
+        },
         "type": "noun",
         "gloss": "tin",
         "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english"
     }, {
         "key": "todiġe",
-        "form-raw": "todiġe",
-        "form-canon": "toad",
+        "form-oe": {
+            "form": "todiġe",
+            "canon": "toad"
+        },
         "type": "noun",
         "gloss": "toad",
         "tags": ["count", "concrete", "living", "animal", "wild"],
         "origin": "old-english"
     }, {
         "key": "tōh",
-        "form-raw": "tōh",
-        "form-canon": "tough",
+        "form-oe": {
+            "form": "tōh",
+            "canon": "tough"
+        },
         "type": "adj",
         "gloss": "tough",
         "origin": "old-english"
@@ -6862,16 +7394,20 @@
         "notes": "Chiefly poetic in OE"
     }, {
         "key": "trēo",
-        "form-raw": "trēo",
-        "form-canon": "tree",
+        "form-oe": {
+            "form": "trēo",
+            "canon": "tree"
+        },
         "type": "noun",
         "gloss": "tree",
         "tags": ["count", "concrete", "living", "plant", "material"],
         "origin": "old-english"
     }, {
         "key": "tūn",
-        "form-raw": "tūn",
-        "form-canon": "town",
+        "form-oe": {
+            "form": "tūn",
+            "canon": "town"
+        },
         "type": "noun",
         "gloss": "town",
         "tags": ["count", "concrete", "terrain"],
@@ -6918,8 +7454,10 @@
         "notes": "Alt. glosses are my invention"
     }, {
         "key": "þearf",
-        "form-raw": "þearf",
-        "form-canon": "tharf",
+        "form-oe": {
+            "form": "þearf",
+            "canon": "tharf"
+        },
         "type": "adj",
         "gloss": "unleavened",
         "tags": ["obscure"],
@@ -6934,8 +7472,10 @@
         "origin": "old-english"
     }, {
         "key": "þeġn-ruler",
-        "form-raw": "þeġn",
-        "form-canon": "thane",
+        "form-oe": {
+            "form": "þeġn",
+            "canon": "thane"
+        },
         "type": "noun",
         "gloss": "lord",
         "tags": ["count", "concrete", "living", "person", "role", "ruler", "obscure"],
@@ -7016,8 +7556,10 @@
         "notes": "Alternate listed meaning 'to dim the sight'"
     }, {
         "key": "þēow",
-        "form-raw": "þēow",
-        "form-canon": "thew",
+        "form-oe": {
+            "form": "þēow",
+            "canon": "thew"
+        },
         "type": "noun",
         "gloss": "bodily [force]",
         "tags": ["mass", "abstract", "quality", "obscure"],
@@ -7044,16 +7586,20 @@
         "origin": "old-english"
     }, {
         "key": "þorn",
-        "form-raw": "þorn",
-        "form-canon": "thorn",
+        "form-oe": {
+            "form": "þorn",
+            "canon": "thorn"
+        },
         "type": "noun",
         "gloss": "thorn",
         "tags": ["count", "concrete", "living", "plant", "bodypart", "bodypart-plant"],
         "origin": "old-english"
     }, {
         "key": "þrǣl",
-        "form-raw": "þrǣl",
-        "form-canon": "thrall",
+        "form-oe": {
+            "form": "þrǣl",
+            "canon": "thrall"
+        },
         "type": "noun",
         "gloss": "slave",
         "tags": ["count", "concrete", "living", "person"],
@@ -7067,8 +7613,10 @@
         "origin": "old-english"
     }, {
         "key": "þrang",
-        "form-raw": "þrang",
-        "form-canon": "throng",
+        "form-oe": {
+            "form": "þrang",
+            "canon": "throng"
+        },
         "type": "noun",
         "gloss": ["dense [crowd]"],
         "gloss-alt": ["army"],
@@ -7124,8 +7672,10 @@
         "origin": "old-english"
     }, {
         "key": "þynne",
-        "form-raw": "þynne",
-        "form-canon": "thin",
+        "form-oe": {
+            "form": "þynne",
+            "canon": "thin"
+        },
         "type": "adj",
         "gloss": "thin",
         "origin": "old-english"
@@ -7204,16 +7754,20 @@
         "notes": "Alt. meaning 'penis'"
     }, {
         "key": "wærc",
-        "form-raw": "wærc",
-        "form-canon": "wark",
+        "form-oe": {
+            "form": "wærc",
+            "canon": "wark"
+        },
         "type": "noun",
         "gloss": "[pain], [ache]",
         "tags": ["count", "abstract", "body-state", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wæx",
-        "form-raw": "wæx",
-        "form-canon": "wax",
+        "form-oe": {
+            "form": "wæx",
+            "canon": "wax"
+        },
         "type": "noun",
         "gloss": "wax",
         "tags": ["mass", "concrete", "material"],
@@ -7270,8 +7824,10 @@
         "origin": "old-english"
     }, {
         "key": "wamb",
-        "form-raw": "wamb",
-        "form-canon": "womb",
+        "form-oe": {
+            "form": "wamb",
+            "canon": "womb"
+        },
         "type": "noun",
         "gloss": "womb",
         "gloss-alt": ["belly"],
@@ -7305,8 +7861,10 @@
         "notes": "Origin of 'ooze', but feels different enough to leave without canon. TODO: Add sense 'marsh'."
     }, {
         "key": "weald-woodland",
-        "form-raw": "weald",
-        "form-canon": "wald",
+        "form-oe": {
+            "form": "weald",
+            "canon": "wald"
+        },
         "type": "noun",
         "gloss": "[wood] or [woodland]",
         "tags": ["count", "concrete", "living", "terrain", "obscure"],
@@ -7424,8 +7982,10 @@
         "origin": "old-english"
     }, {
         "key": "weorþ",
-        "form-raw": "weorþ",
-        "form-canon": "worth",
+        "form-oe": {
+            "form": "weorþ",
+            "canon": "worth"
+        },
         "type": "noun",
         "gloss": "[worth], [value]",
         "tags": ["mass", "abstract", "quality"],
@@ -7458,16 +8018,20 @@
         "origin": "old-english"
     }, {
         "key": "weþer",
-        "form-raw": "weþer",
-        "form-canon": "wether",
+        "form-oe": {
+            "form": "weþer",
+            "canon": "wether"
+        },
         "type": "noun",
         "gloss": "castrated [ram]",
         "tags": ["count", "concrete", "living", "animal", "tame"],
         "origin": "old-english"
     }, {
         "key": "wiċċe",
-        "form-raw": "wiċċa",
-        "form-canon": "witch",
+        "form-oe": {
+            "form": "wiċċa",
+            "canon": "witch"
+        },
         "type": "noun",
         "gloss": ["witch", "magician"],
         "tags": ["count", "concrete", "living", "person", "role"],
@@ -7484,15 +8048,19 @@
         "origin": "old-english"
     }, {
         "key": "wīd",
-        "form-raw": "wīd",
-        "form-canon": "wide",
+        "form-oe": {
+            "form": "wīd",
+            "canon": "wide"
+        },
         "type": "adj",
         "gloss": "wide",
         "origin": "old-english"
     }, {
         "key": "wīf",
-        "form-raw": "wīf",
-        "form-canon": "wife",
+        "form-oe": {
+            "form": "wīf",
+            "canon": "wife"
+        },
         "type": "noun",
         "gloss": "wife",
         "gloss-alt": ["woman"],
@@ -7525,39 +8093,49 @@
         "origin": "old-english"
     }, {
         "key": "wilde",
-        "form-raw": "wilde",
-        "form-canon": "wild",
+        "form-oe": {
+            "form": "wilde",
+            "canon": "wild"
+        },
         "type": "adj",
         "gloss": "wild",
         "origin": "old-english"
     }, {
         "key": "wīn",
-        "form-raw": "wīn",
-        "form-canon": "wine",
+        "form-oe": {
+            "form": "wīn",
+            "canon": "wine"
+        },
         "type": "noun",
         "gloss": "wine",
         "tags": ["mass", "concrete", "fluid", "liquid", "man-made"],
         "origin": "old-english"
     }, {
         "key": "wind",
-        "form-raw": "wind",
-        "form-canon": "wind",
+        "form-oe": {
+            "form": "wind",
+            "canon": "wind"
+        },
         "type": "noun",
         "gloss": "wind",
         "tags": ["mass", "concrete", "fluid", "gas"],
         "origin": "old-english"
     }, {
         "key": "winter",
-        "form-raw": "winter",
-        "form-canon": "winter",
+        "form-oe": {
+            "form": "winter",
+            "canon": "winter"
+        },
         "type": "noun",
         "gloss": "winter",
         "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-year"],
         "origin": "old-english"
     }, {
         "key": "wīs",
-        "form-raw": "wīs",
-        "form-canon": "wise",
+        "form-oe": {
+            "form": "wīs",
+            "canon": "wise"
+        },
         "type": "adj",
         "gloss": "wise",
         "origin": "old-english",
@@ -7572,16 +8150,20 @@
         "notes": "TODO: Add count sense 'penalty, fine'"
     }, {
         "key": "witt",
-        "form-raw": "witt",
-        "form-canon": "wit",
+        "form-oe": {
+            "form": "witt",
+            "canon": "wit"
+        },
         "type": "noun",
         "gloss": "intellect",
         "tags": ["mass", "abstract", "quality"],
         "origin": "old-english"
     }, {
         "key": "wiþer",
-        "form-raw": "wiþer",
-        "form-canon": "wither",
+        "form-oe": {
+            "form": "wiþer",
+            "canon": "wither"
+        },
         "type": "adj",
         "gloss": ["hostile", "opposed", "adverse", "contrary"],
         "tags": ["obscure"],
@@ -7644,8 +8226,10 @@
         "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
     }, {
         "key": "wōd-noun",
-        "form-raw": "wōd",
-        "form-canon": "wode",
+        "form-oe": {
+            "form": "wōd",
+            "canon": "wode"
+        },
         "type": "noun",
         "gloss": "madness",
         "tags": ["mass", "abstract", "mind-state", "obscure"],
@@ -7671,40 +8255,50 @@
         "origin": "old-english"
     }, {
         "key": "wolcen-count",
-        "form-raw": "wolcen",
-        "form-canon": "welkin",
+        "form-oe": {
+            "form": "wolcen",
+            "canon": "welkin"
+        },
         "type": "noun",
         "gloss": ["cloud"],
         "tags": ["count", "concrete", "weather", "glooming", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wolcen-singleton",
-        "form-raw": "wolcen",
-        "form-canon": "welkin",
+        "form-oe": {
+            "form": "wolcen",
+            "canon": "welkin"
+        },
         "type": "noun",
         "gloss": ["sky", "heavens", "clouds"],
         "tags": ["singleton", "concrete", "place", "luminous", "glooming", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wolf",
-        "form-raw": "wolf",
-        "form-canon": "wolf",
+        "form-oe": {
+            "form": "wolf",
+            "canon": "wolf"
+        },
         "type": "noun",
         "gloss": "wolf",
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
         "origin": "old-english"
     }, {
         "key": "wræc",
-        "form-raw": "wræc",
-        "form-canon": "wrack",
+        "form-oe": {
+            "form": "wræc",
+            "canon": "wrack"
+        },
         "type": "noun",
         "gloss": ["[state] of exile", "[persecution] or [punishment]", "[misery] or [torment]"],
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wrǣþþu",
-        "form-raw": "wrǣþþu",
-        "form-canon": "wrath",
+        "form-oe": {
+            "form": "wrǣþþu",
+            "canon": "wrath"
+        },
         "type": "noun",
         "gloss": "anger",
         "tags": ["mass", "abstract", "mind-state"],
@@ -7712,23 +8306,29 @@
         "notes": "Comes out as 'wreth' for me. Seems to have to do with order of PCS/SVC"
     }, {
         "key": "wracu",
-        "form-raw": "wracu",
-        "form-canon": "wrake",
+        "form-oe": {
+            "form": "wracu",
+            "canon": "wrake"
+        },
         "type": "noun",
         "gloss": "revenge",
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wrāþ",
-        "form-raw": "wrāþ",
-        "form-canon": "wroth",
+        "form-oe": {
+            "form": "wrāþ",
+            "canon": "wroth"
+        },
         "type": "adj",
         "gloss": "angry",
         "origin": "old-english"
     }, {
         "key": "wreċċ",
-        "form-raw": "wreċċ",
-        "form-canon": "wretch",
+        "form-oe": {
+            "form": "wreċċ",
+            "canon": "wretch"
+        },
         "type": "noun",
         "gloss": ["miserable [person]", "exile"],
         "tags": ["count", "concrete", "living", "person"],
@@ -7795,24 +8395,30 @@
         "origin": "old-english"
     }, {
         "key": "wudu-material",
-        "form-raw": "wudu",
-        "form-canon": "wood",
+        "form-oe": {
+            "form": "wudu",
+            "canon": "wood"
+        },
         "type": "noun",
         "gloss": "wood",
         "tags": ["mass", "concrete", "living", "material"],
         "origin": "old-english"
     }, {
         "key": "wudu-terrain",
-        "form-raw": "wudu",
-        "form-canon": "wood",
+        "form-oe": {
+            "form": "wudu",
+            "canon": "wood"
+        },
         "type": "noun",
         "gloss": "[wood] or [woodland]",
         "tags": ["count", "concrete", "living", "terrain"],
         "origin": "old-english"
     }, {
         "key": "wul",
-        "form-raw": "wul",
-        "form-canon": "wool",
+        "form-oe": {
+            "form": "wul",
+            "canon": "wool"
+        },
         "type": "noun",
         "gloss": "wool",
         "tags": ["mass", "concrete", "material"],
@@ -7854,8 +8460,10 @@
         "notes": "Occurs in 'winsome', leaving canonless though"
     }, {
         "key": "wyrd",
-        "form-raw": "wyrd",
-        "form-canon": "weird",
+        "form-oe": {
+            "form": "wyrd",
+            "canon": "weird"
+        },
         "type": "noun",
         "gloss": "fate",
         "tags": ["mass", "abstract"],
@@ -7890,8 +8498,10 @@
         "origin": "old-english"
     }, {
         "key": "wyrm",
-        "form-raw": "wyrm",
-        "form-canon": "worm",
+        "form-oe": {
+            "form": "wyrm",
+            "canon": "worm"
+        },
         "type": "noun",
         "gloss": "worm",
         "gloss-alt": ["snake", "dragon"],
