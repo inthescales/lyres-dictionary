@@ -1,5 +1,5 @@
+import src.language.old_english.modify as oe_modify
 import src.language.old_english.orthography as orthography
-import src.language.old_english.verner as verner
 import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import occ, rarely
@@ -76,17 +76,12 @@ def get_strong_pseudoparticiple(form, verb_class, config):
     # (These words have infinitives that show gemination due to being formed with '-jan')
     # However, this should not apply to cases such as 'swellan' -> 'swollen' (3)
     if verb_class in [5, 6]:
-        for i in range(0, len(clusters)):
-            if len(clusters[i]) == 2:
-                if clusters[i][0] == clusters[i][1] and clusters[i][0] in orthography.consonants:
-                    clusters[i] = clusters[i][0]
-                elif clusters[i][0:2] == "ċġ":
-                    clusters[i] = "ġ"
+        clusters = [oe_modify.degeminate(cluster) for cluster in clusters]
 
     form = "".join(clusters[0:vowels_index]) + vowel_map[verb_class][vowels] + "".join(clusters[vowels_index+1:])
 
     if rarely("PPart:verners-law", config):
-        form = verner.apply_verner(form)
+        form = oe_modify.apply_verner(form)
 
     return form + suffix
 

@@ -1,28 +1,18 @@
+import src.language.old_english.modify as oe_modify
 import src.language.old_english.orthography as orthography
-import src.language.old_english.verner as verner
 import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import often, rarely
 
 # Unhandled cases:
-# - 
+# - Some miscellaneous class 7 forms
 
 # TODOs:
 # - Cases where a verb uses a different verb class' preterite-formation method
 
 # TODO: Consider doing preterites and participles by directly manipulating modern forms
 
-# Strong past forms ==============================================
-
-# Mapping from strong verb class to pairs of infinitive and past participle vowels.
-# For predicting past participle forms based on the form of the infinitive.
-vowel_map = {
-    1: { "ī": "ā" },
-    3: {},
-    # 4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
-    # 5: { "e": "e", "i": "e", "ie": "ie"}, # 'ġiefan' -> 'ġefen' (acc. Wiktionary)?
-    # 6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
-}
+# ======================
 
 # Get a pseudo-preterite form for the given form, treating it as the given verb class
 #
@@ -30,7 +20,7 @@ vowel_map = {
 # an alternative form that should convert properly into a modern-style past tense form.
 #
 # NOTE: The following cases are *not* handled by this function:
-# - Weak verbs with participle forms in -'ht' (forming modern 'taught', 'sought', etc.)
+# - Weak verbs with preterite forms in -'ht' (forming modern 'taught', 'sought', etc.)
 #   As far as I can tell, these aren't predictable from the perspective of recorded OE.
 #   TODO: Make a hinge for these if possible.
 def get_strong_pseudopreterite(form, verb_class, config):
@@ -115,16 +105,10 @@ def get_strong_pseudopreterite(form, verb_class, config):
             # TODO: Add analogical forms here
             return None
 
-    # Geminates in some classes should be reduced, e.g. 'biddan' -> 'beden' (5), 'sċeappen' -> 'sċapen' (6)
+    # Geminates in some classes should be reduced, e.g. 'biddan' -> 'bǣdon' (5), 'liċġan' -> 'læġ' (5)
     # (These words have infinitives that show gemination due to being formed with '-jan')
-    # However, this should not apply to cases such as 'swellan' -> 'swollen' (3)
     if verb_class in [5, 6]:
-        for i in range(0, len(clusters)):
-            if len(clusters[i]) == 2:
-                if clusters[i][0] == clusters[i][1] and clusters[i][0] in orthography.consonants:
-                    clusters[i] = clusters[i][0]
-                elif clusters[i][0:2] == "ċġ":
-                    clusters[i] = "ġ"
+        clusters = [oe_modify.degeminate(cluster) for cluster in clusters]
 
     if lengthen and not helpers.is_vowel(clusters[-1][0], y_is_vowel=True):
         # Add a final vowel to ensure that fricatives become voiced when appropriate. Otherwise
@@ -134,10 +118,11 @@ def get_strong_pseudopreterite(form, verb_class, config):
     form = "".join(clusters[0:vowels_index]) + vowel + "".join(clusters[vowels_index+1:])
 
     if rarely("PPart:verners-law", config):
-        form = verner.apply_verner(form)
+        form = oe_modify.apply_verner(form)
 
     return form
 
+# Returns true if the given infinitive form is contracted.
 def is_contracted(form):
     return form[-2:] in ["on", "ōn"] or form[-4:] == "ē|an"
 
