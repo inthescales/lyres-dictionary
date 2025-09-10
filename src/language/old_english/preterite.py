@@ -1,4 +1,5 @@
 import src.language.old_english.orthography as orthography
+import src.language.old_english.verner as verner
 import src.utils.helpers as helpers
 
 from src.evolutor.engine.hinges import often, rarely
@@ -21,12 +22,6 @@ vowel_map = {
     # 4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
     # 5: { "e": "e", "i": "e", "ie": "ie"}, # 'ġiefan' -> 'ġefen' (acc. Wiktionary)?
     # 6: { "a": "a", "e": "a", "ē": "aġ", "ea": "a", "ie": "a"} # 'a', 'ie' can also go to 'æ". 'ē' -> 'aġ' as in 'slēan', 'flēan'. TODO: Figure out cases like 'swerian' -> 'sworen' that have 'e' -> 'o'
-}
-
-verner_map = {
-    "h": "ġ",
-    "s": "r",
-    "þ": "d"
 }
 
 # Get a pseudo-preterite form for the given form, treating it as the given verb class
@@ -139,7 +134,7 @@ def get_strong_pseudopreterite(form, verb_class, config):
     form = "".join(clusters[0:vowels_index]) + vowel + "".join(clusters[vowels_index+1:])
 
     if rarely("PPart:verners-law", config):
-        form = apply_verner(form)
+        form = verner.apply_verner(form)
 
     return form
 
@@ -162,24 +157,3 @@ def get_strong_pseudopreterite_contracted(form, verb_class):
         return form[0:-3] + "ung"
 
     return None
-
-# Verner's Law ==================================================
-
-# Apply Verner's Law, as it appears in participles, to the given participle form.
-# Ex. 'frosen' -> 'froren'
-# Here I just replace the last, single consonant according to Verner's Law.
-# Ignoring any cases with multiple consonants in the final cluster because I'm
-# not sure whether Verner's Law should apply there - I'm not aware of any MnE cases.
-# Equality check handles cases like 'hliehhan' -> 'hlæġen'
-def apply_verner(form):
-    if form[-1] not in orthography.consonants \
-        or (form[-2] in orthography.consonants and form[-2] != form[-1]) \
-        or form[-1] not in verner_map:
-        return form
-
-    if form[-2] != form[-1]:
-        stem = form[:-1]
-    else:
-        stem = form[:-2]
-
-    return stem + verner_map[form[-1]]

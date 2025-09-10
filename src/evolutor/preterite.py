@@ -22,6 +22,7 @@ def get_preterite_form(oe_form, verb_class, config):
         # Evolve to modern form
         preterite_form = evolutor.oe_form_to_ne_form(pseudopreterite, config)
     else:
+        # Get a weak preterite form
         modern_form = evolutor.oe_form_to_ne_form(oe_form, config)
         preterite_form = mne_preterite.get_weak(modern_form)
 

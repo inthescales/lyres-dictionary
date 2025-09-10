@@ -223,7 +223,7 @@ class PastParticipleTests(unittest.TestCase):
         check("h|ōn", 7, "hung") # By analogy with simple past for these forms
         check("h|ōn", 7, "hanged", overrides=[["PPart:use-strong", False]])
 
-        # De-gemination in participles for clasess 5 and 6 -----------------------------
+        # De-gemination in participles for classes 5 and 6 -----------------------------
 
         check("liċġ|an", 5, "lain")
         check("sċiepp|an", 6, "shapen")
