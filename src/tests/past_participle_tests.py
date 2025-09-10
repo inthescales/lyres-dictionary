@@ -220,8 +220,8 @@ class PastParticipleTests(unittest.TestCase):
         check("tē|on", "weak", "teed")
         check("wrē|on", 1, "wrine") #* Conjectured form, taken from Anglish wiki
         check("flē|on", 2, "flown")
-        check("h|ōn", 7, "hangen")
-        check("f|ōn", 7, "fanged", overrides=[["PPart:use-strong", False]])
+        check("h|ōn", 7, "hung") # By analogy with simple past for these forms
+        check("h|ōn", 7, "hanged", overrides=[["PPart:use-strong", False]])
 
         # De-gemination in participles for clasess 5 and 6 -----------------------------
 

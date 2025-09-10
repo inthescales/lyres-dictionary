@@ -16,6 +16,7 @@ class Config:
     # Inserts the new override in the list. 'overwrite' determines whether to overwrite
     # an existing override for the same hinge, or to return without adding if there is one.
     def add_override(self, new_over, overwrite=False):
+        # Get index of any existing override for this hinge
         index = None
         for i in range(0, len(self.overrides)):
             if self.overrides[i][0] == new_over[0]:

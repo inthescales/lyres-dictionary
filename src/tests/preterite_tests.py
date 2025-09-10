@@ -111,7 +111,7 @@ class PreteriteTests(unittest.TestCase):
 
         # contracted in -ōn
 
-        # check("h|ōn", 7, "hung") # TODO: Fix this, 'cause right now it gets hung up in evolutor.process(...)
+        check("h|ōn", 7, "hung")
 
         # others
 

@@ -33,10 +33,6 @@ def process(oe_form, config, lammy):
             # Note that at present, trying to process a word with its prefix attached to it will cause problems with e.g. syllable stress
             form = prefix
         else:
-            irregular_form = oe_morphology.get_irregular_indicative(oe_form, config)
-            if irregular_form != None:
-                element_form = irregular_form
-
             form = lammy(element_form, config)
 
         if form == None:
@@ -46,8 +42,12 @@ def process(oe_form, config, lammy):
 
     return modern_form
 
-# Returns a MnE form for a given OE word
+# Returns a MnE lemma form for a given OE word
 def get_modern_form(form, config):
+    irregular_form = oe_morphology.get_irregular_indicative(form, config)
+    if irregular_form != None:
+        form = irregular_form
+
     oe_phonemes = oe_read.to_phonemes(form)
     me_phonemes = me_phonology.from_oe_phonemes(oe_phonemes, config)
     return mne_write.from_me_phonemes(me_phonemes, config)

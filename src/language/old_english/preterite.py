@@ -151,6 +151,7 @@ def get_strong_pseudopreterite_contracted(form, verb_class):
     if verb_class == "weak":
         return form[0:-2]
     elif form[-4:] == "ē|on":
+        # No strong preterites for e.g. 'tēon' -> 'tee' -> 'teed'
         return None
 
     if form[-4:] == "ē|an":

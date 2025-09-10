@@ -124,7 +124,7 @@ def get_strong_pseudoparticiple_contracted(form, verb_class):
         # Also appeared as '-ongen' in OE
         # HACK: '-æng' spelling is constructed, with intent of consistently giving '-ang' forms in MnE.
         # TODO: Find a more elegant way to do this.
-        return stem + "æng+en"
+        return stem + "ung" # stem + "æng+en"
     else:
         return None
 
