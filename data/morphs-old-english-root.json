@@ -2,17 +2,17 @@
     {
         "key": "æċe",
         "form-oe": {
-            "form": ["aċe", "æċe", "eċe"],
+            "form": "aċe",
             "canon": "ache"
         },
         "type": "noun",
         "gloss": "ache",
         "tags": ["count", "abstract", "body-state"],
         "origin": "old-english",
-        "notes": "Modern spelling derives from 'ace' or 'æce' form. Pronunciation taken from verb form."
+        "notes": "Standard form 'eċe'. Modern pronunciation is taken from verb form 'acan', while modern spelling is irregular."
     }, {
         "key": "æċed",
-        "form-oe": ["æċed", "eċed", "æċċed"],
+        "form-oe": "æċed",
         "type": "noun",
         "gloss": "vinegar",
         "tags": ["mass", "concrete", "fluid", "liquid", "man-made", "speculative"],
@@ -33,23 +33,21 @@
                 "gloss": "[river] or [channel]",
                 "tags": ["count", "concrete", "liquid", "terrain", "speculative"]
             }, {
-                "gloss": "kidney",
-                "tags": ["count", "concrete", "bodypart", "speculative"]
-            }, {
                 "period": "middle",
                 "gloss": ["blood [vessel]"],
                 "tags": ["count", "concrete", "bodypart", "speculative"]
             }
         ],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Additional OE gloss 'kidney'"
     }, {
         "key": "ǣfen",
         "form-oe": {
             "main": {
-                "form": ["ǣfen", "ēven"],
+                "form": "ǣfen",
                 "canon": "even"
             },
-            "alt": "ǣfern"
+            "alt": [{ "form": "ēfern", "dialect": "northumbrian" }]
         },
         "type": "noun",
         "gloss": "evening",
@@ -75,11 +73,12 @@
         "origin": "old-english"
     }, {
         "key": "ǣled",
-        "form-oe": "ǣled",
+        "form-oe": "ǣld|e",
         "type": "noun",
-        "gloss": "fire",
+        "gloss": "[fire], [conflagration]",
         "tags": ["mass", "concrete", "luminous", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "TODO: oblique. Given form is oblique, with main form 'ǣled', but based on ME 'ēld' I presume oblique is the source"
     }, {
         "key": "ælmesse",
         "form-oe": {
@@ -96,11 +95,8 @@
     }, {
         "key": "ǣmerġe",
         "form-oe": {
-            "main": {
-                "form": "ǣmerġe",
-                "canon": "ember"
-            },
-            "alt": "ǣmyrġe"
+            "form": "ǣmerġe",
+            "canon": "ember"
         },
         "type": "noun",
         "gloss": "ember",
@@ -111,15 +107,19 @@
         "key": "ængel",
         "form-oe": {
             "main": {
-                "form": "æangel",
+                "form": {
+                    "lemma": "ænġel",
+                    "oblique": "ængl|e"
+                },
                 "canon": "angel"
             },
-            "alt": "engel"
+            "alt": [{ "lemma": "enġel", "oblique": "engl|e" }]
         },
         "type": "noun",
         "gloss": "angel",
         "tags": ["count", "concrete", "living", "person", "divine"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "TODO: oblique. Pronunciation of 'g' in lemma form may have been palatal, but not in oblique."
     }, {
         "key": "æppel",
         "form-oe": {
@@ -191,9 +191,20 @@
         "key": "ǣs",
         "form-oe": "ǣs",
         "type": "noun",
-        "gloss": ["prey", "carrion"],
-        "tags": ["mass", "concrete", "homophonic"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": ["[food], particularly [meat]"],
+                "tags": ["mass", "concrete", "speculative", "homophonic"]
+            }, {
+                "gloss": ["prey", "carrion"],
+                "tags": ["mass", "concrete", "speculative", "homophonic"]
+            }, {
+                "gloss": "bait",
+                "tags": ["mass", "concrete", "speculative", "homophonic"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Survived to ME as 'ees', source of modern southern / southwest dialect 'easse' (earthworm)"
     }, {
         "key": "æsċ",
         "form-oe": {
@@ -207,11 +218,8 @@
     }, {
         "key": "æsċe",
         "form-oe": {
-            "main": {
-                "form": "æsċe",
-                "canon": "ash"
-            },
-            "alt": ["asċe"]
+            "form": "æsċe",
+            "canon": "ash"
         },
         "form-canon": "ash",
         "type": "noun",
@@ -231,12 +239,16 @@
         "notes": "Alternate form 'æps'"
     }, {
         "key": "æstel",
-        "form-oe": "æstel",
+        "form-oe": {
+            "main": "æstel",
+            "alt": ["ǣstel", "estel"]
+        },
         "type": "noun",
-        "gloss": "bookmark",
-        "gloss-tool": "[mark] a place in a text",
+        "gloss": ["pointer", "bookmark"],
+        "gloss-tool": ["[point] out", "[mark] a place in a text"],
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "From Latin 'hastula' > late Latin 'astella'. Meaning in OE disputed. Sources disagree on vowel length, I like short better."
     }, {
         "key": "æþele",
         "form-oe": "æþele",
@@ -278,11 +290,7 @@
     }, {
         "key": "acan",
         "form-oe": {
-            "form": {
-                "infinitive": "ac|an",
-                "past": "ōc",
-                "past-participle": ["ġe-æc+en", "ġe-ac+en"]
-            },
+            "form": "ac|an",
             "canon": "ache"
         },
         "type": "verb",
@@ -296,17 +304,59 @@
         "form-oe": "ād",
         "type": "noun",
         "gloss": "funeral [pyre]",
-        "tags": ["count", "concrete", "luminous", "speculative"],
+        "tags": ["count", "concrete", "luminous", "man-made", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "ādl",
+        "key": "adela-adj",
         "form-oe": {
-            "form": "ādl",
+            "form": "adela",
             "canon": "addle"
         },
+        "type": "adj",
+        "senses": [
+            {
+                "gloss": "rotten",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "[confused], [muddled]",
+                "tags": []
+            }
+        ],
+        "origin": "old-english",
+        "notes": "See 'adela-adj'"
+    }, {
+        "key": "adela-n",
+        "form-oe": "adela",
         "type": "noun",
-        "gloss": "[disease], [sickness]",
-        "tags": ["count", "abstract", "quality", "body-state"],
+        "senses": [
+            {
+                "gloss": "filth",
+                "tags": ["mass", "concrete"]
+            }, {
+                "gloss": "filthy [place]",
+                "tags": ["count", "concrete", "terrain"]
+            }, {
+                "period": "modern",
+                "gloss": "confusion",
+                "tags": ["mass", "abstract", "mind-state"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "See 'adela-adj'"
+    }, {
+        "key": "ādl",
+        "form-oe": "ādl",
+        "type": "noun",
+        "senses": [
+            {
+                "gloss": "[disease], [sickness]",
+                "tags": ["count", "abstract", "quality", "body-state"]
+            }, {
+                "gloss": "[disease], [sickness]",
+                "tags": ["mass", "abstract", "quality", "body-state"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "āfor",
