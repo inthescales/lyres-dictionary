@@ -4,10 +4,13 @@ def modify(morph):
         and "form-canon" in morph \
         and "form-participle-canon" in morph \
         and "form-raw-alt" not in morph \
-        and "form-participle-raw" not in morph \
+        and "form-participle-raw" in morph \
         and type(morph["form-raw"]) == str:
         morph["form-oe"] = { 
-            "form": morph["form-raw"],
+            "form": {
+                "infinitive": morph["form-raw"],
+                "past-participle": morph["form-participle-raw"]
+            },
             "canon": {
                 "lemma": morph["form-canon"],
                 "past-participle": morph["form-participle-canon"]
@@ -15,6 +18,7 @@ def modify(morph):
         }
         del morph["form-raw"]
         del morph["form-canon"]
+        del morph["form-participle-raw"]
         del morph["form-participle-canon"]
 
     return morph

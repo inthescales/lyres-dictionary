@@ -1237,10 +1237,16 @@
         "origin": "old-english"
     }, {
         "key": "bringan",
-        "form-raw": "bring|an",
-        "form-canon": "bring",
-        "form-participle-raw": ["brōht"],
-        "form-participle-canon": ["brought"],
+        "form-oe": {
+            "form": {
+                "infinitive": "bring|an",
+                "past-participle": ["brōht"]
+            },
+            "canon": {
+                "lemma": "bring",
+                "past-participle": ["brought"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "bring",
@@ -1791,10 +1797,16 @@
         "notes": "Represents OE sens, where base morph represents modern usage. Separate for tags. TODO: Separate disease sense for 'body-state'"
     }, {
         "key": "cweċċan",
-        "form-raw": "cweċċ|an",
-        "form-canon": "quitch",
-        "form-participle-raw": "cweaht",
-        "form-participle-canon": ["quitched"],
+        "form-oe": {
+            "form": {
+                "infinitive": "cweċċ|an",
+                "past-participle": "cweaht"
+            },
+            "canon": {
+                "lemma": "quitch",
+                "past-participle": ["quitched"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[shake], [swing], or [vibrate]", "[brandish] a weapon"],
@@ -1855,8 +1867,13 @@
         "origin": "old-english"
     }, {
         "key": "cwenċan",
-        "form-raw": "cwenċ|an",
-        "form-participle-canon": ["quenched"],
+        "form-oe": {
+            "form": "cwenċ|an",
+            "canon": {
+                "lemma": "quench",
+                "past-participle": ["quenched"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "extinguish",
@@ -4584,10 +4601,16 @@
         "origin": "old-english"
     }, {
         "key": "hræċan",
-        "form-raw": "hræċ|an",
-        "form-canon": "retch",
-        "form-participle-raw": "hrǣht",
-        "form-participle-canon": ["retched"],
+        "form-oe": {
+            "form": {
+                "infinitive": "hræċ|an",
+                "past-participle": "hrǣht"
+            },
+            "canon": {
+                "lemma": "retch",
+                "past-participle": ["retched"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "retch",
@@ -7295,9 +7318,13 @@
         "origin": "old-english"
     }, {
         "key": "stellan",
-        "form-raw": "stell|an",
-        "form-canon": "stell",
-        "form-participle-canon": ["stold", "stelled"],
+        "form-oe": {
+            "form": "stell|an",
+            "canon": {
+                "lemma": "stell",
+                "past-participle": ["stold", "stelled"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[put] in place", "[set] up or [mount]", "[show] or [portray]"],
@@ -7350,10 +7377,16 @@
         "origin": "old-english"
     }, {
         "key": "streċċan",
-        "form-raw": "streċċ|an",
-        "form-canon": "stretch",
-        "form-participle-raw": ["streht", "streaht"],
-        "form-participle-canon": ["stretched"],
+        "form-oe": {
+            "form": {
+                "infinitive": "streċċ|an",
+                "past-participle": ["streht", "streaht"]
+            },
+            "canon": {
+                "lemma": "stretch",
+                "past-participle": ["stretched"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "stretch",
@@ -7592,9 +7625,13 @@
         "notes": "Wiktionary lists a lot of alternate forms. Look there for dialect info."
     }, {
         "key": "swerian",
-        "form-raw": "sweri|an",
-        "form-canon": "swear",
-        "form-participle-canon": ["sworn"],
+        "form-oe": {
+            "form": "sweri|an",
+            "canon": {
+                "lemma": "swear",
+                "past-participle": ["sworn"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "swear",
@@ -7703,10 +7740,16 @@
         "notes": "WS form 'seolvor'"
     }, {
         "key": "tǣċan",
-        "form-raw": "tǣċ|an",
-        "form-canon": "teach",
-        "form-participle-raw": ["tāht"],
-        "form-participle-canon": ["taught"],
+        "form-oe": {
+            "form": {
+                "infinitive": "tǣċ|an",
+                "past-participle": ["tāht"]
+            },
+            "canon": {
+                "lemma": "teach",
+                "past-participle": ["taught"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "teach",
@@ -7962,10 +8005,16 @@
         "notes": "Needs bitransitivity"
     }, {
         "key": "þencan",
-        "form-raw": "þenc|an",
-        "form-canon": "think",
-        "form-participle-raw": ["þōht"],
-        "form-participle-canon": ["thought"],
+        "form-oe": {
+            "form": {
+                "infinitive": "þenc|an",
+                "past-participle": ["þōht"]
+            },
+            "canon": {
+                "lemma": "think",
+                "past-participle": ["thought"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "think",
@@ -8005,9 +8054,13 @@
         "origin": "old-english"
     }, {
         "key": "þēon",
-        "form-raw": "þē|on",
-        "form-canon": "thee",
-        "form-participle-canon": ["theed"],
+        "form-oe": {
+            "form": "þē|on",
+            "canon": {
+                "lemma": "thee",
+                "past-participle": ["theed"]
+            }
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[flourish] and [prosper]", "thrive", "[be] successful"],
