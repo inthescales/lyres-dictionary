@@ -18,5 +18,6 @@ middle_english = [
 
 modern_english = [
 	"standard",
-	"dialect" 			# Unspecified nonstandard dialect
+	"dialect", 			# Unspecified nonstandard dialect
+	"west-country"
 ]

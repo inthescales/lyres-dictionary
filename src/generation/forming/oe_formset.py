@@ -178,7 +178,15 @@ def read_paradigm_basic(value):
 		return Paradigm_OE_B(value["lemma"], default_oblique(value["lemma"]))
 
 def read_paradigm_verb(value):
-	return Paradigm_OE_V(value["infinitive"], value["past"], value["past-participle"])
+	past = None
+	if "past" in value:
+		past = value["past"]
+
+	past_participle = None
+	if "past-participle" in value:
+		past_participle = value["past-participle"]
+
+	return Paradigm_OE_V(value["infinitive"], past, past_participle)
 
 # Canonset ----------------------------
 
@@ -236,7 +244,11 @@ default_mne_dialect = ["standard"]
 
 def default_oblique(lemma):
 	if not helpers.is_vowel(lemma[-1], y_is_vowel=True):
-		return lemma + "|e"
+		if type(lemma) == list:
+			return [form + "|e" for form in lemma]
+		else:
+			return lemma + "|e"
+
 	else:
 		return lemma
 

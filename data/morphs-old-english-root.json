@@ -1376,14 +1376,13 @@
         "form-raw": "byrn|an",
         "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
         "form-canon": "burn",
-        "form-participle-raw": ["burnen", "bærned"],
-        "form-participle-canon": ["burnt", "burned"],
+        "form-participle-canon": ["burned", "burnt"],
         "type": "verb",
         "verb-class": 3,
         "gloss": "burn",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "Class and participle forms are ambiguous since this is kind of mashing together a bunch of forms."
+        "notes": "Class is ambiguous since this is kind of mashing together a bunch of forms."
     }, {
         "key": "bysiġan",
         "form-raw": "bysiġ|an",
@@ -1922,7 +1921,8 @@
         "gloss": "clay [oven]",
         "gloss-tool": "[fire] clay",
         "tags": ["count", "concrete", "man-made", "tool"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "From Latin 'culina'"
     }, {
         "key": "cȳme",
         "form-oe": "cȳme",
@@ -2831,7 +2831,6 @@
         "key": "fēoġan",
         "form-raw": "fēoġ|an",
         "form-raw-alt": ["fēoġe|an", "fē|on"],
-        "form-participle-raw": ["fēod"],
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["hate", "persecute"],
@@ -3163,15 +3162,19 @@
         "origin": "old-english"
     }, {
         "key": "freġnan",
-        "form-raw": "freġn|an",
-        "form-raw-alt": ["friġn|an", "frin|an"],
-        "form-participle-raw": ["fruġn+en", "frugn+en", "frūn+en"],
+        "form-oe": {
+            "main": {
+                "form": "freġn|an",
+                "canon": [{ "lemma": "frain", "past-participle": "frained" }, { "lemma": "frayn", "past-participle": "frayned" }]
+            },
+            "alt": ["friġn|an", "frīn|an"]
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["ask", "inquire"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english",
-        "notes": "OED shows more modern usages with both 'frain' and 'frayn' spellings. Needs bitransitivity"
+        "notes": "Needs bitransitivity"
     }, {
         "key": "fremian",
         "form-oe": "fremi|an",
@@ -3232,13 +3235,16 @@
         "origin": "old-english"
     }, {
         "key": "friċġan",
-        "form-raw": "friċġ|an",
-        "form-participle-raw": ["friġ|en", "frug|en"],
+        "form-oe": {
+            "infinitive": "friċġ|an",
+            "past-participle": ["friġ+en"]
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": ["ask", "inquire", "question", "[seek] out"],
         "tags": ["transitive", "obscure", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Evolution of pp. gives 'frine', but could be 'frain' by analogy with 'lain'"
     }, {
         "key": "friþ",
         "form-oe": "friþ",
@@ -3670,9 +3676,29 @@
         "origin": "old-english"
     }, {
         "key": "ġiefan",
+        "form-oe": [
+            {
+                "form": {
+                    "infinitive": ["ġief|an", "ġif|an"],
+                    "past-participle": ["ġief+en", "ġif+en"]
+                },
+                "dialect": "west-saxon",
+                "canon": {
+                    "form": {
+                        "lemma": "yive",
+                        "past-participle": "yiven"
+                    },
+                    "dialect": "west-country"
+                }
+            }, {
+                "form": {
+                    "lemma": ["ġef|an", "ġeof|an"],
+                    "past-participle": ["ġef+en", "ġeof+en"]
+                },
+                "dialect": ["anglian", "kentish"]
+            }
+        ],
         "form-raw": "ġief|an",
-        "form-raw-alt": ["ġif|an", "ġeof|an"],
-        "form-participle-raw": ["ġef+en", "ġif+en"],
         "type": "verb",
         "verb-class": 5,
         "gloss": "give",
@@ -6914,7 +6940,6 @@
         "key": "smēaġan-intransitive",
         "form-raw": "smēaġ|an",
         "form-raw-alt": ["smē|an", "smēaġe|an"],
-        "form-participle-raw": ["smēad"],
         "type": "verb",
         "verb-class": "weak",
         "gloss": "meditate",
@@ -6924,7 +6949,6 @@
         "key": "smēaġan-transitive",
         "form-raw": "smēaġ|an",
         "form-raw-alt": ["smē|an", "smēaġe|an"],
-        "form-participle-raw": ["smēad"],
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[consider], [contemplate]", "examine"],
@@ -7267,7 +7291,6 @@
         "key": "stellan",
         "form-raw": "stell|an",
         "form-canon": "stell",
-        "form-participle-raw": ["steald"],
         "form-participle-canon": ["stold", "stelled"],
         "type": "verb",
         "verb-class": "weak",
@@ -7558,7 +7581,6 @@
         "key": "swerian",
         "form-raw": "sweri|an",
         "form-canon": "swear",
-        "form-participle-raw": ["sworen"],
         "form-participle-canon": ["sworn"],
         "type": "verb",
         "verb-class": 6,
@@ -7859,7 +7881,6 @@
         "key": "twēoġan",
         "form-raw": "twēoġ|an",
         "form-raw-alt": ["twēoni|an", "twē|on"],
-        "form-participle-raw": ["twēod"],
         "type": "verb",
         "verb-class": "weak",
         "gloss": "doubt",
