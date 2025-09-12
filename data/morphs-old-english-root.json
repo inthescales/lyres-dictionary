@@ -4266,16 +4266,18 @@
         "origin": "old-english"
     }, {
         "key": "hebban",
-        "form-raw": "hef|an",
-        "form-canon": "heave",
-        "form-participle-raw": ["haf+en"],
-        "form-participle-canon": ["hoven", "hove", "heaved", "heft"],
+        "form-oe": {
+            "form": "hebb|an",
+            "canon": {
+                "lemma": "heave",
+                "past-participle": ["hoven", "hove", "heaved", "heft"]
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "[lift] up",
         "tags": ["transitive", "motion", "speculative"],
-        "origin": "old-english",
-        "notes": "Raw forms represent inflected form typical of verbs with geminate 'bb'"
+        "origin": "old-english"
     }, {
         "key": "heċġ",
         "form-oe": {
@@ -4621,7 +4623,6 @@
     }, {
         "key": "hreddan",
         "form-raw": "hredd|an",
-        "form-participle-raw": ["hreded", "hredd", "hred"],
         "type": "verb",
         "verb-class": "weak",
         "gloss": "rescue",
@@ -6124,7 +6125,6 @@
     }, {
         "key": "plēon",
         "form-raw": "plē|on",
-        "form-participle-raw": ["pleġ+en"],
         "type": "verb",
         "verb-class": 5,
         "gloss": ["risk", "endanger"],
@@ -6811,9 +6811,13 @@
         "origin": "old-english"
     }, {
         "key": "sīon-intransitive",
-        "form-raw": "sī|on",
-        "form-raw-alt": ["sē|on"],
-        "form-canon": "sie",
+        "form-oe": {
+            "form": "sī|on",
+            "canon": {
+                "lemma": "sie",
+                "past-participle": "sied"
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": "[drip] or [drain] (of liquids)",
@@ -6821,11 +6825,13 @@
         "origin": "old-english"
     }, {
         "key": "sīon-transitive",
-        "form-raw": "sī|on",
-        "form-raw-alt": ["sē|on"],
-        "form-canon": "sie",
-        "form-participle-raw": ["sew+en"],
-        "form-participle-canon": ["sied"],
+        "form-oe": {
+            "form": "sī|on",
+            "canon": {
+                "lemma": "sie",
+                "past-participle": "sied"
+            }
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": ["[strain] (as with a strainer)", "[stain] by dripping liquid"],
@@ -7484,8 +7490,12 @@
         "form-oe": {
             "form": "swebb|an",
             "canon": {
-                "lemma": "sweb",
-                "past-participle": ["swebbed"]
+                "form": {
+                    "lemma": "sweb",
+                    "past-participle": ["swebbed"]
+                },
+                "dialect-source": "northern",
+                "dialect-range": "northern"
             }
         },
         "type": "verb",
@@ -7496,10 +7506,14 @@
     }, {
         "key": "swebban-transitive",
         "form-oe": {
-            "form": "sebb|an",
+            "form": "swebb|an",
             "canon": {
-                "lemma": "sweb",
-                "past-participle": ["swebbed"]
+                "form": {
+                    "lemma": "sweb",
+                    "past-participle": ["swebbed"]
+                },
+                "dialect-source": "northern",
+                "dialect-range": "northern"
             }
         },
         "type": "verb",
@@ -7514,8 +7528,7 @@
             "canon": "sweven"
         },
         "type": "noun",
-        "gloss": "dream",
-        "gloss-alt": ["vision"],
+        "gloss": "[dream] or [vision]",
         "tags": ["count", "abstract", "man-made"],
         "origin": "old-english",
         "notes": "Alt. meaning 'sleep'"
@@ -7693,7 +7706,7 @@
         "form-raw": "tǣċ|an",
         "form-canon": "teach",
         "form-participle-raw": ["tāht"],
-        "form-participle-canon": ["tought"],
+        "form-participle-canon": ["taught"],
         "type": "verb",
         "verb-class": "weak",
         "gloss": "teach",
@@ -7994,7 +8007,6 @@
         "key": "þēon",
         "form-raw": "þē|on",
         "form-canon": "thee",
-        "form-participle-raw": ["þiġ+en", "þung+en", "þog+en"],
         "form-participle-canon": ["theed"],
         "type": "verb",
         "verb-class": 1,
@@ -8116,7 +8128,6 @@
     }, {
         "key": "þwēan",
         "form-raw": "þwē|an",
-        "form-participle-raw": ["þwæġ+en", "þwag+en", "þweġ+en"],
         "type": "verb",
         "verb-class": 6,
         "gloss": "wash",
@@ -8882,7 +8893,7 @@
         "form-raw": "wrē|on",
         "form-raw-alt": ["wrī|on"],
         "form-canon": "wry",
-        "form-participle-raw": ["wriġ+en", "wrog+en"],
+        "form-participle-raw": "wriġ+en",
         "form-participle-canon": ["wried"],
         "type": "verb",
         "verb-class": 1,

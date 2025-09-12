@@ -35,6 +35,13 @@ def get_derivational(form_tail):
 # For the given Old English form, return an alternate indicative form that should have the
 # evolution process applied to it rather than the one supplied.
 def get_irregular_indicative(cited_form, config):
+    # Level verbs ending in 'bb' to the 'f' form that typically appears in some forms.
+    # Modern ex. 'libban' -> 'live', 'habban' -> 'have', 'hebban' -> 'heave'
+    if len(cited_form) >=5 and cited_form[-5:] == "bb|an":
+        return cited_form[:-5] + "f|an"
+
+    # TODO: Maybe handle 'ċġ' -> /j/ here?
+
     # Contracted class 7 strong verbs in '-ōn', having '-ang' form in MnE.
     # These are contracted from earlier '-ahan' forms
     # e.g. 'hōn' -> 'hang', 'gōn' -> 'gang'
