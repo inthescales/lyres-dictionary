@@ -23,7 +23,7 @@ def form(morph, env, config=None):
     # Read an Old English formset
     if morph.get_origin() == "old-english" and "form-oe" in morph.morph:
         formset = oe_formset.read(morph.morph["form-oe"], morph.morph["type"])
-        
+
         # If canon-locked, use a random canon form if any
         canon_forms = [form for form in formset.all if form.canon != None]
         if len(canon_forms) > 0 and config.canon_lock:

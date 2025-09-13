@@ -362,7 +362,7 @@
         "key": "āfor",
         "form-oe": "āfor",
         "type": "adj",
-        "gloss": ["bitter", "fierce"],
+        "gloss": ["bitter", "fierce", "harsh, severe"],
         "tags": ["speculative", "homophonic"],
         "origin": "old-english"
     }, {
@@ -391,99 +391,72 @@
         "origin": "old-english",
         "notes": "FAKE form, borrowed later in English from Norse. OE form was 'eġe'/'æġe'"
     }, {
-        "key": "ambeht-impersonal",
-        "form-raw": "ambeht",
-        "form-raw-alt": ["ambiht", "ambyht"],
+        "key": "ambeht",
+        "form-oe": "ambiht",
         "type": "noun",
-        "gloss": "[office] or [ministry]",
-        "tags": ["count", "abstract", "man-made", "speculative"],
+        "senses": [
+            {
+                "gloss": ["servant, attendant"],
+                "tags": ["count", "concrete", "living", "person", "role", "speculative"]
+            }, {
+                "gloss": "[office] or [ministry]",
+                "tags": ["count", "abstract", "man-made", "speculative"]
+            }
+        ],
         "origin": "old-english"
-    }, {
-        "key": "ambeht-person",
-        "form-raw": "ambiht",
-        "form-raw-alt": ["ambeaht", "ambeht"],
-        "type": "noun",
-        "gloss": ["servant", "official", "soldier"],
-        "tags": ["count", "concrete", "living", "person", "role", "speculative"],
-        "origin": "old-english",
-        "notes": "'ambeaht' is WS"
     }, {
         "key": "amber",
-        "form-raw": "amber",
-        "form-raw-alt": ["omber"],
+        "form-oe": "amber",
         "type": "noun",
-        "gloss": "bucket",
-        "gloss-tool": "[carry] in a bucket",
-        "tags": ["count", "concrete", "man-made", "tool", "vessel", "speculative"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": "[bucket] or other [vessel]",
+                "gloss-tool": "[pour] into a bucket or other vessel",
+                "tags": ["count", "concrete", "man-made", "tool", "vessel", "speculative"]
+            }, {
+                "gloss": "bucketful",
+                "tags": ["count", "abstract", "measure", "speculative"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "OE measure usage was more specific"
     }, {
-        "key": "amber-measure",
-        "form-raw": "amber",
-        "form-raw-alt": ["omber"],
-        "type": "noun",
-        "gloss": "bucketful",
-        "tags": ["count", "abstract", "measure", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "anda-mass",
-        "form-raw": "anda",
-        "form-raw-alt": ["onde"],
+        "key": "anda",
+        "form-oe": "anda",
         "type": "noun",
         "gloss": "[spite], [malice]",
         "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english",
-        "notes": "Also gloss 'injury'"
+        "notes": "Also gloss 'injury', 'envy'. Hall's Concise and Wiktionary have some alt. forms."
     }, {
-        "key": "apuldre",
-        "form-raw": "apuldre",
-        "form-raw-alt": ["apulder"],
+        "key": "apulder",
+        "form-oe": "apulder",
         "type": "noun",
         "gloss": "apple [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "ār-glory",
+        "key": "ār",
         "form-oe": "ār",
         "type": "noun",
-        "gloss": ["[honor], [glory]", "grace"],
-        "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
-        "origin": "old-english"
-    }, {
-        "key": "ār-messenger",
-        "form-oe": "ār",
-        "type": "noun",
-        "gloss": ["[messenger] or [herald]", "angel", "missionary"],
-        "tags": ["count", "concrete", "living", "person", "speculative", "homophonic", "no-gen"],
+        "senses": [
+            {
+                "gloss": ["[honor], [glory]", "grace"],
+                "tags": ["mass", "abstract", "quality", "speculative", "homophonic"]
+            }, {
+                "gloss": ["[messenger] or [herald]", "angel", "missionary"],
+                "tags": ["count", "concrete", "living", "person", "speculative", "homophonic", "no-gen"]
+            }, {
+                "gloss": ["bronze", "brass", "copper"],
+                "tags": ["mass", "concrete", "metal", "speculative", "homophonic"]
+            }, {
+                "gloss": "oar",
+                "gloss-tool": "[row] a boat",
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "'no-gen' because this one bothers me"
-    }, {
-        "key": "ār-metal",
-        "form-oe": "ār",
-        "type": "noun",
-        "gloss": ["bronze", "brass", "copper"],
-        "tags": ["mass", "concrete", "metal", "speculative", "homophonic"],
-        "origin": "old-english"
-    }, {
-        "key": "ār-oar",
-        "form-oe": {
-            "form": "ār",
-            "canon": "oar"
-        },
-        "type": "noun",
-        "gloss": "oar",
-        "gloss-tool": "[row] a boat",
-        "tags": ["count", "concrete", "man-made", "tool"],
-        "origin": "old-english"
-    }, {
-        "key": "ār-ore",
-        "form-oe": {
-            "form": "ār",
-            "canon": "ore"
-        },
-        "type": "noun",
-        "gloss": "ore",
-        "tags": ["mass", "concrete", "material"],
-        "origin": "old-english"
+        "notes": "Forms are unrelated, with separate etymologies"
     }, {
         "key": "ārian",
         "form-oe": "āri|an",
@@ -496,7 +469,7 @@
         "key": "arod",
         "form-oe": "arod",
         "type": "adj",
-        "gloss": ["daring", "quick", "prepared"],
+        "gloss": ["quick", "prepared"],
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
@@ -508,10 +481,16 @@
         "origin": "old-english"
     }, {
         "key": "āscian",
-        "form-raw": "āsci|an",
-        "form-raw-alt": ["āxi|an"],
-        "form-canon": "ask",
-        "form-participle-canon": ["asked"],
+        "form-oe": {
+            "main": {
+                "form": "āsci|an",
+                "canon": {
+                    "lemma": "ask",
+                    "past-participle": "asked"
+                }
+            },
+            "alt": "āxi|an"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "ask",
@@ -537,26 +516,37 @@
         "type": "noun",
         "gloss": "oats",
         "tags": ["mass", "concrete", "living", "plant", "food"],
-        "origin": "old-english",
-        "notes": "Alternate form 'ǣte'"
+        "origin": "old-english"
     }, {
         "key": "atol",
         "form-oe": "atol",
         "type": "adj",
-        "gloss": "terrible",
+        "gloss": "terrible, loathsome",
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "ātr",
-        "form-raw": "ātr",
-        "form-raw-alt": ["āttor"],
-        "form-canon": "atter",
+        "form-oe": {
+            "form": "ātr",
+            "canon": "atter"
+        },
         "type": "noun",
-        "gloss": ["[poison], [venom]", "corrupt [matter] or [pus]"],
-        "gloss-alt": "[gall], [bitterness]",
-        "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[poison], [venom]"],
+                "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "obscure"]
+            }, {
+                "period": "middle",
+                "gloss": "bitterness",
+                "tags": ["mass", "abstract", "mind-state", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "corrupt [matter] or [pus]",
+                "tags": ["mass", "concrete", "fluid", "liquid", "secretion", "obscure"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "TODO: double-check the chosen form here. Is there another form?"
+        "notes": "OED: The original long vowel (giving Middle English ōter) has been irregularly shortened in English, as also in other of the modern languages."
     }, {
         "key": "āþ",
         "form-oe": {
@@ -569,24 +559,24 @@
         "tags": ["count", "abstract", "man-made", "tool"],
         "origin": "old-english"
     }, {
-        "key": "āþer",
-        "form-oe": {
-            "form": "āþer",
-            "canon": "other"
-        },
-        "type": "adj",
-        "gloss": "different",
-        "origin": "old-english"
-    }, {
         "key": "bǣl",
         "form-oe": {
             "form": "bǣl",
             "canon": "bale"
         },
         "type": "noun",
-        "gloss": ["large [fire]", "funeral [pyre]"],
-        "gloss-alt": "bonfire",
-        "tags": ["count", "concrete", "luminous", "obscure"],
+        "senses": [
+            {
+                "gloss": "great [fire]",
+                "tags": ["count", "concrete", "luminous", "obscure"]
+            }, {
+                "gloss": "bonfire",
+                "tags": ["count", "concrete", "luminous", "man-made", "obscure"]
+            }, {
+                "gloss": "funeral [pyre]",
+                "tags": ["count", "concrete", "luminous", "man-made", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "bær",
@@ -6137,11 +6127,30 @@
         "gloss": "open",
         "origin": "old-english"
     }, {
+        "key": "ōra",
+        "form-oe": {
+            "form": "ār",
+            "canon": "ore"
+        },
+        "type": "noun",
+        "gloss": "ore",
+        "tags": ["mass", "concrete", "material"],
+        "origin": "old-english"
+    }, {
         "key": "orf",
         "form-oe": "orf",
         "type": "noun",
         "gloss": "cattle",
         "tags": ["mass", "concrete", "living", "animal", "tame", "mammal", "speculative"],
+        "origin": "old-english"
+    }, {
+        "key": "ōþer",
+        "form-oe": {
+            "form": "ōþer",
+            "canon": "other"
+        },
+        "type": "adj",
+        "gloss": "other, different",
         "origin": "old-english"
     }, {
         "key": "pǣċa",
