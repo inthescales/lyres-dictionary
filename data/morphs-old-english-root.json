@@ -586,32 +586,38 @@
         },
         "type": "adj",
         "gloss": "naked",
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OED: The original short vowel is lengthened in modern English, Dutch, and German."
     }, {
         "key": "bǣr",
-        "form-raw": ["bǣr", "bēr"],
+        "form-oe": {
+            "form": "bǣr",
+            "canon": "bier"
+        },
         "type": "noun",
-        "gloss": ["stretcher", "litter"],
-        "gloss-tool": ["[carry] on a stretcher", "[carry] on a litter"],
-        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "bǣr-bier",
-        "form-raw": ["bǣr", "bēr"],
-        "form-canon": "bier",
-        "type": "noun",
-        "gloss": "bier",
-        "gloss-tool": ["[carry] on a bier"],
-        "tags": ["count", "concrete", "man-made", "tool"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": "[framework] for carrying; [stretcher] or [litter]",
+                "gloss-tool": "[carry] on a stretcher or litter",
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }, {
+                "period": "modern",
+                "gloss": "bier",
+                "gloss-tool": "[carry] on a bier",
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "The modern spelling (since 1600) appears to be due to imitation of the French form bière"
     }, {
         "key": "bǣtan",
         "form-oe": "bǣt|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["bridle", "[rein] in, [restrain]"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "tags": ["transitive", "speculative", "homophonic"],
+        "origin": "old-english",
+        "notes": "Cognate with 'bait' as in bear-baiting. Causative of 'bite'."
     }, {
         "key": "bæþ",
         "form-oe": {
@@ -619,28 +625,39 @@
             "canon": "bath"
         },
         "type": "noun",
-        "gloss": "bath",
-        "tags": ["count", "concrete", "terrain", "man-made"],
-        "origin": "old-english",
-        "notes": "Alternate meaning 'immersion'"
+        "senses": [
+            {
+                "gloss": "[immersion] in water",
+                "tags": ["mass", "abstract", "body-state"]
+            }, {
+                "period": "modern",
+                "gloss": "bath",
+                "tags": ["count", "concrete", "terrain", "man-made"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "bald",
-        "form-raw": "bald",
-        "form-raw-alt": ["beald"],
-        "form-canon": "bold",
+        "form-oe": {
+            "form": "bald",
+            "dialect": "anglian",
+            "canon": "bold"
+        },
         "type": "adj",
         "gloss": "brave",
         "origin": "old-english",
-        "notes": "Chosen form appears to be Anglian"
+        "notes": "WS 'beald'"
     }, {
         "key": "baldor",
-        "form-raw": "baldor",
-        "form-raw-alt": ["bealdor"],
+        "form-oe": {
+            "form": "baldor",
+            "dialect": "anglian"
+        },
         "type": "noun",
-        "gloss": ["lord", "prince"],
+        "gloss": "prince, ruler",
         "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative"],
         "origin": "old-english",
-        "notes": "Chosen form appears to be Anglian"
+        "notes": "Chosen form appears to be Anglian, vs. (presumably) WS 'bealdor'. cf. 'bald'/'beald', which Bosworth cites as its origin."
     }, {
         "key": "bān",
         "form-oe": {
@@ -658,10 +675,17 @@
             "canon": "bane"
         },
         "type": "noun",
-        "gloss": ["harm", "poison", "[death] or [destruction]"],
-        "tags": ["mass", "abstract", "obscure"],
-        "origin": "old-english",
-        "notes": "TODO: unpack these meanings for semantics like poison/liquid. Alt. meanings 'murderer', 'cause of death'"
+        "senses": [
+            {
+                "gloss": "murderer",
+                "tags": ["count", "concrete", "living", "person", "role", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[cause] of harm or ruin",
+                "tags": ["count", "abstract", "obscure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "bannan",
         "form-oe": {
@@ -673,19 +697,26 @@
         },
         "type": "verb",
         "verb-class": 7,
-        "gloss": "[summon], [gather] together",
-        "gloss-alt": ["proclaim", "[call] out"],
-        "tags": ["transitive", "obscure", "homophonic"],
+        "senses": [
+            {
+                "gloss": ["[summon], [call] out", "proclaim"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "prohibit",
+                "tags": ["transitive"]
+            }
+        ],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "barn",
-        "form-raw": "barn",
-        "form-raw-alt": ["bearn"],
+        "form-oe": ["barn", "bearn"],
         "type": "noun",
-        "gloss": "[child], [baby]",
-        "tags": ["count", "concrete", "living", "person"],
+        "gloss": "child",
+        "tags": ["count", "concrete", "living", "person", "obscure"],
         "origin": "old-english",
-        "notes": "MnE has 'bair' from Scots, as well as an obsolete 'barn'. Leaving without canon form to do what it wants"
+        "notes": "MnE has 'bairn' from Scots, as well as an obsolete 'barn'. Leaving without canon form to do what it wants"
     }, {
         "key": "bastard",
         "form-oe": {
@@ -696,7 +727,7 @@
         "gloss": "bastard",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
-        "notes": "Not sure how much this actually appears in OE. It's in Bright's, but not Bosworth. Adding it in any case for kicks."
+        "notes": "Presumably from OF. Not sure how much this actually appears in OE. It's in Bright's but not Bosworth, and earliest OED use is c1330. Adding it in any case for kicks."
     }, {
         "key": "bāt",
         "form-oe": {
@@ -723,27 +754,43 @@
         "origin": "old-english"
     }, {
         "key": "bēacn",
-        "form-raw": "bēacn",
-        "form-raw-alt": ["bēacen", "bīecen", "bēcen", "bēcon", "bēcun"],
-        "form-canon": "beacon",
+        "form-oe": {
+            "main": {
+                "form": "bēacn",
+                "canon": "beacon"
+            },
+            "alt": {
+                "form": "bēcen",
+                "dialect": "anglian"
+            }
+        },
         "type": "noun",
         "gloss": "signal",
         "tags": ["count", "abstract"],
         "origin": "old-english",
-        "notes": "Forms in 'bē-' are Anglian. Modern form appears to be derived from WS form."
+        "notes": "Modern form appears to be derived from 'bēacn' form (WS?)."
     }, {
         "key": "beadu",
-        "form-raw": ["beadu", "badu"],
+        "form-oe": {
+            "lemma": "beadu",
+            "oblique": "beadw|e"
+        },
         "type": "noun",
         "gloss": "battle",
         "tags": ["count", "abstract", "activity", "speculative"],
         "origin": "old-english"
     }, {
         "key": "bēag",
-        "form-raw": "bēag",
-        "form-raw-alt": ["bēah"],
+        "form-oe": [
+            {
+                "form": ["bēg", "bēh"],
+                "dialect": "anglian"
+            }, {
+                "form": ["bēag", "bēah"]
+            }
+        ],
         "type": "noun",
-        "gloss": ["ring", "[piece] of jewelry"],
+        "gloss": ["[ring] or [bracelet]", "[piece] of jewelry"],
         "gloss-tool": ["[put] on jewelry", "adorn"],
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english"

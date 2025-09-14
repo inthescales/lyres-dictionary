@@ -243,14 +243,16 @@ default_me_dialect = "unspecified"
 default_mne_dialect = ["standard"]
 
 def default_oblique(lemma):
-	if not helpers.is_vowel(lemma[-1], y_is_vowel=True):
-		if type(lemma) == list:
+	def form_oblique(lemma):
+		if not helpers.is_vowel(lemma[-1], y_is_vowel=True):
 			return [form + "|e" for form in lemma]
 		else:
-			return lemma + "|e"
+			return lemma
 
+	if type(lemma) == list:
+		return [form_oblique(l) for l in lemma]
 	else:
-		return lemma
+		return form_oblique(lemma)
 
 def paradigm_from_string(string, morph_type):
 	if morph_type in ["noun", "adj"]:
