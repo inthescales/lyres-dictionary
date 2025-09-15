@@ -245,11 +245,12 @@ default_mne_dialect = ["standard"]
 def default_oblique(lemma):
 	def form_oblique(lemma):
 		if not helpers.is_vowel(lemma[-1], y_is_vowel=True):
-			return [form + "|e" for form in lemma]
+			return lemma + "|e"
 		else:
 			return lemma
 
 	if type(lemma) == list:
+		print("I'M IN HERE")
 		return [form_oblique(l) for l in lemma]
 	else:
 		return form_oblique(lemma)
