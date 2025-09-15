@@ -1,3 +1,6 @@
+import src.generation.forming.oe_formset as oe_formset
+import src.utils.helpers as helpers
+
 from src.utils.logging import Logger
 
 # Returns any prefix matching the given written form
@@ -55,3 +58,24 @@ def get_irregular_indicative(cited_form, config):
         return cited_form[:-3] + "æng"
 
     return None
+
+# Returns True if the morph's form has a baked in '-iġ' ending
+def has_ig_ending(morph):
+    morph_dict = morph.morph
+
+    if "form-raw" in morph_dict \
+        and (
+            (isinstance(morph_dict["form-raw"], str) and morph_dict["form-raw"].endswith("+iġ")) \
+            or (isinstance(morph_dict["form-raw"], list) and any([form.endswith("+iġ") for form in morph_dict["form-raw"]])) \
+        ):
+        return True
+    elif "form-oe" in morph_dict:
+        formset = oe_formset.read(morph_dict["form-oe"], morph_dict["type"])
+        lemmas = []
+        for m in helpers.list_if_not(formset.all):
+            for p in helpers.list_if_not(m.paradigm):
+                for l in helpers.list_if_not(p.lemma):
+                    if l.endswith("+iġ"):
+                        return True
+
+    return False

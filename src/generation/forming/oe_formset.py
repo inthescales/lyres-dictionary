@@ -250,7 +250,6 @@ def default_oblique(lemma):
 			return lemma
 
 	if type(lemma) == list:
-		print("I'M IN HERE")
 		return [form_oblique(l) for l in lemma]
 	else:
 		return form_oblique(lemma)

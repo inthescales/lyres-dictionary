@@ -5,6 +5,7 @@ import src.generation.glosser as glosser
 import src.language.greek.joining as grk_join
 import src.language.latin.joining as lat_join
 import src.language.modern_english.joining as mne_join
+import src.language.old_english.morphology as oe_morphology
 import src.utils.helpers as helpers
 import src.utils.inflection as inflection
 
@@ -45,7 +46,7 @@ def get_form(word, former_config=None):
 
         env = word.environment_for_index(index)
         random = Random(morph.seed)
-        # Former behavior: set canon lock false, with chance of alt forms, for obscure
+        # Previous behavior: set canon lock false, with chance of alt forms, for obscure
         # if former_config == None and morph.has_tag("obscure") and random.choice([True, False]):
         #     former_config = Former_Config(random.choice([True, False]), False)
 
@@ -104,7 +105,7 @@ def get_joined_form(language, last_morph, morph, form, addition):
     if language == "greek":
         return grk_join.get_joined_form(form, addition)
     if language == "old-english" and mne_join.should_join(last_morph, morph):
-        y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i")
+        y_to_i = last_morph.has_tag("y-to-i") or morph.has_tag("y-to-i") or oe_morphology.has_ig_ending(last_morph)
         return mne_join.get_joined_form(form, addition, y_to_i=y_to_i)
 
     return form + addition
