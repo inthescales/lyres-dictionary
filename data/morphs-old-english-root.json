@@ -792,15 +792,17 @@
         "type": "noun",
         "gloss": ["[ring] or [bracelet]", "[piece] of jewelry"],
         "gloss-tool": ["[put] on jewelry", "adorn"],
-        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
-        "origin": "old-english"
+        "tags": ["count", "concrete", "metallic", "man-made", "tool", "speculative"],
+        "origin": "old-english",
+        "notes": "No explicit labeling of dialect in my sources, but 'bē-' forms fit Anglian smoothing."
     }, {
         "key": "bealu",
-        "form-raw": "bealu",
-        "form-raw-alt": ["balu", "bealo"],
-        "form-canon": "bale",
+        "form-oe": {
+            "form": "bealu",
+            "canon": "bale"
+        },
         "type": "noun",
-        "gloss": "[harm] or [evil]",
+        "gloss": "[harm], [evil]",
         "tags": ["mass", "abstract", "obscure"],
         "origin": "old-english"
     }, {
@@ -811,9 +813,22 @@
         },
         "type": "noun",
         "gloss": ["beam", "tree"],
-        "tags": ["count", "concrete", "living", "plant", "material"],
+        "senses": [
+            {
+                "gloss": "tree",
+                "tags": ["count", "concrete", "living", "plant", "material"]
+            }, {
+                "period": "modern",
+                "gloss": "[beam] of light",
+                "tags": ["count", "concrete", "luminous"]
+            }, {
+                "period": "modern",
+                "gloss": "beam",
+                "tags": ["count", "concrete", "man-made", "material"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Alt. meaning 'gallows'"
+        "notes": "Some more OE alt. meanings"
     }, {
         "key": "bearm",
         "form-oe": {
@@ -825,11 +840,14 @@
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "bearo",
-        "form-oe": "bearo",
+        "key": "bearu",
+        "form-oe": {
+            "lemma": "bearu",
+            "oblique": "bearw|e"
+        },
         "type": "noun",
         "gloss": "[forest] or [grove]",
-        "tags": ["count", "concrete", "terrain", "speculative"],
+        "tags": ["count", "concrete", "terrain", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "bēatan",
@@ -847,17 +865,22 @@
         "origin": "old-english"
     }, {
         "key": "bēcnan",
-        "form-raw": "bēcn|an",
-        "form-raw-alt": ["bīecn|an", "bīcn|an", "bȳcn|an"],
-        "form-canon": "beckon",
-        "form-participle-canon": ["beckoned"],
+        "form-oe": {
+            "main": {
+                "form": "bēcn|an",
+                "canon": {
+                    "lemma": "beckon",
+                    "past-participle": ["beckoned"]
+                }
+            },
+            "alt": ["bīecn|an", "bīcn|an", "bȳcn|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "beckon",
-        "gloss-alt": ["[show] or [indicate]"],
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "Wiktionary indicates that modern form 'beckon' is via Anglian 'bēcnan', but I can't make it work. To do with timing of consonant cluster breaking maybe"
+        "notes": "Wiktionary indicates that modern form 'beckon' is via Anglian 'bēcnan', but I can't make it work. To do with timing of consonant cluster breaking maybe. Some alt OE meanings."
     }, {
         "key": "bed",
         "form-oe": {
@@ -870,40 +893,34 @@
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
     }, {
-        "key": "bēdan",
-        "form-oe": "bēd|an",
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "compel",
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "In Bright, but not wiktionary or Bosworth. Who knows?"
-    }, {
         "key": "bēhþ",
         "form-oe": "bēhþ",
         "type": "noun",
-        "gloss": ["[signs] of something", "[proof] of something"],
-        "tags": ["uncountable", "abstract"],
+        "gloss": "[sign] or [proof] of something",
+        "tags": ["count", "abstract"],
         "origin": "old-english",
-        "notes": "TODO: Fix up the countability"
+        "notes": "In Bosworth but not other sources"
     }, {
         "key": "belġ",
-        "form-raw": "belġ",
-        "form-raw-alt": ["bælġ", "beliġ", "bylg", "byliġ"],
-        "form-canon": "belly",
+        "form-oe": {
+            "main": {
+                "form": "belġ",
+                "canon": "belly"
+            },
+            "alt": ["bælġ", "beliġ", "bylg", "byliġ"]
+        },
         "type": "noun",
-        "gloss": "belly",
-        "tags": ["count", "concrete", "bodypart", "vessel"],
-        "origin": "old-english"
-    }, {
-        "key": "belġ-bag",
-        "form-raw": "belġ",
-        "form-raw-alt": ["bælġ", "beliġ", "bylg", "byliġ"],
-        "form-canon": "belly",
-        "type": "noun",
-        "gloss": "bag",
-        "gloss-tool": ["[put] in a bag"],
-        "tags": ["count", "concrete", "man-made", "tool", "vessel", "speculative"],
+        "senses": [
+            {
+                "gloss": "bag",
+                "gloss-tool": "[store] in a bag",
+                "tags": ["count", "concrete", "man-made", "tool", "vessel"]
+            }, {
+                "period": "modern",
+                "gloss": "belly",
+                "tags": ["count", "concrete", "bodypart", "vessel"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "belgan",
@@ -913,9 +930,20 @@
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "bellow",
-        "gloss-alt": ["[swell] with anger", "[be] angry"],
-        "tags": ["intransitive"],
+        "senses": [
+            {
+                "gloss": ["[swell] with anger", "[be] angry"],
+                "tags": ["intransitive"]
+            }, {
+                "period": "middle",
+                "gloss": "[cry] out in anger",
+                "tags": ["intransitive"]
+            }, {
+                "period": "modern",
+                "gloss": "bellow",
+                "tags": ["intransitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "bellan",
@@ -926,7 +954,7 @@
         "type": "verb",
         "verb-class": 3,
         "gloss": "[bellow] or [roar]",
-        "tags": ["intransitive", "speculative"],
+        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "bēn",
@@ -953,25 +981,25 @@
         "key": "benn",
         "form-oe": "benn",
         "type": "noun",
-        "gloss": "wound",
+        "gloss": ["wound", "mortal [injury]"],
         "tags": ["count", "concrete", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "bēodan",
-        "form-oe": {
-            "form": "bēod|an",
-            "canon": {
-                "lemma": "bede",
-                "past-participle": ["bode", "boden"]
-            }
-        },
+        "form-oe": "bēod|an",
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["pray", "request"],
-        "gloss-alt": ["offer", "proclaim"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": "[offer], [give]",
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": "[compel], [command]",
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Original meaning 'offer, give' and 'proclaim, announce'"
+        "notes": "In late ME merged with 'biddan' to form the modern 'bid'. Shows in late ME / early MnE as 'bede', but I feel like that doesn't represent a modern spelling."
     }, {
         "key": "bēor",
         "form-oe": {
@@ -980,7 +1008,7 @@
         },
         "type": "noun",
         "gloss": "beer",
-        "tags": ["mass", "concrete", "man-made"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "man-made"],
         "origin": "old-english"
     }, {
         "key": "beorg",
@@ -992,7 +1020,7 @@
         "gloss": ["[hill] or [mountain]", "mound"],
         "tags": ["count", "concrete", "terrain", "obscure"],
         "origin": "old-english",
-        "notes": "Wiktionary indicates northern form 'bargh'"
+        "notes": "Northern dialect also has 'bargh'"
     }, {
         "key": "beorgan",
         "form-oe": "beorg|an",
