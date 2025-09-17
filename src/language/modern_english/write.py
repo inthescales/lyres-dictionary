@@ -3,11 +3,30 @@ import src.utils.helpers as helpers
 from random import Random
 from src.evolutor.engine.hinges import often, even, hinge
 
+# Syllable count based on the number of vowel clusters, but including final
+# semivowels if they follow a consonant
+def get_syllable_count(phonemes):
+    count = 0
+
+    for i in range(0, len(phonemes)):
+        last = None
+        if i > 0:
+            last = phonemes[i-1]
+
+        if phonemes[i].is_vowel() and (not last or not last.is_vowel()):
+            count += 1
+        elif phonemes[i].value in ["j", "w"] and i == len(phonemes) - 1 and last and last.is_consonant():
+            count += 1
+
+    return count
+
 def from_me_phonemes(phonemes, config):
     random = Random(config.seed)
     result = ""
     insert_lengthening_e = False
     would_have_inserted_lengthening_e = False
+
+    syllable_count = get_syllable_count(phonemes)
 
     skip_next = 0
 
@@ -123,15 +142,21 @@ def from_me_phonemes(phonemes, config):
             # in an 'ar' spelling. However, both the examples they give, 'war' and 'warble' are from AN,
             # and applying that rule seems to mess up 'swerve'. Who knows?
             if next1 and next1.value == "r":
-                # These cases seem ambiguous. 
-                # "ea" may be more common when descending from "eo" spelling?
-                roll = hinge("Orth:e+r->e/a/ea", [0.5, 0.3], config)
-                if roll == "ea":
-                    result += "ea"
-                elif roll == "a":
+                if syllable_count == 1:
+                    # These cases seem ambiguous. 
+                    # "ea" may be more common when descending from "eo" spelling in OE?
+                    roll = hinge("Orth:e+r->e/a/ea", [0.5, 0.3], config)
+                    if roll == "ea":
+                        result += "ea"
+                    elif roll == "a":
+                        result += "a"
+                    elif roll == "e":
+                        result += "e"
+                else:
+                    # Syllable count check is my intuition, based on the case of 'beorg' -> 'barrow'.
+                    # The hinge would sometimes produce 'bearrow', which feels clearly wrong. It seems
+                    # to me that multi-syllable words should always have an 'a' here.
                     result += "a"
-                elif roll == "e":
-                    result += "e"
             else:
                 result += "e"
         elif phone.value == "ɛ":

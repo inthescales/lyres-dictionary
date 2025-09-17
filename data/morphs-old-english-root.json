@@ -1033,27 +1033,39 @@
         "key": "beorn",
         "form-oe": "beorn",
         "type": "noun",
-        "gloss": "hero",
-        "tags": ["count", "concrete", "living", "person", "poetic"],
-        "origin": "old-english",
-        "notes": "Also gloss 'man'"
+        "senses": [
+            {
+                "gloss": "hero",
+                "tags": ["count", "concrete", "living", "person", "role", "poetic"]
+            }, {
+                "gloss": "man",
+                "tags": ["count", "concrete", "living", "person", "gendered", "poetic"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "bēot",
         "form-oe": "bēot",
         "type": "noun",
-        "gloss": ["promise", "boast"],
+        "gloss": ["promise", "boast", "threat"],
         "tags": ["count", "abstract", "man-made", "obscure", "homophonic"],
-        "origin": "old-english",
-        "notes": "Wiktionary indicates a modern descendent of the same form, but I'm suspicious"
+        "origin": "old-english"
     }, {
         "key": "bēotian",
         "form-oe": "bēoti|an",
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["vow", "promise", "threaten"],
-        "tags": ["transitive", "speculative"],
+        "senses": [
+            {
+                "gloss": ["vow", "promise", "threaten"],
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": "boast",
+                "tags": ["intransitive", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Needs bitransitivity. Also sense 'boast'"
+        "notes": "Needs bitransitivity"
     }, {
         "key": "bera",
         "form-oe": {
@@ -1080,14 +1092,21 @@
         "origin": "old-english"
     }, {
         "key": "berġan",
-        "form-raw": "berġ|an",
-        "form-raw-alt": ["bierġ|an", "byrġ|an"],
+        "form-oe": {
+            "main": {
+                "form": "berġ|an",
+                "dialect": "anglian"
+            },
+            "alt": {
+                "form": ["bierġ|an", "byrġ|an"],
+                "dialect": "west-saxon"
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["taste", "[partake] of"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian, alternates WS"
+        "origin": "old-english"
     }, {
         "key": "berstan",
         "form-oe": {
@@ -1110,8 +1129,16 @@
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["improve", "atone", "[make] a fire"],
-        "tags": ["intransitive", "obscure", "homophonic"],
+        "senses": [
+            {
+                "gloss": "[improve], [amend]",
+                "tags": ["transitive", "obscure", "homophonic"]
+            }, {
+                "period": "modern",
+                "gloss": "[light] a fire",
+                "tags": ["intransitive", "obscure", "homophonic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "bī-spell",
@@ -1126,17 +1153,31 @@
         "origin": "old-english"
     }, {
         "key": "biċġan",
-        "form-raw": "biċġ|an",
-        "form-raw-alt": ["byċġ|an"],
-        "form-canon": "buy",
-        "form-participle-raw": "bohte",
-        "form-participle-canon": ["bought"],
+        "form-oe": {
+            "main": {
+                "form": {
+                    "infinitive": "biċġ|an",
+                    "past": "bohte",
+                    "past-participle": "bohte"
+                },
+                "canon": {
+                    "lemma": "buy",
+                    "past": "bought",
+                    "past-participle": ["bought"]
+                }
+            },
+            "alt": {
+                "infinitive": "byċġ|an",
+                "past": "bohte",
+                "past-participle": "bohte"
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "buy",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "Not sure if alt. form may have been more common in OE, but based on the 'ċġ' -> /j/ evolution I'm guessing the chosen form influence MnE more."
+        "notes": "Choice of main form currently gives the right form, while 'bycgan' doesn't. However this may be problematic. OED indicates that the /j/ sound is the result of leveling to non-geminated inflected forms in the case with the /y/ vowel. OED: 'The modern standard spelling buy apparently originally reflects a west midland pronunciation of the vowel in Middle English which preserved the original rounding of Old English y'"
     }, {
         "key": "bīdan",
         "form-oe": {
