@@ -1212,12 +1212,24 @@
         },
         "type": "verb",
         "verb-class": 5,
-        "gloss": "[ask] for",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "period": "middle",
+                "gloss": ["[ask] or [entreat]", "pray"],
+                "tags": ["intransitive"],
+                "notes": "Sense of 'pray' preserved in some dialects."
+            }, {
+                "gloss": ["[ask] for", "[command] or [enjoin]"],
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "bifian",
-        "form-oe": "bifi|an",
+        "form-oe": {
+            "main": "bifi|an",
+            "alt": "beofi|an"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[shake] or [tremble]",
@@ -1225,11 +1237,26 @@
         "origin": "old-english"
     }, {
         "key": "bil",
-        "form-oe": "bil",
+        "form-oe": {
+            "form": "bil",
+            "canon": "bill"
+        },
         "type": "noun",
-        "gloss": "sword",
-        "gloss-tool": "[fight] with a sword",
-        "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon"],
+        "senses": [
+            {
+                "gloss": "broadsword",
+                "gloss-tool": "[fight] with a broadsword",
+                "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon", "obscure"]
+            }, {
+                "gloss": "cutting [tool]",
+                "gloss-tool": "cut",
+                "tags": ["count", "concrete", "metallic", "man-made", "tool", "weapon", "obscure"]
+            }, {
+                "gloss": "[mattock] or other digging [implement]",
+                "gloss-tool": "dig",
+                "tags": ["count", "concrete", "metallic", "man-made", "tool", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "bindan",
@@ -1237,6 +1264,7 @@
             "form": "bind|an",
             "canon": {
                 "lemma": "bind",
+                "past": "bound",
                 "past-participle": ["bound", "binded"]
             }
         },
@@ -1246,9 +1274,11 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "bīsn",
-        "form-raw": "bīsn",
-        "form-raw-alt": ["bȳsn", "bīsen", "bȳsen"],
+        "key": "bīsen",
+        "form-oe": {
+            "main": "bīsen",
+            "alt": "bȳsen"
+        },
         "type": "noun",
         "gloss": "example",
         "tags": ["count", "abstract", "speculative"],
@@ -1263,7 +1293,8 @@
         "type": "noun",
         "gloss": "small [quantity] of something",
         "tags": ["count", "abstract", "measure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Other modern senses 'bit of a bridle', 'drill-bit' are related, but excluding for now."
     }, {
         "key": "biter",
         "form-oe": {
@@ -1282,7 +1313,8 @@
         "type": "noun",
         "gloss": "bishop",
         "tags": ["count", "concrete", "living", "person", "role", "ruler"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "From Latin 'episcopus' < Greek 'episkopos'"
     }, {
         "key": "blenċan",
         "form-oe": "blenċ|an",
@@ -1290,7 +1322,8 @@
         "verb-class": "weak",
         "gloss": "[deceive] or [cheat]",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Sense of 'deceive' is OE. Other senses are described by OED as of uncertain origin. Northern form 'blenk'"
     }, {
         "key": "blīcan",
         "form-oe": "blīc|an",
@@ -1305,20 +1338,28 @@
             "form": "blinn|an",
             "canon": {
                 "lemma": "blin",
+                "past": "blan",
                 "past-participle": ["blun", "blinned"]
             }
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "[cease] or [abate]",
-        "tags": ["intransitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[cease] or [abate]", "[be] silent"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[put] a stop to",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "bliss",
         "form-oe": "bliss",
         "type": "noun",
         "gloss": "bliss",
-        "gloss-alt": "[joy], [delight",
+        "gloss-alt": "[joy], [delight]",
         "tags": ["mass", "abstract", "mind-state"],
         "origin": "old-english"
     }, {
@@ -1328,22 +1369,35 @@
             "canon": "blithe"
         },
         "type": "adj",
-        "gloss": "[indifferent] or [careless]",
-        "gloss-alt": ["happy"],
+        "senses": [
+            {
+                "gloss": "joyful",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "[indifferent] or [careless]",
+                "tags": []
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "breahtm",
-        "form-raw": ["breahtm", "bearhtm", "byrhtm", "brehtm", "beorhtm", "bryhtm", "beorht"],
+        "form-oe": {
+            "main": "breahtm",
+            "alt": ["brehtm", "bræhtm", "bryhtm", "bearhtm", "byrhtm", "beorhtm"]
+        },
         "type": "noun",
         "gloss": ["[noise], [clamor]", "tumult", "[music] and [revelry]"],
         "tags": ["mass", "abstract", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Hall's Concise has a homonym meaning 'brightness, twinkling (of an eye), instant"
     }, {
         "key": "brecan",
         "form-oe": {
             "form": "brec|an",
             "canon": {
                 "lemma": "break",
+                "past": "broke",
                 "past-participle": ["broken"]
             }
         },
@@ -1356,16 +1410,23 @@
         "key": "breġdan",
         "form-oe": {
             "form": "breġd|an",
-            "canon": {
-                "lemma": "braid",
-                "past-participle": ["braided"]
-            }
+            "canon": "braid"
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "braid",
-        "gloss-alt": ["[move] back and forth", "[draw] a weapon", "drag", "bend"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": ["[move] back and forth, [vibrate]", "[play] a trick", "[draw] a weapon"],
+                "tags": ["intransitive"]
+            }, {
+                "gloss": "[drag] or [bend]",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "braid",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "brego",
