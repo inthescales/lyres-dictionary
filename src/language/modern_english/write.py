@@ -3,8 +3,7 @@ import src.utils.helpers as helpers
 from random import Random
 from src.evolutor.engine.hinges import often, even, hinge
 
-# Syllable count based on the number of vowel clusters, but including final
-# semivowels if they follow a consonant
+# Returns a syllable count for the given phonemes
 def get_syllable_count(phonemes):
     count = 0
 
@@ -13,8 +12,10 @@ def get_syllable_count(phonemes):
         if i > 0:
             last = phonemes[i-1]
 
+        # Increase count at the start of a new vowel cluster
         if phonemes[i].is_vowel() and (not last or not last.is_vowel()):
             count += 1
+        # Increase count for a final semivowel following a consonant
         elif phonemes[i].value in ["j", "w"] and i == len(phonemes) - 1 and last and last.is_consonant():
             count += 1
 
@@ -146,17 +147,19 @@ def from_me_phonemes(phonemes, config):
                     # These cases seem ambiguous. 
                     # "ea" may be more common when descending from "eo" spelling in OE?
                     roll = hinge("Orth:e+r->e/a/ea", [0.5, 0.3], config)
-                    if roll == "ea":
-                        result += "ea"
-                    elif roll == "a":
-                        result += "a"
-                    elif roll == "e":
-                        result += "e"
                 else:
                     # Syllable count check is my intuition, based on the case of 'beorg' -> 'barrow'.
                     # The hinge would sometimes produce 'bearrow', which feels clearly wrong. It seems
-                    # to me that multi-syllable words should always have an 'a' here.
+                    # to me that multi-syllable words should never have 'ea' here, but noting the example
+                    # of 'berġe' -> 'berry', 'e' is also possible.
+                    roll = even("Orth:e+rV->a/e", config)
+
+                if roll == "ea":
+                    result += "ea"
+                elif roll == "a":
                     result += "a"
+                elif roll == "e":
+                    result += "e"
             else:
                 result += "e"
         elif phone.value == "ɛ":

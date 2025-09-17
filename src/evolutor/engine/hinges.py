@@ -41,6 +41,7 @@ def hinge(id, odds, config):
         "Orth:aiV->ai/ay": [["ai", "ay"], "ai"],
         "Orth:ɛ/iu->ew/ue": [["ew", "ue"], "ew"],
         "Orth:e+r->e/a/ea": [["ea", "e", "a"], "ea"],
+        "Orth:e+rV->a/e": [["a", "e"], "a"],
         "Orth:ɛː->ea/eCV": [["ea", "eCV"], "ea"],
         "Orth:iː#->ie/ye": [["ie", "ye"], "ie"],
         "Orth:ɔː->oa/oCV": [["oa", "oCV"], "oa"],

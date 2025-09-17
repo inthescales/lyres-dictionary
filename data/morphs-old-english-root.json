@@ -1184,13 +1184,21 @@
             "form": "bīd|an",
             "canon": {
                 "lemma": "bide",
-                "past-participle": ["bidden", "bided"]
+                "past": ["bided", "bode"],
+                "past-participle": ["bided", "bidden"]
             }
         },
         "type": "verb",
         "verb-class": 1,
-        "gloss": "[wait] for",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": ["[remain] in a place", "[wait] in expectation", "[dwell] or [reside]"],
+                "tags": ["intransitive"]
+            }, {
+                "gloss": ["[wait] for", "[tolerate], [endure]"],
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "biddan",
@@ -1198,7 +1206,8 @@
             "form": "bidd|an",
             "canon": {
                 "lemma": "bid",
-                "past-participle": ["bidden"]
+                "past": ["bade", "bidded"],
+                "past-participle": ["bidden", "bidded"]
             }
         },
         "type": "verb",
@@ -5862,11 +5871,15 @@
         "origin": "old-english"
     }, {
         "key": "mearu",
-        "form-oe": "mearu",
+        "form-oe": {
+            "lemma": "mearu",
+            "oblique": "mearw|e"
+        },
         "type": "adj",
         "gloss": "[tender], [delicate]",
         "tags": ["speculative", "homophonic"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OED shows ME forms based on oblique, with headword 'merrow'"
     }, {
         "key": "meltan",
         "form-oe": {
