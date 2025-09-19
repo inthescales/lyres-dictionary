@@ -2301,6 +2301,14 @@
         "origin": "old-english",
         "notes": "HACK: Totally fake morph, meant to capture the later 'dawn', in fact derived from OE 'dawian' or a Norse cognate. See OED."
     }, {
+        "key": "dalc",
+        "form-oe": ["dalc", "dolk"],
+        "type": "noun",
+        "gloss": ["[pin] or [brooch]", "[clasp] or [buckle]"],
+        "gloss-tool": "[affix] or [buckle]",
+        "tags": ["count", "concrete", "man-made", "tool", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "dēad",
         "form-oe": {
             "form": "dēad",
@@ -2366,20 +2374,28 @@
         "origin": "old-english"
     }, {
         "key": "dēore",
-        "form-raw": "dēore",
-        "form-raw-alt": "dīere",
-        "form-canon": "dear",
+        "form-oe": {
+            "form": "dēore",
+            "canon": "dear"
+        },
         "type": "adj",
-        "gloss": "[valuable], [beloved]",
-        "origin": "old-english",
-        "notes": "Alternate form based on WS. Chosen form non-WS, as well as alternate within WS"
+        "senses": [
+            {
+                "gloss": "[valuable], [expensive]",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "beloved",
+                "tags": []
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "dilegian",
-        "form-raw": "dileg|an",
-        "form-raw-alt": ["dilgi|an", "diligi|an"],
+        "form-oe": "dileg|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[blot] out or [destroy]",
+        "gloss": "[blot] out, [destroy]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -2392,6 +2408,13 @@
         "gloss": "[brave], [determined]",
         "origin": "old-english"
     }, {
+        "key": "dolg",
+        "form-oe": ["dolg", "dolh"],
+        "type": "noun",
+        "gloss": ["[wound], [gash]", "scar"],
+        "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "dōm",
         "form-oe": {
             "form": "dōm",
@@ -2402,22 +2425,30 @@
         "tags": ["mass", "abstract", "man-made", "activity"],
         "origin": "old-english"
     }, {
-        "key": "dox",
-        "form-raw": ["dox", "dosc"],
-        "form-canon": "dusk",
+        "key": "dosc-adj",
+        "form-oe": {
+            "main": {
+                "form": "dosc",
+                "canon": "dusk"
+            },
+            "alt": ["dox", "dosċ"]
+        },
         "type": "adj",
-        "gloss": ["dark", "[dark] in color"],
-        "origin": "old-english",
-        "notes": "Form evolution is unclear, according to OED. 'dosc' is my assumption based on OED's mention of metathesis"
+        "gloss": ["[dark] in color"],
+        "origin": "old-english"
     }, {
-        "key": "dox/time",
-        "form-raw": ["dox", "dosc"],
-        "form-canon": "dusk",
+        "key": "dosc-n",
+        "form-oe": {
+            "main": {
+                "form": "dosc",
+                "canon": "dusk"
+            },
+            "alt": ["dox", "dosċ"]
+        },
         "type": "noun",
         "gloss": "dusk",
         "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
-        "origin": "old-english",
-        "notes": "Form evolution is unclear, according to OED. 'dosc' is my assumption based on OED's mention of metathesis"
+        "origin": "old-english"
     }, {
         "key": "draca",
         "form-oe": {
@@ -2427,7 +2458,8 @@
         "type": "noun",
         "gloss": "dragon",
         "tags": ["count", "concrete", "living", "animal", "wild", "magical"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "From Latin 'draco'"
     }, {
         "key": "drēam",
         "form-oe": {
@@ -2435,61 +2467,82 @@
             "canon": "dream"
         },
         "type": "noun",
-        "gloss": "dream",
-        "gloss-alt": ["music", "revelry", "[frenzy], [ecstasy]"],
-        "tags": ["mass", "abstract"],
+        "senses": [
+            {
+                "gloss": "[music], [revelry]",
+                "tags": ["mass", "abstract", "man-made", "activity"]
+            }, {
+                "gloss": "[frenzy], [ecstasy]",
+                "tags": ["mass", "abstract", "mind-state"]
+            }, {
+                "period": "modern",
+                "gloss": "dream",
+                "tags": ["count", "abstract", "mind-state"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Combining the modern sense with OE glosses of unclear relation. TODO: Separate senses for tagging 'man-made', 'mind-state', 'activity'"
+        "notes": "Combining the modern sense with OE glosses of unclear relation."
     }, {
         "key": "drenċan",
         "form-oe": {
             "form": "drenċ|an",
-            "canon": {
-                "lemma": "drench",
-                "past-participle": ["drenched"]
-            }
+            "canon": "drench"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "soak",
-        "gloss-alt": "[give] someone a drink",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "[give] a drink",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "soak",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "drēogan",
         "form-oe": {
             "form": "drēog|an",
-            "canon": {
-                "lemma": "dree",
-                "past-participle": ["dreed"]
-            }
+            "canon": "dree"
         },
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["[perform] a duty", "[endure] or [undergo]"],
+        "gloss": ["[perform] (a duty)", "[endure] or [undergo]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "drēopan",
         "form-oe": {
             "form": "drēop|an",
-            "canon": {
-                "lemma": "dreep",
-                "past-participle": ["dreeped"]
-            }
+            "canon": "dreep"
         },
         "type": "verb",
         "verb-class": 2,
-        "gloss": "[fall] in drops, [drip]",
-        "gloss-alt": ["drop", "droop"],
-        "tags": ["intransitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["droop", "[lose] courage"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[fall] in drops, [drip]",
+                "tags": ["intransitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "drīfan",
-        "form-raw": "drīf|an",
-        "form-raw-alt": ["drǣf|an"],
-        "form-canon": "drive",
-        "form-participle-canon": ["driven", "drove"],
+        "form-oe": {
+            "main": {
+                "form": "drīf|an",
+                "canon": {
+                    "lemma": "drive",
+                    "past": "drove",
+                    "past-participle": ["driven", "drove"]
+                }
+            },
+            "alt": ["drǣf|an"]
+        },
         "type": "verb",
         "verb-class": 1,
         "gloss": "[drive] out, [expel]",
@@ -2501,7 +2554,7 @@
             "form": "drinc|an",
             "canon": {
                 "lemma": "drink",
-                "past-participle": ["drunk", "drunken", "drank", "drinked"]
+                "past-participle": ["drunk", "drank"]
             }
         },
         "type": "verb",
@@ -2518,19 +2571,28 @@
         "origin": "old-english"
     }, {
         "key": "drohtnian",
-        "form-raw": "drohtni|an",
-        "form-raw-alt": ["drohti|an"],
+        "form-oe": {
+            "main": "drohtni|an",
+            "alt": ["drohti|an"]
+        },
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["live", "inhabit", "[conduct] onself"],
-        "tags": ["transitive", "speculative"],
+        "senses": [
+            {
+                "gloss": ["live", "[conduct] oneself (in some way)"],
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "gloss": ["[keep] company with", "inhabit"],
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "dropian",
-        "form-raw": "droppi|an",
-        "form-raw-alt": ["dropi|an"],
-        "form-canon": "drop",
-        "form-participle-canon": ["dropped"],
+        "form-oe": {
+            "form": "dropian",
+            "canon": "drop"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "drop",
@@ -2540,23 +2602,31 @@
         "key": "drȳ",
         "form-oe": "drȳ",
         "type": "noun",
-        "gloss": ["wizard", "sorcerer"],
-        "tags": ["count", "concrete", "living", "person", "role", "magical", "speculative", "homophonic"],
+        "senses": [
+            {
+                "gloss": "sorcery",
+                "tags": ["mass", "abstract", "magical", "activity", "homophonic"]
+            }, {
+                "gloss": ["wizard", "sorcerer"],
+                "tags": ["count", "concrete", "living", "person", "role", "magical", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "drȳġe",
-        "form-raw": "drȳġe",
-        "form-raw-alt": ["drīġe"],
-        "form-canon": "dry",
+        "form-oe": {
+            "form": "drȳġe",
+            "canon": "dry"
+        },
         "type": "adj",
         "gloss": "dry",
         "origin": "old-english"
     }, {
         "key": "dryht",
-        "form-oe": "dryht",
+        "form-oe": ["dryht", "driht"],
         "type": "noun",
         "gloss": ["[army] or [troop]", "large [crowd]"],
-        "tags": ["count", "concrete", "living", "grouping"],
+        "tags": ["count", "concrete", "living", "grouping", "speculative"],
         "origin": "old-english"
     }, {
         "key": "dufa",
@@ -2573,15 +2643,25 @@
         "form-oe": {
             "form": "dug|an",
             "canon": {
-                "lemma": "dow",
-                "past-participle": ["dowed", "dought"]
+                "form": {
+                    "lemma": "dow",
+                    "past-participle": ["dought", "dowed"]
+                },
+                "dialect-range": ["northern"]
             }
         },
         "type": "verb",
         "verb-class": "preterite-present",
-        "gloss": "[be] of use or [have] value",
-        "gloss-alt": ["[thrive], [prosper]", "[be] fit or strong", "[be] fit for a purpose", "[be] able to do something"],
-        "tags": ["intransitive", "stative", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[be] of use, [have] value", "[be] fit or strong", "[be] fit for a purpose"],
+                "tags": ["intransitive", "stative", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": ["[thrive], [prosper]", "[be] fitting", "[be] able to do something"],
+                "tags": ["intransitive", "stative", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "dun",
@@ -2601,6 +2681,13 @@
         "tags": ["count", "concrete", "terrain", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "dwǣs",
+        "form-oe": "dwǣs",
+        "type": "adj",
+        "gloss": "foolish",
+        "tags": ["character"],
+        "origin": "old-english"
+    }, {
         "key": "dwæsċan",
         "form-oe": "dwæsċ|an",
         "type": "verb",
@@ -2608,58 +2695,67 @@
         "gloss": "extinguish",
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Bosworth has this as a short 'æ', Wiktionary as long"
+        "notes": "Bosworth and Wiktionary disagree on vowel length"
     }, {
         "key": "dwelian",
-        "form-oe": "dweli|an",
+        "form-oe": {
+            "main": "dweli|an",
+            "alt": "dwoli|an"
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[err], [go] astray"],
-        "tags": ["intransitive", "speculative"],
+        "senses": [
+            {
+                "gloss": ["[err], [go] astray"],
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "gloss": ["[lead] astray"],
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "dweorg",
-        "form-raw": "dweorg",
-        "form-raw-alt": ["drweorh", "dwerg", "dwearg"],
-        "form-canon": "dwarf",
+        "form-oe": {
+            "form": "dweorg",
+            "canon": "dwarf"
+        },
         "type": "noun",
         "gloss": "dwarf",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english",
-        "notes": "I can't find any actual source for 'dwearg', but it matches Tolkien's 'dwarrow' so I'm keeping it, fuck it"
+        "origin": "old-english"
     }, {
         "key": "dwild",
         "form-oe": "dwild",
         "type": "noun",
         "gloss": ["error", "heresy"],
-        "tags": ["count", "abstract", "man-made"],
+        "tags": ["count", "abstract", "man-made", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "dwimer-count",
-        "form-raw": "dwimer",
-        "form-raw-alt": ["dwimor", "dwymer", "dwymor"],
-        "form-canon": "dwimmer",
+        "key": "dwimor",
+        "form-oe": "dwimor",
         "type": "noun",
-        "gloss": ["phantom", "ghost", "apparition"],
-        "tags": ["count", "concrete", "magical", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "dwimer-mass",
-        "form-raw": "dwimer",
-        "form-raw-alt": ["dwimor", "dwymer", "dwymor"],
-        "form-canon": "dwimmer",
-        "type": "noun",
-        "gloss": ["magic", "sorcery"],
-        "gloss-alt": ["illusion", "delusion", "error"],
-        "tags": ["mass", "abstract", "man-made", "activity", "obscure"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": ["phantom", "ghost", "apparition"],
+                "tags": ["count", "concrete", "magical", "obscure"]
+            }, {
+                "gloss": ["magic", "sorcery"],
+                "tags": ["mass", "abstract", "man-made", "activity", "obscure"]
+            }, {
+                "gloss": ["illusion", "[delusion], [error]"],
+                "tags": ["mass", "abstract", "man-made", "activity", "obscure"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Wiktionary has an entry for a modern form 'dwimmer', citing Tolkien and what seem to be two other fantasy novels. Meanwhile, OED has no references to this OE root at all."
     }, {
         "key": "dwīnan",
         "form-oe": {
             "form": "dwīn|an",
             "canon": {
-                "lemma": "dwine",
-                "past-participle": ["dwined"]
+                "form": "dwine",
+                "dialect-range": ["northern"]
             }
         },
         "type": "verb",
@@ -2675,16 +2771,46 @@
         "tags": ["count", "abstract", "man-made"],
         "origin": "old-english"
     }, {
-        "key": "dyrne",
+        "key": "dyrne-adj",
+        "form-oe": {
+            "form": "dyrne",
+            "canon": "dern"
+        },
+        "type": "adj",
+        "senses": [
+            {
+                "gloss": "[secret], [concealed]",
+                "tags": ["obscure"]
+            }, {
+                "gloss": "[profound], [intense]",
+                "tags": ["obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[dark], [dreary]",
+                "tags": ["obscure"]
+            }
+        ],
+        "origin": "old-english"
+    }, {
+        "key": "dyrne-n",
         "form-oe": {
             "form": "dyrne",
             "canon": "dern"
         },
         "type": "noun",
-        "gloss": ["secret", "secret [place]", "obscure [language]"],
-        "tags": ["count", "abstract", "man-made", "obscure"],
-        "origin": "old-english",
-        "notes": "Also sense 'darkness', 'obscurity'"
+        "senses": [
+            {
+                "gloss": ["secret", "obscure [language]"],
+                "tags": ["count", "abstract", "man-made", "speculative"]
+            }, {
+                "gloss": ["darkness", "obscurity"],
+                "tags": ["mass", "abstract", "glooming", "speculative"]
+            }, {
+                "gloss": "secret [place]",
+                "tags": ["count", "concrete", "terrain", "speculative"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "dysiġ",
         "form-oe": {

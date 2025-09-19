@@ -71,7 +71,7 @@ def hinge(id, odds, config):
 
     if config.locked:
         return default
-    
+
     if type(odds) == float:
         if random.uniform(0.0, 1.0) < odds:
             return options[0]
