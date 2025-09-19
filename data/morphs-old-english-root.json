@@ -369,10 +369,7 @@
         "key": "āgan",
         "form-oe": {
             "form": "āg|an",
-            "canon": {
-                "lemma": "own",
-                "past-participle": ["owned"]
-            }
+            "canon": "own"
         },
         "type": "verb",
         "verb-class": "preterite-present",
@@ -484,10 +481,7 @@
         "form-oe": {
             "main": {
                 "form": "āsci|an",
-                "canon": {
-                    "lemma": "ask",
-                    "past-participle": "asked"
-                }
+                "canon": "ask"
             },
             "alt": "āxi|an"
         },
@@ -690,10 +684,7 @@
         "key": "bannan",
         "form-oe": {
             "form": "bann|an",
-            "canon": {
-                "lemma": "ban",
-                "past-participle": ["banned"]
-            }
+            "canon": "ban"
         },
         "type": "verb",
         "verb-class": 7,
@@ -742,10 +733,7 @@
         "key": "baþian",
         "form-oe": {
             "form": "baþi|an",
-            "canon": {
-                "lemma": "bathe",
-                "past-participle": ["bathed"]
-            }
+            "canon": "bathe"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -853,10 +841,7 @@
         "key": "bēatan",
         "form-oe": {
             "form": "bēat|an",
-            "canon": {
-                "lemma": "beat",
-                "past-participle": ["beaten"]
-            }
+            "canon": "beat"
         },
         "type": "verb",
         "verb-class": 7,
@@ -868,10 +853,7 @@
         "form-oe": {
             "main": {
                 "form": "bēcn|an",
-                "canon": {
-                    "lemma": "beckon",
-                    "past-participle": ["beckoned"]
-                }
+                "canon": "beckon"
             },
             "alt": ["bīecn|an", "bīcn|an", "bȳcn|an"]
         },
@@ -1504,10 +1486,7 @@
         "key": "brūcan",
         "form-oe": {
             "form": "brūc|an",
-            "canon": {
-                "lemma": "brook",
-                "past-participle": ["brooked"]
-            }
+            "canon": "brook"
         },
         "type": "verb",
         "verb-class": 2,
@@ -1610,10 +1589,7 @@
         "key": "byrġan",
         "form-oe": {
             "form": "byrġ|an",
-            "canon": {
-                "lemma": "bury",
-                "past-participle": ["buried"]
-            }
+            "canon": "bury"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -1684,41 +1660,62 @@
         "origin": "old-english"
     }, {
         "key": "cald",
-        "form-raw": "cald",
-        "form-raw-alt": ["ċeald"],
-        "form-canon": "cold",
+        "form-oe": {
+            "main": {
+                "form": "cald",
+                "dialect": "anglian",
+                "canon": "cold"
+            },
+            "alt": "ċeald"
+        },
         "type": "adj",
         "gloss": "cold",
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian, and ancestor of modern form. 'ċeald' is southern form"
+        "origin": "old-english"
     }, {
         "key": "calic",
-        "form-raw": "cælċ",
-        "form-raw-alt": ["caliċ", "cæliċ", "ċeliċ", "ċelċ", "calċ"],
+        "form-oe": {
+            "main": {
+                "form": "cælċ",
+                "dialect": "anglian"
+            },
+            "alt": [{ "form": "celċ", "dialect": "mercian" }, { "form": "cæliċ" }]
+        },
         "type": "noun",
-        "gloss": ["chalice", "goblet"],
+        "gloss": "[chalice] or [cup]",
         "gloss-tool": "[pour] into a chalice",
         "tags": ["count", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
-        "notes": "From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. Palatalization in OE unclear in some, but ME form 'calch' and its Wiktionary entry suggest palatalizations used here."
+        "notes": "Main form has ME reflex 'calch'. Sources differ on 'a' vs 'æ'. From Latin 'calix' / 'calicis'. 'celc' is Mercian form, 'cælc' also Anglian apparently. "
     }, {
         "key": "carl",
         "form-oe": "carl",
         "type": "noun",
-        "gloss": "man",
-        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "gloss": ["man", "rustic"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "obscure"],
         "origin": "old-english"
     }, {
         "key": "caru",
-        "form-raw": "caru",
-        "form-raw-alt": ["ċearu"],
-        "form-canon": "care",
+        "form-oe": {
+            "main": {
+                "form": "caru",
+                "dialect": "anglian",
+                "canon": "care"
+            },
+            "alt": "ċearu"
+        },
         "type": "noun",
-        "gloss": "care",
-        "gloss-alt": ["worry"],
-        "tags": ["mass", "abstract", "mind-state"],
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian. Could be 'mass' or 'count'"
+        "senses": [
+            {
+                "period": "modern",
+                "gloss": "[care], [worry]",
+                "tags": ["mass", "abstract", "mind-state"]
+            }, {
+                "period": "modern",
+                "gloss": "[care], [worry]",
+                "tags": ["count", "abstract", "mind-state"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "ċeap",
         "form-oe": {
@@ -1726,21 +1723,19 @@
             "canon": "cheap"
         },
         "type": "noun",
-        "gloss": ["trade", "merchandise", "bargain"],
-        "tags": ["mass", "abstract", "speculative"],
-        "origin": "old-english",
-        "notes": "Also 'cattle'"
-    }, {
-        "key": "ċeap-activity",
-        "form-oe": {
-            "form": "ċeap",
-            "canon": "cheap"
-        },
-        "type": "noun",
-        "gloss": "trade",
-        "tags": ["mass", "abstract", "activity", "speculative"],
-        "origin": "old-english",
-        "notes": "Also 'cattle'"
+        "senses": [
+            {
+                "gloss": "[goods], [merchandise]",
+                "tags": ["mass", "concrete", "speculative"]
+            }, {
+                "gloss": "trade",
+                "tags": ["mass", "abstract", "activity", "speculative"]
+            }, {
+                "gloss": "market",
+                "tags": ["count", "concrete", "terrain", "man-made", "speculative"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "ċeapian",
         "form-oe": {
@@ -1759,35 +1754,37 @@
             "canon": "chary"
         },
         "type": "adj",
-        "gloss": "[cautious] or [circumspect]",
-        "gloss-alt": "sorrowful",
-        "tags": ["obscure"],
+        "senses": [
+            {
+                "gloss": "sorrowful",
+                "tags": ["obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[cautious] or [circumspect]",
+                "tags": ["obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "ċēġan",
-        "form-raw": "ċēġ|an",
-        "form-raw-alt": ["ċīġ|an", "ċȳġ|an"],
+        "form-oe": {
+            "main": {
+                "form": "ċēġ|an",
+                "dialect": "anglian"
+            },
+            "alt": ["ċīġ|an", "ċȳġ|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["call", "[call] upon, [invoke]"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Chosen form Anglian, others LWS."
-    }, {
-        "key": "ċele",
-        "form-raw": "ċele",
-        "form-raw-alt": ["ċiele", "ċīl"],
-        "type": "noun",
-        "gloss": "[cold], [chill]",
-        "tags": ["count", "abstract", "speculative"],
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian, alt West Saxon. Bosworth has the vowel long, Wiktionary (and I think OED) have it short. None of these produce the modern form 'chill', but OED suggests the modern form may derive from a backformation from the verb (if I understand correctly). TODO: Add mass form 'coldness'"
+        "origin": "old-english"
     }, {
         "key": "cennan",
         "form-oe": "cenn|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[make] known, [declare]", "[bring] forth, [produce]"],
+        "gloss": "[make] known, [declare]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -1807,7 +1804,7 @@
         "gloss": "low-class [person]",
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
-        "notes": "Additional glosses 'man', 'husband', but don't want to gender for now"
+        "notes": "Older glosses 'man', 'husband', but leaving those aside for now"
     }, {
         "key": "ċīd",
         "form-oe": "ċīd",
@@ -1820,17 +1817,36 @@
         "key": "ċīdan",
         "form-oe": {
             "form": "ċīd|an",
-            "canon": {
-                "lemma": "chide",
-                "past-participle": ["chided"]
-            }
+            "canon": "chide"
         },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[scold], [find] fault",
-        "gloss-alt": ["rebuke", "complain", "quarrel"],
         "tags": ["intransitive"],
         "origin": "old-english"
+    }, {
+        "key": "ċiele",
+        "form-oe": {
+            "main": {
+                "form": "ċiele",
+                "dialect": "west-saxon",
+                "canon": "chill"
+            },
+            "alt": [{ "form": "ċele", "dialect": "anglian" }, { "form": "ċīle" }]
+        },
+        "type": "noun",
+        "senses": [
+            {
+                "gloss": "[cold], [frost]",
+                "tags": ["mass", "abstract"]
+            }, {
+                "period": "modern",
+                "gloss": "chill",
+                "tags": ["count", "abstract"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Bosworth has the vowel long, Wiktionary (and I think OED) have it short."
     }, {
         "key": "ċild",
         "form-oe": {
@@ -1840,7 +1856,8 @@
         "type": "noun",
         "gloss": "child",
         "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "TODO: plural obliques in -r"
     }, {
         "key": "ċim",
         "form-oe": "ċim",
@@ -1866,13 +1883,21 @@
         "tags": ["count", "abstract", "measure", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "ċīse",
-        "form-oe": "ċīse",
+        "key": "ċīs",
+        "form-oe": "ċīs",
         "type": "adj",
         "gloss": ["[fastidious] in eating", "selective"],
         "tags": ["speculative"],
         "origin": "old-english",
         "notes": "Sense a bit unclear"
+    }, {
+        "key": "ċist",
+        "form-oe": "ċist",
+        "type": "noun",
+        "gloss": "[band] or [company]",
+        "tags": ["count", "abstract", "grouping", "speculative"],
+        "origin": "old-english",
+        "notes": "Only Bosworth has this. Palatalization is my guess"
     }, {
         "key": "clǣġ",
         "form-oe": {
@@ -1895,8 +1920,10 @@
         "origin": "old-english"
     }, {
         "key": "clipian",
-        "form-raw": "clipi|an",
-        "form-raw-alt": ["cleopi|an"],
+        "form-oe": {
+            "main": "clipi|an",
+            "alt": ["cleopi|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[call] out", "[call] or [appeal] to"],
@@ -1919,20 +1946,17 @@
             "canon": "cloud"
         },
         "type": "noun",
-        "gloss": "cloud",
-        "tags": ["count", "concrete", "weather", "glooming"],
+        "senses": [
+            {
+                "gloss": "cloud",
+                "tags": ["count", "concrete", "weather", "glooming"]
+            }, {
+                "gloss": "clouds",
+                "tags": ["singleton", "concrete", "place", "glooming"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Alternate meaning 'rock, hill', or general sense of 'accumulated mass'"
-    }, {
-        "key": "clūd-singleton",
-        "form-oe": {
-            "form": "clūd",
-            "canon": "cloud"
-        },
-        "type": "noun",
-        "gloss": "clouds",
-        "tags": ["singleton", "concrete", "place", "glooming"],
-        "origin": "old-english"
     }, {
         "key": "cnīf",
         "form-oe": {
@@ -1976,20 +2000,19 @@
         "origin": "old-english"
     }, {
         "key": "coeċel",
-        "form-raw": "coeċel",
-        "form-raw-alt": ["cyċel", "ciċel"],
+        "form-oe": ["coeċel", "cyċel", "ciċel"],
         "type": "noun",
-        "gloss": "little [cake]",
-        "tags": ["count", "concrete", "man-made", "food"],
-        "origin": "old-english"
-    }, {
-        "key": "coeċel-measure",
-        "form-raw": "coeċel",
-        "form-raw-alt": ["cyċel", "ciċel"],
-        "type": "noun",
-        "gloss": ["morsel", "mouthful"],
-        "tags": ["count", "abstract", "measure"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": "small [cake]",
+                "tags": ["count", "concrete", "man-made", "food"]
+            }, {
+                "gloss": ["morsel", "mouthful"],
+                "tags": ["count", "abstract", "measure"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "OED, with reluctance, possibly attributes these forms to two different origins"
     }, {
         "key": "cōl",
         "form-oe": {
@@ -2001,8 +2024,10 @@
         "origin": "old-english"
     }, {
         "key": "cot",
-        "form-raw": ["cot", "cote"],
-        "form-canon": "cote",
+        "form-oe": {
+            "form": ["cot", "cote"],
+            "canon": "cote"
+        },
         "type": "noun",
         "gloss": ["small [house]", "[shelter] for animals"],
         "tags": ["count", "concrete", "man-made", "obscure"],
@@ -2039,10 +2064,7 @@
         "key": "cwacian",
         "form-oe": {
             "form": "cwaci|an",
-            "canon": {
-                "lemma": "quake",
-                "past-participle": ["quaked"]
-            }
+            "canon": "quake"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -2050,23 +2072,28 @@
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
-        "key": "cwalm",
+        "key": "cwealm",
         "form-oe": {
-            "form": "cwalm",
+            "form": "cwealm",
             "canon": "qualm"
         },
         "type": "noun",
-        "gloss": ["[feeling] of apprehension or doubt"],
-        "tags": ["count", "abstract", "mind-state"],
-        "origin": "old-english"
-    }, {
-        "key": "cwalm-OE",
-        "form-oe": "cwalm",
-        "type": "noun",
-        "gloss": ["[plague], [pestilence]", "destruction"],
-        "tags": ["mass", "abstract", "speculative", "homophonic"],
+        "senses": [
+            {
+                "gloss": ["[plague], [pestilence]", "destruction"],
+                "tags": ["mass", "abstract"]
+            }, {
+                "period": "modern",
+                "gloss": "sickness",
+                "tags": ["mass", "abstract", "body-state"]
+            }, {
+                "period": "modern",
+                "gloss": ["[feeling] of apprehension or doubt"],
+                "tags": ["count", "abstract", "mind-state"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Represents OE sens, where base morph represents modern usage. Separate for tags. TODO: Separate disease sense for 'body-state'"
+        "notes": "According to OED, the sense of death or plague and those of sickness or moral uncertainty are probably unrelated. Combining here for convenience though."
     }, {
         "key": "cweċċan",
         "form-oe": {
@@ -2074,10 +2101,7 @@
                 "infinitive": "cweċċ|an",
                 "past-participle": "cweaht"
             },
-            "canon": {
-                "lemma": "quitch",
-                "past-participle": ["quitched"]
-            }
+            "canon": "quitch"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -2088,10 +2112,7 @@
         "key": "cwelan",
         "form-oe": {
             "form": "cwel|an",
-            "canon": {
-                "lemma": "queal",
-                "past-participle": ["quealed"]
-            }
+            "canon": "queal"
         },
         "type": "verb",
         "verb-class": 4,
@@ -2102,31 +2123,33 @@
         "key": "cwellan",
         "form-oe": {
             "form": "cwell|an",
-            "canon": {
-                "lemma": "quell",
-                "past-participle": ["quelled"]
-            }
+            "canon": "quell"
         },
         "type": "verb",
         "verb-class": 4,
-        "gloss": "[subdue] or [silence]",
-        "gloss-alt": "[kill] or [destroy]",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "[kill] or [destroy]",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "[subdue] or [silence]",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "cwem|an",
         "form-oe": {
             "form": "cwem|an",
-            "canon": {
-                "lemma": "queme",
-                "past-participle": ["quemed"]
-            }
+            "canon": "queem"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[please] or [satisfy]",
+        "gloss": "[please], [satisfy]",
         "tags": ["transitive", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Varying spellings in modern use"
     }, {
         "key": "cwēn",
         "form-oe": {
@@ -2141,10 +2164,7 @@
         "key": "cwenċan",
         "form-oe": {
             "form": "cwenċ|an",
-            "canon": {
-                "lemma": "quench",
-                "past-participle": ["quenched"]
-            }
+            "canon": "quench"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -2164,18 +2184,13 @@
         "notes": "Original sense of 'woman' generally"
     }, {
         "key": "cweþan",
-        "form-oe": {
-            "form": "cweþ|an",
-            "canon": {
-                "lemma": "quethe",
-                "past-participle": ["quoth", "quethen", "quethed"]
-            }
-        },
+        "form-oe": "cweþ|an",
         "type": "verb",
         "verb-class": 5,
         "gloss": "say",
         "tags": ["transitive", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OED doesn't show a modern form outside the past tense 'quoth'"
     }, {
         "key": "cwic",
         "form-oe": {
@@ -2183,8 +2198,16 @@
             "canon": "quick"
         },
         "type": "adj",
-        "gloss": "fast",
-        "gloss-alt": "living",
+        "senses": [
+            {
+                "gloss": "alive",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "fast",
+                "tags": []
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "cwide",
@@ -2203,9 +2226,10 @@
         "origin": "old-english"
     }, {
         "key": "cyline",
-        "form-raw": "cyline",
-        "form-raw-alt": ["cylene", "cyln"],
-        "form-canon": "kiln",
+        "form-oe": {
+            "form": "cyline",
+            "canon": "kiln"
+        },
         "type": "noun",
         "gloss": "clay [oven]",
         "gloss-tool": "[fire] clay",
@@ -2219,12 +2243,16 @@
         "gloss": "[fine], [beautiful]",
         "tags": ["obscure"],
         "origin": "old-english",
-        "notes": "Appears as 'come' in 'comely'"
+        "notes": "Appears as 'come' in 'comely'. TODO: mark as compound-only"
     }, {
         "key": "cyng",
-        "form-raw": "cyng",
-        "form-raw-alt": "cyning",
-        "form-canon": "king",
+        "form-oe": {
+            "main": {
+                "form": "cyng",
+                "canon": "king"
+            },
+            "alt": ["cyning"]
+        },
         "type": "noun",
         "gloss": "king",
         "tags": ["count", "concrete", "living", "person", "role", "ruler"],
@@ -2244,10 +2272,7 @@
         "key": "cȳþan",
         "form-oe": {
             "form": "cȳþ|an",
-            "canon": {
-                "lemma": "kithe",
-                "past-participle": ["kithed"]
-            }
+            "canon": "kithe"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -2291,10 +2316,16 @@
             "canon": "death"
         },
         "type": "noun",
-        "gloss": "death",
-        "tags": ["count", "abstract"],
-        "origin": "old-english",
-        "notes": "Could also be mass"
+        "senses": [
+            {
+                "gloss": "death",
+                "tags": ["count", "abstract"]
+            }, {
+                "gloss": "death",
+                "tags": ["mass", "abstract"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "dēawe",
         "form-oe": {
@@ -2309,23 +2340,19 @@
         "key": "dēman",
         "form-oe": {
             "form": "dēm|an",
-            "canon": {
-                "lemma": "deem",
-                "past-participle": ["deemed"]
-            }
+            "canon": "deem"
         },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "judge",
-        "tags": ["intransitive"],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "dēon",
         "form-oe": "dē|on",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "suck",
-        "gloss-alt": ["suckle"],
+        "gloss": ["suck", "suckle"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
