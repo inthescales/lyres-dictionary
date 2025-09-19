@@ -1459,17 +1459,19 @@
         "form-oe": "brim",
         "type": "noun",
         "gloss": "sea",
-        "tags": ["singleton", "concrete", "liquid", "terrain", "shiny"],
+        "tags": ["singleton", "concrete", "liquid", "terrain", "shiny", "poetic", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "bringan",
         "form-oe": {
             "form": {
                 "infinitive": "bring|an",
+                "past": "brōht",
                 "past-participle": ["brōht"]
             },
             "canon": {
                 "lemma": "bring",
+                "past": "brought",
                 "past-participle": ["brought"]
             }
         },
@@ -1509,9 +1511,16 @@
         },
         "type": "verb",
         "verb-class": 2,
-        "gloss": "[endure] or [tolerate]",
-        "gloss-alt": ["use", "[make] use of", "enjoy"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["use", "[make] use of", "enjoy"],
+                "tags": ["transitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[endure] or [tolerate]",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "brȳd",
@@ -1525,28 +1534,33 @@
         "origin": "old-english"
     }, {
         "key": "bryht",
-        "form-raw": "bryht",
-        "form-raw-alt": ["beorht", "byrht"],
-        "form-canon": "bright",
+        "form-oe": {
+            "main": {
+                "form": "bryht",
+                "canon": "bright"
+            },
+            "alt": [{ "form": ["beorht", "byrht"] }, { "form": "berht", "dialect": "anglian" }]
+        },
         "type": "adj",
         "gloss": "bright",
         "origin": "old-english"
     }, {
-        "key": "būc-bodypart",
+        "key": "būc",
         "form-oe": {
             "form": "būc",
             "canon": "bouk"
         },
         "type": "noun",
-        "gloss": "[belly], [stomach]",
-        "tags": ["count", "concrete", "bodypart", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "būc-vessel",
-        "form-oe": "būc",
-        "type": "noun",
-        "gloss": "[jug] or [pitcher]",
-        "tags": ["count", "concrete", "man-made", "vessel", "speculative"],
+        "senses": [
+            {
+                "gloss": "[jug] or [pitcher]",
+                "tags": ["count", "concrete", "man-made", "vessel", "speculative"]
+            }, {
+                "period": "modern",
+                "gloss": "[belly], [stomach]",
+                "tags": ["count", "concrete", "bodypart", "bodypart-single", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "būr",
@@ -1560,30 +1574,33 @@
         "origin": "old-english"
     }, {
         "key": "burg",
-        "form-raw": "burg",
-        "form-raw-alt": "burh",
-        "form-canon": "burgh",
+        "form-oe": {
+            "form": ["burg", "burh"],
+            "canon": "burgh"
+        },
         "type": "noun",
-        "gloss": "[city] or [town]",
-        "gloss-alt": "fortress",
-        "tags": ["count", "concrete", "terrain", "man-made"],
-        "origin": "old-english"
-    }, {
-        "key": "burġels",
-        "form-raw": "burġ+els",
-        "form-raw-alt": ["berġ+els", "birġ+els"],
-        "type": "noun",
-        "gloss": ["burial [place]", "tomb"],
-        "gloss-tool": "bury",
-        "tags": ["count", "concrete", "man-made"],
+        "senses": [
+            {
+                "gloss": "fortress",
+                "tags": ["count", "concrete", "terrain", "man-made"]
+            }, {
+                "period": "modern",
+                "gloss": "[city] or [town]",
+                "tags": ["count", "concrete", "terrain", "man-made", "grouping"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Historically, reanalyzed not only as singular but as derived from Latin '-al' suffix. Leaving without canon due to different sense."
+        "notes": "TODO: oblique - multiple forms"
     }, {
         "key": "byldan",
-        "form-raw": "byld|an",
-        "form-raw-alt": ["bylt|an"],
-        "form-canon": "build",
-        "form-participle-canon": ["built", "builded"],
+        "form-oe": {
+            "form": "byld|an",
+            "canon": {
+                "lemma": "build",
+                "past": "built",
+                "past-participle": ["built", "builded"]
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "build",
@@ -1604,37 +1621,66 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
+        "key": "byrġels",
+        "form-oe": {
+            "main": "byrġ+els",
+            "alt": ["berġ+els", "birġ+els"]
+        },
+        "type": "noun",
+        "gloss": ["burial [place]", "tomb"],
+        "gloss-tool": "bury",
+        "tags": ["count", "concrete", "man-made"],
+        "origin": "old-english",
+        "notes": "Wiktionary indicates this ancestor of 'burial', reanalyzed as singular and derived from 'bury' + the Latin '-al' suffix. Leaving canonless due to different sense."
+    }, {
         "key": "byrnan",
-        "form-raw": "byrn|an",
-        "form-raw-alt": ["bærn|an", "biern|an", "birn|an", "beorn|an"],
-        "form-canon": "burn",
-        "form-participle-canon": ["burned", "burnt"],
+        "form-oe": {
+            "main": {
+                "form": "byrn|an",
+                "canon": {
+                    "lemma": "burn",
+                    "past": ["burned", "burnt"],
+                    "past-participle": ["burned", "burnt"]
+                }
+            },
+            "alt": ["bærn|an", "birn|an", "beorn|an", "brinn|an"]
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "burn",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "Class is ambiguous since this is kind of mashing together a bunch of forms."
+        "notes": "Modern verb represents merging of two OE verbs, 'beornan' and 'bærnan'. TODO: Consider separating."
     }, {
-        "key": "bysiġan",
-        "form-raw": "bysiġ|an",
-        "form-raw-alt": ["bisgi|an"],
-        "form-canon": "busy",
-        "form-participle-canon": ["busied"],
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "[occupy] or [engage]",
-        "tags": ["transitive"],
+        "key": "bysiġ",
+        "form-oe": {
+            "main": {
+                "form": "bys+iġ",
+                "dialect": "west-saxon",
+                "canon": "busy"
+            },
+            "alt": "bis+iġ"
+        },
+        "type": "adj",
+        "gloss": "busy",
         "origin": "old-english",
-        "notes": "Bosworth has long vowels here"
+        "notes": "Bosworth has long vowels here, while Wiktionary and OED don't."
     }, {
         "key": "bȳsnian",
-        "form-raw": "bīsni|an",
+        "form-oe": "bīsni|an",
         "form-raw-alt": ["bȳsni|an", "bīseni|an"],
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[set] an example",
-        "tags": ["intransitive", "speculative"],
+        "senses": [
+            {
+                "gloss": "[give] or [set] an example",
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "period": "middle",
+                "gloss": "symbolize",
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "cald",
