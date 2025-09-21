@@ -2830,13 +2830,17 @@
         "notes": "TODO: Split happiness/prosperity senses"
     }, {
         "key": "eald",
-        "form-raw": "ald",
-        "form-raw-alt": "eald",
-        "form-canon": "old",
+        "form-oe": {
+            "main": {
+                "form": "ald",
+                "dialect": "anglian",
+                "canon": "old"
+            },
+            "alt": [{ "form": "eald", "dialect": "west-saxon" }]
+        },
         "type": "adj",
         "gloss": "old",
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian, alt. is WS"
+        "origin": "old-english"
     }, {
         "key": "ealu",
         "form-oe": {
@@ -2848,13 +2852,6 @@
         "tags": ["mass", "concrete", "fluid", "liquid", "man-made"],
         "origin": "old-english"
     }, {
-        "key": "earfoþe-activity",
-        "form-oe": "earfoþe",
-        "type": "noun",
-        "gloss": ["labor"],
-        "tags": ["mass", "abstract", "activity", "speculative"],
-        "origin": "old-english"
-    }, {
         "key": "earfoþe-adj",
         "form-oe": "earfoþe",
         "type": "adj",
@@ -2862,29 +2859,34 @@
         "tags": ["obscure"],
         "origin": "old-english"
     }, {
-        "key": "earfoþe-labor-pains",
+        "key": "earfoþe-n",
         "form-oe": "earfoþe",
         "type": "noun",
-        "gloss": "labor [pains]",
-        "tags": ["mass", "abstract", "body-state", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "earfoþe-state",
-        "form-oe": "earfoþe",
-        "type": "noun",
-        "gloss": "[hardship] or [suffering]",
-        "tags": ["mass", "abstract", "body-state", "mind-state", "speculative"],
+        "senses": [
+            {
+                "gloss": ["[labor], [toil]"],
+                "tags": ["mass", "abstract", "activity", "speculative"]
+            }, {
+                "gloss": "labor [pains]",
+                "tags": ["uncountable", "abstract", "body-state", "speculative"],
+                "notes": "TODO: Add 'plural' countability tag"
+            }, {
+                "gloss": "[hardship] or [suffering]",
+                "tags": ["mass", "abstract", "body-state", "mind-state", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "earm",
-        "form-raw": "arm",
-        "form-raw-alt": "earm",
-        "form-canon": "arm",
+        "form-oe": {
+            "form": "arm",
+            "dialect": "anglian"
+        },
         "type": "adj",
-        "gloss": "poor",
-        "tags": ["obscure"],
+        "gloss": ["poor", "[miserable], [wretched]"],
+        "tags": ["speculative"],
         "origin": "old-english",
-        "notes": "'arm' is Anglian. Both give same result"
+        "notes": "Wiktionary refers to modern Scottish usage as 'arm', but following OED, which doesn't show modern usage, in leaving canonless."
     }, {
         "key": "ebba",
         "form-oe": {
@@ -2899,10 +2901,7 @@
         "key": "ebbian",
         "form-oe": {
             "form": "ebbi|an",
-            "canon": {
-                "lemma": "ebb",
-                "past-participle": ["ebbed"]
-            }
+            "canon": "ebb"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -2913,9 +2912,9 @@
     }, {
         "key": "ēċe",
         "form-raw": "ēċe",
-        "form-raw-alt": ["ǣċe"],
         "type": "adj",
         "gloss": "eternal",
+        "tags": ["speculative"],
         "origin": "old-english"
     }, {
         "key": "eċġ",
@@ -2933,79 +2932,99 @@
         "key": "eċġan",
         "form-oe": {
             "form": "eċġ|an",
-            "canon": {
-                "lemma": "edge",
-                "past-participle": ["edged"]
-            }
+            "canon": "edge"
         },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "sharpen",
         "tags": ["transitive"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Other senses (see OED), but I'm not sure they come out well"
     }, {
         "key": "efn",
-        "form-raw": "efn",
-        "form-raw-alt": ["emn", "em"],
-        "form-canon": "even",
+        "form-oe": {
+            "main": {
+                "form": "efn",
+                "canon": "even"
+            },
+            "alt": "emn"
+        },
         "type": "adj",
-        "gloss": "even, level",
+        "gloss": "[even], [level]",
         "origin": "old-english"
     }, {
         "key": "eġe",
-        "form-raw": ["eġe", "æġe"],
+        "form-oe": ["eġe", "æġe"],
         "type": "noun",
-        "gloss": "awe",
+        "gloss": ["awe", "[fear], [dread]"],
         "tags": ["mass", "abstract", "mind-state", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "ēge",
-        "form-raw": "ēge",
-        "form-raw-alt": ["ēage"],
-        "form-canon": "eye",
+        "key": "ēġe",
+        "form-oe": {
+            "main": {
+                "form": "ēġe",
+                "dialect": "anglian",
+                "canon": "eye"
+            },
+            "alt": [{ "form": ["ēaġe", "ēage"] }, { "form": "ēge", "dialect": "anglian" }]
+        },
         "type": "noun",
         "gloss": "eye",
         "tags": ["count", "concrete", "bodypart", "shiny"],
         "origin": "old-english",
-        "notes": "TODO: Figure out why this has a palatal sound in MnE"
+        "notes": "Not sure what the timing is, but OED etymology suggests that palatalization happened at a relatively later time"
     }, {
         "key": "elf",
-        "form-raw": "elf",
-        "form-raw-alt": ["ælf", "ylf"],
-        "form-canon": "elf",
+        "form-oe": {
+            "main": {
+                "form": "elf",
+                "dialect": "mercian",
+                "canon": "elf"
+            },
+            "alt": {
+                "form": ["ælf", "ylf"],
+                "dialect": "west-saxon"
+            }
+        },
         "type": "noun",
         "gloss": "elf",
-        "tags": ["count", "concrete", "living", "person"],
+        "tags": ["count", "concrete", "living", "person", "magical"],
         "origin": "old-english",
-        "notes": "Chosen form is Mercian/Kentish, alt. is WS (following OED anyway)"
+        "notes": "TODO: Multiple dialects. Chosen form is also Kentish"
     }, {
         "key": "elfen",
-        "form-raw": "elf+en",
-        "form-raw-alt": ["ælf+en", "ylf+en"],
+        "form-oe": {
+            "main": {
+                "form": "elf+en",
+                "dialect": "mercian"
+            },
+            "alt": {
+                "form": ["ælf+en", "ylf+en"],
+                "dialect": "west-saxon"
+            }
+        },
         "type": "noun",
         "gloss": "female [elf]",
         "tags": ["count", "concrete", "living", "person", "gendered", "speculative", "rare"],
         "origin": "old-english",
-        "notes": "Chosen form is Mercian/Kentish, alt. is WS. Rare for balance with 'elf'"
+        "notes": "Rare for balance with 'elf'"
     }, {
-        "key": "eln-arm",
+        "key": "eln",
         "form-oe": {
             "form": "eln",
             "canon": "ell"
         },
         "type": "noun",
-        "gloss": "arm",
-        "tags": ["count", "concrete", "living", "bodypart", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "eln-measure",
-        "form-oe": {
-            "form": "eln",
-            "canon": "ell"
-        },
-        "type": "noun",
-        "gloss": "arm's [length]",
-        "tags": ["count", "abstract", "measure", "obscure"],
+        "senses": [
+            {
+                "gloss": "arm",
+                "tags": ["count", "concrete", "living", "bodypart", "speculative"]
+            }, {
+                "gloss": "arm's [length]",
+                "tags": ["count", "abstract", "measure", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "eorþe",
@@ -3014,29 +3033,33 @@
             "canon": "earth"
         },
         "type": "noun",
-        "gloss": "earth",
-        "tags": ["mass", "concrete", "terrain", "material"],
-        "origin": "old-english"
-    }, {
-        "key": "eorþe-singleton",
-        "form-oe": {
-            "form": "eorþe",
-            "canon": "earth"
-        },
-        "type": "noun",
-        "gloss": "earth",
-        "tags": ["singleton", "concrete", "terrain", "place"],
+        "senses": [
+            {
+                "gloss": "earth",
+                "tags": ["mass", "concrete", "terrain", "material"]
+            }, {
+                "gloss": "earth",
+                "tags": ["singleton", "concrete", "terrain", "place"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "fæcele",
         "form-oe": "fæcele",
         "type": "noun",
-        "gloss": "torch",
-        "gloss-alt": ["[lamp], [light]"],
-        "gloss-tool": ["[light] up"],
-        "tags": ["count", "concrete", "luminous", "man-made", "tool", "speculative"],
+        "senses": [
+            {
+                "gloss": "torch",
+                "gloss-tool": ["[light] up"],
+                "tags": ["count", "concrete", "luminous", "man-made", "tool", "speculative"]
+            }, {
+                "gloss": "[lamp], [light]",
+                "gloss-tool": ["[light] up"],
+                "tags": ["count", "concrete", "luminous", "man-made", "tool", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Alt. glosses are my invention"
+        "notes": "'lamp' sense is my innovation. Etymology goes back to Latin 'facula'"
     }, {
         "key": "fæder",
         "form-oe": {
@@ -3051,13 +3074,20 @@
         "key": "fǣġe",
         "form-oe": {
             "form": "fǣġe",
-            "canon": "fey"
+            "canon": ["fey", "fay"]
         },
         "type": "adj",
-        "gloss": "[strange] or [otherworldly]",
-        "gloss-alt": "doomed to die",
-        "origin": "old-english",
-        "notes": "Alternate modern form 'fay'."
+        "senses": [
+            {
+                "gloss": "[doomed] to die",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "[strange] or [otherworldly]",
+                "tags": []
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "fæġen",
         "form-oe": {
@@ -3082,10 +3112,16 @@
         "form-oe": "fæġni|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[be] glad", "[celebrate], [rejoice]"],
-        "tags": ["intransitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity"
+        "senses": [
+            {
+                "gloss": "[be] glad",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[celebrate], [rejoice]",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "fær",
         "form-oe": {
@@ -3093,29 +3129,32 @@
             "canon": "fare"
         },
         "type": "noun",
-        "gloss": ["journey", "expedition", "way"],
+        "gloss": ["journey", "passage", "way"],
         "tags": ["count", "abstract"],
         "origin": "old-english",
-        "notes": "Also 'vehicle', 'road'"
+        "notes": "Some other OE and ME senses. TODO: oblique form 'faru' may be source of modern form."
     }, {
         "key": "fǣr",
-        "form-raw": "fǣr",
-        "form-raw-alt": ["fēr"],
-        "form-canon": "fear",
+        "form-oe": {
+            "main": {
+                "form": "fǣr",
+                "canon": "fear"
+            },
+            "alt": ["fēr", "fār"]
+        },
         "type": "noun",
-        "gloss": "fear",
-        "tags": ["mass", "abstract", "mind-state"],
-        "origin": "old-english"
-    }, {
-        "key": "fǣr/OE",
-        "form-raw": "fǣr",
-        "form-raw-alt": ["fēr"],
-        "form-canon": "fear",
-        "type": "noun",
-        "gloss": "[danger], [calamity]",
-        "tags": ["mass", "abstract", "homophonic"],
+        "senses": [
+            {
+                "gloss": "[danger], [calamity]",
+                "tags": ["mass", "abstract"]
+            }, {
+                "period": "modern",
+                "gloss": "fear",
+                "tags": ["mass", "abstract", "mind-state"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "OE senses of the word that would be come 'fear'. Additional count sense 'ambush, attack'"
+        "notes": "Form 'fār' is unattested but posited by OED. Additional OE sense 'ambush, attack'"
     }, {
         "key": "fagnian",
         "form-oe": {
@@ -3143,42 +3182,47 @@
         },
         "type": "noun",
         "gloss": "foam",
-        "tags": ["mass", "concrete", "material"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "material"],
         "origin": "old-english"
     }, {
         "key": "fana",
-        "form-raw": "fana",
-        "form-raw-alt": ["fona"],
-        "type": "noun",
-        "gloss": ["[flag], [banner]", "[patch] or [scrap] of cloth"],
-        "tags": ["count", "concrete", "man-made", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "fana-vane",
         "form-oe": {
-            "form": "fana",
-            "canon": "vane"
+            "main": {
+                "form": "fana",
+                "canon": {
+                    "form": "vane",
+                    "dialect-source": "southern"
+                }
+            },
+            "alt": "fona"
         },
         "type": "noun",
-        "gloss": "weathervane",
-        "tags": ["count", "concrete", "metallic", "man-made"],
-        "origin": "old-english",
-        "notes": "Properly the same morph as the base 'fana', but I want to separate for alt. form usage"
+        "senses": [
+            {
+                "gloss": ["[flag], [banner]", "[patch] or [scrap] of cloth"],
+                "tags": ["count", "concrete", "man-made", "speculative"]
+            }, {
+                "period": "modern",
+                "gloss": "weathervane",
+                "tags": ["count", "concrete", "metallic", "man-made"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "fang",
         "form-oe": "fang",
         "type": "noun",
-        "gloss": "[plunder] or [spoils]",
-        "tags": ["mass", "concrete", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "fang-activity",
-        "form-oe": "fang",
-        "type": "noun",
-        "gloss": "plunder",
-        "tags": ["mass", "concrete", "activity", "speculative"],
+        "senses": [
+            {
+                "gloss": "[plunder] or [spoils]",
+                "tags": ["mass", "concrete", "speculative"]
+            }, {
+                "gloss": "plunder",
+                "tags": ["mass", "concrete", "activity", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "This is my extension"
+        "notes": "'plunder' sense is my extension"
     }, {
         "key": "faran",
         "form-oe": {
@@ -3200,16 +3244,27 @@
             "canon": "fare"
         },
         "type": "noun",
-        "gloss": ["passing", "journey", "voyage", "[course] of action"],
-        "tags": ["count", "abstract"],
-        "origin": "old-english",
-        "notes": "Also 'travel companions', 'followers of a teacher', 'vehicle'"
+        "senses": [
+            {
+                "gloss": ["[going] or [passing]", "[journey], [voyage]", "[course] of action"],
+                "tags": ["count", "abstract"]
+            }, {
+                "gloss": ["[group] of followers", "[group] of travel companions"],
+                "tags": ["count", "concrete", "living", "grouping"]
+            }, {
+                "gloss": "vehicle",
+                "gloss-tool": "[drive] a vehicle",
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "feallan",
         "form-oe": {
             "form": "feall|an",
             "canon": {
                 "lemma": "fall",
+                "past": "fell",
                 "past-participle": ["fallen", "fell"]
             }
         },
@@ -3234,7 +3289,7 @@
         },
         "type": "noun",
         "gloss": "hair",
-        "tags": ["mass", "concrete", "bodypart", "obscure", "speculative"],
+        "tags": ["mass", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
         "key": "feċġan",
@@ -3244,13 +3299,14 @@
         "gloss": "seize",
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Unable to find class for this. Will assume it is weak, as it may be related to 'feċċan'"
+        "notes": "Variant of 'feċċan' (fetch)"
     }, {
         "key": "fēdan",
         "form-oe": {
             "form": "fēd|an",
             "canon": {
                 "lemma": "feed",
+                "past": "fed",
                 "past-participle": ["fed"]
             }
         },
@@ -3271,11 +3327,13 @@
         "origin": "old-english"
     }, {
         "key": "fēoġan",
-        "form-raw": "fēoġ|an",
-        "form-raw-alt": ["fēoġe|an", "fē|on"],
+        "form-oe": {
+            "main": "fēoġ|an",
+            "alt": ["fēoġe|an", "fē|on"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["hate", "persecute"],
+        "gloss": "[hate], [persecute]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -3285,16 +3343,25 @@
             "canon": "fee"
         },
         "type": "noun",
-        "gloss": "fee",
-        "tags": ["count", "abstract"],
+        "senses": [
+            {
+                "gloss": "money",
+                "tags": ["mass", "concrete"]
+            }, {
+                "period": "modern",
+                "gloss": "fee",
+                "tags": ["count", "abstract"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Form influenced by Anglo-French 'fee'. Alt. meaning 'money', but needs countability distinction"
+        "notes": "Form influenced by Anglo-French 'fee'"
     }, {
         "key": "feohtan",
         "form-oe": {
             "form": "feoht|an",
             "canon": {
                 "lemma": "fight",
+                "past": "fought",
                 "past-participle": ["fought"]
             }
         },
@@ -3310,25 +3377,35 @@
             "canon": "fiend"
         },
         "type": "noun",
-        "gloss": "wicked [person]",
-        "gloss-alt": "enemy",
-        "tags": ["count", "concrete", "living", "person"],
+        "senses": [
+            {
+                "gloss": "enemy",
+                "tags": ["count", "concrete", "living", "person"]
+            }, {
+                "period": "modern",
+                "gloss": "wicked [person]",
+                "tags": ["count", "concrete", "living", "person"]
+            }, {
+                "period": "modern",
+                "gloss": "devil",
+                "tags": ["count", "concrete", "living", "person", "magical"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "ferd-activity",
+        "key": "ferd",
         "form-raw": "ferd",
         "form-raw-alt": ["fyrd"],
         "type": "noun",
-        "gloss": ["military [expedition]", "campaign"],
-        "tags": ["count", "concrete", "living", "activity", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "ferd-grouping",
-        "form-raw": "ferd",
-        "form-raw-alt": ["fyrd"],
-        "type": "noun",
-        "gloss": ["[army], [host]", "[band], [company]"],
-        "tags": ["count", "concrete", "living", "grouping", "speculative"],
+        "senses": [
+            {
+                "gloss": ["military [expedition] or [campaign]"],
+                "tags": ["count", "concrete", "living", "activity", "speculative"]
+            }, {
+                "gloss": ["[army], [host]", "[band], [company]"],
+                "tags": ["count", "concrete", "living", "grouping", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "fersċ",
@@ -3337,18 +3414,22 @@
             "canon": "fresh"
         },
         "type": "adj",
-        "gloss": "fresh",
-        "gloss-alt": "without salt (of water)",
+        "senses": [
+            {
+                "gloss": "fresh",
+                "tags": []
+            }, {
+                "gloss": "without salt (of water)",
+                "tags": []
+            }
+        ],
         "origin": "old-english",
         "notes": "er -> re metathesis occurred by middle english"
     }, {
         "key": "fēsian",
         "form-oe": {
             "form": "fēsi|an",
-            "canon": {
-                "lemma": "feeze",
-                "past-participle": ["feezed"]
-            }
+            "canon": "feeze"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -3357,34 +3438,57 @@
         "origin": "old-english"
     }, {
         "key": "fet",
-        "form-raw": "fet",
-        "form-raw-alt": ["fæt"],
-        "form-canon": "vat",
+        "form-oe": {
+            "main": {
+                "form": "fæt",
+                "canon": {
+                    "form": "vat",
+                    "dialect-source": "southern"
+                }
+            },
+            "alt": {
+                "form": "fet",
+                "dialect": "mercian"
+            }
+        },
         "type": "noun",
-        "gloss": "vat",
-        "gloss-alt": ["[vessel] or [container]", "[jar] or [cup]"],
-        "tags": ["count", "concrete", "man-made", "vessel"],
-        "origin": "old-english",
-        "notes": "'fet' form is Mercian. Canon form shows southern dialect initial fricative voicing. Also gloss 'box'"
+        "senses": [
+            {
+                "gloss": ["[jar] or [cup]", "box"],
+                "tags": ["count", "concrete", "man-made", "vessel"]
+            }, {
+                "period": "modern",
+                "gloss": "[vessel] or [container]",
+                "tags": ["count", "concrete", "man-made", "vessel"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "fiellan",
-        "form-raw": "fiell|an",
-        "form-raw-alt": ["fæll|an", "fyll|an"],
-        "form-canon": "fell",
-        "form-participle-canon": ["felled"],
+        "form-oe": {
+            "main": {
+                "form": "fæll|an",
+                "dialect": "anglian",
+                "canon": "fell"
+            },
+            "alt": {
+                "form": "fyll|an",
+                "dialect": "west-saxon"
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[cut] down",
         "gloss-alt": "kill",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "WS 'fiellan' accords best with modern form. 'fællan' is Anglian, 'fyllan' is LWS"
+        "notes": "OED indicates that Anglian form is represented with 'a' vowel in some ME texts, 'e' in others, while in Kentish dialect, represented in boyh OE and ME by 'e'. It's not clear to me which of those may have contributed more to the modern form, or why the Anglian 'æ' became 'e', but I use it as main form here on the assumption of Anglian's generally greater influence on modern standard English."
     }, {
         "key": "firgen",
         "form-raw": "firgen",
         "form-raw-alt": ["fyrgen", "firing", "firgin"],
         "type": "noun",
-        "gloss": "mountain [forest]",
+        "gloss": ["mountain", "mountain [forest]"],
         "tags": ["count", "concrete", "terrain", "speculative"],
         "origin": "old-english",
         "notes": "Following Wiktionary in with non-palagal 'g'"
