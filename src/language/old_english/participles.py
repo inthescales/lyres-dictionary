@@ -22,7 +22,7 @@ from src.evolutor.engine.hinges import occ, rarely
 # For predicting past participle forms based on the form of the infinitive.
 vowel_map = {
     1: { "ī": "i" },
-    2: { "ēo": "o", "ū": "o" },
+    2: { "ēo": "o", "ū": "o" }, # At least some Anglian variants may have 'ē' here (e.g. flēgan). Not sure what to do about that.
     3: { "e": "o", "eo": "o", "i": "u", "ie": "o", "y": "u" }, # 'y' -> 'u' as in 'byrnan' -> 'ġeburnen'
     4: { "e": "o", "i": "u", "ie": "o", "u": "u" },
     5: { "e": "e", "i": "e", "ie": "ie"}, # 'ġiefan' -> 'ġefen' (acc. Wiktionary)?

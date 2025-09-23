@@ -47,7 +47,10 @@
                 "form": "ǣfen",
                 "canon": "even"
             },
-            "alt": [{ "form": "ēfern", "dialect": "northumbrian" }]
+            "alt": [{
+                "form": "ēfern",
+                "dialect": "northumbrian"
+            }]
         },
         "type": "noun",
         "gloss": "evening",
@@ -113,7 +116,10 @@
                 },
                 "canon": "angel"
             },
-            "alt": [{ "lemma": "enġel", "oblique": "engl|e" }]
+            "alt": [{
+                "lemma": "enġel",
+                "oblique": "engl|e"
+            }]
         },
         "type": "noun",
         "gloss": "angel",
@@ -1518,7 +1524,14 @@
                 "form": "bryht",
                 "canon": "bright"
             },
-            "alt": [{ "form": ["beorht", "byrht"] }, { "form": "berht", "dialect": "anglian" }]
+            "alt": [
+                {
+                    "form": ["beorht", "byrht"]
+                }, {
+                    "form": "berht",
+                    "dialect": "anglian"
+                }
+            ]
         },
         "type": "adj",
         "gloss": "bright",
@@ -1678,7 +1691,14 @@
                 "form": "cælċ",
                 "dialect": "anglian"
             },
-            "alt": [{ "form": "celċ", "dialect": "mercian" }, { "form": "cæliċ" }]
+            "alt": [
+                {
+                    "form": "celċ",
+                    "dialect": "mercian"
+                }, {
+                    "form": "cæliċ"
+                }
+            ]
         },
         "type": "noun",
         "gloss": "[chalice] or [cup]",
@@ -1832,7 +1852,14 @@
                 "dialect": "west-saxon",
                 "canon": "chill"
             },
-            "alt": [{ "form": "ċele", "dialect": "anglian" }, { "form": "ċīle" }]
+            "alt": [
+                {
+                    "form": "ċele",
+                    "dialect": "anglian"
+                }, {
+                    "form": "ċīle"
+                }
+            ]
         },
         "type": "noun",
         "senses": [
@@ -2836,7 +2863,10 @@
                 "dialect": "anglian",
                 "canon": "old"
             },
-            "alt": [{ "form": "eald", "dialect": "west-saxon" }]
+            "alt": [{
+                "form": "eald",
+                "dialect": "west-saxon"
+            }]
         },
         "type": "adj",
         "gloss": "old",
@@ -2967,7 +2997,14 @@
                 "dialect": "anglian",
                 "canon": "eye"
             },
-            "alt": [{ "form": ["ēaġe", "ēage"] }, { "form": "ēge", "dialect": "anglian" }]
+            "alt": [
+                {
+                    "form": ["ēaġe", "ēage"]
+                }, {
+                    "form": "ēge",
+                    "dialect": "anglian"
+                }
+            ]
         },
         "type": "noun",
         "gloss": "eye",
@@ -3292,14 +3329,27 @@
         "tags": ["mass", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "feċġan",
-        "form-oe": "feċġ|an",
+        "key": "feċċan",
+        "form-oe": {
+            "main": {
+                "form": "feċċ|an",
+                "canon": "fetch"
+            },
+            "alt": "feċġ|an"
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "seize",
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Variant of 'feċċan' (fetch)"
+        "senses": [
+            {
+                "gloss": "seize",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "retrieve",
+                "tags": ["transitive"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "fēdan",
         "form-oe": {
@@ -3513,32 +3563,50 @@
         "tags": ["mass", "concrete", "living", "bodypart", "material", "food"],
         "origin": "old-english"
     }, {
-        "key": "fleċġan",
-        "form-oe": "fleċġ|an",
+        "key": "fleġan",
+        "form-oe": {
+            "main": {
+                "form": "fleġ|an",
+                "canon": {
+                    "form": ["flay", "fley"],
+                    "dialect-range": "northern"
+                }
+            },
+            "alt": "fleċġ|an"
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[put] to flight"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "OED has MnE 'fleg', based on Scots evolution. Apparently this word's status in OE is unclear, but I'll leave it here. Class unknown, defaulting to 'weak'"
+        "gloss": ["[put] to flight", "frighten", "[drive] out"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "flēogan",
-        "form-raw": "flēog|an",
-        "form-raw-alt": ["flēg|an"],
-        "form-canon": "fly",
-        "form-participle-canon": ["flown"],
+        "form-oe": {
+            "main": {
+                "form": "flēog|an",
+                "canon": {
+                    "lemma": "fly",
+                    "past": "flew",
+                    "past-participle": "flown"
+                }
+            },
+            "alt": {
+                "form": "flēg|an",
+                "dialect": "anglian"
+            }
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": "fly",
         "tags": ["intransitive", "motion"],
-        "origin": "old-english",
-        "notes": "Chosen form is, I believe, Anglian (shows smoothing)."
+        "origin": "old-english"
     }, {
         "key": "flēon",
         "form-oe": {
             "form": "flē|on",
             "canon": {
                 "lemma": "flee",
+                "past": ["fled", "flew"],
                 "past-participle": ["fled", "flown"]
             }
         },
@@ -3549,23 +3617,12 @@
         "origin": "old-english"
     }, {
         "key": "flīeman",
-        "form-raw": "flīem|an",
-        "form-raw-alt": "flȳm|an",
+        "form-oe": "flīem|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[put] to flight", "banish"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
-    }, {
-        "key": "flīgan",
-        "form-raw": "flīg|an",
-        "form-raw-alt": ["fliġan", "fleġan"],
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": ["[drive] out", "[put] to flight", "[frighten] away"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english",
-        "notes": "I'm not positive if these forms represent the same word or not, but they're all pretty similar anyway"
     }, {
         "key": "flit",
         "form-oe": {
@@ -3573,23 +3630,37 @@
             "canon": "flit"
         },
         "type": "noun",
-        "gloss": "argument",
-        "tags": ["count", "abstract", "man-made", "activity"],
-        "origin": "old-english",
-        "notes": "Also senses 'fighting', 'contest', but I want to have the 'man-made' tag for now."
+        "senses": [
+            {
+                "gloss": ["[contest] or [competition]", "[arguing], [fighting]"],
+                "tags": ["count", "abstract", "activity", "obscure"]
+            }, {
+                "gloss": "argument",
+                "tags": ["count", "abstract", "man-made", "activity", "obscure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "flītan",
         "form-oe": {
             "form": "flīt|an",
             "canon": {
                 "lemma": "flite",
+                "past": ["flote", "flited"],
                 "past-participle": ["flitten", "flited"]
             }
         },
         "type": "verb",
         "verb-class": 1,
-        "gloss": ["[strive] or [contend]", "quarrel", "debate", "scold", "complain"],
-        "tags": ["intransitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[strive] or [contend]", "quarrel", "complain"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["debate", "scold"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "flocc",
@@ -3598,9 +3669,16 @@
             "canon": "flock"
         },
         "type": "noun",
-        "gloss": "flock",
-        "gloss-alt": ["[group] or [band]"],
-        "tags": ["count", "concrete", "living", "grouping"],
+        "senses": [
+            {
+                "gloss": ["[group] or [band]"],
+                "tags": ["count", "concrete", "living", "grouping"]
+            }, {
+                "period": "modern",
+                "gloss": "flock",
+                "tags": ["count", "concrete", "living", "grouping"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "flōd",
@@ -3609,16 +3687,37 @@
             "canon": "flood"
         },
         "type": "noun",
-        "gloss": "high [tide]",
-        "tags": ["mass", "abstract", "bounded", "time", "time-of-day"],
-        "origin": "old-english",
-        "notes": "This is a later usage, but want to include it"
+        "senses": [
+            {
+                "gloss": "[flowing] of water",
+                "tags": ["count", "concrete", "liquid", "fluid"]
+            }, {
+                "gloss": "water",
+                "tags": ["singleton", "concrete", "terrain", "liquid", "fluid"]
+            }, {
+                "period": "middle",
+                "gloss": "high [tide]",
+                "tags": ["mass", "abstract", "bounded", "time", "time-of-day"]
+            }, {
+                "period": "modern",
+                "gloss": "flood",
+                "tags": ["count", "concrete"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "floga",
         "form-oe": "floga",
         "type": "noun",
-        "gloss": "flying [being]",
-        "tags": ["count", "concrete", "homophonic"],
+        "senses": [
+            {
+                "gloss": "fugitive",
+                "tags": ["count", "concrete", "living", "person", "speculative", "homophonic"]
+            }, {
+                "gloss": "flying [creature]",
+                "tags": ["count", "concrete", "living", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "flohta",
@@ -3650,10 +3749,7 @@
         "key": "folgian",
         "form-oe": {
             "form": "folg|an",
-            "canon": {
-                "lemma": "follow",
-                "past-participle": ["followed"]
-            }
+            "canon": "follow"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -3666,6 +3762,7 @@
             "form": "f|ōn",
             "canon": {
                 "lemma": "fang",
+                "past": "fanged",
                 "past-participle": ["fanged"]
             }
         },
@@ -3686,22 +3783,25 @@
         "key": "framian",
         "form-oe": {
             "form": "frami|an",
-            "canon": {
-                "lemma": "frame",
-                "past-participle": ["framed"]
-            }
+            "canon": "frame"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[set] in a frame or border",
-        "gloss-alt": ["construct", "[profit], [avail]", "[promote] or [advance]"],
-        "tags": ["intransitive"],
+        "senses": [
+            {
+                "gloss": ["construct", "[profit], [avail]", "[promote] or [advance]"],
+                "tags": ["intransitive"]
+            }, {
+                "period": "modern",
+                "gloss": "[set] in a frame or border",
+                "tags": ["intransitive"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Influenced 'frame', in combination with 'fremman'. Chosen gloss is based on modern 'frame'."
+        "notes": "Influenced 'frame', in combination with 'fremman'."
     }, {
         "key": "frēcen",
-        "form-raw": "frēcen",
-        "form-raw-alt": ["frēcn", "frecn"],
+        "form-oe": "frēcen",
         "type": "noun",
         "gloss": "danger",
         "tags": ["mass", "abstract", "speculative"],
@@ -3711,7 +3811,15 @@
         "form-oe": {
             "main": {
                 "form": "freġn|an",
-                "canon": [{ "lemma": "frain", "past-participle": "frained" }, { "lemma": "frayn", "past-participle": "frayned" }]
+                "canon": [
+                    {
+                        "lemma": "frain",
+                        "past-participle": "frained"
+                    }, {
+                        "lemma": "frayn",
+                        "past-participle": "frayned"
+                    }
+                ]
             },
             "alt": ["friġn|an", "frīn|an"]
         },

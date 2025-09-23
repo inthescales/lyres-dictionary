@@ -171,7 +171,7 @@ def should_format(element, key, tag_stack):
         return False
 
     # Lists in formsets
-    if "form-oe" in tag_stack and type(element) == list:
+    if "form-oe" in tag_stack and type(element) == list and type(element[0]) == str:
         return False
 
     # Lists appearing in top-level morph keys
