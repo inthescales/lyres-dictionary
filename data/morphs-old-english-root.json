@@ -1656,8 +1656,10 @@
         "notes": "Bosworth has long vowels here, while Wiktionary and OED don't."
     }, {
         "key": "bȳsnian",
-        "form-oe": "bīsni|an",
-        "form-raw-alt": ["bȳsni|an", "bīseni|an"],
+        "form-oe": {
+            "main": "bīsni|an",
+            "alt": ["bȳsni|an", "bīseni|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "senses": [
@@ -2941,7 +2943,7 @@
         "notes": "'no-gen' as I don't think this one comes out well"
     }, {
         "key": "ēċe",
-        "form-raw": "ēċe",
+        "form-oe": "ēċe",
         "type": "adj",
         "gloss": "eternal",
         "tags": ["speculative"],
@@ -3444,8 +3446,10 @@
         "origin": "old-english"
     }, {
         "key": "ferd",
-        "form-raw": "ferd",
-        "form-raw-alt": ["fyrd"],
+        "form-oe": {
+            "main": "ferd",
+            "alt": ["fyrd"]
+        },
         "type": "noun",
         "senses": [
             {
@@ -3535,8 +3539,10 @@
         "notes": "OED indicates that Anglian form is represented with 'a' vowel in some ME texts, 'e' in others, while in Kentish dialect, represented in boyh OE and ME by 'e'. It's not clear to me which of those may have contributed more to the modern form, or why the Anglian 'æ' became 'e', but I use it as main form here on the assumption of Anglian's generally greater influence on modern standard English."
     }, {
         "key": "firgen",
-        "form-raw": "firgen",
-        "form-raw-alt": ["fyrgen", "firing", "firgin"],
+        "form-oe": {
+            "main": "firgen",
+            "alt": ["fyrgen", "firing", "firgin"]
+        },
         "type": "noun",
         "gloss": ["mountain", "mountain [forest]"],
         "tags": ["count", "concrete", "terrain", "speculative"],
@@ -3811,24 +3817,23 @@
         "form-oe": {
             "main": {
                 "form": "freġn|an",
-                "canon": [
-                    {
-                        "lemma": "frain",
-                        "past-participle": "frained"
-                    }, {
-                        "lemma": "frayn",
-                        "past-participle": "frayned"
-                    }
-                ]
+                "canon": ["frayn", "frain"]
             },
             "alt": ["friġn|an", "frīn|an"]
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": ["ask", "inquire"],
+        "senses": [
+            {
+                "gloss": "ask",
+                "tags": ["transitive", "obscure"]
+            }, {
+                "gloss": "inquire",
+                "tags": ["intransitive", "obscure"]
+            }
+        ],
         "tags": ["intransitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity"
+        "origin": "old-english"
     }, {
         "key": "fremian",
         "form-oe": "fremi|an",
@@ -3850,10 +3855,17 @@
         "key": "fremu",
         "form-oe": "fremu",
         "type": "noun",
-        "gloss": ["[advantage] or [benefit]", "[kindness] or good [deeds]"],
+        "senses": [
+            {
+                "gloss": ["[advantage] or [benefit]", "good [deeds]"],
+                "tags": ["mass", "abstract", "speculative"]
+            }, {
+                "gloss": "kindness",
+                "tags": ["mass", "abstract", "quality", "speculative"]
+            }
+        ],
         "tags": ["mass", "abstract"],
-        "origin": "old-english",
-        "notes": "TODO: Add 'quality' for 'kindness' gloss"
+        "origin": "old-english"
     }, {
         "key": "frēo",
         "form-oe": {
@@ -3879,6 +3891,7 @@
             "form": "frēos|an",
             "canon": {
                 "lemma": "freeze",
+                "past": "froze",
                 "past-participle": ["frozen"]
             }
         },
@@ -3895,8 +3908,15 @@
         },
         "type": "verb",
         "verb-class": 5,
-        "gloss": ["ask", "inquire", "question", "[seek] out"],
-        "tags": ["transitive", "obscure", "speculative"],
+        "senses": [
+            {
+                "gloss": ["ask", "question", "[seek] out"],
+                "tags": ["transitive", "obscure", "speculative", "homophonic"]
+            }, {
+                "gloss": "inquire",
+                "tags": ["intransitive", "obscure", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Evolution of pp. gives 'frine', but could be 'frain' by analogy with 'lain'"
     }, {
@@ -3908,9 +3928,13 @@
         "origin": "old-english"
     }, {
         "key": "frost",
-        "form-raw": "frost",
-        "form-raw-alt": "forst",
-        "form-canon": "frost",
+        "form-oe": {
+            "main": {
+                "form": "frost",
+                "canon": "frost"
+            },
+            "alt": "forst"
+        },
         "type": "noun",
         "gloss": "frost",
         "tags": ["mass", "concrete", "shiny"],
@@ -3962,10 +3986,7 @@
         "key": "fyllan",
         "form-oe": {
             "form": "fyll|an",
-            "canon": {
-                "lemma": "fill",
-                "past-participle": ["filled"]
-            }
+            "canon": "fill"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -4019,7 +4040,7 @@
         },
         "type": "adj",
         "gloss": "lascivious",
-        "tags": ["obscure"],
+        "tags": ["mind-state", "obscure"],
         "origin": "old-english"
     }, {
         "key": "galan",
@@ -4032,68 +4053,81 @@
         },
         "type": "verb",
         "verb-class": 6,
-        "gloss": ["sing", "[cry] or [scream]", "call", "enchant", "[cast] (of spells)"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "galdor-count",
-        "form-raw": "galdor",
-        "form-raw-alt": ["ġealdor"],
-        "type": "noun",
-        "gloss": ["enchantment", "magic [spell]"],
-        "tags": ["count", "abstract", "man-made"],
+        "senses": [
+            {
+                "gloss": ["call", "enchant", "[cast] (of spells)"],
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": "scream",
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "period": "middle",
+                "gloss": ["complain", "sing", "[cry] or [shout]"],
+                "tags": ["intransitive", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "ME has 'galder'"
+        "notes": "Wiktionary lists some definitions here as 'now chiefly dialectal', which implies they're still in use, but OED doesn't have any citations after the ME period. Wiktionary only cites a 1913 edition of Websters, which in turn cites 'court of love', which OED also cites and dates at c1480. idk if Wiktionary is failing to cite some other source for modern dialect usage, but assuming not based on the evidence I have."
     }, {
-        "key": "galdor-mass",
-        "form-raw": "galdor",
-        "form-raw-alt": ["ġealdor"],
+        "key": "galdor",
+        "form-oe": {
+            "main": "galdor",
+            "alt": ["ġealdor"]
+        },
         "type": "noun",
-        "gloss": ["magic", "sorcery"],
-        "tags": ["mass", "abstract", "man-made", "activity"],
+        "senses": [
+            {
+                "gloss": ["enchantment", "magic [spell]"],
+                "tags": ["count", "abstract", "man-made", "speculative"]
+            }, {
+                "gloss": ["magic", "sorcery"],
+                "tags": ["mass", "abstract", "man-made", "activity"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "ME has 'galder'"
+        "notes": "ME has 'galder', not sure why the vowel didn't change. But I only see one citation, in Layamon's Brut, so maybe there's some idiosyncracy."
     }, {
-        "key": "gamen-count",
+        "key": "gamen",
         "form-oe": {
             "form": "gamen",
             "canon": "game"
         },
         "type": "noun",
-        "gloss": "game",
-        "tags": ["count", "concrete", "man-made", "activity"],
+        "senses": [
+            {
+                "gloss": ["[mirth], [jest]"],
+                "tags": ["mass", "concrete", "activity"]
+            }, {
+                "gloss": ["[joy], [pleasure]"],
+                "tags": ["mass", "concrete", "mind-state"]
+            }, {
+                "period": "modern",
+                "gloss": "game",
+                "tags": ["count", "concrete", "man-made", "activity"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "gamen-mass",
+        "key": "gang",
         "form-oe": {
-            "form": "gamen",
-            "canon": "game"
+            "main": {
+                "form": "gang",
+                "canon": "gang"
+            },
+            "alt": ["gong", "ġeong"]
         },
         "type": "noun",
-        "gloss": "sport",
-        "gloss-alt": ["mirth", "jest"],
-        "tags": ["mass", "concrete", "activity", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[journey] or [passage]", "walk"],
+                "tags": ["count", "abstract", "activity"]
+            }, {
+                "gloss": ["gang", "[group] of travelers"],
+                "tags": ["count", "abstract", "grouping"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "TODO: Add gloss 'joy, pleasure' as mind-state"
-    }, {
-        "key": "gang-going",
-        "form-raw": "gang",
-        "form-raw-alt": ["gong", "ġeong"],
-        "form-canon": "gang",
-        "type": "noun",
-        "gloss": ["journey", "passage", "walk"],
-        "tags": ["count", "abstract", "activity", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "gang-group",
-        "form-raw": "gang",
-        "form-raw-alt": ["gong", "ġeong"],
-        "form-canon": "gang",
-        "type": "noun",
-        "gloss": ["gang", "[group] of travelers"],
-        "tags": ["count", "abstract", "grouping"],
-        "origin": "old-english",
-        "notes": "Straddles modern usage"
+        "notes": "'group' sense straddles modern usage"
     }, {
         "key": "gangan",
         "form-oe": {
@@ -4123,9 +4157,16 @@
             "canon": "ghost"
         },
         "type": "noun",
-        "gloss": "ghost",
-        "gloss-alt": ["spirit"],
-        "tags": ["count", "concrete", "person", "magical"],
+        "senses": [
+            {
+                "gloss": "spirit",
+                "tags": ["singleton", "abstract"]
+            }, {
+                "period": "modern",
+                "gloss": "ghost",
+                "tags": ["count", "concrete", "person", "magical"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "ġe-bǣran",
@@ -4133,6 +4174,7 @@
             "form": "ġe-bǣr|an",
             "canon": {
                 "lemma": "bear",
+                "past": "bore",
                 "past-participle": ["born", "borne"]
             }
         },
@@ -4150,25 +4192,29 @@
         "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "ġe-bed",
-        "form-raw": ["ġe-bed", "ġe-bæd"],
-        "form-canon": "bede",
+        "key": "ġe-bēd",
+        "form-oe": {
+            "form": "ġe-bēd",
+            "canon": "bead"
+        },
         "type": "noun",
-        "gloss": ["prayer", "request"],
-        "tags": ["count", "abstract"],
+        "senses": [
+            {
+                "gloss": ["prayer", "request"],
+                "tags": ["count", "abstract", "man-made"]
+            }, {
+                "gloss": "bead",
+                "tags": ["count", "concrete", "man-made"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "ġe-bēor",
-        "form-oe": {
-            "form": "ġe-bēor",
-            "canon": "beer"
-        },
+        "form-oe": "ġe-bēor",
         "type": "noun",
-        "gloss": ["drinking [companion]", "drinker"],
-        "gloss-alt": ["guest"],
-        "tags": ["count", "concrete", "living", "person", "speculative"],
-        "origin": "old-english",
-        "notes": "Canon-form based on 'bēor'"
+        "gloss": ["drinking [companion]", "guest"],
+        "tags": ["count", "concrete", "living", "person", "speculative", "homophonic"],
+        "origin": "old-english"
     }, {
         "key": "ġe-bind",
         "form-oe": "ġe-bind",
@@ -4181,10 +4227,16 @@
         "key": "ġe-bland",
         "form-oe": "ġe-bland",
         "type": "noun",
-        "gloss": "mixture",
-        "tags": ["count", "concrete", "man-made"],
-        "origin": "old-english",
-        "notes": "Other sense, but having fun with man-made for now"
+        "senses": [
+            {
+                "gloss": "mixture",
+                "tags": ["count", "concrete", "man-made"]
+            }, {
+                "gloss": "commotion",
+                "tags": ["count", "abstract", "activity"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "ġe-rōtsian",
         "form-oe": "ġe-rōtsi|an",
@@ -4235,17 +4287,29 @@
         "type": "verb",
         "verb-class": 1,
         "gloss": ["[go], [move]", "sail", "[proceed] or [advance]", "[come] to land, [reach] port (of a sea vessel)"],
-        "tags": ["intransitive", "motion", "speculative"],
+        "tags": ["intransitive", "motion", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "ġelp",
-        "form-raw": "ġelp",
-        "form-raw-alt": ["ġelp", "ġilp", "ġielp", "ġylp"],
+        "form-oe": {
+            "main": {
+                "form": "ġelp",
+                "dialect": "anglian"
+            },
+            "alt": ["ġielp", "ġylp"]
+        },
         "type": "noun",
-        "gloss": ["pride", "boastfulness", "vanity"],
-        "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
+        "senses": [
+            {
+                "gloss": ["pride", "boastfulness", "vanity"],
+                "tags": ["mass", "abstract", "quality", "speculative", "homophonic"]
+            }, {
+                "gloss": "boast",
+                "tags": ["count", "abstract", "man-made", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Chosen form is Anglian. Root is ancestor of modern 'yelp', but labeling speculative due to different meaning. Additional sense of 'a boast'."
+        "notes": "Related to modern 'yelp'"
     }, {
         "key": "ġemunan",
         "form-oe": "ġe-mun|an",
@@ -4256,14 +4320,25 @@
         "origin": "old-english"
     }, {
         "key": "ġēol",
-        "form-raw": "ġul",
-        "form-raw-alt": ["ġēol", "ġehhol", "ġēohol", "ġeohhol"],
-        "form-canon": "yule",
+        "form-oe": {
+            "main": {
+                "form": "ġul",
+                "canon": "yule"
+            },
+            "alt": ["ġēol", "ġehhol", "ġēohol", "ġeohhol"]
+        },
         "type": "noun",
-        "gloss": ["yule", "Christmas"],
-        "tags": ["count", "abstract", "bounded", "time", "time-of-year"],
-        "origin": "old-english",
-        "notes": "TODO: Add exception for 'ġeo' clusters (see Wiktionary for 'ġēol')"
+        "senses": [
+            {
+                "gloss": "winter [season]",
+                "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"]
+            }, {
+                "period": "modern",
+                "gloss": ["[Christmas], [yule]"],
+                "tags": ["count", "abstract", "bounded", "time", "time-of-year"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "ġeorn",
         "form-oe": "ġeorn",
@@ -4272,13 +4347,10 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
-        "key": "ġeornian",
+        "key": "ġeornan",
         "form-oe": {
-            "form": "ġeorni|an",
-            "canon": {
-                "lemma": "yearn",
-                "past-participle": ["yearned"]
-            }
+            "form": "ġeorn|an",
+            "canon": "yearn"
         },
         "type": "verb",
         "verb-class": "weak",
