@@ -4365,7 +4365,7 @@
         "gloss": ["pour", "[shed] (blood, tears, etc.)", "[cast] metal"],
         "tags": ["transitive", "motion", "speculative"],
         "origin": "old-english",
-        "notes": "Shows up as 'yet' in some modern cases, though I get 'yeet'"
+        "notes": "Shows up as 'yet' in some modern cases, but I can't find any reason why the vowel would be shortened. Something to do with the 'ġeo-' initial maybe."
     }, {
         "key": "ġesċeap",
         "form-oe": {
@@ -4432,35 +4432,52 @@
         "origin": "old-english"
     }, {
         "key": "ġield",
-        "form-raw": "ġield",
-        "form-raw-alt": ["ġeld", "ġild", "ġyld"],
+        "form-oe": [
+            {
+                "form": ["ġield", "ġyld"],
+                "dialect": "west-saxon",
+                "canon": "yield"
+            }, {
+                "form": "ġeld",
+                "dialect": "anglian"
+            }
+        ],
         "form-canon": "yield",
         "type": "noun",
-        "gloss": "product",
-        "gloss-alt": "payment",
+        "gloss": ["product", "payment"],
         "tags": ["mass", "abstract", "man-made"],
         "origin": "old-english"
     }, {
         "key": "ġieldan",
-        "form-raw": "ġield|an",
-        "form-raw-alt": ["ġeld|an", "ġyld|an"],
-        "form-canon": "yield",
-        "form-participle-canon": ["yielded"],
+        "form-oe": [
+            {
+                "form": ["ġield|an", "ġyld|an"],
+                "dialect": "west-saxon",
+                "canon": "yield"
+            }, {
+                "form": "ġeld|an",
+                "dialect": "anglian"
+            }
+        ],
         "type": "verb",
         "verb-class": 3,
-        "gloss": ["[give] or [give] up", "produce"],
-        "gloss-alt": "pay",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "pay",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": ["[give] or [give] up", "produce"],
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "ġiellan",
-        "form-oe": {
+        "form-oe": [{
             "form": "ġiell|an",
-            "canon": {
-                "lemma": "yell",
-                "past-participle": ["yelled"]
-            }
-        },
+            "canon": "yell"
+        }],
         "type": "verb",
         "verb-class": 3,
         "gloss": "yell",
@@ -4470,10 +4487,17 @@
         "key": "ġifl",
         "form-oe": "ġifl",
         "type": "noun",
-        "gloss": ["food", "meat"],
-        "tags": ["mass", "concrete", "material", "food", "speculative"],
+        "senses": [
+            {
+                "gloss": ["food", "meat"],
+                "tags": ["mass", "concrete", "material", "food", "speculative"]
+            }, {
+                "gloss": "[piece] of food",
+                "tags": ["count", "concrete", "food", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Only listed on Bosworth, so not 100% sure of 'g' palatalization. Needs bitransitivity for 'piece of food' gloss"
+        "notes": "Only listed on Bosworth, so not 100% sure of 'g' palatalization"
     }, {
         "key": "ġifol",
         "form-oe": "ġifol",
@@ -4483,10 +4507,13 @@
         "origin": "old-english"
     }, {
         "key": "gilte",
-        "form-oe": "gilte",
+        "form-oe": {
+            "form": "gilte",
+            "canon": "gilt"
+        },
         "type": "noun",
         "gloss": "young [sow]",
-        "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "speculative"],
+        "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "obscure"],
         "origin": "old-english"
     }, {
         "key": "ġīsl",
@@ -4507,8 +4534,15 @@
         "key": "ġiw",
         "form-raw": ["ġiw", "ġiow", "ġeow", "eow"],
         "type": "noun",
-        "gloss": "griffin",
-        "tags": ["count", "concrete", "living", "animal", "wild", "speculative"],
+        "senses": [
+            {
+                "gloss": "griffin",
+                "tags": ["count", "concrete", "living", "animal", "wild", "speculative"]
+            }, {
+                "gloss": "vulture",
+                "tags": ["count", "concrete", "living", "animal", "wild", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "glæd",
@@ -4517,8 +4551,16 @@
             "canon": "glad"
         },
         "type": "adj",
-        "gloss": "glad",
-        "gloss-alt": ["bright"],
+        "senses": [
+            {
+                "gloss": "[bright], [shining]",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "glad",
+                "tags": []
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "glæs",
@@ -4544,44 +4586,21 @@
         "key": "glōm",
         "form-oe": {
             "form": "glōm",
-            "canon": "gloom"
+            "canon": ["gloom", "gloam"]
         },
         "type": "noun",
-        "gloss": "[gloom], [darkness]",
-        "tags": ["count", "abstract"],
-        "origin": "old-english"
-    }, {
-        "key": "glome",
-        "form-oe": {
-            "form": "glom|e",
-            "canon": "gloam"
-        },
-        "type": "noun",
-        "gloss": "[gloom], [darkness]",
-        "tags": ["mass", "abstract", "obscure"],
+        "senses": [
+            {
+                "gloss": "twilight",
+                "tags": ["mass", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"]
+            }, {
+                "period": "modern",
+                "gloss": "[gloom], [darkness]",
+                "tags": ["count", "abstract"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
-    }, {
-        "key": "glome/time",
-        "form-oe": {
-            "form": "glom|e",
-            "canon": "gloam"
-        },
-        "type": "noun",
-        "gloss": "twilight",
-        "tags": ["mass", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day", "obscure"],
-        "origin": "old-english",
-        "notes": "Form is invented, simulating environment in compound 'glomung'. See OED for 'gloaming'"
-    }, {
-        "key": "glōm/time",
-        "form-oe": {
-            "form": "glōm",
-            "canon": "gloom"
-        },
-        "type": "noun",
-        "gloss": "twilight",
-        "tags": ["count", "abstract", "bounded", "luminous", "glooming", "time", "time-of-day"],
-        "origin": "old-english"
+        "notes": "'gloom' is the expected reflex; 'gloam' is anomalous. See OED for details."
     }, {
         "key": "gnīdan",
         "form-oe": "gnīd|an",
@@ -4597,18 +4616,15 @@
             "canon": "god"
         },
         "type": "noun",
-        "gloss": "god",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler", "divine"],
-        "origin": "old-english"
-    }, {
-        "key": "god-uncountable",
-        "form-oe": {
-            "form": "god",
-            "canon": "god"
-        },
-        "type": "noun",
-        "gloss": "god",
-        "tags": ["uncountable", "concrete", "living", "person", "gendered", "divine"],
+        "senses": [
+            {
+                "gloss": "god",
+                "tags": ["count", "concrete", "living", "person", "role", "ruler", "divine"]
+            }, {
+                "gloss": "god",
+                "tags": ["uncountable", "concrete", "living", "person", "gendered", "divine"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "gold",
@@ -4631,18 +4647,36 @@
         },
         "type": "verb",
         "verb-class": 6,
-        "gloss": ["dig", "[carve] or [cut]", "engrave", "[shape] by carving or chiseling", "[entomb], [bury]"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": "dig",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[entomb], [bury]",
+                "tags": ["transitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": ["[carve] or [cut]", "engrave", "[shape] by carving or chiseling"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "gremman",
-        "form-raw": ["gremm|an", "gremi|an"],
+        "key": "gremian",
+        "form-oe": ["gremi|an", "gremm|an"],
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[anger], [provoke]", "annoy"],
-        "tags": ["transitive", "speculative"],
+        "senses": [
+            {
+                "gloss": ["[anger], [provoke]", "annoy"],
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": ["[become] angry, [be] vexed"],
+                "tags": ["intransitive", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "This morph may combine two related words"
+        "notes": "Both 'gremian' and 'gremman' forms appear with the same meaning apparently"
     }, {
         "key": "grim",
         "form-oe": {
@@ -4650,32 +4684,35 @@
             "canon": "grim"
         },
         "type": "adj",
-        "gloss": ["[gloomy] or [forbidding]"],
-        "gloss-alt": ["fierce", "cruel", "terrible"],
-        "tags": ["count", "abstract"],
+        "senses": [
+            {
+                "gloss": ["[fierce], [cruel]", "terrible"],
+                "tags": []
+            }, {
+                "gloss": ["[gloomy] or [forbidding]"],
+                "tags": []
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "grīma",
-        "form-oe": {
-            "form": "grīma",
-            "canon": "grime"
-        },
+        "form-oe": "grīma",
         "type": "noun",
-        "gloss": "[mask] or [visor]",
-        "gloss-tool": ["[conceal] or [disguise]", "[cover], [protect]"],
-        "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative", "homophonic"],
-        "origin": "old-english"
-    }, {
-        "key": "grīma-creature",
-        "form-oe": {
-            "form": "grīma",
-            "canon": "grime"
-        },
-        "type": "noun",
-        "gloss": ["apparition", "goblin", "nightmare"],
-        "tags": ["count", "concrete", "living", "magical", "speculative"],
+        "senses": [
+            {
+                "gloss": "[mask] or [visor]",
+                "gloss-tool": ["[conceal] or [disguise]", "[cover], [protect]"],
+                "tags": ["count", "concrete", "man-made", "garment", "tool", "speculative", "homophonic"]
+            }, {
+                "gloss": ["apparition", "goblin"],
+                "tags": ["count", "concrete", "living", "magical", "speculative", "homophonic"]
+            }, {
+                "gloss": "nightmare",
+                "tags": ["count", "abstract", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Fix tags with nightmare with senses"
+        "notes": "Probably cognate with the modern word 'grime' as in soot or filth. Wiktionary lists this as the direct origin of the modern word, but OED and Etymonline both indicate a Low German source, and OED doesn't show usages before 1612."
     }, {
         "key": "grimman",
         "form-oe": {
@@ -4687,24 +4724,30 @@
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": ["[be] angry", "[look] fierce"],
-        "gloss-alt": ["rage", "roar", "clamor"],
-        "tags": ["intransitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[be] angry", "[look] fierce"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["rage", "roar", "clamor"],
+                "tags": ["intransitive", "obscure"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "This morph is a bit of a mishmash — alt. glosses reflect OE root, while main gloss reflects MnE 'grim', which OED has as a borrowing from a Dutch cognate. Leaving it for evocativeness."
+        "notes": "This morph is a bit of a mishmash — 'rage' glosses reflect OE root, while 'be angry' glosses reflects MnE 'grim', which OED has as a borrowing from a Dutch cognate. Leaving it for evocativeness."
     }, {
-        "key": "griþ-count",
+        "key": "griþ",
         "form-oe": "griþ",
         "type": "noun",
-        "gloss": ["[guarantee] of safety", "[place] of safety"],
-        "tags": ["count", "abstract", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "griþ-mass",
-        "form-oe": "griþ",
-        "type": "noun",
-        "gloss": ["protection", "mercy"],
-        "tags": ["mass", "abstract", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[guarantee] of safety", "[place] of safety"],
+                "tags": ["count", "abstract", "obscure"]
+            }, {
+                "gloss": ["protection", "mercy"],
+                "tags": ["mass", "abstract", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "grornian",
