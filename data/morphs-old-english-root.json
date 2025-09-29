@@ -4755,14 +4755,7 @@
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["mourn", "murmur"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "gryre",
-        "form-oe": "gryre",
-        "type": "noun",
-        "gloss": "[fright], [terror]",
-        "tags": ["mass", "abstract", "mind-state", "speculative"],
+        "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "gryre-adj",
@@ -4772,17 +4765,31 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
+        "key": "gryre-n",
+        "form-oe": "gryre",
+        "type": "noun",
+        "gloss": "[fright], [terror]",
+        "tags": ["mass", "abstract", "mind-state", "speculative"],
+        "origin": "old-english"
+    }, {
         "key": "guma",
         "form-oe": {
             "form": "guma",
             "canon": "groom"
         },
         "type": "noun",
-        "gloss": "groom",
-        "gloss-alt": ["man"],
-        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "senses": [
+            {
+                "gloss": "man",
+                "tags": ["count", "concrete", "living", "person", "gendered"]
+            }, {
+                "period": "modern",
+                "gloss": "groom",
+                "tags": ["count", "concrete", "living", "person", "gendered"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Persists as 'gome' in northern dialect. Generated forms resemble ME."
+        "notes": "TODO: Multiple canon dialects. Persists as 'gome' in northern dialect. Generated forms resemble ME."
     }, {
         "key": "gūþ",
         "form-oe": "gūþ",
@@ -4792,7 +4799,10 @@
         "origin": "old-english"
     }, {
         "key": "ġyċċe",
-        "form-oe": "ġyċċe",
+        "form-oe": {
+            "form": "ġyċċe",
+            "canon": "itch"
+        },
         "type": "noun",
         "gloss": "itch",
         "tags": ["count", "abstract", "body-state"],
@@ -4811,7 +4821,8 @@
         "verb-class": "weak",
         "gloss": "[commit] (of sins)",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Appears to have been used in this sense spelled as 'guilt', but leaving it canonless for now with this sense"
     }, {
         "key": "hæfen",
         "form-oe": {
@@ -4824,18 +4835,18 @@
         "tags": ["count", "concrete", "terrain", "place"],
         "origin": "old-english"
     }, {
-        "key": "hæft-person",
+        "key": "hæft",
         "form-oe": "hæft",
         "type": "noun",
-        "gloss": "[captive] or [prisoner]",
-        "tags": ["count", "concrete", "living", "person", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "hæft-state",
-        "form-oe": "hæft",
-        "type": "noun",
-        "gloss": "[captivity], [imprisonment]",
-        "tags": ["mass", "abstract", "speculative"],
+        "senses": [
+            {
+                "gloss": "[captivity], [imprisonment]",
+                "tags": ["mass", "abstract", "speculative"]
+            }, {
+                "gloss": "[captive] or [prisoner]",
+                "tags": ["count", "concrete", "living", "person", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hǣman",
@@ -4845,7 +4856,7 @@
         "gloss": ["[copulate] with", "[cohabitate] with"],
         "tags": ["transitive", "sexual", "speculative"],
         "origin": "old-english",
-        "notes": "Transitivity is going to make weird forms, consider an obj-prep system to insert the 'with'"
+        "notes": "TODO: obj-prep. Transitivity is going to make weird forms until there's a way to insert the 'with' correctly."
     }, {
         "key": "hǣmed",
         "form-oe": "hǣmed",
@@ -4857,33 +4868,37 @@
     }, {
         "key": "hænep",
         "form-oe": {
-            "form": "hænep",
-            "canon": "hemp"
+            "main": {
+                "form": "henep",
+                "canon": "hemp"
+            },
+            "alt": ["hænep"]
         },
         "type": "noun",
         "gloss": "hemp",
         "tags": ["mass", "concrete", "living", "plant", "material"],
-        "origin": "old-english",
-        "notes": "Alternate form 'henep'. Assimilated to 'hemp' in ME"
-    }, {
-        "key": "hærfest/activity",
-        "form-oe": {
-            "form": "hærfest",
-            "canon": "harvest"
-        },
-        "type": "noun",
-        "gloss": "harvest",
-        "tags": ["count", "abstract", "activity"],
         "origin": "old-english"
     }, {
-        "key": "hærfest/season",
+        "key": "hærfest",
         "form-oe": {
             "form": "hærfest",
             "canon": "harvest"
         },
         "type": "noun",
-        "gloss": ["harvest", "autumn"],
-        "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"],
+        "senses": [
+            {
+                "gloss": "autumn",
+                "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"]
+            }, {
+                "period": "modern",
+                "gloss": "harvest [time]",
+                "tags": ["singleton", "abstract", "bounded", "time", "time-of-year"]
+            }, {
+                "period": "modern",
+                "gloss": "harvest",
+                "tags": ["count", "abstract", "activity"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hæsel",
@@ -4923,38 +4938,57 @@
         },
         "type": "adj",
         "gloss": ["whole", "healthy"],
-        "origin": "old-english",
-        "notes": "'w' added to disambiguate from 'hole'"
+        "origin": "old-english"
     }, {
         "key": "haldan",
         "form-oe": {
-            "form": "hald|an",
-            "canon": {
-                "lemma": "hold",
-                "past-participle": ["held"]
-            }
+            "main": {
+                "form": "hald|an",
+                "canon": {
+                    "lemma": "hold",
+                    "past": "held",
+                    "past-participle": ["held"]
+                }
+            },
+            "alt": [{
+                "form": "heald|an",
+                "dialect": "west-saxon"
+            }]
         },
         "type": "verb",
         "verb-class": 7,
         "gloss": "hold",
         "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Form 'haldan' is Anglian. WS had 'healdan'"
+        "origin": "old-english"
     }, {
         "key": "hals-OE",
-        "form-raw": ["hals", "heals"],
+        "form-oe": ["hals", "heals"],
         "type": "noun",
         "gloss": "neck",
         "tags": ["count", "concrete", "living", "bodypart", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OED has this appearing as 'hause' in some northern dialects. Forms fit Anglian/WS pattern, but don't see them listed as such in sources"
     }, {
         "key": "halsian",
-        "form-oe": "hals|an",
+        "form-oe": {
+            "main": ["halsi|an", "healsi|an"],
+            "alt": ["hālsi|an", "hēalsi|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[augur], [divine]", "invoke", "exorcise", "conjure", "greet"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": "[augur], [divine]",
+                "tags": ["transitive", "speculative"],
+                "notes": "OE only"
+            }, {
+                "period": "middle",
+                "gloss": ["[call] upon, [invoke]", "[exorcise] or [adjure]", "[implore], [entreat]"],
+                "tags": ["transitive", "speculative"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Bosworth and Hall's show a long vowel, while OED indicates a later short-vowel form as origin of ME 'halse'. Forms fit Anglian/WS pattern, but don't see them listed as such in sources"
     }, {
         "key": "hām",
         "form-oe": {
@@ -4962,18 +4996,15 @@
             "canon": "home"
         },
         "type": "noun",
-        "gloss": "home",
-        "tags": ["uncountable", "concrete", "place"],
-        "origin": "old-english"
-    }, {
-        "key": "hām/count",
-        "form-oe": {
-            "form": "hām",
-            "canon": "home"
-        },
-        "type": "noun",
-        "gloss": "home",
-        "tags": ["count", "concrete"],
+        "senses": [
+            {
+                "gloss": "home",
+                "tags": ["count", "concrete"]
+            }, {
+                "gloss": "home",
+                "tags": ["uncountable", "concrete", "place"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hana",
@@ -4983,33 +5014,24 @@
         "tags": ["count", "concrete", "living", "animal", "tame", "gendered", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "hātan-intransitive",
+        "key": "hātan",
         "form-oe": {
-            "form": "hāt|an",
-            "canon": {
-                "lemma": "hote",
-                "past-participle": ["hoten"]
-            }
+            "infinitive": "hāt|an",
+            "past": "hēht"
         },
         "type": "verb",
         "verb-class": 7,
-        "gloss": "[be] named",
-        "tags": ["intransitive", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "hātan-transitive",
-        "form-oe": {
-            "form": "hāt|an",
-            "canon": {
-                "lemma": "hote",
-                "past-participle": ["hoten"]
+        "senses": [
+            {
+                "gloss": "[be] named",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["command", "name"],
+                "tags": ["transitive", "obscure"]
             }
-        },
-        "type": "verb",
-        "verb-class": 7,
-        "gloss": ["command", "name"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english"
+        ],
+        "origin": "old-english",
+        "notes": "Part of a rare class of verbs forming past tense through reduplication. Has MnE descendent in dialect 'hight', but this form shows irregular leveling to past tense, so I'm leaving canonless. OED indicates vowel length of 'heht' as uncertain; following Wiktionary in marking it long, which also produces the attested modern form 'hight'"
     }, {
         "key": "heard",
         "form-oe": {
@@ -5039,7 +5061,7 @@
             "form": "hebb|an",
             "canon": {
                 "lemma": "heave",
-                "past-participle": ["hoven", "hove", "heaved", "heft"]
+                "past-participle": ["heaved", "hove"]
             }
         },
         "type": "verb",
@@ -5054,28 +5076,26 @@
             "canon": "hedge"
         },
         "type": "noun",
-        "gloss": "hedge",
-        "tags": ["count", "concrete"],
-        "origin": "old-english"
-    }, {
-        "key": "heċġ-fence",
-        "form-oe": {
-            "form": "heċġ",
-            "canon": "hedge"
-        },
-        "type": "noun",
-        "gloss": "fence",
-        "tags": ["count", "concrete", "man-made"],
+        "senses": [
+            {
+                "gloss": "fence",
+                "tags": ["count", "concrete", "man-made"]
+            }, {
+                "period": "modern",
+                "gloss": "hedge",
+                "tags": ["count", "concrete", "living", "plant"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "helan",
-        "form-raw": ["hel|an"],
+        "form-oe": "hel|an",
         "type": "verb",
         "verb-class": 4,
         "gloss": ["[hide], [conceal]", "[keep] secret", "cover"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
-        "notes": "Usage in later times merged with OE root 'helian', with very similar meaning but different verb class"
+        "notes": "Usage in later times merged with OE root 'helian', with similar meaning but different verb class"
     }, {
         "key": "helle",
         "form-oe": {
@@ -5088,9 +5108,13 @@
         "origin": "old-english"
     }, {
         "key": "henn",
-        "form-raw": "henn",
-        "form-raw-alt": ["hænn"],
-        "form-canon": "hen",
+        "form-oe": {
+            "main": {
+                "form": "henn",
+                "canon": "hen"
+            },
+            "alt": ["hænn"]
+        },
         "type": "noun",
         "gloss": "hen",
         "tags": ["count", "concrete", "living", "animal", "tame", "gendered"],
@@ -5102,29 +5126,29 @@
             "canon": "heaven"
         },
         "type": "noun",
-        "gloss": "heaven",
-        "tags": ["mass", "concrete", "place"],
-        "origin": "old-english"
-    }, {
-        "key": "heofon-singleton",
-        "form-oe": {
-            "form": "heofon",
-            "canon": "heaven"
-        },
-        "type": "noun",
-        "gloss": "heavens",
-        "tags": ["singleton", "concrete", "place"],
+        "senses": [
+            {
+                "gloss": "heaven",
+                "tags": ["mass", "concrete", "place"]
+            }, {
+                "gloss": "heavens",
+                "tags": ["singleton", "concrete", "place"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "heord",
-        "form-raw": "heord",
-        "form-raw-alt": ["hierd"],
-        "form-canon": "herd",
+        "form-oe": {
+            "main": {
+                "form": "heord",
+                "canon": "herd"
+            },
+            "alt": ["hierd"]
+        },
         "type": "noun",
         "gloss": "herd",
         "tags": ["count", "abstract", "living", "grouping"],
-        "origin": "old-english",
-        "notes": "Not sure how we get the modern vowel."
+        "origin": "old-english"
     }, {
         "key": "heoru",
         "form-oe": "heoru",
@@ -5142,7 +5166,8 @@
         "type": "noun",
         "gloss": "hatred",
         "tags": ["mass", "abstract", "mind-state"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Vowel altered to match verb form, from 'hatian'"
     }, {
         "key": "hladan",
         "form-oe": {
@@ -5168,9 +5193,16 @@
         },
         "type": "verb",
         "verb-class": 7,
-        "gloss": "leap",
-        "gloss-alt": ["dance"],
-        "tags": ["intransitive", "motion"],
+        "senses": [
+            {
+                "gloss": "dance",
+                "tags": ["intransitive", "motion"]
+            }, {
+                "period": "modern",
+                "gloss": "leap",
+                "tags": ["intransitive", "motion"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hlēow",
