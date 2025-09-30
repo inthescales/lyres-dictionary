@@ -5211,35 +5211,47 @@
             "canon": "lew"
         },
         "type": "adj",
-        "gloss": "[warm] or [sunny]",
-        "tags": ["obscure"],
+        "senses": [
+            {
+                "gloss": "[warm], [sunny]",
+                "tags": ["obscure"]
+            }, {
+                "period": "modern",
+                "gloss": ["lukewarm", "[sheltered] from wind"],
+                "tags": ["obscure"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Chiefly Northern in modern usage"
     }, {
         "key": "hlēowþ",
         "form-oe": {
             "form": "hlēow+þ",
-            "canon": "lewth"
+            "canon": {
+                "form": "lewth",
+                "dialect-range": "southern"
+            }
         },
         "type": "noun",
-        "gloss": "[shelter], [protection]",
+        "gloss": ["warmth", "shelter"],
         "tags": ["count", "abstract", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Dialect is my guess based on citations in OED"
     }, {
         "key": "hlin",
         "form-oe": "hlin",
         "type": "noun",
         "gloss": "maple [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "From Norse 'hlynr'. Bosworth also has 'hlyn'"
     }, {
         "key": "hlīsa",
         "form-oe": "hlīsa",
         "type": "noun",
-        "gloss": ["fame", "glory"],
+        "gloss": ["[fame], [glory]"],
         "tags": ["mass", "concrete", "quality", "speculative"],
-        "origin": "old-english",
-        "notes": "A few similar sense I'm leaving out"
+        "origin": "old-english"
     }, {
         "key": "hlūd",
         "form-oe": {
@@ -5252,11 +5264,18 @@
         "notes": "Original meaning also included 'famous'"
     }, {
         "key": "hlynn",
-        "form-raw": "hlynn",
-        "form-raw-alt": ["hlyn", "hlin"],
+        "form-oe": "hlynn",
         "type": "noun",
-        "gloss": ["[sound], [noise]"],
-        "tags": ["mass", "abstract", "homophonic"],
+        "senses": [
+            {
+                "gloss": ["[sound], [noise]"],
+                "tags": ["mass", "abstract", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "waterfall",
+                "tags": ["count", "concrete", "terrain", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hlynsian",
@@ -5278,10 +5297,7 @@
         "key": "hogian",
         "form-oe": {
             "form": "hogi|an",
-            "canon": {
-                "lemma": "how",
-                "past-participle": ["howed"]
-            }
+            "canon": "how"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -5301,18 +5317,21 @@
         "origin": "old-english"
     }, {
         "key": "hōh",
-        "form-raw": "hōh",
-        "form-raw-alt": ["hō", "hōg"],
-        "form-canon": "hough",
+        "form-oe": {
+            "form": "hōh",
+            "canon": "hough"
+        },
         "type": "noun",
         "gloss": "heel",
         "tags": ["count", "concrete", "bodypart", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OED has some notes about form history. Is in use in Scotland with a different but probably related sense, which I omit for now."
     }, {
         "key": "holen",
-        "form-raw": "holen",
-        "form-raw-alt": ["holeġn"],
-        "form-canon": "hollin",
+        "form-oe": {
+            "form": "holen",
+            "canon": "hollin"
+        },
         "type": "noun",
         "gloss": "holly",
         "tags": ["mass", "concrete", "living", "plant", "obscure"],
@@ -5334,6 +5353,7 @@
             "form": "h|ōn",
             "canon": {
                 "lemma": "hang",
+                "past": "hung",
                 "past-participle": ["hung", "hanged"]
             }
         },
@@ -5349,18 +5369,15 @@
             "canon": "horn"
         },
         "type": "noun",
-        "gloss": "horn",
-        "tags": ["count", "concrete", "bodypart"],
-        "origin": "old-english"
-    }, {
-        "key": "horn-mass",
-        "form-oe": {
-            "form": "horn",
-            "canon": "horn"
-        },
-        "type": "noun",
-        "gloss": "horn",
-        "tags": ["mass", "concrete", "material"],
+        "senses": [
+            {
+                "gloss": "horn",
+                "tags": ["count", "concrete", "bodypart"]
+            }, {
+                "gloss": "horn",
+                "tags": ["mass", "concrete", "material"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hors",
@@ -5370,18 +5387,18 @@
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal"],
         "origin": "old-english"
     }, {
-        "key": "hoþma-count",
+        "key": "hoþma",
         "form-oe": "hoþma",
         "type": "noun",
-        "gloss": ["covering", "cloud"],
-        "tags": ["count", "concrete", "glooming", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "hoþma-mass",
-        "form-oe": "hoþma",
-        "type": "noun",
-        "gloss": ["darkness"],
-        "tags": ["mass", "concrete", "glooming", "speculative"],
+        "senses": [
+            {
+                "gloss": ["covering", "cloud"],
+                "tags": ["count", "concrete", "glooming", "speculative"]
+            }, {
+                "gloss": ["darkness"],
+                "tags": ["mass", "concrete", "glooming", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hræċan",
@@ -5390,32 +5407,34 @@
                 "infinitive": "hræċ|an",
                 "past-participle": "hrǣht"
             },
-            "canon": {
-                "lemma": "retch",
-                "past-participle": ["retched"]
-            }
+            "canon": "retch"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "retch",
-        "gloss-alt": ["[clear] one's throat", "spit"],
-        "tags": ["intransitive"],
+        "senses": [
+            {
+                "gloss": ["[clear] one's throat", "spit"],
+                "tags": ["intransitive"]
+            }, {
+                "period": "modern",
+                "gloss": "retch",
+                "tags": ["intransitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "hrace-body",
+        "key": "hrace",
         "form-raw": "hrace",
-        "form-raw-alt": ["hræce", "hreace", "hræċe"],
         "type": "noun",
-        "gloss": "[throat], [gullet]",
-        "tags": ["count", "concrete", "bodypart", "speculative", "homophonic"],
-        "origin": "old-english"
-    }, {
-        "key": "hrace-gorge",
-        "form-raw": "hrace",
-        "form-raw-alt": ["hræce", "hreace", "hræċe"],
-        "type": "noun",
-        "gloss": "gorge",
-        "tags": ["count", "concrete", "terrain", "speculative", "homophonic"],
+        "senses": [
+            {
+                "gloss": "[throat], [gullet]",
+                "tags": ["count", "concrete", "bodypart", "bodypart-single", "speculative", "homophonic"]
+            }, {
+                "gloss": "gorge",
+                "tags": ["count", "concrete", "terrain", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hrafn",
@@ -5437,14 +5456,21 @@
         "origin": "old-english"
     }, {
         "key": "hrēman",
-        "form-raw": "hrēm|an",
-        "form-raw-alt": ["hrīem|an", "hrȳm|an", "hrīm|an"],
+        "form-oe": {
+            "main": {
+                "form": "hrēm|an",
+                "dialect": "anglian"
+            },
+            "alt": [{
+                "form": "hrīeman",
+                "dialect": "west-saxon"
+            }]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["shout", "lament", "boast"],
         "tags": ["intransitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian/Kentish. 'hrīeman' EWS, 'hrȳman' and 'hrīman' LWS."
+        "origin": "old-english"
     }, {
         "key": "hrēod",
         "form-oe": {
@@ -5455,7 +5481,7 @@
         "gloss": "reed",
         "tags": ["count", "concrete", "living", "plant"],
         "origin": "old-english",
-        "notes": "Alternate form 'hrēad'"
+        "notes": "Anglian form 'hrēad'"
     }, {
         "key": "hrēosan",
         "form-oe": "hrēos|an",
@@ -5471,9 +5497,15 @@
             "canon": "rue"
         },
         "type": "noun",
-        "gloss": "regret",
-        "gloss-alt": ["sorrow", "pity"],
-        "tags": ["mass", "abstract", "mind-state", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[sorrow], [pity]"],
+                "tags": ["mass", "abstract", "mind-state", "obscure"]
+            }, {
+                "gloss": "regret",
+                "tags": ["mass", "abstract", "mind-state", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hrēowan",
@@ -5505,8 +5537,10 @@
         "origin": "old-english"
     }, {
         "key": "hrūtan",
-        "form-raw": "hrūt|an",
-        "form-participle-canon": ["routed", "rowted"],
+        "form-oe": {
+            "form": "hrūt|an",
+            "canon": ["rout", "rowt"]
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["snore", "[snort], [grunt]", "grumble", "[roar] or [rumble]"],
@@ -5516,14 +5550,17 @@
     }, {
         "key": "hrysċ",
         "form-oe": {
-            "form": "hrysċ",
-            "canon": "rush"
+            "main": {
+                "form": "hrysċ",
+                "canon": "rush"
+            },
+            "alt": ["risċ", "rix"]
         },
         "type": "noun",
         "gloss": "rush",
         "tags": ["count", "concrete", "plant"],
         "origin": "old-english",
-        "notes": "Form attested in late OE, but forms like 'risċ' seem to be more common in recorded sources."
+        "notes": "See OED for notes on form"
     }, {
         "key": "hulu",
         "form-oe": {
@@ -5531,9 +5568,16 @@
             "canon": "hull"
         },
         "type": "noun",
-        "gloss": "[husk] or [shell]",
-        "gloss-alt": ["covering", "chrysalis", "garment"],
-        "tags": ["count", "concrete", "garment"],
+        "senses": [
+            {
+                "gloss": ["covering", "chrysalis", "garment"],
+                "tags": ["count", "concrete", "garment"]
+            }, {
+                "period": "modern",
+                "gloss": "[husk] or [shell]",
+                "tags": ["count", "concrete", "garment"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "hund",
@@ -5550,10 +5594,7 @@
         "key": "huntian",
         "form-oe": {
             "form": "hunti|an",
-            "canon": {
-                "lemma": "hunt",
-                "past-participle": ["hunted"]
-            }
+            "canon": "hunt"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -5610,8 +5651,10 @@
         "origin": "old-english"
     }, {
         "key": "hwirfan",
-        "form-raw": "hwirf|an",
-        "form-raw-alt": ["hwærf|an", "hwerf|an", "hwearf|an", "hwyrf|an"],
+        "form-oe": {
+            "main": "hwirf|an",
+            "alt": ["hwærf|an", "hwerf|an", "hwearf|an", "hwyrf|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[turn] or [revolve]", "[move] about"],
@@ -5641,6 +5684,7 @@
             "form": "hȳd|an",
             "canon": {
                 "lemma": "hide",
+                "past": "hid",
                 "past-participle": ["hidden"]
             }
         },
@@ -5665,15 +5709,20 @@
         "origin": "old-english"
     }, {
         "key": "hyll",
-        "form-oe": "hyll",
+        "form-oe": {
+            "form": "hyll",
+            "canon": "hill"
+        },
         "type": "noun",
         "gloss": "hill",
         "tags": ["count", "concrete", "terrain"],
         "origin": "old-english"
     }, {
         "key": "hyllan",
-        "form-raw": ["hyll|an"],
-        "form-participle-canon": ["hilled"],
+        "form-oe": {
+            "form": "hyll|an",
+            "canon": "hill"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "cover",
@@ -5681,7 +5730,10 @@
         "origin": "old-english"
     }, {
         "key": "hysċan",
-        "form-raw": ["hysċ|an", "hyx|an", "hyh|an"],
+        "form-oe": {
+            "main": "hysċ|an",
+            "alt": "hyx|an"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[mock] or [deride]",
@@ -5694,15 +5746,15 @@
             "canon": "idle"
         },
         "type": "adj",
-        "gloss": "vain, useless",
+        "gloss": ["vain, useless", "inactive"],
         "origin": "old-english",
         "notes": "OE sense 'empty', MnE sense 'inactive'"
     }, {
         "key": "īdlian",
-        "form-raw": "īdl|an",
-        "form-raw-alt": ["ȳdli|an"],
-        "form-canon": "idle",
-        "form-participle-canon": ["idled"],
+        "form-oe": {
+            "form": "īdl|an",
+            "canon": "idle"
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[be] idle",
@@ -5713,12 +5765,14 @@
         "form-oe": "iġil",
         "type": "noun",
         "gloss": "porcupine",
-        "tags": ["count", "concrete", "living", "animal", "wild", "mammal"],
+        "tags": ["count", "concrete", "living", "animal", "wild", "mammal", "speculative"],
         "origin": "old-english"
     }, {
         "key": "ilfiġ",
-        "form-raw": "ilf+iġ",
-        "form-raw-alt": ["ylf+iġ"],
+        "form-oe": {
+            "main": "ilf+iġ",
+            "alt": ["ylf+iġ"]
+        },
         "type": "adj",
         "gloss": "[mad], [frantic]",
         "tags": ["speculative"],
@@ -5759,8 +5813,7 @@
         "form-oe": "lǣċ|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "play",
-        "gloss-alt": ["[spring], [leap]", "[move] quickly", "flicker"],
+        "gloss": ["play", "[spring], [leap]", "[move] quickly", "flicker"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
@@ -5779,46 +5832,51 @@
             "form": "lǣd|an",
             "canon": {
                 "lemma": "lead",
-                "past-participle": ["lead"]
+                "past": "led",
+                "past-participle": ["led"]
             }
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "lead",
-        "gloss-alt": ["[bring] forth", "produce"],
-        "tags": ["transitive", "motion"],
+        "senses": [
+            {
+                "gloss": ["[bring] forth", "produce"],
+                "tags": ["transitive", "motion"]
+            }, {
+                "gloss": "lead",
+                "period": "modern",
+                "tags": ["transitive", "motion"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "lǣden-language",
-        "form-raw": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en", "lid+en", "led+en", "lēd"],
+        "key": "lǣden",
+        "form-oe": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en", "lid+en", "led+en", "lēd"],
         "type": "noun",
-        "gloss": ["[speech] of a person or class of persons", "[language] of a people or nation", "[language] of birds"],
-        "tags": ["singleton", "concrete"],
+        "senses": [
+            {
+                "gloss": ["[speech] of a person or class of persons", "[language] of a people or nation", "[language] of birds"],
+                "tags": ["singleton", "concrete"]
+            }, {
+                "gloss": "[noise], [chatter]",
+                "tags": ["mass", "abstract"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Short vowel forms and forms without '-en' are FAKE, intended to produce the occasionally-attested forms 'lidden', 'ledden', and 'leed'. Similar for +'s"
     }, {
-        "key": "lǣden-noise",
-        "form-raw": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en", "lid+en", "led+en"],
-        "type": "noun",
-        "gloss": "[noise], [chatter]",
-        "tags": ["mass", "abstract"],
-        "origin": "old-english",
-        "notes": "Short vowel forms are FAKE, intended to produce the occasionally-attested forms 'lidden', 'ledden'"
-    }, {
         "key": "lǣden-Latin",
-        "form-raw": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en"],
+        "form-oe": ["lǣd+en", "lēd+en", "lȳd+en", "lēod+en", "lid+en", "led+en"],
         "type": "noun",
         "gloss": "latin [language]",
         "tags": ["singleton", "concrete"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Leaving separate for other morph as I'm excluding forms without +en here. Same not about short-vowel forms applies"
     }, {
         "key": "lǣran",
         "form-oe": {
             "form": "lǣr|an",
-            "canon": {
-                "lemma": "lear",
-                "past-participle": ["leared"]
-            }
+            "canon": "lear"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -5827,19 +5885,24 @@
         "origin": "old-english"
     }, {
         "key": "læt",
-        "form-raw": "læte",
-        "form-raw-alt": "læt",
-        "form-canon": "late",
+        "form-oe": {
+            "form": {
+                "lemma": "læte",
+                "oblique": "lǣt|e"
+            },
+            "canon": "late"
+        },
         "type": "adj",
         "gloss": "late",
         "origin": "old-english",
-        "notes": "Modern word 'late' based in inflected form, thus having lengthened 'a'."
+        "notes": "Modern form based on inflected form, thus lenthening the 'a'"
     }, {
         "key": "lǣtan",
         "form-oe": {
             "form": "lǣt|an",
             "canon": {
                 "lemma": "let",
+                "past": "let",
                 "past-participle": ["let"]
             }
         },
@@ -5860,20 +5923,17 @@
         "form-oe": "lāc|an",
         "type": "verb",
         "verb-class": 7,
-        "gloss": "play",
-        "gloss-alt": ["play", "sing", "[make] waving movements"],
-        "tags": ["intransitive", "speculative"],
+        "senses": [
+            {
+                "gloss": ["play", "sing", "[make] waving movements", "[fence] (with swords)"],
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "gloss": "fight",
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Attested Northern form 'lake'"
-    }, {
-        "key": "lācan-transitive",
-        "form-oe": "lāc|an",
-        "type": "verb",
-        "verb-class": 7,
-        "gloss": ["fight", "[fence] (with swords)"],
-        "tags": ["intransitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Attested Northern form 'lake'"
+        "notes": "Attested Northern form 'lake'; leaving canonless due to form difference"
     }, {
         "key": "lācnian",
         "form-oe": "lācni|an",
@@ -5899,9 +5959,16 @@
             "canon": "loath"
         },
         "type": "adj",
-        "gloss": "[unwilling] or [disinclined]",
-        "gloss-alt": "hated",
-        "tags": ["obscure"],
+        "senses": [
+            {
+                "gloss": "hated",
+                "tags": []
+            }, {
+                "period": "modern",
+                "gloss": "[unwilling] or [disinclined]",
+                "tags": []
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "lēad",
@@ -5914,6 +5981,14 @@
         "tags": ["mass", "concrete", "material", "metal"],
         "origin": "old-english"
     }, {
+        "key": "lēan",
+        "form-oe": "lē|an",
+        "type": "verb",
+        "verb-class": 1,
+        "gloss": ["[blame], [fault]", "reproach"],
+        "tags": ["transitive", "speculative", "homophonic"],
+        "origin": "old-english"
+    }, {
         "key": "lēas-adj",
         "form-oe": "lēas",
         "type": "adj",
@@ -5921,7 +5996,7 @@
         "tags": ["speculative", "homophonic"],
         "origin": "old-english"
     }, {
-        "key": "lēas-noun",
+        "key": "lēas-n",
         "form-oe": "lēas",
         "type": "noun",
         "gloss": "lie",
@@ -5931,10 +6006,7 @@
         "key": "lēasian",
         "form-oe": {
             "form": "lēasi|an",
-            "canon": {
-                "lemma": "lease",
-                "past-participle": ["leased"]
-            }
+            "canon": "lease"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -5948,6 +6020,7 @@
             "form": "leċġ|an",
             "canon": {
                 "lemma": "lay",
+                "past": "lay",
                 "past-participle": ["lain", "laid", "layed"]
             }
         },
@@ -5963,16 +6036,27 @@
             "canon": "lair"
         },
         "type": "noun",
-        "gloss": "lair",
-        "gloss-alt": ["deathbed", "grave", "resting [place]"],
-        "tags": ["count", "concrete", "terrain", "place"],
-        "origin": "old-english",
-        "notes": "Also OE sense 'couch, bed'"
+        "senses": [
+            {
+                "gloss": ["deathbed", "grave", "resting [place]"],
+                "tags": ["count", "concrete", "terrain", "place"]
+            }, {
+                "gloss": "[couch], [bed]",
+                "gloss-tool": "[lie] or [put] in bed",
+                "tags": ["count", "concrete", "man-made", "tool", "place"]
+            }, {
+                "period": "modern",
+                "gloss": "[resting] place",
+                "tags": ["count", "concrete", "terrain", "place"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "lēof",
-        "form-raw": "lēof",
-        "form-raw-alt": ["leaf"],
-        "form-canon": "lief",
+        "form-oe": {
+            "form": "lēof",
+            "canon": "lief"
+        },
         "type": "adj",
         "gloss": "dear",
         "tags": ["obscure"],
@@ -5983,7 +6067,8 @@
             "form": "lēog|an",
             "canon": {
                 "lemma": "lie",
-                "past-participle": ["lied"]
+                "past": "lay",
+                "past-participle": ["lain", "layed", "laid"]
             }
         },
         "type": "verb",
@@ -5998,34 +6083,23 @@
             "canon": "leam"
         },
         "type": "noun",
-        "gloss": "[ray] of light",
-        "tags": ["count", "concrete", "luminous", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "lēoma-mass",
-        "form-oe": {
-            "form": "lēoma",
-            "canon": "leam"
-        },
-        "type": "noun",
-        "gloss": ["light", "radiance"],
-        "tags": ["mass", "concrete", "luminous", "obscure"],
+        "senses": [
+            {
+                "gloss": "[ray] of light",
+                "tags": ["count", "concrete", "luminous", "obscure"]
+            }, {
+                "gloss": ["light", "radiance"],
+                "tags": ["mass", "concrete", "luminous", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "lēon",
         "form-oe": "lē|on",
         "type": "verb",
         "verb-class": 1,
-        "gloss": ["[blame], [fault]", "reproach"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "lēon-2",
-        "form-oe": "lē|on",
-        "type": "verb",
-        "verb-class": 1,
         "gloss": ["loan", "lend"],
-        "tags": ["transitive", "speculative"],
+        "tags": ["transitive", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "lēosan",
@@ -6033,36 +6107,33 @@
             "form": "lēos|an",
             "canon": {
                 "lemma": "leese",
+                "past": "lore",
                 "past-participle": ["lorn", "leesed"]
             }
         },
         "type": "verb",
         "verb-class": 2,
         "gloss": "lose",
-        "gloss-alt": ["[bring] to ruin", "spoil", "fail"],
-        "tags": ["intransitive", "obscure"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lēoþ",
         "form-oe": "lēoþ",
         "type": "noun",
-        "gloss": ["song", "poem"],
-        "tags": ["count", "abstract", "man-made", "obscure"],
+        "gloss": "[poem] or [song]",
+        "tags": ["count", "abstract", "man-made", "speculative"],
         "origin": "old-english",
-        "notes": "Attested form is 'leed', which seems to be a ME variation"
+        "notes": "Wiktionary has an attested Scottish form as 'leed', but leaving canonless for different form"
     }, {
         "key": "lesan",
         "form-oe": {
             "form": "les|an",
-            "canon": {
-                "lemma": "lease",
-                "past-participle": ["leased"]
-            }
+            "canon": "lease"
         },
         "type": "verb",
         "verb-class": 5,
         "gloss": ["gather", "collect", "select"],
-        "tags": ["intransitive", "obscure"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "lēsan",
