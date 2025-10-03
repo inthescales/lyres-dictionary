@@ -6136,19 +6136,6 @@
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "lēsan",
-        "form-raw": "lēs|an",
-        "form-raw-alt": ["līes|an", "līs|an", "lȳs|an"],
-        "form-canon": "lease",
-        "form-participle-canon": ["leased"],
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "[grant] use of",
-        "gloss-alt": ["[set] free", "release"],
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Not positive on verb class"
-    }, {
         "key": "līċ",
         "form-oe": {
             "form": "līċ",
@@ -6158,19 +6145,6 @@
         "gloss": ["corpse", "body"],
         "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
-    }, {
-        "key": "līefan",
-        "form-raw": "lēf|an",
-        "form-raw-alt": ["līef|an", "līf|an", "lȳf|an"],
-        "form-canon": "leave",
-        "form-participle-canon": ["left", "leaved"],
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "allow",
-        "gloss-alt": ["trust"],
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "'lēfan' Anglian, 'līefan' is EWS, 'līfan' and 'lȳfan' LWS."
     }, {
         "key": "liht",
         "form-oe": {
@@ -6202,8 +6176,19 @@
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "[stop] or [cease]",
-        "gloss-alt": ["lose", "surrender", "[lose] one's life"],
+        "senses": [
+            {
+                "gloss": ["lose", "surrender"],
+                "tags": ["transitive", "obscure"]
+            }, {
+                "gloss": "[lose] one's life",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[stop] or [cease]",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
@@ -6211,9 +6196,9 @@
         "form-oe": "liþ",
         "type": "noun",
         "gloss": "limb",
-        "tags": ["count", "concrete", "bodypart", "obscure"],
+        "tags": ["count", "concrete", "bodypart", "speculative"],
         "origin": "old-english",
-        "notes": "Appears in 'lithy'"
+        "notes": "Appears in 'lithy'. TODO: compound-only"
     }, {
         "key": "lof",
         "form-oe": {
@@ -6222,9 +6207,9 @@
         },
         "type": "noun",
         "gloss": "[praise], [glory]",
-        "tags": ["mass", "abstract", "obscure"],
+        "tags": ["mass", "abstract", "speculative"],
         "origin": "old-english",
-        "notes": "Glossed meaning is from OE. In dialects, meaning is 'offer', 'price'"
+        "notes": "Glossed meaning is from OE. In dialects, meaning is 'offer', 'price'. Marking speculative for meaning difference"
     }, {
         "key": "lōf",
         "form-oe": {
@@ -6236,35 +6221,20 @@
         "tags": ["singleton", "concrete", "living", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "lofian",
-        "form-oe": {
-            "form": "lofi|an",
-            "canon": {
-                "lemma": "lofe",
-                "past-participle": ["lofed"]
-            }
-        },
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "praise",
-        "gloss-alt": ["appraise", "[assign] value to"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english"
-    }, {
         "key": "losian",
         "form-oe": {
             "form": "losi|an",
             "canon": {
                 "lemma": "lose",
+                "past": "lost",
                 "past-participle": ["lost"]
             }
         },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "lose",
-        "gloss-alt": ["perish", "[bring] to ruin"],
-        "tags": ["intransitive", "motion"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Some OE senses 'perish', 'bring to ruin'"
     }, {
         "key": "lūcan",
         "form-oe": {
@@ -6273,26 +6243,22 @@
         },
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["[pull] up weeds", "weed"],
-        "gloss-alt": ["[pull] up or out"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "lūcan-2",
-        "form-oe": "lūc|an",
-        "type": "verb",
-        "verb-class": 2,
-        "gloss": ["close", "conclude", "fasten", "lock"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": ["close", "conclude", "fasten", "lock"],
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": ["[pull] up weeds", "weed", "[pull] up or out"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "sense of 'weeding' is dialectal"
     }, {
         "key": "lufian",
         "form-oe": {
             "form": "lufi|an",
-            "canon": {
-                "lemma": "love",
-                "past-participle": ["loved"]
-            }
+            "canon": "love"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -6316,17 +6282,22 @@
             "canon": "lust"
         },
         "type": "noun",
-        "gloss": "lust",
-        "tags": ["mass", "abstract", "mind-state"],
+        "senses": [
+            {
+                "gloss": "pleasure",
+                "tags": ["mass", "abstract", "mind-state", "body-state"]
+            }, {
+                "period": "modern",
+                "gloss": "lust",
+                "tags": ["mass", "abstract", "mind-state"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "lūtan",
         "form-oe": {
             "form": "lūt|an",
-            "canon": {
-                "lemma": "lout",
-                "past-participle": ["louted"]
-            }
+            "canon": "lout"
         },
         "type": "verb",
         "verb-class": 2,
@@ -6336,25 +6307,25 @@
     }, {
         "key": "lybb",
         "form-raw": "lybb",
-        "form-raw-alt": ["lyb"],
         "type": "noun",
         "gloss": ["[potion] or [concoction]", "[medicine], [drug]", "poison", "magic [charm]"],
-        "tags": ["count", "concrete", "liquid", "man-made"],
+        "tags": ["count", "concrete", "liquid", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "lyttel",
         "form-oe": {
-            "form": "lyttel",
-            "canon": "little"
+            "main": {
+                "form": "lyttel",
+                "canon": "little"
+            },
+            "alt": "lȳtel"
         },
         "type": "adj",
         "gloss": "little",
-        "origin": "old-english",
-        "notes": "more standard form was 'lȳtel"
+        "origin": "old-english"
     }, {
         "key": "mæċġ",
-        "form-raw": "mæċġ",
-        "form-raw-alt": "meċġ",
+        "form-oe": ["mæċġ", "meċġ"],
         "type": "noun",
         "gloss": "man",
         "tags": ["count", "concrete", "living", "person", "gendered"],
@@ -6381,30 +6352,29 @@
         "origin": "old-english"
     }, {
         "key": "mǣl",
-        "form-raw": "mǣl",
-        "form-raw-alt": ["mēl"],
-        "form-canon": "meal",
-        "type": "noun",
-        "gloss": "meal",
-        "gloss-alt": ["[time] or [occasion]", "season"],
-        "tags": ["count", "abstract", "time", "measure"],
-        "origin": "old-english",
-        "notes": "Chosen form is WS, alt. is Anglian/Kentish"
-    }, {
-        "key": "mǣnan",
         "form-oe": {
-            "form": "mǣn|an",
-            "canon": {
-                "lemma": "mean",
-                "past-participle": ["meant"]
-            }
+            "main": {
+                "form": "mǣl",
+                "canon": "meal",
+                "dialect": "west-saxon"
+            },
+            "alt": [{
+                "form": "mēl",
+                "dialect": "anglian"
+            }]
         },
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "indicate",
-        "tags": ["intransitive", "no-gen"],
-        "origin": "old-english",
-        "notes": "TODO: idk what to do with this one"
+        "type": "noun",
+        "senses": [
+            {
+                "gloss": ["[time] or [occasion]", "season"],
+                "tags": ["count", "abstract", "time", "measure"]
+            }, {
+                "period": "modern",
+                "gloss": "meal",
+                "tags": ["count", "abstract", "time", "measure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "mǣne",
         "form-oe": {
@@ -6412,9 +6382,8 @@
             "canon": "mean"
         },
         "type": "adj",
-        "gloss": "[cruel] or [unkind]",
-        "origin": "old-english",
-        "notes": "alternate meaning 'low, common'"
+        "gloss": ["[cruel] or [unkind]", "[low], [common]"],
+        "origin": "old-english"
     }, {
         "key": "mǣtan",
         "form-oe": "mǣt|an",
@@ -6433,24 +6402,27 @@
         "notes": "From Latin 'mamma'"
     }, {
         "key": "mamor",
-        "form-raw": "mamor",
-        "form-raw-alt": ["māmor", "mamera"],
+        "form-oe": {
+            "main": "mamor",
+            "alt": ["māmor"]
+        },
         "type": "noun",
         "gloss": ["lethargy", "deep [sleep]", "unconsciousness"],
         "tags": ["mass", "abstract", "body-state", "mind-state", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Bosworth and Hall's have the vowel short, Wiktionary long"
     }, {
-        "key": "mamorian",
-        "form-raw": "mamori|an",
-        "form-raw-alt": ["māmori|an", "māmri|an"],
-        "form-canon": "mammer",
+        "key": "māmorian",
+        "form-oe": {
+            "main": ["māmori|an", "māmri|an"],
+            "alt": ["mamori|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["hesitate", "mumble"],
-        "gloss-alt": ["deliberate", "[design], [plan]"],
-        "tags": ["intransitive", "obscure"],
+        "gloss": ["[think] out", "[design], [plan]"],
+        "tags": ["transitive", "speculative"],
         "origin": "old-english",
-        "notes": "Needs bitransitivity. Wiktionary shows 'māmorian', while Bosworth has 'mamorian'. Canon form, attested in Shakespeare, follows short vowel form."
+        "notes": "Hall's and Wiktionary have vowel long, Bosworth short"
     }, {
         "key": "mangian",
         "form-oe": "mangi|an",
@@ -6483,67 +6455,71 @@
         "notes": "Attested only in compounds, such as 'mapultrēow'"
     }, {
         "key": "mapulder",
-        "form-raw": "mapulder",
-        "form-raw-alt": ["mapuldre", "mapolder", "mapuldor"],
+        "form-oe": "mapulder",
         "type": "noun",
         "gloss": "maple [tree]",
         "tags": ["count", "concrete", "living", "plant", "tree", "speculative"],
         "origin": "old-english"
     }, {
         "key": "mase-state",
-        "form-raw": "mase",
-        "form-raw-alt": ["mæs"],
-        "form-canon": "maze",
+        "form-oe": {
+            "form": "mase",
+            "canon": "maze"
+        },
         "type": "noun",
-        "gloss": ["delusion", "confusion", "bewilderment"],
-        "tags": ["mass", "concrete", "mind-state", "obscure"],
-        "origin": "old-english",
-        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
-    }, {
-        "key": "mase/count+abstract",
-        "form-raw": "mase",
-        "form-raw-alt": ["mæs"],
-        "form-canon": "maze",
-        "type": "noun",
-        "gloss": ["delusion", "deception", "winding [movement]"],
-        "tags": ["count", "abstract", "activity"],
-        "origin": "old-english",
-        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
-    }, {
-        "key": "mase/maze",
-        "form-raw": "mase",
-        "form-raw-alt": ["mæs"],
-        "form-canon": "maze",
-        "type": "noun",
-        "gloss": "maze",
-        "tags": ["count", "concrete", "terrain"],
+        "senses": [
+            {
+                "gloss": ["delusion", "confusion", "bewilderment"],
+                "tags": ["mass", "concrete", "mind-state", "obscure"]
+            }, {
+                "gloss": ["delusion", "deception", "winding [movement]"],
+                "tags": ["count", "abstract", "activity"]
+            }, {
+                "gloss": "maze",
+                "tags": ["count", "concrete", "terrain"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'"
     }, {
         "key": "masian",
         "form-oe": {
             "form": "masi|an",
-            "canon": {
-                "lemma": "maze",
-                "past-participle": ["mazed"]
-            }
+            "canon": "maze"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["amaze", "[confuse], [perplex]"],
-        "gloss-alt": ["[make] winding movements"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[make] winding movements"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": ["amaze", "[confuse], [perplex]"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'. Alt. gloss is my own, based on the noun."
+        "notes": "Based on a conjectured unattested form, but OE shows related words, such as 'amasian'. 'movement' gloss is my innovation, based on the noun."
     }, {
         "key": "māþm",
-        "form-raw": "māþm",
-        "form-raw-alt": "māþum",
-        "form-canon": "mathom",
+        "form-oe": {
+            "form": ["māþm", "māþum"],
+            "canon": "mathom"
+        },
         "type": "noun",
-        "gloss": ["precious [object]", "treasure"],
-        "tags": ["count", "concrete", "obscure"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": ["precious [object]", "treasure"],
+                "tags": ["count", "concrete", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "trinket",
+                "tags": ["count", "concrete", "obscure"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Canon form, introduced by Tolkien, is a learned borrowing and does not appear to reflect the expected reflex for this word"
     }, {
         "key": "meare",
         "form-oe": "meare",
@@ -6551,25 +6527,23 @@
         "gloss": "mare",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "gendered"],
         "origin": "old-english",
-        "notes": "Alternate forms mīre, mȳre, mere. History of usage as feminine unclear to me."
+        "notes": "Alternate forms mīre, mȳre, mere. TODO: oblique. Derived from oblique form of 'mearh', but leaving separate until I can account for these forms better."
     }, {
         "key": "mearh",
         "form-oe": "mearh",
         "type": "noun",
         "gloss": "horse",
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "See note on 'meare'"
     }, {
         "key": "mearu",
-        "form-oe": {
-            "lemma": "mearu",
-            "oblique": "mearw|e"
-        },
+        "form-oe": ["mearu", "mearw|e"],
         "type": "adj",
         "gloss": "[tender], [delicate]",
         "tags": ["speculative", "homophonic"],
         "origin": "old-english",
-        "notes": "OED shows ME forms based on oblique, with headword 'merrow'"
+        "notes": "TODO: Oblique. 'mearw|e' here is an oblique form — OED shows ME forms based on oblique, with headword 'merrow'"
     }, {
         "key": "meltan",
         "form-oe": {
@@ -6581,15 +6555,23 @@
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "melt",
-        "gloss-alt": ["digest"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "digest",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "melt",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "melu",
-        "form-raw": "melu",
-        "form-raw-alt": ["meolo", "meala"],
-        "form-canon": "meal",
+        "form-oe": {
+            "form": "melu",
+            "canon": "meal"
+        },
         "type": "noun",
         "gloss": ["flour", "[meal] (of grain)"],
         "tags": ["mass", "concrete", "food"],
@@ -6598,22 +6580,34 @@
         "key": "meox",
         "form-raw": ["mix", "mux"],
         "type": "noun",
-        "gloss": "feces",
-        "tags": ["mass", "concrete", "material"],
+        "gloss": ["feces", "[filth], [muck]"],
+        "tags": ["mass", "concrete", "material", "speculative"],
         "origin": "old-english",
         "notes": "Actual observed forms are 'meox', 'mix', and 'myx'. Hacking the forms to avoid producing 'mex', which could be misused"
     }, {
         "key": "merran",
-        "form-raw": "merr|an",
-        "form-raw-alt": ["mierr|an"],
-        "form-canon": "mar",
-        "form-participle-canon": ["marred"],
+        "form-oe": {
+            "main": {
+                "form": "merr|an",
+                "dialect": "anglian",
+                "canon": "mar"
+            },
+            "alt": ["mierr|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[ruin] or [damage]",
-        "gloss-alt": ["hinder", "waste"],
-        "tags": ["transitive"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": ["hinder", "waste"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "[ruin] or [damage]",
+                "tags": ["transitive"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "See OED on form history"
     }, {
         "key": "mēse",
         "form-raw": ["mēse", "mēose", "mīse", "mȳse"],
@@ -6621,7 +6615,7 @@
         "gloss": "table",
         "tags": ["count", "concrete", "man-made", "speculative"],
         "origin": "old-english",
-        "notes": "From Latin 'mensa'. Along with French 'mes' influenced MnE 'mess'. TODO: Bring in additional senses from 'mess'. Wiktionar"
+        "notes": "From Latin 'mensa'. Along with French 'mes' influenced MnE 'mess'. TODO: Bring in additional senses from 'mess'."
     }, {
         "key": "mētan",
         "form-oe": "mēt|an",
@@ -6637,9 +6631,16 @@
             "canon": "meat"
         },
         "type": "noun",
-        "gloss": "meat",
-        "gloss-alt": ["food"],
-        "tags": ["mass", "concrete", "material", "food"],
+        "senses": [
+            {
+                "gloss": "food",
+                "tags": ["mass", "concrete"]
+            }, {
+                "period": "modern",
+                "gloss": "meat",
+                "tags": ["mass", "concrete", "material", "food"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "metsian",
@@ -6651,22 +6652,31 @@
         "verb-class": "weak",
         "gloss": "[provide] with food",
         "tags": ["transitive", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "midl",
-        "form-oe": "midl",
-        "type": "noun",
-        "gloss": "[bit] or [curb] (of a bridle)",
-        "tags": ["count", "concrete", "man-made", "speculative", "no-gen"],
         "origin": "old-english",
-        "notes": "no-gen because I'm not feeling it"
+        "notes": "Presumably related to 'mēse'?"
     }, {
         "key": "mierċels",
-        "form-raw": "mierċ+els",
-        "form-raw-alt": ["merċ+els", "myrċ+els"],
+        "form-oe": {
+            "main": {
+                "form": "merċ+els",
+                "dialect": "anglian"
+            },
+            "alt": [{
+                "form": "mierċ+els",
+                "dialect": "west-saxon"
+            }]
+        },
         "type": "noun",
         "gloss": ["target", "[seal] or [signet]", "trophy"],
         "tags": ["count", "concrete", "speculative"],
+        "origin": "old-english",
+        "notes": "In Wiktionary, but not in Bosworth or Hall's"
+    }, {
+        "key": "mierrelse",
+        "form-oe": "mierr+else",
+        "type": "noun",
+        "gloss": ["scandal", "offense", "hindrance"],
+        "tags": ["count", "abstract", "speculative"],
         "origin": "old-english"
     }, {
         "key": "miht",
@@ -6681,14 +6691,20 @@
     }, {
         "key": "milc",
         "form-oe": {
-            "form": "milc",
-            "canon": "milk"
+            "main": {
+                "form": "milc",
+                "dialect": "anglian",
+                "canon": "milk"
+            },
+            "alt": [{
+                "form": ["meolc", "meoluc"],
+                "dialect": "west-saxon"
+            }]
         },
         "type": "noun",
         "gloss": "milk",
         "tags": ["mass", "concrete", "fluid", "liquid", "food"],
-        "origin": "old-english",
-        "notes": "Form 'milc' is Anglian. West-saxon had 'meolc' / 'meoluc'"
+        "origin": "old-english"
     }, {
         "key": "milde",
         "form-oe": {
@@ -6715,7 +6731,8 @@
         "verb-class": "weak",
         "gloss": ["remember", "[keep] in memory"],
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Canon on this is dubious, taken from Wiktionary, but leaving it because I'm not confident in the current generated form"
     }, {
         "key": "mirran",
         "form-oe": "mirr|an",
@@ -6726,9 +6743,10 @@
         "origin": "old-english"
     }, {
         "key": "mist",
-        "form-raw": "mist",
-        "form-raw-alt": ["myst"],
-        "form-canon": "mist",
+        "form-oe": {
+            "form": "mist",
+            "canon": "mist"
+        },
         "type": "noun",
         "gloss": "mist",
         "tags": ["mass", "concrete", "gas", "weather", "glooming"],
@@ -6740,11 +6758,20 @@
             "canon": "mood"
         },
         "type": "noun",
-        "gloss": "strong [feeling]",
-        "gloss-alt": ["[state] of mind", "[heart], [spirit]", "courage", "pride"],
-        "tags": ["count", "abstract", "mind-state"],
-        "origin": "old-english",
-        "notes": "Gloss chosen based on modern usage, and for ease of compounding (e.g. 'moody' = 'affected by a strong feeling'"
+        "senses": [
+            {
+                "gloss": ["[state] of mind", "[heart], [spirit]"],
+                "tags": ["count", "abstract"]
+            }, {
+                "gloss": ["courage", "pride"],
+                "tags": ["count", "abstract", "mind-state"]
+            }, {
+                "period": "modern",
+                "gloss": "strong [feeling]",
+                "tags": ["count", "abstract", "mind-state"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "modor",
         "form-oe": {
@@ -6764,17 +6791,18 @@
         "type": "noun",
         "gloss": "moon",
         "tags": ["singleton", "concrete", "terrain", "place", "luminous"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "TODO: maybe add count sense"
     }, {
         "key": "morgen",
         "form-oe": "morgen",
         "type": "noun",
         "gloss": "morning",
-        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
+        "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day", "speculative"],
         "origin": "old-english",
         "notes": "Same root as 'morn', but leaving canonless for new form"
     }, {
-        "key": "morgen/morg",
+        "key": "morgen/morge",
         "form-oe": {
             "form": "morge",
             "canon": "morrow"
@@ -6783,7 +6811,7 @@
         "gloss": ["morning", "following [day]"],
         "tags": ["count", "abstract", "bounded", "luminous", "time", "time-of-day"],
         "origin": "old-english",
-        "notes": "Based on combining form of 'morgen'"
+        "notes": "Based on combining form of 'morgen' with dropped -n"
     }, {
         "key": "morgen/morn",
         "form-oe": {
@@ -6798,11 +6826,19 @@
     }, {
         "key": "mos",
         "form-raw": "mos",
-        "form-raw-alt": ["mēos", "mose", "mēos"],
+        "form-raw-alt": ["mēos", "mose"],
         "form-canon": "moss",
         "type": "noun",
-        "gloss": "moss",
-        "tags": ["mass", "concrete", "living", "plant"],
+        "senses": [
+            {
+                "gloss": "[bog], [marsh]",
+                "tags": ["count", "concrete", "terrain", "living"]
+            }, {
+                "period": "modern",
+                "gloss": "moss",
+                "tags": ["mass", "concrete", "living", "plant"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "mōt",
@@ -6812,7 +6848,7 @@
         },
         "type": "noun",
         "gloss": "meeting",
-        "tags": ["count", "abstract", "activity"],
+        "tags": ["count", "abstract", "activity", "obscure"],
         "origin": "old-english",
         "notes": "form is reconstructed, but 'ġemōt' is attested, and 'mōt' is attested in ME"
     }, {
@@ -6837,9 +6873,13 @@
         "origin": "old-english"
     }, {
         "key": "myln",
-        "form-raw": "myln",
-        "form-raw-alt": ["mylen"],
-        "form-canon": "mill",
+        "form-oe": {
+            "main": {
+                "form": "myln",
+                "canon": "mill"
+            },
+            "alt": ["mylen"]
+        },
         "type": "noun",
         "gloss": "mill",
         "gloss-tool": "grind",
@@ -6849,9 +6889,16 @@
         "key": "mynd",
         "form-oe": "mynd",
         "type": "noun",
-        "gloss": "mind",
-        "gloss-alt": ["memory"],
-        "tags": ["count", "abstract"],
+        "senses": [
+            {
+                "gloss": "memory",
+                "tags": ["count", "abstract"]
+            }, {
+                "period": "modern",
+                "gloss": "mind",
+                "tags": ["count", "abstract"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "myndgi|an",
@@ -6874,27 +6921,35 @@
         "origin": "old-english",
         "notes": "Glosses here combine OE with later Northern/Scottish usage"
     }, {
-        "key": "myrrelse",
-        "form-raw": "myrr+else",
-        "form-raw-alt": ["mierr+else"],
-        "type": "noun",
-        "gloss": ["scandal", "offense", "hindrance"],
-        "tags": ["count", "abstract", "speculative"],
-        "origin": "old-english"
-    }, {
         "key": "nēd",
-        "form-raw": "nēd",
-        "form-raw-alt": ["nēad", "nȳd"],
+        "form-oe": {
+            "main": {
+                "form": "nēd",
+                "canon": "need"
+            },
+            "alt": ["nēad", "nȳd"]
+        },
         "type": "noun",
-        "gloss": "need",
-        "gloss-alt": ["distress"],
-        "tags": ["mass", "abstract", "mind-state"],
+        "senses": [
+            {
+                "gloss": "distress",
+                "tags": ["mass", "abstract", "mind-state"]
+            }, {
+                "period": "modern",
+                "gloss": "need",
+                "tags": ["mass", "abstract", "mind-state"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "nēdl",
-        "form-raw": "nēdl",
-        "form-raw-alt": ["nǣdl", "nēþl"],
-        "form-canon": "needle",
+        "form-oe": {
+            "main": {
+                "form": "nēdl",
+                "canon": "needle"
+            },
+            "alt": ["nǣdl", "nēþl"]
+        },
         "type": "noun",
         "gloss": "needle",
         "gloss-tool": ["[sew] or [embroider]", "[pierce] with a needle"],
@@ -6914,16 +6969,19 @@
         "key": "niman",
         "form-oe": {
             "form": "nim|an",
-            "canon": {
-                "lemma": "nim",
-                "past-participle": ["nimmed", "nom", "nomen", "num", "numb"]
-            }
+            "canon": "nim"
         },
         "type": "verb",
         "verb-class": 4,
-        "gloss": "take",
-        "gloss-alt": ["[go] or [proceed]", "steal"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": "[go] or [proceed]",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["take", "steal"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "nōn",
@@ -6933,9 +6991,9 @@
         },
         "type": "noun",
         "gloss": "noon",
-        "gloss-alt": ["the ninth [hour] of the day"],
         "tags": ["uncountable", "abstract", "bounded", "luminous", "time", "time-of-day"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Also 'the ninth hour of the day'"
     }, {
         "key": "open",
         "form-oe": {
@@ -6948,12 +7006,20 @@
     }, {
         "key": "ōra",
         "form-oe": {
-            "form": "ār",
+            "form": "ora",
             "canon": "ore"
         },
         "type": "noun",
-        "gloss": "ore",
-        "tags": ["mass", "concrete", "material"],
+        "senses": [
+            {
+                "gloss": "unworked [metal]",
+                "tags": ["mass", "concrete", "material", "metallic"]
+            }, {
+                "period": "modern",
+                "gloss": "ore",
+                "tags": ["mass", "concrete", "material", "metallic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "orf",
@@ -6969,7 +7035,7 @@
             "canon": "other"
         },
         "type": "adj",
-        "gloss": "other, different",
+        "gloss": "[other], [different]",
         "origin": "old-english"
     }, {
         "key": "pǣċa",
@@ -6980,8 +7046,11 @@
         "origin": "old-english"
     }, {
         "key": "pǣċan",
-        "form-raw": "pǣċ|an",
-        "form-participle-raw": ["pǣht"],
+        "form-oe": {
+            "infinitive": "pǣċ|an",
+            "past": "pǣhte",
+            "past-participle": ["pǣht"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[cheat] or [deceive]",
@@ -7013,10 +7082,7 @@
         "key": "pleġan",
         "form-oe": {
             "form": "pleġ|an",
-            "canon": {
-                "lemma": "play",
-                "past-participle": ["played"]
-            }
+            "canon": "play"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -7028,17 +7094,18 @@
         "form-raw": "plē|on",
         "type": "verb",
         "verb-class": 5,
-        "gloss": ["risk", "endanger"],
+        "gloss": "[risk], [endanger]",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "plyċan",
-        "form-raw": "plyċ|an",
-        "form-raw-alt": ["pliċġ|an"],
+        "form-oe": {
+            "main": "plyċ|an",
+            "alt": ["pliċġ|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[pull] or [pluck]",
-        "gloss-alt": ["[scrape] or [scratch]"],
+        "gloss": ["[pull] or [pluck]", "[scrape] or [scratch]"],
         "tags": ["transitive", "speculative"],
         "origin": "old-english",
         "notes": "Alt. form 'pliċġan' seems more standard in OE, following Bosworth, but OED shows a form 'plitch' enduring into the 15th c."
@@ -7066,36 +7133,50 @@
         "key": "prician",
         "form-oe": {
             "form": "pric|an",
-            "canon": {
-                "lemma": "prick",
-                "past-participle": ["pricked"]
-            }
+            "canon": "prick"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "prick",
-        "gloss-alt": ["pierce"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "pierce",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "prick",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "pric+els",
-        "form-oe": "pric+els",
+        "form-oe": {
+            "form": "pric+els",
+            "canon": "prickle"
+        },
         "type": "noun",
         "gloss": "sharp [point]",
         "tags": ["count", "concrete"],
         "origin": "old-english"
     }, {
         "key": "prūd",
-        "form-raw": "prūd",
-        "form-raw-alt": ["prūt"],
+        "form-oe": {
+            "main": "prūd",
+            "alt": ["prūt"]
+        },
         "type": "adj",
         "gloss": "proud",
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "An early borrowing from Old French"
     }, {
         "key": "prȳde",
-        "form-raw": "prȳde",
-        "form-raw-alt": ["prȳte"],
-        "form-canon": "pride",
+        "form-oe": {
+            "main": {
+                "form": "prȳde",
+                "canon": "pride"
+            },
+            "alt": ["prȳte"]
+        },
         "type": "noun",
         "gloss": "pride",
         "tags": ["mass", "abstract", "quality", "mind-state"],
@@ -7108,57 +7189,70 @@
         },
         "type": "noun",
         "gloss": ["evil [spirit]", "goblin"],
-        "tags": ["count", "concrete", "living", "magical"],
+        "tags": ["count", "concrete", "living", "magical", "obscure"],
         "origin": "old-english"
     }, {
         "key": "ræċed",
-        "form-raw": "ræċed",
-        "form-raw-alt": ["reċed", "reċyd"],
+        "form-oe": ["ræċed", "reċed"],
         "type": "noun",
         "gloss": ["[house] or dwelling [place]"],
         "tags": ["count", "concrete", "man-made", "poetic", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Sources differ on which spelling is emphasized"
     }, {
         "key": "rǣd",
-        "form-raw": "rǣd",
-        "form-raw-alt": "rēd",
-        "form-canon": "rede",
+        "form-oe": {
+            "main": {
+                "form": "rǣd",
+                "dialect": "west-saxon",
+                "canon": "rede"
+            },
+            "alt": {
+                "form": "rēd",
+                "dialect": "anglian"
+            }
+        },
         "type": "noun",
-        "gloss": ["[advice], [counsel]", "help"],
-        "tags": ["mass", "abstract", "obscure"],
-        "origin": "old-english",
-        "notes": "Chosen form is WS, but matches canon form. 'rēd' is Anglian."
-    }, {
-        "key": "rǣd-count",
-        "form-raw": "rǣd",
-        "form-raw-alt": "rēd",
-        "form-canon": "rede",
-        "type": "noun",
-        "gloss": ["decision", "plan"],
-        "tags": ["count", "abstract", "man-made", "obscure", "rare"],
-        "origin": "old-english",
-        "notes": "Separated from 'rǣd' due to countability difference."
+        "senses": [
+            {
+                "gloss": ["[advice], [counsel]", "help"],
+                "tags": ["mass", "abstract", "obscure"]
+            }, {
+                "gloss": ["decision", "plan"],
+                "tags": ["count", "abstract", "man-made", "obscure", "rare"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "rǣdan",
         "form-oe": {
             "form": "rǣd|an",
             "canon": {
                 "lemma": "rede",
-                "past-participle": ["red", "redd"]
+                "past": "rede",
+                "past-participle": ["rede"]
             }
         },
         "type": "verb",
         "verb-class": 7,
-        "gloss": "[advise] or [give] counsel",
-        "gloss-alt": ["[govern] or [protect]", "[discuss] or [deliberate]", "[interpret] or [explain]"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[rule] or [govern]", "[guide] or [direct]", "[interpret] or [explain]"],
+                "tags": ["transitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": ["[advise] or [give] counsel", "[discuss], [deliberate]"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Was weak in later OE."
     }, {
         "key": "rǣdels",
-        "form-raw": "rǣd+els",
-        "form-raw-alt": ["rǣsele"],
-        "form-canon": "riddle",
+        "form-oe": {
+            "form": "rǣd+els",
+            "canon": "riddle"
+        },
         "type": "noun",
         "gloss": "riddle",
         "gloss-tool": ["[tell] riddles", "perplex"],
@@ -7184,17 +7278,30 @@
         "key": "rǣran",
         "form-oe": {
             "form": "rǣr|an",
-            "canon": {
-                "lemma": "rear",
-                "past-participle": ["reared"]
-            }
+            "canon": "rear"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[raise] up",
-        "gloss-alt": ["establish", "promote"],
-        "tags": ["intransitive"],
+        "senses": [
+            {
+                "gloss": ["establish", "promote"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "rear",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
+    }, {
+        "key": "rǣsel",
+        "form-oe": "rǣsel",
+        "type": "noun",
+        "gloss": "[solution] to a riddle",
+        "gloss-tool": ["[answer] riddles", "[solve] a problem"],
+        "tags": ["count", "abstract", "man-made", "tool"],
+        "origin": "old-english",
+        "notes": "TODO: Find some way to pluralize this as 'solutions to riddles'. Wiktionary has the as an alt. form of 'rǣdels', but other sources list this definition for it"
     }, {
         "key": "rāp",
         "form-oe": {
@@ -7204,7 +7311,7 @@
         "type": "noun",
         "gloss": "rope",
         "gloss-tool": ["[tie] with rope", "[catch] with a rope"],
-        "tags": ["count", "concrete", "man-made", "tool"],
+        "tags": ["count", "concrete", "material", "man-made", "tool"],
         "origin": "old-english"
     }, {
         "key": "rēċels",
