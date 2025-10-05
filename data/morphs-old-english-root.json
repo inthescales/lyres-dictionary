@@ -7840,6 +7840,7 @@
             "form": "sett|an",
             "canon": {
                 "lemma": "set",
+                "past": "set",
                 "past-participle": ["set"]
             }
         },
@@ -7852,37 +7853,36 @@
         "key": "sibb",
         "form-oe": "sibb",
         "type": "noun",
-        "gloss": "family",
-        "tags": ["count", "concrete", "living", "grouping", "obscure"],
+        "senses": [
+            {
+                "gloss": "family",
+                "tags": ["count", "concrete", "living", "grouping", "speculative"]
+            }, {
+                "gloss": "peace",
+                "tags": ["mass", "abstract", "speculative"]
+            }, {
+                "gloss": "sibling",
+                "tags": ["count", "concrete", "living", "person", "obscure"],
+                "notes": "a modern usage, but not standard enough to mark"
+            }
+        ],
         "origin": "old-english"
-    }, {
-        "key": "sibb-peace",
-        "form-oe": "sibb",
-        "type": "noun",
-        "gloss": "peace",
-        "tags": ["mass", "abstract", "quality", "speculative"],
-        "origin": "old-english",
-        "notes": "Not sure about quality since it's not really personal, but let's see"
-    }, {
-        "key": "sibb-sibling",
-        "form-oe": {
-            "form": "sibb",
-            "canon": "sib"
-        },
-        "type": "noun",
-        "gloss": "sibling",
-        "tags": ["count", "concrete", "living", "person", "grouping"],
-        "origin": "old-english",
-        "notes": "A modern usage"
     }, {
         "key": "sīcan",
         "form-oe": "sīc|an",
         "type": "verb",
         "verb-class": 1,
-        "gloss": ["[sigh] or [groan]", "[long] for"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": "[sigh] or [groan]",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[long] for",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving without canon form. Needs bitransitivity"
+        "notes": "Both 'sike' and 'siche' appear in modern dialectal usage. Leaving canonless."
     }, {
         "key": "siġe",
         "form-oe": "siġe",
@@ -7896,42 +7896,32 @@
             "form": "sing|an",
             "canon": {
                 "lemma": "sing",
+                "past": "sung",
                 "past-participle": ["sung"]
             }
         },
         "type": "verb",
         "verb-class": 3,
         "gloss": "sing",
-        "gloss-alt": ["chant", "recite"],
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "sīon-intransitive",
+        "key": "sīon",
         "form-oe": {
             "form": "sī|on",
-            "canon": {
-                "lemma": "sie",
-                "past-participle": "sied"
-            }
+            "canon": "sie"
         },
         "type": "verb",
         "verb-class": 5,
-        "gloss": "[drip] or [drain] (of liquids)",
-        "tags": ["intransitive", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "sīon-transitive",
-        "form-oe": {
-            "form": "sī|on",
-            "canon": {
-                "lemma": "sie",
-                "past-participle": "sied"
+        "senses": [
+            {
+                "gloss": "[drip] or [drain] (of liquids)",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["[strain] (as with a strainer)", "[stain] by dripping liquid"],
+                "tags": ["transitive", "speculative"]
             }
-        },
-        "type": "verb",
-        "verb-class": 5,
-        "gloss": ["[strain] (as with a strainer)", "[stain] by dripping liquid"],
-        "tags": ["transitive", "speculative"],
+        ],
         "origin": "old-english"
     }, {
         "key": "sittan",
@@ -7939,6 +7929,7 @@
             "form": "sitt|an",
             "canon": {
                 "lemma": "sit",
+                "past": "sat",
                 "past-participle": ["sit"]
             }
         },
@@ -7949,19 +7940,24 @@
         "origin": "old-english"
     }, {
         "key": "sīþ",
-        "form-raw": ["sīþ", "siþ'"],
+        "form-oe": {
+            "form": "sīþ",
+            "canon": "sīþe"
+        },
         "type": "noun",
-        "gloss": "journey",
-        "gloss-alt": ["[point] in time", "lifetime"],
-        "tags": ["count", "abstract", "obscure"],
-        "origin": "old-english",
-        "notes": "Not sure about the vowel length here — Wiktionary has MnE 'sith' while OED has 'sithe'"
-    }, {
-        "key": "sīþ-measure",
-        "form-raw": ["sīþ", "siþ'"],
-        "type": "noun",
-        "gloss": ["[point] in time", "lifetime"],
-        "tags": ["count", "abstract", "measure", "obscure"],
+        "senses": [
+            {
+                "gloss": ["journey", "[point] in time"],
+                "tags": ["count", "abstract", "obscure"]
+            }, {
+                "gloss": "lifetime",
+                "tags": ["count", "abstract", "measure", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[time], [occasion]",
+                "tags": ["count", "abstract", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "slæc",
