@@ -185,14 +185,14 @@
         "tags": ["count", "concrete", "man-made", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
-        "key": "ǣrnan",
-        "form-oe": "ǣrn|an",
+        "key": "ærnan",
+        "form-oe": "ærn|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["gallop", "run"],
-        "tags": ["transitive", "motion", "speculative"],
+        "gloss": "[run] or [gallop]",
+        "tags": ["intransitive", "motion", "speculative"],
         "origin": "old-english",
-        "notes": "This was in Bright, but I can't find it in Bosworth or Wiktionary"
+        "notes": "Originally a causative. Merged with 'rinnan' to give rise to MnE 'run'."
     }, {
         "key": "ǣs",
         "form-oe": "ǣs",
@@ -7321,7 +7321,7 @@
         "gloss-tool": "[perfume] with incense",
         "tags": ["mass", "concrete", "man-made", "tool", "speculative"],
         "origin": "old-english",
-        "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
+        "notes": "ME shows versions both with and without palatalization. See OED for 'rechels'/'reek' for reasons, which I won't attempt to simulate here."
     }, {
         "key": "rēċelsian",
         "form-oe": "rēċ+elsi|an",
@@ -7329,8 +7329,7 @@
         "verb-class": "weak",
         "gloss": ["[perfume] with incense", "[burn] incense"],
         "tags": ["intransitive", "speculative"],
-        "origin": "old-english",
-        "notes": "TODO: Add Northumbrian dialect with non-palatal 'c'"
+        "origin": "old-english"
     }, {
         "key": "recenian",
         "form-oe": {
@@ -7339,28 +7338,31 @@
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[count], [calculate]"],
+        "gloss": "[count], [calculate]",
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "regel",
-        "form-raw": ["regel", "reogol", "regl"],
-        "type": "noun",
-        "gloss": ["[code] of rules", "[code] of conduct"],
-        "gloss-alt": ["[rule] or [principle]"],
-        "tags": ["count", "abstract", "man-made", "obscure"],
-        "origin": "old-english",
-        "notes": "Meaning as 'rule or principle' demoted to alternate for aesthetics"
-    }, {
         "key": "reġn",
-        "form-raw": "reġn",
-        "form-raw-alt": ["rēn", "renġ", "reng"],
-        "form-canon": "rain",
+        "form-oe": {
+            "main": {
+                "form": "reġn",
+                "canon": "rain"
+            },
+            "alt": ["rēn", "renġ"]
+        },
         "type": "noun",
         "gloss": "rain",
         "tags": ["mass", "concrete", "weather", "glooming"],
         "origin": "old-english",
-        "notes": "'reng' form is in OED as rare; palatalization is unclear."
+        "notes": "'reng' form is in OED as rare; palatalization is unclear in source, assuming also palatal"
+    }, {
+        "key": "regol",
+        "form-oe": "regol",
+        "type": "noun",
+        "gloss": ["[code] of rules", "[code] of conduct"],
+        "tags": ["count", "abstract", "man-made", "obscure"],
+        "origin": "old-english",
+        "notes": "Sense 'rule or principle' excluded for aesthetics. From Latin 'regula' (borrowed pre-OE). Cognate with 'rule'"
     }, {
         "key": "rētan",
         "form-oe": "rēt|an",
@@ -7378,39 +7380,45 @@
         "origin": "old-english"
     }, {
         "key": "rinc",
-        "form-oe": {
-            "form": "rinc",
-            "canon": "rink"
-        },
+        "form-oe": "rinc",
         "type": "noun",
         "gloss": "hero",
         "tags": ["count", "concrete", "living", "person", "role", "obscure"],
         "origin": "old-english",
-        "notes": "Also has sense 'man'"
+        "notes": "Also has senses 'man', 'warrior'"
     }, {
         "key": "rinnan",
-        "form-raw": "rinn|an",
-        "form-raw-alt": ["iern|an", "irn|an", "yrn|an"],
-        "form-canon": "run",
-        "form-participle-canon": ["run"],
+        "form-oe": {
+            "main": {
+                "form": "rinn|an",
+                "canon": {
+                    "lemma": "run",
+                    "past": "ran",
+                    "past-participle": "run"
+                }
+            },
+            "alt": ["irn|an"]
+        },
         "type": "verb",
         "verb-class": 3,
         "gloss": "run",
         "tags": ["intransitive", "motion"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "The modern 'run' is a merger of two OE verbs, 'rinnan' and 'ærnan' (both with r-metathesized forms). Assigning the cannon form to 'rinnan'. Form history is unclear, see OED."
     }, {
         "key": "rīsan",
         "form-oe": {
             "form": "rīs|an",
             "canon": {
                 "lemma": "rise",
+                "past": "rose",
                 "past-participle": ["risen"]
             }
         },
         "type": "verb",
         "verb-class": 1,
         "gloss": "rise",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "motion"],
         "origin": "old-english"
     }, {
         "key": "rocc",
@@ -7429,20 +7437,26 @@
             "canon": "rood"
         },
         "type": "noun",
-        "gloss": "crucifix",
-        "gloss-alt": ["[beam] or [spar]"],
-        "gloss-tool": "[erect] a cross",
-        "tags": ["count", "concrete", "man-made", "tool"],
+        "senses": [
+            {
+                "gloss": ["[beam] or [spar]"],
+                "tags": ["count", "concrete", "man-made"]
+            }, {
+                "gloss": "crucifix",
+                "gloss-tool": "[erect] a cross",
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Alternate meaning 'wooden beam or spar'"
+        "notes": "Also has sense as a unit of measure"
     }, {
         "key": "rōf",
         "form-oe": "rōf",
         "type": "adj",
-        "gloss": ["[strong] or [vigorous]", "[brave] or [keen]"],
-        "gloss-alt": ["noble", "renowned"],
-        "tags": ["speculative"],
-        "origin": "old-english"
+        "gloss": "[strong], [valiant]",
+        "tags": ["poetic", "speculative", "homophonic"],
+        "origin": "old-english",
+        "notes": "Wiktionary lists additional senses, but they're not corroborated by other sources"
     }, {
         "key": "rose",
         "form-oe": {
@@ -7470,17 +7484,21 @@
             "canon": "roun"
         },
         "type": "noun",
-        "gloss": ["[secret] or [mystery]", "written [text]"],
-        "tags": ["count", "concrete", "obscure"],
+        "senses": [
+            {
+                "gloss": "[secret] or [mystery]",
+                "tags": ["count", "concrete", "obscure"]
+            }, {
+                "gloss": "written [text]",
+                "tags": ["count", "concrete", "man-made", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "rūnian",
         "form-oe": {
             "form": "rūn|ian",
-            "canon": {
-                "lemma": "roun",
-                "past-participle": ["rouned"]
-            }
+            "canon": "roun"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -7489,15 +7507,19 @@
         "origin": "old-english"
     }, {
         "key": "sǣl",
-        "form-oe": {
-            "form": "sǣl",
-            "canon": "seel"
-        },
+        "form-oe": "sǣl",
         "type": "noun",
-        "gloss": ["happiness", "prosperity"],
-        "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
+        "senses": [
+            {
+                "gloss": "happiness",
+                "tags": ["mass", "abstract", "quality", "mind-state", "speculative", "homophonic"]
+            }, {
+                "gloss": "[happiness], good [fortune]",
+                "tags": ["mass", "abstract", "quality", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "'prosperity' isn't quite a 'mind-state' but let's let it ride. Not sure about form, but prefer 'seel' for variety"
+        "notes": "Appears as 'seil' in Scots, or 'seelie' with -iġ suffix, but those don't appear to be expected MnE reflex."
     }, {
         "key": "sār",
         "form-oe": {
@@ -7519,48 +7541,62 @@
         "origin": "old-english"
     }, {
         "key": "sċanca",
-        "form-raw": "sċanca",
-        "form-raw-alt": ["sċeanca", "sċeonca"],
-        "form-canon": "shank",
+        "form-oe": {
+            "form": "sċanca",
+            "canon": "shank"
+        },
         "type": "noun",
         "gloss": "leg",
         "tags": ["count", "concrete", "living", "bodypart"],
         "origin": "old-english"
     }, {
         "key": "sċeacan",
-        "form-raw": "sċeac|an",
-        "form-raw-alt": ["sċac|an"],
-        "form-canon": "shake",
-        "form-participle-canon": ["shaken"],
+        "form-oe": {
+            "form": "sċeac|an",
+            "canon": {
+                "lemma": "shake",
+                "past": "shook",
+                "past-participle": "shaken"
+            }
+        },
         "type": "verb",
         "verb-class": 6,
         "gloss": "shake",
-        "gloss-alt": "brandish",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "TODO: bitransitivity"
+        "notes": "OE sense 'brandish'"
     }, {
         "key": "sċealc",
-        "form-raw": "sċealc",
-        "form-raw-alt": ["sċelc"],
+        "form-oe": "sċealc",
         "type": "noun",
         "gloss": ["servant", "official", "soldier"],
-        "tags": ["count", "concrete", "living", "person", "role", "speculative"],
+        "tags": ["count", "concrete", "living", "person", "role", "poetic", "speculative"],
         "origin": "old-english",
-        "notes": "Only chosen form is attested, as origin of archaic modern 'shalk'. 'sċelc' is my own hypothetical Anglian variant. Also had sense 'man'"
+        "notes": "Also sense 'man'"
     }, {
-        "key": "sċēne",
-        "form-raw": "sċēne",
-        "form-raw-alt": ["sċȳne", "sċīne"],
+        "key": "sċēne-adj",
+        "form-oe": {
+            "main": {
+                "form": "sċēne",
+                "dialect": "anglian",
+                "canon": "sheen"
+            },
+            "alt": ["sċīene"]
+        },
         "type": "adj",
         "gloss": ["beautiful", "[bright], [brilliant]"],
         "tags": ["obscure"],
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian. 'sċȳne' is WS I assume, not sure about other variant but it's in Bosworth. No canon because I want to allow variation here, but it would be 'sheen'."
+        "origin": "old-english"
     }, {
-        "key": "sċēne-noun",
-        "form-raw": "sċēne",
-        "form-raw-alt": ["sċȳne", "sċīne"],
+        "key": "sċēne-n",
+        "form-oe": {
+            "main": {
+                "form": "sċēne",
+                "dialect": "anglian",
+                "canon": "sheen"
+            },
+            "alt": ["sċīene"]
+        },
         "type": "noun",
         "gloss": ["beauty", "[brightness], [brilliance]"],
         "tags": ["mass", "abstract", "quality", "obscure"],
@@ -7568,24 +7604,35 @@
         "notes": "Historically this noun usage appears around the time of MnE, but including it for fun."
     }, {
         "key": "sċeran",
-        "form-raw": "sċer|an",
-        "form-raw-alt": ["sċier|an", "sċir|an"],
-        "form-canon": "shear",
-        "form-participle-canon": ["shorn"],
+        "form-oe": {
+            "main": {
+                "form": "sċeran",
+                "canon": {
+                    "lemma": "shear",
+                    "past": "shore",
+                    "past-participle": "shorn"
+                }
+            },
+            "alt": "sċieran"
+        },
         "type": "verb",
         "verb-class": 4,
-        "gloss": ["shear", "[cut] or [tear]"],
-        "gloss-alt": "shave",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": ["[cut] or [tear]", "shave"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "shear",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "sċieppan",
         "form-oe": {
             "form": "sċiepp|an",
-            "canon": {
-                "lemma": "shape",
-                "past-participle": ["shapen", "shaped"]
-            }
+            "canon": "shape"
         },
         "type": "verb",
         "verb-class": 6,
@@ -7593,11 +7640,18 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "sċin",
-        "form-oe": "sċin",
+        "key": "sċīn",
+        "form-oe": ["sċīn", "sċinn"],
         "type": "noun",
-        "gloss": ["deceptive [appearance]", "[spirit], [phantom]"],
-        "tags": ["count", "abstract", "magical", "speculative", "homophonic"],
+        "senses": [
+            {
+                "gloss": ["illusion", "deceptive [appearance]"],
+                "tags": ["count", "abstract", "speculative", "homophonic"]
+            }, {
+                "gloss": "[spirit], [phantom]",
+                "tags": ["count", "abstract", "magical", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "sċīnan",
@@ -7605,6 +7659,7 @@
             "form": "sċīn|an",
             "canon": {
                 "lemma": "shine",
+                "past": ["shone", "shined"],
                 "past-participle": ["shone", "shined"]
             }
         },
@@ -7625,7 +7680,7 @@
         "origin": "old-english"
     }, {
         "key": "sċop",
-        "form-oe": "sċop",
+        "form-oe": ["sċop", "sċeop"],
         "type": "noun",
         "gloss": "poet",
         "tags": ["count", "concrete", "living", "person", "role", "speculative"],
@@ -7636,23 +7691,28 @@
             "form": "sċrīf|an",
             "canon": {
                 "lemma": "shrive",
+                "past": "shrove",
                 "past-participle": ["shriven"]
             }
         },
         "type": "verb",
         "verb-class": 1,
-        "gloss": "absolve",
-        "gloss-alt": ["[impose] penance on", "[pass] judgement", "prescribe"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[impose] penance on", "[pass] judgement", "prescribe"],
+                "tags": ["transitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "absolve",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "sċūfan",
         "form-oe": {
             "form": "sċūf|an",
-            "canon": {
-                "lemma": "shove",
-                "past-participle": ["shoved"]
-            }
+            "canon": "shove"
         },
         "type": "verb",
         "verb-class": 2,
@@ -7667,7 +7727,7 @@
         "gloss": ["guilt", "debt"],
         "tags": ["mass", "abstract", "quality", "mind-state", "speculative"],
         "origin": "old-english",
-        "notes": "Should separate the 'state' tag only for the 'guilt' sense but let's play with it for now"
+        "notes": "Properly should separate the 'mind-state' tag only for the 'guilt' sense but let's play with it for now"
     }, {
         "key": "sċyldiġ",
         "form-oe": "sċyld+iġ",
@@ -7676,23 +7736,25 @@
         "tags": ["speculative"],
         "origin": "old-english"
     }, {
-        "key": "searu-count",
+        "key": "searu",
         "form-oe": "searu",
         "type": "noun",
-        "gloss": ["contrivance", "device", "stratagem"],
-        "tags": ["count", "abstract", "man-made", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "searu-mass",
-        "form-oe": "searu",
-        "type": "noun",
-        "gloss": ["[art] or [skill]", "contrivance", "deceit", "artifice"],
-        "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
+        "senses": [
+            {
+                "gloss": ["contrivance", "device", "stratagem"],
+                "tags": ["count", "abstract", "man-made", "speculative"]
+            }, {
+                "gloss": ["[art] or [skill]", "contrivance", "deceit", "artifice"],
+                "tags": ["mass", "abstract", "man-made", "activity", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "seax",
-        "form-raw": "seax",
-        "form-raw-alt": ["sex", "syx"],
+        "form-oe": {
+            "main": "seax",
+            "alt": ["sex", "syx"]
+        },
         "type": "noun",
         "gloss": "dagger",
         "gloss-tool": ["[cut] with a dagger", "stab"],
@@ -7700,21 +7762,29 @@
         "origin": "old-english"
     }, {
         "key": "sēċan",
-        "form-raw": "sēċ|an",
-        "form-participle-raw": ["sōht"],
+        "form-oe": {
+            "infinitive": "sēċ|an",
+            "past-participle": "sōht"
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "seek",
-        "gloss-alt": ["visit", "attack"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "[look] for",
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": "[come] or [go]",
+                "tags": ["intransitive", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Modern 'seek' may be influenced by Norse, but leaving this for itself"
+        "notes": "Ancestor of MnE 'seek' — form may have been influenced by Norse. Leaving speculative as the form is different, though it does appear in some later English dialects (see OED)."
     }, {
         "key": "seċġ",
         "form-oe": "seċġ",
         "type": "noun",
         "gloss": "man",
-        "tags": ["count", "concrete", "living", "person", "gendered", "poetic", "speculative"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "poetic", "speculative", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "seolc",
@@ -7726,26 +7796,44 @@
         "gloss": "silk",
         "tags": ["mass", "concrete", "material", "shiny", "garment"],
         "origin": "old-english",
-        "notes": "Would expect 'selk'. 'silc' appears in ME."
+        "notes": "Form uncertain: would expect 'selk'. 'silc' appears in ME. From Latin or Greek, according to OED."
     }, {
         "key": "seolcan",
-        "form-raw": "selc|an",
-        "form-raw-alt": ["seolc|an"],
+        "form-oe": "seolc|an",
         "type": "verb",
         "verb-class": 3,
         "gloss": ["[become] idle", "languish", "slacken"],
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
-        "notes": "Reconstructed root. 'āseolcan' is attested. Chosen form is my own projected Anglian form."
+        "notes": "Reconstructed root — 'āseolcan' is attested."
     }, {
         "key": "setl",
-        "form-raw": ["setl", "seatl", "seatul", "sedl", "seld", "seotul", "seþl", "seþel", "sitl", "setel"],
+        "form-oe": [
+            {
+                "form": ["sætil", "setul|e"],
+                "dialect": "mercian"
+            }, {
+                "form": ["seatul", "seatl|e", "seþil"],
+                "dialect": "northumbrian"
+            }, {
+                "form": ["seotl|e", "sedl|e", "seþel", "seþl"],
+                "dialect": "anglian"
+            }, {
+                "form": ["setl", "seld", "sitl", "setel"]
+            }
+        ],
         "type": "noun",
-        "gloss": ["seat", "residence"],
-        "gloss-alt": ["throne"],
-        "tags": ["count", "abstract", "speculative"],
+        "senses": [
+            {
+                "gloss": ["seat", "residence"],
+                "tags": ["count", "concrete", "speculative"]
+            }, {
+                "gloss": "[chair], [throne]",
+                "tags": ["count", "concrete", "man-made", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Might have used canon form 'settle', but I feel like that applies more to the verb form"
+        "notes": "Related to 'settle'. Merger of two different nouns in OE."
     }, {
         "key": "settan",
         "form-oe": {
