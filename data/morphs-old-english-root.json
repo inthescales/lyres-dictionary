@@ -7942,7 +7942,7 @@
         "key": "sīþ",
         "form-oe": {
             "form": "sīþ",
-            "canon": "sīþe"
+            "canon": "sithe"
         },
         "type": "noun",
         "senses": [
@@ -7961,42 +7961,44 @@
         "origin": "old-english"
     }, {
         "key": "slæc",
-        "form-raw": "slæc",
-        "form-raw-alt": ["sleac", "slec"],
-        "form-canon": "slack",
+        "form-oe": {
+            "form": "slæc",
+            "canon": "slack"
+        },
         "type": "adj",
-        "gloss": "slack",
-        "gloss-alt": ["[inactive] or [lazy]"],
-        "tags": ["intransitive"],
-        "origin": "old-english",
-        "notes": "'slec' appears Anglian, not sure about others"
+        "gloss": ["[loose], [relaxed]", "[inactive], [lazy]"],
+        "origin": "old-english"
     }, {
         "key": "sleċċan",
-        "form-raw": "sleċċ|an",
-        "form-raw-alt": ["slæċċ|an"],
-        "form-canon": "sletch",
-        "form-participle-raw": ["slehte", "slæhte"],
-        "form-participle-canon": ["sletched"],
+        "form-oe": [
+            {
+                "infinitive": "sleċċ|an",
+                "past-participle": "slehte"
+            }, {
+                "infinitive": "slæċċ|an",
+                "past-participle": "slæhte"
+            }
+        ],
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[slacken] or [abate]",
         "tags": ["intransitive", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Dialect form 'sletch'"
     }, {
         "key": "slīfan",
         "form-oe": {
             "form": "slīf|an",
             "canon": {
                 "lemma": "slive",
-                "past-participle": ["sliven", "slived"]
+                "past-participle": "sliven"
             }
         },
         "type": "verb",
         "verb-class": 1,
         "gloss": ["cut", "[cut] through", "[split] or [divide]"],
         "tags": ["transitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Gloss 'sharpen' from Scottish usage"
+        "origin": "old-english"
     }, {
         "key": "slīm",
         "form-oe": {
@@ -8013,49 +8015,72 @@
             "form": "slīt|an",
             "canon": {
                 "lemma": "slite",
-                "past-participle": ["slit", "slitten", "slitted"]
+                "past": "slate",
+                "past-participle": "slitten"
             }
         },
         "type": "verb",
         "verb-class": 1,
-        "gloss": ["tear", "[rend] (of garments)", "[split] or [divide]", "[wear] out"],
-        "gloss-alt": ["sharpen"],
+        "gloss": ["tear", "[rend] (of garments)", "[split] or [divide]", "[wear] out", "sharpen"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english",
-        "notes": "Gloss 'sharpen' from Scottish usage"
+        "notes": "Chiefly Scottish in MnE, I think"
     }, {
         "key": "smæċċan",
-        "form-raw": ["smæċċ|an", "smeċċ|an", "smeċġ|an"],
-        "form-canon": "smatch",
-        "form-participle-raw": ["smæht", "smeht"],
-        "form-participle-canon": ["smatched"],
+        "form-oe": {
+            "main": {
+                "form": {
+                    "infinitive": "smæċċ|an",
+                    "past": "smaht|e",
+                    "past-participle": "smæht"
+                },
+                "canon": {
+                    "lemma": "smatch",
+                    "past": "smaught",
+                    "past-participle": "smaught"
+                }
+            },
+            "alt": ["smeċċ|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "taste",
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": "taste",
+                "tags": ["transitive", "obscure"]
+            }, {
+                "gloss": "[have] a certain taste",
+                "tags": ["intransitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "smēaġan-intransitive",
-        "form-raw": "smēaġ|an",
-        "form-raw-alt": ["smē|an", "smēaġe|an"],
+        "key": "smēaġan",
+        "form-oe": {
+            "main": "smēaġ|an",
+            "alt": ["smē|an", "smēġ|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "meditate",
-        "tags": ["intransitive", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "smēaġan-transitive",
-        "form-raw": "smēaġ|an",
-        "form-raw-alt": ["smē|an", "smēaġe|an"],
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": ["[consider], [contemplate]", "examine"],
-        "tags": ["transitive", "speculative"],
+        "senses": [
+            {
+                "gloss": "meditate",
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "gloss": ["[consider], [contemplate]", "examine"],
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "smēocan",
-        "form-raw": "smēoc|an",
-        "form-participle-canon": ["smoked"],
+        "form-oe": {
+            "main": {
+                "form": "smēoc|an",
+                "canon": "smeek"
+            },
+            "alt": ["smīc|an", "smēc|an"]
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["smoke", "[emit] smoke", "fumigate", "[scent] with incense"],
@@ -8064,16 +8089,27 @@
         "notes": "Needs bitransitivity or sense"
     }, {
         "key": "smerian",
-        "form-raw": "smeri|an",
-        "form-raw-alt": ["smiri|an", "smyri|an", "smerw|an", "smirw|an", "smierw|an"],
-        "form-canon": "smear",
-        "form-participle-canon": ["smeared"],
+        "form-oe": {
+            "main": {
+                "form": "smeri|an",
+                "canon": "smear"
+            },
+            "alt": ["smiri|an", "smyri|an", "smierw|an", "smerw|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "smear",
-        "gloss-alt": ["[scorn] or [deride]"],
-        "tags": ["transitive"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": ["[scorn] or [deride]"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "smear",
+                "tags": ["transitive"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Not sure whether forms with 'w' should be considered separate or not."
     }, {
         "key": "smiþ",
         "form-oe": {
@@ -8088,16 +8124,19 @@
         "key": "smiþian",
         "form-oe": {
             "form": "smiþi|an",
-            "canon": {
-                "lemma": "smith",
-                "past-participle": ["smithed"]
-            }
+            "canon": "smith"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[forge] or [make] from metal",
-        "gloss-alt": "[make] skillfully",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "[make] skillfully",
+                "tags": ["transitive"]
+            }, {
+                "gloss": "[forge] or [make] from metal",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "smoca",
@@ -8132,31 +8171,39 @@
         "origin": "old-english"
     }, {
         "key": "snearu",
-        "form-raw": "snearu",
-        "form-raw-alt": "snare",
+        "form-oe": {
+            "form": "snearu",
+            "canon": "snare"
+        },
         "type": "noun",
-        "gloss": "trap",
-        "gloss-alt": ["[string] or [cord]"],
-        "gloss-tool": "[catch] in a trap",
-        "tags": ["count", "concrete", "man-made", "tool"],
+        "senses": [
+            {
+                "gloss": ["[string] or [cord]"],
+                "tags": ["count", "concrete", "man-made"]
+            }, {
+                "gloss": "trap",
+                "gloss-tool": "[catch] in a trap",
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "sneorcan",
         "form-oe": "sneorc|an",
         "type": "verb",
         "verb-class": 3,
-        "gloss": "shrivel",
+        "gloss": "[shrivel], [dry] up",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "snēowan",
         "form-oe": "snēow|an",
         "type": "verb",
-        "verb-class": "weak",
+        "verb-class": 7,
         "gloss": ["proceed", "[go] hastily"],
         "tags": ["intransitive", "motion", "speculative"],
         "origin": "old-english",
-        "notes": "Class seems to bee unclear, following Bosworth"
+        "notes": "Class unclear - Bosworth is conflicted, Hall's lists 7"
     }, {
         "key": "snēr",
         "form-oe": "snēr",
@@ -8188,26 +8235,33 @@
         "key": "sogoþa-count",
         "form-oe": "sogoþa",
         "type": "noun",
-        "gloss": "hiccup",
-        "tags": ["count", "abstract", "body-state", "speculative"],
+        "senses": [
+            {
+                "gloss": "hiccup",
+                "tags": ["count", "abstract", "body-state", "speculative"]
+            }, {
+                "gloss": "heartburn",
+                "tags": ["mass", "abstract", "body-state", "speculative"],
+                "notes": "This usage seems to be uncertain"
+            }
+        ],
         "origin": "old-english"
-    }, {
-        "key": "sogoþa-mass",
-        "form-oe": "sogoþa",
-        "type": "noun",
-        "gloss": "heartburn",
-        "tags": ["mass", "abstract", "body-state", "speculative"],
-        "origin": "old-english",
-        "notes": "This usage seems to be uncertain"
     }, {
         "key": "sorg",
         "form-raw": "sorg",
         "form-raw-alt": ["sorh"],
         "form-canon": "sorrow",
         "type": "noun",
-        "gloss": "sorrow",
-        "gloss-alt": ["anxiety", "trouble"],
-        "tags": ["mass", "abstract", "mind-state"],
+        "senses": [
+            {
+                "gloss": ["[anxiety], [distress]", "trouble"],
+                "tags": ["mass", "abstract", "mind-state"]
+            }, {
+                "period": "modern",
+                "gloss": "sorrow",
+                "tags": ["mass", "abstract", "mind-state"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "sōð",
@@ -8221,10 +8275,17 @@
         "origin": "old-english"
     }, {
         "key": "specan",
-        "form-raw": "spec|an",
-        "form-raw-alt": ["sprec|an"],
-        "form-canon": "speak",
-        "form-participle-canon": ["spoken"],
+        "form-oe": {
+            "main": {
+                "form": "spec|an",
+                "canon": {
+                    "lemma": "speak",
+                    "past": "spoke",
+                    "past-participle": "spoken"
+                }
+            },
+            "alt": ["sprec|an"]
+        },
         "type": "verb",
         "verb-class": 5,
         "gloss": "speak",
@@ -8232,40 +8293,46 @@
         "origin": "old-english",
         "notes": "'specan' is a later OE form"
     }, {
-        "key": "spell-magic",
-        "form-raw": "spell",
-        "form-raw-alt": ["spel"],
-        "form-canon": "spell",
+        "key": "spell",
+        "form-oe": {
+            "form": "spell",
+            "canon": "spell"
+        },
         "type": "noun",
-        "gloss": ["magic [spell]"],
-        "gloss-tool": ["[cast] a spell"],
-        "tags": ["count", "abstract", "magical", "man-made", "tool"],
+        "senses": [
+            {
+                "gloss": ["news", "story", "argument"],
+                "gloss-tool": ["[give] news"],
+                "tags": ["count", "abstract", "man-made", "tool"]
+            }, {
+                "period": "modern",
+                "gloss": ["magic [spell]"],
+                "gloss-tool": ["[cast] a spell"],
+                "tags": ["count", "abstract", "magical", "man-made", "tool"]
+            }
+        ],
         "origin": "old-english"
-    }, {
-        "key": "spell-words",
-        "form-raw": "spell",
-        "form-raw-alt": ["spel"],
-        "form-canon": "spell",
-        "type": "noun",
-        "gloss": ["news", "story", "argument"],
-        "gloss-tool": ["[give] news"],
-        "tags": ["count", "abstract", "man-made", "tool", "rare"],
-        "origin": "old-english",
-        "notes": "'rare' instead of 'speculative' because I want it to appear with affixes."
     }, {
         "key": "spellian",
         "form-oe": {
             "form": "spelli|an",
-            "canon": {
-                "lemma": "spell",
-                "past-participle": ["spelled"]
-            }
+            "canon": "spell"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "spell",
-        "gloss-alt": ["[talk], [converse]", "[put] into words"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "[talk], [converse]",
+                "tags": ["intransitive"]
+            }, {
+                "gloss": "[put] into words",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "spell",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "spendan",
@@ -8273,6 +8340,7 @@
             "form": "spend|an",
             "canon": {
                 "lemma": "spend",
+                "past": "spent",
                 "past-participle": ["spent"]
             }
         },
@@ -8285,29 +8353,17 @@
         "key": "sprecel",
         "form-oe": {
             "form": "sprecel",
-            "canon": "spreckle"
+            "canon": {
+                "form": "spreckle",
+                "dialect-range": ["northern"]
+            }
         },
         "type": "noun",
         "gloss": "spot",
         "tags": ["count", "concrete", "obscure"],
         "origin": "old-english"
     }, {
-        "key": "springan",
-        "form-oe": {
-            "form": "spring|an",
-            "canon": {
-                "lemma": "spring",
-                "past-participle": ["sprung"]
-            }
-        },
-        "type": "verb",
-        "verb-class": 3,
-        "gloss": ["spring", "leap", "[burst] forth (as a fluid)"],
-        "gloss-alt": ["[grow] (as a plant)"],
-        "tags": ["intransitive"],
-        "origin": "old-english"
-    }, {
-        "key": "spring/season",
+        "key": "spring-n",
         "form-oe": {
             "form": "spring",
             "canon": "spring"
@@ -8318,16 +8374,53 @@
         "origin": "old-english",
         "notes": "Represents post-OE usage"
     }, {
+        "key": "springan-v",
+        "form-oe": {
+            "form": "spring|an",
+            "canon": {
+                "lemma": "spring",
+                "past": "sprang",
+                "past-participle": ["sprung"]
+            }
+        },
+        "type": "verb",
+        "verb-class": 3,
+        "senses": [
+            {
+                "gloss": ["leap", "[grow] (as a plant)"],
+                "tags": ["intransitive"]
+            }, {
+                "period": "modern",
+                "gloss": ["spring", "[burst] forth (as a fluid)"],
+                "tags": ["intransitive"]
+            }
+        ],
+        "origin": "old-english"
+    }, {
         "key": "spyrian",
-        "form-raw": "spyri|an",
-        "form-raw-alt": ["spiri|an"],
-        "form-canon": "speer",
+        "form-oe": {
+            "form": "spyri|an",
+            "canon": {
+                "form": "speer",
+                "dialect-range": "northern"
+            }
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["track", "[investigate] or [examine]"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Canon form based on Scottish usage, which I believe is plausible in Midlands as well. Some other similar senses."
+        "senses": [
+            {
+                "gloss": ["[leave] a trail", "[follow] a trail"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["track", "interrogate"],
+                "tags": ["transitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[inquire], [investigate]",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "stān",
         "form-oe": {
@@ -8335,18 +8428,15 @@
             "canon": "stone"
         },
         "type": "noun",
-        "gloss": "stone",
-        "tags": ["mass", "concrete", "material"],
-        "origin": "old-english"
-    }, {
-        "key": "stān-count",
-        "form-oe": {
-            "form": "stān",
-            "canon": "stone"
-        },
-        "type": "noun",
-        "gloss": "stone",
-        "tags": ["count", "concrete"],
+        "senses": [
+            {
+                "gloss": "stone",
+                "tags": ["count", "concrete"]
+            }, {
+                "gloss": "stone",
+                "tags": ["mass", "concrete", "material"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "standan",
@@ -8354,6 +8444,7 @@
             "form": "stand|an",
             "canon": {
                 "lemma": "stand",
+                "past": "stood",
                 "past-participle": ["stood"]
             }
         },
@@ -8364,9 +8455,13 @@
         "origin": "old-english"
     }, {
         "key": "stearra",
-        "form-raw": "stearra",
-        "form-raw-alt": ["steorra", "sterra"],
-        "form-canon": "star",
+        "form-oe": {
+            "main": {
+                "form": "stearra",
+                "canon": "star"
+            },
+            "alt": ["steorra", "sterra"]
+        },
         "type": "noun",
         "gloss": "star",
         "tags": ["count", "concrete", "luminous"],
@@ -8377,6 +8472,7 @@
             "form": "stel|an",
             "canon": {
                 "lemma": "steal",
+                "past": "stole",
                 "past-participle": ["stolen"]
             }
         },
@@ -8388,11 +8484,11 @@
     }, {
         "key": "stellan",
         "form-oe": {
-            "form": "stell|an",
-            "canon": {
-                "lemma": "stell",
-                "past-participle": ["stold", "stelled"]
-            }
+            "main": {
+                "form": "stell|an",
+                "canon": "stell"
+            },
+            "alt": ["stiell|an"]
         },
         "type": "verb",
         "verb-class": "weak",
@@ -8413,14 +8509,22 @@
             "form": "sting|an",
             "canon": {
                 "lemma": "sting",
+                "past": "stung",
                 "past-participle": ["stung"]
             }
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "sting",
-        "gloss-alt": "stab",
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "stab",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "sting",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "stōl",
@@ -8430,7 +8534,6 @@
         },
         "type": "noun",
         "gloss": "stool",
-        "gloss-alt": ["seat"],
         "gloss-tool": "[sit] on a stool",
         "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english"
@@ -8449,12 +8552,10 @@
         "form-oe": {
             "form": {
                 "infinitive": "streċċ|an",
+                "past": ["streht|e", "streaht|e"],
                 "past-participle": ["streht", "streaht"]
             },
-            "canon": {
-                "lemma": "stretch",
-                "past-participle": ["stretched"]
-            }
+            "canon": "stretch"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -8467,6 +8568,7 @@
             "form": "strīc|an",
             "canon": {
                 "lemma": "strike",
+                "past": "struck",
                 "past-participle": ["stricken"]
             }
         },
@@ -8483,24 +8585,31 @@
             "canon": "stound"
         },
         "type": "noun",
-        "gloss": "hour",
-        "gloss-alt": ["while", "[length] of time"],
-        "tags": ["count", "abstract", "time", "measure", "obscure"],
-        "origin": "old-english",
-        "notes": "Alt. sense in modern usage, 'a strike or blow', 'a shock or sudden pain'"
+        "senses": [
+            {
+                "gloss": "hour",
+                "tags": ["count", "abstract", "time", "measure", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": ["while", "[length] of time"],
+                "tags": ["count", "abstract", "time", "measure", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "sudden [shock] or [pain]",
+                "tags": ["count", "abstract", "body-state", "obscure"],
+                "notes": "Northern usage"
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "styrian",
         "form-oe": {
             "form": "styr|an",
-            "canon": {
-                "lemma": "stir",
-                "past-participle": ["stirred"]
-            }
+            "canon": "stir"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "stir",
-        "gloss-alt": ["move"],
+        "gloss": ["stir", "move"],
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
@@ -8531,9 +8640,15 @@
         },
         "type": "verb",
         "verb-class": 2,
-        "gloss": "eat",
-        "gloss-alt": ["[drink], [consume] liquid food", "[sip], [drink]"],
-        "tags": ["intransitive"],
+        "senses": [
+            {
+                "gloss": "[drink], [consume] liquid food",
+                "tags": ["intransitive"]
+            }, {
+                "gloss": "[sip], [drink]",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "sūr",
@@ -8574,7 +8689,6 @@
         "form-oe": "swān",
         "type": "noun",
         "gloss": ["swineherd", "herder", "peasant", "boy", "youth"],
-        "gloss-alt": ["man", "warrior"],
         "tags": ["count", "concrete", "living", "person", "gendered", "speculative"],
         "origin": "old-english",
         "notes": "Apparently related to MnE 'swain', OE 'sweġen', but as that apparently shows Norse influence (says OED), I'll consider this separate."
@@ -8583,45 +8697,31 @@
         "form-oe": "swari|an",
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[answer] or [respond]",
+        "gloss": "[answer], [respond]",
         "tags": ["intransitive", "speculative"],
         "origin": "old-english",
         "notes": "Form is not directly attested, but implied in OE 'andswarian' et al., and ME 'swaren'"
     }, {
-        "key": "swebban-intransitive",
+        "key": "swebban",
         "form-oe": {
             "form": "swebb|an",
             "canon": {
-                "form": {
-                    "lemma": "sweb",
-                    "past-participle": ["swebbed"]
-                },
+                "form": "sweb",
                 "dialect-source": "northern",
                 "dialect-range": "northern"
             }
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[swoon] or [faint]",
-        "tags": ["intransitive", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "swebban-transitive",
-        "form-oe": {
-            "form": "swebb|an",
-            "canon": {
-                "form": {
-                    "lemma": "sweb",
-                    "past-participle": ["swebbed"]
-                },
-                "dialect-source": "northern",
-                "dialect-range": "northern"
+        "senses": [
+            {
+                "gloss": "[swoon] or [faint]",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["[put] or [lull] to sleep", "kill"],
+                "tags": ["transitive", "speculative"]
             }
-        },
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": ["[put] or [lull] to sleep", "kill"],
-        "tags": ["transitive", "speculative"],
+        ],
         "origin": "old-english"
     }, {
         "key": "swefn",
@@ -8630,18 +8730,30 @@
             "canon": "sweven"
         },
         "type": "noun",
-        "gloss": "[dream] or [vision]",
-        "tags": ["count", "abstract", "man-made"],
-        "origin": "old-english",
-        "notes": "Alt. meaning 'sleep'"
+        "senses": [
+            {
+                "gloss": "[dream] or [vision]",
+                "tags": ["count", "abstract", "man-made", "obscure"]
+            }, {
+                "gloss": "sleep",
+                "tags": ["mass", "abstract", "mind-state", "body-state"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "swēġ",
         "form-oe": "swēġ",
         "type": "noun",
-        "gloss": ["[sound], [noise]"],
-        "tags": ["mass", "abstract", "homophonic"],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity"
+        "senses": [
+            {
+                "gloss": ["[sound], [noise]"],
+                "tags": ["mass", "abstract", "homophonic"]
+            }, {
+                "gloss": ["[sound], [noise]"],
+                "tags": ["count", "abstract", "homophonic"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "swēġan",
         "form-oe": "swēġ|an",
@@ -8665,14 +8777,11 @@
         "key": "sweltan",
         "form-oe": {
             "form": "swelt|an",
-            "canon": {
-                "lemma": "swelt",
-                "past-participle": ["swelt", "swelted"]
-            }
+            "canon": "swelt"
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": ["die", "faint", "[be] overcome (as with emotion, heat, etc.)"],
+        "gloss": ["[faint] or [die]", "[be] overcome (as with emotion, heat, etc.)"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
@@ -8685,19 +8794,22 @@
         "origin": "old-english"
     }, {
         "key": "sweostor",
-        "form-raw": ["sweostor", "swustor", "swester", "swuster", "swæstar", "swestar", "swystor", "swyster"],
-        "form-canon": "sister",
+        "form-oe": {
+            "form": ["sweostor", "swestor", "swistor", "swystor", "swustor"],
+            "canon": "sister"
+        },
         "type": "noun",
         "gloss": "sister",
         "tags": ["count", "concrete", "living", "person", "gendered"],
         "origin": "old-english",
-        "notes": "Wiktionary lists a lot of alternate forms. Look there for dialect info."
+        "notes": "Form possibly influenced by Norse 'systir'"
     }, {
         "key": "swerian",
         "form-oe": {
             "form": "sweri|an",
             "canon": {
                 "lemma": "swear",
+                "past": "swore",
                 "past-participle": ["sworn"]
             }
         },
@@ -8717,43 +8829,42 @@
         "origin": "old-english"
     }, {
         "key": "swīcan",
-        "form-oe": {
-            "form": "swīc|an",
-            "canon": {
-                "lemma": "swike",
-                "past-participle": ["swicken"]
+        "form-oe": "swīc|an",
+        "type": "verb",
+        "verb-class": 1,
+        "senses": [
+            {
+                "gloss": ["wander"],
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "period": "middle",
+                "gloss": "[betray] or [decieve]",
+                "tags": ["transitive", "speculative"]
             }
-        },
-        "type": "verb",
-        "verb-class": 1,
-        "gloss": ["deceive", "betray"],
-        "gloss-alt": ["wander"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english"
+        ],
+        "origin": "old-english",
+        "notes": "May have some Scottish use in MnE, but seems distinct enough to count as speculative. Also sense 'cease'"
     }, {
-        "key": "swīfan-OE",
-        "form-raw": "swīf|an",
-        "form-participle-canon": ["swived"],
-        "type": "verb",
-        "verb-class": 1,
-        "gloss": ["[move] in a course", "sweep", "intervene"],
-        "tags": ["transitive", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "swīfan-ME",
+        "key": "swīfan",
         "form-oe": {
             "form": "swīf|an",
-            "canon": {
-                "lemma": "swive",
-                "past-participle": ["swived"]
-            }
+            "canon": "swive"
         },
         "type": "verb",
         "verb-class": 1,
-        "gloss": "[copulate] with",
-        "tags": ["transitive", "sexual", "obscure"],
-        "origin": "old-english",
-        "notes": "Connection between ME+ sense of 'copulate with' appears a bit uncertain in OED, but leaving here in OE for now"
+        "senses": [
+            {
+                "gloss": "[move] in a course",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["sweep", "[intervene] in"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[copulate] with",
+                "tags": ["transitive", "sexual", "obscure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "swīn",
         "form-oe": {
@@ -8769,17 +8880,14 @@
         "key": "swincan",
         "form-oe": {
             "form": "swinc|an",
-            "canon": {
-                "lemma": "swink",
-                "past-participle": ["swunk", "swunken", "swonken", "swinkt", "swinked"]
-            }
+            "canon": "swink"
         },
         "type": "verb",
         "verb-class": 3,
         "gloss": ["[work] hard", "[labor], [toil]"],
-        "gloss-alt": ["strive"],
         "tags": ["intransitive", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Seems to act as weak in modern usage. See OED and Bosworth for more senses"
     }, {
         "key": "swinsian",
         "form-oe": "swinsi|an",
@@ -8799,23 +8907,31 @@
     }, {
         "key": "sylfer",
         "form-oe": {
-            "form": "sylfur",
-            "canon": "silver"
+            "main": {
+                "form": "sylfur",
+                "dialect": "mercian",
+                "canon": "silver"
+            },
+            "alt": [{
+                "form": "seolfor",
+                "dialect": "west-saxon"
+            }]
         },
         "type": "noun",
         "gloss": "silver",
         "tags": ["mass", "concrete", "material", "metal"],
-        "origin": "old-english",
-        "notes": "WS form 'seolvor'"
+        "origin": "old-english"
     }, {
         "key": "tǣċan",
         "form-oe": {
             "form": {
                 "infinitive": "tǣċ|an",
+                "past": "tāht|e",
                 "past-participle": ["tāht"]
             },
             "canon": {
                 "lemma": "teach",
+                "past": "taught",
                 "past-participle": ["taught"]
             }
         },
@@ -8832,9 +8948,9 @@
             "canon": "tavel"
         },
         "type": "noun",
-        "gloss": ["board [game]", "board game [piece]", "game [board]"],
-        "gloss-tool": "[play] a board game",
-        "tags": ["count", "concrete", "man-made", "obscure"],
+        "gloss": ["board [game]", "board game [piece]", "die", "game [board]"],
+        "gloss-tool": ["[play] a board game", "[play] dice"],
+        "tags": ["count", "concrete", "man-made", "speculative"],
         "origin": "old-english"
     }, {
         "key": "talu",
@@ -8843,18 +8959,27 @@
             "canon": "tale"
         },
         "type": "noun",
-        "gloss": "story",
-        "gloss-alt": ["calculation", "reckoning"],
-        "tags": ["count", "abstract", "man-made"],
+        "senses": [
+            {
+                "gloss": "calculation",
+                "tags": ["mass", "abstract", "activity"]
+            }, {
+                "gloss": "calculation",
+                "tags": ["count", "abstract", "man-made"]
+            }, {
+                "period": "modern",
+                "gloss": "story",
+                "tags": ["count", "abstract", "man-made"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "telg",
         "form-raw": "telg",
-        "form-raw-alt": ["tælg"],
         "type": "noun",
         "gloss": ["dye", "ink"],
         "gloss-tool": ["[color] with dye", "[color] with ink"],
-        "tags": ["mass", "concrete", "man-made", "tool"],
+        "tags": ["mass", "concrete", "fluid", "liquid", "man-made", "tool", "speculative"],
         "origin": "old-english"
     }, {
         "key": "tellan",
@@ -8862,18 +8987,31 @@
             "form": "tell|an",
             "canon": {
                 "lemma": "tell",
+                "past": "told",
                 "past-participle": ["told"]
             }
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "tell",
-        "gloss-alt": ["count", "calculate"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "period": "modern",
+                "gloss": "[count] or [calculate]",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "tell",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
-        "key": "tēon",
-        "form-oe": "tē|on",
+        "key": "tēon-1",
+        "form-oe": {
+            "infinitive": "tē|on",
+            "past": "tēah",
+            "past-participle": "tog+en"
+        },
         "type": "verb",
         "verb-class": 2,
         "gloss": ["[pull] or [drag]", "[bring] or [lead]", "educate"],
@@ -8881,9 +9019,13 @@
         "origin": "old-english"
     }, {
         "key": "tēon-2",
-        "form-oe": "tē|on",
+        "form-oe": {
+            "infinitive": "tē|on",
+            "past": "tāh",
+            "past-participle": "tiġ+en"
+        },
         "type": "verb",
-        "verb-class": 2,
+        "verb-class": 1,
         "gloss": "accuse",
         "tags": ["transitive", "speculative"],
         "origin": "old-english"
@@ -8896,33 +9038,27 @@
         "origin": "old-english",
         "notes": "Not tagging as time since it's not a specific time."
     }, {
-        "key": "timber-count",
+        "key": "timber",
         "form-oe": {
             "form": "timber",
             "canon": "timber"
         },
         "type": "noun",
-        "gloss": "[building] (esp. of wood)",
-        "tags": ["count", "concrete", "man-made", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "timber-mass",
-        "form-oe": {
-            "form": "timber",
-            "canon": "timber"
-        },
-        "type": "noun",
-        "gloss": ["[trees] or [wood]", "[wood] suitable for building"],
-        "tags": ["mass", "concrete", "material"],
+        "senses": [
+            {
+                "gloss": "[building] (esp. of wood)",
+                "tags": ["count", "concrete", "man-made", "speculative"]
+            }, {
+                "gloss": ["[trees] or [wood]", "[wood] suitable for building"],
+                "tags": ["mass", "concrete", "material"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "timbran",
         "form-oe": {
             "form": "timbr|an",
-            "canon": {
-                "lemma": "timber",
-                "past-participle": ["timbered"]
-            }
+            "canon": "timber"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -8930,14 +9066,14 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "timpana",
-        "form-raw": "timpana",
-        "form-raw-alt": ["tympana"],
+        "key": "timpane",
+        "form-raw": "timpane",
         "type": "noun",
         "gloss": ["drum", "small [drum]", "drumskin"],
-        "tags": ["count", "concrete", "man-made"],
+        "gloss-tool": "drum",
+        "tags": ["count", "concrete", "man-made", "tool"],
         "origin": "old-english",
-        "notes": "Historically referred to earlier instruments (timbrel, tabret). Extending sense for effect here."
+        "notes": "Historically referred to earlier instruments (timbrel, tabret). Extending sense here."
     }, {
         "key": "tin",
         "form-oe": {
@@ -8971,10 +9107,9 @@
         "key": "torht",
         "form-oe": "torht",
         "type": "adj",
-        "gloss": ["[bright], [shiny]", "[bright], [radiant]", "glorious", "resplendent"],
-        "tags": ["rare"],
-        "origin": "old-english",
-        "notes": "Chiefly poetic in OE"
+        "gloss": ["[bright], [shiny]", "[bright], [radiant]", "[glorious], [resplendent]"],
+        "tags": ["poetic"],
+        "origin": "old-english"
     }, {
         "key": "trēo",
         "form-oe": {
@@ -9004,47 +9139,48 @@
         "origin": "old-english"
     }, {
         "key": "twēoġan",
-        "form-raw": "twēoġ|an",
-        "form-raw-alt": ["twēoni|an", "twē|on"],
+        "form-oe": {
+            "main": "twēoġ|an",
+            "alt": "twē|on"
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "doubt",
-        "tags": ["transitive", "speculative"],
+        "senses": [
+            {
+                "gloss": "hesitate",
+                "tags": ["intransitive", "speculative"]
+            }, {
+                "gloss": "doubt",
+                "tags": ["transitive", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "tȳrian",
-        "form-raw": "tȳri|an",
-        "form-raw-alt": ["tēori|an"],
-        "form-canon": "tire",
-        "form-participle-canon": ["tired"],
+        "form-oe": {
+            "main": {
+                "form": "tȳri|an",
+                "canon": "tire"
+            },
+            "alt": [{
+                "form": "tēori|an"
+            }]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "[become] tired",
-        "gloss-alt": ["faint", "fail", "cease"],
         "tags": ["intransitive"],
         "origin": "old-english",
-        "notes": "Needs bitransitivity. Alt form may be more standard in OE"
+        "notes": "'tēorian' may be the more common form in OE. Some other OE senses"
     }, {
         "key": "þæċele",
         "form-oe": "þæċele",
         "type": "noun",
-        "gloss": "torch",
-        "gloss-alt": ["[lamp], [light]"],
+        "gloss": ["torch", "[lamp], [light]"],
         "gloss-tool": ["[light] up"],
         "tags": ["count", "concrete", "luminous", "man-made", "tool", "speculative"],
         "origin": "old-english",
-        "notes": "Alt. glosses are my invention"
-    }, {
-        "key": "þearf",
-        "form-oe": {
-            "form": "þearf",
-            "canon": "tharf"
-        },
-        "type": "adj",
-        "gloss": "unleavened",
-        "tags": ["obscure"],
-        "origin": "old-english",
-        "notes": "Other meanings in dialect"
+        "notes": "Alt. glosses are my extension"
     }, {
         "key": "þeġn",
         "form-oe": "þeġn",
@@ -9053,34 +9189,31 @@
         "tags": ["count", "concrete", "living", "person", "role", "speculative"],
         "origin": "old-english"
     }, {
-        "key": "þeġn-ruler",
-        "form-oe": {
-            "form": "þeġn",
-            "canon": "thane"
-        },
-        "type": "noun",
-        "gloss": "lord",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler", "obscure"],
-        "origin": "old-english"
-    }, {
         "key": "þeġnian",
-        "form-raw": "þeġni|an",
-        "form-raw-alt": ["þēn|ian"],
+        "form-raw": ["þeġni|an", "þēn|ian"],
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["serve", "[hold] office"],
-        "tags": ["intransitive", "speculative"],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity"
+        "senses": [
+            {
+                "gloss": "serve",
+                "tags": ["transitive", "speculative"]
+            }, {
+                "gloss": "[hold] an office",
+                "tags": ["intransitive", "speculative"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "þencan",
         "form-oe": {
             "form": {
                 "infinitive": "þenc|an",
+                "past": "þōht|e",
                 "past-participle": ["þōht"]
             },
             "canon": {
                 "lemma": "think",
+                "past": "thought",
                 "past-participle": ["thought"]
             }
         },
@@ -9091,54 +9224,65 @@
         "origin": "old-english"
     }, {
         "key": "þenġel",
-        "form-raw": "þenġel",
-        "form-raw-alt": ["fenġel"],
+        "form-oe": {
+            "main": "þenġel",
+            "alt": ["fenġel"]
+        },
         "type": "noun",
-        "gloss": ["lord", "prince"],
+        "gloss": "[prince] or [lord]",
         "tags": ["count", "concrete", "living", "person", "role", "ruler", "speculative", "rare"],
         "origin": "old-english"
     }, {
         "key": "þennan",
-        "form-raw": "þenn|an",
-        "form-raw-alt": ["þēn|ian"],
+        "form-oe": {
+            "main": "þenn|an",
+            "alt": ["þēn|ian"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["[stretch] out or [extend]", "[bend] (a bow)", "[prostrate] oneself", "[exert] oneself"],
-        "gloss-alt": ["overthrow"],
         "tags": ["intransitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Boswirth lists sense 'overthrow', but doesn't give example"
     }, {
         "key": "þēod-grouping",
         "form-oe": "þēod",
         "type": "noun",
-        "gloss": "[nation] or [people]",
-        "tags": ["count", "abstract", "grouping", "speculative"],
-        "origin": "old-english"
-    }, {
-        "key": "þēod-language",
-        "form-oe": "þēod",
-        "type": "noun",
-        "gloss": "language",
-        "tags": ["count", "abstract", "man-made", "speculative"],
+        "senses": [
+            {
+                "gloss": "[nation] or [people]",
+                "tags": ["count", "abstract", "grouping", "speculative"]
+            }, {
+                "gloss": "language",
+                "tags": ["count", "abstract", "man-made", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "þēon",
         "form-oe": {
             "form": "þē|on",
-            "canon": {
-                "lemma": "thee",
-                "past-participle": ["theed"]
-            }
+            "canon": "thee"
         },
         "type": "verb",
         "verb-class": 1,
-        "gloss": ["[flourish] and [prosper]", "thrive", "[be] successful"],
+        "gloss": ["[flourish], [prosper]", "thrive", "[be] successful"],
         "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
+        "key": "þeorf",
+        "form-oe": "þeorf",
+        "type": "adj",
+        "gloss": ["unleavened", "[fresh], [raw]"],
+        "tags": ["speculative"],
+        "origin": "old-english",
+        "notes": "Some modern dialect usage with different sense"
+    }, {
         "key": "þēostrian",
-        "form-raw": "þēostri|an",
-        "form-raw-alt": ["þīestri|an", "þȳstri|an"],
+        "form-oe": {
+            "main": "þēostri|an",
+            "alt": ["þīestri|an"]
+        },
         "type": "verb",
         "verb-class": "weak",
         "gloss": ["darken", "[become] dark"],
@@ -9169,10 +9313,7 @@
         "key": "þolian",
         "form-oe": {
             "form": "þoli|an",
-            "canon": {
-                "lemma": "thole",
-                "past-participle": ["tholed"]
-            }
+            "canon": "thole"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -9214,15 +9355,16 @@
         },
         "type": "noun",
         "gloss": ["dense [crowd]"],
-        "gloss-alt": ["army"],
         "tags": ["count", "concrete", "living", "grouping"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OE sense 'army'"
     }, {
         "key": "þrāwan",
         "form-oe": {
             "form": "þrāw|an",
             "canon": {
                 "lemma": "throw",
+                "past": "threw",
                 "past-participle": ["thrown"]
             }
         },
@@ -9231,7 +9373,7 @@
         "gloss": "throw",
         "tags": ["transitive", "motion"],
         "origin": "old-english",
-        "notes": "Original meaning 'twist, turn, writhe, curl'. Strong verb: þreow, past participle þrawen, geþrawen"
+        "notes": "OE meanings 'twist, turn, writhe, curl'"
     }, {
         "key": "þringan",
         "form-oe": {
@@ -9246,7 +9388,8 @@
         "gloss": ["[crowd] about", "[press] or [squeeze]", "push", "[force] one's way"],
         "gloss-alt": ["constrict"],
         "tags": ["transitive", "obscure"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "Some additional meanings in modern use"
     }, {
         "key": "þwēan",
         "form-raw": "þwē|an",
@@ -9259,10 +9402,7 @@
         "key": "þwītan",
         "form-oe": {
             "form": "þwīt|an",
-            "canon": {
-                "lemma": "thwite",
-                "past-participle": ["thwited"]
-            }
+            "canon": "thwite"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -9287,26 +9427,29 @@
         "origin": "old-english"
     }, {
         "key": "wæċċan",
-        "form-raw": "wæċċ|an",
-        "form-raw-alt": "weċċ|an",
-        "form-canon": "watch",
-        "form-participle-raw": ["wæht"],
-        "form-participle-canon": ["watched"],
+        "form-oe": {
+            "infinitive": "wæċċ|an",
+            "past": "wæht|e",
+            "past-participle": "wæht"
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "watch",
-        "gloss-alt": ["wake", "[remain] awake", "[stand] guard"],
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Needs some form of bitransitivity"
+        "senses": [
+            {
+                "gloss": ["[keep] watch", "[remain] awake"],
+                "tags": ["intransitive"]
+            }, {
+                "period": "modern",
+                "gloss": "watch",
+                "tags": ["transitive"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wæcnan",
         "form-oe": {
             "form": "wæcn|an",
-            "canon": {
-                "lemma": "waken",
-                "past-participle": ["wakened"]
-            }
+            "canon": "waken"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -9319,8 +9462,8 @@
         "key": "wǣfels",
         "form-oe": "wǣf+els",
         "type": "noun",
-        "gloss": ["covering", "cloak", "garment"],
-        "gloss-tool": ["cover", "dress"],
+        "gloss": ["covering", "cloak", "garment", "dress"],
+        "gloss-tool": ["[cover] with a cloth"],
         "tags": ["count", "concrete", "man-made", "garment", "tool"],
         "origin": "old-english"
     }, {
@@ -9388,54 +9531,41 @@
             "form": "wac|an",
             "canon": {
                 "lemma": "wake",
+                "past": "woke",
                 "past-participle": ["woken", "woke", "waked"]
             }
         },
         "type": "verb",
         "verb-class": 6,
-        "gloss": "[wake] up",
-        "gloss-alt": ["arise", "originate", "[be] born"],
-        "tags": ["intransitive"],
-        "origin": "old-english"
-    }, {
-        "key": "wacian",
-        "form-oe": {
-            "form": "waci|an",
-            "canon": {
-                "lemma": "wake",
-                "past-participle": ["woken", "woke", "waked"]
+        "senses": [
+            {
+                "gloss": ["arise", "originate", "[be] born"],
+                "tags": ["intransitive"]
+            }, {
+                "period": "modern",
+                "gloss": "[wake] up",
+                "tags": ["intransitive"]
             }
-        },
-        "type": "verb",
-        "verb-class": "weak",
-        "gloss": "[be] or [remain] awake",
-        "gloss-alt": ["[keep] watch"],
-        "tags": ["intransitive"],
-        "origin": "old-english"
+        ],
+        "origin": "old-english",
+        "notes": "Merged with 'wacian' to form MnE 'wake'"
     }, {
         "key": "wald",
-        "form-raw": "wald",
-        "form-raw-alt": ["weald"],
+        "form-oe": {
+            "main": "wald",
+            "alt": ["weald"]
+        },
         "type": "noun",
         "gloss": "ruler",
         "tags": ["count", "concrete", "living", "person", "role", "ruler"],
         "origin": "old-english",
         "notes": "Using 'wald' as chosen form as it matches Anglian patterns. Not sure if it has quite the same sense, but occurs in compounds like 'bretwalda'"
     }, {
-        "key": "waldan",
-        "form-raw": "wald|an",
-        "form-raw-alt": ["weald|an"],
-        "form-canon": "wald",
-        "form-participle-canon": ["walded"],
-        "type": "verb",
-        "verb-class": 7,
-        "gloss": ["govern", "inherit", "rule"],
-        "tags": ["transitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Chosen form is an Anglian form of my own inference. Seems to work out the same anyway"
-    }, {
         "key": "walu",
-        "form-oe": "walu",
+        "form-oe": {
+            "form": "walu",
+            "canon": "wale"
+        },
         "type": "noun",
         "gloss": ["[mark] left by a wound", "scar"],
         "tags": ["count", "abstract", "obscure"],
@@ -9448,12 +9578,15 @@
         },
         "type": "noun",
         "gloss": "womb",
-        "gloss-alt": ["belly"],
         "tags": ["count", "concrete", "bodypart"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "OE sense 'belly'"
     }, {
         "key": "wancol",
-        "form-oe": "wancol",
+        "form-oe": {
+            "form": "wancol",
+            "canon": "wankle"
+        },
         "type": "adj",
         "gloss": ["[weak] or [unreliable]"],
         "tags": ["obscure"],
@@ -9462,43 +9595,84 @@
         "key": "wanian",
         "form-oe": {
             "form": "wani|an",
-            "canon": {
-                "lemma": "wane",
-                "past-participle": ["waned"]
-            }
+            "canon": "wane"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "lessen",
-        "tags": ["intransitive"],
-        "origin": "old-english",
-        "notes": "OE had transitive meanings 'impair', 'infringe', 'annul'"
+        "senses": [
+            {
+                "gloss": ["[weaken], [impair]", "[reduce] or [limit]"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "lessen",
+                "tags": ["intransitive"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wāse",
         "form-oe": "wāse",
         "type": "noun",
-        "gloss": ["mud", "slime"],
-        "tags": ["mass", "concrete", "fluid", "liquid", "material", "shiny"],
+        "senses": [
+            {
+                "gloss": "marsh",
+                "tags": ["count", "concrete", "terrain", "living", "speculative"]
+            }, {
+                "gloss": ["mud", "slime"],
+                "tags": ["mass", "concrete", "fluid", "liquid", "material", "shiny", "speculative"]
+            }
+        ],
         "origin": "old-english",
-        "notes": "Origin of 'ooze', but feels different enough to leave without canon. TODO: Add sense 'marsh'."
+        "notes": "Origin of 'ooze', but form is different enough to leave without canon and treat as speculative."
     }, {
-        "key": "weald-woodland",
-        "form-oe": {
-            "form": "weald",
-            "canon": "wald"
-        },
+        "key": "weald",
+        "form-oe": [
+            {
+                "form": "weald",
+                "dialect": "west-saxon",
+                "canon": ["wald", "weald"]
+            }, {
+                "form": "wald",
+                "dialect": "anglian",
+                "canon": "wold"
+            }
+        ],
         "type": "noun",
         "gloss": "[wood] or [woodland]",
         "tags": ["count", "concrete", "living", "terrain", "obscure"],
-        "origin": "old-english",
-        "notes": "Canon forms 'weald' and 'wold' also exist"
+        "origin": "old-english"
+    }, {
+        "key": "wealdan",
+        "form-oe": {
+            "form": "weald|an",
+            "canon": "wald"
+        },
+        "type": "verb",
+        "verb-class": 7,
+        "gloss": ["govern", "inherit", "rule"],
+        "tags": ["transitive", "obscure"],
+        "origin": "old-english"
     }, {
         "key": "wearg",
-        "form-raw": ["warg", "weg", "wearg", "wearh"],
+        "form-oe": {
+            "form": ["wearg", "wearh", "wearġ"]
+        },
         "type": "noun",
-        "gloss": ["criminal", "monster", "wolf"],
-        "tags": ["count", "concrete", "living", "person"],
-        "origin": "old-english"
+        "senses": [
+            {
+                "gloss": "[outlaw], [criminal]",
+                "tags": ["count", "concrete", "living", "person", "speculative"]
+            }, {
+                "gloss": "[monster], evil [spirit]",
+                "tags": ["count", "concrete", "living", "magical", "speculative"]
+            }, {
+                "gloss": "wolf",
+                "tags": ["count", "concrete", "living", "animal", "wild", "speculative"]
+            }
+        ],
+        "origin": "old-english",
+        "notes": "Wiktionary (and maybe alternation with 'h'?) suggests lack of palatalization, but OED shows ME form 'wari'. Including both. 'wolf' gloss is not seen in OE but suggested by cognates e.g. in ON"
     }, {
         "key": "wearr",
         "form-oe": "wearr",
@@ -9510,89 +9684,79 @@
         "key": "weaxan",
         "form-oe": {
             "form": "weax|an",
-            "canon": {
-                "lemma": "wax",
-                "past-participle": ["waxed"]
-            }
+            "canon": "wax"
         },
         "type": "verb",
         "verb-class": 7,
         "gloss": "grow",
-        "gloss-alt": ["flourish", "[become] strong"],
         "tags": ["intransitive"],
         "origin": "old-english"
     }, {
-        "key": "weċġ",
-        "form-oe": "weċġ",
-        "type": "noun",
-        "gloss": "wedge",
-        "gloss-alt": ["ingot"],
-        "tags": ["count", "concrete", "shape"],
+        "key": "weċċan",
+        "form-oe": {
+            "infinitive": "weċċ|an",
+            "past": "weaht|e",
+            "past-participle": "weaht"
+        },
+        "type": "verb",
+        "verb-class": "weak",
+        "gloss": "[wake], [rouse]",
+        "tags": ["transitive", "speculative"],
         "origin": "old-english"
     }, {
         "key": "weddian",
         "form-oe": {
             "form": "wedd|an",
-            "canon": {
-                "lemma": "wed",
-                "past-participle": ["wedded"]
-            }
+            "canon": "wed"
         },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "marry",
         "tags": ["transitive"],
         "origin": "old-english",
-        "notes": "Alternate meaning 'pledge, promise'"
-    }, {
-        "key": "wegan",
-        "form-oe": {
-            "form": "weg|an",
-            "canon": {
-                "lemma": "weigh",
-                "past-participle": ["weighed"]
-            }
-        },
-        "type": "verb",
-        "verb-class": 5,
-        "gloss": "weigh",
-        "gloss-alt": ["carry"],
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "TODO: I can't explain the spelling"
+        "notes": "OE meaning 'pledge, promise'"
     }, {
         "key": "weldan",
-        "form-raw": "weld|an",
-        "form-raw-alt": ["wield|an", "wild|an"],
-        "form-canon": "wield",
-        "form-participle-canon": ["wielded"],
+        "form-oe": {
+            "main": {
+                "form": "weld|an",
+                "dialect": "anglian",
+                "canon": "wield"
+            },
+            "alt": [{
+                "form": "wield|an",
+                "dialect": "west-saxon"
+            }]
+        },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "wield",
-        "gloss-alt": ["control", "[have] power over"],
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "Chosen form is Anglian"
+        "senses": [
+            {
+                "gloss": ["control", "[have] power over"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "wield",
+                "tags": ["transitive"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wēnan",
         "form-oe": {
             "form": "wēn|an",
-            "canon": {
-                "lemma": "ween",
-                "past-participle": ["wend", "went", "weened"]
-            }
+            "canon": "ween"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[hold] (of an opinion)",
-        "gloss-alt": ["[expect] or [hope]"],
+        "gloss": ["[hold] (of an opinion)", "[expect] or [hope]"],
         "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wenċel",
         "form-raw": ["wenċel", "winċel"],
         "type": "noun",
-        "gloss": ["child", "servant", "slave"],
+        "gloss": ["child", "[servant] or [slave]"],
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
         "notes": "Ancestor of 'wench', but feels distinct enough I want to leave it separate"
@@ -9602,29 +9766,41 @@
             "form": "wend|an",
             "canon": {
                 "lemma": "wend",
-                "past-participle": ["went", "wended"]
+                "past": "went",
+                "past-participle": "went"
             }
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[go] by indirect route",
-        "gloss-alt": ["turn", "change", "translate", "happen", "depart"],
-        "tags": ["intransitive"],
+        "senses": [
+            {
+                "gloss": ["change", "translate"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "[go] by indirect route",
+                "tags": ["intransitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "weorpan",
         "form-oe": {
             "form": "weorp|an",
-            "canon": {
-                "lemma": "warp",
-                "past-participle": ["warped"]
-            }
+            "canon": "warp"
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "warp",
-        "gloss-alt": ["throw"],
-        "tags": ["transitive"],
+        "senses": [
+            {
+                "gloss": "throw",
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "warp",
+                "tags": ["transitive"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "weorþ",
@@ -9640,24 +9816,27 @@
         "key": "weorþan",
         "form-oe": {
             "form": "weorþ|an",
-            "canon": {
-                "lemma": "worth",
-                "past-participle": ["worthen", "worth", "worthed"]
-            }
+            "canon": "worth"
         },
         "type": "verb",
         "verb-class": 3,
-        "gloss": "become",
-        "tags": ["transitive", "speculative", "homophonic"],
-        "origin": "old-english",
-        "notes": "Alternate intransitive meaning 'happen'"
+        "senses": [
+            {
+                "gloss": "happen",
+                "tags": ["intransitive", "speculative", "homophonic"]
+            }, {
+                "gloss": "become",
+                "tags": ["transitive", "speculative", "homophonic"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wēpan",
         "form-oe": "wēp|an",
         "type": "verb",
         "verb-class": 7,
         "gloss": "negotiate",
-        "tags": ["intransitive"],
+        "tags": ["intransitive", "homophonic"],
         "origin": "old-english"
     }, {
         "key": "wer",
@@ -9690,11 +9869,9 @@
     }, {
         "key": "wiċġ",
         "form-raw": "wiċġ",
-        "form-raw-alt": ["wyċġ"],
         "type": "noun",
-        "gloss": ["horse", "steed"],
-        "gloss-alt": ["donkey"],
-        "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "speculative"],
+        "gloss": ["[horse] or [donkey]", "steed"],
+        "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "poetic", "speculative"],
         "origin": "old-english"
     }, {
         "key": "wīd",
@@ -9712,9 +9889,16 @@
             "canon": "wife"
         },
         "type": "noun",
-        "gloss": "wife",
-        "gloss-alt": ["woman"],
-        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "senses": [
+            {
+                "gloss": "woman",
+                "tags": ["count", "concrete", "living", "person", "gendered"]
+            }, {
+                "period": "modern",
+                "gloss": "wife",
+                "tags": ["count", "concrete", "living", "person", "gendered"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wīġ",
@@ -9725,18 +9909,29 @@
         "origin": "old-english"
     }, {
         "key": "wiġel",
-        "form-raw": ["wiġel", "wiġle"],
+        "form-oe": {
+            "form": ["wiġel", "wiġle"],
+            "canon": "wile"
+        },
         "type": "noun",
-        "gloss": "trickery",
-        "gloss-alt": ["sorcery", "divination"],
-        "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
+        "senses": [
+            {
+                "gloss": "[sorcery], [divination]",
+                "tags": ["mass", "abstract", "man-made", "activity", "speculative"]
+            }, {
+                "period": "modern",
+                "gloss": "trickery",
+                "tags": ["mass", "abstract", "man-made", "activity", "speculative"]
+            }
+        ],
         "origin": "old-english",
         "notes": "Unclear whether the two senses should be combined or separate. See OED's discussion at 'wile' vs 'wiel'"
     }, {
         "key": "wiht",
-        "form-raw": "wiht",
-        "form-raw-alt": ["wyht", "wuht"],
-        "form-canon": "wight",
+        "form-oe": {
+            "form": ["wiht", "wyht"],
+            "canon": "wight"
+        },
         "type": "noun",
         "gloss": ["person", "living [being]"],
         "tags": ["count", "concrete", "living", "person", "obscure"],
@@ -9768,7 +9963,7 @@
         },
         "type": "noun",
         "gloss": "wind",
-        "tags": ["mass", "concrete", "fluid", "gas"],
+        "tags": ["mass", "concrete", "fluid", "gas", "weather"],
         "origin": "old-english"
     }, {
         "key": "winter",
@@ -9783,21 +9978,30 @@
     }, {
         "key": "wīs",
         "form-oe": {
-            "form": "wīs",
-            "canon": "wise"
+            "main": {
+                "form": "wīse",
+                "canon": "wise"
+            },
+            "alt": ["wīs"]
         },
         "type": "adj",
         "gloss": "wise",
         "origin": "old-english",
-        "notes": "Bright cites this as 'wīse', so I'd guess this is based on an inflected form, but I kind of want to leave it for the goofy alternate form 'wice'"
+        "notes": "OED indicates modern form as based on oblique form with inflection."
     }, {
         "key": "wīte",
         "form-oe": "wīte",
         "type": "noun",
-        "gloss": "[torment] or [punishment]",
-        "tags": ["mass", "abstract", "man-made", "activity", "speculative"],
-        "origin": "old-english",
-        "notes": "TODO: Add count sense 'penalty, fine'"
+        "senses": [
+            {
+                "gloss": "[penalty], [fine]",
+                "tags": ["count", "abstract", "speculative"]
+            }, {
+                "gloss": "[torment] or [punishment]",
+                "tags": ["mass", "abstract", "man-made", "activity", "speculative"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "witt",
         "form-oe": {
@@ -9853,15 +10057,15 @@
         "key": "wlite",
         "form-oe": "wlite",
         "type": "noun",
-        "gloss": "[aspect] or [appearance]",
-        "tags": ["mass", "abstract", "speculative", "homophonic"],
-        "origin": "old-english"
-    }, {
-        "key": "wlite-good-looks",
-        "form-oe": "wlite",
-        "type": "noun",
-        "gloss": "good [looks]",
-        "tags": ["mass", "abstract", "quality", "speculative", "homophonic"],
+        "senses": [
+            {
+                "gloss": "[aspect] or [appearance]",
+                "tags": ["mass", "abstract", "speculative", "homophonic"]
+            }, {
+                "gloss": "good [looks]",
+                "tags": ["mass", "abstract", "quality", "speculative", "homophonic"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wōd-adj",
