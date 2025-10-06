@@ -10077,7 +10077,7 @@
         "gloss-alt": ["frantic", "possessed"],
         "tags": ["obscure"],
         "origin": "old-english",
-        "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
+        "notes": "Spellings as 'wood' or 'wud' are also seen in MnE; preferring 'wode' to avoid the homophone"
     }, {
         "key": "wōd-noun",
         "form-oe": {
@@ -10088,20 +10088,16 @@
         "gloss": "madness",
         "tags": ["mass", "abstract", "mind-state", "obscure"],
         "origin": "old-english",
-        "notes": "MnE spelling 'wood' is more common, but fudging this one for variety"
+        "notes": "Spellings as 'wood' or 'wud' are also seen in MnE; preferring 'wode' to avoid the homophone"
     }, {
         "key": "wōgian",
         "form-oe": {
             "form": "wōgi|an",
-            "canon": {
-                "lemma": "woo",
-                "past-participle": ["wooed"]
-            }
+            "canon": "woo"
         },
         "type": "verb",
         "verb-class": "weak",
         "gloss": "woo",
-        "gloss-alt": ["marry"],
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
@@ -10118,18 +10114,15 @@
             "canon": "welkin"
         },
         "type": "noun",
-        "gloss": ["cloud"],
-        "tags": ["count", "concrete", "weather", "glooming", "obscure"],
-        "origin": "old-english"
-    }, {
-        "key": "wolcen-singleton",
-        "form-oe": {
-            "form": "wolcen",
-            "canon": "welkin"
-        },
-        "type": "noun",
-        "gloss": ["sky", "heavens", "clouds"],
-        "tags": ["singleton", "concrete", "place", "luminous", "glooming", "obscure"],
+        "senses": [
+            {
+                "gloss": ["cloud"],
+                "tags": ["count", "concrete", "weather", "glooming", "obscure"]
+            }, {
+                "gloss": ["sky", "heavens", "clouds"],
+                "tags": ["singleton", "concrete", "place", "luminous", "glooming", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wolf",
@@ -10188,8 +10181,15 @@
             "canon": "wretch"
         },
         "type": "noun",
-        "gloss": ["miserable [person]", "exile"],
-        "tags": ["count", "concrete", "living", "person"],
+        "senses": [
+            {
+                "gloss": "miserable [person]",
+                "tags": ["count", "concrete", "living", "person"]
+            }, {
+                "gloss": "exile",
+                "tags": ["count", "concrete", "living", "person"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wreċċan",
@@ -10203,10 +10203,7 @@
         "key": "wrēġan",
         "form-oe": {
             "form": "wrēġ|an",
-            "canon": {
-                "lemma": "wray",
-                "past-participle": ["wrayed"]
-            }
+            "canon": "wray"
         },
         "type": "verb",
         "verb-class": "weak",
@@ -10216,17 +10213,20 @@
         "notes": "Various forms attested. My process gives 'wry' currently, which is one of the ones seen, but using 'wray' for variety."
     }, {
         "key": "wrēon",
-        "form-raw": "wrē|on",
-        "form-raw-alt": ["wrī|on"],
-        "form-canon": "wry",
-        "form-participle-raw": "wriġ+en",
-        "form-participle-canon": ["wried"],
+        "form-oe": [
+            {
+                "form": "wrē|on",
+                "canon": "wree"
+            }, {
+                "form": "wrī|on",
+                "canon": "wry"
+            }
+        ],
         "type": "verb",
         "verb-class": 1,
         "gloss": ["cover", "clothe", "hide"],
         "tags": ["transitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Reflexes 'wree' and 'wry' are seen. The two forms here produce them respectively, though predominance of 'wry' may be due to analogy with other words."
+        "origin": "old-english"
     }, {
         "key": "wrīġels",
         "form-oe": "wrīġ+els",
@@ -10238,16 +10238,20 @@
         "key": "wrīġian",
         "form-oe": {
             "form": "wrīġi|an",
-            "canon": {
-                "lemma": "wry",
-                "past-participle": ["wried"]
-            }
+            "canon": "wry"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[turn] or [twist]",
-        "gloss-alt": ["[endeavor], [venture]"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[endeavor], [venture]"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "period": "modern",
+                "gloss": "[turn] or [twist]",
+                "tags": ["transitive", "obscure"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wrītan",
@@ -10255,6 +10259,7 @@
             "form": "wrīt|an",
             "canon": {
                 "lemma": "write",
+                "past": "wrote",
                 "past-participle": ["written"]
             }
         },
@@ -10264,24 +10269,21 @@
         "tags": ["transitive"],
         "origin": "old-english"
     }, {
-        "key": "wudu-material",
+        "key": "wudu",
         "form-oe": {
             "form": "wudu",
             "canon": "wood"
         },
         "type": "noun",
-        "gloss": "wood",
-        "tags": ["mass", "concrete", "living", "material"],
-        "origin": "old-english"
-    }, {
-        "key": "wudu-terrain",
-        "form-oe": {
-            "form": "wudu",
-            "canon": "wood"
-        },
-        "type": "noun",
-        "gloss": "[wood] or [woodland]",
-        "tags": ["count", "concrete", "living", "terrain"],
+        "senses": [
+            {
+                "gloss": "wood",
+                "tags": ["mass", "concrete", "living", "material"]
+            }, {
+                "gloss": "[wood] or [woodland]",
+                "tags": ["count", "concrete", "living", "terrain"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wul",
@@ -10297,24 +10299,33 @@
         "key": "wuldor",
         "form-oe": "wuldor",
         "type": "noun",
-        "gloss": ["[glory], [splendor]", "[reverence] or [praise]", "worship"],
-        "tags": ["mass", "abstract"],
-        "origin": "old-english",
-        "notes": "TODO: Split to put quality tag on 'glory, splendor'"
+        "senses": [
+            {
+                "gloss": ["[reverence] or [praise]", "worship"],
+                "tags": ["mass", "abstract"]
+            }, {
+                "gloss": "[glory], [splendor]",
+                "tags": ["mass", "abstract", "quality"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wunian",
         "form-oe": {
             "form": "wuni|an",
-            "canon": {
-                "lemma": "wone",
-                "past-participle": ["woned"]
-            }
+            "canon": "wone"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "[stay] or [dwell] in a place",
-        "gloss-alt": ["[be] in a certain condition", "[be] located somewhere", "[remain], [last]", "endure", "exist"],
-        "tags": ["transitive", "obscure"],
+        "senses": [
+            {
+                "gloss": ["[be] in a certain condition", "[be] located somewhere", "[remain], [last]", "endure", "exist"],
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": "[stay] or [dwell] in a place",
+                "tags": ["intransitive", "obscure"]
+            }
+        ],
         "origin": "old-english",
         "notes": "TODO: Investigate this vowel change"
     }, {
@@ -10331,7 +10342,7 @@
         "gloss": "[joy], [delight]",
         "tags": ["mass", "abstract", "mind-state", "obscure"],
         "origin": "old-english",
-        "notes": "Occurs in 'winsome', leaving canonless though"
+        "notes": "Occurs in 'winsome'"
     }, {
         "key": "wyrd",
         "form-oe": {
@@ -10355,24 +10366,34 @@
         "key": "wyrġan",
         "form-oe": {
             "form": "wyrġ|an",
-            "canon": {
-                "lemma": "worry",
-                "past-participle": ["worried"]
-            }
+            "canon": "worry"
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": "worry",
-        "gloss-alt": ["strangle"],
-        "tags": ["transitive"],
-        "origin": "old-english",
-        "notes": "TODO: currently I get 'wory'. Should this be changed somehow?"
+        "senses": [
+            {
+                "gloss": ["strangle"],
+                "tags": ["transitive"]
+            }, {
+                "period": "modern",
+                "gloss": "worry",
+                "tags": ["transitive"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wyrġ+en",
         "form-raw": ["wyrġ+en", "wierġ+en"],
         "type": "noun",
-        "gloss": ["female [criminal]", "she-beast", "she-wolf"],
-        "tags": ["count", "concrete", "living", "person", "gendered"],
+        "senses": [
+            {
+                "gloss": "female [criminal]",
+                "tags": ["count", "concrete", "living", "person", "gendered", "speculative"]
+            }, {
+                "gloss": ["she-beast", "she-wolf"],
+                "tags": ["count", "concrete", "living", "animal", "wild", "gendered", "speculative"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wyrm",
@@ -10381,19 +10402,29 @@
             "canon": "worm"
         },
         "type": "noun",
-        "gloss": "worm",
-        "gloss-alt": ["snake", "dragon"],
-        "tags": ["count", "concrete", "living", "animal", "wild"],
+        "senses": [
+            {
+                "gloss": ["snake", "dragon"],
+                "tags": ["count", "concrete", "living", "animal", "wild"]
+            }, {
+                "period": "modern",
+                "gloss": "worm",
+                "tags": ["count", "concrete", "living", "animal", "wild"]
+            }
+        ],
         "origin": "old-english"
     }, {
         "key": "wyrt",
-        "form-raw": "wyrt",
-        "form-raw-alt": ["wert", "wirt"],
-        "form-canon": "wort",
+        "form-oe": {
+            "form": "wyrt",
+            "canon": {
+                "form": "wort",
+                "dialect-source": "southern"
+            }
+        },
         "type": "noun",
         "gloss": "plant",
         "tags": ["count", "concrete", "living", "plant"],
-        "origin": "old-english",
-        "notes": "'wert' is Kentish, 'wirt' LWS"
+        "origin": "old-english"
     }
 ]
