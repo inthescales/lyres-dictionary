@@ -1052,8 +1052,7 @@
                 "tags": ["intransitive", "speculative"]
             }
         ],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity"
+        "origin": "old-english"
     }, {
         "key": "bera",
         "form-oe": {
@@ -4387,16 +4386,26 @@
         "origin": "old-english"
     }, {
         "key": "ġiċel",
-        "form-raw": ["ġiċel", "ġicol"],
-        "form-canon": "ickle",
+        "form-oe": {
+            "main": {
+                "form": "ġicol",
+                "canon": "ickle"
+            },
+            "alt": ["ġiċel"]
+        },
         "type": "noun",
         "gloss": "icicle",
         "tags": ["count", "concrete", "shiny", "obscure"],
         "origin": "old-english"
     }, {
         "key": "gidiġ",
-        "form-raw": "gid+iġ",
-        "form-raw-alt": ["gyd+iġ"],
+        "form-oe": {
+            "main": {
+                "form": "gid+iġ",
+                "canon": "giddy"
+            },
+            "alt": ["gyd+iġ"]
+        },
         "type": "adj",
         "gloss": "giddy",
         "origin": "old-english"
@@ -4404,32 +4413,27 @@
         "key": "ġiefan",
         "form-oe": [
             {
-                "form": {
-                    "infinitive": ["ġief|an", "ġif|an"],
-                    "past-participle": ["ġief+en", "ġif+en"]
-                },
+                "form": ["ġief|an", "ġif|an"],
                 "dialect": "west-saxon",
                 "canon": {
                     "form": {
                         "lemma": "yive",
+                        "past": "yave",
                         "past-participle": "yiven"
                     },
-                    "dialect": "west-country"
+                    "dialect-range": "west-country"
                 }
             }, {
-                "form": {
-                    "lemma": ["ġef|an", "ġeof|an"],
-                    "past-participle": ["ġef+en", "ġeof+en"]
-                },
-                "dialect": ["anglian", "kentish"]
+                "form": ["ġef|an", "ġeof|an"],
+                "dialect": "anglian"
             }
         ],
-        "form-raw": "ġief|an",
         "type": "verb",
         "verb-class": 5,
         "gloss": "give",
         "tags": ["transitive", "speculative"],
-        "origin": "old-english"
+        "origin": "old-english",
+        "notes": "The 'ġefan' form should also be tagged as Kentish but I don't support multiple dialects right now. TODO: fix this"
     }, {
         "key": "ġield",
         "form-oe": [
@@ -4517,7 +4521,7 @@
         "origin": "old-english"
     }, {
         "key": "ġīsl",
-        "form-raw": ["ġīsl", "ġīsel"],
+        "form-oe": "ġīsl",
         "type": "noun",
         "gloss": "hostage",
         "tags": ["count", "concrete", "living", "person", "speculative"],
@@ -4532,7 +4536,7 @@
         "origin": "old-english"
     }, {
         "key": "ġiw",
-        "form-raw": ["ġiw", "ġiow", "ġeow", "eow"],
+        "form-oe": ["ġiw", "ġiow", "ġeow", "eow"],
         "type": "noun",
         "senses": [
             {
@@ -5424,7 +5428,7 @@
         "origin": "old-english"
     }, {
         "key": "hrace",
-        "form-raw": "hrace",
+        "form-oe": "hrace",
         "type": "noun",
         "senses": [
             {
@@ -5448,7 +5452,7 @@
         "origin": "old-english"
     }, {
         "key": "hreddan",
-        "form-raw": "hredd|an",
+        "form-oe": "hredd|an",
         "type": "verb",
         "verb-class": "weak",
         "gloss": "rescue",
@@ -5624,7 +5628,7 @@
         "origin": "old-english"
     }, {
         "key": "husċ",
-        "form-raw": ["husċ", "hux"],
+        "form-oe": ["husċ", "hux"],
         "type": "noun",
         "gloss": "[insult], [scorn], or [scoffing]",
         "tags": ["mass", "abstract", "activity", "speculative"],
@@ -6010,10 +6014,16 @@
         },
         "type": "verb",
         "verb-class": "weak",
-        "gloss": ["[tell] lies, [falsify]"],
-        "tags": ["intransitive", "obscure", "homophonic"],
-        "origin": "old-english",
-        "notes": "needs bitransitivity"
+        "senses": [
+            {
+                "gloss": "[tell] lies",
+                "tags": ["intransitive", "obscure", "homophonic"]
+            }, {
+                "gloss": "falsify",
+                "tags": ["transitive", "obscure", "homophonic"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "leċġan",
         "form-oe": {
@@ -6306,7 +6316,7 @@
         "origin": "old-english"
     }, {
         "key": "lybb",
-        "form-raw": "lybb",
+        "form-oe": "lybb",
         "type": "noun",
         "gloss": ["[potion] or [concoction]", "[medicine], [drug]", "poison", "magic [charm]"],
         "tags": ["count", "concrete", "liquid", "man-made", "speculative"],
@@ -6578,7 +6588,7 @@
         "origin": "old-english"
     }, {
         "key": "meox",
-        "form-raw": ["mix", "mux"],
+        "form-oe": ["mix", "mux"],
         "type": "noun",
         "gloss": ["feces", "[filth], [muck]"],
         "tags": ["mass", "concrete", "material", "speculative"],
@@ -6610,7 +6620,7 @@
         "notes": "See OED on form history"
     }, {
         "key": "mēse",
-        "form-raw": ["mēse", "mēose", "mīse", "mȳse"],
+        "form-oe": ["mēse", "mēose", "mīse", "mȳse"],
         "type": "noun",
         "gloss": "table",
         "tags": ["count", "concrete", "man-made", "speculative"],
@@ -6825,9 +6835,13 @@
         "notes": "Later variations of 'morgen'. Didn't appear until ME, so this fudges a bit"
     }, {
         "key": "mos",
-        "form-raw": "mos",
-        "form-raw-alt": ["mēos", "mose"],
-        "form-canon": "moss",
+        "form-oe": {
+            "main": {
+                "form": "mos",
+                "canon": "moss"
+            },
+            "alt": ["mēos", "mose"]
+        },
         "type": "noun",
         "senses": [
             {
@@ -7091,7 +7105,7 @@
         "origin": "old-english"
     }, {
         "key": "plēon",
-        "form-raw": "plē|on",
+        "form-oe": "plē|on",
         "type": "verb",
         "verb-class": 5,
         "gloss": "[risk], [endanger]",
@@ -8083,10 +8097,16 @@
         },
         "type": "verb",
         "verb-class": 2,
-        "gloss": ["smoke", "[emit] smoke", "fumigate", "[scent] with incense"],
-        "tags": ["intransitive", "obscure"],
-        "origin": "old-english",
-        "notes": "Needs bitransitivity or sense"
+        "senses": [
+            {
+                "gloss": "[emit] smoke",
+                "tags": ["intransitive", "obscure"]
+            }, {
+                "gloss": ["fumigate", "[scent] with incense"],
+                "tags": ["transitive", "obscure"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "smerian",
         "form-oe": {
@@ -8248,9 +8268,13 @@
         "origin": "old-english"
     }, {
         "key": "sorg",
-        "form-raw": "sorg",
-        "form-raw-alt": ["sorh"],
-        "form-canon": "sorrow",
+        "form-oe": {
+            "main": {
+                "form": "sorg",
+                "canon": "sorrow"
+            },
+            "alt": "sorh"
+        },
         "type": "noun",
         "senses": [
             {
@@ -8975,7 +8999,7 @@
         "origin": "old-english"
     }, {
         "key": "telg",
-        "form-raw": "telg",
+        "form-oe": "telg",
         "type": "noun",
         "gloss": ["dye", "ink"],
         "gloss-tool": ["[color] with dye", "[color] with ink"],
@@ -9067,7 +9091,7 @@
         "origin": "old-english"
     }, {
         "key": "timpane",
-        "form-raw": "timpane",
+        "form-oe": "timpane",
         "type": "noun",
         "gloss": ["drum", "small [drum]", "drumskin"],
         "gloss-tool": "drum",
@@ -9190,7 +9214,7 @@
         "origin": "old-english"
     }, {
         "key": "þeġnian",
-        "form-raw": ["þeġni|an", "þēn|ian"],
+        "form-oe": ["þeġni|an", "þēn|ian"],
         "type": "verb",
         "verb-class": "weak",
         "senses": [
@@ -9392,7 +9416,7 @@
         "notes": "Some additional meanings in modern use"
     }, {
         "key": "þwēan",
-        "form-raw": "þwē|an",
+        "form-oe": "þwē|an",
         "type": "verb",
         "verb-class": 6,
         "gloss": "wash",
@@ -9477,9 +9501,10 @@
         "notes": "Two entries in Bosworth. Maybe merger of two etymons?"
     }, {
         "key": "wæġn",
-        "form-raw": "wæġn",
-        "form-raw-alt": ["wæġen", "wǣn"],
-        "form-canon": "wain",
+        "form-oe": {
+            "form": "wæġn",
+            "canon": "wain"
+        },
         "type": "noun",
         "gloss": "wagon",
         "gloss-tool": "[carry] in a vehicle",
@@ -9487,24 +9512,36 @@
         "origin": "old-english"
     }, {
         "key": "wænge",
-        "form-raw": "wænge",
-        "form-raw-alt": ["wange", "wonge", "wenge"],
-        "form-canon": "wang",
+        "form-oe": {
+            "main": {
+                "form": "wænge",
+                "canon": "wang"
+            },
+            "alt": ["wange", "wonge", "wenge"]
+        },
         "type": "noun",
         "gloss": ["cheek", "molar"],
         "tags": ["count", "concrete", "bodypart", "obscure"],
         "origin": "old-english"
     }, {
         "key": "wǣpen",
-        "form-raw": "wǣpen",
-        "form-raw-alt": ["wǣpnæ"],
-        "form-canon": "weapon",
+        "form-oe": {
+            "form": "wǣpen",
+            "canon": "weapon"
+        },
         "type": "noun",
-        "gloss": "weapon",
-        "gloss-tool": ["[attack] with a weapon"],
-        "tags": ["count", "concrete", "man-made", "tool"],
-        "origin": "old-english",
-        "notes": "Alt. meaning 'penis'"
+        "senses": [
+            {
+                "gloss": "penis",
+                "tags": ["count", "concrete", "living", "bodypart", "bodypart-single"]
+            }, {
+                "period": "modern",
+                "gloss": "weapon",
+                "gloss-tool": ["[attack] with a weapon"],
+                "tags": ["count", "concrete", "man-made", "tool"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "wærc",
         "form-oe": {
@@ -9754,12 +9791,12 @@
         "origin": "old-english"
     }, {
         "key": "wenċel",
-        "form-raw": ["wenċel", "winċel"],
+        "form-oe": ["wenċel", "winċel"],
         "type": "noun",
         "gloss": ["child", "[servant] or [slave]"],
         "tags": ["count", "concrete", "living", "person"],
         "origin": "old-english",
-        "notes": "Ancestor of 'wench', but feels distinct enough I want to leave it separate"
+        "notes": "Ancestor of 'wench', but feels distinct enough I want to leave it separate. TODO: Is there a rule governing loss of the -el? OED compares it to 'myċel' -> 'much'"
     }, {
         "key": "wendan",
         "form-oe": {
@@ -9868,7 +9905,7 @@
         "notes": "Feminine form in OE was 'wiċċa', but they come out the same"
     }, {
         "key": "wiċġ",
-        "form-raw": "wiċġ",
+        "form-oe": "wiċġ",
         "type": "noun",
         "gloss": ["[horse] or [donkey]", "steed"],
         "tags": ["count", "concrete", "living", "animal", "tame", "mammal", "poetic", "speculative"],
@@ -10069,9 +10106,10 @@
         "origin": "old-english"
     }, {
         "key": "wōd-adj",
-        "form-raw": "wōd",
-        "form-raw-alt": ["wēde"],
-        "form-canon": "wode",
+        "form-oe": {
+            "form": "wōd",
+            "canon": "wode"
+        },
         "type": "adj",
         "gloss": ["[mad], [insane]", "furious", "rabid"],
         "gloss-alt": ["frantic", "possessed"],
@@ -10330,7 +10368,7 @@
         "notes": "TODO: Investigate this vowel change"
     }, {
         "key": "wylf+en",
-        "form-raw": ["wylf+en", "wylf"],
+        "form-oe": ["wylf+en", "wylf"],
         "type": "noun",
         "gloss": "she-wolf",
         "tags": ["count", "concrete", "living", "animal", "wild", "mammal", "gendered", "speculative"],
@@ -10383,7 +10421,7 @@
         "origin": "old-english"
     }, {
         "key": "wyrġ+en",
-        "form-raw": ["wyrġ+en", "wierġ+en"],
+        "form-oe": ["wyrġ+en", "wierġ+en"],
         "type": "noun",
         "senses": [
             {
