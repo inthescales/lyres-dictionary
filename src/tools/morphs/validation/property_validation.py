@@ -8,6 +8,21 @@ from src.tools.morphs.validation.type_validation import All, Any, Array, Dict, I
 from src.tools.morphs.schemas.languages import valid_languages as all_languages
 from src.tools.morphs.schemas.properties import properties as valid_properties
 
+# Requirement generation helpers ==========================
+
+# Generates a requirement for checking that a morph has a tag from a certain set
+def make_tag_requirement(setname, values, error):
+    return Any([
+        All([
+            Dict({ "tags": Array(String(ValueSet(setname, values)), require_all=False)}, restrict=False),
+        ]),
+        All([
+            Dict({ "senses": Array(Dict({ "tags": Array(String(ValueSet(setname, values)), require_all=False)}, restrict=False)) }, restrict=False),
+        ])
+    ],
+    custom_error=error
+    )
+
 # Requirement definitions =================================
 
 gloss_requirement = Any([
@@ -75,18 +90,11 @@ for language in all_languages:
 # Properties required by all morphs of a certain type
 type_requirements = {
     "noun": [
-        Any([
-            All([
-                Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False),
-                Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)
-            ]),
-            All([
-                Dict({ "senses": Array(Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False)) }, restrict=False),
-                Dict({ "senses": Array(Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)) }, restrict=False)
-            ])
-        ],
-        custom_error="all nouns must have a countability tag and a concreteness tag"
-        )
+        make_tag_requirement("countability", ["count", "mass", "singleton", "uncountable"], "all nouns must have a countability tag"),
+        make_tag_requirement("concreteness", ["concrete", "abstract"], "all nouns must have a concreteness tag")
+    ],
+    "verb": [
+        make_tag_requirement("transitivity", ["intransitive", "transitive"], "all verbs must have a transitivity tag"),
     ],
     "suffix": [
         Dict({ "derive-from": One_Or_More(String(ValueSets.type)) }, restrict=False),
