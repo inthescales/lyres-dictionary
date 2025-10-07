@@ -321,12 +321,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "rotten",
-                "tags": []
+                "gloss": "rotten"
             }, {
                 "period": "modern",
-                "gloss": "[confused], [muddled]",
-                "tags": []
+                "gloss": "[confused], [muddled]"
             }
         ],
         "origin": "old-english",
@@ -696,12 +694,10 @@
         "verb-class": 7,
         "senses": [
             {
-                "gloss": ["[summon], [call] out", "proclaim"],
-                "tags": ["transitive"]
+                "gloss": ["[summon], [call] out", "proclaim"]
             }, {
                 "period": "modern",
-                "gloss": "prohibit",
-                "tags": ["transitive"]
+                "gloss": "prohibit"
             }
         ],
         "tags": ["transitive"],
@@ -1358,12 +1354,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "joyful",
-                "tags": []
+                "gloss": "joyful"
             }, {
                 "period": "modern",
-                "gloss": "[indifferent] or [careless]",
-                "tags": []
+                "gloss": "[indifferent] or [careless]"
             }
         ],
         "origin": "old-english"
@@ -2228,12 +2222,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "alive",
-                "tags": []
+                "gloss": "alive"
             }, {
                 "period": "modern",
-                "gloss": "fast",
-                "tags": []
+                "gloss": "fast"
             }
         ],
         "origin": "old-english"
@@ -2409,12 +2401,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "[valuable], [expensive]",
-                "tags": []
+                "gloss": "[valuable], [expensive]"
             }, {
                 "period": "modern",
-                "gloss": "beloved",
-                "tags": []
+                "gloss": "beloved"
             }
         ],
         "origin": "old-english"
@@ -3117,12 +3107,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "[doomed] to die",
-                "tags": []
+                "gloss": "[doomed] to die"
             }, {
                 "period": "modern",
-                "gloss": "[strange] or [otherworldly]",
-                "tags": []
+                "gloss": "[strange] or [otherworldly]"
             }
         ],
         "origin": "old-english"
@@ -3469,11 +3457,9 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "fresh",
-                "tags": []
+                "gloss": "fresh"
             }, {
-                "gloss": "without salt (of water)",
-                "tags": []
+                "gloss": "without salt (of water)"
             }
         ],
         "origin": "old-english",
@@ -3824,14 +3810,12 @@
         "verb-class": 3,
         "senses": [
             {
-                "gloss": "ask",
-                "tags": ["transitive", "obscure"]
+                "gloss": "ask"
             }, {
-                "gloss": "inquire",
-                "tags": ["intransitive", "obscure"]
+                "gloss": "inquire"
             }
         ],
-        "tags": ["intransitive", "obscure"],
+        "tags": ["transitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "fremian",
@@ -3863,7 +3847,6 @@
                 "tags": ["mass", "abstract", "quality", "speculative"]
             }
         ],
-        "tags": ["mass", "abstract"],
         "origin": "old-english"
     }, {
         "key": "frēo",
@@ -4557,12 +4540,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "[bright], [shining]",
-                "tags": []
+                "gloss": "[bright], [shining]"
             }, {
                 "period": "modern",
-                "gloss": "glad",
-                "tags": []
+                "gloss": "glad"
             }
         ],
         "origin": "old-english"
@@ -4690,11 +4671,9 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": ["[fierce], [cruel]", "terrible"],
-                "tags": []
+                "gloss": ["[fierce], [cruel]", "terrible"]
             }, {
-                "gloss": ["[gloomy] or [forbidding]"],
-                "tags": []
+                "gloss": ["[gloomy] or [forbidding]"]
             }
         ],
         "origin": "old-english"
@@ -5965,12 +5944,10 @@
         "type": "adj",
         "senses": [
             {
-                "gloss": "hated",
-                "tags": []
+                "gloss": "hated"
             }, {
                 "period": "modern",
-                "gloss": "[unwilling] or [disinclined]",
-                "tags": []
+                "gloss": "[unwilling] or [disinclined]"
             }
         ],
         "origin": "old-english"
@@ -6199,7 +6176,6 @@
                 "tags": ["transitive", "obscure"]
             }
         ],
-        "tags": ["intransitive", "obscure"],
         "origin": "old-english"
     }, {
         "key": "liþ",
@@ -10410,14 +10386,13 @@
         "verb-class": "weak",
         "senses": [
             {
-                "gloss": ["strangle"],
-                "tags": ["transitive"]
+                "gloss": ["strangle"]
             }, {
                 "period": "modern",
-                "gloss": "worry",
-                "tags": ["transitive"]
+                "gloss": "worry"
             }
         ],
+        "tags": ["transitive"],
         "origin": "old-english"
     }, {
         "key": "wyrġ+en",

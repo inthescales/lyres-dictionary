@@ -3,7 +3,7 @@ import src.tools.morphs.validation.formsets.oe_formset_validation as old_english
 
 from src.tools.morphs.schemas.languages import valid_languages
 from src.tools.morphs.schemas.periods import periods_for
-from src.tools.morphs.validation.type_validation import All, Any, Array, Dict, Integer, Meta, One_Or_More, Opt, String, ValueSet, ValueSets
+from src.tools.morphs.validation.type_validation import All, Any, Array, Dict, Integer, Meta, Not, One_Or_More, Opt, String, ValueSet, ValueSets
 
 from src.tools.morphs.schemas.languages import valid_languages as all_languages
 from src.tools.morphs.schemas.properties import properties as valid_properties
@@ -30,6 +30,7 @@ def make_universal_requirements(language):
     return [
         Dict({ "key": String() }, restrict=False),
         Dict({ "type": String(ValueSets.type) }, restrict=False),
+        Dict({ "tags": Opt(Array(String(ValueSets.tag))) }, restrict=False),
         Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False),
         Any([
                 gloss_requirement,
@@ -39,7 +40,7 @@ def make_universal_requirements(language):
                             Dict({
                                 "id": Opt(Any([String(), Integer()], custom_error="invalid sense ID")),
                                 "period": Opt(String(ValueSet("period", periods))),
-                                "tags": Array(String(ValueSets.tag)) 
+                                "tags": Opt(Array(String(ValueSets.tag)))
                             }, restrict=False),
                             gloss_requirement
                         ])
@@ -48,6 +49,22 @@ def make_universal_requirements(language):
                 )
             ],
             custom_error="must have either a gloss or a list of senses"
+        ),
+        Not(
+            All([
+                Dict({ "tags": Array(String(ValueSets.tag)) }, restrict=False),
+                Dict(
+                    { "senses": Array(
+                            Dict({
+                                "tags": Array(String(ValueSets.tag))
+                            },
+                            restrict=False),
+                        require_all=False)
+                    },
+                    restrict=False
+                )
+            ]),
+            custom_error="cannot have tags both on the morph and in senses"
         )
     ]
 

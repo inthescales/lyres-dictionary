@@ -280,6 +280,27 @@ class All(Type):
 
         return errors
 
+class Not(Type):
+    name = "not"
+
+    def __init__(self, child, custom_error):
+        self.child = child
+        self.custom_error = custom_error
+
+    def __str__(self):
+        return "Not(" + str(self.child) + ")"
+
+    def get_errors(self, value, meta):
+        child_errors = self.child.get_errors(value, meta)
+
+        if len(child_errors) == 0:
+            if self.custom_error != None:
+                return [TypeError(self.custom_error)]
+            else:
+                return [WeakError("'not' failed with child: " + str(child) + meta.context)]
+        else:
+            return []
+
 # Other Types ----------------------------
 
 # Validation metadata

@@ -24,6 +24,8 @@ class Morph:
 
         # TODO: Consider a lens system rather than storing the sense in the morph itself
         self.sense = self.choose_sense(sense)
+
+        print(self.tags())
     
     # TODO: Maybe move this to morphothec
     @classmethod
@@ -174,6 +176,8 @@ class Morph:
     def tags(self):
         if "tags" in self.sense.dict:
             return self.sense.dict["tags"]
+        elif "tags" in self.morph:
+            return self.morph["tags"]
         else:
             return []
 
