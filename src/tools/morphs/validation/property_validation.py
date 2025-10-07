@@ -80,9 +80,12 @@ type_requirements = {
                 Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False),
                 Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)
             ]),
-            Dict({ "senses": Array(Dict({}, restrict=False)) }, restrict=False)
+            All([
+                Dict({ "senses": Array(Dict({ "tags": Array(String(ValueSet("countability", ["count", "mass", "singleton", "uncountable"])), require_all=False)}, restrict=False)) }, restrict=False),
+                Dict({ "senses": Array(Dict({ "tags": Array(String(ValueSet("concreteness", ["concrete", "abstract"])), require_all=False)}, restrict=False)) }, restrict=False)
+            ])
         ],
-        custom_error="all nouns must have either a list of tags or a list of senses"
+        custom_error="all nouns must have a countability tag and a concreteness tag"
         )
     ],
     "suffix": [
