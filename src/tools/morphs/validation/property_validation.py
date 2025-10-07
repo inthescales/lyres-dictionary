@@ -161,7 +161,7 @@ origin_type_requirements = {
                     Dict({ "form-raw": One_Or_More(String()) }, restrict=False),
                     Dict({ "form-oe": old_english.schema_head }, restrict=False)
                 ],
-                custom_error="missing required form property: 'form-stem', 'form-raw'"
+                custom_error="missing required form property: 'form-stem', 'form-raw', 'form-oe'"
             )
         ],
         "adj": [

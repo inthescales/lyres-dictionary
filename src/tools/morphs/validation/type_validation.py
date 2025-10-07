@@ -163,7 +163,7 @@ class Dict(Type):
     def key_match(self, value, meta):
         return type(value) == dict \
         and all([type(exp) == Opt or key in value.keys() for key, exp in self.reference.items()])\
-        and all([key in self.reference.items() for key in value.keys()])
+        and (not self.restrict or all([key in self.reference.keys() for key in value.keys()]))
 
     def get_errors(self, value, meta):
         errors = []
