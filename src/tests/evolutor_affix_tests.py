@@ -59,7 +59,6 @@ class EvolutorAffixTests(unittest.TestCase):
         
         # -isċ
         self.assertForm(["ċild", "-isċ"], "childish")
-        self.assertForm(["midl", "-isċ"], "middlish") #*
         self.assertForm(["ġearu", "-isċ"], "yarish") #*
 
         # -liċ

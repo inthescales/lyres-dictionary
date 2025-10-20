@@ -10,7 +10,7 @@ class AlternateFormAndGlossTransform:
     
     @staticmethod
     def is_eligible(word, context):
-        return context.alternate_form != None and "gloss-alt" in word.root_morph().morph
+        return context.alternate_form != None and context.alternate_gloss != None
 
     @staticmethod
     def override(word):
@@ -22,11 +22,11 @@ class AlternateFormAndGlossTransform:
 
     @staticmethod
     def apply(word, context):
-        new_morph = derivative_morph.with_alternate_form_and_gloss(word.root_morph(), context.alternate_form)
+        new_morph = derivative_morph.with_alternate_form_and_gloss(word.root_morph(), context.alternate_form, context.alternate_gloss)
         word.set_morphs([new_morph])
 
-        # Most of the time, let this be a free transform
-        if random.randint(1, 4) > 1:
-            return TransformResult(False, free=True)
+        # Half of the time, let this be a free transform
+        if random.randint(1, 2) > 1:
+            return TransformResult(True, free=True)
         else:
             return TransformResult(True)

@@ -2,6 +2,7 @@ import random
 
 import src.evolutor.participles as participle
 import src.generation.former as former
+import src.generation.sense_choice as sense_choice
 import src.utils.helpers as helpers
 
 from src.evolutor.engine.config import Config
@@ -13,56 +14,92 @@ from src.generation.transforms.type.add_preposition import AddPrepositionTransfo
 from src.generation.transforms.type.add_suffix import AddSuffixTransform
 from src.generation.transforms.type.alternate_form import AlternateFormTransform
 from src.generation.transforms.type.alternate_form_and_gloss import AlternateFormAndGlossTransform
-from src.generation.transforms.type.alternate_gloss import AlternateGlossTransform
+# from src.generation.transforms.type.alternate_gloss import AlternateGlossTransform
 from src.generation.transforms.type.numerical_circumfix import NumericalCircumfixTransform
 from src.generation.transforms.type.past_participle import PastParticipleTransform
 from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
 from src.utils.logging import Logger
 
+# Transform Lists ==================================
+
+# Transforms that modify the form or meaning of a simplex root
+
+root_transforms = [
+    AlternateFormTransform,
+    # AlternateGlossTransform,
+    AlternateFormAndGlossTransform,
+    PastParticipleTransform
+]
+
+# Transforms that build up a word, e.g. by adding affixes
+
+building_transforms = [
+    AddSuffixTransform,
+    AddPrepositionTransform,
+    AddPrefixTransform,
+    AddModernPrefixTransform,
+    RelationalCircumfixTransform,
+    NumericalCircumfixTransform
+]
+
+# Functions ========================================
+
 def get_context(word, morphothec, is_single):
     root_morph = word.root_morph()
+    rand = random.Random(root_morph.seed)
+
+    formset = root_morph.get_formset()
+
+    # Find any relevant canon form
+    canon_form = None
+    if formset != None and len(formset.canon_forms) > 0:
+        canon_paradigms = helpers.list_if_not(formset.canon_forms[0].canon.paradigm)
+        canon_form = rand.choice(canon_paradigms).lemma
 
     # See if an alternate form is available
     # TODO: Find a way to generate all possible alt. forms rather than relying on rolling one
     alternate_form = None
-    if is_single \
-        and "form-canon" in root_morph.morph \
-        and not root_morph.has_tag("speculative") \
-        and not root_morph.has_tag("obscure"):
-            env = word.environment_for_index(0)
-            config = former.Former_Config(True, False)
-            form = former.form(root_morph, env, config)
-            if form != root_morph.morph["form-canon"]:
-                alternate_form = form
+    if formset != None and len(formset.canon_forms) > 0:
+        metaform = rand.choice(formset.all)
+        paradigms = helpers.list_if_not(metaform.paradigm)
+        form = rand.choice(paradigms).lemma
+        env = word.environment_for_index(0)
+        config = former.Former_Config(True, False, seed=root_morph.seed)
+        evolved_form = former.evolve(form, root_morph)
+        if evolved_form != canon_form:
+            alternate_form = evolved_form
     
-    # Generate a participle form if possible
+    # See if an alternate gloss is available
+    alternate_gloss = None
+    earlier_senses = sense_choice.all_nonrecent(root_morph.all_senses(), root_morph.get_origin(), root_morph.seed)
+    if len(earlier_senses) > 0:
+        sense = rand.choice(earlier_senses)
+        alternate_gloss = sense.dict["gloss"]
+
+    # Generate a past participle form if possible
     past_participle_form = None
     if "form-raw" in root_morph.morph and "verb-class" in root_morph.morph:
         config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])
         form = helpers.one_or_random(root_morph.morph["form-raw"], seed=root_morph.seed)
         past_participle_form = participle.oe_form_to_ne_participle(form, root_morph.morph["verb-class"], config)
 
-    return TransformContext(morphothec, alternate_form, past_participle_form)
+    return TransformContext(morphothec, canon_form, alternate_form, alternate_gloss, past_participle_form)
 
-def transform_word(word, morphothec, is_single):
+# Returns a variant form of a single-morph root, if it is possible to get one
+# Returns whether this should consume a transform
+def variant_root(word, morphothec):
+    if len(word.morphs) == 1:
+        result = transform_word(word, morphothec, False, transforms=root_transforms)
+        if result.success:
+            print("--- ROOT TRANSFORMED ---")
+        return result.free
+    else:
+        return False
+
+def transform_word(word, morphothec, is_single, transforms=building_transforms):
     # Get transform context
 
     context = get_context(word, morphothec, is_single)
-
-    # List all transforms
-
-    transforms = [
-        AddSuffixTransform,
-        AddPrepositionTransform,
-        AddPrefixTransform,
-        AddModernPrefixTransform,
-        RelationalCircumfixTransform,
-        NumericalCircumfixTransform,
-        AlternateFormTransform,
-        AlternateGlossTransform,
-        AlternateFormAndGlossTransform,
-        PastParticipleTransform
-    ]
 
     # Check for overrides
 

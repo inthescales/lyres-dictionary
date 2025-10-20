@@ -4,37 +4,12 @@ import src.utils.helpers as helpers
 
 from src.models.morph import Morph
 
-# Returns a random number of transformations to apply to the given word
-def transform_count(word):
-    bag = [
-        (1, 5),
-        (2, 3)
-    ]
-
-    if word.get_origin() == "old-english":
-        if word.root_morph().has_tag("speculative"):
-            bag = [
-                (0, 3),
-                (1, 1)
-            ]
-        elif word.root_morph().has_tag("obscure"):
-            bag = [
-                (0, 1),
-                (1, 5)
-            ]
-        else:
-            bag = [
-                (1, 1)
-            ]
-
-    return helpers.choose_bag(bag)
-
 # Returns a random root morph to use as the basis for a word
 def seed_root(morphothec):
     languages_and_weights = [
         ["latin", 1],
         ["greek", 1],
-        ["old-english", 0.5]
+        ["old-english", 0.3]
     ]
 
     bag = [(language, int(morphothec.root_count(language=language) * weight)) for language, weight in languages_and_weights]
@@ -49,7 +24,7 @@ def seed_root(morphothec):
     elif choice == "old-english":
         expressions = [
             ({ "has-tag": "speculative"}, 2),
-            ({ "has-tag": "obscure"}, 2),
+            ({ "has-tag": "obscure"}, 1),
             ({ "not": { "has-any-tags": ["speculative", "obscure"] } }, 1)
         ]
         root = get_root(choice, expressions, morphothec)
@@ -76,3 +51,22 @@ def get_root_by_type(language, type_weights, morphothec):
     choices = morphothec.filter_type(type, language)
     key = random.choice(choices)
     return Morph.with_key(key, morphothec)
+
+# Returns a random number of transformations to apply to the given word
+def transform_count(word):
+    if word.root_morph().has_tag("final"):
+        return 0
+
+    if word.get_origin() == "old-english":
+        if word.root_morph().has_tag("speculative"):
+            return 0
+        else:
+            # TODO: Allow 2 when gloss ordering is predictable (fix error with words like be-[noun]-[suffix])
+            return 1
+
+    bag = [
+        (1, 5),
+        (2, 3)
+    ]
+
+    return helpers.choose_bag(bag)

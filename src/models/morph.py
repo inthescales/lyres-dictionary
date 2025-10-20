@@ -1,20 +1,13 @@
 import random
 
 import src.generation.former as former
+import src.generation.forming.oe_formset as oe_formset
+import src.generation.sense_choice as sense_choice
 import src.utils.helpers as helpers
 
+from src.models.sense import Sense
 from src.morphs.expressions import evaluate_expression
 from src.morphs.requirements import meets_requirements
-from src.tools.morphs.schemas.periods import periods_for, default_period_for # TODO: move this to language model?
-
-class Sense:
-    def __init__(self, sdict, language):
-        self.dict = sdict
-
-        if "period" in sdict:
-            self.period = sdict["period"]
-        else:
-            self.period = default_period_for(language)
 
 class Morph:
     def __init__(self, base_dict, sense=None):
@@ -22,10 +15,8 @@ class Morph:
         self.morph = self.base.copy()
         self.seed = random.randint(0, 100)
 
-        # TODO: Consider a lens system rather than storing the sense in the morph itself
+        self.formset = self.get_formset()
         self.sense = self.choose_sense(sense)
-
-        print(self.tags())
     
     # TODO: Maybe move this to morphothec
     @classmethod
@@ -100,6 +91,13 @@ class Morph:
         return self.morph["type"]
 
     # Form -----
+
+    def get_formset(self):
+        if "form-oe" in self.morph:
+            self.formset = oe_formset.read(self.morph["form-oe"], self.get_type())
+            return self.formset
+
+        return None
 
     def has_raw_form(self):
         return "form-raw" in self.morph
@@ -176,8 +174,6 @@ class Morph:
     def tags(self):
         if "tags" in self.sense.dict:
             return self.sense.dict["tags"]
-        elif "tags" in self.morph:
-            return self.morph["tags"]
         else:
             return []
 
@@ -213,40 +209,17 @@ class Morph:
     def default_sense(self):
         return Sense(self.morph, self.get_origin())
 
-    # Pick a sense according to rules and randomness
-    def random_sense(self):
-        senses = self.all_senses()
-        periods = periods_for(self.get_origin())
-
-        sense_periods = []
-        for sense in senses:
-            if sense.period not in sense_periods:
-                sense_periods.append(sense.period)
-
-        latest_period = periods[0]
-        for period in periods:
-            if period in sense_periods:
-                latest_period = period
-
-        rand = random.Random(self.seed)
-        latest_senses = [s for s in senses if s.period == latest_period]
-        old_senses = [s for s in senses if s not in latest_senses]
-        if rand.randint(0, 4) > 0 or len(old_senses) == 0:
-            return rand.choice(latest_senses)
-        else:
-            return rand.choice(old_senses)
-
     # Choose the sense to be used as the main one for this morph
     def choose_sense(self, ident):
         if "senses" in self.morph:
             if ident != None:
                 return self.get_sense(ident)
             else:
-                return self.random_sense()
+                return sense_choice.random_latest(self.all_senses(), self.get_origin(), self.seed)
         else:
             return self.default_sense()
 
-    # Syntheses
+    # Syntheses ------------------
     
     def is_root(self):
         return self.morph["type"] in ["noun", "verb", "adj", "number"]
@@ -264,5 +237,5 @@ class Morph:
         return self.has_tag("final")
 
     def final_ok(self):
-        has_form = "form-final" in self.morph or "form" in self.morph or "form-raw" in self.morph
+        has_form = "form-final" in self.morph or "form" in self.morph or "form-oe" in self.morph or "form-raw" in self.morph
         return not self.has_tag("non-final") and has_form

@@ -8,7 +8,9 @@ class AlternateFormTransform:
     
     @staticmethod
     def is_eligible(word, context):
-        return context.alternate_form != None
+        return not word.root_morph().has_tag("obscure") \
+            and not word.root_morph().has_tag("speculative") \
+            and context.alternate_form != None
 
     @staticmethod
     def override(word):
@@ -20,7 +22,7 @@ class AlternateFormTransform:
 
     @staticmethod
     def apply(word, context):
-        new_morph = derivative_morph.with_alternate_form(word.root_morph(), context.alternate_form)
+        new_morph = derivative_morph.with_alternate_form(word.root_morph(), context.alternate_form, context.canon_form)
         word.set_morphs([new_morph])
         return TransformResult(True)
 

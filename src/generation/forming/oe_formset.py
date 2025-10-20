@@ -29,6 +29,8 @@ class Formset_OE():
 			if alt != None:			
 				self.all += alt
 
+		self.canon_forms = [form for form in self.all if form.canon != None]
+
 	def __str__(self):
 		return "type: " + self.type + "\nmain: " + str(self.main) + "\nalt: " + str(self.alt)
 

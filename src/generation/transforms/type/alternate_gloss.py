@@ -8,7 +8,7 @@ class AlternateGlossTransform:
     
     @staticmethod
     def is_eligible(word, context):
-        return "gloss-alt" in word.root_morph().morph
+        return context.alternate_gloss != None
 
     @staticmethod
     def override(word):
@@ -20,6 +20,6 @@ class AlternateGlossTransform:
 
     @staticmethod
     def apply(word, context):
-        new_morph = derivative_morph.with_alternate_gloss(word.root_morph())
+        new_morph = derivative_morph.with_alternate_gloss(word.root_morph(), context.alternate_gloss)
         word.set_morphs([new_morph])
         return TransformResult(True)

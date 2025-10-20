@@ -1,3 +1,5 @@
+import random
+
 import src.generation.seeding as seeding
 import src.generation.transforms.transforms as transforms
 
@@ -10,7 +12,15 @@ def generate_word(morphothec):
     root = seeding.seed_root(morphothec)
     word.morphs = [root]
 
+    rand = random.Random(root.seed)
+    used_variant = False
+    if rand.randint(0, 2):
+        used_variant = transforms.variant_root(word, morphothec)
+
     transform_count = seeding.transform_count(word)
+    if used_variant:
+        transform_count = max(transform_count - 1, 0)
+
     maximum_size = 3
     max_failures = 3
     

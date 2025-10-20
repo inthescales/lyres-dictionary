@@ -46,10 +46,6 @@ def get_form(word, former_config=None):
 
         env = word.environment_for_index(index)
         random = Random(morph.seed)
-        # Previous behavior: set canon lock false, with chance of alt forms, for obscure
-        # if former_config == None and morph.has_tag("obscure") and random.choice([True, False]):
-        #     former_config = Former_Config(random.choice([True, False]), False)
-
         if former_config != None:
             addition = former.form(morph, env, former_config)
         else:

@@ -1,4 +1,3 @@
-import src.generation.forming.oe_formset as oe_formset
 import src.utils.helpers as helpers
 
 from random import Random
@@ -22,12 +21,11 @@ def form(morph, env, config=None):
 
     # Read an Old English formset
     if morph.get_origin() == "old-english" and "form-oe" in morph.morph:
-        formset = oe_formset.read(morph.morph["form-oe"], morph.morph["type"])
+        formset = morph.get_formset()
 
         # If canon-locked, use a random canon form if any
-        canon_forms = [form for form in formset.all if form.canon != None]
-        if len(canon_forms) > 0 and config.canon_lock:
-            canonset = helpers.one_or_random(canon_forms).canon
+        if len(formset.canon_forms) > 0 and config.canon_lock:
+            canonset = helpers.one_or_random(formset.canon_forms).canon
             return helpers.one_or_random(canonset.paradigm).lemma
 
         # Otherwise choose a raw form and evolve it
@@ -142,12 +140,5 @@ def evolve_chunks(form, morph):
 
 # Evolve a historical form into a modern form
 def evolve(form, morph):
-    # Common morphs already typically use canon-lock. Turning this off for more alternate forms
-    # if morph.has_tag("obscure") or morph.has_tag("speculative"):
-    #     locked = False
-    # else:
-    #     locked = True
-    locked = False
-
-    config = Config(locked=locked, seed=morph.seed)
+    config = Config(seed=morph.seed)
     return evolutor.oe_form_to_ne_form(form, config) 
