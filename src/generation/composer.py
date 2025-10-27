@@ -222,7 +222,7 @@ def finalize_definition(word, definition):
     if word.get_type() == "verb":
         return "to " + glosser.inflect_gloss(definition, inflection.infinitive)
     elif word.get_type() == "noun":
-        last_morph = word.last_morph()
+        last_morph = word.last_morph()        
         inflected = glosser.inflect_gloss(definition, inflection.singular)
 
         if last_morph.has_tag("count"):

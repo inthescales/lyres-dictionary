@@ -36,6 +36,7 @@ def get_root(language, expression_weights, morphothec):
     expression = helpers.choose_bag(expression_weights)
     choices = morphothec.filter(language, expression)
     morph = random.choice(choices)
+    return Morph.with_key("mos", morphothec)
     return Morph(morph)
 
 # Get a random root from the given language, weighted by type count
@@ -50,6 +51,7 @@ def get_root_by_type(language, type_weights, morphothec):
     type = helpers.choose_bag(bag)
     choices = morphothec.filter_type(type, language)
     key = random.choice(choices)
+    key = "mos"
     return Morph.with_key(key, morphothec)
 
 # Returns a random number of transformations to apply to the given word

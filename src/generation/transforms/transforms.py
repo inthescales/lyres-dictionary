@@ -42,6 +42,8 @@ building_transforms = [
     NumericalCircumfixTransform
 ]
 
+all_transforms = root_transforms + building_transforms
+
 # Functions ========================================
 
 def get_context(word, morphothec, is_single):
@@ -96,7 +98,7 @@ def variant_root(word, morphothec):
     else:
         return False
 
-def transform_word(word, morphothec, is_single, transforms=building_transforms):
+def transform_word(word, morphothec, is_single, transforms=all_transforms):
     # Get transform context
 
     context = get_context(word, morphothec, is_single)

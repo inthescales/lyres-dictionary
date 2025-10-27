@@ -18,7 +18,7 @@ class AlternateFormAndGlossTransform:
 
     @staticmethod
     def weight(word):
-        return 50
+        return 150
 
     @staticmethod
     def apply(word, context):

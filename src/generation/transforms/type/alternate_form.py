@@ -18,7 +18,7 @@ class AlternateFormTransform:
 
     @staticmethod
     def weight(word):
-        return 10
+        return 5
 
     @staticmethod
     def apply(word, context):
