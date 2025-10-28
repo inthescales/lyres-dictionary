@@ -1135,7 +1135,7 @@
         "declension": 3,
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "small %@",
+        "gloss": "small [%@]",
         "requires": {
             "follows": {
                 "and": [

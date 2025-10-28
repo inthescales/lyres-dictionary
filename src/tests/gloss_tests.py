@@ -101,6 +101,9 @@ class GlossTests(unittest.TestCase):
 
     def testGlossPunctuation(self):
         self.assertGloss(["nuntiare", "-or"], "one who announces, makes known")
+
+    def testPassthroughGlosses(self):
+        self.assertGloss(["cynos", "-arch-", "-y-passthrough"], "rule by dogs")
         
     # Helpers ===============================
     

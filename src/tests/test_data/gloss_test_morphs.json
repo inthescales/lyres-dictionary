@@ -56,6 +56,14 @@
         "origin": "latin"
     },
     {
+        "key": "cynos",
+        "form-stem": "cyn",
+        "type": "noun",
+        "gloss": "dog",
+        "tags": ["count", "concrete", "living", "animal"],
+        "origin": "greek"
+    },
+    {
         "key": "gravis",
         "form-stem": "grav",
         "type": "adj",
@@ -315,6 +323,29 @@
         ],
         "tags": ["count"],
         "origin": "latin"
+    },
+    {
+        "key": "-arch-",
+        "form-stem": "arch",
+        "form-final": "arch",
+        "type": "suffix",
+        "derive-from": ["noun", "number"],
+        "derive-to": "noun",
+        "gloss": "rule by %pl",
+        "tags": ["mass", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    },
+    {
+        "key": "-y-passthrough",
+        "form-stem": "i",
+        "form-final": "y",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "%@",
+        "suffixes": [],
+        "tags": ["uncountable", "abstract", "no-gen"],
+        "origin": "greek"
     },
     {
         "key": "ad-",

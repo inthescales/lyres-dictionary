@@ -5,6 +5,8 @@ import src.utils.inflection as inflection
 def gloss(morph, env):
     morph_dict = morph.sense.dict
 
+    gloss = None
+
     # Check for special 'gloss-relative' glosses where prepositions are involved
     if env.prev \
         and ( \
@@ -12,37 +14,38 @@ def gloss(morph, env):
             or (morph.get_type() == "verb" and env.prev.get_type() == "prep") \
         ) \
         and "gloss-relative" in morph_dict:
-        if morph.get_type() == "verb" and len(morph_dict["gloss-relative"].split(" ")) == 1:
-            return "[" + morph_dict["gloss-relative"] + "]"
-        else:
-            return morph_dict["gloss-relative"]
+        gloss = morph_dict["gloss-relative"]
     
     # Check for a basic gloss
-    if "gloss" in morph_dict:
+    elif "gloss" in morph_dict:
         gloss = helpers.one_or_random(morph_dict["gloss"], seed=morph.seed)
-        if morph.get_type() in ["noun", "verb"] and len(gloss.split(" ")) == 1 and gloss[0] not in ["%", "&"]:
-            return "[" + gloss + "]"
-        else:
-            return gloss
-        
+
+    # Use linking gloss if this morph if not the last
+    elif env.next and "gloss-link" in morph_dict:
+        gloss = morph_dict["gloss-link"]
+
+    # Use final gloss if this morph is the last
+    elif not env.next and "gloss-final" in morph_dict:
+        gloss = morph_dict["gloss-final"]
+
+    # Use special gloss based on the type of a neighbor
     else:
-        # Use special linking or final glosses if present
-        if env.next:
-            if "gloss-link" in morph_dict:
-                return morph_dict["gloss-link"]
-        else:
-            if "gloss-final" in morph_dict:
-                return morph_dict["gloss-final"]
-        
-        # Use special gloss based on the type of a neighbor
         if morph.get_type() == "prep" or morph.get_type() == "prefix":
             relative = env.next
         else:
             relative = env.prev
         
         if relative and "gloss-" + relative.get_type() in morph_dict:
-            return morph_dict["gloss-" + relative.get_type()]
-    
+            gloss =morph_dict["gloss-" + relative.get_type()]
+
+    if gloss != None:
+        # If the gloss is a single word, and won't be substituted, bracket it as the target
+        # of future inflections.
+        if len(gloss.split(" ")) == 1 and gloss[0] not in ["%", "&"]:
+            gloss = "[" + gloss + "]"
+
+        return gloss
+
     Logger.error("failed to find gloss for " + morph_dict["key"] + ", joining to " + relative.get_key())
 
 # Inflect the words in a gloss as indicated
