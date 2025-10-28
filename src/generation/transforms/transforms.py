@@ -13,8 +13,8 @@ from src.generation.transforms.type.add_prefix import AddPrefixTransform
 from src.generation.transforms.type.add_preposition import AddPrepositionTransform
 from src.generation.transforms.type.add_suffix import AddSuffixTransform
 from src.generation.transforms.type.alternate_form import AlternateFormTransform
-from src.generation.transforms.type.alternate_form_and_gloss import AlternateFormAndGlossTransform
-# from src.generation.transforms.type.alternate_gloss import AlternateGlossTransform
+from src.generation.transforms.type.alternate_form_and_sense import AlternateFormAndSenseTransform
+from src.generation.transforms.type.alternate_sense import AlternateSenseTransform
 from src.generation.transforms.type.numerical_circumfix import NumericalCircumfixTransform
 from src.generation.transforms.type.past_participle import PastParticipleTransform
 from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
@@ -26,8 +26,8 @@ from src.utils.logging import Logger
 
 root_transforms = [
     AlternateFormTransform,
-    # AlternateGlossTransform,
-    AlternateFormAndGlossTransform,
+    AlternateSenseTransform,
+    AlternateFormAndSenseTransform,
     PastParticipleTransform
 ]
 
@@ -71,12 +71,11 @@ def get_context(word, morphothec, is_single):
         if evolved_form != canon_form:
             alternate_form = evolved_form
     
-    # See if an alternate gloss is available
-    alternate_gloss = None
+    # See if an alternate sense is available
+    alternate_sense = None
     earlier_senses = sense_choice.all_nonrecent(root_morph.all_senses(), root_morph.get_origin(), root_morph.seed)
     if len(earlier_senses) > 0:
-        sense = rand.choice(earlier_senses)
-        alternate_gloss = sense.dict["gloss"]
+        alternate_sense = rand.choice(earlier_senses)
 
     # Generate a past participle form if possible
     past_participle_form = None
@@ -85,7 +84,7 @@ def get_context(word, morphothec, is_single):
         form = helpers.one_or_random(root_morph.morph["form-raw"], seed=root_morph.seed)
         past_participle_form = participle.oe_form_to_ne_participle(form, root_morph.morph["verb-class"], config)
 
-    return TransformContext(morphothec, canon_form, alternate_form, alternate_gloss, past_participle_form)
+    return TransformContext(morphothec, canon_form, alternate_form, alternate_sense, past_participle_form)
 
 # Returns a variant form of a single-morph root, if it is possible to get one
 # Returns whether this should consume a transform

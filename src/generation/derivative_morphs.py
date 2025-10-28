@@ -18,7 +18,7 @@ def with_alternate_form(morph, form, canon):
 
     return Morph(new_dict)
 
-def with_alternate_gloss(morph, gloss):
+def with_alternate_sense(morph, sense):
     new_dict = {}
     new_dict["key"] = morph.morph["key"] + "-adhoc:alt"
     new_dict["type"] = morph.morph["type"]
@@ -28,7 +28,7 @@ def with_alternate_gloss(morph, gloss):
         new_dict["form-oe"] = morph.morph["form-raw"]
     if "form-canon" in morph.morph:
         new_dict["form-canon"] = morph.morph["form-canon"]
-    new_dict["gloss"] = gloss
+    new_dict["senses"] = [sense.dict]
     if "tags" in morph.morph:
         new_dict["tags"] = morph.tags()
     new_dict["origin"] = morph.morph["origin"]
@@ -38,13 +38,13 @@ def with_alternate_gloss(morph, gloss):
 
     return Morph(new_dict)
 
-def with_alternate_form_and_gloss(morph, form, gloss):
+def with_alternate_form_and_sense(morph, form, sense):
     new_dict = {}
     new_dict["key"] = morph.morph["key"] + "-adhoc:alt"
     new_dict["type"] = morph.morph["type"]
     new_dict["form-stem"] = form
     new_dict["form-final"] = form
-    new_dict["gloss"] = gloss
+    new_dict["senses"] = [sense.dict]
     new_dict["origin"] = morph.morph["origin"]
     new_dict["tags"] = morph.tags()
 

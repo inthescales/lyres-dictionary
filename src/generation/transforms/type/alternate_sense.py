@@ -3,12 +3,12 @@ import src.generation.derivative_morphs as derivative_morph
 from src.generation.transforms.transform_result import TransformResult
 
 # TODO: Instead of a custom morph, should this be part of a morphs 'fixing' process?
-class AlternateGlossTransform:
-    name = "alternate gloss"
+class AlternateSenseTransform:
+    name = "alternate sense"
     
     @staticmethod
     def is_eligible(word, context):
-        return context.alternate_gloss != None
+        return context.alternate_sense != None
 
     @staticmethod
     def override(word):
@@ -20,6 +20,6 @@ class AlternateGlossTransform:
 
     @staticmethod
     def apply(word, context):
-        new_morph = derivative_morph.with_alternate_gloss(word.root_morph(), context.alternate_gloss)
+        new_morph = derivative_morph.with_alternate_sense(word.root_morph(), context.alternate_sense)
         word.set_morphs([new_morph])
-        return TransformResult(True)
+        return TransformResult(True, free=True)
