@@ -280,7 +280,7 @@
         "type": "suffix",
         "derive-from": "adj",
         "derive-to": "verb",
-        "gloss": "[be] %@",
+        "gloss": "[be] %adj",
         "tags": ["intransitive", "non-final"],
         "origin": "greek"
     }, {
@@ -406,7 +406,7 @@
         "type": "suffix",
         "derive-from": ["adj", "noun"],
         "derive-to": "noun",
-        "gloss-adj": "[love] of %pl things",
+        "gloss-adj": "[love] of %adj things",
         "gloss-noun": "[love] of %pl",
         "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
         "requires": {
@@ -423,7 +423,7 @@
         "type": "suffix",
         "derive-from": ["adj", "noun"],
         "derive-to": "noun",
-        "gloss-adj": "[fear] of %pl things",
+        "gloss-adj": "[fear] of %adj things",
         "gloss-noun": "[fear] of %pl",
         "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
         "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
@@ -494,7 +494,7 @@
         "type": "suffix",
         "derive-from": ["adj", "noun"],
         "derive-to": "verb",
-        "gloss-adj": "the viewing of %pl things",
+        "gloss-adj": "the viewing of %adj things",
         "gloss-noun": "the viewing of %pl",
         "suffixes": ["-e-instrument", "-ic-verb", "-y-def"],
         "requires": {

@@ -158,8 +158,8 @@
         "conjugation": 1,
         "derive-from": ["noun", "adj", "number"],
         "derive-to": "verb",
-        "gloss-relative": "[make] %@",
-        "gloss-adj": "[make] %@",
+        "gloss-relative": "[cause] to be %adj",
+        "gloss-adj": "[make] %adj",
         "gloss-noun": "[make] %sg",
         "gloss-number": "[multiply] %@",
         "requires": {

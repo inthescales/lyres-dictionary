@@ -48,7 +48,6 @@
                 "has-tag": "mind-state"
             }
         },
-        "tags": ["no-gen"],
         "origin": "old-english"
     }, {
         "key": "-borne",
@@ -400,6 +399,7 @@
                 "has-all-tags": ["animal", "mammal"]
             }
         },
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-kyn",
@@ -770,6 +770,7 @@
                 "has-tag": "animal"
             }
         },
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-seoc",

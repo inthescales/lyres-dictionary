@@ -4,6 +4,7 @@ from src.utils.logging import Logger
 
 singular = "sg"
 plural = "pl"
+adjective = "adj"
 past_participle = "ppart"
 present_participle = "part"
 third_singular = "3sg"
@@ -17,6 +18,15 @@ def inflect(word, mode):
 
     if mode == infinitive:
         return word
+
+    if mode == singular:
+        return lemminflect.getInflection(word, tag='NN')[0]
+
+    if mode == plural:
+        return lemminflect.getInflection(word, tag='NNS')[0]
+
+    if mode == adjective:
+        return lemminflect.getInflection(word, tag='JJ')[0]
     
     if mode == third_singular:
         return lemminflect.getInflection(word, tag='VBZ')[0]
@@ -26,12 +36,6 @@ def inflect(word, mode):
 
     if mode == past_participle:
         return lemminflect.getInflection(word, tag='VBN')[0]
-
-    if mode == singular:
-        return lemminflect.getInflection(word, tag='NN')[0]
-
-    if mode == plural:
-        return lemminflect.getInflection(word, tag='NNS')[0]
     
     Logger.error("unrecognized inflection mode '" + mode + "'")
 

@@ -5,7 +5,7 @@
         "type": "prefix",
         "derive-from": "adj",
         "derive-to": "verb",
-        "gloss": "[make] %@",
+        "gloss": "[make] %adj",
         "tags": ["final"],
         "origin": "old-english",
         "notes": "TODO: 'final' tag is added because I can't currently get suffixes added to roots with prefixes that change the type. Fix this."
@@ -130,7 +130,7 @@
         "form-stem": "fresh-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "freshly %@",
+        "gloss": "freshly %adj",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -142,7 +142,7 @@
         "form-stem": "full-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "fully %@",
+        "gloss": "fully %adj",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -154,7 +154,7 @@
         "form-stem": "half-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "halfway %@",
+        "gloss": "halfway %adj",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -197,7 +197,7 @@
         "form-stem": "ill-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "badly %@",
+        "gloss": "badly %adj",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -210,7 +210,7 @@
         "form-stem": "new-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "newly %@",
+        "gloss": "newly %adj",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -238,7 +238,7 @@
         "form-stem": "thrice-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "%@ three times",
+        "gloss": "%adj three times",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -250,7 +250,7 @@
         "form-stem": "twice-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "%@ two times",
+        "gloss": "%adj two times",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -262,7 +262,7 @@
         "form-stem": "un",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "not %@",
+        "gloss": "not %adj",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"
@@ -274,7 +274,7 @@
         "form-stem": "well-",
         "type": "prefix",
         "derive-from": "adj",
-        "gloss": "%@ well",
+        "gloss": "%adj well",
         "requires": {
             "precedes": {
                 "has-tag": "past-participle"

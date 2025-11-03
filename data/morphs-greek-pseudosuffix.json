@@ -104,7 +104,7 @@
         "type": "suffix",
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
-        "gloss-adj": "[rule] by the %@",
+        "gloss-adj": "[rule] by the %adj",
         "gloss-noun": "[rule] by %pl",
         "suffixes": ["greek-silent", "-ic", "-y-passthrough"],
         "requires": {

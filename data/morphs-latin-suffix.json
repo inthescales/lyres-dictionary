@@ -93,7 +93,7 @@
         "declension": 2,
         "derive-from": ["noun", "adj"],
         "derive-to": "noun",
-        "gloss-adj": "[place] where %@ things are kept",
+        "gloss-adj": "[place] where %adj things are kept",
         "gloss-noun": "[place] for %pl",
         "suffixes": [],
         "exception": [{
@@ -504,7 +504,7 @@
         "conjugation": 3,
         "derive-from": "adj",
         "derive-to": "verb",
-        "gloss": "[become] %@",
+        "gloss": "[become] %adj",
         "suffixes": ["-nt", "-nce", "-ate"],
         "tags": ["rare"],
         "origin": "latin"
@@ -769,6 +769,7 @@
         "derive-from": ["noun", "adj", "number"],
         "derive-to": "noun",
         "gloss": "the quality of being %sg",
+        "gloss-adj": "the quality of being %adj",
         "suffixes": [],
         "requires": {
             "follows": {
@@ -839,7 +840,8 @@
         "conjugation": 1,
         "derive-from": ["adj", "noun"],
         "derive-to": "verb",
-        "gloss": "[cause] to be %@",
+        "gloss-adj": "[cause] to be %adj",
+        "gloss-noun": "[cause] to be %sg",
         "exception": [{
             "case": {
                 "follows": {
@@ -1111,9 +1113,9 @@
         "declension": 3,
         "derive-from": "adj",
         "derive-to": "noun",
-        "gloss": "the quality of being %@",
+        "gloss": "the quality of being %adj",
         "suffixes": ["-al", "-ary", "-ous"],
-        "tags": ["mass", "abstract"],
+        "tags": ["uncountable", "abstract"],
         "origin": "latin"
     }, {
         "key": "-tude-noun",
@@ -1135,7 +1137,7 @@
         "declension": 3,
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "small [%@]",
+        "gloss": "small %@",
         "requires": {
             "follows": {
                 "and": [
@@ -1152,7 +1154,7 @@
                     }
                 },
                 "form-final": ["ule", "le"],
-                "form-stem": ["ul", "l"],
+                "form-stem": "ul",
                 "tags": ["count", "no-head-joiner"]
             }, {
                 "case": {

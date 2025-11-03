@@ -150,6 +150,8 @@ def sub_inflection(gloss, wrapped, morph, last_morph):
             value = glosser.inflect_gloss(wrapped, inflection.present_participle)
         elif code == "%ppart":
             value = glosser.inflect_gloss(wrapped, inflection.past_participle)
+        elif code == "%adj":
+            value = glosser.inflect_gloss(wrapped, inflection.adjective)
         elif code == "%sg":
             if last_morph.has_tag("count"):
                 inflected = glosser.inflect_gloss(wrapped, inflection.singular)

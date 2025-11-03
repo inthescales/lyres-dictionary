@@ -22,7 +22,7 @@
         "type": "suffix",
         "derive-from": "adj",
         "derive-to": "noun",
-        "gloss": "the quality of being %sg",
+        "gloss": "the quality of being %adj",
         "suffixes": [],
         "requires": {
             "follows": {
@@ -122,7 +122,7 @@
         "verb-class": "weak",
         "derive-from": "adj",
         "derive-to": "verb",
-        "gloss": "[become] %@",
+        "gloss": "[become] %adj",
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
@@ -147,7 +147,7 @@
         "verb-class": "weak",
         "derive-from": "adj",
         "derive-to": "verb",
-        "gloss": "[make] %@",
+        "gloss": "[make] %adj",
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
@@ -670,7 +670,7 @@
         "type": "suffix",
         "derive-from": "adj",
         "derive-to": "noun",
-        "gloss": "one who is %@",
+        "gloss": "one who is %adj",
         "requires": {
             "follows": {
                 "not": { "has-tag": "past-participle" }
@@ -744,7 +744,7 @@
         "type": "suffix",
         "derive-from": "adj",
         "derive-to": "noun",
-        "gloss": "the quality of being %sg",
+        "gloss": "the quality of being %adj",
         "suffixes": [],
         "tags": ["mass", "abstract"],
         "origin": "old-english"
@@ -854,7 +854,7 @@
         "type": "suffix",
         "derive-from": "adj",
         "derive-to": "noun",
-        "gloss": "the quality of being %@",
+        "gloss": "the quality of being %adj",
         "suffixes": [],
         "requires": {
             "follows": {
@@ -871,6 +871,8 @@
         "derive-from": ["adj", "noun", "verb"],
         "derive-to": "adj",
         "gloss": "having %pl",
+        "gloss-adj": ["%adj", "considerably %adj"],
+        "gloss-verb": "tending %inf",
         "suffixes": ["-nes"],
         "requires": {
             "follows": {
@@ -879,20 +881,6 @@
         },
         "exception": [
             {
-                "case": {
-                    "follows": {
-                        "has-type": "adj"
-                    }
-                },
-                "gloss": ["%@", "considerably %@"]
-            }, {
-                "case": {
-                    "follows": {
-                        "has-type": "verb"
-                    }
-                },
-                "gloss": "tending %inf"
-            }, {
                 "case": {
                     "follows": {
                         "and": [
@@ -950,7 +938,7 @@
         "type": "suffix",
         "derive-from": "adj",
         "derive-to": "noun",
-        "gloss": "the quality of being %sg",
+        "gloss": "the quality of being %adj",
         "suffixes": [],
         "requires": {
             "follows": {
