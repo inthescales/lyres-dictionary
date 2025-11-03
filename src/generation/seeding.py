@@ -9,7 +9,7 @@ def seed_root(morphothec):
     languages_and_weights = [
         ["latin", 1],
         ["greek", 1],
-        ["old-english", 0.3]
+        ["old-english", 0.4]
     ]
 
     bag = [(language, int(morphothec.root_count(language=language) * weight)) for language, weight in languages_and_weights]
@@ -61,7 +61,10 @@ def transform_count(word):
         if word.root_morph().has_tag("speculative"):
             return 0
         else:
-            # TODO: Allow 2 when gloss ordering is predictable (fix error with words like be-[noun]-[suffix])
+            # TODO: Until I have a way for prefixes to change a word's type, I can't have
+            # more than 1 transform here.
+            # ex. the be- (furnish with) prefix changes a noun to a verb, but currently a word
+            # determines its type by checking the last morph, which isn't correct here
             return 1
 
     bag = [
