@@ -8,7 +8,7 @@ def generate_word(morphothec):
     word = Word(morphothec)
 
     root = seeding.seed_root(morphothec)
-    word.morphs = [root]
+    word.set_morphs([root])
 
     transform_count = seeding.transform_count(word)
 
