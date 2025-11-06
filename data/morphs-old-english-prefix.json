@@ -270,6 +270,21 @@
         },
         "origin": "old-english"
     }, {
+        "key": "wan-",
+        "form-stem": "wan",
+        "type": "prefix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "lack of %pl",
+        "requires": {
+            "precedes": {
+                "has-all-tags": ["mass", "abstract"]
+            }
+        },
+        "tags": ["count", "abstract", "rare"],
+        "origin": "old-english",
+        "notes": "TODO: add more senses and usages of this prefix. See OED"
+    }, {
         "key": "well-",
         "form-stem": "well-",
         "type": "prefix",
