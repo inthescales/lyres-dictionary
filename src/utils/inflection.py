@@ -75,6 +75,10 @@ def override_inflection(word, mode):
         if mode == "pl":
             return "peoples"
 
+    elif word == "spittle":
+        if mode == "pl":
+            return "spittles"
+
     elif word == "sting":
         if mode == "part":
             return "stinging"

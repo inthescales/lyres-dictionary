@@ -435,7 +435,7 @@
         "type": "suffix",
         "derive-from": "noun",
         "derive-to": "noun",
-        "gloss": "the bearing of %pl",
+        "gloss": "[bearing] of %pl",
         "suffixes": ["greek-e-agent", "-ic-part", "-ia-def"],
         "exception": [{
             "case": {

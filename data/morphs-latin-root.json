@@ -1766,7 +1766,7 @@
         "type": "verb",
         "conjugation": 1,
         "gloss": "[go] astray",
-        "gloss-relative": "[wander]",
+        "gloss-relative": "wander",
         "tags": ["intransitive", "motion"],
         "origin": "latin"
     }, {

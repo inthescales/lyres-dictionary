@@ -129,7 +129,8 @@
                     }
                 },
                 "gloss-adj": "[member] of the ruling %@",
-                "gloss-noun": "[member] of the ruling %pl"
+                "gloss-noun": "[member] of the ruling %pl",
+                "tags": ["count", "concrete", "no-length", "non-final", "suffix-only", "living", "person"]
             }, {
                 "case": {
                     "precedes": {
