@@ -240,15 +240,31 @@ def finalize_definition(word, definition):
 
 # Gets the final definition for the word
 def get_definition(word):
-    definition = ""
+    prefix_stack = []
+
+    # Returns the populated gloss of the topmost prefix in the stack
+    def pop_prefix(last_morph, definition):
+        top, env = prefix_stack.pop()
+        return populate_gloss(top, last_morph, env, definition)
 
     morph = None
-    previous = None
-    for morph in word.order_added:
-        index = word.morphs.index(morph)
+    definition = ""
+    for index, morph in enumerate(word.morphs):
         env = word.environment_for_index(index)
-        definition = populate_gloss(morph, previous, env, definition)
-        previous = morph
+
+        # Stack prepositions and prefixes for proper definition ordering
+        if morph.is_prefix():
+            prefix_stack.append([morph, env])
+        else:
+            definition = populate_gloss(morph, env.prev, env, definition)
+            # TODO: This logic seems to mostly reflect verbal prefixes, but is apparently
+            # necessary for relational circumfixes. Reconsider.
+            if len(prefix_stack) > 0 and morph.is_root():
+                definition = pop_prefix(morph, definition)
+
+    # Apply prefixes in reverse order
+    while len(prefix_stack) > 0:
+        definition = pop_prefix(word.last_morph(), definition)
 
     # Finalize
     if not morph.has_tag("fixed-gloss"):

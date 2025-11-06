@@ -5,32 +5,28 @@ class Word:
     
     def __init__(self, morphothec):
         self.morphs = []
-        self.order_added = []
         self.morphothec = morphothec
     
-    # Mutation -----------------------------------
+    # Mutation
     
     def set_keys(self, keys):
-        self.set_morphs([Morph.with_key(key, self.morphothec) for key in keys])
+        self.morphs = [Morph.with_key(key, self.morphothec) for key in keys]
+        self.refresh_morphs()
 
     def set_morphs(self, morphs):
         self.morphs = morphs
-        self.order_added = self.default_order(morphs)
         self.refresh_morphs()
 
     def add_prefix(self, morph):
         self.morphs = [morph] + self.morphs
-        self.order_added.append(morph)
         self.refresh_morphs()
             
     def add_suffix(self, morph):
         self.morphs = self.morphs + [morph]
-        self.order_added.append(morph)
         self.refresh_morphs()
         
     def add_affixes(self, prefix, suffix):
         self.morphs = [prefix] + self.morphs + [suffix]
-        self.order_added += [prefix, suffix]
         self.refresh_morphs()
 
     def refresh_morphs(self):
@@ -38,7 +34,7 @@ class Word:
             env = self.environment_for_index(i)
             self.morphs[i].refresh(env)
 
-    # Public accessors -------------------------------
+    # Public accessors
 
     def first_morph(self):
         if len(self.morphs) > 0:
@@ -96,7 +92,7 @@ class Word:
 
         return False
 
-    # Helpers --------------------------------------------
+    # Helpers
 
     def environment_for_index(self, index):
         anteprev_morph, prev_morph, next_morph, postnext_morph = (None, None, None, None)
@@ -113,26 +109,3 @@ class Word:
         specifies_object = self.specifies_object()
 
         return Environment(anteprev_morph, prev_morph, next_morph, postnext_morph, specifies_object)
-
-    # Returns the given morphs in a likely order of addition.
-    # This represents the earlier logic, mostly applicable to Latin and Greek,
-    # where morphs are assumed to be added in the order root > prefixes (in reverse order)
-    # > suffixes (in order)
-    #
-    # Should only be used in testing
-    def default_order(self, morphs):
-        ordered = []
-        prefix_stack = []
-
-        for morph in self.morphs:
-            if morph.is_prefix():
-                prefix_stack.append(morph)
-            else:
-                ordered.append(morph)
-
-                if len(prefix_stack) > 0 and morph.is_root():
-                    for prefix in reversed(prefix_stack):
-                        ordered.append(prefix)
-                    prefix_stack = []
-
-        return ordered
