@@ -208,14 +208,13 @@
         "form-stem": "man",
         "form-final": "man",
         "type": "suffix",
-        "derive-from": ["noun"],
+        "derive-from": ["noun", "verb"],
         "derive-to": "noun",
         "gloss-noun": "[obsession] or excessive [desire] for %pl",
         "gloss-verb": "excessive [desire] %inf",
         "suffixes": ["-ia-def", "-ic-def", "-iac-haver"],
         "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
-        "origin": "greek",
-        "notes": "Removing verb from derive-from until joining vowels are changed"
+        "origin": "greek"
     }, {
         "key": "-mant-",
         "form-stem": "manc",

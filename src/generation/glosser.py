@@ -18,7 +18,7 @@ def gloss(morph, env):
     
     # Check for a basic gloss
     elif "gloss" in morph_dict:
-        gloss = helpers.one_or_random(morph_dict["gloss"], seed=morph.seed)
+        gloss = morph_dict["gloss"]
 
     # Use linking gloss if this morph if not the last
     elif env.next and "gloss-link" in morph_dict:
@@ -37,6 +37,9 @@ def gloss(morph, env):
         
         if relative and "gloss-" + relative.get_type() in morph_dict:
             gloss =morph_dict["gloss-" + relative.get_type()]
+
+    # If the gloss is a list, choose one at random
+    gloss = helpers.one_or_random(gloss, seed=morph.seed)
 
     if gloss != None:
         # If the gloss is a single word, and won't be substituted, bracket it as the target

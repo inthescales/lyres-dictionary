@@ -870,8 +870,8 @@
         "type": "suffix",
         "derive-from": ["adj", "noun", "verb"],
         "derive-to": "adj",
-        "gloss": "having %pl",
         "gloss-adj": ["%adj", "considerably %adj"],
+        "gloss-noun": "having %pl",
         "gloss-verb": "tending %inf",
         "suffixes": ["-nes"],
         "requires": {

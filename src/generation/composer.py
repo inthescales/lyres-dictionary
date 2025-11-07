@@ -172,7 +172,9 @@ def sub_inflection(gloss, wrapped, morph, last_morph):
                 value = glosser.inflect_gloss(wrapped, inflection.plural)
             elif last_morph.has_tag("singleton"):
                 article = "the"
-                value = article + " " +glosser.inflect_gloss(wrapped, inflection.singular)
+                value = article + " " + glosser.inflect_gloss(wrapped, inflection.singular)
+            elif last_morph.has_tag("mass") or last_morph.has_tag("uncountable"):
+                value = strip_brackets(wrapped)
             else:
                 # This case can be hit e.g. in cases where a suffix applies to both nouns and adjectives
                 value = wrapped

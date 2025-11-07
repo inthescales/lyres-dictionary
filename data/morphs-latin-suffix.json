@@ -479,7 +479,7 @@
                 "notes": "Not using 5th declensions currently, but they did have this form"
             }
         ],
-        "tags": ["count"],
+        "tags": ["count", "rare"],
         "origin": "latin",
         "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule' (currently filtering out those ending in 'r'). TODO: Preserve gendered endings -a/-us-um. TODO: Handle i-joiners even when not strictly needed, as in 'funicular'. TODO: Generally get better data for different stem types so this all can be more precise."
     }, {
@@ -768,8 +768,9 @@
         "declension": 3,
         "derive-from": ["noun", "adj", "number"],
         "derive-to": "noun",
-        "gloss": "the quality of being %sg",
         "gloss-adj": "the quality of being %adj",
+        "gloss-noun": "the quality of being %sg",
+        "gloss-number": "the quality of being %@",
         "suffixes": [],
         "requires": {
             "follows": {
@@ -808,13 +809,6 @@
                     }
                 },
                 "gloss": "the quality of %part"
-            }, {
-                "case": {
-                    "follows": {
-                        "has-type": "number"
-                    }
-                },
-                "gloss": "the quality of being %@"
             }
         ],
         "tags": ["mass", "abstract"],
@@ -949,7 +943,7 @@
         "derive-from": "verb",
         "derive-to": "noun",
         "derive-participle": "perfect",
-        "gloss-verb": "[place] where one %3sg",
+        "gloss": "[place] where one %3sg",
         "suffixes": [],
         "tags": ["count", "concrete"],
         "origin": "latin"
@@ -1049,14 +1043,14 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-suffix-template": ["Vs", "Vt", "Cs"]
+                    "has-suffix-template": ["Vs", "Vt", "ls", "ns", "rs"]
                 }
             },
             "form-stem": "",
             "form-final": "e"
         }],
         "origin": "latin",
-        "notes": "Some ambiguity of the vowel when ending in 'it' (licit, merit / recondite, preterite)"
+        "notes": "Some ambiguity of the vowel when ending in 'it' (licit, merit / recondite, preterite). Not template 'Cs' because we want to exclude 'ss'"
     }, {
         "key": "-past-participle-noun",
         "form-stem": "",
@@ -1166,7 +1160,7 @@
                 "form-stem": "ol"
             }
         ],
-        "tags": ["count"],
+        "tags": ["count", "rare"],
         "origin": "latin",
         "notes": "TODO: Consider adding passthrough concreteness. TODO: Handle 3rd declension neuter forms like 'corpuscle' and 'opuscule'. TODO: Preserve gendered endings -a/-us-um"
     }, {
