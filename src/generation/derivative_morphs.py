@@ -1,7 +1,4 @@
-import random
-
 import src.generation.glosser as glosser
-import src.utils.helpers as helpers
 
 from src.models.morph import Morph
 
@@ -53,17 +50,19 @@ def with_alternate_form_and_sense(morph, form, sense):
 
     return Morph(new_dict)
 
-def from_past_participle(morph, participle_form):
+def from_past_participle(morph, env, participle_form):
     new_dict = {}
     new_dict["key"] = morph.morph["key"] + "-adhoc:ppart"
     new_dict["form-stem"] = participle_form
     new_dict["form-final"] = participle_form
     new_dict["type"] = "adj"
-    gloss = helpers.one_or_random(morph.morph["gloss"], seed=morph.seed)
+    gloss = glosser.gloss(morph, env)
     new_dict["gloss"] = glosser.inflect_gloss(gloss, "ppart")
     new_dict["tags"] = ["past-participle"]
     new_dict["origin"] = morph.morph["origin"]
 
+    # WIP: Needs to be updated for new form structure
+    
     canon_form = None
     canon_participles = None
     if "form-canon" in morph.morph:

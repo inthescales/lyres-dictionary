@@ -10,6 +10,7 @@ class PastParticipleTransform:
     @staticmethod
     def is_eligible(word, context):
         root_morph = word.root_morph()
+
         return context.past_participle_form != None \
             and word.get_origin() == "old-english" \
             and root_morph.get_type() == "verb" \
@@ -17,8 +18,8 @@ class PastParticipleTransform:
             and (
                 root_morph.morph["verb-class"] != "weak"
                 or (
-                    not root_morph.has_tag("obscure")
-                    and not root_morph.has_tag("speculative"))
+                    root_morph.has_tag("obscure")
+                    or root_morph.has_tag("speculative"))
             )
 
     @staticmethod
@@ -32,8 +33,10 @@ class PastParticipleTransform:
     @staticmethod
     def apply(word, context):
         root_morph = word.root_morph()
+        i = word.morphs.index(root_morph)
+        env = word.environment_for_index(i)
 
-        new_morph = derivative_morph.from_past_participle(root_morph, context.past_participle_form)
+        new_morph = derivative_morph.from_past_participle(root_morph, env, context.past_participle_form)
         word.set_morphs([new_morph])
 
         is_common = (not root_morph.has_tag("obscure") and not root_morph.has_tag("speculative"))

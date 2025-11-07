@@ -16,7 +16,7 @@ from src.generation.transforms.type.alternate_form import AlternateFormTransform
 from src.generation.transforms.type.alternate_form_and_sense import AlternateFormAndSenseTransform
 from src.generation.transforms.type.alternate_sense import AlternateSenseTransform
 from src.generation.transforms.type.numerical_circumfix import NumericalCircumfixTransform
-from src.generation.transforms.type.past_participle import PastParticipleTransform
+# from src.generation.transforms.type.past_participle import PastParticipleTransform
 from src.generation.transforms.type.relational_circumfix import RelationalCircumfixTransform
 from src.utils.logging import Logger
 
@@ -28,7 +28,7 @@ root_transforms = [
     AlternateFormTransform,
     AlternateSenseTransform,
     AlternateFormAndSenseTransform,
-    PastParticipleTransform
+    # PastParticipleTransform # Disabled until the ad-hoc morph creation is updated
 ]
 
 # Transforms that build up a word, e.g. by adding affixes
@@ -79,9 +79,11 @@ def get_context(word, morphothec, is_single):
 
     # Generate a past participle form if possible
     past_participle_form = None
-    if "form-raw" in root_morph.morph and "verb-class" in root_morph.morph:
+    if "form-oe" in root_morph.morph and "verb-class" in root_morph.morph: # Disabled until the ad-hoc morph creation is updated
         config = Config(overrides=[["PPart:use-strong", True], ["OSL:iy", False], ["OSL:u", False]])
-        form = helpers.one_or_random(root_morph.morph["form-raw"], seed=root_morph.seed)
+        metaform = rand.choice(formset.all)
+        paradigms = helpers.list_if_not(metaform.paradigm)
+        form = rand.choice(paradigms).lemma
         past_participle_form = participle.oe_form_to_ne_participle(form, root_morph.morph["verb-class"], config)
 
     return TransformContext(morphothec, canon_form, alternate_form, alternate_sense, past_participle_form)
