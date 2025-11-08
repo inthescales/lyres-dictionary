@@ -829,10 +829,15 @@ class FormTests(unittest.TestCase):
         self.assertForm(["auto-", "didaskein", "-t"], "autodidact")
         self.assertFormIn(["auto-", "arkhein", "-y/verb"], ["autarchesy", "autarchesia"])
 
+    # Test different cases of Greek joining vowels
+    def testActualFormsGreek(self):
+        # Roots ending in 'y'
+        self.assertForm(["bryon", "-log-", "greek-ist"], "bryologist")
+        self.assertForm(["tachya", "-scop", "-y-def"], "tachyscopy")
+        self.assertForm(["poly", "-phob-", "-ia-def"], "polyphobia")
 
     # Miscellaneous tests confirming that real words have the correct forms.
     def testActualFormsGreek(self):
-        
         # Greek nouns
 
         self.assertForm(["autos", "-arch-", "greek-silent-agent"], "autarch")

@@ -22,8 +22,14 @@ def get_joined_form(form, addition):
     return form + addition
 
 # Returns a joining fowel for the given morphs and the form to be added
-def joining_vowel(first, second, addition):
-    if not helpers.is_vowel(addition[0], y_is_vowel=True):
+def joining_vowel(first, second, form, addition):
+    # Trying out determining whether forms ending in 'y' with additions beginning with
+    # a consonant should depend on the number of syllables in the form.
+    # For example, 'bryology' vs 'tachyscope'.
+    # This doesn't work for 'ichthyology' though
+    syllable_count = helpers.syllable_count_simple(form, y_is_vowel=True)
+    if (not form[-1] in ["a", "o"] or (form[-1] == "y" and syllable_count == 1)) \
+        and not helpers.is_vowel(addition[0], y_is_vowel=True):
         return "o"
     else:
         return ""

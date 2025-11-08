@@ -124,7 +124,7 @@ def get_joining_vowel(language, first, second, form, addition):
     if language == "latin":
         return lat_join.joining_vowel(first, second, addition)
     elif language == "greek":
-        return grk_join.joining_vowel(first, second, addition)
+        return grk_join.joining_vowel(first, second, form, addition)
     elif language == "old-english":
         return None
     else:
