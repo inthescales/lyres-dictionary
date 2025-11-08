@@ -24,7 +24,7 @@ def seed_root(morphothec):
     elif choice == "old-english":
         expressions = [
             ({ "has-tag": "speculative"}, 2),
-            ({ "has-tag": "obscure"}, 1),
+            ({ "has-tag": "obscure"}, 2),
             ({ "not": { "has-any-tags": ["speculative", "obscure"] } }, 1)
         ]
         root = get_root(choice, expressions, morphothec)

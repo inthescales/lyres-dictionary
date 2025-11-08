@@ -7847,7 +7847,7 @@
         "senses": [
             {
                 "gloss": "family",
-                "tags": ["count", "concrete", "living", "grouping", "speculative"]
+                "tags": ["count", "concrete", "living", "grouping", "obscure"]
             }, {
                 "gloss": "peace",
                 "tags": ["mass", "abstract", "speculative"]
@@ -8748,10 +8748,10 @@
         "senses": [
             {
                 "gloss": ["[sound], [noise]"],
-                "tags": ["mass", "abstract", "homophonic"]
+                "tags": ["mass", "abstract", "speculative", "homophonic"]
             }, {
                 "gloss": ["[sound], [noise]"],
-                "tags": ["count", "abstract", "homophonic"]
+                "tags": ["count", "abstract", "speculative", "homophonic"]
             }
         ],
         "origin": "old-english"

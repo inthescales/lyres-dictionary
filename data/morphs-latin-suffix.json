@@ -262,7 +262,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-key": "singulae"
+                    "has-key": ["singulae", "uni"]
                 }
             },
             "gloss": "appearing individually"
@@ -1070,7 +1070,7 @@
         "exception": [{
             "case": {
                 "follows": {
-                    "has-suffix": ["at", "et", "it", "ot", "ut", "as", "es", "is", "os", "us"]
+                    "has-suffix-template": ["Vs", "Vt", "ls", "ns", "rs"]
                 }
             },
             "form-stem": "",

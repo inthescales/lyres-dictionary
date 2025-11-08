@@ -536,7 +536,7 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["a", "e", "i", "o", "u", "y"]
+                        "has-suffix-template": ["V", "y"]
                     }
                 },
                 "form-stem": "t",

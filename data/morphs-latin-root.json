@@ -5770,9 +5770,8 @@
         "form-stem-present": "rever",
         "form-stem-perfect": "reverit",
         "form-final": "revere",
-        "form-joiner-present": "e",
         "type": "verb",
-        "conjugation": 1,
+        "conjugation": 2,
         "gloss": "revere",
         "tags": ["transitive", "no-prep"],
         "origin": "latin"
