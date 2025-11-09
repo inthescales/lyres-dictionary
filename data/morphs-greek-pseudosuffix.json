@@ -173,6 +173,22 @@
         "tags": ["singleton", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
+        "key": "-iatr-",
+        "form-stem": "iatr",
+        "form-final": "iatr",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "the medical treatment of %pl",
+        "suffixes": ["-ician", "-ic-def", "-y-def"],
+        "requires": {
+            "follows": {
+                "has-any-tags": ["living", "bodypart"]
+            }
+        },
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
         "key": "-lat-",
         "form-stem": "latr",
         "form-final": "lat",
@@ -290,6 +306,81 @@
         "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
+        "key": "-phag-",
+        "form-stem": "phag",
+        "form-final": "phag",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "the eating of %pl",
+        "suffixes": ["greek-e-agent", "-ic-def", "-y-def"],
+        "requires": {
+            "follows": {
+                "and": [
+                    { "has-tag": "concrete" },
+                    { "not": { "has-tag": "fluid" } }
+                ]
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-e-agent"
+                }
+            },
+            "gloss": "[eat] %pl"
+        }],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
+        "key": "-phil-",
+        "form-stem": "phil",
+        "form-final": "phil",
+        "type": "suffix",
+        "derive-from": ["adj", "noun"],
+        "derive-to": "noun",
+        "gloss-adj": "[love] of %adj things",
+        "gloss-noun": "[love] of %pl",
+        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
+        "requires": {
+            "follows": {
+                "not": { "has-key": ["pais", "ephebe"] }
+            }
+        },
+        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
+        "key": "-phob-",
+        "form-stem": "phob",
+        "form-final": "phob",
+        "type": "suffix",
+        "derive-from": ["adj", "noun"],
+        "derive-to": "noun",
+        "gloss-adj": "[fear] of %adj things",
+        "gloss-noun": "[fear] of %pl",
+        "suffixes": ["-e-haver", "-ic-def", "-ia-def"],
+        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
+        "key": "-phor-",
+        "form-stem": "phor",
+        "form-final": "phor",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "[bearing] of %pl",
+        "suffixes": ["greek-e-agent", "-ic-part", "-ia-def"],
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": ["greek-e-agent", "-ic-part"]
+                }
+            },
+            "gloss": "[bear] %pl"
+        }],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
         "key": "-plast",
         "form-stem": "plast",
         "form-final": "plast",
@@ -306,6 +397,74 @@
             },
             "gloss": "[form] %pl"
         }],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
+        "key": "-pot-",
+        "form-stem": "pot",
+        "form-final": "pot",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "the drinking of %sg",
+        "suffixes": ["greek-e-agent", "-ic-def", "-ia-def"],
+        "requires": {
+            "follows": {
+                "has-tag": "liquid"
+            }
+        },
+        "exception": [{
+            "case": {
+                "precedes": {
+                    "has-key": "greek-e-agent"
+                }
+            },
+            "gloss": "[drink] %sg"
+        }],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
+        "key": "-rrhea",
+        "form-stem": "rrhe",
+        "form-final": "rrhea",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "[flowing] of %pl",
+        "suffixes": ["-ic"],
+        "requires": {
+            "follows": {
+                "has-any-tags": ["fluid", "abstract"]
+            }
+        },
+        "tags": ["count", "abstract"],
+        "origin": "greek"
+    }, {
+        "key": "-scop-",
+        "form-stem": "scop",
+        "form-final": "scop",
+        "type": "suffix",
+        "derive-from": ["adj", "noun"],
+        "derive-to": "verb",
+        "gloss-adj": "the viewing of %adj things",
+        "gloss-noun": "the viewing of %pl",
+        "suffixes": ["-e-instrument", "-ic-verb", "-y-def"],
+        "requires": {
+            "follows": {
+                "not": { "has-key": "pais" }
+            }
+        },
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
+        "origin": "greek"
+    }, {
+        "key": "-techn-",
+        "form-stem": "techn",
+        "form-final": "techn",
+        "type": "suffix",
+        "derive-from": "noun",
+        "derive-to": "noun",
+        "gloss": "the art that works with %pl",
+        "suffixes": ["-ic-def", "-y-def"],
         "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }
