@@ -10,7 +10,7 @@ def get_joined_form(form, addition, y_to_i=False):
         if len(form) >= 2 \
         and helpers.is_consonant(form[-1], False) \
         and helpers.is_vowel(form[-2]) and not (len(form) >= 3 and helpers.is_vowel(form[-3])) \
-            and form[-1] not in ["w", "x", "y"] \
+            and form[-1] not in ["v", "w", "x", "y"] \
             and helpers.syllable_count_simple(form) == 1:
             # If word ends in a consonant following a short vowel, and suffix begins with vowel, double the final consonant
             # Ex. 'cat' + 'y' -> 'catty'
