@@ -94,7 +94,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
 
     # Output
     if mode == "publish":
-        publisher.publish(generate_entry)
+        publisher.publish(entry.generate_entry)
     
     elif mode == "test":
         if keys != None:
