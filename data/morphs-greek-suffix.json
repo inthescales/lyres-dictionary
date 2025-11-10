@@ -282,14 +282,14 @@
             {
                 "case": {
                     "follows": {
-                        "has-suffix": ["c", "k", "g", "y"]
+                        "has-suffix": ["c", "k", "g", "m", "p", "y"]
                     }
                 },
                 "form-final": "ma"
             }, {
                 "case": {
                     "follows": {
-                        "has-suffix": ["e", "i"]
+                        "has-suffix": ["e", "i", "o"]
                     }
                 },
                 "form-final": ["ma", "me"]

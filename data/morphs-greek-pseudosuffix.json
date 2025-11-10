@@ -58,7 +58,7 @@
                         "has-key": "greek-silent-agent"
                     }
                 },
-                "gloss": "[command] %pl people"
+                "gloss": "[command] %!sg people"
             }, {
                 "case": {
                     "follows": {
