@@ -953,6 +953,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "gloss": "knowledgeable with respect to %pl",
+        "tags": ["rare"],
         "origin": "old-english"
     }, {
         "key": "-wis-adv",
@@ -962,6 +963,7 @@
         "derive-from": "noun",
         "derive-to": "adj",
         "gloss": ["in the manner of %sg", "with regard to %pl"],
+        "tags": ["rare"],
         "origin": "old-english",
         "notes": "Properly ME, but categorizing as OE for now"
     }, {
