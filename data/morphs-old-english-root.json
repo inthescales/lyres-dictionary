@@ -271,7 +271,7 @@
         },
         "type": "noun",
         "gloss": "abbot",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "abbudisse",
@@ -281,7 +281,7 @@
         },
         "type": "noun",
         "gloss": "abbess",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "āc",
@@ -1295,7 +1295,7 @@
         },
         "type": "noun",
         "gloss": "bishop",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "role", "ruler"],
         "origin": "old-english",
         "notes": "From Latin 'episcopus' < Greek 'episkopos'"
     }, {
@@ -1997,11 +1997,20 @@
             "canon": "knight"
         },
         "type": "noun",
-        "gloss": "knight",
-        "gloss-alt": "servant",
-        "tags": ["count", "concrete", "living", "person", "role"],
-        "origin": "old-english",
-        "notes": "Additional sense 'boy', but leaving ungendered for now"
+        "senses": [
+            {
+                "gloss": "boy",
+                "tags": ["count", "concrete", "living", "person", "role", "gendered"]
+            }, {
+                "gloss": "servant",
+                "tags": ["count", "concrete", "living", "person", "role"]
+            }, {
+                "period": "modern",
+                "gloss": "knight",
+                "tags": ["count", "concrete", "living", "person", "role"]
+            }
+        ],
+        "origin": "old-english"
     }, {
         "key": "cnotta",
         "form-oe": {
@@ -2275,7 +2284,7 @@
         },
         "type": "noun",
         "gloss": "king",
-        "tags": ["count", "concrete", "living", "person", "role", "ruler"],
+        "tags": ["count", "concrete", "living", "person", "gendered", "role", "ruler"],
         "origin": "old-english"
     }, {
         "key": "cynn",
@@ -3087,7 +3096,7 @@
             }
         ],
         "origin": "old-english",
-        "notes": "'lamp' sense is my innovation. Etymology goes back to Latin 'facula'"
+        "notes": "'lamp' sense is my innovation. Etymology goes back to Latin 'facula' < 'fax'"
     }, {
         "key": "fæder",
         "form-oe": {

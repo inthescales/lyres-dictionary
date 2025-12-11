@@ -140,7 +140,7 @@
                 "form-stem": "crac"
             }
         ],
-        "tags": ["count", "abstract", "no-length", "non-final", "suffix-only"],
+        "tags": ["uncountable", "abstract", "no-length", "non-final", "suffix-only"],
         "origin": "greek"
     }, {
         "key": "-gen",
