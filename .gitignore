@@ -11,6 +11,9 @@
 env
 logs
 
+# IDE
+.idea
+
 # Ad-hoc tools
 helpers
 out.html
