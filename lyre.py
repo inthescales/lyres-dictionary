@@ -1,5 +1,4 @@
 import getopt
-import random
 import sys
 
 import src.generate as generate
@@ -7,7 +6,7 @@ import src.utils.publish as publisher
 
 from src.utils.logging import Logger
 
-def test_with_count(count):
+def test_with_count(count: int):
     print("")
     for i in range(0, count):
         print(generate.entry().text())
@@ -33,21 +32,21 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     # Process args
     for opt, arg in opts:
         if opt in ["-t", "--test"]:
-            if mode != None:
+            if mode is not None:
                 error_mode_conflict()
             mode = "test"
         elif opt in ["-p", "--publish"]:
-            if mode != None:
+            if mode is not None:
                 error_mode_conflict()
             mode = "publish"
         elif opt in ["-c", "--count"]:
             count = int(arg)
     
     # Assign default values
-    if mode == None:
+    if mode is None:
         Logger.trace("defaulting to test mode")
         mode = "test"
-    if mode == "test" and count == None:
+    if mode == "test" and count is None:
         Logger.trace("defaulting to count 1")
         count = 1
 
