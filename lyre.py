@@ -1,62 +1,58 @@
 import getopt
 import sys
 
+from enum import Enum
+
 import src.generate as generate
 import src.utils.logging as log
 import src.utils.publish as publisher
 
+class RunMode(Enum):
+    test = 0
+    publish = 1
+
 def test_with_count(count: int):
     print("")
     for i in range(0, count):
-        print(generate.entry().text())
+        print(generate.entry().text)
         print("")
 
-# Process command line input
+# Read command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
-    # Error cases
-    def error_mode_conflict():
-        print("> Error: enter only one mode. Modes: test, publish, analyze")
-        sys.exit(1)
-    
     # Get args
     try:
         opts, params = getopt.getopt(sys.argv[1:], "tpc:", ["test", "publish", "count="])
     except getopt.GetoptError:
-        print('lyre.py requires a mode parameter: -t/--test or -p/--publish')
+        print("ERROR: lyre.py requires a mode parameter: -t/--test or -p/--publish\n")
         sys.exit(2)
 
-    mode = None
-    count = None
+    # Check errors
+    all_opts = [o[0] for o in opts]
+    if ("-t" in all_opts or "--test" in all_opts) and ("-p" in all_opts or "--publish" in all_opts):
+        print("Error: enter only one mode. Modes: test, publish\n")
+        sys.exit(1)
 
-    # Process args
+    # Default arguments
+    mode = RunMode.test
+    count = 1
+
+    # Read arguments
     for opt, arg in opts:
         if opt in ["-t", "--test"]:
-            if mode is not None:
-                error_mode_conflict()
-            mode = "test"
+            mode = RunMode.test
         elif opt in ["-p", "--publish"]:
-            if mode is not None:
-                error_mode_conflict()
-            mode = "publish"
+            mode = RunMode.publish
         elif opt in ["-c", "--count"]:
             count = int(arg)
 
     # Configure logger
-    if mode == "test":
+    if mode == RunMode.test:
         log.configure_for_test()
-    elif mode == "publish":
+    elif mode == RunMode.publish:
         log.configure_for_publish()
 
-    # Assign default values
-    if mode is None:
-        log.trace("defaulting to test mode")
-        mode = "test"
-    if mode == "test" and count is None:
-        log.trace("defaulting to count 1")
-        count = 1
-
     # Generate output
-    if mode == "publish":
-        publisher.publish(generate.entry)
-    elif mode == "test":
+    if mode == RunMode.test:
         test_with_count(count)
+    elif mode == RunMode.publish:
+        publisher.publish(generate.entry)
