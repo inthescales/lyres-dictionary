@@ -2,9 +2,8 @@ import getopt
 import sys
 
 import src.generate as generate
+import src.utils.logging as log
 import src.utils.publish as publisher
-
-from src.utils.logging import Logger
 
 def test_with_count(count: int):
     print("")
@@ -41,20 +40,20 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             mode = "publish"
         elif opt in ["-c", "--count"]:
             count = int(arg)
-    
-    # Assign default values
-    if mode is None:
-        Logger.trace("defaulting to test mode")
-        mode = "test"
-    if mode == "test" and count is None:
-        Logger.trace("defaulting to count 1")
-        count = 1
 
     # Configure logger
     if mode == "test":
-        Logger.configure("terminal", "error", 1)
+        log.configure_for_test()
     elif mode == "publish":
-        Logger.configure("file", None, 2)
+        log.configure_for_publish()
+
+    # Assign default values
+    if mode is None:
+        log.trace("defaulting to test mode")
+        mode = "test"
+    if mode == "test" and count is None:
+        log.trace("defaulting to count 1")
+        count = 1
 
     # Generate output
     if mode == "publish":

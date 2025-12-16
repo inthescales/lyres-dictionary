@@ -1,80 +1,110 @@
 from datetime import datetime
+from enum import Enum, IntEnum
 from pathlib import Path
 
-log_dir = "logs"
-logfile = None
+log_dir: str = "logs"               # Directory that logs will be written to
+default_logfile: str = "log.txt"    # Filename for log file
 
-output_mode = "terminal"    # terminal = print to terminal, file = write to file
-halt_threshold = None       # warning = halt on warning, error = halt on error
-verbosity = 1               # 0 = silent, 1 = normal, 2 = diagnostic
+# The type of output the logger should produce
+class OutputMode(Enum):
+    terminal = 0
+    file = 1
+
+# The type of message logged
+class MessageType(IntEnum):
+    trace = 0
+    warning = 1
+    error = 2
 
 class Logger:
-    def __init__(self):
-        Exception("ERROR: do not instantiate logger")
+    def __init__(
+        self,
+        output_mode: OutputMode = OutputMode.terminal,      # What output stream to log to
+        halt_on: MessageType = MessageType.error,           # Program halts when any message of this type is logged
+        verbosity: MessageType = MessageType.warning,       # The minimum message level to log
+        log_path: str = default_logfile                     # File where messages will be logged in file logging mode
+    ):
+        self.output_mode = output_mode
+        self.halt_on = halt_on
+        self.verbosity = verbosity
 
-    @staticmethod
-    def configure(mode, halt_on=None, conf_verbosity=1, log_path="log.txt"):
-        global output_mode, halt_threshold, verbosity, logfile
-
-        if mode in ["terminal", "file", "exception"]:
-            output_mode = mode
+        if output_mode == OutputMode.file:
+            Path(log_dir).mkdir(exist_ok=True)
+            Path(log_dir + "/" + log_path).touch()
+            self.logfile = open(log_dir + "/" + log_path, "a")
         else:
-            raise Exception("ERROR: '" + mode + "' not a valid Logger mode")
+            self.logfile = None
 
-        if halt_on in ["warning", "error", None]:
-            halt_threshold = halt_on
-        else:
-            raise Exception("ERROR: '" + halt_on + "' not a valid Logger mode")
-
-        if conf_verbosity in [0, 1, 2]:
-            verbosity = conf_verbosity
-        else:
-            raise Exception("ERROR: '" + conf_verbosity + "' not a valid verbosity")
-
-        if mode == "file":
-            if isinstance(log_path, str):
-                Path(log_dir).mkdir(exist_ok=True)
-                Path(log_dir + "/" + log_path).touch()
-                logfile = open(log_dir + "/" + log_path, "a")
-            else:
-                raise Exception("ERROR: '" + log_path + "' not a valid logfile path")
-
-    @staticmethod
-    def log(volume, message):
-        global output_mode, halt_threshold, verbosity, logfile
-
-        if volume > verbosity:
+    # Logs the given message if its volume is greater than the configured verbosity
+    def log(self, message_type: MessageType, message: str):
+        if message_type < self.verbosity:
             return
 
-        if output_mode == "terminal":
-            print(message)
-        elif output_mode == "file":
-            if logfile == None:
-                raise Exception("ERROR: no logfile specified")
+        if self.output_mode == OutputMode.terminal:
+            print(Logger.prefix(message_type) + message)
+        elif self.output_mode == OutputMode.file:
+            if self.logfile is None:
+                self.log(MessageType.error, "no open logfile")
             else:
-                logfile.write(Logger.timestamp() + " " + message + "\n")
+                self.logfile.write("[" + str(datetime.now()) + "] " + Logger.prefix(message_type) + message + "\n")
 
+    # Called when execution is about to halt due to logged message above the threshold
+    def will_halt(self):
+        log(MessageType.trace, "===== HALTING EXECUTION =====\n")
+        if self.logfile is not None: self.logfile.close();
+
+    # Prefix for messages of the given type
     @staticmethod
-    def warn(message):
-        global halt_threshold
-        Logger.log(1, "WARNING: " + message)
+    def prefix(message_type: MessageType) -> str:
+        if message_type == MessageType.warning:
+            return "WARNING: "
+        elif message_type == MessageType.error:
+            return "ERROR: "
 
-        if halt_threshold == "warning":
-            raise Exception("halting on warning")
+        return ""
 
-    @staticmethod
-    def error(message):
-        global halt_threshold
-        Logger.log(1, "ERROR: " + message)
+# Public logging functions -----------------------------
 
-        if halt_threshold == "error":
-            print("")
+active_loggers: list[Logger] = []
+
+# Logs a message of the given type and content to all loggers
+def log(message_type: MessageType, message: str):
+    for logger in active_loggers:
+        logger.log(message_type, message)
+
+    for logger in active_loggers:
+        if logger.halt_on <= message_type:
+            logger.will_halt()
             exit(1)
 
-    @staticmethod
-    def trace(message):
-        Logger.log(2, message)
+# Log a trace message
+def trace(message: str):
+    log(MessageType.trace, message)
 
-    @staticmethod
-    def timestamp():
-        return "[" + str(datetime.now()) + "]"
+# Log a warning message
+def warn(message: str):
+    log(MessageType.warning, message)
+
+# Log an error message
+def error(message: str):
+    log(MessageType.error, message)
+
+# Default configurations -----------------------------
+
+# Assigns default logging configuration for test execution
+def configure_for_test(verbose: bool = False):
+    global active_loggers
+
+    active_loggers = [
+        Logger(OutputMode.terminal, MessageType.error, MessageType.trace if verbose else MessageType.warning),
+        Logger(OutputMode.file, MessageType.error, MessageType.trace)
+    ]
+
+# Assigns default logging configuration for publish execution
+def configure_for_publish():
+    global active_loggers
+
+    active_loggers = [
+        Logger(OutputMode.file, MessageType.error, MessageType.trace)
+    ]
+
