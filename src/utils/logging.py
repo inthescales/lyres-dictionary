@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import Enum, IntEnum
 from pathlib import Path
 
-log_dir: str = "logs"               # Directory that logs will be written to
+log_dir: str = "./logs/"               # Directory that logs will be written to
 default_logfile: str = "log.txt"    # Filename for log file
 
 # The type of output the logger should produce

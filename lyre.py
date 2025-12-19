@@ -20,7 +20,7 @@ def test_with_count(count: int):
 
 # Help text to display when requested or when parameters are invalid
 help_text: str = (
-    dedent("""\
+    dedent(f"""\
         usage: lyre [options]
           options:
             -t, --test           Print output to terminal
@@ -32,7 +32,7 @@ help_text: str = (
           notes:
             - Defaults to test mode
             - Cannot use --test and --publish simultaneously
-            - Log location: ./logs/
+            - Log location: {log.log_dir}
     """))
 
 # Print help text, then halt.
