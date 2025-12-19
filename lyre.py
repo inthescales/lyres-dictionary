@@ -21,7 +21,7 @@ def test_with_count(count: int):
 if __name__ == '__main__' and len(sys.argv) > 0:
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "tpc:", ["test", "publish", "count="])
+        opts, params = getopt.getopt(sys.argv[1:], "tpc:v", ["test", "publish", "count=", "verbose"])
     except getopt.GetoptError:
         print("ERROR: lyre.py requires a mode parameter: -t/--test or -p/--publish\n")
         sys.exit(2)
@@ -35,6 +35,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     # Default arguments
     mode = RunMode.test
     count = 1
+    verbose = False
 
     # Read arguments
     for opt, arg in opts:
@@ -44,10 +45,12 @@ if __name__ == '__main__' and len(sys.argv) > 0:
             mode = RunMode.publish
         elif opt in ["-c", "--count"]:
             count = int(arg)
+        elif opt in ["-v", "--verbose"]:
+            verbose = True
 
     # Configure logger
     if mode == RunMode.test:
-        log.configure_for_test()
+        log.configure_for_test(verbose)
     elif mode == RunMode.publish:
         log.configure_for_publish()
 
