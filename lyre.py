@@ -2,6 +2,7 @@ import getopt
 import sys
 
 from enum import Enum
+from textwrap import dedent
 
 import src.generate as generate
 import src.utils.logging as log
@@ -17,22 +18,50 @@ def test_with_count(count: int):
         print(generate.entry().text)
         print("")
 
+# Help text to display when requested or when parameters are invalid
+help_text: str = (
+    dedent("""\
+        usage: lyre [options]
+          options:
+            -t, --test           Print output to terminal
+            -p, --publish        Publish output to web
+            -c, --count     i    Generate "i" entries (test mode only)      default: 1
+            -v, --verbose        Log verbose output
+            -h, --help           Display this help text
+          
+          notes:
+            - Defaults to test mode
+            - Cannot use --test and --publish simultaneously
+            - Log location: ./logs/
+    """))
+
+# Print help text, then halt.
+# arguments:
+# - error: bool      Whether to exit with an error code
+def show_help(error: bool = False):
+    print(help_text)
+    exit(0 if not error else 1)
+
 # Read command line input
 if __name__ == '__main__' and len(sys.argv) > 0:
     # Get args
     try:
-        opts, params = getopt.getopt(sys.argv[1:], "tpc:v", ["test", "publish", "count=", "verbose"])
+        opts, params = getopt.getopt(sys.argv[1:], "tpc:vh", ["test", "publish", "count=", "verbose", "help"])
     except getopt.GetoptError:
-        print("ERROR: lyre.py requires a mode parameter: -t/--test or -p/--publish\n")
-        sys.exit(2)
+        show_help(error=True)
+        exit(1)
 
-    # Check errors
-    all_opts = [o[0] for o in opts]
-    if ("-t" in all_opts or "--test" in all_opts) and ("-p" in all_opts or "--publish" in all_opts):
-        print("Error: enter only one mode. Modes: test, publish\n")
-        sys.exit(1)
+    all_flags = [opt[0] for opt in opts]
 
-    # Default arguments
+    # If help flag was set, print help text and exit
+    if "-h" in all_flags or ["--help"] in all_flags:
+        show_help(error=False)
+
+    # Check for flag errors
+    if ("-t" in all_flags or "--test" in all_flags) and ("-p" in all_flags or "--publish" in all_flags):
+        show_help(error=True)
+
+    # Default configuration values
     mode = RunMode.test
     count = 1
     verbose = False
