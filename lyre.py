@@ -53,7 +53,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
     except getopt.GetoptError:
         show_help(error=True)
         exit(1)
-
+    
     all_flags = [opt[0] for opt in opts]
 
     # If help flag was set, print help text and exit

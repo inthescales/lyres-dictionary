@@ -16,6 +16,15 @@ class MessageType(IntEnum):
     warning = 1
     error = 2
 
+    def __str__(self):
+        match self:
+            case MessageType.trace:
+                return "trace"
+            case MessageType.warning:
+                return "warning"
+            case MessageType.error:
+                return "error"
+
 class Logger:
     """Logs messages to a specific output source and with a particular configuration."""
     def __init__(
@@ -49,9 +58,9 @@ class Logger:
             else:
                 self.logfile.write("[" + str(datetime.now()) + "] " + Logger.prefix(message_type) + message + "\n")
 
-    def will_halt(self):
+    def will_halt(self, message_type: MessageType):
         """Called when execution is about to halt due to logged message above the threshold"""
-        log(MessageType.trace, "===== HALTING EXECUTION =====\n")
+        self.log(MessageType.trace, f"- HALTING ON {str(message_type).upper()}\n")
         if self.logfile is not None: self.logfile.close();
 
     @staticmethod
@@ -64,33 +73,46 @@ class Logger:
 
         return ""
 
-# Public logging functions -----------------------------
+# Base public logging functions
 
-active_loggers: list[Logger] = []
+active_loggers: list[Logger] = [] # Loggers which will be logged to be public functions
 
-def log(message_type: MessageType, message: str):
+def log_message(message_type: MessageType, message: str):
     """Logs a message of the given type and content to all loggers."""
     for logger in active_loggers:
         logger.log(message_type, message)
 
+def log_exception(message_type: MessageType, exception: Exception):
+    """Logs the given exception's string to all loggers and raises it if configuration indicates."""
+
+    exc_string = exception.__class__.__name__ + ": " + str(exception)
+    raise_exc: bool = False # Whether to raise the given exception or only log it
     for logger in active_loggers:
+        logger.log(message_type, exc_string)
         if logger.halt_on <= message_type:
-            logger.will_halt()
-            exit(1)
+            raise_exc = True
+
+    if raise_exc:
+        for logger in active_loggers:
+            logger.will_halt(message_type)
+
+        raise exception
+
+# Convenience logging functions
 
 def trace(message: str):
     """Log a trace message."""
-    log(MessageType.trace, message)
+    log_message(MessageType.trace, message)
 
 def warn(message: str):
     """Log a warning message."""
-    log(MessageType.warning, message)
+    log_message(MessageType.warning, message)
 
-def error(message: str):
-    """Log an error message."""
-    log(MessageType.error, message)
+def error(exception: Exception):
+    """Log an error with an exception."""
+    log_exception(MessageType.error, exception)
 
-# Default configurations -----------------------------
+# Default configurations
 
 def configure_for_test(verbose: bool = False):
     """Assigns default logging configuration for test execution."""
