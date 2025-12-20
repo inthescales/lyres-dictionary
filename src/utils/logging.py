@@ -2,27 +2,28 @@ from datetime import datetime
 from enum import Enum, IntEnum
 from pathlib import Path
 
-log_dir: str = "./logs/"               # Directory that logs will be written to
-default_logfile: str = "log.txt"    # Filename for log file
+log_dir: str = "./logs/"          # Directory that logs will be written to
+default_logfile: str = "log.txt"  # Filename for log file
 
-# The type of output the logger should produce
 class OutputMode(Enum):
+    """The type of output the logger should produce"""
     terminal = 0
     file = 1
 
-# The type of message logged
 class MessageType(IntEnum):
+    """The type of message logged"""
     trace = 0
     warning = 1
     error = 2
 
 class Logger:
+    """Logs messages to a specific output source and with a particular configuration."""
     def __init__(
-        self,
-        output_mode: OutputMode = OutputMode.terminal,      # What output stream to log to
-        halt_on: MessageType = MessageType.error,           # Program halts when any message of this type is logged
-        verbosity: MessageType = MessageType.warning,       # The minimum message level to log
-        log_path: str = default_logfile                     # File where messages will be logged in file logging mode
+            self,
+            output_mode: OutputMode = OutputMode.terminal, # What output stream to log to
+            halt_on: MessageType = MessageType.error,      # Program halts when any message of this type is logged
+            verbosity: MessageType = MessageType.warning,  # The minimum message level to log
+            log_path: str = default_logfile                # File where messages will be logged in file logging mode
     ):
         self.output_mode = output_mode
         self.halt_on = halt_on
@@ -35,8 +36,8 @@ class Logger:
         else:
             self.logfile = None
 
-    # Logs the given message if its volume is greater than the configured verbosity
     def log(self, message_type: MessageType, message: str):
+        """Logs the given message if its volume is greater than the configured verbosity."""
         if message_type < self.verbosity:
             return
 
@@ -48,14 +49,14 @@ class Logger:
             else:
                 self.logfile.write("[" + str(datetime.now()) + "] " + Logger.prefix(message_type) + message + "\n")
 
-    # Called when execution is about to halt due to logged message above the threshold
     def will_halt(self):
+        """Called when execution is about to halt due to logged message above the threshold"""
         log(MessageType.trace, "===== HALTING EXECUTION =====\n")
         if self.logfile is not None: self.logfile.close();
 
-    # Prefix for messages of the given type
     @staticmethod
     def prefix(message_type: MessageType) -> str:
+        """String prefix for messages of the given type"""
         if message_type == MessageType.warning:
             return "WARNING: "
         elif message_type == MessageType.error:
@@ -67,8 +68,8 @@ class Logger:
 
 active_loggers: list[Logger] = []
 
-# Logs a message of the given type and content to all loggers
 def log(message_type: MessageType, message: str):
+    """Logs a message of the given type and content to all loggers."""
     for logger in active_loggers:
         logger.log(message_type, message)
 
@@ -77,22 +78,22 @@ def log(message_type: MessageType, message: str):
             logger.will_halt()
             exit(1)
 
-# Log a trace message
 def trace(message: str):
+    """Log a trace message."""
     log(MessageType.trace, message)
 
-# Log a warning message
 def warn(message: str):
+    """Log a warning message."""
     log(MessageType.warning, message)
 
-# Log an error message
 def error(message: str):
+    """Log an error message."""
     log(MessageType.error, message)
 
 # Default configurations -----------------------------
 
-# Assigns default logging configuration for test execution
 def configure_for_test(verbose: bool = False):
+    """Assigns default logging configuration for test execution."""
     global active_loggers
 
     active_loggers = [
@@ -100,11 +101,10 @@ def configure_for_test(verbose: bool = False):
         Logger(OutputMode.file, MessageType.error, MessageType.trace)
     ]
 
-# Assigns default logging configuration for publish execution
 def configure_for_publish():
+    """Assigns default logging configuration for publish execution"""
     global active_loggers
 
     active_loggers = [
         Logger(OutputMode.file, MessageType.error, MessageType.trace)
     ]
-

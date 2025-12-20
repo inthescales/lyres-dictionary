@@ -3,11 +3,12 @@ from collections.abc import Callable
 from src.generate import Entry
 
 def publish(entry_gen: Callable[[], Entry]):
-	import botbuddy # Defer import since it's a bit slow
+    """Using the given entry generator callable, generate an entry and publish it online."""
+    import botbuddy  # Defer import since it's a bit slow
 
-	# Convert entry contents into the form botbuddy takes
-	def post_gen() -> dict:
-		entry = entry_gen()
-		return {"content": entry.text, "metadata": entry.metadata}
+    def post_gen() -> dict:
+        """Convert entry contents into the form Botbuddy takes."""
+        entry = entry_gen()
+        return {"content": entry.text, "metadata": entry.metadata}
 
-	botbuddy.post(post_gen)
+    botbuddy.post(post_gen)

@@ -3,10 +3,13 @@ from src.formset import LeafAndStemFormSet, SingleFormSet
 from src.morph import Morph
 from src.word import Word
 
-def entry():
+def entry() -> Entry:
+    """Generates and returns an entry for a new word"""
     return Entry(word())
 
-def word():
+def word() -> Word:
+    """Generates and returns a new word"""
+
     root: Morph = Morph(
         SingleFormSet("magn")
     )

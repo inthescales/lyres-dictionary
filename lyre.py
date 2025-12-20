@@ -9,10 +9,12 @@ import src.utils.logging as log
 import src.utils.publish as publisher
 
 class RunMode(Enum):
+    """The execution mode to use. Determines output method and error behavior."""
     test = 0
     publish = 1
 
 def test_with_count(count: int):
+    """Generate entries for 'count' words and print them to the terminal."""
     print("")
     for i in range(0, count):
         print(generate.entry().text)
@@ -35,10 +37,11 @@ help_text: str = (
             - Log location: {log.log_dir}
     """))
 
-# Print help text, then halt.
-# arguments:
-# - error: bool      Whether to exit with an error code
 def show_help(error: bool = False):
+    """
+    Print help text, then halt.
+    :param error: bool, whether to exit with an error code
+    """
     print(help_text)
     exit(0 if not error else 1)
 

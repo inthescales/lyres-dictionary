@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 
-# An element that makes up part of a word
 class Element(ABC):
+    """An element that makes up part of a word"""
+
     @property
     @abstractmethod
     def form(self) -> str:
