@@ -38,4 +38,5 @@ def word() -> Word:
     word: Word = Word(root)
     word.add_suffix(suffix)
     word.add_suffix(suffix2)
+
     return word

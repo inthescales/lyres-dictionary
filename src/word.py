@@ -70,8 +70,10 @@ class Word:
     def definition(self) -> str:
         """The word's definition as a string"""
         definition: str = self._gloss_elements[0].gloss
+        prev_element: MeaningfulElement = self._gloss_elements[0]
         for element in self._gloss_elements[1:]:
-            definition = gloss.substitute(element.gloss, definition)
+            definition = gloss.substitute(prev_element.sense, element.gloss, definition)
+            prev_element = element
 
         return definition
 

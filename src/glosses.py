@@ -7,6 +7,7 @@ import src.utils.inflection as inflection
 import src.utils.logging as log
 
 from src.senses.countability import Countability
+from src.senses.sense import Sense, NounSense
 
 class InflectionCode(StrEnum):
     """String codes for applying inflection during gloss substitution"""
@@ -25,7 +26,7 @@ class InflectionCodeException(Exception):
     def __init__(self, code: str):
         self.args = (["Unrecognized inflection code '" + code + "'"], code)
 
-def substitute(gloss: str, wrapped: str, wrapped_countability: Countability = Countability.countable) -> str:
+def substitute(wrapped_sense: Sense, gloss: str, wrapped: str) -> str:
     """
     Applies inflections to the wrapped morph's gloss text, indicated by '%([inflection-code]).
     Also applies determiners and particles as appropriate.
@@ -35,21 +36,42 @@ def substitute(gloss: str, wrapped: str, wrapped_countability: Countability = Co
 
         try:
             code = InflectionCode(code_str)
+            prefix: str = ""
             inflection_type: Optional[inflection.InflectionType] = None
+            countability: Countability = Countability.uncountable
+            if isinstance(wrapped_sense, NounSense):
+                countability = wrapped_sense.countability
 
             match code:
                 case InflectionCode.passthrough:
-                    inflection_type = None
+                    pass
                 case InflectionCode.singular:
                     inflection_type = inflection.InflectionType.singular
+
+                    match countability:
+                        case Countability.countable:
+                            prefix = "a "
+                        case Countability.singleton:
+                            prefix = "the "
+                        case Countability.mass, Countability.uncountable:
+                            pass
+
                 case InflectionCode.force_singular:
                     inflection_type = inflection.InflectionType.singular
                 case InflectionCode.plural:
-                    inflection_type = inflection.InflectionType.plural
+                    match countability:
+                        case Countability.countable:
+                            inflection_type = inflection.InflectionType.plural
+                        case Countability.singleton:
+                            inflection_type = inflection.InflectionType.singular
+                            prefix = "the "
+                        case Countability.mass, Countability.uncountable:
+                            inflection_type = inflection.InflectionType.singular
+
                 case InflectionCode.force_plural:
                     inflection_type = inflection.InflectionType.plural
                 case InflectionCode.infinitive:
-                    inflection_type = None
+                    prefix = "to "
                 case InflectionCode.subject_agreement:
                     inflection_type = None
                 case InflectionCode.present_participle:
@@ -57,7 +79,16 @@ def substitute(gloss: str, wrapped: str, wrapped_countability: Countability = Co
                 case InflectionCode.past_participle:
                     inflection_type = inflection.InflectionType.past_participle
 
-            return inflection.inflect_bracketed(wrapped, inflection_type)
+            if inflection_type is not None:
+                if " " in wrapped:
+                    inflected = inflection.inflect_bracketed(wrapped, inflection_type)
+                else:
+                    inflected = inflection.inflect(wrapped, inflection_type)
+            else:
+                inflected = wrapped
+
+            return prefix + inflected
+
         except ValueError as value_error:
             code_exception = InflectionCodeException(code_str)
             log.error(code_exception)
