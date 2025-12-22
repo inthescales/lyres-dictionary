@@ -1,17 +1,18 @@
-from enum import StrEnum
+import re
+
+from enum import Enum, auto
 from typing import Optional
 
 import lemminflect
 
-class InflectionType(StrEnum):
+class InflectionType(Enum):
     """A type of inflection that can be applied to a modern English word."""
-    singular              = "sg"
-    plural                = "pl"
-    adjective             = "adj"
-    infinitive            = "inf"
-    third_person_singular = "3sg"
-    present_participle    = "part"
-    past_participle       = "ppart"
+    singular              = auto()
+    plural                = auto()
+    infinitive            = auto()
+    third_person_singular = auto()
+    present_participle    = auto()
+    past_participle       = auto()
 
     @property
     def lemminflect_code(self) -> Optional[str]:
@@ -21,8 +22,6 @@ class InflectionType(StrEnum):
                 return "NN"
             case InflectionType.plural:
                 return "NNS"
-            case InflectionType.adjective:
-                return "JJ"
             case InflectionType.infinitive:
                 return None
             case InflectionType.third_person_singular:
@@ -44,6 +43,15 @@ def inflect(word: str, inflection_type: InflectionType) -> str:
         return lemminflect.getInflection(word, tag=code)[0]
     else:
         return word
+
+def inflect_bracketed(phrase: str, inflection_type: InflectionType) -> str:
+    """Returns the phrase string with all bracketed substrings inflected in the specified way"""
+    result = phrase
+
+    def inflect_match(m: re.Match[str]) -> str:
+        return inflect(m.group(1), inflection_type)
+
+    return re.sub(r'\[(\w*)\]', inflect_match, result)
 
 # Custom overrides for words the inflection library gets wrong
 def override_inflection(word, inflection_type: InflectionType) -> Optional[str]:

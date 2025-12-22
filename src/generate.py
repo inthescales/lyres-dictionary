@@ -1,6 +1,8 @@
+from env import Env
 from src.entry import Entry
 from src.formset import LeafAndStemFormSet, SingleFormSet
 from src.morph import Morph
+from src.morph_view import MorphView
 from src.word import Word
 
 def entry() -> Entry:
@@ -10,18 +12,28 @@ def entry() -> Entry:
 def word() -> Word:
     """Generates and returns a new word"""
 
-    root: Morph = Morph(
-        SingleFormSet("magn")
+    root: MorphView = MorphView(
+        Morph(
+            SingleFormSet("magn"),
+            gloss="large"
+        )
     )
 
-    suffix: Morph = Morph(
-        LeafAndStemFormSet("ificat", "ify")
+    suffix: MorphView = MorphView(
+        Morph(
+            LeafAndStemFormSet("ificat", "ify"),
+            gloss="[make] %(@)"
+        )
     )
 
-    suffix2: Morph = Morph(
-        SingleFormSet("ion")
+    suffix2: MorphView = MorphView(
+        Morph(
+            SingleFormSet("ion"),
+            gloss="the act or state of %(part)"
+        )
     )
 
-    word: Word = Word()
-    word.set_morphs([root, suffix, suffix2])
+    word: Word = Word(root)
+    word.add_suffix(suffix)
+    word.add_suffix(suffix2)
     return word

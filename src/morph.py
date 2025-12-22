@@ -7,10 +7,16 @@ class Morph:
     usage in later occurrences.
     """
 
-    def __init__(self, formset: FormSet):
+    def __init__(self, formset: FormSet, gloss: str):
         self._formset = formset
+        self._gloss = gloss
 
     @property
     def formset(self) -> FormSet:
         """The formset associated with this morph"""
         return self._formset
+
+    @property
+    def gloss(self) -> FormSet:
+        """The gloss associated with this morph"""
+        return self._gloss

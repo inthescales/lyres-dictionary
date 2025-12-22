@@ -82,22 +82,6 @@ def log_message(message_type: MessageType, message: str):
     for logger in active_loggers:
         logger.log(message_type, message)
 
-def log_exception(message_type: MessageType, exception: Exception):
-    """Logs the given exception's string to all loggers and raises it if configuration indicates."""
-
-    exc_string = exception.__class__.__name__ + ": " + str(exception)
-    raise_exc: bool = False # Whether to raise the given exception or only log it
-    for logger in active_loggers:
-        logger.log(message_type, exc_string)
-        if logger.halt_on <= message_type:
-            raise_exc = True
-
-    if raise_exc:
-        for logger in active_loggers:
-            logger.will_halt(message_type)
-
-        raise exception
-
 # Convenience logging functions
 
 def trace(message: str):
@@ -110,7 +94,8 @@ def warn(message: str):
 
 def error(exception: Exception):
     """Log an error with an exception."""
-    log_exception(MessageType.error, exception)
+    exception_text = exception.__class__.__name__ + ": " + str(exception)
+    log_message(MessageType.error, exception_text)
 
 # Default configurations
 

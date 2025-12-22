@@ -44,7 +44,7 @@ class LeafAndStemFormProvider(FormProvider):
         self._formset: LeafAndStemFormSet = formset
 
     def form(self, env: Env) -> str:
-        if env.next is None:
+        if env.prev is None:
             return self._formset.leaf
         else:
             return self._formset.stem

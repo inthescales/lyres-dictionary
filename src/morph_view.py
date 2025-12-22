@@ -1,6 +1,8 @@
+from gloss_provider import GlossProvider
 from src.element import Element
 from src.env import Env
 from src.form_provider import FormProvider
+from src.gloss_provider import SingleGlossProvider
 from src.morph import Morph
 
 class MorphView(Element):
@@ -9,11 +11,16 @@ class MorphView(Element):
     portion of that morph's total data should be used.
     """
 
-    def __init__(self, morph: Morph, env: Env):
+    def __init__(self, morph: Morph, env: Env = Env()):
         self.morph = morph
         self.env = env
         self.form_provider: FormProvider = FormProvider.for_formset(morph.formset)
+        self.gloss_provider: GlossProvider = SingleGlossProvider(morph.gloss)
 
     @property
     def form(self) -> str:
         return self.form_provider.form(self.env)
+
+    @property
+    def gloss(self) -> str:
+        return self.gloss_provider.gloss(self.env)

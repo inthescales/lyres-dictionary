@@ -85,7 +85,7 @@ if __name__ == '__main__' and len(sys.argv) > 0:
         log.configure_for_test(verbose)
     elif mode == RunMode.publish:
         log.configure_for_publish()
-    
+
     # Generate output
     if mode == RunMode.test:
         test_with_count(count)

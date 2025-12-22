@@ -1,9 +1,7 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
-class Element(ABC):
-    """An element that makes up part of a word"""
+from env import AbstractElement, Env
 
-    @property
-    @abstractmethod
-    def form(self) -> str:
-        pass
+class Element(AbstractElement, ABC):
+    def __init__(self, env: Env):
+        self.env = env

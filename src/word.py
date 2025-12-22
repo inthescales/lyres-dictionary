@@ -1,9 +1,8 @@
 from enum import Enum
 from typing import Optional
 
-from src.env import Env
-from src.morph import Morph
-from src.morph_view import Element, MorphView
+import glosses as gloss
+from src.morph_view import Element
 
 class WordType(Enum):
     """The type (aka 'lexical category' or 'part of speech') of a word"""
@@ -29,26 +28,27 @@ class WordType(Enum):
 class Word:
     """Representation of a word as a sequence of elements."""
 
-    def __init__(self, elements: Optional[list[Element]] = None):
-        if elements is None:
-            elements = []
+    def __init__(self, root: Element):
+        self._form_elements: list[Element] = [root]
+        self._gloss_elements: list[Element] = [root]
 
-        self._elements: list[Element] = elements
+    def add_prefix(self, prefix: Element):
+        prefix.env.next = self.head_element
+        self.head_element.env.prev = prefix
+        self._form_elements = [prefix] + self._form_elements
+        self._gloss_elements.append(prefix)
 
-    def set_morphs(self, morphs: list[Morph]) -> None:
-        """Assigns the word's element list to one built from the given morphs."""
-        for i in range(0, len(morphs)):
-            env: Env = Env(
-                prev=morphs[i - 1] if i > 0 else None,
-                next=morphs[i + 1] if i < len(morphs) - 1 else None
-            )
-            self._elements.append(MorphView(morph=morphs[i], env=env))
+    def add_suffix(self, suffix: Element):
+        suffix.env.prev = self.tail_element
+        self.tail_element.env.next = suffix
+        self._form_elements.append(suffix)
+        self._gloss_elements.append(suffix)
 
     @property
     def form(self) -> str:
         """The word's form as a string"""
         f: str = ""
-        for element in self._elements:
+        for element in self._form_elements:
             f += element.form
 
         return f
@@ -61,4 +61,16 @@ class Word:
     @property
     def definition(self) -> str:
         """The word's definition as a string"""
-        return "definition"
+        definition: str = self._gloss_elements[0].gloss
+        for element in self._gloss_elements[1:]:
+            definition = gloss.substitute(element.gloss, definition)
+
+        return definition
+
+    @property
+    def head_element(self) -> Optional[Element]:
+        return self._form_elements[0]
+
+    @property
+    def tail_element(self) -> Optional[Element]:
+        return self._form_elements[-1]
