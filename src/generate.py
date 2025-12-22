@@ -1,7 +1,10 @@
+from src.senses.countability import Countability
 from src.entry import Entry
 from src.formset import LeafAndStemFormSet, SingleFormSet
+from src.senses.gloss_provider import SingleGlossProvider
 from src.morphs.morph import Morph
 from src.morphs.morph_view import MorphView
+from src.senses.sense import NounSense, Sense
 from src.word import Word
 
 def entry() -> Entry:
@@ -14,21 +17,21 @@ def word() -> Word:
     root: MorphView = MorphView(
         Morph(
             SingleFormSet("magn"),
-            gloss="large"
+            Sense(SingleGlossProvider("large"))
         )
     )
 
     suffix: MorphView = MorphView(
         Morph(
             LeafAndStemFormSet("ificat", "ify"),
-            gloss="[make] %(@)"
+            Sense(SingleGlossProvider("[make] %(@)"))
         )
     )
 
     suffix2: MorphView = MorphView(
         Morph(
             SingleFormSet("ion"),
-            gloss="the act or state of %(part)"
+            NounSense(SingleGlossProvider("the act or state of %(part)"), Countability.uncountable)
         )
     )
 

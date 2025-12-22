@@ -2,7 +2,8 @@ from enum import Enum
 from typing import Optional
 
 import src.glosses as gloss
-from src.morphs.morph_view import Element
+from src.elements.element import Element
+from src.senses.meaningful import MeaningfulElement
 
 class WordType(Enum):
     """The type (aka 'lexical category' or 'part of speech') of a word"""
@@ -30,19 +31,26 @@ class Word:
 
     def __init__(self, root: Element):
         self._form_elements: list[Element] = [root]
-        self._gloss_elements: list[Element] = [root]
+        self._gloss_elements: list[MeaningfulElement] = []
+        if isinstance(root, MeaningfulElement):
+            self._gloss_elements = [root]
+
 
     def add_prefix(self, prefix: Element):
         prefix.env.next = self.head_element
         self.head_element.env.prev = prefix
         self._form_elements = [prefix] + self._form_elements
-        self._gloss_elements.append(prefix)
+
+        if isinstance(prefix, MeaningfulElement):
+            self._gloss_elements.append(prefix)
 
     def add_suffix(self, suffix: Element):
         suffix.env.prev = self.tail_element
         self.tail_element.env.next = suffix
         self._form_elements.append(suffix)
-        self._gloss_elements.append(suffix)
+
+        if isinstance(suffix, MeaningfulElement):
+            self._gloss_elements.append(suffix)
 
     @property
     def form(self) -> str:

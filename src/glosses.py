@@ -6,21 +6,7 @@ from typing import Optional
 import src.utils.inflection as inflection
 import src.utils.logging as log
 
-# TODO: Move this
-class Countability(StrEnum):
-    """Countability property of a noun"""
-    countable       = "count"
-    mass            = "mass"
-    singleton       = "singleton"
-    uncountable     = "uncountable"
-
-    def pluralizable(self) -> bool:
-        """Whether nouns with this countability are typically pluralized"""
-        match self:
-            case Countability.countable:
-                return True
-            case Countability.mass, Countability.singleton, Countability.uncountable:
-                return False
+from src.senses.countability import Countability
 
 class InflectionCode(StrEnum):
     """String codes for applying inflection during gloss substitution"""
