@@ -1,4 +1,3 @@
-from env import Env
 from src.entry import Entry
 from src.formset import LeafAndStemFormSet, SingleFormSet
 from src.morph import Morph

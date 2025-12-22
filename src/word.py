@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Optional
 
-import glosses as gloss
+import src.glosses as gloss
 from src.morph_view import Element
 
 class WordType(Enum):

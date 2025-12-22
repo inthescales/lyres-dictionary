@@ -1,12 +1,13 @@
 from abc import ABC
 
-from src.env import Env
+from src.elements.env import Env
 
 class GlossProvider(ABC):
     """
     Being provisioned with the necessary data, a GlossProvider is able to return the particular gloss
     to be used in any given environment.
     """
+
     def gloss(self, env: Env) -> str:
         pass
 

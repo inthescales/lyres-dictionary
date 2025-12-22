@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 
 class ElementBase(ABC):
     """Base data belonging to all elements."""
+
     @property
     @abstractmethod
     def form(self) -> str:
