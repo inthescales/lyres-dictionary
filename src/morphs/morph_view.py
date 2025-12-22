@@ -3,7 +3,7 @@ from src.elements.env import Env
 from src.form_provider import FormProvider
 from src.gloss_provider import GlossProvider
 from src.gloss_provider import SingleGlossProvider
-from src.morph import Morph
+from src.morphs.morph import Morph
 
 class MorphView(Element):
     """

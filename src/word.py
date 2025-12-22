@@ -2,7 +2,7 @@ from enum import Enum
 from typing import Optional
 
 import src.glosses as gloss
-from src.morph_view import Element
+from src.morphs.morph_view import Element
 
 class WordType(Enum):
     """The type (aka 'lexical category' or 'part of speech') of a word"""

@@ -1,7 +1,7 @@
 from src.entry import Entry
 from src.formset import LeafAndStemFormSet, SingleFormSet
-from src.morph import Morph
-from src.morph_view import MorphView
+from src.morphs.morph import Morph
+from src.morphs.morph_view import MorphView
 from src.word import Word
 
 def entry() -> Entry:
