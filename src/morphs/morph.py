@@ -1,4 +1,4 @@
-from src.formset import FormSet
+from src.forms.formset import FormSet
 from src.senses.sense import Sense
 
 class Morph():

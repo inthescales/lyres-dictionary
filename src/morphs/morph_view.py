@@ -1,5 +1,5 @@
 from src.elements.env import Env
-from src.form_provider import FormProvider
+from src.forms.form_provider import FormProvider
 from src.morphs.morph import Morph
 from src.senses.meaningful import MeaningfulElement
 from src.senses.sense import Sense

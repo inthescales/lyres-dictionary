@@ -1,10 +1,6 @@
-from src.senses.countability import Countability
+import src.test_morphs as test_morphs
+
 from src.entry import Entry
-from src.formset import LeafAndStemFormSet, SingleFormSet
-from src.senses.gloss_provider import SingleGlossProvider
-from src.morphs.morph import Morph
-from src.morphs.morph_view import MorphView
-from src.senses.sense import NounSense, Sense
 from src.word import Word
 
 def entry() -> Entry:
@@ -14,29 +10,8 @@ def entry() -> Entry:
 def word() -> Word:
     """Generates and returns a new word"""
 
-    root: MorphView = MorphView(
-        Morph(
-            SingleFormSet("magn"),
-            Sense(SingleGlossProvider("large"))
-        )
-    )
-
-    suffix: MorphView = MorphView(
-        Morph(
-            LeafAndStemFormSet("ificat", "ify"),
-            Sense(SingleGlossProvider("[make] %(@)"))
-        )
-    )
-
-    suffix2: MorphView = MorphView(
-        Morph(
-            SingleFormSet("ion"),
-            NounSense(SingleGlossProvider("the act or state of %(part)"), Countability.uncountable)
-        )
-    )
-
-    word: Word = Word(root)
-    word.add_suffix(suffix)
-    word.add_suffix(suffix2)
+    word: Word = Word(test_morphs.magnus)
+    word.add_suffix(test_morphs.ify)
+    word.add_suffix(test_morphs.ion)
 
     return word
