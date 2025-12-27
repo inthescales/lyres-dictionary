@@ -1,9 +1,10 @@
 from enum import Enum
-from typing import Optional
+from typing import Optional, Self
 
 import src.glosses as gloss
 from src.elements.element import Element
-from src.senses.meaningful import MeaningfulElement
+from src.elements.meaningful import MeaningfulElement
+from src.types.element_type import ElementType, DeriveTypeData, TypeData
 
 class WordType(Enum):
     """The type (aka 'lexical category' or 'part of speech') of a word"""
@@ -25,15 +26,30 @@ class WordType(Enum):
             case WordType.adverb:
                 return "adv"
 
+    @classmethod
+    def from_element_type(cls, final_element_type: ElementType) -> Self:
+        match final_element_type:
+            case ElementType.noun:
+                return WordType.noun
+            case ElementType.adjective:
+                return WordType.adjective
+            case ElementType.verb:
+                return WordType.verb
+            case ElementType.number:
+                return WordType.noun
+            case ElementType.derive:
+                # TODO: Fill this in
+                raise Exception()
+
 # A word
 class Word:
     """Representation of a word as a sequence of elements."""
 
     def __init__(self, root: Element):
         self._form_elements: list[Element] = [root]
-        self._gloss_elements: list[MeaningfulElement] = []
+        self._meaning_elements: list[MeaningfulElement] = []
         if isinstance(root, MeaningfulElement):
-            self._gloss_elements = [root]
+            self._meaning_elements = [root]
 
 
     def add_prefix(self, prefix: Element):
@@ -42,7 +58,7 @@ class Word:
         self._form_elements = [prefix] + self._form_elements
 
         if isinstance(prefix, MeaningfulElement):
-            self._gloss_elements.append(prefix)
+            self._meaning_elements.append(prefix)
 
     def add_suffix(self, suffix: Element):
         suffix.env.prev = self.tail_element
@@ -50,7 +66,7 @@ class Word:
         self._form_elements.append(suffix)
 
         if isinstance(suffix, MeaningfulElement):
-            self._gloss_elements.append(suffix)
+            self._meaning_elements.append(suffix)
 
     @property
     def form(self) -> str:
@@ -64,14 +80,23 @@ class Word:
     @property
     def type(self) -> WordType:
         """The type of the word"""
-        return WordType.noun
+
+        e_type: ElementType = self._meaning_elements[0].type
+        for element in self._meaning_elements[1:]:
+            if element.type == ElementType.derive and isinstance(element.type_data, DeriveTypeData):
+                e_type = element.type_data.result_data.type
+            else:
+                # TODO: Fill this in
+                raise Exception
+
+        return WordType.from_element_type(e_type)
 
     @property
     def definition(self) -> str:
         """The word's definition as a string"""
-        definition: str = self._gloss_elements[0].gloss
-        prev_element: MeaningfulElement = self._gloss_elements[0]
-        for element in self._gloss_elements[1:]:
+        definition: str = self._meaning_elements[0].gloss
+        prev_element: MeaningfulElement = self._meaning_elements[0]
+        for element in self._meaning_elements[1:]:
             definition = gloss.substitute(prev_element.sense, element.gloss, definition)
             prev_element = element
 

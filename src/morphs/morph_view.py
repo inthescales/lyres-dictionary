@@ -1,8 +1,9 @@
 from src.elements.env import Env
 from src.forms.form_provider import FormProvider
 from src.morphs.morph import Morph
-from src.senses.meaningful import MeaningfulElement
+from src.elements.meaningful import MeaningfulElement
 from src.senses.sense import Sense
+from src.types.element_type import TypeData
 
 class MorphView(MeaningfulElement):
     """
@@ -20,6 +21,10 @@ class MorphView(MeaningfulElement):
     @property
     def form(self) -> str:
         return self.form_provider.form(self.env)
+
+    @property
+    def type_data(self) -> TypeData:
+        return self.morph.type_data
 
     @property
     def sense(self) -> Sense:
