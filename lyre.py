@@ -4,9 +4,9 @@ import sys
 from enum import Enum
 from textwrap import dedent
 
-import src.generate as generate
-import src.utils.logging as log
-import src.utils.publish as publisher
+import generate as generate
+import utils.logging as log
+import utils.publish as publisher
 
 class RunMode(Enum):
     """The execution mode to use. Determines output method and error behavior."""

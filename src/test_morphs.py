@@ -1,14 +1,15 @@
-from src.morphs.morph_view import Morph, MorphView
-from src.forms.formset import LeafAndStemFormSet, SingleFormSet
-from src.senses.countability import Countability
-from src.senses.gloss_provider import SingleGlossProvider
-from src.senses.sense import NounSense, Sense
-from src.types.element_type import DeriveTypeData, ElementType, TypeData
+from lex_data.morphs.morph import Morph
+from lex_data.morphs.morph_view import MorphView
+from word_base.forms.formset import LeafAndStemFormSet, SingleFormSet
+from word_base.senses.countability import Countability
+from word_base.senses.gloss_provider import SingleGlossProvider
+from word_base.senses.sense import NounSense, Sense
+from word_base.lex_class.lex_class import DeriveClassData, LexClass, ClassData
 
 magnus: MorphView = MorphView(
         Morph(
             SingleFormSet("magn"),
-            TypeData(ElementType.adjective),
+            ClassData(LexClass.adjective),
             Sense(SingleGlossProvider("large"))
         ),
     )
@@ -16,7 +17,7 @@ magnus: MorphView = MorphView(
 ify: MorphView = MorphView(
     Morph(
         LeafAndStemFormSet("ificat", "ify"),
-        DeriveTypeData(TypeData(ElementType.verb)),
+        DeriveClassData(ClassData(LexClass.verb)),
         Sense(SingleGlossProvider("[make] %(@)"))
     )
 )
@@ -24,7 +25,7 @@ ify: MorphView = MorphView(
 ion: MorphView = MorphView(
     Morph(
         SingleFormSet("ion"),
-        DeriveTypeData(TypeData(ElementType.noun)),
+        DeriveClassData(ClassData(LexClass.noun)),
         NounSense(SingleGlossProvider("the act or state of %(part)"), Countability.uncountable)
     )
 )

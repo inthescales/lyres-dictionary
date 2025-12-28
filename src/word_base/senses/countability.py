@@ -7,6 +7,7 @@ class Countability(StrEnum):
     singleton       = "singleton"
     uncountable     = "uncountable"
 
+    @property
     def pluralizable(self) -> bool:
         """Whether nouns with this countability are typically pluralized"""
         match self:

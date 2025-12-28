@@ -5,7 +5,7 @@ class FormSet(ABC):
     pass
 
 class SingleFormSet(FormSet):
-    """FormSet for elements having only a single constant form"""
+    """FormSet for element having only a single constant form"""
 
     def __init__(self, form):
         self._form = form
@@ -15,7 +15,7 @@ class SingleFormSet(FormSet):
         return self._form
 
 class LeafAndStemFormSet(FormSet):
-    """FormSet for elements having a form that varies depending on whether another element follows"""
+    """FormSet for element having a form that varies depending on whether another element follows"""
 
     def __init__(self, stem, leaf):
         self._stem = stem

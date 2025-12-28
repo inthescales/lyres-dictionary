@@ -1,9 +1,9 @@
-from src.elements.env import Env
-from src.forms.form_provider import FormProvider
-from src.morphs.morph import Morph
-from src.elements.meaningful import MeaningfulElement
-from src.senses.sense import Sense
-from src.types.element_type import TypeData
+from word_base.element.env import Env
+from word_base.forms.form_provider import FormProvider
+from lex_data.morphs.morph import Morph
+from word_base.element.meaningful_element import MeaningfulElement
+from word_base.senses.sense import Sense
+from word_base.lex_class.lex_class import ClassData
 
 class MorphView(MeaningfulElement):
     """
@@ -23,8 +23,8 @@ class MorphView(MeaningfulElement):
         return self.form_provider.form(self.env)
 
     @property
-    def type_data(self) -> TypeData:
-        return self.morph.type_data
+    def class_data(self) -> ClassData:
+        return self.morph.class_data
 
     @property
     def sense(self) -> Sense:

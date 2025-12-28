@@ -1,7 +1,7 @@
-import src.test_morphs as test_morphs
+import test_morphs as test_morphs
 
-from src.entry import Entry
-from src.word import Word
+from entry import Entry
+from word import Word
 
 def entry() -> Entry:
     """Generates and returns an entry for a new word"""

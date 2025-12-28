@@ -1,6 +1,6 @@
-from src.elements.env import Env
-from src.senses.countability import Countability
-from src.senses.gloss_provider import GlossProvider
+from word_base.element.env import Env
+from word_base.senses.countability import Countability
+from word_base.senses.gloss_provider import GlossProvider
 
 class Sense:
     """

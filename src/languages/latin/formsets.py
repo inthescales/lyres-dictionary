@@ -1,4 +1,4 @@
-from forms.formset import FormSet
+from word_base.forms.formset import FormSet
 
 class LatinVerbFormSet(FormSet):
     def __init__(self, present: str, infinitive: str, perfect: str, supine: str):

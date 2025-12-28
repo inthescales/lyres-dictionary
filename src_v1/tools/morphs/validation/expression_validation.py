@@ -6,7 +6,7 @@ expression_schema = Any([
         Dict({"and":                  Array(Schema("expression"))}),         # true if all expressions in list evaluate true
         Dict({"not":                  Schema("expression")}),                # true if the expression evaluates false
         Dict({"has-key":              One_Or_More(String())}),               # true if the morph's key matches the given string, or is in the list
-        Dict({"has-type":             One_Or_More(String(ValueSets.type))}), # true if the morph's type is equal to the string, or is in the list
+        Dict({"has-type":             One_Or_More(String(ValueSets.lex_class))}), # true if the morph's type is equal to the string, or is in the list
         Dict({"has-property":         String(ValueSets.prop)}),              # true if the morph contains a value for the given property
         Dict({"has-tag":              String(ValueSets.tag)}),               # true if the morph contains the given tag
         Dict({"has-all-tags":         Array(String(ValueSets.tag))}),        # true if the morph contains all of the given tags

@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
-from src.elements.element import Element
-from src.senses.sense import Sense
-from src.types.element_type import ElementType, TypeData
+from word_base.element.element import Element
+from word_base.senses.sense import Sense
+from word_base.lex_class.lex_class import LexClass, ClassData
 
 class MeaningfulElement(Element, ABC):
     """An element that contributes to the meaning of a word"""
@@ -19,11 +19,11 @@ class MeaningfulElement(Element, ABC):
 
     @property
     @abstractmethod
-    def type_data(self) -> TypeData:
+    def class_data(self) -> ClassData:
         """A type data object indicating this element's type along with any related data."""
         pass
 
     @property
-    def type(self) -> ElementType:
+    def lex_class(self) -> LexClass:
         """The lexical category that this element gives to the word."""
-        return self.type_data.type
+        return self.class_data.lex_class

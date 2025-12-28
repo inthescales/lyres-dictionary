@@ -3,11 +3,11 @@ import re
 from enum import StrEnum
 from typing import Optional
 
-import src.utils.inflection as inflection
-import src.utils.logging as log
+import utils.inflection as inflection
+import utils.logging as log
 
-from src.senses.countability import Countability
-from src.senses.sense import Sense, NounSense
+from word_base.senses.countability import Countability
+from word_base.senses.sense import Sense, NounSense
 
 class InflectionCode(StrEnum):
     """String codes for applying inflection during gloss substitution"""

@@ -4,8 +4,8 @@ from src.tools.morphs.schemas.types import morph_types as valid_types
 
 # Type Representations =================================
 
-# Representations of data types that appear in the morph files, to be used validating
-# types and allowed values
+# Representations of data lex_class that appear in the morph files, to be used validating
+# lex_class and allowed values
 
 class Type:
     def is_valid(self, value, meta):
@@ -15,7 +15,7 @@ class Type:
         return "Type(" + str(self.value) + ")"
 
 # A node that only accepts values from a specific list.
-# Can also be passed in to primitive types
+# Can also be passed in to primitive lex_class
 class ValueSet(Type):
     def __init__(self, name, values):
         self.name = name
@@ -118,7 +118,7 @@ class Array(Collection):
             else:
                 return []
 
-        # Otherwise, check that all elements match
+        # Otherwise, check that all element match
         errors = []
         for item in value:
             child_errors = self.subtype.get_errors(item, child_meta)
@@ -184,7 +184,7 @@ class Dict(Type):
             if len(extra_keys) > 0:
                 errors.append(TypeError("unrecognized keys " + str(extra_keys) + " found in dictionary " + str(meta.context) + ""))
 
-        # Check that values have the expected types
+        # Check that values have the expected lex_class
         for key, exp in self.reference.items():
             if key in value:
                 child_meta = meta.new("for key '" + key + "' in dict '" + str(value) + "'")

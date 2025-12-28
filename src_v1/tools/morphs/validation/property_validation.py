@@ -44,7 +44,7 @@ def make_universal_requirements(language):
 
     return [
         Dict({ "key": String() }, restrict=False),
-        Dict({ "type": String(ValueSets.type) }, restrict=False),
+        Dict({ "type": String(ValueSets.lex_class)}, restrict=False),
         Dict({ "tags": Opt(Array(String(ValueSets.tag))) }, restrict=False),
         Dict({ "origin": String(ValueSet("origin", valid_languages)) }, restrict=False),
         Any([
@@ -97,14 +97,14 @@ type_requirements = {
         make_tag_requirement("transitivity", ["intransitive", "transitive"], "all verbs must have a transitivity tag"),
     ],
     "suffix": [
-        Dict({ "derive-from": One_Or_More(String(ValueSets.type)) }, restrict=False),
-        Dict({ "derive-to": String(ValueSets.type) }, restrict=False),
+        Dict({ "derive-from": One_Or_More(String(ValueSets.lex_class))}, restrict=False),
+        Dict({ "derive-to": String(ValueSets.lex_class)}, restrict=False),
     ],
     "prep": [
-        Dict({ "derive-from": One_Or_More(String(ValueSets.type)) }, restrict=False),
+        Dict({ "derive-from": One_Or_More(String(ValueSets.lex_class))}, restrict=False),
     ],
     "prefix": [
-        Dict({ "derive-from": One_Or_More(String(ValueSets.type)) }, restrict=False),
+        Dict({ "derive-from": One_Or_More(String(ValueSets.lex_class))}, restrict=False),
     ]
 }
 

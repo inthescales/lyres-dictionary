@@ -1,6 +1,6 @@
 from abc import ABC
 
-from src.elements.env import Env
+from word_base.element.env import Env
 
 class GlossProvider(ABC):
     """

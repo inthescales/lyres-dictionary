@@ -139,7 +139,7 @@ def unformatted(obj):
     dump = dump.replace("}", " }")
     return dump
 
-# Whether there should be a newline after a comma separating the two elements in a list
+# Whether there should be a newline after a comma separating the two element in a list
 def should_break_between(first, second, tag_stack):
     # Two dictionaries, both indented, not within a operator list
     if isinstance(first, dict) \

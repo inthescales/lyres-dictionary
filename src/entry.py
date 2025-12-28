@@ -1,4 +1,4 @@
-from src.word import Word
+from word import Word
 
 def render(word: Word) -> str:
     """Renders the given word into a string form for presentation"""

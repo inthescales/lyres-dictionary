@@ -1,6 +1,6 @@
 from typing import Optional
 
-from src.elements.element_base import ElementBase
+from word_base.element.element_base import ElementBase
 
 class Env:
     """The environment that an element finds itself in within a given word"""

@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Self
 
-import src.utils.logging as log
-from src.elements.env import Env
-from src.forms.formset import FormSet, LeafAndStemFormSet, SingleFormSet
+import utils.logging as log
+from word_base.element.env import Env
+from word_base.forms.formset import FormSet, LeafAndStemFormSet, SingleFormSet
 
 class FormProvider(ABC):
     """

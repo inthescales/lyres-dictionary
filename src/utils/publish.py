@@ -1,6 +1,6 @@
 from collections.abc import Callable
 
-from src.generate import Entry
+from generate import Entry
 
 def publish(entry_gen: Callable[[], Entry]):
     """Using the given entry generator callable, generate an entry and publish it online."""

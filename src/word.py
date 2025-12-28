@@ -1,10 +1,10 @@
 from enum import Enum
 from typing import Optional, Self
 
-import src.glosses as gloss
-from src.elements.element import Element
-from src.elements.meaningful import MeaningfulElement
-from src.types.element_type import ElementType, DeriveTypeData, TypeData
+import glosses as gloss
+from word_base.element.element import Element
+from word_base.element.meaningful_element import MeaningfulElement
+from word_base.lex_class.lex_class import LexClass, DeriveClassData
 
 class WordType(Enum):
     """The type (aka 'lexical category' or 'part of speech') of a word"""
@@ -27,23 +27,23 @@ class WordType(Enum):
                 return "adv"
 
     @classmethod
-    def from_element_type(cls, final_element_type: ElementType) -> Self:
+    def from_element_type(cls, final_element_type: LexClass) -> Self:
         match final_element_type:
-            case ElementType.noun:
+            case LexClass.noun:
                 return WordType.noun
-            case ElementType.adjective:
+            case LexClass.adjective:
                 return WordType.adjective
-            case ElementType.verb:
+            case LexClass.verb:
                 return WordType.verb
-            case ElementType.number:
+            case LexClass.number:
                 return WordType.noun
-            case ElementType.derive:
+            case LexClass.derive:
                 # TODO: Fill this in
                 raise Exception()
 
 # A word
 class Word:
-    """Representation of a word as a sequence of elements."""
+    """Representation of a word as a sequence of element."""
 
     def __init__(self, root: Element):
         self._form_elements: list[Element] = [root]
@@ -81,10 +81,10 @@ class Word:
     def type(self) -> WordType:
         """The type of the word"""
 
-        e_type: ElementType = self._meaning_elements[0].type
+        e_type: LexClass = self._meaning_elements[0].lex_class
         for element in self._meaning_elements[1:]:
-            if element.type == ElementType.derive and isinstance(element.type_data, DeriveTypeData):
-                e_type = element.type_data.result_data.type
+            if element.lex_class == LexClass.derive and isinstance(element.class_data, DeriveClassData):
+                e_type = element.class_data.result_data.lex_class
             else:
                 # TODO: Fill this in
                 raise Exception
