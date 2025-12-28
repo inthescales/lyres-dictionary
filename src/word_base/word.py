@@ -1,10 +1,11 @@
-from typing import Optional, Self
+from typing import Optional
 
 import glosses as gloss
 from word_base.element.element import Element
 from word_base.element.meaningful_element import MeaningfulElement
-from word_base.lexical_class.element_class import ElementClass, DeriveClassData
-from word_base.lexical_class.word_class import WordClass
+from word_base.element.classes.affix_classes import DeriveClassData
+from word_base.element.classes.element_class import ElementClass
+from word_base.word_class import WordClass
 
 class ElementClassException(Exception):
     """Exception to be raised when a word's elements have incoherent lexical classes."""
@@ -49,7 +50,6 @@ class Word:
     @property
     def type(self) -> WordClass:
         """The type of the word"""
-
         e_type: ElementClass = self._meaning_elements[0].lex_class
         for element in self._meaning_elements[1:]:
             class_data = element.class_data

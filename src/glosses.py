@@ -53,7 +53,7 @@ def substitute(wrapped_sense: Sense, gloss: str, wrapped: str) -> str:
                             prefix = "a "
                         case Countability.singleton:
                             prefix = "the "
-                        case Countability.mass, Countability.uncountable:
+                        case Countability.mass | Countability.uncountable:
                             pass
 
                 case InflectionCode.force_singular:
@@ -65,7 +65,7 @@ def substitute(wrapped_sense: Sense, gloss: str, wrapped: str) -> str:
                         case Countability.singleton:
                             inflection_type = inflection.InflectionType.singular
                             prefix = "the "
-                        case Countability.mass, Countability.uncountable:
+                        case Countability.mass | Countability.uncountable:
                             inflection_type = inflection.InflectionType.singular
 
                 case InflectionCode.force_plural:

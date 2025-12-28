@@ -3,7 +3,7 @@ from word_base.forms.form_provider import FormProvider
 from lex_data.morphs.morph import Morph
 from word_base.element.meaningful_element import MeaningfulElement
 from word_base.senses.sense import Sense
-from word_base.lexical_class.element_class import ClassData
+from word_base.element.classes.element_class import ClassData
 
 class MorphView(MeaningfulElement):
     """

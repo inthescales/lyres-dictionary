@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Self
 
-from word_base.lexical_class.element_class import ElementClass
+from word_base.element.classes.element_class import ElementClass
 
 class WordClassException(Exception):
     """Exception to be raised if a word would be generated with an invalid lexical class."""
@@ -31,13 +31,11 @@ class WordClass(Enum):
     @classmethod
     def from_element_type(cls, final_element_type: ElementClass) -> Self:
         match final_element_type:
-            case ElementClass.noun:
+            case ElementClass.noun | ElementClass.number:
                 return WordClass.noun
             case ElementClass.adjective:
                 return WordClass.adjective
             case ElementClass.verb:
                 return WordClass.verb
-            case ElementClass.number:
-                return WordClass.noun
-            case ElementClass.derive:
+            case ElementClass.derive | ElementClass.inflect:
                 raise WordClassException(final_element_type)

@@ -13,5 +13,5 @@ class Countability(StrEnum):
         match self:
             case Countability.countable:
                 return True
-            case Countability.mass, Countability.singleton, Countability.uncountable:
+            case Countability.mass | Countability.singleton | Countability.uncountable:
                 return False
