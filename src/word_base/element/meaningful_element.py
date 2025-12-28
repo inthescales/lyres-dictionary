@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 from word_base.element.element import Element
 from word_base.senses.sense import Sense
-from word_base.lex_class.lex_class import LexClass, ClassData
+from word_base.lexical_class.element_class import ElementClass, ClassData
 
 class MeaningfulElement(Element, ABC):
     """An element that contributes to the meaning of a word"""
@@ -24,6 +24,6 @@ class MeaningfulElement(Element, ABC):
         pass
 
     @property
-    def lex_class(self) -> LexClass:
+    def lex_class(self) -> ElementClass:
         """The lexical category that this element gives to the word."""
         return self.class_data.lex_class

@@ -14,7 +14,7 @@ class SingleFormSet(FormSet):
     def form(self) -> str:
         return self._form
 
-class LeafAndStemFormSet(FormSet):
+class StemAndLeafFormSet(FormSet):
     """FormSet for element having a form that varies depending on whether another element follows"""
 
     def __init__(self, stem, leaf):

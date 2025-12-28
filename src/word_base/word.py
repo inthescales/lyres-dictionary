@@ -1,49 +1,18 @@
-from enum import Enum
 from typing import Optional, Self
 
 import glosses as gloss
 from word_base.element.element import Element
 from word_base.element.meaningful_element import MeaningfulElement
-from word_base.lex_class.lex_class import LexClass, DeriveClassData
+from word_base.lexical_class.element_class import ElementClass, DeriveClassData
+from word_base.lexical_class.word_class import WordClass
 
-class WordType(Enum):
-    """The type (aka 'lexical category' or 'part of speech') of a word"""
-    noun = 0
-    adjective = 1
-    verb = 2
-    adverb = 3
+class ElementClassException(Exception):
+    """Exception to be raised when a word's elements have incoherent lexical classes."""
+    def __init__(self, message: str):
+        self.args = ([message], message)
 
-    @property
-    def string(self) -> str:
-        """A string representation of the type, as it should appear in entries"""
-        match self:
-            case WordType.noun:
-                return "noun"
-            case WordType.adjective:
-                return "adj"
-            case WordType.verb:
-                return "verb"
-            case WordType.adverb:
-                return "adv"
-
-    @classmethod
-    def from_element_type(cls, final_element_type: LexClass) -> Self:
-        match final_element_type:
-            case LexClass.noun:
-                return WordType.noun
-            case LexClass.adjective:
-                return WordType.adjective
-            case LexClass.verb:
-                return WordType.verb
-            case LexClass.number:
-                return WordType.noun
-            case LexClass.derive:
-                # TODO: Fill this in
-                raise Exception()
-
-# A word
 class Word:
-    """Representation of a word as a sequence of element."""
+    """Representation of a word as a collection of elements."""
 
     def __init__(self, root: Element):
         self._form_elements: list[Element] = [root]
@@ -78,18 +47,18 @@ class Word:
         return f
 
     @property
-    def type(self) -> WordType:
+    def type(self) -> WordClass:
         """The type of the word"""
 
-        e_type: LexClass = self._meaning_elements[0].lex_class
+        e_type: ElementClass = self._meaning_elements[0].lex_class
         for element in self._meaning_elements[1:]:
-            if element.lex_class == LexClass.derive and isinstance(element.class_data, DeriveClassData):
-                e_type = element.class_data.result_data.lex_class
+            class_data = element.class_data
+            if element.lex_class == ElementClass.derive and isinstance(class_data, DeriveClassData):
+                e_type = class_data.result_data.lex_class
             else:
-                # TODO: Fill this in
-                raise Exception
+                raise ElementClassException("Found unexpected non-derive type '" + str(element.lex_class) + "' in word's elements-by-meaning list.")
 
-        return WordType.from_element_type(e_type)
+        return WordClass.from_element_type(e_type)
 
     @property
     def definition(self) -> str:

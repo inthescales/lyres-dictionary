@@ -3,7 +3,12 @@ from typing import Self
 
 import utils.logging as log
 from word_base.element.env import Env
-from word_base.forms.formset import FormSet, LeafAndStemFormSet, SingleFormSet
+from word_base.forms.formset import FormSet, StemAndLeafFormSet, SingleFormSet
+
+class FormProviderInitException(Exception):
+    """Exception to be raised when unable to determine what kind of FormProvider to create for a given FormSet."""
+    def __init__(self, formset_type: type):
+        self.args = (["No form provider registered for FormSet class '" + str(formset_type) + "'"], formset_type)
 
 class FormProvider(ABC):
     """
@@ -22,11 +27,12 @@ class FormProvider(ABC):
 
         if isinstance(formset, SingleFormSet):
             return SingleFormProvider(formset)
-        if isinstance(formset, LeafAndStemFormSet):
-            return LeafAndStemFormProvider(formset)
+        if isinstance(formset, StemAndLeafFormSet):
+            return StemAndLeafFormProvider(formset)
 
-        log.error("unable to initialize FormProvider for formset of type '" + str(type(formset)) + "'")
-        exit(1)
+        exception = FormProviderInitException(type(formset))
+        log.error(exception)
+        raise exception
 
 class SingleFormProvider(FormProvider):
     """Form provider when a single, constant form is used"""
@@ -37,11 +43,11 @@ class SingleFormProvider(FormProvider):
     def form(self, env: Env) -> str:
         return self._formset.form
 
-class LeafAndStemFormProvider(FormProvider):
+class StemAndLeafFormProvider(FormProvider):
     """Form provider when the form depends on whether another element follows the current one"""
 
-    def __init__(self, formset: LeafAndStemFormSet):
-        self._formset: LeafAndStemFormSet = formset
+    def __init__(self, formset: StemAndLeafFormSet):
+        self._formset: StemAndLeafFormSet = formset
 
     def form(self, env: Env) -> str:
         if env.prev is None:

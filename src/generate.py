@@ -1,7 +1,7 @@
 import test_morphs as test_morphs
 
 from entry import Entry
-from word import Word
+from word_base.word import Word
 
 def entry() -> Entry:
     """Generates and returns an entry for a new word"""
