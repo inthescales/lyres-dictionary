@@ -10,8 +10,7 @@ def entry() -> Entry:
 def word() -> Word:
     """Generates and returns a new word"""
 
-    word: Word = Word(test_morphs.magnus)
-    word.add_suffix(test_morphs.ify)
+    word: Word = Word(test_morphs.magnify)
     word.add_suffix(test_morphs.ion)
 
     return word

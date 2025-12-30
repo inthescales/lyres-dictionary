@@ -1,5 +1,6 @@
 from lex_data.morphs.morph import Morph
 from lex_data.morphs.morph_view import MorphView
+from word_base.element.compound_element import CompoundElement
 from word_base.forms.formset import StemAndLeafFormSet, SingleFormSet
 from word_base.senses.countability import Countability
 from word_base.senses.gloss_provider import SingleGlossProvider
@@ -29,4 +30,10 @@ ion: MorphView = MorphView(
         DeriveClassData(AffixPosition.suffix, ClassData(ElementClass.noun)),
         NounSense(SingleGlossProvider("the act or state of %(part)"), Countability.uncountable)
     )
+)
+
+magnify: CompoundElement = CompoundElement(
+    [magnus, ify],
+    ClassData(ElementClass.verb),
+    Sense(SingleGlossProvider("embiggen"))
 )
